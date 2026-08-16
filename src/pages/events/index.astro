@@ -1,0 +1,141 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import FacetIndex from '../../components/FacetIndex.astro';
+
+const events = (await getCollection('events')).map((e) => e.data);
+const sorted = [...events].sort((a, b) => String(a.start ?? '').localeCompare(String(b.start ?? '')));
+
+const facets = [
+  { key: 'phase', label: 'Phase', values: [...new Set(events.map((e) => e.phase).filter(Boolean))] as string[] },
+  { key: 'type', label: 'Type', values: [...new Set(events.flatMap((e) => e.type))].sort() },
+  { key: 'dossier', label: 'Dossier status', values: [...new Set(events.map((e) => e.dossierStatus))] },
+];
+
+const year = (iso: string | null) => (iso ? iso.slice(0, 4) : '—');
+---
+
+<Base title="Events" description={`${events.length} events, each with the point on which national accounts diverge stated.`}>
+  <header class="ihead">
+    <h1>Events</h1>
+    <p class="ihead__lede prose">
+      {events.length} events. Each carries its <em>main dispute</em> — the point on which
+      French, Spanish and Moroccan accounts diverge — as a first-class field rather than a
+      footnote.
+    </p>
+  </header>
+
+  <FacetIndex facets={facets} countLabel="events" />
+
+  <ul class="elist" data-index>
+    {
+      sorted.map((e) => (
+        <li
+          class="eitem"
+          data-phase={e.phase ?? ''}
+          data-type={e.type.join('|')}
+          data-dossier={e.dossierStatus}
+          data-search={[e.event, e.location, e.summary].filter(Boolean).join(' ').toLowerCase()}
+        >
+          <span class="eitem__year">
+            {year(e.start)}
+            {e.end && e.end.slice(0, 4) !== year(e.start) && <>&ndash;{e.end.slice(0, 4)}</>}
+          </span>
+          <div class="eitem__main">
+            <a class="eitem__title" href={`/events/${e.slug}`}>
+              {e.event}
+            </a>
+            {e.summary && <p class="eitem__summary">{e.summary}</p>}
+            {e.mainDispute && (
+              <p class="eitem__dispute">
+                <span class="eitem__disputeLabel" aria-hidden="true">
+                  ⇄
+                </span>
+                <span class="visually-hidden">Main dispute: </span>
+                {e.mainDispute}
+              </p>
+            )}
+          </div>
+          <div class="eitem__meta">
+            <span class="eitem__types">{e.type.join(' · ')}</span>
+            <span class="muted">{e.dossierStatus}</span>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+
+  <style>
+    .ihead {
+      margin-bottom: var(--s-5);
+    }
+    .ihead__lede {
+      color: var(--ink-secondary);
+    }
+    .elist {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-top: var(--rule);
+    }
+    .eitem {
+      display: grid;
+      grid-template-columns: 5rem minmax(0, 1fr) 11rem;
+      gap: var(--s-4);
+      padding: var(--s-4) 0;
+      border-bottom: var(--rule);
+      margin: 0;
+    }
+    .eitem__year {
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      color: var(--ink-muted);
+      font-variant-numeric: tabular-nums;
+    }
+    .eitem__title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: inherit;
+      text-decoration: none;
+    }
+    .eitem__title:hover {
+      text-decoration: underline;
+    }
+    .eitem__summary {
+      margin: var(--s-1) 0 0;
+      font-size: 0.875rem;
+      color: var(--ink-secondary);
+    }
+    .eitem__dispute {
+      margin: var(--s-2) 0 0;
+      padding-left: var(--s-3);
+      border-left: 2px solid var(--status-disputed);
+      font-family: var(--font-ui);
+      font-size: 0.8125rem;
+      color: var(--ink-secondary);
+    }
+    .eitem__disputeLabel {
+      color: var(--status-disputed);
+      margin-right: 0.35em;
+      font-weight: 700;
+    }
+    .eitem__meta {
+      display: grid;
+      gap: var(--s-1);
+      align-content: start;
+      font-family: var(--font-ui);
+      font-size: 0.6875rem;
+      color: var(--ink-muted);
+      text-align: right;
+    }
+    @media (max-width: 56rem) {
+      .eitem {
+        grid-template-columns: 4rem minmax(0, 1fr);
+      }
+      .eitem__meta {
+        grid-column: 2;
+        text-align: left;
+      }
+    }
+  </style>
+</Base>

@@ -1,0 +1,93 @@
+---
+/**
+ * <SourceTier> — eight ordinal levels, PRIMARY_ARCHIVAL → UNSOURCED.
+ *
+ * This is ordinal, not categorical, so it renders as steps of a single hue
+ * ramp, darkest at PRIMARY_ARCHIVAL. Always paired with the tier's text label;
+ * the swatch alone never carries the meaning. Hovering gives the one-line
+ * definition from /method.
+ */
+import { TIER_DEFINITIONS } from '../lib/vocab.ts';
+
+interface Props {
+  tier: keyof typeof TIER_DEFINITIONS;
+  /** Show the ordinal position as a stepped bar. */
+  showRamp?: boolean;
+  class?: string;
+}
+
+const { tier, showRamp = true, class: className = '' } = Astro.props;
+
+const TIER_ORDER = Object.keys(TIER_DEFINITIONS) as (keyof typeof TIER_DEFINITIONS)[];
+const step = TIER_ORDER.indexOf(tier) + 1; // 1 = darkest = PRIMARY_ARCHIVAL
+const definition = TIER_DEFINITIONS[tier];
+---
+
+<span
+  class:list={['tier', className]}
+  data-tier={tier}
+  title={`${tier} — ${definition}`}
+>
+  {
+    showRamp && (
+      <span class="tier__ramp" aria-hidden="true">
+        {TIER_ORDER.map((_, i) => (
+          <span
+            class:list={['tier__step', i < step && 'tier__step--on']}
+            style={`--step-hue: var(--seq-${8 - i})`}
+          />
+        ))}
+      </span>
+    )
+  }
+  <span class="tier__label">{tier}</span>
+  <span class="visually-hidden">
+    — tier {step} of {TIER_ORDER.length}. {definition}
+  </span>
+</span>
+
+<style>
+  .tier {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    font-family: var(--font-ui);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    cursor: help;
+  }
+
+  .tier__label {
+    color: var(--ink-secondary);
+  }
+
+  .tier__ramp {
+    display: inline-flex;
+    gap: 1px;
+    align-items: flex-end;
+  }
+
+  /* Eight steps of one hue. Position in the ramp encodes rank; the filled
+     count is redundant with the label, which is the point. */
+  .tier__step {
+    width: 3px;
+    height: 9px;
+    background: var(--hairline);
+    border-radius: 0.5px;
+  }
+
+  .tier__step--on {
+    background: var(--step-hue, var(--seq-5));
+  }
+
+  @media (forced-colors: active) {
+    .tier__step--on {
+      background: CanvasText;
+    }
+    .tier__step {
+      border: 1px solid CanvasText;
+    }
+  }
+</style>

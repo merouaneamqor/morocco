@@ -1,0 +1,274 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import claimsData from '../content/data/claims.json';
+
+const people = await getCollection('people');
+const events = await getCollection('events');
+const sources = await getCollection('sources');
+const archives = await getCollection('archives');
+const disputes = await getCollection('disputes');
+const rels = await getCollection('relationships');
+
+const counts = claimsData.counts;
+const live = disputes.filter((d) => d.data.status !== 'Resolved').length;
+
+// The argument the archives layer makes, computed rather than asserted.
+const decisive = archives.filter((a) => a.data.priority === '1 - decisive');
+const decisiveOutside = decisive.filter((a) => a.data.country !== 'Morocco');
+
+const unverifiedSources = sources.filter((s) => s.data.verification === 'NOT YET VERIFIED');
+const fullDossiers = people.filter((p) => p.data.dossierStatus === 'Full dossier');
+---
+
+<Base title="A source-critical reconstruction">
+  <section class="hero">
+    <p class="hero__eyebrow">c. 1830 – present</p>
+    <h1 class="hero__title">
+      Moroccan History <em>from the Archives</em>
+    </h1>
+    <p class="hero__lede">
+      A source-critical reconstruction built from French, Spanish, Moroccan, British,
+      American, German and Ottoman archival material. Every claim is graded by the kind of
+      evidence behind it, and where French, Spanish and Moroccan accounts diverge, the
+      divergence is preserved rather than resolved.
+    </p>
+    <p class="hero__thesis">
+      Most of what is confidently repeated about nineteenth- and twentieth-century Morocco
+      is known because a French or Spanish official wrote it in a report intended to
+      justify what he was doing. This site is built to make that legible on every page.
+    </p>
+  </section>
+
+  <section class="honest" aria-labelledby="honest-h">
+    <h2 id="honest-h" class="honest__h">The state of the evidence, stated on arrival</h2>
+    <div class="honest__grid">
+      <a class="hcard hcard--established" href="/evidence?status=Established">
+        <span class="hcard__n">{counts.Established ?? 0}</span>
+        <span class="hcard__l">Established</span>
+      </a>
+      <a class="hcard hcard--probable" href="/evidence">
+        <span class="hcard__n">{counts['Highly probable'] ?? 0}</span>
+        <span class="hcard__l">Highly probable</span>
+      </a>
+      <a class="hcard hcard--disputed" href="/evidence">
+        <span class="hcard__n">{counts.Disputed ?? 0}</span>
+        <span class="hcard__l">Disputed</span>
+      </a>
+      <a class="hcard hcard--unknown" href="/evidence">
+        <span class="hcard__n">{counts.Unknown ?? 0}</span>
+        <span class="hcard__l">Unknown</span>
+      </a>
+      <a class="hcard hcard--withheld" href="/disputes">
+        <span class="hcard__n">{counts.withheld ?? 0}</span>
+        <span class="hcard__l">Withheld</span>
+      </a>
+    </div>
+    <p class="honest__note">
+      <strong>Withheld is not a rung on the confidence ladder.</strong> The location of
+      Mehdi Ben Barka's body is not low-confidence; it is known to someone who will not
+      say. Roughly 1,800 CIA documents on the case were acknowledged in 1976 and remain
+      undisclosed. Filing that under &ldquo;unknown&rdquo; would be lying by taxonomy.
+    </p>
+  </section>
+
+  <section class="routes" aria-label="Start here">
+    <a class="route route--star" href="/evidence">
+      <h3>★ Evidence Index</h3>
+      <p>
+        Every graded claim in the corpus in one filterable table. Ask for everything
+        Disputed in Phase V and get an answer in one interaction.
+      </p>
+    </a>
+    <a class="route route--star" href="/disputes">
+      <h3>★ Disputes</h3>
+      <p>
+        {live} live disputes, each mapped to the archive of a state that had no stake in
+        that quarrel — plus two worked examples of the method paying off.
+      </p>
+    </a>
+    <a class="route" href="/people">
+      <h3>People</h3>
+      <p>
+        {people.length} dossiers, {fullDossiers.length} of them full. Aliases tagged by
+        archive tradition, because finding the right spelling is often the whole problem.
+      </p>
+    </a>
+    <a class="route" href="/archives">
+      <h3>Archives</h3>
+      <p>
+        {archives.length} repositories worldwide. {decisiveOutside.length} of the{' '}
+        {decisive.length} decisive holdings are outside Morocco — the site's quietest and
+        most consequential finding.
+      </p>
+    </a>
+    <a class="route" href="/timeline">
+      <h3>Timeline</h3>
+      <p>
+        {events.length} events across ten phases, with disputed dates rendered as
+        uncertainty bars rather than points.
+      </p>
+    </a>
+    <a class="route" href="/network">
+      <h3>Network</h3>
+      <p>
+        {rels.length} documented relationships. Drag the evidence floor up and watch
+        weakly-evidenced links disappear.
+      </p>
+    </a>
+  </section>
+
+  <section class="standing">
+    <h2 class="honest__h">The standing rule on references</h2>
+    <p class="standing__body">
+      A reference is written out <strong>only</strong> when it can be seen in a catalogue,
+      in a digitised document, or quoted verbatim by a named scholar who consulted it.
+      Otherwise the entry reads
+      <span class="ref-token ref-token--unverified">NOT YET VERIFIED</span>, followed by
+      the fonds a researcher should request.
+      <strong>No reference number in this corpus has been reconstructed from memory or inferred.</strong>
+      {' '}
+      {unverifiedSources.length} of {sources.length} sources currently carry that flag, and
+      the site renders them as the IOUs they are.
+    </p>
+    <p><a href="/method">Read the method &rarr;</a></p>
+  </section>
+
+  <style>
+    .hero {
+      max-width: 46rem;
+      margin-bottom: var(--s-8);
+    }
+    .hero__eyebrow {
+      margin: 0 0 var(--s-2);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+    }
+    .hero__title {
+      font-size: clamp(2rem, 1.4rem + 3vw, 3.25rem);
+      margin: 0 0 var(--s-4);
+      letter-spacing: -0.015em;
+    }
+    .hero__title em {
+      font-style: italic;
+      color: var(--ink-secondary);
+      font-weight: 400;
+    }
+    .hero__lede {
+      font-size: 1.125rem;
+      color: var(--ink-secondary);
+    }
+    .hero__thesis {
+      padding-left: var(--s-4);
+      border-left: 3px solid var(--accent);
+      color: var(--ink);
+      font-size: 1rem;
+    }
+
+    .honest__h {
+      font-size: 1.05rem;
+      margin: 0 0 var(--s-4);
+      padding-bottom: var(--s-2);
+      border-bottom: var(--rule);
+    }
+
+    .honest {
+      margin-bottom: var(--s-7);
+    }
+    .honest__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+      gap: var(--s-2);
+      margin-bottom: var(--s-4);
+    }
+    .hcard {
+      display: grid;
+      gap: var(--s-1);
+      padding: var(--s-4);
+      border: var(--rule);
+      border-radius: var(--radius);
+      background: var(--surface);
+      text-decoration: none;
+      color: inherit;
+    }
+    .hcard:hover {
+      border-color: var(--accent);
+    }
+    .hcard__n {
+      font-family: var(--font-mono);
+      font-size: 1.75rem;
+      font-variant-numeric: tabular-nums;
+      line-height: 1;
+    }
+    .hcard__l {
+      font-family: var(--font-ui);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--ink-secondary);
+    }
+    .hcard--established {
+      border-left: 3px solid var(--status-established);
+    }
+    .hcard--probable {
+      border-left: 3px solid color-mix(in srgb, var(--status-probable) 55%, transparent);
+    }
+    .hcard--disputed {
+      border-left: 3px solid var(--status-disputed);
+    }
+    .hcard--unknown {
+      border-left: 3px solid var(--baseline);
+    }
+    .hcard--withheld {
+      border-left: 3px solid var(--status-withheld);
+    }
+
+    .honest__note {
+      max-width: 62ch;
+      font-size: 0.9375rem;
+      color: var(--ink-secondary);
+      margin: 0;
+    }
+
+    .routes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+      gap: var(--s-3);
+      margin-bottom: var(--s-8);
+    }
+    .route {
+      display: block;
+      padding: var(--s-4);
+      border: var(--rule);
+      border-radius: var(--radius);
+      background: var(--surface);
+      text-decoration: none;
+      color: inherit;
+    }
+    .route:hover {
+      border-color: var(--accent);
+    }
+    .route h3 {
+      margin: 0 0 var(--s-2);
+      font-size: 0.9375rem;
+      font-family: var(--font-ui);
+    }
+    .route p {
+      margin: 0;
+      font-size: 0.875rem;
+      color: var(--ink-secondary);
+    }
+    .route--star {
+      border-left: 3px solid var(--accent);
+    }
+
+    .standing {
+      max-width: 60ch;
+    }
+    .standing__body {
+      font-size: 0.9375rem;
+      color: var(--ink-secondary);
+    }
+  </style>
+</Base>

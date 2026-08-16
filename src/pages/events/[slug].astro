@@ -1,0 +1,299 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ClaimStatus from '../../components/ClaimStatus.astro';
+import StatusFooter from '../../components/StatusFooter.astro';
+import claimsData from '../../content/data/claims.json';
+
+export async function getStaticPaths() {
+  const events = await getCollection('events');
+  const bodies = await getCollection('eventDossiers');
+  const bySlug = new Map(bodies.map((d) => [d.data.slug, d]));
+  return events.map((e) => ({
+    params: { slug: e.data.slug },
+    props: { event: e.data, body: bySlug.get(e.data.slug) ?? null },
+  }));
+}
+
+const { event, body } = Astro.props;
+const rendered = body ? await render(body) : null;
+const Body = rendered?.Content ?? null;
+
+const people = await getCollection('people');
+const involved = people.filter((p) => event.people.includes(p.data.slug));
+
+const disputes = (await getCollection('disputes'))
+  .map((d) => d.data)
+  .filter((d) => d.relatedEvents?.includes(event.slug));
+
+const claims = claimsData.claims.filter((c) => c.hostSlug === event.slug);
+const counts = {
+  Established: claims.filter((c) => c.status === 'Established').length,
+  'Highly probable': claims.filter((c) => c.status === 'Highly probable').length,
+  Disputed: claims.filter((c) => c.status === 'Disputed').length,
+  Unknown: claims.filter((c) => c.status === 'Unknown').length,
+};
+
+/** Dates from the Events database are real date fields, so they format safely. */
+const fmt = (iso: string | null) =>
+  iso
+    ? new Date(iso + 'T00:00:00Z').toLocaleDateString('en-GB', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+        timeZone: 'UTC',
+      })
+    : null;
+---
+
+<Base title={event.event} description={event.summary ?? undefined}>
+  <div class="ev">
+    <aside class="ev__side">
+      <div class="idcard">
+        <p class="idcard__eyebrow">Event dossier</p>
+        <h1 class="idcard__name">{event.event}</h1>
+        <dl class="idcard__dl">
+          <dt>Dates</dt>
+          <dd>
+            {fmt(event.start) ?? '—'}
+            {event.end && event.end !== event.start && <> &ndash; {fmt(event.end)}</>}
+          </dd>
+          {event.location && (
+            <>
+              <dt>Location</dt>
+              <dd>{event.location}</dd>
+            </>
+          )}
+          <dt>Phase</dt>
+          <dd>{event.phase ?? '—'}</dd>
+          <dt>Dossier status</dt>
+          <dd>{event.dossierStatus}</dd>
+        </dl>
+        <div class="idcard__chips">
+          {event.type.map((t) => <span class="chip">{t}</span>)}
+        </div>
+      </div>
+
+      {
+        involved.length > 0 && (
+          <nav class="related" aria-label="People involved">
+            <p class="toc__head">People involved</p>
+            <ul>
+              {involved.map((p) => (
+                <li>
+                  <a href={`/people/${p.data.slug}`}>{p.data.name}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )
+      }
+    </aside>
+
+    <article class="ev__body prose">
+      {event.summary && <p class="ev__summary">{event.summary}</p>}
+
+      {
+        event.mainDispute && (
+          <div class="maindispute">
+            <p class="maindispute__head">
+              <ClaimStatus status="Disputed" />
+              <span>The point on which national accounts diverge</span>
+            </p>
+            <p class="maindispute__body">{event.mainDispute}</p>
+          </div>
+        )
+      }
+
+      {Body && <Body />}
+
+      {
+        disputes.length > 0 && (
+          <section class="ev__disputes">
+            <h2>Live disputes touching this event</h2>
+            <ul class="ev__disputeList">
+              {disputes.map((d) => (
+                <li>
+                  <a href={`/disputes#${d.slug}`}>
+                    <strong>#{d.n}</strong> {d.dispute}
+                  </a>
+                  <span class="muted"> — {d.status}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )
+      }
+
+      {
+        !Body && (
+          <p class="ev__thin">
+            This event dossier is a <strong>{event.dossierStatus.toLowerCase()}</strong>. The
+            summary and the stated dispute above are what the corpus records.
+          </p>
+        )
+      }
+    </article>
+  </div>
+
+  <StatusFooter counts={counts} withheld={claims.filter((c) => c.withheld).length} total={claims.length} />
+</Base>
+
+<style>
+  .ev {
+    display: grid;
+    grid-template-columns: 18rem minmax(0, 1fr);
+    gap: var(--s-6);
+    align-items: start;
+  }
+  .ev__side {
+    position: sticky;
+    top: 5rem;
+    display: grid;
+    gap: var(--s-4);
+  }
+  .idcard {
+    border: var(--rule);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: var(--s-4);
+  }
+  .idcard__eyebrow {
+    margin: 0 0 var(--s-1);
+    font-family: var(--font-ui);
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-muted);
+  }
+  .idcard__name {
+    font-size: 1.25rem;
+    margin: 0 0 var(--s-3);
+  }
+  .idcard__dl {
+    margin: 0 0 var(--s-3);
+    display: grid;
+    font-family: var(--font-ui);
+    font-size: 0.8125rem;
+  }
+  .idcard__dl dt {
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-muted);
+  }
+  .idcard__dl dd {
+    margin: 0 0 var(--s-2);
+    color: var(--ink-secondary);
+  }
+  .idcard__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-1);
+  }
+  .chip {
+    font-family: var(--font-ui);
+    font-size: 0.6875rem;
+    padding: 0.15em 0.5em;
+    border: var(--rule);
+    border-radius: var(--radius);
+    color: var(--ink-secondary);
+  }
+
+  .ev__summary {
+    font-size: 1.0625rem;
+    color: var(--ink);
+  }
+
+  .maindispute {
+    border: 1px solid color-mix(in srgb, var(--status-disputed) 45%, transparent);
+    border-left-width: 3px;
+    border-radius: var(--radius);
+    background: var(--status-disputed-bg);
+    padding: var(--s-4);
+    margin: var(--s-5) 0;
+  }
+  .maindispute__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--s-2);
+    margin: 0 0 var(--s-2);
+    font-family: var(--font-ui);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--ink-secondary);
+  }
+  .maindispute__body {
+    margin: 0;
+    font-size: 0.9375rem;
+    color: var(--ink-secondary);
+  }
+
+  .ev__disputes {
+    margin-top: var(--s-7);
+  }
+  .ev__disputeList {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: var(--s-2);
+  }
+  .ev__disputeList a {
+    text-decoration: none;
+  }
+  .ev__disputeList a:hover {
+    text-decoration: underline;
+  }
+
+  .ev__thin {
+    padding: var(--s-5);
+    border: 1px dashed var(--baseline);
+    border-radius: var(--radius);
+    color: var(--ink-secondary);
+  }
+
+  .related {
+    border-top: var(--rule);
+    padding-top: var(--s-3);
+  }
+  .toc__head {
+    margin: 0 0 var(--s-2);
+    font-family: var(--font-ui);
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-muted);
+  }
+  .related ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--s-2);
+  }
+  .related a {
+    font-family: var(--font-ui);
+    font-size: 0.8125rem;
+    color: var(--ink-secondary);
+    text-decoration: none;
+  }
+  .related a:hover {
+    color: var(--ink);
+    text-decoration: underline;
+  }
+
+  @media (max-width: 56rem) {
+    .ev {
+      grid-template-columns: 1fr;
+    }
+    .ev__side {
+      position: static;
+    }
+  }
+</style>

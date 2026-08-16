@@ -17,7 +17,8 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",
-    "astro": "^5.13.0"
+    "astro": "^5.13.0",
+    "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
     "@notionhq/client": "^2.2.15"

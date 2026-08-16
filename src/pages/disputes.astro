@@ -1,0 +1,458 @@
+---
+/**
+ * ★ Disputes — one card per live dispute, from the cross-verification matrix.
+ *
+ * Each card states the dispute, the positions side by side with the interested
+ * party named, the status, which archive can settle it and why that archive is
+ * disinterested, and what it would take.
+ *
+ * The two resolved entries are presented as worked examples with a before and
+ * after, because they are the site's proof of concept: they moved because a
+ * third state's archive was consulted.
+ */
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+const disputes = (await getCollection('disputes')).map((d) => d.data).sort((a, b) => a.n - b.n);
+
+const resolved = disputes.filter((d) => d.status === 'Resolved');
+const live = disputes.filter((d) => d.status !== 'Resolved');
+
+const STATUS_TONE: Record<string, string> = {
+  Open: 'open',
+  Settleable: 'settleable',
+  Unresolvable: 'unresolvable',
+  Withheld: 'withheld',
+  Resolved: 'resolved',
+  Disputed: 'open',
+  Unknown: 'unresolvable',
+};
+
+const byStatus = live.reduce<Record<string, number>>((acc, d) => {
+  acc[d.status] = (acc[d.status] ?? 0) + 1;
+  return acc;
+}, {});
+---
+
+<Base
+  title="Disputes"
+  description="The live disputes in the corpus, each with the archive that could settle it and why that archive is disinterested."
+>
+  <header class="dhead">
+    <p class="dhead__eyebrow">★ Disputes</p>
+    <h1>{live.length} live disputes, {resolved.length} resolved</h1>
+    <p class="dhead__lede prose">
+      A dispute between France and Spain cannot be settled by France or Spain.
+      Each card below maps a disagreement to the archive of a state that had no
+      stake in that particular quarrel — and says plainly where no such archive
+      exists.
+    </p>
+    <ul class="dhead__tally">
+      {
+        Object.entries(byStatus).map(([s, n]) => (
+          <li>
+            <span class:list={['dot', `dot--${STATUS_TONE[s]}`]} aria-hidden="true" />
+            {n} {s.toLowerCase()}
+          </li>
+        ))
+      }
+    </ul>
+  </header>
+
+  {
+    resolved.length > 0 && (
+      <section class="resolved" aria-labelledby="resolved-h">
+        <h2 id="resolved-h" class="section-h">
+          Worked examples — what the method looks like when it pays off
+        </h2>
+        <p class="section-note prose">
+          Both of these moved because a third state's archive was consulted. They are the
+          argument for the whole approach.
+        </p>
+        <div class="resolved__grid">
+          {resolved.map((d) => (
+            <article class="rcard" id={d.slug}>
+              <header class="rcard__head">
+                <span class="rcard__n">#{d.n}</span>
+                <span class:list={['badge', `badge--resolved`]}>
+                  {d.resolution === 'partly' ? 'Partly resolved' : 'Resolved'}
+                </span>
+              </header>
+              <h3 class="rcard__title">{d.dispute}</h3>
+
+              <div class="beforeafter">
+                <div class="beforeafter__col beforeafter__col--before">
+                  <p class="beforeafter__label">Before</p>
+                  <p class="beforeafter__status">{d.before?.status}</p>
+                  <p class="beforeafter__text">{d.before?.text}</p>
+                </div>
+                <div class="beforeafter__arrow" aria-hidden="true">
+                  →
+                </div>
+                <div class="beforeafter__col beforeafter__col--after">
+                  <p class="beforeafter__label">After</p>
+                  <p class="beforeafter__status">{d.after?.status}</p>
+                  <p class="beforeafter__text">{d.after?.text}</p>
+                </div>
+              </div>
+
+              <dl class="rcard__dl">
+                <dt>Settled by</dt>
+                <dd>{d.settledBy}</dd>
+                <dt>Why that archive</dt>
+                <dd>{d.whyDisinterested}</dd>
+              </dl>
+              {d.verification && (
+                <p class="rcard__verify">
+                  <span class="ref-token">{d.verification}</span>
+                </p>
+              )}
+            </article>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <section aria-labelledby="live-h">
+    <h2 id="live-h" class="section-h">Live disputes</h2>
+    <div class="dgrid">
+      {
+        live.map((d) => (
+          <article class="dcard" id={d.slug}>
+            <header class="dcard__head">
+              <span class="dcard__n">#{d.n}</span>
+              <span class:list={['badge', `badge--${STATUS_TONE[d.status]}`]}>{d.status}</span>
+              {d.withheld && (
+                <span class="badge badge--withheld">
+                  <span aria-hidden="true">⊘</span> Withheld
+                </span>
+              )}
+              <span class="dcard__phase">{d.phase}</span>
+            </header>
+
+            <h3 class="dcard__title">{d.dispute}</h3>
+
+            {/* Positions side by side. No column is styled as the answer. */}
+            <div class="positions" style={`--n:${d.positions.length}`}>
+              {d.positions.map((p) => (
+                <div class="position">
+                  <p class="position__party">{p.party}</p>
+                  <p class="position__text">{p.position}</p>
+                  {p.interest && <p class="position__interest">{p.interest}</p>}
+                </div>
+              ))}
+            </div>
+
+            <dl class="dcard__dl">
+              <dt>Which archive can settle it</dt>
+              <dd>{d.settledBy}</dd>
+              <dt>Why that archive is disinterested</dt>
+              <dd>{d.whyDisinterested}</dd>
+              <dt>What it would take</dt>
+              <dd>{d.whatItWouldTake}</dd>
+            </dl>
+
+            {(d.relatedEvents?.length || d.relatedPeople?.length) && (
+              <p class="dcard__links">
+                {d.relatedEvents?.map((e) => (
+                  <a href={`/events/${e}`}>Event dossier</a>
+                ))}
+                {d.relatedPeople?.map((p) => (
+                  <a href={`/people/${p}`}>Person dossier</a>
+                ))}
+              </p>
+            )}
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <style>
+    .dhead {
+      margin-bottom: var(--s-7);
+    }
+    .dhead__eyebrow {
+      margin: 0 0 var(--s-2);
+      font-family: var(--font-ui);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+    }
+    .dhead__lede {
+      color: var(--ink-secondary);
+    }
+    .dhead__tally {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--s-4);
+      list-style: none;
+      margin: var(--s-4) 0 0;
+      padding: 0;
+      font-family: var(--font-ui);
+      font-size: 0.8125rem;
+      color: var(--ink-secondary);
+    }
+    .dhead__tally li {
+      display: flex;
+      align-items: center;
+      gap: 0.4em;
+      margin: 0;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .dot--open {
+      background: var(--status-disputed);
+    }
+    .dot--settleable {
+      background: var(--seq-5);
+    }
+    .dot--unresolvable {
+      background: var(--status-unknown);
+    }
+    .dot--withheld {
+      background: var(--status-withheld);
+    }
+    .dot--resolved {
+      background: var(--status-established);
+    }
+
+    .section-h {
+      font-size: 1.15rem;
+      margin-top: var(--s-7);
+      padding-bottom: var(--s-2);
+      border-bottom: var(--rule);
+    }
+    .section-note {
+      color: var(--ink-secondary);
+      font-size: 0.9375rem;
+    }
+
+    .badge {
+      font-family: var(--font-ui);
+      font-size: 0.625rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.2em 0.5em;
+      border-radius: var(--radius);
+      border: 1px solid currentColor;
+    }
+    .badge--open {
+      color: color-mix(in srgb, var(--status-disputed) 80%, var(--ink));
+    }
+    .badge--settleable {
+      color: var(--accent-ink);
+    }
+    .badge--unresolvable {
+      color: var(--ink-muted);
+    }
+    .badge--withheld {
+      color: var(--status-withheld);
+    }
+    .badge--resolved {
+      color: color-mix(in srgb, var(--status-established) 75%, var(--ink));
+    }
+
+    /* --------------------------------------------------- resolved cards */
+    .resolved__grid {
+      display: grid;
+      gap: var(--s-4);
+      grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    }
+    .rcard {
+      border: var(--rule);
+      border-left: 3px solid var(--status-established);
+      border-radius: var(--radius);
+      background: var(--surface);
+      padding: var(--s-4);
+    }
+    .rcard__head {
+      display: flex;
+      align-items: center;
+      gap: var(--s-2);
+      margin-bottom: var(--s-2);
+    }
+    .rcard__n,
+    .dcard__n {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+    }
+    .rcard__title,
+    .dcard__title {
+      font-size: 1rem;
+      margin: 0 0 var(--s-3);
+      line-height: 1.4;
+    }
+
+    .beforeafter {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: var(--s-3);
+      align-items: start;
+      padding: var(--s-3);
+      background: var(--page-plane);
+      border-radius: var(--radius);
+      margin-bottom: var(--s-3);
+    }
+    .beforeafter__label {
+      margin: 0 0 var(--s-1);
+      font-family: var(--font-ui);
+      font-size: 0.625rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+    }
+    .beforeafter__status {
+      margin: 0 0 var(--s-2);
+      font-family: var(--font-ui);
+      font-size: 0.8125rem;
+      font-weight: 700;
+    }
+    .beforeafter__col--before .beforeafter__status {
+      color: var(--ink-muted);
+    }
+    .beforeafter__col--after .beforeafter__status {
+      color: var(--status-established);
+    }
+    .beforeafter__text {
+      margin: 0;
+      font-size: 0.8125rem;
+      line-height: 1.5;
+      color: var(--ink-secondary);
+    }
+    .beforeafter__arrow {
+      align-self: center;
+      color: var(--ink-muted);
+      font-size: 1.1rem;
+    }
+
+    .rcard__dl,
+    .dcard__dl {
+      margin: 0;
+      display: grid;
+      gap: var(--s-1);
+      font-size: 0.8125rem;
+    }
+    .rcard__dl dt,
+    .dcard__dl dt {
+      font-family: var(--font-ui);
+      font-size: 0.625rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+      margin-top: var(--s-2);
+    }
+    .rcard__dl dd,
+    .dcard__dl dd {
+      margin: 0;
+      color: var(--ink-secondary);
+      line-height: 1.5;
+    }
+    .rcard__verify {
+      margin: var(--s-3) 0 0;
+    }
+
+    /* ------------------------------------------------------- live cards */
+    .dgrid {
+      display: grid;
+      gap: var(--s-4);
+      grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    }
+
+    .dcard {
+      border: var(--rule);
+      border-radius: var(--radius);
+      background: var(--surface);
+      padding: var(--s-4);
+    }
+    .dcard__head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--s-2);
+      margin-bottom: var(--s-2);
+    }
+    .dcard__phase {
+      margin-left: auto;
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      color: var(--ink-muted);
+    }
+
+    /* Equal weight, always. The layout must never resolve the dispute. */
+    .positions {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+      gap: 0;
+      border: var(--rule);
+      border-radius: var(--radius);
+      margin-bottom: var(--s-3);
+      overflow: hidden;
+    }
+    .position {
+      padding: var(--s-3);
+      border-right: var(--rule);
+    }
+    .position:last-child {
+      border-right: 0;
+    }
+    .position__party {
+      margin: 0 0 var(--s-1);
+      font-family: var(--font-ui);
+      font-size: 0.625rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--ink-secondary);
+    }
+    .position__text {
+      margin: 0;
+      font-size: 0.8125rem;
+      line-height: 1.45;
+    }
+    .position__interest {
+      margin: var(--s-2) 0 0;
+      font-family: var(--font-ui);
+      font-size: 0.6875rem;
+      line-height: 1.4;
+      color: var(--ink-muted);
+    }
+
+    .dcard__links {
+      display: flex;
+      gap: var(--s-3);
+      margin: var(--s-3) 0 0;
+      font-family: var(--font-ui);
+      font-size: 0.75rem;
+    }
+
+    @media (max-width: 40rem) {
+      .beforeafter {
+        grid-template-columns: 1fr;
+      }
+      .beforeafter__arrow {
+        transform: rotate(90deg);
+        justify-self: center;
+      }
+      .position {
+        border-right: 0;
+        border-bottom: var(--rule);
+      }
+      .position:last-child {
+        border-bottom: 0;
+      }
+    }
+  </style>
+</Base>

@@ -1,0 +1,174 @@
+---
+/**
+ * A reusable facet bar for the index routes.
+ *
+ * The list it filters is rendered server-side in full; this only hides rows.
+ * With JavaScript disabled every entry is present and readable — the facets
+ * simply do nothing, which is the correct degradation for an index.
+ */
+interface Facet {
+  key: string;
+  label: string;
+  values: string[];
+}
+
+interface Props {
+  facets: Facet[];
+  countLabel: string;
+  /** Include a free-text box that matches the row's data-search attribute. */
+  search?: boolean;
+}
+
+const { facets, countLabel, search = true } = Astro.props;
+---
+
+<div class="facets no-print" data-facets>
+  {
+    search && (
+      <div class="facets__group facets__group--search">
+        <label class="facets__label" for="facet-q">
+          Filter
+        </label>
+        <input
+          id="facet-q"
+          type="search"
+          placeholder="Name or alias…"
+          data-facet-search
+          autocomplete="off"
+        />
+      </div>
+    )
+  }
+  {
+    facets.map((f) => (
+      <div class="facets__group">
+        <label class="facets__label" for={`facet-${f.key}`}>
+          {f.label}
+        </label>
+        <select id={`facet-${f.key}`} data-facet={f.key}>
+          <option value="">All</option>
+          {f.values.map((v) => (
+            <option value={v}>{v}</option>
+          ))}
+        </select>
+      </div>
+    ))
+  }
+  <p class="facets__count" data-facet-count aria-live="polite"></p>
+  <button class="facets__reset" type="button" data-facet-reset hidden>Reset</button>
+</div>
+
+<script is:inline define:vars={{ countLabel }}>
+  (function () {
+    const bar = document.querySelector('[data-facets]');
+    const list = document.querySelector('[data-index]');
+    if (!bar || !list) return;
+
+    const rows = Array.from(list.children);
+    const selects = Array.from(bar.querySelectorAll('[data-facet]'));
+    const box = bar.querySelector('[data-facet-search]');
+    const countEl = bar.querySelector('[data-facet-count]');
+    const reset = bar.querySelector('[data-facet-reset]');
+
+    function apply() {
+      const q = (box?.value || '').trim().toLowerCase();
+      let shown = 0;
+      let anyActive = !!q;
+
+      for (const row of rows) {
+        let ok = true;
+        for (const sel of selects) {
+          const want = sel.value;
+          if (!want) continue;
+          anyActive = true;
+          // Multi-value attributes are pipe-joined; match a whole member.
+          const have = (row.dataset[sel.dataset.facet] || '').split('|');
+          if (!have.includes(want)) {
+            ok = false;
+            break;
+          }
+        }
+        if (ok && q) {
+          ok = (row.dataset.search || '').includes(q);
+        }
+        row.hidden = !ok;
+        if (ok) shown++;
+      }
+
+      if (countEl) countEl.textContent = shown + ' ' + countLabel;
+      if (reset) reset.hidden = !anyActive;
+    }
+
+    selects.forEach((s) => s.addEventListener('change', apply));
+    box?.addEventListener('input', apply);
+    reset?.addEventListener('click', () => {
+      selects.forEach((s) => (s.value = ''));
+      if (box) box.value = '';
+      apply();
+    });
+
+    apply();
+  })();
+</script>
+
+<style>
+  .facets {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: var(--s-3) var(--s-4);
+    padding: var(--s-3) 0;
+    border-top: var(--rule);
+    border-bottom: var(--rule);
+    margin-bottom: var(--s-4);
+  }
+
+  .facets__group {
+    display: grid;
+    gap: var(--s-1);
+  }
+  .facets__group--search {
+    flex: 1 1 12rem;
+    min-width: 10rem;
+  }
+
+  .facets__label {
+    font-family: var(--font-ui);
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-muted);
+  }
+
+  .facets select,
+  .facets input {
+    font-family: var(--font-ui);
+    font-size: 0.8125rem;
+    padding: 0.3em 0.5em;
+    background: var(--surface);
+    color: var(--ink);
+    border: var(--rule);
+    border-radius: var(--radius);
+    width: 100%;
+  }
+
+  .facets__count {
+    margin: 0 0 0 auto;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+    white-space: nowrap;
+  }
+
+  .facets__reset {
+    background: transparent;
+    border: 0;
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    color: var(--accent-ink);
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+  }
+</style>

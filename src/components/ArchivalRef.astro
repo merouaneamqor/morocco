@@ -1,0 +1,202 @@
+---
+/**
+ * <ArchivalRef> — the most important component on the site.
+ *
+ * A verified reference and an unverified one must never look alike. The
+ * corpus's standing rule is that a reference is written out only when it can
+ * be seen in a catalogue, in a digitised document, or quoted verbatim by a
+ * named scholar who consulted it. Everything else reads NOT YET VERIFIED,
+ * followed by the fonds a researcher should request.
+ *
+ * The unverified treatment is deliberately unglamorous: dashed border, the
+ * tint struck through, and the literal words NOT YET VERIFIED in the
+ * accessible text. It must look like an IOU, because that is what it is.
+ *
+ * Two hard rules enforced here:
+ *   - Never truncate a reference string.
+ *   - Never render a reference as a link unless the link resolves to the
+ *     actual catalogue record (`catalogueUrl`, not a general institution URL).
+ */
+interface Props {
+  reference: string;
+  verification:
+    | 'Consulted directly'
+    | 'Catalogue verified'
+    | 'Cited by named scholar'
+    | 'Described by named scholar'
+    | 'Reported'
+    | 'NOT YET VERIFIED';
+  /** Granularity of the reference. */
+  scope?: 'document' | 'series' | 'fonds';
+  /** What consulting it would settle. */
+  settles?: string;
+  /** The fonds to request — shown when unverified. */
+  request?: string;
+  /** Only pass a URL that resolves to the actual catalogue record. */
+  catalogueUrl?: string;
+  class?: string;
+}
+
+const {
+  reference,
+  verification,
+  scope,
+  settles,
+  request,
+  catalogueUrl,
+  class: className = '',
+} = Astro.props;
+
+const unverified = verification === 'NOT YET VERIFIED';
+const SCOPE_LABEL: Record<string, string> = {
+  document: 'Document-level',
+  series: 'Series-level',
+  fonds: 'Fonds-level',
+};
+---
+
+<div
+  class:list={['archival-ref', unverified && 'archival-ref--unverified', className]}
+  data-verification={verification}
+>
+  <div class="archival-ref__head">
+    <span class:list={['archival-ref__chip', unverified && 'archival-ref__chip--unverified']}>
+      {unverified ? 'NOT YET VERIFIED' : verification}
+    </span>
+    {scope && <span class="archival-ref__scope">{SCOPE_LABEL[scope] ?? scope}</span>}
+  </div>
+
+  {/* Never truncated, never ellipsised — the whole string or nothing. */}
+  <p class="archival-ref__ref">
+    {
+      catalogueUrl && !unverified ? (
+        <a href={catalogueUrl} rel="noopener">
+          {reference}
+        </a>
+      ) : (
+        reference
+      )
+    }
+  </p>
+
+  {
+    unverified && (
+      <p class="archival-ref__request">
+        <strong>Not verified by this project.</strong>{' '}
+        {request
+          ? `Request: ${request}`
+          : 'No reference number here has been reconstructed from memory or inferred.'}
+      </p>
+    )
+  }
+
+  {
+    settles && (
+      <p class="archival-ref__settles">
+        <span class="archival-ref__settles-label">Would settle</span> {settles}
+      </p>
+    )
+  }
+</div>
+
+<style>
+  .archival-ref {
+    margin: var(--s-4) 0;
+    padding: var(--s-3) var(--s-4);
+    background: color-mix(in srgb, var(--accent) 5%, var(--surface));
+    border: 1px solid color-mix(in srgb, var(--accent) 18%, var(--hairline));
+    border-radius: var(--radius);
+  }
+
+  .archival-ref__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--s-2);
+    margin-bottom: var(--s-2);
+  }
+
+  .archival-ref__chip {
+    font-family: var(--font-ui);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.15em 0.5em;
+    border-radius: var(--radius);
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    color: var(--accent-ink);
+    border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  }
+
+  .archival-ref__scope {
+    font-family: var(--font-ui);
+    font-size: 0.6875rem;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  /* Identifiers, not prose. Wrap rather than truncate — a broken reference
+     string is a useless reference string. */
+  .archival-ref__ref {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    margin: 0;
+    color: var(--ink);
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+  }
+
+  .archival-ref__settles,
+  .archival-ref__request {
+    font-family: var(--font-ui);
+    font-size: 0.8125rem;
+    line-height: 1.45;
+    margin: var(--s-2) 0 0;
+    color: var(--ink-secondary);
+  }
+
+  .archival-ref__settles-label {
+    text-transform: uppercase;
+    font-size: 0.6875rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-muted);
+    margin-right: 0.35em;
+  }
+
+  /* ------------------------------------------------------- unverified */
+  .archival-ref--unverified {
+    background: transparent;
+    border: 1px dashed var(--status-withheld);
+    border-left-width: 3px;
+  }
+
+  .archival-ref--unverified .archival-ref__chip {
+    background: transparent;
+    color: var(--status-withheld);
+    border-color: var(--status-withheld);
+  }
+
+  /* The tint is struck through rather than removed, so an unverified entry
+     reads as a promissory note against a real fonds. */
+  .archival-ref--unverified .archival-ref__ref {
+    color: var(--ink-secondary);
+    background: var(--texture-135);
+    background-clip: padding-box;
+    padding: var(--s-2);
+    border-radius: var(--radius);
+    color: var(--ink-secondary);
+  }
+
+  .archival-ref--unverified .archival-ref__request {
+    color: var(--ink);
+  }
+
+  @media (forced-colors: active) {
+    .archival-ref--unverified {
+      border-style: dashed;
+    }
+  }
+</style>

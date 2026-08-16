@@ -1,0 +1,207 @@
+/**
+ * Design tokens.
+ *
+ * Light is the base. Dark is redefined twice — once under
+ * prefers-color-scheme for the default "system" setting, once under
+ * [data-theme="dark"] so an explicit choice wins in both directions.
+ * No colour has its only definition inside a media query.
+ *
+ * Two rules are load-bearing rather than stylistic:
+ *
+ * 1. Claim-status hues are fixed and are never reused as a series colour.
+ *    `Unknown` is muted ink, not a status hue — absence of evidence gets
+ *    absence of colour, which is the honest encoding.
+ *
+ * 2. The categorical ramp has exactly three slots plus a recessive grey.
+ *    A network is an all-pairs form; only the first three slots clear the
+ *    colour-vision separation floors under all-pairs comparison. A fourth
+ *    fails. Never cycle, never generate a ninth hue.
+ */
+
+:root {
+  /* ---------------------------------------------------------- surfaces */
+  --surface: #fcfcfb;
+  --page-plane: #f9f9f7;
+  --ink: #0b0b0b;
+  --ink-secondary: #52514e;
+  --ink-muted: #898781;
+  --hairline: #e1e0d9;
+  --baseline: #c3c2b7;
+
+  /* ------------------------------------------------------ claim status */
+  /* Fixed. Never reused as a series colour. */
+  --status-established: #0ca30c;
+  --status-probable: #0ca30c; /* outline treatment only — see .claim--probable */
+  --status-disputed: #fab219;
+  --status-unknown: #898781; /* deliberately NOT a status hue */
+  --status-withheld: #d03b3b;
+
+  /* Tinted grounds for status chips, kept far enough from the surface to
+     read as a fill without competing with the ink. */
+  --status-established-bg: #eef8ee;
+  --status-disputed-bg: #fdf5e3;
+  --status-unknown-bg: #f2f2ef;
+  --status-withheld-bg: #fbeded;
+
+  /* ------------------------------------------- categorical (3 + grey) */
+  --cat-moroccan: #2a78d6;
+  --cat-french: #eb6834;
+  --cat-spanish: #1baf7a;
+  --cat-other: #898781; /* peripheral actors — recessive by design */
+
+  /* -------------------------------------------------------- sequential */
+  /* Single blue hue, light → dark. The lightest step on the light surface
+     must be no lighter than #86b6ef. */
+  --seq-1: #86b6ef;
+  --seq-2: #6ba2e6;
+  --seq-3: #518edc;
+  --seq-4: #3a79cd;
+  --seq-5: #2f66b4;
+  --seq-6: #27549a;
+  --seq-7: #1f447f;
+  --seq-8: #184f95;
+
+  /* ------------------------------------------------------------ accent */
+  --accent: #2a78d6;
+  --accent-ink: #1f5aa3;
+  --focus-ring: #2a78d6;
+
+  /* ------------------------------------------------------ typography */
+  --font-body: 'Source Serif 4', 'Source Serif Pro', 'Libre Baskerville',
+    'Noto Serif', Georgia, 'Times New Roman', serif;
+  --font-ui: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, 'Noto Sans', sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas,
+    'Liberation Mono', 'Noto Sans Mono', monospace;
+  /* Arabic fallback is explicit: the corpus is full of Arabic-script alias
+     strings and a missing face would silently break the scholarship. */
+  --font-arabic: 'Noto Naskh Arabic', 'Amiri', 'Scheherazade New',
+    'Geeza Pro', 'Traditional Arabic', serif;
+
+  --measure: 66ch;
+  --leading: 1.6;
+  --leading-tight: 1.3;
+
+  /* ---------------------------------------------------------- spacing */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.5rem;
+  --s-6: 2rem;
+  --s-7: 3rem;
+  --s-8: 4rem;
+
+  --radius: 2px; /* hairline aesthetic — no soft cards */
+  --rule: 1px solid var(--hairline);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --surface: #1a1a19;
+    --page-plane: #0d0d0d;
+    --ink: #ffffff;
+    --ink-secondary: #c3c2b7;
+    --ink-muted: #898781;
+    --hairline: #2c2c2a;
+    --baseline: #383835;
+
+    --status-established: #35c035;
+    --status-probable: #35c035;
+    --status-disputed: #f5bd42;
+    --status-unknown: #898781;
+    --status-withheld: #e75f5f;
+
+    --status-established-bg: #16261a;
+    --status-disputed-bg: #2b2415;
+    --status-unknown-bg: #242422;
+    --status-withheld-bg: #2c1a1a;
+
+    --cat-moroccan: #3987e5;
+    --cat-french: #d95926;
+    --cat-spanish: #199e70;
+    --cat-other: #898781;
+
+    --seq-1: #184f95;
+    --seq-2: #1d5aa6;
+    --seq-3: #2367b8;
+    --seq-4: #2a75ca;
+    --seq-5: #3a84d6;
+    --seq-6: #4f95e0;
+    --seq-7: #68a7e9;
+    --seq-8: #86b6ef;
+
+    --accent: #5c9ceb;
+    --accent-ink: #86b6ef;
+    --focus-ring: #86b6ef;
+  }
+}
+
+:root[data-theme='dark'] {
+  --surface: #1a1a19;
+  --page-plane: #0d0d0d;
+  --ink: #ffffff;
+  --ink-secondary: #c3c2b7;
+  --ink-muted: #898781;
+  --hairline: #2c2c2a;
+  --baseline: #383835;
+
+  --status-established: #35c035;
+  --status-probable: #35c035;
+  --status-disputed: #f5bd42;
+  --status-unknown: #898781;
+  --status-withheld: #e75f5f;
+
+  --status-established-bg: #16261a;
+  --status-disputed-bg: #2b2415;
+  --status-unknown-bg: #242422;
+  --status-withheld-bg: #2c1a1a;
+
+  --cat-moroccan: #3987e5;
+  --cat-french: #d95926;
+  --cat-spanish: #199e70;
+  --cat-other: #898781;
+
+  --seq-1: #184f95;
+  --seq-2: #1d5aa6;
+  --seq-3: #2367b8;
+  --seq-4: #2a75ca;
+  --seq-5: #3a84d6;
+  --seq-6: #4f95e0;
+  --seq-7: #68a7e9;
+  --seq-8: #86b6ef;
+
+  --accent: #5c9ceb;
+  --accent-ink: #86b6ef;
+  --focus-ring: #86b6ef;
+}
+
+/**
+ * Texture. One 45°/135° line fill, reserved for three uses and no others:
+ * "outside protectorate control", uncertainty bands, and the
+ * forced-colors / print / colour-vision fallback. Never decorative.
+ */
+:root {
+  --texture-45: repeating-linear-gradient(
+    45deg,
+    currentColor 0 1px,
+    transparent 1px 5px
+  );
+  --texture-135: repeating-linear-gradient(
+    135deg,
+    currentColor 0 1px,
+    transparent 1px 5px
+  );
+}
+
+@media (forced-colors: active) {
+  /* Colour is gone; the texture and the label carry the encoding. */
+  .claim,
+  .tier,
+  .archival-ref {
+    border: 1px solid CanvasText;
+    forced-color-adjust: none;
+    background: Canvas;
+    color: CanvasText;
+  }
+}

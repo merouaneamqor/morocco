@@ -1,0 +1,177 @@
+---
+/**
+ * <ClaimStatus> — the site's most-used primitive.
+ *
+ * Always icon + colour + text label. Never colour alone. On the light surface
+ * the `Disputed` warning hue sits below 3:1, so the icon/label pairing is the
+ * mitigation and is therefore mandatory rather than decorative — there is no
+ * prop to turn the label off.
+ *
+ * `Withheld` is NOT a rung on the confidence ladder. It is an independent flag
+ * that may co-occur with any status, so it is a separate prop, not a fifth
+ * enum member. The location of Ben Barka's body is not low-confidence; it is
+ * known to someone who will not say.
+ *
+ * Renders as an inline chip mid-prose, and as a left-margin gutter marker when
+ * it heads a block.
+ */
+interface Props {
+  status: 'Established' | 'Highly probable' | 'Disputed' | 'Unknown';
+  /** Independent flag — may co-occur with any status. */
+  withheld?: boolean;
+  /** 'chip' mid-prose, 'gutter' when heading a block. */
+  variant?: 'chip' | 'gutter';
+  /** Optional detail surfaced as the title/tooltip. */
+  note?: string;
+  class?: string;
+}
+
+const { status, withheld = false, variant = 'chip', note, class: className = '' } = Astro.props;
+
+const ICONS: Record<Props['status'], string> = {
+  Established: '●',
+  'Highly probable': '◐',
+  Disputed: '⇄',
+  Unknown: '○',
+};
+
+const KEYS: Record<Props['status'], string> = {
+  Established: 'established',
+  'Highly probable': 'probable',
+  Disputed: 'disputed',
+  Unknown: 'unknown',
+};
+
+const key = KEYS[status];
+const icon = ICONS[status];
+---
+
+<span
+  class:list={['claim', `claim--${key}`, `claim--${variant}`, className]}
+  data-status={status}
+  data-withheld={withheld ? 'true' : undefined}
+  title={note}
+>
+  <span class="claim__icon" aria-hidden="true">{icon}</span>
+  <span class="claim__label">{status}</span>
+  {
+    withheld && (
+      <span class="claim__withheld" title="Known to someone who will not disclose it — not the same as unknown">
+        <span class="claim__icon" aria-hidden="true">
+          ⊘
+        </span>
+        <span class="claim__label">Withheld</span>
+      </span>
+    )
+  }
+</span>
+
+<style>
+  .claim {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.35em;
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: 1.4;
+    white-space: nowrap;
+    vertical-align: baseline;
+  }
+
+  .claim__icon {
+    font-size: 0.9em;
+    line-height: 1;
+  }
+
+  /* Text always wears a text token; the coloured mark sits beside the label
+     and carries identity. This keeps label contrast independent of the hue. */
+  .claim__label {
+    color: var(--ink-secondary);
+  }
+
+  .claim--chip {
+    padding: 0.15em 0.5em;
+    border-radius: var(--radius);
+    border: 1px solid transparent;
+  }
+
+  .claim--established .claim__icon {
+    color: var(--status-established);
+  }
+  .claim--established.claim--chip {
+    background: var(--status-established-bg);
+    border-color: color-mix(in srgb, var(--status-established) 25%, transparent);
+  }
+
+  /* Highly probable is the same hue as Established but outline-only, so the
+     two read as adjacent rungs of one ladder rather than two categories. */
+  .claim--probable .claim__icon {
+    color: var(--status-probable);
+  }
+  .claim--probable.claim--chip {
+    background: transparent;
+    border-color: color-mix(in srgb, var(--status-probable) 45%, transparent);
+  }
+
+  .claim--disputed .claim__icon {
+    color: var(--status-disputed);
+  }
+  .claim--disputed.claim--chip {
+    background: var(--status-disputed-bg);
+    border-color: color-mix(in srgb, var(--status-disputed) 40%, transparent);
+  }
+
+  /* Unknown gets muted ink, not a status hue. Absence of evidence gets
+     absence of colour — that is the honest encoding. */
+  .claim--unknown .claim__icon {
+    color: var(--status-unknown);
+  }
+  .claim--unknown.claim--chip {
+    background: var(--status-unknown-bg);
+    border-color: var(--hairline);
+  }
+  .claim--unknown .claim__label {
+    color: var(--ink-muted);
+    font-weight: 500;
+  }
+
+  .claim__withheld {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.3em;
+    margin-left: 0.35em;
+    padding-left: 0.45em;
+    border-left: 1px solid color-mix(in srgb, var(--status-withheld) 35%, transparent);
+  }
+  .claim__withheld .claim__icon {
+    color: var(--status-withheld);
+  }
+  .claim__withheld .claim__label {
+    color: var(--status-withheld);
+  }
+
+  /* Gutter marker: the block-heading form. Sits in the left margin of the
+     dossier body so a reader can scan a page's epistemic shape vertically. */
+  .claim--gutter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1em;
+    white-space: normal;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .claim--gutter .claim__icon {
+    font-size: 1.1em;
+  }
+
+  @media (forced-colors: active) {
+    .claim__icon,
+    .claim__label {
+      color: CanvasText;
+    }
+  }
+</style>

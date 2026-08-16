@@ -1,0 +1,239 @@
+---
+/**
+ * <FigureRange> — for contested quantities.
+ *
+ * Renders a range with its competing attributions rather than a single number,
+ * as a horizontal dot-plot. The caution text is mandatory and always visible:
+ * it is usually the only place the reader learns that a spread is definitional
+ * rather than evidentiary.
+ *
+ * The site must never display a single figure where the corpus records a
+ * range. `scripts/integrity.mjs` enforces that by failing the build if a page
+ * interpolates a bare number that also appears in a FigureRange.
+ *
+ * A table view is included for every instance, not as a nicety but because the
+ * dots sit below 3:1 against the surface and the relief rule requires the same
+ * data in text form.
+ */
+export interface FigureValue {
+  n: number;
+  source: string;
+  note?: string;
+}
+
+interface Props {
+  label: string;
+  values: FigureValue[];
+  /** Mandatory. Explains what the spread actually means. */
+  caution: string;
+  unit?: string;
+  id?: string;
+}
+
+const { label, values, caution, unit = '', id } = Astro.props;
+
+const sorted = [...values].sort((a, b) => a.n - b.n);
+const min = sorted[0].n;
+const max = sorted[sorted.length - 1].n;
+const span = max - min || 1;
+const pct = (n: number) => ((n - min) / span) * 100;
+const fmt = (n: number) => n.toLocaleString('en-GB');
+const tableId = id ? `${id}-table` : undefined;
+---
+
+<figure class="frange" id={id}>
+  <figcaption class="frange__head">
+    <span class="frange__label">{label}</span>
+    <span class="frange__span">
+      {fmt(min)}–{fmt(max)}{unit && ` ${unit}`}
+      <span class="muted"> · {values.length} attributions</span>
+    </span>
+  </figcaption>
+
+  <div class="frange__plot" role="img" aria-describedby={tableId}
+    aria-label={`Dot plot of ${values.length} competing figures for ${label}, ranging from ${fmt(min)} to ${fmt(max)}. The same figures are listed in the table below.`}>
+    <div class="frange__axis" aria-hidden="true"></div>
+    {
+      sorted.map((v) => (
+        <div class="frange__row">
+          <span class="frange__track">
+            <span class="frange__dot" style={`left:${pct(v.n)}%`} />
+          </span>
+          <span class="frange__n">{fmt(v.n)}</span>
+          <span class="frange__src">
+            {v.source}
+            {v.note && <span class="frange__note"> — {v.note}</span>}
+          </span>
+        </div>
+      ))
+    }
+  </div>
+
+  {/* Relief rule: the same data, in text, always present. */}
+  <details class="frange__tableWrap">
+    <summary>Table view</summary>
+    <div class="table-scroll">
+      <table id={tableId}>
+        <caption class="visually-hidden">{label} — competing figures and their attributions</caption>
+        <thead>
+          <tr>
+            <th scope="col">Figure</th>
+            <th scope="col">Attributed to</th>
+            <th scope="col">Note</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            sorted.map((v) => (
+              <tr>
+                <td class="frange__cellN">{fmt(v.n)}{unit && ` ${unit}`}</td>
+                <td>{v.source}</td>
+                <td>{v.note ?? '—'}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </details>
+
+  <p class="frange__caution">{caution}</p>
+</figure>
+
+<style>
+  .frange {
+    margin: var(--s-6) 0;
+    padding: 0;
+    border: var(--rule);
+    border-radius: var(--radius);
+    background: var(--surface);
+  }
+
+  .frange__head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--s-2);
+    padding: var(--s-3) var(--s-4);
+    border-bottom: var(--rule);
+  }
+
+  .frange__label {
+    font-family: var(--font-ui);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .frange__span {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    color: var(--ink-secondary);
+  }
+
+  .frange__plot {
+    position: relative;
+    padding: var(--s-4) var(--s-4) var(--s-3);
+  }
+
+  .frange__row {
+    display: grid;
+    grid-template-columns: minmax(6rem, 1fr) auto auto;
+    align-items: center;
+    gap: var(--s-3);
+    padding: var(--s-1) 0;
+  }
+
+  .frange__track {
+    position: relative;
+    height: 1.25rem;
+    display: block;
+  }
+
+  /* Recessive baseline, thin mark — the axis must not compete with the dots. */
+  .frange__track::before {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    top: 50%;
+    height: 1px;
+    background: var(--hairline);
+  }
+
+  .frange__dot {
+    position: absolute;
+    top: 50%;
+    width: 9px;
+    height: 9px;
+    margin-left: -4.5px;
+    margin-top: -4.5px;
+    border-radius: 50%;
+    background: var(--seq-5);
+    border: 2px solid var(--surface);
+    box-sizing: content-box;
+  }
+
+  .frange__n {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    color: var(--ink);
+  }
+
+  .frange__src {
+    font-family: var(--font-ui);
+    font-size: 0.8125rem;
+    color: var(--ink-secondary);
+  }
+
+  .frange__note {
+    color: var(--ink-muted);
+  }
+
+  .frange__cellN {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .frange__tableWrap {
+    border-top: var(--rule);
+  }
+  .frange__tableWrap > summary {
+    padding: var(--s-2) var(--s-4);
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    color: var(--ink-secondary);
+    cursor: pointer;
+  }
+
+  /* Mandatory and always visible — never behind a disclosure. */
+  .frange__caution {
+    margin: 0;
+    padding: var(--s-3) var(--s-4);
+    border-top: var(--rule);
+    background: var(--page-plane);
+    font-family: var(--font-ui);
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    color: var(--ink-secondary);
+  }
+
+  @media (max-width: 40rem) {
+    .frange__row {
+      grid-template-columns: 1fr auto;
+      row-gap: 0;
+    }
+    .frange__src {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (forced-colors: active) {
+    .frange__dot {
+      background: CanvasText;
+    }
+  }
+</style>

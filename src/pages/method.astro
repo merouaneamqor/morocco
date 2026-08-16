@@ -1,0 +1,237 @@
+---
+import Base from '../layouts/Base.astro';
+import SourceTier from '../components/SourceTier.astro';
+import ClaimStatus from '../components/ClaimStatus.astro';
+import ArchivalRef from '../components/ArchivalRef.astro';
+import {
+  TIER_DEFINITIONS,
+  CLAIM_DEFINITIONS,
+  VERIFICATION_DEFINITIONS,
+  WITHHELD_DEFINITION,
+  PHASES,
+} from '../lib/vocab.ts';
+
+const tiers = Object.entries(TIER_DEFINITIONS) as [keyof typeof TIER_DEFINITIONS, string][];
+const claims = Object.entries(CLAIM_DEFINITIONS) as [
+  keyof typeof CLAIM_DEFINITIONS,
+  string,
+][];
+const verifications = Object.entries(VERIFICATION_DEFINITIONS);
+---
+
+<Base title="Method" description="The tier system, the claim grades, and the standing rule on archival references.">
+  <div class="method prose">
+    <h1>Method</h1>
+    <p class="method__lede">
+      This page should take under two minutes. It explains the three vocabularies the whole
+      site runs on: how evidence is <strong>tiered</strong>, how claims are
+      <strong>graded</strong>, and what a reference number means when you see one.
+    </p>
+
+    <h2 id="claims">Claim status — four ordinal buckets</h2>
+    <p>
+      Every substantive claim carries a visible status, rendered with colour
+      <em>and</em> an icon <em>and</em> a text label — never colour alone. There are four
+      buckets and there is no fifth, and there are deliberately no confidence percentages:
+      the corpus grades in ordinal buckets on purpose, and inventing &ldquo;87%
+      confident&rdquo; would be false precision.
+    </p>
+    <dl class="deflist">
+      {
+        claims.map(([status, def]) => (
+          <div class="deflist__row">
+            <dt>
+              <ClaimStatus status={status} />
+            </dt>
+            <dd>{def}</dd>
+          </div>
+        ))
+      }
+    </dl>
+
+    <h3 id="withheld">Withheld is not a fifth bucket</h3>
+    <p class="withheld-note">
+      <ClaimStatus status="Unknown" withheld={true} />
+    </p>
+    <p>{WITHHELD_DEFINITION}</p>
+    <p>
+      This distinction does real work. Silvestre's manner of death at Annual is
+      <strong>unknown</strong> — no one has the answer. The location of Mehdi Ben Barka's
+      body is <strong>withheld</strong> — someone has it. Roughly 1,800 CIA documents on the
+      Ben Barka case were acknowledged in 1976 and remain undisclosed; French files remain
+      classified. Filing that under &ldquo;unknown&rdquo; would be lying by taxonomy, so the
+      site renders it as a separate flag that can co-occur with any status.
+    </p>
+
+    <h2 id="tiers">Source tiers — eight ordinal levels</h2>
+    <p>
+      Tiers are <strong>ordinal, not categorical</strong>, so they render as steps of a
+      single hue ramp rather than eight colours. Darkest is
+      <code>PRIMARY_ARCHIVAL</code>; lightest is <code>UNSOURCED</code>.
+    </p>
+    <dl class="deflist">
+      {
+        tiers.map(([tier, def]) => (
+          <div class="deflist__row">
+            <dt>
+              <SourceTier tier={tier} />
+            </dt>
+            <dd>{def}</dd>
+          </div>
+        ))
+      }
+    </dl>
+
+    <h2 id="references">The standing rule on archival references</h2>
+    <p>
+      A reference is written out <strong>only</strong> when it can be seen in a catalogue,
+      in a digitised document, or quoted verbatim by a named scholar who consulted it.
+      Otherwise the entry says so, in those words, followed by the fonds a researcher should
+      request.
+    </p>
+    <p><strong>No reference number in this corpus has been reconstructed from memory or inferred.</strong></p>
+
+    <p class="method__demoLabel">A verified reference looks like this:</p>
+    <ArchivalRef
+      reference="SHD, sous-série GR 3H, 3H 314–752 (Commandement Supérieur; 1st–4th bureaux; Fes, Meknes, Marrakech, Taza, Tadla, Oujda)"
+      verification="Catalogue verified"
+      scope="series"
+      settles="the El Herri command chain and the 1920 Zaian submission terms"
+      catalogueUrl="https://www.servicehistorique.sga.defense.gouv.fr/"
+    />
+
+    <p class="method__demoLabel">An unverified one looks like this — and is meant to:</p>
+    <ArchivalRef
+      reference="Khénifra Bureau des Affaires Indigènes political bulletins, March–April 1921"
+      verification="NOT YET VERIFIED"
+      scope="series"
+      request="SHD sous-série GR 3H, Territoire du Tadla, Khénifra annexe, chronological series for 1921"
+      settles="how Mouha ou Hammou Zayani actually died"
+    />
+
+    <h3>What each verification value means</h3>
+    <dl class="deflist deflist--tight">
+      {
+        verifications.map(([v, def]) => (
+          <div class="deflist__row">
+            <dt>
+              <span class:list={['ref-token', v === 'NOT YET VERIFIED' && 'ref-token--unverified']}>
+                {v}
+              </span>
+            </dt>
+            <dd>{def}</dd>
+          </div>
+        ))
+      }
+    </dl>
+
+    <h2 id="phases">The ten phases</h2>
+    <p>
+      Phases are a <strong>sequence</strong>, not a set of kinds. They are never given ten
+      categorical colours — on the timeline they alternate between two neutral surfaces,
+      because ten hues would both fail colour-separation floors and imply the phases are
+      categories rather than a chronology.
+    </p>
+    <ol class="phases">
+      {PHASES.map((p) => <li><code>{p}</code></li>)}
+    </ol>
+
+    <h2 id="rules">What this site will not do</h2>
+    <ul class="nots">
+      <li>
+        <strong>No AI summarisation, no chat.</strong> The corpus's value is that every
+        claim is traceable; a generative layer destroys that in one move.
+      </li>
+      <li>
+        <strong>No confidence percentages.</strong> Four ordinal buckets, on purpose.
+      </li>
+      <li>
+        <strong>No auto-generated &ldquo;related content.&rdquo;</strong> Relations here are
+        evidenced and typed. A similarity sidebar would silently assert connections nobody
+        documented.
+      </li>
+      <li>
+        <strong>No single figure where the corpus records a range.</strong> Contested
+        quantities render as ranges with their competing attributions, and a build-time
+        check fails if a bare figure sneaks in.
+      </li>
+      <li>
+        <strong>No smoothing of the gaps.</strong> If a dossier is thin, the site says it is
+        thin.
+      </li>
+    </ul>
+
+    <h2 id="state">The honest statement about this corpus</h2>
+    <p>
+      It is a source-critical synthesis of the accessible secondary and catalogue
+      literature, with a precise map of where the primary evidence sits.
+      <strong>It is not yet archival research.</strong> No carton has been opened.
+    </p>
+    <p>
+      Its largest single weakness is named on every affected dossier: the Moroccan-side
+      documentary base is currently zero. Ma al-ʿAynayn was a prolific author and is
+      described here through European reports about him. Correcting that is the difference
+      between a history of Morocco and a history of what Europeans wrote down about Morocco.
+    </p>
+  </div>
+
+  <style>
+    .method__lede {
+      font-size: 1.0625rem;
+      color: var(--ink-secondary);
+    }
+    .deflist {
+      margin: var(--s-4) 0 var(--s-6);
+      display: grid;
+      gap: 0;
+      border-top: var(--rule);
+    }
+    .deflist__row {
+      display: grid;
+      grid-template-columns: 15rem minmax(0, 1fr);
+      gap: var(--s-4);
+      padding: var(--s-3) 0;
+      border-bottom: var(--rule);
+      align-items: baseline;
+    }
+    .deflist dt {
+      margin: 0;
+    }
+    .deflist dd {
+      margin: 0;
+      font-size: 0.9375rem;
+      color: var(--ink-secondary);
+    }
+    .deflist--tight .deflist__row {
+      grid-template-columns: 13rem minmax(0, 1fr);
+    }
+    .withheld-note {
+      margin-bottom: var(--s-2);
+    }
+    .method__demoLabel {
+      font-family: var(--font-ui);
+      font-size: 0.8125rem;
+      color: var(--ink-muted);
+      margin-bottom: 0;
+    }
+    .phases {
+      columns: 2;
+      column-gap: var(--s-6);
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+    }
+    .nots li {
+      margin-bottom: var(--s-3);
+    }
+    @media (max-width: 46rem) {
+      .deflist__row,
+      .deflist--tight .deflist__row {
+        grid-template-columns: 1fr;
+        gap: var(--s-2);
+      }
+      .phases {
+        columns: 1;
+      }
+    }
+  </style>
+</Base>

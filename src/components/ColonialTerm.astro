@@ -1,0 +1,145 @@
+---
+/**
+ * <ColonialTerm> — administrative vocabulary, never unmarked.
+ *
+ * The corpus quotes words like dissident, insoumis, cabecilla and rogui
+ * constantly. These describe how the Protectorate filed a person; they do not
+ * describe what the person was. Rendering one as plain description would
+ * reproduce the classifying institution's judgement as if it were fact.
+ *
+ * The term appears in quotation marks with a dotted underline. The popover
+ * gives the issuing institution, what the category meant administratively,
+ * and the caution. It is a <details> element rather than a JS tooltip so it
+ * works with no JavaScript and is reachable by keyboard.
+ */
+import { COLONIAL_TERMS } from '../lib/vocab.ts';
+
+interface Props {
+  /** The term as it appears in the source. Case-insensitive lookup. */
+  term: string;
+  /** Override the displayed text if the source inflects the word. */
+  display?: string;
+}
+
+const { term, display } = Astro.props;
+
+const key = Object.keys(COLONIAL_TERMS).find(
+  (k) => k.toLowerCase() === term.toLowerCase()
+);
+const entry = key ? COLONIAL_TERMS[key] : null;
+const shown = display ?? term;
+
+if (!entry) {
+  // Loud rather than silent: an unknown term means the watchlist and the prose
+  // have drifted apart, and the reader would otherwise get an unmarked word.
+  throw new Error(
+    `<ColonialTerm term="${term}"> is not in the watchlist in src/lib/vocab.ts. ` +
+      `Add it with its issuer, meaning and caution, or quote the word directly.`
+  );
+}
+---
+
+<details class="cterm">
+  <summary class="cterm__summary">
+    <span class="cterm__word">&ldquo;{shown}&rdquo;</span>
+    <span class="visually-hidden"> — colonial administrative term, expand for context</span>
+  </summary>
+  <div class="cterm__pop" role="note">
+    <dl class="cterm__dl">
+      <dt>Issued by</dt>
+      <dd>{entry.issuer}</dd>
+      <dt>Administrative meaning</dt>
+      <dd>{entry.meaning}</dd>
+      <dt>Caution</dt>
+      <dd>{entry.caution}</dd>
+    </dl>
+    <p class="cterm__lang">{entry.language}</p>
+  </div>
+</details>
+
+<style>
+  .cterm {
+    display: inline;
+    position: relative;
+  }
+
+  .cterm__summary {
+    display: inline;
+    cursor: help;
+    list-style: none;
+  }
+  .cterm__summary::-webkit-details-marker {
+    display: none;
+  }
+
+  /* Quotation marks plus a dotted underline. The word never reads as the
+     site's own description. */
+  .cterm__word {
+    border-bottom: 1px dotted var(--ink-muted);
+    font-style: italic;
+  }
+
+  .cterm__summary:hover .cterm__word,
+  .cterm[open] .cterm__word {
+    border-bottom-style: solid;
+    border-bottom-color: var(--accent);
+  }
+
+  .cterm__pop {
+    position: absolute;
+    z-index: 20;
+    left: 0;
+    top: calc(100% + 0.35rem);
+    width: min(30rem, 90vw);
+    padding: var(--s-3) var(--s-4);
+    background: var(--surface);
+    border: var(--rule);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius);
+    font-family: var(--font-ui);
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    font-style: normal;
+  }
+
+  .cterm__dl {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--s-1) var(--s-3);
+  }
+
+  .cterm__dl dt {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--ink-muted);
+    white-space: nowrap;
+    padding-top: 0.15em;
+  }
+
+  .cterm__dl dd {
+    margin: 0;
+    color: var(--ink-secondary);
+  }
+
+  .cterm__lang {
+    margin: var(--s-2) 0 0;
+    padding-top: var(--s-2);
+    border-top: var(--rule);
+    font-size: 0.6875rem;
+    color: var(--ink-muted);
+  }
+
+  @media (max-width: 40rem) {
+    .cterm__pop {
+      position: fixed;
+      left: var(--s-3);
+      right: var(--s-3);
+      width: auto;
+      bottom: var(--s-3);
+      top: auto;
+    }
+  }
+</style>

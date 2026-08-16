@@ -1,0 +1,244 @@
+---
+/**
+ * <NarrativeComparison> — three (sometimes four or five) columns of equal
+ * visual weight: French · Spanish · Moroccan · [Amazigh] · [Independent].
+ *
+ * No column is styled as the answer. The layout must never resolve a dispute.
+ *
+ * On mobile this becomes a tab set with every tab visible in the initial
+ * viewport — never an accordion with one panel open by default, because a
+ * default-open panel implies a default truth. The CSS-only implementation
+ * below uses radio inputs so it works with no JavaScript at all.
+ */
+import SourceTier from './SourceTier.astro';
+import type { TIER_DEFINITIONS } from '../lib/vocab.ts';
+
+export interface Column {
+  /** Whose account this is. */
+  account: string;
+  /** The account itself. */
+  text: string;
+  /** The source tier(s) behind this column. */
+  tiers?: (keyof typeof TIER_DEFINITIONS)[];
+  /** Named sources, if the corpus records them. */
+  sources?: string[];
+}
+
+interface Props {
+  /** What the columns disagree about. */
+  question: string;
+  columns: Column[];
+  /** Stable id prefix — required because the mobile tabs use radio groups. */
+  id: string;
+  caution?: string;
+}
+
+const { question, columns, id, caution } = Astro.props;
+---
+
+<figure class="ncomp" role="group" aria-labelledby={`${id}-q`}>
+  <figcaption class="ncomp__question" id={`${id}-q`}>
+    <span class="ncomp__eyebrow">Accounts side by side</span>
+    {question}
+  </figcaption>
+
+  {/* Mobile tab controls. Every tab is visible at once; none is "the answer". */}
+  <div class="ncomp__tabs" role="tablist" aria-label="Choose an account to read">
+    {
+      columns.map((col, i) => (
+        <>
+          <input
+            type="radio"
+            name={`${id}-tabs`}
+            id={`${id}-tab-${i}`}
+            class="ncomp__radio visually-hidden"
+            checked={i === 0}
+          />
+          <label class="ncomp__tab" for={`${id}-tab-${i}`}>
+            {col.account}
+          </label>
+        </>
+      ))
+    }
+  </div>
+
+  <div class="ncomp__cols" style={`--col-count:${columns.length}`}>
+    {
+      columns.map((col, i) => (
+        <article class="ncomp__col" data-index={i}>
+          <h4 class="ncomp__account">{col.account}</h4>
+          <p class="ncomp__text">{col.text}</p>
+          {col.tiers && col.tiers.length > 0 && (
+            <p class="ncomp__tiers">
+              {col.tiers.map((t) => (
+                <SourceTier tier={t} showRamp={false} />
+              ))}
+            </p>
+          )}
+          {col.sources && col.sources.length > 0 && (
+            <p class="ncomp__sources">{col.sources.join(' · ')}</p>
+          )}
+        </article>
+      ))
+    }
+  </div>
+
+  {caution && <p class="ncomp__caution">{caution}</p>}
+</figure>
+
+<style>
+  .ncomp {
+    margin: var(--s-6) 0;
+    padding: 0;
+    border: var(--rule);
+    border-radius: var(--radius);
+    background: var(--surface);
+  }
+
+  .ncomp__question {
+    padding: var(--s-4);
+    border-bottom: var(--rule);
+    font-weight: 600;
+    line-height: var(--leading-tight);
+  }
+
+  .ncomp__eyebrow {
+    display: block;
+    font-family: var(--font-ui);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-muted);
+    margin-bottom: var(--s-1);
+  }
+
+  .ncomp__cols {
+    display: grid;
+    grid-template-columns: repeat(var(--col-count), 1fr);
+  }
+
+  /* Equal weight is the whole point: identical padding, identical type, one
+     hairline between columns and no emphasis anywhere. */
+  .ncomp__col {
+    padding: var(--s-4);
+    border-right: var(--rule);
+    min-width: 0;
+  }
+  .ncomp__col:last-child {
+    border-right: 0;
+  }
+
+  .ncomp__account {
+    margin: 0 0 var(--s-2);
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--ink-secondary);
+  }
+
+  .ncomp__text {
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.55;
+  }
+
+  .ncomp__tiers {
+    margin: var(--s-3) 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-2);
+  }
+
+  .ncomp__sources {
+    margin: var(--s-2) 0 0;
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+  }
+
+  .ncomp__caution {
+    margin: 0;
+    padding: var(--s-3) var(--s-4);
+    border-top: var(--rule);
+    font-family: var(--font-ui);
+    font-size: 0.8125rem;
+    color: var(--ink-secondary);
+    background: var(--page-plane);
+  }
+
+  .ncomp__tabs {
+    display: none;
+  }
+
+  /* ------------------------------------------------------------ mobile */
+  @media (max-width: 48rem) {
+    .ncomp__tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      border-bottom: var(--rule);
+    }
+
+    .ncomp__tab {
+      flex: 1 1 auto;
+      padding: var(--s-3) var(--s-3);
+      font-family: var(--font-ui);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-align: center;
+      cursor: pointer;
+      border-right: var(--rule);
+      color: var(--ink-secondary);
+      background: var(--page-plane);
+    }
+    .ncomp__tab:last-of-type {
+      border-right: 0;
+    }
+
+    .ncomp__cols {
+      grid-template-columns: 1fr;
+    }
+
+    .ncomp__col {
+      display: none;
+      border-right: 0;
+    }
+
+    /* Radio :checked drives which panel shows — no JS, and the tab strip
+       stays fully visible so no account is hidden behind a disclosure. */
+    .ncomp__radio:nth-of-type(1):checked ~ .ncomp__cols .ncomp__col[data-index='0'],
+    .ncomp__radio:nth-of-type(2):checked ~ .ncomp__cols .ncomp__col[data-index='1'],
+    .ncomp__radio:nth-of-type(3):checked ~ .ncomp__cols .ncomp__col[data-index='2'],
+    .ncomp__radio:nth-of-type(4):checked ~ .ncomp__cols .ncomp__col[data-index='3'],
+    .ncomp__radio:nth-of-type(5):checked ~ .ncomp__cols .ncomp__col[data-index='4'] {
+      display: block;
+    }
+
+    .ncomp__radio:checked + .ncomp__tab {
+      background: var(--surface);
+      color: var(--ink);
+      box-shadow: inset 0 -2px 0 var(--accent);
+    }
+
+    .ncomp__radio:focus-visible + .ncomp__tab {
+      outline: 2px solid var(--focus-ring);
+      outline-offset: -2px;
+    }
+  }
+
+  /* With no JS and no CSS support for the sibling selectors above, every
+     column simply stacks — which loses the tabs but loses no content. */
+  @media (max-width: 48rem) {
+    @supports not selector(:checked ~ *) {
+      .ncomp__col {
+        display: block;
+      }
+      .ncomp__tabs {
+        display: none;
+      }
+    }
+  }
+</style>

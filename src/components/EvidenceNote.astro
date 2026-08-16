@@ -1,0 +1,89 @@
+---
+/**
+ * <EvidenceNote> and <TerminologyWarning> share this file because they are two
+ * treatments of one idea: a blockquote that is not a quotation.
+ *
+ * EvidenceNote opens most dossiers and states what the dossier does and does
+ * not rest on. It is kept above the fold and it does not collapse — a reader
+ * must not be able to dismiss the statement of what the evidence is before
+ * reading the claims built on it.
+ */
+interface Props {
+  kind?: 'evidence' | 'terminology';
+  title?: string;
+}
+
+const { kind = 'evidence', title } = Astro.props;
+
+const DEFAULT_TITLE = {
+  evidence: 'Evidence note',
+  terminology: 'Terminology warning',
+};
+
+const heading = title ?? DEFAULT_TITLE[kind];
+---
+
+<aside class:list={['enote', `enote--${kind}`]} role="note" aria-label={heading}>
+  <p class="enote__head">
+    <span class="enote__icon" aria-hidden="true">{kind === 'evidence' ? '▤' : '⚠'}</span>
+    {heading}
+  </p>
+  <div class="enote__body">
+    <slot />
+  </div>
+</aside>
+
+<style>
+  /* Visually distinct from an ordinary blockquote: a full tinted panel with a
+     labelled head, rather than a left rule on plain prose. */
+  .enote {
+    margin: var(--s-5) 0;
+    padding: var(--s-4);
+    border: var(--rule);
+    border-radius: var(--radius);
+    background: var(--surface);
+  }
+
+  .enote__head {
+    display: flex;
+    align-items: center;
+    gap: 0.45em;
+    margin: 0 0 var(--s-3);
+    font-family: var(--font-ui);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-secondary);
+  }
+
+  .enote__icon {
+    font-size: 0.9rem;
+    line-height: 1;
+  }
+
+  .enote__body {
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    color: var(--ink-secondary);
+  }
+
+  .enote__body :global(> :last-child) {
+    margin-bottom: 0;
+  }
+
+  .enote--evidence {
+    border-left: 3px solid var(--accent);
+  }
+  .enote--evidence .enote__icon {
+    color: var(--accent);
+  }
+
+  .enote--terminology {
+    border-left: 3px solid var(--status-disputed);
+    background: var(--status-disputed-bg);
+  }
+  .enote--terminology .enote__icon {
+    color: var(--status-disputed);
+  }
+</style>
