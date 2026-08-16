@@ -17,8 +17,8 @@
     "verify": "npm run build && node scripts/integrity.mjs && npm test"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.0",
-    "astro": "^5.13.0",
+    "@astrojs/mdx": "^7.0.5",
+    "astro": "^7.2.2",
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
