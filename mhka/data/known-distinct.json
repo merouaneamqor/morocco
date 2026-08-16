@@ -1,0 +1,21 @@
+{
+  "_comment": "Pairs the corpus explicitly warns are DIFFERENT PEOPLE. R05 raises an error if any of these are merged or cross-referenced as one, and the alias matcher is tested against every pair as a negative. Never auto-merge; two men named Ameziane are the reason.",
+  "pairs": [
+    {
+      "a": "Moha ou Said",
+      "b": "Mouha ou Hammou Zayani",
+      "why": "Different Middle Atlas resistance leaders. Routinely conflated because the folded forms are close."
+    },
+    {
+      "a": "Mohamed Ameziane",
+      "b": "Mohammed Sellam Ameziane",
+      "why": "Mohamed Ameziane died 1912 leading Rif resistance against Spain. Mohammed Sellam Ameziane directed the 1958-59 Rif revolt against the independent Moroccan government. Half a century apart."
+    }
+  ],
+  "neverMerge": [
+    {
+      "name": "Sidi Mohamed Ben Hammou",
+      "why": "Identification deliberately unresolved in the corpus. Any merge or confident resolution is an error, not an improvement."
+    }
+  ]
+}
