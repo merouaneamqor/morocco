@@ -1,0 +1,186 @@
+{
+ "phases": [
+  "I pre-1830",
+  "II 1830-1900",
+  "III 1900-1912",
+  "IV 1912-1921",
+  "V 1921-1934",
+  "VI 1934-1944",
+  "VII 1944-1956",
+  "VIII 1956-1961",
+  "IX 1961-1999",
+  "X 1999-present"
+ ],
+ "events": [
+  {
+   "slug": "battle-of-isly",
+   "label": "Battle of Isly",
+   "start": "1844-08-14",
+   "end": null,
+   "phase": "II 1830-1900",
+   "type": [
+    "Battle"
+   ],
+   "summary": "Moroccan army under the sultan's son Sidi Mohammed destroyed by Bugeaud's French force; led to the Treaty of Tangier and the Lalla Maghnia border convention.",
+   "mainDispute": "Moroccan troop numbers and casualties, which French accounts inflate. Whether the defeat was as total as French reporting claimed.",
+   "dossierStatus": "Stub"
+  },
+  {
+   "slug": "hispano-moroccan-war-and-the-treaty-of-wad-ras",
+   "label": "Hispano-Moroccan War and the Treaty of Wad Ras",
+   "start": "1859-10-22",
+   "end": "1860-04-26",
+   "phase": "II 1830-1900",
+   "type": [
+    "Battle",
+    "Treaty / agreement",
+    "Economic"
+   ],
+   "summary": "Spanish invasion and capture of Tetouan; the resulting indemnity mortgaged Moroccan customs revenue for decades.",
+   "mainDispute": "The real burden of the indemnity as a share of state revenue. Whether Britain brokered the terms to protect its own commercial position.",
+   "dossierStatus": "Stub"
+  },
+  {
+   "slug": "madrid-conference-on-protection",
+   "label": "Madrid Conference on protection",
+   "start": "1880-05-19",
+   "end": "1880-07-03",
+   "phase": "II 1830-1900",
+   "type": [
+    "Treaty / agreement",
+    "Diplomatic crisis",
+    "Economic"
+   ],
+   "summary": "Convened at Hassan I's request to limit consular protection; instead codified it and granted foreigners the right to own land in Morocco.",
+   "mainDispute": "How many protected persons there actually were, and what share of taxable wealth they removed from the Makhzen.",
+   "dossierStatus": "Stub"
+  },
+  {
+   "slug": "act-of-algeciras",
+   "label": "Act of Algeciras",
+   "start": "1906-01-16",
+   "end": "1906-04-07",
+   "phase": "III 1900-1912",
+   "type": [
+    "Treaty / agreement",
+    "Diplomatic crisis",
+    "Economic"
+   ],
+   "summary": "International conference following the First Moroccan Crisis; established the State Bank of Morocco and European supervision of customs and police while formally affirming Moroccan sovereignty.",
+   "mainDispute": "Whether it was a genuine multilateral guarantee or a managed transfer of Morocco to France with German consent purchased later.",
+   "dossierStatus": "Stub"
+  },
+  {
+   "slug": "casablanca-1907-killings-bombardment-and-occupation",
+   "label": "Casablanca 1907 — killings, bombardment and occupation",
+   "start": "1907-07-30",
+   "end": "1907-08-07",
+   "phase": "III 1900-1912",
+   "type": [
+    "Battle",
+    "Repression",
+    "Economic"
+   ],
+   "summary": "Killing of nine European port workers on 30 July 1907 followed by French naval bombardment 5-7 August, landing, sack of the city, and the occupation of the Chaouia — the first permanent French military presence in Atlantic Morocco.",
+   "mainDispute": "The death toll, where estimates range from 600 to well over 3,000. Whether the bombardment was a proportionate protection of nationals or a pre-planned seizure. Responsibility for the looting.",
+   "dossierStatus": "Substantial"
+  },
+  {
+   "slug": "treaty-of-fez-and-the-april-1912-rising",
+   "label": "Treaty of Fez and the April 1912 rising",
+   "start": "1912-03-30",
+   "end": "1912-11-27",
+   "phase": "III 1900-1912",
+   "type": [
+    "Treaty / agreement",
+    "Uprising",
+    "Repression",
+    "Political"
+   ],
+   "summary": "Treaty of 30 March 1912 establishing the French protectorate, signed by Abdelhafid and Regnault; the Fez rising of 17 April 1912 on its disclosure; and the Franco-Spanish treaty of 27 November 1912 partitioning the country.",
+   "mainDispute": "Whether the Arabic and French texts differ in substance — the foundation of the Moroccan legal argument that the protectorate was void. Casualties in the April rising. Whether the rising was a soldiers' mutiny over pay or a political insurrection.",
+   "dossierStatus": "Substantial"
+  },
+  {
+   "slug": "battle-of-el-herri",
+   "label": "Battle of El Herri",
+   "start": "1914-11-13",
+   "end": null,
+   "phase": "IV 1912-1921",
+   "type": [
+    "Battle",
+    "Campaign"
+   ],
+   "summary": "A French column of 1,230 men under Lt-Col Laverdure raided Mouha ou Hammou Zayani's camp without orders, then was destroyed during its withdrawal. 623 French and colonial troops killed — France's heaviest single defeat in Morocco.",
+   "mainDispute": "Zaian casualties (the French battlefield count of 182 is a French count). Whether responsibility lies with Laverdure's indiscipline (the official French line) or with Lyautey's wartime force posture. Whether the raid's aim was Hammou himself or his camp.",
+   "dossierStatus": "Full dossier"
+  },
+  {
+   "slug": "annual-and-the-rif-war",
+   "label": "Annual and the Rif War",
+   "start": "1921-06-01",
+   "end": "1926-05-27",
+   "phase": "V 1921-1934",
+   "type": [
+    "Battle",
+    "Campaign",
+    "Uprising"
+   ],
+   "summary": "Spanish military collapse in the eastern Rif in July-August 1921, followed by five years of war against the Rif Republic ending with Abd el-Krim's surrender to France at Targuist, 26 May 1926.",
+   "mainDispute": "Total Spanish dead (7,875 to 13,363). Silvestre's manner of death. Alfonso XIII's alleged encouragement of the advance. Whether Monte Arruit was a massacre after surrender on terms or a fight that continued. The scale of Spanish chemical weapons use.",
+   "dossierStatus": "Full dossier"
+  },
+  {
+   "slug": "the-berber-dahir",
+   "label": "The Berber Dahir",
+   "start": "1930-05-16",
+   "end": null,
+   "phase": "V 1921-1934",
+   "type": [
+    "Political",
+    "Repression"
+   ],
+   "summary": "Dahir of 16 May 1930 placing Tamazight-speaking tribes under customary-law tribunals with serious crime before French courts; triggered the Ya Latif campaign and the emergence of mass Moroccan nationalism.",
+   "mainDispute": "Whether it was a deliberate de-Islamisation plot or an extension of existing legislation that was received as one. Whether Mohammed V signed freely.",
+   "dossierStatus": "Stub"
+  },
+  {
+   "slug": "deposition-exile-and-return-of-mohammed-v",
+   "label": "Deposition, exile and return of Mohammed V",
+   "start": "1953-08-20",
+   "end": "1955-11-16",
+   "phase": "VII 1944-1956",
+   "type": [
+    "Political",
+    "Repression"
+   ],
+   "summary": "The French Residency and a coalition of pashas and qaids led by El Glaoui deposed the sultan and installed Ben Arafa; two years of resistance forced his return and led directly to independence.",
+   "mainDispute": "Who decided — Paris, the Residency, or El Glaoui. Casualty figures in the resistance of 1953-55. Whether the Army of Liberation or the negotiations produced independence.",
+   "dossierStatus": "Substantial"
+  }
+ ],
+ "uncertain": [
+  {
+   "label": "Ma al-ʿAynayn appointed khalifa of the Sahara",
+   "from": 1879,
+   "to": 1887,
+   "subject": "ma-al-aynayn",
+   "why": "A dahir appointing him representative over Saharan territories. The date determines whether the act preceded or responded to Spanish occupation at Dakhla — which is the crux of the modern territorial argument.",
+   "dispute": "ma-al-aynayns-appointment"
+  },
+  {
+   "label": "Mouha ou Hammou Zayani invested as qaid of the Zaian",
+   "from": 1877,
+   "to": 1886,
+   "subject": "mouha-ou-hammou-zayani",
+   "why": "Three different years — 1877, 1880 and 1886 — appear in works of comparable authority."
+  },
+  {
+   "label": "Mouha ou Hammou Zayani born",
+   "from": 1857,
+   "to": 1863,
+   "subject": "mouha-ou-hammou-zayani",
+   "why": "c. 1857 or c. 1863, Middle Atlas — not established."
+  }
+ ]
+}

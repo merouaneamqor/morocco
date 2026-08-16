@@ -1,0 +1,268 @@
+[
+ {
+  "slug": "smara",
+  "notionId": "3bd885d88042812eb9d6d8f799a80413",
+  "place": "Smara",
+  "otherNames": "Es-Semara · al-Smāra · السمارة",
+  "aliases": [
+   {
+    "value": "Es-Semara",
+    "tradition": null,
+    "script": "latin",
+    "folded": "es-semara"
+   },
+   {
+    "value": "al-Smāra",
+    "tradition": null,
+    "script": "latin",
+    "folded": "al-smara"
+   },
+   {
+    "value": "السمارة",
+    "tradition": "Ar",
+    "script": "arabic",
+    "folded": "السمارة"
+   }
+  ],
+  "region": "Sahara / Saguia el-Hamra",
+  "zone": "Outside protectorate control",
+  "whyItMatters": "Stone town with mosque and library founded by Ma al-'Aynayn from around 1898 — a deliberate assertion of permanence and statehood in territory European powers classified as empty. Razed by French forces in 1913. That destruction of the physical evidence of a Saharan polity is itself a documentable act with lasting political consequences.",
+  "tribes": "Tekna, Reguibat and the Saharan confederations of the Saguia el-Hamra",
+  "militaryPresence": "French Saharan column, 1913. Later Spanish Sahara administration."
+ },
+ {
+  "slug": "fez",
+  "notionId": "3bd885d8804281548061fd3f8786c303",
+  "place": "Fez",
+  "otherNames": "Fès · Fás · فاس · Fez (Sp./Eng.)",
+  "aliases": [
+   {
+    "value": "Fès",
+    "tradition": null,
+    "script": "latin",
+    "folded": "fes"
+   },
+   {
+    "value": "Fás",
+    "tradition": null,
+    "script": "latin",
+    "folded": "fas"
+   },
+   {
+    "value": "فاس",
+    "tradition": "Ar",
+    "script": "arabic",
+    "folded": "فاس"
+   },
+   {
+    "value": "Fez (Sp./Eng.)",
+    "tradition": null,
+    "script": "latin",
+    "folded": "fez (sp./eng.)"
+   }
+  ],
+  "region": "Fez / Saiss",
+  "zone": "French zone",
+  "whyItMatters": "Political and religious capital until 1912. Al-Qarawiyyin and its ulama were the source of the conditional bay'a of 1908 and of much nationalist leadership. Site of the 1874 tanners' revolt, the 1911 siege, the Treaty of 30 March 1912, and the rising of 17 April 1912 in which the mellah was shelled and sacked. The capital was moved to Rabat immediately afterwards.",
+  "tribes": "Urban; hinterland of the Saiss plain",
+  "militaryPresence": "Moinier's relief column May 1911; French garrison from 1911; Dar al-Makina arsenal (1888) predates it."
+ },
+ {
+  "slug": "rabat",
+  "notionId": "3bd885d88042815ebbe0d88b4db58e0d",
+  "place": "Rabat",
+  "otherNames": "الرباط · Rabat · Salé across the Bou Regreg",
+  "aliases": [
+   {
+    "value": "الرباط",
+    "tradition": "Ar",
+    "script": "arabic",
+    "folded": "الرباط"
+   },
+   {
+    "value": "Rabat",
+    "tradition": null,
+    "script": "latin",
+    "folded": "rabat"
+   },
+   {
+    "value": "Salé across the Bou Regreg",
+    "tradition": null,
+    "script": "latin",
+    "folded": "sale across the bou regreg"
+   }
+  ],
+  "region": "Atlantic plains",
+  "zone": "French zone",
+  "whyItMatters": "Made capital by Lyautey after the April 1912 rising — one of the most consequential administrative decisions of the Protectorate, displacing the inland city of the ulama in favour of a coastal, controllable seat. Site of the Résidence Générale, Prost's ville nouvelle, and the post-1956 state. Salé's Great Mosque is where the Ya Latif campaign began on 20 June 1930.",
+  "tribes": "Urban; Zaer and Zemmour hinterland",
+  "militaryPresence": "Résidence Générale and central French command from 1912."
+ },
+ {
+  "slug": "khenifra",
+  "notionId": "3bd885d880428162aef3e678cb6197af",
+  "place": "Khénifra",
+  "otherNames": "Jenífra (Sp.) · خنيفرة · Tamazight: Xnifra",
+  "aliases": [
+   {
+    "value": "Jenífra (Sp.)",
+    "tradition": null,
+    "script": "latin",
+    "folded": "jenifra (sp.)"
+   },
+   {
+    "value": "خنيفرة",
+    "tradition": "Ar",
+    "script": "arabic",
+    "folded": "خنيفرة"
+   },
+   {
+    "value": "Xnifra",
+    "tradition": "Tamazight",
+    "script": "latin",
+    "folded": "xnifra"
+   }
+  ],
+  "region": "Middle Atlas",
+  "zone": "French zone",
+  "whyItMatters": "Seat of Mouha ou Hammou Zayani and the Zaian confederation; occupied by Henrys in June 1914; besieged after El Herri; the French base from which Laverdure marched on 13 November 1914. Garrison reached c. 7,000 by end November 1914 — a French figure.",
+  "tribes": "Zaian (Izayyan), Aït Harkat, Aït Ya'qoub",
+  "militaryPresence": "French groupe mobile base 1914–1921; Bureau des Affaires Indigènes post. Its BAI political bulletins are a priority archival target."
+ },
+ {
+  "slug": "ajdir-and-alhucemas-bay",
+  "notionId": "3bd885d88042817a991df10ac3bdedec",
+  "place": "Ajdir and Alhucemas bay",
+  "otherNames": "Axdir · أجدير · Alhucemas · Al Hoceima · Sp.: 'Bahía de Alhucemas'",
+  "aliases": [
+   {
+    "value": "Axdir",
+    "tradition": null,
+    "script": "latin",
+    "folded": "axdir"
+   },
+   {
+    "value": "أجدير",
+    "tradition": "Ar",
+    "script": "arabic",
+    "folded": "أجدير"
+   },
+   {
+    "value": "Alhucemas",
+    "tradition": null,
+    "script": "latin",
+    "folded": "alhucemas"
+   },
+   {
+    "value": "Al Hoceima",
+    "tradition": null,
+    "script": "latin",
+    "folded": "al hoceima"
+   },
+   {
+    "value": "Bahía de Alhucemas",
+    "tradition": "Sp",
+    "script": "latin",
+    "folded": "bahia de alhucemas"
+   }
+  ],
+  "region": "Rif",
+  "zone": "Spanish zone",
+  "whyItMatters": "Abd el-Krim's home and the seat of the Rif Republic 1921–1926. Target of Silvestre's 1921 advance and of the combined Franco-Spanish amphibious landing of 8 September 1925 — an operation later studied internationally as a model for opposed landings.",
+  "tribes": "Ait Ouriaghel (Aith Waryaghar)",
+  "militaryPresence": "Rif Republic administrative centre; Spanish landing and occupation from September 1925."
+ },
+ {
+  "slug": "melilla",
+  "notionId": "3bd885d8804281aa8034fbb9adba9fb9",
+  "place": "Melilla",
+  "otherNames": "Mlilya · مليلية · Melilla (Sp.)",
+  "aliases": [
+   {
+    "value": "Mlilya",
+    "tradition": null,
+    "script": "latin",
+    "folded": "mlilya"
+   },
+   {
+    "value": "مليلية",
+    "tradition": "Ar",
+    "script": "arabic",
+    "folded": "مليلية"
+   },
+   {
+    "value": "Melilla (Sp.)",
+    "tradition": null,
+    "script": "latin",
+    "folded": "melilla (sp.)"
+   }
+  ],
+  "region": "Rif",
+  "zone": "Spanish zone",
+  "whyItMatters": "Spanish presidio since 1497 and the base of Spanish expansion into the eastern Rif. Its hinterland saw the 1909 campaign and the Barranco del Lobo, and the 1921 Annual collapse which left the city itself almost undefended. Abd el-Krim worked here as journalist, interpreter and qadi before 1915. Remains Spanish.",
+  "tribes": "Guelaya, Beni Bou Ifrour, Beni Sicar and the eastern Rif tribes",
+  "militaryPresence": "Comandancia General; the Melilla command's records are a core Spanish archival target."
+ },
+ {
+  "slug": "tetouan",
+  "notionId": "3bd885d8804281aa8d42c5197e7fc7e8",
+  "place": "Tetouan",
+  "otherNames": "Titṭawin · تطوان · Tetuán (Sp.)",
+  "aliases": [
+   {
+    "value": "Titṭawin",
+    "tradition": null,
+    "script": "latin",
+    "folded": "tittawin"
+   },
+   {
+    "value": "تطوان",
+    "tradition": "Ar",
+    "script": "arabic",
+    "folded": "تطوان"
+   },
+   {
+    "value": "Tetuán (Sp.)",
+    "tradition": null,
+    "script": "latin",
+    "folded": "tetuan (sp.)"
+   }
+  ],
+  "region": "Jebala / Tangier",
+  "zone": "Spanish zone",
+  "whyItMatters": "Capital of the Spanish protectorate and seat of the Khalifa nominally representing the sultan. Captured by Spain in 1860, the war that produced the Wad Ras indemnity. Centre of nationalism in the Spanish zone under Abdelkhalek Torres, and of an Arabic press largely unread in French-centred accounts.",
+  "tribes": "Jebala; urban Andalusi-descended population",
+  "militaryPresence": "Alta Comisaría de España en Marruecos; the fonds of 4,990 boxes at AGA is the principal Spanish holding."
+ },
+ {
+  "slug": "el-herri",
+  "notionId": "3bd885d8804281ed83a9da1ac78f98ed",
+  "place": "El Herri",
+  "otherNames": "El Hri · Lehri · الهري",
+  "aliases": [
+   {
+    "value": "El Hri",
+    "tradition": null,
+    "script": "latin",
+    "folded": "el hri"
+   },
+   {
+    "value": "Lehri",
+    "tradition": null,
+    "script": "latin",
+    "folded": "lehri"
+   },
+   {
+    "value": "الهري",
+    "tradition": "Ar",
+    "script": "arabic",
+    "folded": "الهري"
+   }
+  ],
+  "region": "Middle Atlas",
+  "zone": "French zone",
+  "whyItMatters": "Site of the 13 November 1914 battle: 623 French and colonial troops killed, France's heaviest single defeat in Morocco. A 1991 commemorative obelisk stands there and contains at least two factual errors — it gives 700 French dead and dates the battle to 1912.",
+  "tribes": "Zaian, Mrabtin, Aït Harkat, Aït Ischak, Aït Ichkern",
+  "militaryPresence": "None permanent; the site of a raid, not a post. c. 15 km from Khénifra."
+ }
+]

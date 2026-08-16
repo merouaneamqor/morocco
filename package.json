@@ -1,0 +1,25 @@
+{
+  "name": "moroccan-history-from-the-archives",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A source-critical historical knowledge base. Public research website built from French, Spanish, Moroccan, British, American, German and Ottoman archival sources.",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "npm run normalize && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "sync": "node scripts/sync.mjs",
+    "normalize": "node scripts/normalize.mjs",
+    "check": "node scripts/integrity.mjs",
+    "test": "node --test tests/"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.0",
+    "astro": "^5.13.0"
+  },
+  "devDependencies": {
+    "@notionhq/client": "^2.2.15"
+  }
+}
