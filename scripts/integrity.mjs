@@ -188,7 +188,7 @@ function ruleBareFigures() {
       // and could still assert a bare figure further down; checking only the
       // first hit would find the qualified one and skip the rest of the page.
       const bare = figure.replace(/,/g, '');
-      const re = new RegExp(`(?<![\\d.,])(${figure}|${bare})(?![\\d.,])`, 'g');
+      const re = new RegExp(`(?<![\\d.,])(${figure}|${bare})(?![\\d]|[.,]\\d)`, 'g');
 
       for (const hit of text.matchAll(re)) {
         // The spread may legitimately span a clause or two, so look for
@@ -204,7 +204,7 @@ function ruleBareFigures() {
         const showsSpread = members.some((other) => {
           if (other === figure) return false;
           const otherBare = other.replace(/,/g, '');
-          return new RegExp(`(?<![\\d.,])(${other}|${otherBare})(?![\\d.,])`).test(wide);
+          return new RegExp(`(?<![\\d.,])(${other}|${otherBare})(?![\\d]|[.,]\\d)`).test(wide);
         });
         if (showsSpread) continue;
 
