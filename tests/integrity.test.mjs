@@ -17,13 +17,32 @@ const DATA = join(ROOT, 'src', 'content', 'data');
 
 const readData = (name) => JSON.parse(readFileSync(join(DATA, name), 'utf8'));
 
+/** Mirrors stripTags in integrity.mjs — block boundaries become newlines. */
+const BLOCK_END =
+  /<\/(p|div|li|ul|ol|h[1-6]|td|th|tr|figcaption|figure|dd|dt|dl|section|article|aside|blockquote|caption|main|header|footer|nav)\s*>|<br\s*\/?>/gi;
+
 const stripTags = (html) =>
   html
     .replace(/<script[\s\S]*?<\/script>/gi, ' ')
     .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(BLOCK_END, '\n')
     .replace(/<[^>]+>/g, ' ')
     .replace(/&[a-z]+;/gi, ' ')
-    .replace(/\s+/g, ' ');
+    .replace(/[ \t]+/g, ' ')
+    .replace(/ ?\n ?/g, '\n')
+    .replace(/\n{2,}/g, '\n');
+
+/** Mirrors the sentence extraction in integrity.mjs rule 2. */
+function sentenceAt(text, index) {
+  const start = Math.max(
+    text.lastIndexOf('. ', index) + 1,
+    text.lastIndexOf('; ', index) + 1,
+    text.lastIndexOf('\n', index) + 1,
+    0
+  );
+  const ends = [text.indexOf('. ', index), text.indexOf('\n', index)].filter((i) => i !== -1);
+  return text.slice(start, ends.length ? Math.min(...ends) + 1 : text.length);
+}
 
 /** The balanced-slice extractor from integrity.mjs rule 3. */
 function unverifiedBlocks(html) {
@@ -76,6 +95,58 @@ test('rule 3: fires when the literal words are missing', () => {
   assert.ok(
     !blocks[0].includes('NOT YET VERIFIED'),
     'a block without the literal words must be detectable'
+  );
+});
+
+// ---------------------------------------------------------------- rule 2
+test('rule 2: text extraction keeps block boundaries', () => {
+  // Without this, a "sentence" runs on across paragraphs and picks up words
+  // from unrelated prose — which silently exempts figures the rule should
+  // catch, and did until this was fixed.
+  const html = '<p>Would settle the casualty definitions</p><p>The Spanish lost 13363 men.</p>';
+  const text = stripTags(html);
+  assert.ok(text.includes('\n'), 'block boundaries must survive as newlines');
+
+  const idx = text.indexOf('13363');
+  const sentence = sentenceAt(text, idx);
+  assert.ok(
+    !/definitions/i.test(sentence),
+    'the figure’s sentence must not bleed into the preceding block'
+  );
+  assert.ok(sentence.includes('The Spanish lost'), 'sentence should be the figure’s own');
+});
+
+test('rule 2: scans every occurrence, not just the first', () => {
+  // A page legitimately states the full spread near the top and could still
+  // assert a bare figure lower down. Checking only the first hit would find
+  // the qualified one and skip the rest of the page.
+  // The two mentions must sit further apart than the sibling-figure window,
+  // otherwise the second is correctly read as part of the same stated spread.
+  const filler = '<p>' + 'Intervening prose about the campaign. '.repeat(12) + '</p>';
+  const text = stripTags(
+    `<p>Total Spanish dead (7,875 to 13,363).</p>${filler}<p>The Spanish lost 13363 men.</p>`
+  );
+  const hits = [...text.matchAll(/(?<![\d.,])(13,363|13363)(?![\d.,])/g)];
+  assert.equal(hits.length, 2, 'both occurrences must be found');
+
+  const members = ['13,363', '8,668', '8,180', '7,875'];
+  // The figure under test is the canonical key, not the literal that matched:
+  // comparing against the matched text would let "13,363" and "13363" count as
+  // different members, and the figure would find itself as its own sibling.
+  const figure = '13,363';
+  const verdicts = hits.map((hit) => {
+    const wide = text.slice(Math.max(0, hit.index - 220), hit.index + 220);
+    const showsSpread = members.some(
+      (o) =>
+        o !== figure &&
+        new RegExp(`(?<![\\d.,])(${o}|${o.replace(/,/g, '')})(?![\\d.,])`).test(wide)
+    );
+    return showsSpread ? 'exempt' : 'violation';
+  });
+  assert.deepEqual(
+    verdicts,
+    ['exempt', 'violation'],
+    'the stated range is exempt; the bare restatement is a violation'
   );
 });
 

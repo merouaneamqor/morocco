@@ -43,13 +43,28 @@ function htmlFiles(dir = DIST, out = []) {
   return out;
 }
 
+/**
+ * HTML → readable text.
+ *
+ * Block boundaries become newlines rather than spaces. This matters: the
+ * bare-figure rule reads the sentence a figure sits in, and if block
+ * boundaries collapsed to spaces that "sentence" would run on across
+ * paragraphs, table cells and component slots — picking up words from
+ * unrelated prose and exempting figures it should have caught.
+ */
+const BLOCK_END =
+  /<\/(p|div|li|ul|ol|h[1-6]|td|th|tr|figcaption|figure|dd|dt|dl|section|article|aside|blockquote|caption|main|header|footer|nav)\s*>|<br\s*\/?>/gi;
+
 const stripTags = (html) =>
   html
     .replace(/<script[\s\S]*?<\/script>/gi, ' ')
     .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(BLOCK_END, '\n')
     .replace(/<[^>]+>/g, ' ')
     .replace(/&[a-z]+;/gi, ' ')
-    .replace(/\s+/g, ' ');
+    .replace(/[ \t]+/g, ' ')
+    .replace(/ ?\n ?/g, '\n')
+    .replace(/\n{2,}/g, '\n');
 
 // ---------------------------------------------------------------- rule 1
 // The Zod schemas already fail the build on an unknown select value. This
@@ -152,40 +167,65 @@ function ruleBareFigures() {
 
     for (const [figure, { label, members }] of ranged) {
       // Match the figure as a standalone number, with or without separators.
+      //
+      // Every occurrence has to be examined, not just the first. A page
+      // legitimately states the full spread near the top (in Main dispute, say)
+      // and could still assert a bare figure further down; checking only the
+      // first hit would find the qualified one and skip the rest of the page.
       const bare = figure.replace(/,/g, '');
-      const re = new RegExp(`(?<![\\d.,])(${figure}|${bare})(?![\\d.,])`);
-      const hit = text.match(re);
-      if (!hit) continue;
+      const re = new RegExp(`(?<![\\d.,])(${figure}|${bare})(?![\\d.,])`, 'g');
 
-      const around = text.slice(
-        Math.max(0, hit.index - 220),
-        Math.min(text.length, hit.index + 220)
-      );
-
-      // Stating the spread is the correct behaviour, not a violation: if
-      // another member of the same range appears nearby, the page is showing a
-      // range, which is exactly what the rule wants.
-      const showsSpread = members.some((other) => {
-        if (other === figure) return false;
-        const otherBare = other.replace(/,/g, '');
-        return new RegExp(`(?<![\\d.,])(${other}|${otherBare})(?![\\d.,])`).test(around);
-      });
-      if (showsSpread) continue;
-
-      // A page may also name a single figure when it names whose figure it is
-      // or frames it as one of several — the corpus does this constantly
-      // ("the French count of 182 is a French battlefield count").
-      const qualified =
-        /\b(range|ranges|ranging|variously|between|estimates?|count|figure|floor|at least|well over|dispute[ds]?|definitional|highest|inclusive)\b/i.test(
-          around
+      for (const hit of text.matchAll(re)) {
+        // The spread may legitimately span a clause or two, so look for
+        // sibling figures in a reasonably wide window.
+        const wide = text.slice(
+          Math.max(0, hit.index - 220),
+          Math.min(text.length, hit.index + 220)
         );
-      if (qualified) continue;
 
-      err(
-        'bare-figure',
-        `${rel}: renders the bare figure ${hit[1]}, which appears in the FigureRange "${label}". ` +
-          `The site must never display a single figure where the corpus records a range.`
-      );
+        // Stating the spread is the correct behaviour, not a violation: if
+        // another member of the same range appears nearby, the page is showing
+        // a range, which is exactly what the rule wants.
+        const showsSpread = members.some((other) => {
+          if (other === figure) return false;
+          const otherBare = other.replace(/,/g, '');
+          return new RegExp(`(?<![\\d.,])(${other}|${otherBare})(?![\\d.,])`).test(wide);
+        });
+        if (showsSpread) continue;
+
+        // Attribution, by contrast, is checked against the figure's OWN
+        // sentence. A wide window is useless here: on a page this dense almost
+        // any 400-character span contains the word "count" or "estimate"
+        // somewhere, which would exempt every figure on the site and leave the
+        // rule enforcing nothing.
+        // A block boundary ends a sentence just as a full stop does.
+        const sentenceStart = Math.max(
+          text.lastIndexOf('. ', hit.index) + 1,
+          text.lastIndexOf('; ', hit.index) + 1,
+          text.lastIndexOf('\n', hit.index) + 1,
+          0
+        );
+        const ends = [text.indexOf('. ', hit.index), text.indexOf('\n', hit.index)].filter(
+          (i) => i !== -1
+        );
+        const sentenceEnd = ends.length ? Math.min(...ends) + 1 : text.length;
+        const sentence = text.slice(sentenceStart, sentenceEnd);
+
+        // A page may name a single figure when that sentence says whose figure
+        // it is, or frames it as one of several — the corpus does this
+        // constantly ("the French count of 182 is a French battlefield count").
+        const qualified =
+          /\b(range|ranges|ranging|variously|between|estimates?|estimated|count|counted|figure|figures|floor|at least|well over|dispute[ds]?|definitional|definitions|highest|inclusive|according to|reported|gives?|c\.)\b/i.test(
+            sentence
+          );
+        if (qualified) continue;
+
+        err(
+          'bare-figure',
+          `${rel}: renders the bare figure ${hit[1]}, which appears in the FigureRange "${label}". ` +
+            `The site must never display a single figure where the corpus records a range.`
+        );
+      }
     }
   }
 }
