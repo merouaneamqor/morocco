@@ -1,0 +1,178 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import FacetIndex from '../components/FacetIndex.astro';
+
+const places = (await getCollection('places')).map((p) => p.data);
+const sorted = [...places].sort((a, b) => a.place.localeCompare(b.place));
+
+const facets = [
+  { key: 'region', label: 'Region', values: [...new Set(places.map((p) => p.region).filter(Boolean))].sort() as string[] },
+  { key: 'zone', label: 'Zone', values: [...new Set(places.map((p) => p.zone).filter(Boolean))] as string[] },
+];
+---
+
+<Base title="Places" description="Places that carry the argument, with the zone each fell into after 1912.">
+  <header class="ihead">
+    <h1>Places</h1>
+    <p class="ihead__lede prose">
+      {places.length} places. Zone is the Franco-Spanish partition of 27 November 1912;
+      &ldquo;outside protectorate control&rdquo; is a real category and is rendered as an
+      absence rather than as a fourth territory.
+    </p>
+  </header>
+
+  <FacetIndex facets={facets} countLabel="places" />
+
+  <ul class="glist" data-index>
+    {
+      sorted.map((p) => (
+        <li
+          class="gitem"
+          id={p.slug}
+          data-region={p.region ?? ''}
+          data-zone={p.zone ?? ''}
+          data-search={[p.place, p.otherNames, p.whyItMatters].filter(Boolean).join(' ').toLowerCase()}
+        >
+          <div class="gitem__head">
+            <h2 class="gitem__title">{p.place}</h2>
+            {p.zone && (
+              <span class:list={['zone', p.zone === 'Outside protectorate control' && 'zone--outside']}>
+                {p.zone}
+              </span>
+            )}
+          </div>
+
+          {p.aliases.length > 0 && (
+            <p class="gitem__aliases">
+              {p.aliases.map((a) => (
+                <span
+                  class:list={['alias', a.script === 'arabic' && 'rtl']}
+                  dir={a.script === 'arabic' ? 'rtl' : undefined}
+                  lang={a.script === 'arabic' ? 'ar' : undefined}
+                >
+                  {a.value}
+                </span>
+              ))}
+            </p>
+          )}
+
+          {p.whyItMatters && <p class="gitem__body">{p.whyItMatters}</p>}
+
+          <dl class="gitem__dl">
+            {p.region && (
+              <>
+                <dt>Region</dt>
+                <dd>{p.region}</dd>
+              </>
+            )}
+            {p.tribes && (
+              <>
+                <dt>Tribes</dt>
+                <dd>{p.tribes}</dd>
+              </>
+            )}
+            {p.militaryPresence && (
+              <>
+                <dt>Military presence</dt>
+                <dd>{p.militaryPresence}</dd>
+              </>
+            )}
+          </dl>
+        </li>
+      ))
+    }
+  </ul>
+
+  <style>
+    .ihead {
+      margin-bottom: var(--s-5);
+    }
+    .ihead__lede {
+      color: var(--ink-secondary);
+    }
+    .glist {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: var(--s-4);
+      grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    }
+    .gitem {
+      padding: var(--s-4);
+      border: var(--rule);
+      border-radius: var(--radius);
+      background: var(--surface);
+      margin: 0;
+      scroll-margin-top: 6rem;
+    }
+    .gitem__head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: var(--s-2);
+      margin-bottom: var(--s-2);
+    }
+    .gitem__title {
+      font-size: 1.0625rem;
+      margin: 0;
+    }
+    .zone {
+      font-family: var(--font-ui);
+      font-size: 0.625rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.15em 0.5em;
+      border: var(--rule);
+      border-radius: var(--radius);
+      color: var(--ink-secondary);
+    }
+    /* An absence reads as an absence: texture, not a fourth fill. */
+    .zone--outside {
+      color: var(--ink-muted);
+      background-image: var(--texture-45);
+      border-style: dashed;
+    }
+    .gitem__aliases {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--s-2);
+      margin: 0 0 var(--s-3);
+    }
+    .alias {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+    }
+    .alias.rtl {
+      font-family: var(--font-arabic);
+      font-size: 0.875rem;
+      unicode-bidi: isolate;
+    }
+    .gitem__body {
+      font-size: 0.9375rem;
+      color: var(--ink-secondary);
+    }
+    .gitem__dl {
+      margin: var(--s-3) 0 0;
+      display: grid;
+      gap: var(--s-1);
+      font-family: var(--font-ui);
+      font-size: 0.8125rem;
+    }
+    .gitem__dl dt {
+      font-size: 0.625rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+    }
+    .gitem__dl dd {
+      margin: 0 0 var(--s-2);
+      color: var(--ink-secondary);
+    }
+  </style>
+</Base>

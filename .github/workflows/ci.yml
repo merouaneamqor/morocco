@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      # Normalize, extract claims, build. The Zod schemas fail the build on any
+      # unrecognised select value — a silently dropped `NOT YET VERIFIED` is
+      # the exact failure mode this site exists to prevent.
+      - name: Build
+        run: npm run build
+
+      # The content-integrity rules: bare figures that duplicate a FigureRange,
+      # unverified references missing their literal words, unmarked colonial
+      # vocabulary, contested-points/disputed-marker disagreement.
+      - name: Content integrity
+        run: node scripts/integrity.mjs
+
+      - name: Tests
+        run: npm test

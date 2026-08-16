@@ -4,7 +4,7 @@ import Base from '../layouts/Base.astro';
 import FacetIndex from '../components/FacetIndex.astro';
 import SourceTier from '../components/SourceTier.astro';
 import ArchivalRef from '../components/ArchivalRef.astro';
-import { TIER_DEFINITIONS } from '../lib/vocab.ts';
+import { TIER_DEFINITIONS } from '../lib/vocab.mjs';
 
 const sources = (await getCollection('sources')).map((s) => s.data);
 

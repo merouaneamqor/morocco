@@ -12,7 +12,7 @@
  * and the caution. It is a <details> element rather than a JS tooltip so it
  * works with no JavaScript and is reachable by keyboard.
  */
-import { COLONIAL_TERMS } from '../lib/vocab.ts';
+import { COLONIAL_TERMS } from '../lib/vocab.mjs';
 
 interface Props {
   /** The term as it appears in the source. Case-insensitive lookup. */
@@ -33,7 +33,7 @@ if (!entry) {
   // Loud rather than silent: an unknown term means the watchlist and the prose
   // have drifted apart, and the reader would otherwise get an unmarked word.
   throw new Error(
-    `<ColonialTerm term="${term}"> is not in the watchlist in src/lib/vocab.ts. ` +
+    `<ColonialTerm term="${term}"> is not in the watchlist in src/lib/vocab.mjs. ` +
       `Add it with its issuer, meaning and caution, or quote the word directly.`
   );
 }

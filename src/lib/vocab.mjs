@@ -18,14 +18,14 @@ export const TIER_DEFINITIONS = {
   ENCYCLOPEDIC: 'Reference work — used as a lead, never as final authority.',
   JOURNALISTIC: 'Press, present-day.',
   UNSOURCED: 'Assertion in circulation with no traceable origin.',
-} as const;
+};
 
 export const CLAIM_DEFINITIONS = {
   Established: 'Multiple independent tiers agree.',
   'Highly probable': 'Strong single-tier evidence, no contradiction.',
   Disputed: 'Sources conflict; all versions recorded.',
   Unknown: 'The question is open and is stated as open.',
-} as const;
+};
 
 export const WITHHELD_DEFINITION =
   'Known to someone who will not disclose it. Not a rung on the confidence ladder — a separate flag that may co-occur with any status.';
@@ -41,7 +41,7 @@ export const VERIFICATION_DEFINITIONS = {
   Reported: 'The holding is reported to exist; not catalogue-checked here.',
   'NOT YET VERIFIED':
     'No reference number here has been reconstructed from memory or inferred. This is an IOU against a named fonds.',
-} as const;
+};
 
 export const EVIDENCE_STRENGTH_ORDER = [
   'Documented',
@@ -49,7 +49,7 @@ export const EVIDENCE_STRENGTH_ORDER = [
   'Single source assertion',
   'Traditional / oral',
   'Disputed',
-] as const;
+];
 
 export const PHASES = [
   'I pre-1830',
@@ -62,7 +62,7 @@ export const PHASES = [
   'VIII 1956-1961',
   'IX 1961-1999',
   'X 1999-present',
-] as const;
+];
 
 /**
  * Colonial administrative vocabulary that must never appear as unmarked
@@ -72,10 +72,7 @@ export const PHASES = [
  * These words describe how the Protectorate filed a person. They do not
  * describe what the person was.
  */
-export const COLONIAL_TERMS: Record<
-  string,
-  { issuer: string; meaning: string; caution: string; language: string }
-> = {
+export const COLONIAL_TERMS = {
   dissident: {
     language: 'French',
     issuer: 'Résidence Générale; Bureau des Affaires Indigènes',

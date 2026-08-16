@@ -1,0 +1,515 @@
+---
+/**
+ * The relationship graph.
+ *
+ * Canvas-rendered force layout. Node colour encodes narrative position in
+ * exactly three categorical slots plus a recessive grey — a network is an
+ * all-pairs form and only the first three slots clear the colour-vision
+ * separation floors under all-pairs comparison. Colour follows the entity and
+ * never its rank, so filtering never repaints a surviving node.
+ *
+ * Because the palette sits below 3:1 on the light surface, the relief rule
+ * applies: labels are always visible on hover and focus, and the edge-list
+ * table view is mandatory rather than optional. It is rendered server-side and
+ * is the canonical view — the canvas is the enhancement.
+ */
+import Base from '../layouts/Base.astro';
+import graph from '../content/data/graph.json';
+import { EVIDENCE_STRENGTH_ORDER, PHASES } from '../lib/vocab.mjs';
+
+const { nodes, edges } = graph;
+
+const GROUP_LABEL: Record<string, string> = {
+  moroccan: 'Moroccan actors',
+  french: 'French actors',
+  spanish: 'Spanish actors',
+  other: 'Other foreign (Ottoman, German, British, US, Italian)',
+};
+
+const nodeById = new Map(nodes.map((n) => [n.id, n]));
+const sortedEdges = [...edges].sort(
+  (a, b) =>
+    EVIDENCE_STRENGTH_ORDER.indexOf(a.strength as never) -
+      EVIDENCE_STRENGTH_ORDER.indexOf(b.strength as never) ||
+    (a.source ?? '').localeCompare(b.source ?? '')
+);
+
+const strengthCounts = EVIDENCE_STRENGTH_ORDER.map((s) => ({
+  strength: s,
+  n: edges.filter((e) => e.strength === s).length,
+}));
+---
+
+<Base
+  title="Network"
+  description="Documented relationships between people, each carrying its evidence and its strength."
+  wide={true}
+>
+  <div class="netwrap">
+    <header class="nhead">
+      <h1>Relationship network</h1>
+      <p class="nhead__lede">
+        {edges.length} documented relationships between {nodes.filter((n) => n.degree > 0).length}{' '}
+        people. Every edge carries its evidence text and its strength.
+        <strong>Nothing here is inferred by similarity</strong> — if a connection is drawn,
+        someone documented it.
+      </p>
+    </header>
+
+    <div class="ncontrols no-print">
+      <div class="ncontrols__group">
+        <label for="floor">
+          Evidence floor
+          <span class="ncontrols__hint">drag right to thin the graph</span>
+        </label>
+        <input
+          id="floor"
+          type="range"
+          min="0"
+          max={EVIDENCE_STRENGTH_ORDER.length - 1}
+          value={EVIDENCE_STRENGTH_ORDER.length - 1}
+          step="1"
+          data-floor
+        />
+        <output data-floor-label>All strengths</output>
+      </div>
+
+      <div class="ncontrols__group">
+        <label for="phase">Phase</label>
+        <select id="phase" data-phase>
+          <option value="">All phases</option>
+          {PHASES.map((p) => <option value={p}>{p}</option>)}
+        </select>
+      </div>
+
+      <fieldset class="legend">
+        <legend>Narrative position</legend>
+        {
+          Object.entries(GROUP_LABEL).map(([k, label]) => (
+            <span class="legend__item">
+              <span class:list={['legend__dot', `legend__dot--${k}`]} aria-hidden="true" />
+              {label}
+            </span>
+          ))
+        }
+      </fieldset>
+    </div>
+
+    <figure class="ncanvas-wrap">
+      <canvas data-graph width="1200" height="640" role="img"
+        aria-label={`Force-directed graph of ${nodes.length} people and ${edges.length} documented relationships. The same data is listed in full in the edge table below.`}></canvas>
+      <figcaption class="ncanvas-cap">
+        Node shape: circle = person. Size: dossier depth. Edge weight and dash: evidence
+        strength, from Documented (thickest, solid) to Disputed (thin, dashed). Hover or
+        focus any node for its label; click to open its dossier.
+      </figcaption>
+    </figure>
+
+    <!-- Mandatory table view: the same data, always present, JS or no JS. -->
+    <section class="edgetable">
+      <h2 class="edgetable__h">Edge list</h2>
+      <p class="edgetable__note">
+        {strengthCounts.map((s) => `${s.n} ${s.strength.toLowerCase()}`).join(' · ')}
+      </p>
+      <div class="table-scroll">
+        <table>
+          <caption class="visually-hidden">
+            Every documented relationship, with its evidence and strength
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">From</th>
+              <th scope="col">Relation</th>
+              <th scope="col">To</th>
+              <th scope="col">Period</th>
+              <th scope="col">Evidence</th>
+              <th scope="col">Strength</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              sortedEdges.map((e) => (
+                <tr data-strength={e.strength}>
+                  <td>
+                    <a href={`/people/${e.source}`}>{nodeById.get(e.source)?.label}</a>
+                  </td>
+                  <td class="edgetable__verb">{e.relation}</td>
+                  <td>
+                    <a href={`/people/${e.target}`}>{nodeById.get(e.target)?.label}</a>
+                  </td>
+                  <td class="edgetable__period">{e.period ?? '—'}</td>
+                  <td class="edgetable__ev">{e.evidence ?? '—'}</td>
+                  <td>
+                    <span class="strength" data-strength={e.strength}>
+                      {e.strength}
+                    </span>
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script define:vars={{ nodes, edges, order: EVIDENCE_STRENGTH_ORDER }}>
+    const canvas = document.querySelector('[data-graph]');
+    if (canvas && canvas.getContext) {
+      const ctx = canvas.getContext('2d');
+      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      const css = getComputedStyle(document.documentElement);
+      const colour = (g) =>
+        css.getPropertyValue(`--cat-${g}`).trim() || css.getPropertyValue('--cat-other').trim();
+
+      const DEPTH_R = {
+        'Full dossier': 9,
+        Substantial: 7,
+        Stub: 4.5,
+        'Identified - not yet researched': 3.5,
+      };
+
+      // Only nodes with at least one edge participate in the layout.
+      const live = nodes.filter((n) => n.degree > 0);
+      const idx = new Map(live.map((n, i) => [n.id, i]));
+      const P = live.map((n, i) => ({
+        ...n,
+        x: canvas.width / 2 + Math.cos((i / live.length) * Math.PI * 2) * 220 + (Math.random() - 0.5) * 40,
+        y: canvas.height / 2 + Math.sin((i / live.length) * Math.PI * 2) * 200 + (Math.random() - 0.5) * 40,
+        vx: 0,
+        vy: 0,
+      }));
+      const E = edges
+        .filter((e) => idx.has(e.source) && idx.has(e.target))
+        .map((e) => ({ ...e, s: idx.get(e.source), t: idx.get(e.target) }));
+
+      let floor = order.length - 1;
+      let phase = '';
+      let hover = null;
+
+      const edgeVisible = (e) => order.indexOf(e.strength) <= floor;
+      const nodeVisible = (n) => !phase || (n.phase || []).includes(phase);
+
+      function step() {
+        // Repulsion.
+        for (let i = 0; i < P.length; i++) {
+          for (let j = i + 1; j < P.length; j++) {
+            const dx = P[j].x - P[i].x;
+            const dy = P[j].y - P[i].y;
+            const d2 = dx * dx + dy * dy || 1;
+            const f = 2400 / d2;
+            const d = Math.sqrt(d2);
+            const fx = (dx / d) * f;
+            const fy = (dy / d) * f;
+            P[i].vx -= fx;
+            P[i].vy -= fy;
+            P[j].vx += fx;
+            P[j].vy += fy;
+          }
+        }
+        // Springs, only along visible edges — this is what makes dragging the
+        // floor visibly thin the graph rather than just hide lines.
+        for (const e of E) {
+          if (!edgeVisible(e)) continue;
+          const a = P[e.s];
+          const b = P[e.t];
+          const dx = b.x - a.x;
+          const dy = b.y - a.y;
+          const d = Math.hypot(dx, dy) || 1;
+          const f = (d - 130) * 0.008;
+          a.vx += (dx / d) * f;
+          a.vy += (dy / d) * f;
+          b.vx -= (dx / d) * f;
+          b.vy -= (dy / d) * f;
+        }
+        // Centring + damping.
+        for (const p of P) {
+          p.vx += (canvas.width / 2 - p.x) * 0.0016;
+          p.vy += (canvas.height / 2 - p.y) * 0.0016;
+          p.vx *= 0.82;
+          p.vy *= 0.82;
+          p.x += p.vx;
+          p.y += p.vy;
+        }
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        const hair = css.getPropertyValue('--baseline').trim();
+        const ink = css.getPropertyValue('--ink').trim();
+        const surface = css.getPropertyValue('--surface').trim();
+
+        for (const e of E) {
+          if (!edgeVisible(e)) continue;
+          const a = P[e.s];
+          const b = P[e.t];
+          if (!nodeVisible(a) || !nodeVisible(b)) continue;
+          const rank = order.indexOf(e.strength);
+          ctx.save();
+          ctx.strokeStyle = hair;
+          ctx.globalAlpha = 0.85 - rank * 0.13;
+          ctx.lineWidth = Math.max(0.6, 2.4 - rank * 0.45);
+          // Disputed is the thinnest and the only dashed weight.
+          if (e.strength === 'Disputed') ctx.setLineDash([3, 3]);
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
+          ctx.stroke();
+          ctx.restore();
+        }
+
+        for (const p of P) {
+          if (!nodeVisible(p)) continue;
+          const r = DEPTH_R[p.depth] ?? 4;
+          // Colour follows the entity, never its rank or its filter state.
+          ctx.fillStyle = colour(p.group);
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.lineWidth = 1.5;
+          ctx.strokeStyle = surface;
+          ctx.stroke();
+        }
+
+        // Labels on hover and focus — the relief rule, since the hues sit
+        // below 3:1 on the light surface.
+        if (hover) {
+          ctx.save();
+          ctx.font = '600 12px system-ui, sans-serif';
+          const w = ctx.measureText(hover.label).width;
+          ctx.fillStyle = surface;
+          ctx.fillRect(hover.x + 10, hover.y - 20, w + 10, 18);
+          ctx.strokeStyle = hair;
+          ctx.lineWidth = 1;
+          ctx.strokeRect(hover.x + 10, hover.y - 20, w + 10, 18);
+          ctx.fillStyle = ink;
+          ctx.fillText(hover.label, hover.x + 15, hover.y - 7);
+          ctx.restore();
+        }
+      }
+
+      function settle(n) {
+        for (let i = 0; i < n; i++) step();
+        draw();
+      }
+
+      // prefers-reduced-motion: render at the settled layout, no animation.
+      if (reduced) {
+        settle(320);
+      } else {
+        let frames = 0;
+        (function loop() {
+          step();
+          draw();
+          if (++frames < 320) requestAnimationFrame(loop);
+        })();
+      }
+
+      const hitTest = (mx, my) =>
+        P.find((p) => nodeVisible(p) && Math.hypot(p.x - mx, p.y - my) < 12) ?? null;
+
+      canvas.addEventListener('mousemove', (ev) => {
+        const rect = canvas.getBoundingClientRect();
+        const mx = ((ev.clientX - rect.left) / rect.width) * canvas.width;
+        const my = ((ev.clientY - rect.top) / rect.height) * canvas.height;
+        const prev = hover;
+        hover = hitTest(mx, my);
+        canvas.style.cursor = hover ? 'pointer' : 'default';
+        if (prev !== hover) draw();
+      });
+
+      canvas.addEventListener('click', (ev) => {
+        const rect = canvas.getBoundingClientRect();
+        const mx = ((ev.clientX - rect.left) / rect.width) * canvas.width;
+        const my = ((ev.clientY - rect.top) / rect.height) * canvas.height;
+        const hit = hitTest(mx, my);
+        if (hit) location.href = `/people/${hit.id}`;
+      });
+
+      const floorInput = document.querySelector('[data-floor]');
+      const floorLabel = document.querySelector('[data-floor-label]');
+      floorInput?.addEventListener('input', () => {
+        floor = Number(floorInput.value);
+        const shown = E.filter(edgeVisible).length;
+        if (floorLabel) {
+          floorLabel.textContent =
+            floor === order.length - 1
+              ? `All strengths — ${shown} relationships`
+              : `${order[floor]} and stronger — ${shown} relationships`;
+        }
+        settle(60);
+      });
+
+      document.querySelector('[data-phase]')?.addEventListener('change', (ev) => {
+        phase = ev.target.value;
+        settle(60);
+      });
+    }
+  </script>
+
+  <style>
+    .netwrap {
+      max-width: 90rem;
+      margin: 0 auto;
+      padding: 0 var(--s-5);
+    }
+    .nhead {
+      margin-bottom: var(--s-5);
+    }
+    .nhead__lede {
+      max-width: 66ch;
+      color: var(--ink-secondary);
+    }
+
+    .ncontrols {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--s-5);
+      align-items: flex-end;
+      padding: var(--s-3) 0;
+      border-top: var(--rule);
+      border-bottom: var(--rule);
+      margin-bottom: var(--s-4);
+    }
+    .ncontrols__group {
+      display: grid;
+      gap: var(--s-1);
+      font-family: var(--font-ui);
+      font-size: 0.75rem;
+    }
+    .ncontrols__group label {
+      font-size: 0.625rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+    }
+    .ncontrols__hint {
+      font-weight: 400;
+      text-transform: none;
+      letter-spacing: 0;
+      margin-left: 0.4em;
+    }
+    .ncontrols input[type='range'] {
+      width: 15rem;
+      accent-color: var(--accent);
+    }
+    .ncontrols output {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      color: var(--ink-secondary);
+    }
+    .ncontrols select {
+      font-family: var(--font-ui);
+      font-size: 0.8125rem;
+      padding: 0.3em 0.5em;
+      background: var(--surface);
+      color: var(--ink);
+      border: var(--rule);
+      border-radius: var(--radius);
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--s-3);
+      border: 0;
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-ui);
+      font-size: 0.6875rem;
+      color: var(--ink-secondary);
+    }
+    .legend legend {
+      font-size: 0.625rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+      padding: 0;
+    }
+    .legend__item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35em;
+    }
+    .legend__dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+    }
+    .legend__dot--moroccan {
+      background: var(--cat-moroccan);
+    }
+    .legend__dot--french {
+      background: var(--cat-french);
+    }
+    .legend__dot--spanish {
+      background: var(--cat-spanish);
+    }
+    .legend__dot--other {
+      background: var(--cat-other);
+    }
+
+    .ncanvas-wrap {
+      margin: 0 0 var(--s-6);
+      border: var(--rule);
+      border-radius: var(--radius);
+      background: var(--surface);
+      overflow: hidden;
+    }
+    canvas {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+    }
+    .ncanvas-cap {
+      padding: var(--s-2) var(--s-4);
+      border-top: var(--rule);
+      font-family: var(--font-ui);
+      font-size: 0.6875rem;
+      color: var(--ink-muted);
+      line-height: 1.5;
+    }
+
+    .edgetable__h {
+      font-size: 1.05rem;
+      margin: 0;
+    }
+    .edgetable__note {
+      font-family: var(--font-ui);
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+      margin: var(--s-1) 0 var(--s-3);
+    }
+    .edgetable__verb {
+      font-family: var(--font-ui);
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+      white-space: nowrap;
+    }
+    .edgetable__period {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      white-space: nowrap;
+    }
+    .edgetable__ev {
+      max-width: 40ch;
+      font-size: 0.875rem;
+    }
+    .strength {
+      font-family: var(--font-ui);
+      font-size: 0.6875rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .strength[data-strength='Documented'] {
+      color: var(--status-established);
+    }
+    .strength[data-strength='Disputed'] {
+      color: var(--status-disputed);
+    }
+  </style>
+</Base>

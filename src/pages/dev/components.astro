@@ -1,0 +1,235 @@
+---
+/**
+ * The component gallery.
+ *
+ * Every evidence primitive in isolation, in every state, so the encodings can
+ * be reviewed without hunting for a page that happens to use them — including
+ * the states that are easy to get wrong: Unknown in muted ink, Withheld
+ * co-occurring with a status, and an unverified reference next to a verified
+ * one.
+ */
+import Base from '../../layouts/Base.astro';
+import ClaimStatus from '../../components/ClaimStatus.astro';
+import SourceTier from '../../components/SourceTier.astro';
+import ArchivalRef from '../../components/ArchivalRef.astro';
+import NarrativeComparison from '../../components/NarrativeComparison.astro';
+import FigureRange from '../../components/FigureRange.astro';
+import ColonialTerm from '../../components/ColonialTerm.astro';
+import EvidenceNote from '../../components/EvidenceNote.astro';
+import { TIER_DEFINITIONS, COLONIAL_TERMS } from '../../lib/vocab.mjs';
+
+const statuses = ['Established', 'Highly probable', 'Disputed', 'Unknown'] as const;
+const tiers = Object.keys(TIER_DEFINITIONS) as (keyof typeof TIER_DEFINITIONS)[];
+const terms = Object.keys(COLONIAL_TERMS);
+---
+
+<Base title="Component gallery" description="Every evidence primitive in isolation.">
+  <div class="gal prose">
+    <h1>Component gallery</h1>
+    <p class="gal__lede">
+      The evidence primitives in isolation. Everything else on the site composes these, so
+      they are built and reviewed here first.
+    </p>
+
+    <h2>ClaimStatus</h2>
+    <p>
+      Always icon <em>and</em> colour <em>and</em> text label. On the light surface the
+      <code>Disputed</code> warning hue sits below 3:1, so the icon and label pairing is the
+      mitigation and there is no prop to switch it off.
+    </p>
+    <div class="row">
+      {statuses.map((s) => <ClaimStatus status={s} />)}
+    </div>
+
+    <h3>Withheld — a flag, not a fifth rung</h3>
+    <p>
+      Withheld may co-occur with any status. Rendering it as a rung on the confidence ladder
+      would be lying by taxonomy.
+    </p>
+    <div class="row">
+      {statuses.map((s) => <ClaimStatus status={s} withheld={true} />)}
+    </div>
+
+    <h3>Gutter variant</h3>
+    <div class="row row--gutter">
+      {statuses.map((s) => <ClaimStatus status={s} variant="gutter" />)}
+    </div>
+
+    <h2>SourceTier</h2>
+    <p>Ordinal, not categorical — steps of one hue ramp, darkest at the top tier.</p>
+    <div class="stack">
+      {tiers.map((t) => <SourceTier tier={t} />)}
+    </div>
+
+    <h2>ArchivalRef</h2>
+    <p>The most important component on the site. Verified first, unverified second.</p>
+    <ArchivalRef
+      reference="SHD, sous-série GR 3H, 3H 314–752"
+      verification="Catalogue verified"
+      scope="series"
+      settles="El Herri command chain"
+    />
+    <ArchivalRef
+      reference="BOA HR.SYS. D.2392 G.5"
+      verification="Cited by named scholar"
+      scope="document"
+      settles="Moulay Abdelhafid's Barcelona negotiation, January–February 1915"
+    />
+    <ArchivalRef
+      reference="Khénifra Bureau des Affaires Indigènes political bulletins, March–April 1921"
+      verification="NOT YET VERIFIED"
+      scope="series"
+      request="SHD sous-série GR 3H, Territoire du Tadla, Khénifra annexe"
+      settles="how Mouha ou Hammou Zayani actually died"
+    />
+
+    <h2>FigureRange</h2>
+    <p>
+      The site must never display a single figure where the corpus records a range. The
+      caution is mandatory and always visible, because the spread here is definitional
+      rather than evidentiary.
+    </p>
+    <FigureRange
+      id="annual-dead"
+      label="Spanish dead, Annual 1921"
+      values={[
+        { n: 13363, source: 'Expediente Picasso', note: '10,973 Spanish + 2,390 indígenas' },
+        { n: 8668, source: 'Indalecio Prieto' },
+        { n: 8180, source: 'Palma Moreno (2001)' },
+        { n: 7875, source: 'Caballero Poveda (1984)' },
+      ]}
+      caution="The spread is definitional: whether Moroccan troops in Spanish service are counted, and whether the count runs to Monte Arruit or through the whole campaign."
+    />
+
+    <h2>NarrativeComparison</h2>
+    <p>
+      Equal visual weight, no column styled as the answer. On a narrow viewport it becomes a
+      tab set with every tab visible — never an accordion with one panel open by default,
+      because that implies a default truth.
+    </p>
+    <NarrativeComparison
+      id="gallery-demo"
+      question="Who decided the deposition of Mohammed V on 20 August 1953?"
+      caution="Settleable from the Résidence–Paris correspondence at Nantes, cross-checked against TNA FO 371 and NARA RG 84 — both Britain and the United States reported the crisis and neither had a position to defend."
+      columns={[
+        {
+          account: 'French',
+          text: 'The Residency acted on pressure from the Moroccan notables; the initiative came from El Glaoui and the pashas.',
+          tiers: ['PRIMARY_ARCHIVAL'],
+        },
+        {
+          account: 'Spanish',
+          text: 'Spain did not recognise the deposition in its zone, and used the crisis to position itself as the less brutal protector.',
+          tiers: ['OFFICIAL'],
+        },
+        {
+          account: 'Moroccan',
+          text: 'France deposed the sultan and recruited a collaborating minority to sign for it; the bayʿa assembled for Ben Arafa was never accepted.',
+          tiers: ['SECONDARY'],
+        },
+      ]}
+    />
+
+    <h2>ColonialTerm</h2>
+    <p>
+      Administrative vocabulary is never unmarked. Each term is quoted, dotted-underlined,
+      and expands to name the issuing institution, the administrative meaning and the
+      caution. The popover is a <code>&lt;details&gt;</code> element, so it works with no
+      JavaScript and is reachable by keyboard.
+    </p>
+    <p class="termrow">
+      {terms.map((t) => <><ColonialTerm term={t} />{' '}</>)}
+    </p>
+
+    <h2>EvidenceNote and TerminologyWarning</h2>
+    <EvidenceNote kind="evidence">
+      <p>
+        The best evidence on this man is, unavoidably, French military evidence — he is
+        documented most densely by the institution trying to destroy him.
+      </p>
+    </EvidenceNote>
+    <EvidenceNote kind="terminology">
+      <p>
+        <em>Insoumis</em>, <em>dissident</em> and <em>rebelle</em> in Résidence Générale
+        usage denote an armed leader outside <strong>French</strong> authority. They carry
+        no implication of illegitimacy in Moroccan terms.
+      </p>
+    </EvidenceNote>
+
+    <h2>Markers lifted from Markdown</h2>
+    <p>
+      These are produced by the remark plugin from the corpus's own conventions rather than
+      written by hand, and they must be indistinguishable from the components above.
+    </p>
+    <div class="markerdemo">
+      <p class="claim-block" data-status="Established">
+        <span class="claim claim--established claim--gutter">
+          <span class="claim__icon" aria-hidden="true">●</span>
+          <span class="claim__label">Established</span>
+        </span>
+        Lifted from <code>**Established:**</code> at the head of a paragraph.
+      </p>
+      <p class="claim-block" data-status="Unknown" data-withheld="true">
+        <span class="claim claim--unknown claim--gutter">
+          <span class="claim__icon" aria-hidden="true">○</span>
+          <span class="claim__label">Unknown</span>
+          <span class="claim__withheld">
+            <span class="claim__icon" aria-hidden="true">⊘</span>
+            <span class="claim__label">Withheld</span>
+          </span>
+        </span>
+        The withheld flag raised by the claim's own language.
+      </p>
+      <p>
+        Inline tokens:{' '}
+        <span class="ref-token"><span class="ref-token__text">Catalogue verified</span></span>{' '}
+        <span class="ref-token ref-token--unverified">
+          <span class="ref-token__icon" aria-hidden="true">⊘</span>
+          <span class="ref-token__text">ARCHIVAL REFERENCE NOT YET VERIFIED</span>
+        </span>{' '}
+        <span class="tier-token">
+          <span class="tier-token__swatch" style="background:var(--seq-8)"></span>
+          <span class="tier-token__text">PRIMARY_ARCHIVAL</span>
+        </span>
+      </p>
+    </div>
+  </div>
+
+  <style>
+    .gal__lede {
+      color: var(--ink-secondary);
+      font-size: 1.0625rem;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--s-3);
+      padding: var(--s-4);
+      border: var(--rule);
+      border-radius: var(--radius);
+      background: var(--surface);
+      margin-bottom: var(--s-4);
+    }
+    .row--gutter {
+      gap: var(--s-5);
+    }
+    .stack {
+      display: grid;
+      gap: var(--s-2);
+      padding: var(--s-4);
+      border: var(--rule);
+      border-radius: var(--radius);
+      background: var(--surface);
+      margin-bottom: var(--s-4);
+    }
+    .termrow {
+      line-height: 2.4;
+    }
+    .markerdemo {
+      padding: var(--s-4);
+      border: var(--rule);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+  </style>
+</Base>
