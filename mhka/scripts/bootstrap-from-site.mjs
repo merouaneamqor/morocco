@@ -33,6 +33,32 @@ if (!existsSync(SRC)) {
 
 mkdirSync(DEST, { recursive: true });
 
+/**
+ * MDX → the prose a Notion body would hold.
+ *
+ * The website's dossiers wrap contested figures in components — a
+ * `<FigureRange values={[{ n: 7875, source: '…' }]}>` is the *correct* way to
+ * record a spread there. Feeding that JSX to the rules makes R03 read each
+ * prop as a bare figure and report the right answer as a violation.
+ *
+ * Notion bodies are prose and tables, not JSX, so component markup is a
+ * rendering concern of the website and is stripped here rather than being
+ * mistaken for corpus text. Real `mhka sync` never sees any of this.
+ */
+function toProse(mdx) {
+  return (
+    mdx
+      // import lines
+      .replace(/^import .*$/gm, '')
+      // self-closing components, including multi-line prop objects
+      .replace(/<[A-Z][A-Za-z0-9]*\b[\s\S]*?\/>/g, '')
+      // paired components, keeping their children
+      .replace(/<\/?[A-Z][A-Za-z0-9]*\b[^>]*>/g, '')
+      .replace(/\n{3,}/g, '\n\n')
+      .trim()
+  );
+}
+
 /** Attach dossier bodies from the website's MDX collections. */
 function bodiesFrom(dir, slugKey) {
   const out = new Map();
@@ -44,9 +70,7 @@ function bodiesFrom(dir, slugKey) {
     if (!m) continue;
     const fmSlug = m[1].match(/^slug:\s*(.+)$/m)?.[1]?.trim().replace(/^["']|["']$/g, '');
     const slug = fmSlug ?? basename(file, '.mdx');
-    // Drop MDX import lines; the rules read prose, not module syntax.
-    const body = m[2].replace(/^import .*$/gm, '').trim();
-    out.set(slug, body);
+    out.set(slug, toProse(m[2]));
   }
   return out;
 }
