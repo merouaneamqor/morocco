@@ -1,0 +1,260 @@
+[
+ {
+  "n": 1,
+  "slug": "casablanca-1907-deaths",
+  "dispute": "How many people died in the French naval bombardment and sack of Casablanca in August 1907.",
+  "positions": [
+   { "party": "French sources", "position": "600–1,500 dead", "interest": "The bombarding power, accounting for its own action." },
+   { "party": "German sources", "position": "2,000–3,000 dead", "interest": "A rival power with an interest in embarrassing France — but it reported." },
+   { "party": "Moroccan accounts", "position": "Higher still", "interest": "The bombarded population; no institutional count survives." }
+  ],
+  "status": "Open",
+  "settledBy": "TNA FO 413 / FO 174 — British consular reporting from Tangier and Casablanca.",
+  "whyDisinterested": "Britain had no stake in the number. It was not the bombarding power and was not competing to discredit France on this point.",
+  "whatItWouldTake": "Read the Tangier and Casablanca consular despatches for August–September 1907 in FO 174, and the corresponding Confidential Print volume in FO 413.",
+  "phase": "III 1900-1912",
+  "relatedEvents": ["casablanca-1907-killings-bombardment-and-occupation"]
+ },
+ {
+  "n": 2,
+  "slug": "treaty-of-fez-arabic-vs-french-text",
+  "dispute": "Whether the Arabic and French instruments of the Treaty of Fez differ in substance — the foundation of the Moroccan legal argument that the protectorate was void.",
+  "positions": [
+   { "party": "Moroccan legal argument", "position": "The texts differ in substance; the Arabic does not concede what the French claims.", "interest": "Sovereignty claim." },
+   { "party": "French position", "position": "The instruments are equivalent.", "interest": "The legal basis of the Protectorate." },
+   { "party": "This workspace", "position": "No comparison has been performed here.", "interest": "States the gap rather than adjudicating it." }
+  ],
+  "status": "Settleable",
+  "settledBy": "Archives du Maroc / Bibliothèque royale hassaniya for the Arabic instrument; Archives diplomatiques (Traités) for the French. Also TNA FO 413, which would carry the British translation made at the time.",
+  "whyDisinterested": "The British translation was made contemporaneously by a state that was not a party to the treaty and had already traded away its Moroccan position in 1904.",
+  "whatItWouldTake": "Obtain both instruments and collate them clause by clause. This is the highest verification priority in the corpus.",
+  "phase": "III 1900-1912",
+  "relatedEvents": ["treaty-of-fez-and-the-april-1912-rising"]
+ },
+ {
+  "n": 3,
+  "slug": "annual-dead",
+  "dispute": "Total Spanish dead in the Annual collapse of July–August 1921.",
+  "positions": [
+   { "party": "Expediente Picasso", "position": "13,363", "interest": "The most inclusive definition — 10,973 Spanish + 2,390 indígenas. A state investigating its own catastrophe." },
+   { "party": "Indalecio Prieto", "position": "8,668", "interest": "Political opposition figure." },
+   { "party": "Palma Moreno (2001)", "position": "8,180", "interest": "Later Spanish scholarship." },
+   { "party": "Caballero Poveda (1984)", "position": "7,875", "interest": "Later Spanish scholarship." }
+  ],
+  "status": "Open",
+  "settledBy": "The Expediente Picasso is Spanish, and the range is a Spanish argument. TNA FO 371 and the international press give the figures circulating before the official account settled.",
+  "whyDisinterested": "Britain watched Spain closely because of Gibraltar and had no position to defend on Spanish casualty accounting.",
+  "whatItWouldTake": "The spread is definitional, not evidentiary: whether Moroccan troops in Spanish service are counted, and whether the count runs to Monte Arruit or through the whole campaign. State the range and the definitions.",
+  "phase": "V 1921-1934",
+  "relatedEvents": ["annual-and-the-rif-war"]
+ },
+ {
+  "n": 4,
+  "slug": "silvestres-death",
+  "dispute": "How General Manuel Fernández Silvestre died at Annual.",
+  "positions": [
+   { "party": "Repeated account", "position": "Suicide", "interest": "Repeated, not documented." },
+   { "party": "Alternative", "position": "Killed in the collapse", "interest": "—" },
+   { "party": "This workspace", "position": "Unknown", "interest": "No body was recovered and identified under conditions that would settle it." }
+  ],
+  "status": "Unresolvable",
+  "settledBy": "Probably unsettleable. Rifian oral tradition is the only non-Spanish source, and it has not been sought.",
+  "whyDisinterested": "No third state was present at Annual.",
+  "whatItWouldTake": "Systematic collection of Rifian oral tradition — strong evidence of experience, weak evidence of specifics. It may not yield an answer.",
+  "phase": "V 1921-1934",
+  "relatedEvents": ["annual-and-the-rif-war"]
+ },
+ {
+  "n": 5,
+  "slug": "alfonso-xiii-telegrams",
+  "dispute": "Whether Alfonso XIII personally encouraged Silvestre's advance beyond his orders.",
+  "positions": [
+   { "party": "Allegation", "position": "The king telegraphed encouragement, bypassing the chain of command.", "interest": "Central to the responsibilities crisis and to Spanish republican politics." },
+   { "party": "Monarchist position", "position": "No such telegrams existed.", "interest": "The Expediente Picasso was structurally unable to reach the crown." }
+  ],
+  "status": "Open",
+  "settledBy": "TNA FO 371 — the British embassy in Madrid reported the responsibilities crisis closely.",
+  "whyDisinterested": "Britain had no stake in the Spanish constitutional quarrel. British reporting would not prove the telegrams but would show what Madrid believed at the time.",
+  "whatItWouldTake": "Record as allegation, never as fact. The underlying documents, if they existed, would be in the royal household papers.",
+  "phase": "V 1921-1934",
+  "relatedEvents": ["annual-and-the-rif-war"]
+ },
+ {
+  "n": 6,
+  "slug": "zaian-dead-at-el-herri",
+  "dispute": "How many Zaian fighters died at El Herri on 13 November 1914.",
+  "positions": [
+   { "party": "French battlefield count", "position": "182", "interest": "A French count made by the force that had just been destroyed." },
+   { "party": "The 1991 Moroccan monument", "position": "182", "interest": "Repeats the French figure — it is not independent corroboration." }
+  ],
+  "status": "Unresolvable",
+  "settledBy": "No archive can settle this. Only Amazigh oral tradition, and it will not yield a number.",
+  "whyDisinterested": "There is no disinterested party. France counted; nobody else did.",
+  "whatItWouldTake": "Record the French floor of 182, label it as a French floor rather than a total, and stop. The monument at El Herri additionally gives 700 French dead and dates the battle to 1912 — two of its three figures are wrong.",
+  "phase": "IV 1912-1921",
+  "relatedEvents": ["battle-of-el-herri"]
+ },
+ {
+  "n": 7,
+  "slug": "mouha-ou-hammous-death",
+  "dispute": "How Mouha ou Hammou Zayani died on 27 March 1921. Three different claims are routinely collapsed into one.",
+  "positions": [
+   { "party": "Version A", "position": "Killed by his son Hassan personally.", "interest": "The version most often repeated; convenient to France, which had received Hassan's submission in 1920." },
+   { "party": "Version B", "position": "Died fighting a faction his sons had joined — not killed by a son's hand.", "interest": "Distinguishes fratricide from factional conflict." },
+   { "party": "Version C", "position": "Died in a clash with French-allied partisans.", "interest": "Removes the fratricide element entirely." }
+  ],
+  "status": "Disputed",
+  "settledBy": "SHD GR 3H, Khénifra Bureau des Affaires Indigènes bulletins for March–April 1921.",
+  "whyDisinterested": "Not disinterested — France reported the death through allied partisans, and both France and the submitting sons benefited from the fratricide story. Ottoman and German records end in 1918, so no third party was watching.",
+  "whatItWouldTake": "The BAI bulletins would establish what France was told and by whom, which is a different and more answerable question than what happened.",
+  "phase": "IV 1912-1921",
+  "relatedPeople": ["mouha-ou-hammou-zayani"]
+ },
+ {
+  "n": 8,
+  "slug": "who-decided-the-1953-deposition",
+  "dispute": "Who actually decided to depose Mohammed V on 20 August 1953.",
+  "positions": [
+   { "party": "Version A", "position": "Paris decided.", "interest": "Shifts responsibility to the metropole." },
+   { "party": "Version B", "position": "Resident-General Guillaume decided.", "interest": "Shifts responsibility to the man on the spot." },
+   { "party": "Version C", "position": "El Glaoui and the notables forced it.", "interest": "Makes it a Moroccan act, which suits the French account and damages El Glaoui's heirs." }
+  ],
+  "status": "Settleable",
+  "settledBy": "Archives diplomatiques de Nantes (Résidence–Paris correspondence, May–August 1953), and TNA FO 371, and NARA RG 84.",
+  "whyDisinterested": "Both Britain and the United States reported the crisis closely and neither had a position to defend in the quarrel over who authorised it.",
+  "whatItWouldTake": "Read the Residency–Paris traffic for the months before 20 August 1953. This is a well-defined, bounded request.",
+  "phase": "VII 1944-1956",
+  "relatedEvents": ["deposition-exile-and-return-of-mohammed-v"]
+ },
+ {
+  "n": 9,
+  "slug": "bou-hamaras-execution",
+  "dispute": "How Bou Hamara was executed in 1909. The fact and the year are established; the manner is not.",
+  "positions": [
+   { "party": "The circulated account", "position": "Fed to the sultan's lions.", "interest": "Widely repeated in the European press; poorly sourced." },
+   { "party": "Alternative", "position": "Shot, with public display of the body.", "interest": "—" }
+  ],
+  "status": "Disputed",
+  "settledBy": "FO 174 / FO 413 — British consular reporting from Fez and Tangier in 1909.",
+  "whyDisinterested": "The lion story circulated in the European press; British diplomatic reporting is the check on the press, and Britain had no stake in how a Moroccan pretender was killed.",
+  "whatItWouldTake": "Read the 1909 consular despatches. Note that a sensational press account and a diplomatic despatch are different classes of evidence.",
+  "phase": "III 1900-1912",
+  "relatedPeople": ["bou-hamara"]
+ },
+ {
+  "n": 10,
+  "slug": "ma-al-aynayns-appointment",
+  "dispute": "Whether Hassan I appointed Ma al-ʿAynayn khalifa of the Sahara in 1879 or 1887. The eight-year difference determines whether the act preceded or responded to Spanish occupation at Dakhla.",
+  "positions": [
+   { "party": "1879", "position": "The appointment preceded Spanish encroachment.", "interest": "Supports the Moroccan sovereignty claim as prior and independent." },
+   { "party": "1887", "position": "The appointment followed Spanish occupation.", "interest": "Supports the reading that Moroccan Saharan sovereignty was asserted reactively." }
+  ],
+  "status": "Settleable",
+  "settledBy": "al-Wathā'iq and the Direction des Archives Royales — the dahir itself.",
+  "whyDisinterested": "This is a Moroccan document and only a Moroccan archive holds it. There is no disinterested holder — but the document either bears a date or it does not.",
+  "whatItWouldTake": "Locate the dahir in the published al-Wathā'iq volumes, which are in print and require no reading-room permit. This is the crux of the modern territorial argument.",
+  "phase": "II 1830-1900",
+  "relatedPeople": ["ma-al-aynayn"]
+ },
+ {
+  "n": 11,
+  "slug": "the-berber-dahir",
+  "dispute": "Whether the dahir of 16 May 1930 was a deliberate de-Islamisation plot or an extension of existing legislation that was received as one.",
+  "positions": [
+   { "party": "Nationalist reading", "position": "A deliberate plot to detach Tamazight-speakers from Islam and from the Moroccan polity.", "interest": "The founding grievance of mass Moroccan nationalism." },
+   { "party": "Administrative reading", "position": "An extension of existing customary-law arrangements.", "interest": "The French administrative account." },
+   { "party": "This workspace", "position": "Both matter. The perception did the historical work.", "interest": "Refuses to resolve, because the reception is the historically consequential fact." }
+  ],
+  "status": "Open",
+  "settledBy": "League of Nations / UN Geneva archives and the Arab press — how it was understood abroad at the time, via Shakib Arslan. Also TNA FO 371.",
+  "whyDisinterested": "Geneva is where the Moroccan case was argued internationally, and the League's files record the campaign as it was made rather than as it was later remembered.",
+  "whatItWouldTake": "Trace the Arslan network's output in 1930–31 and the FO's contemporaneous assessment. Also whether Mohammed V signed freely.",
+  "phase": "V 1921-1934",
+  "relatedEvents": ["the-berber-dahir"]
+ },
+ {
+  "n": 12,
+  "slug": "french-chemical-weapons-use",
+  "dispute": "Whether France used, or acquiesced in, chemical weapons in the Rif in 1925–26. Spanish use is documented in authorisation and supply.",
+  "positions": [
+   { "party": "Documented", "position": "Spanish authorisation and German supply are established — Berenguer's telegram of 12 August 1921 and Stoltzenberg's deliveries from 1923.", "interest": "Established on Spanish and German records." },
+   { "party": "Open question", "position": "French use or acquiescence during the joint 1925–26 operations.", "interest": "Neither asserted nor dismissed here." }
+  ],
+  "status": "Open",
+  "settledBy": "TNA FO 371 and the Politisches Archiv des Auswärtigen Amts.",
+  "whyDisinterested": "Britain watched the Rif war closely; Germany supplied the agents to Spain and would know who else was buying. Neither had a reason to protect France on this.",
+  "whatItWouldTake": "The French side would be in SHD GR 3H for the 1925–26 Franco-Spanish liaison. Note that no record on any side counts who died of gas.",
+  "phase": "V 1921-1934",
+  "relatedEvents": ["annual-and-the-rif-war"]
+ },
+ {
+  "n": 13,
+  "slug": "ben-barka",
+  "dispute": "What happened to Mehdi Ben Barka after his abduction in Paris on 29 October 1965, and where his body is.",
+  "positions": [
+   { "party": "French court, 1967", "position": "Two officers convicted of kidnapping; the judge identified Oufkir as principally responsible.", "interest": "A judicial finding, not a full account." },
+   { "party": "Alleged participants", "position": "Dlimi, Mossad and the CIA have all been alleged.", "interest": "Allegation of varying evidentiary weight." },
+   { "party": "The witness", "position": "Georges Figon testified that Oufkir killed Ben Barka; he was later found dead.", "interest": "—" }
+  ],
+  "status": "Withheld",
+  "settledBy": "NARA / CIA — roughly 1,800 documents acknowledged in 1976 and still undisclosed. French files remain classified.",
+  "whyDisinterested": "There is no disinterested holder. The point is not that the answer is unknown but that it is held.",
+  "whatItWouldTake": "Declassification. This is withheld, not unknown — a distinction the corpus insists on. The location of the body is known to someone who will not say.",
+  "phase": "IX 1961-1999",
+  "relatedPeople": ["mehdi-ben-barka"],
+  "withheld": true
+ },
+ {
+  "n": 14,
+  "slug": "moroccan-regulares-in-1936",
+  "dispute": "Whether the Moroccan troops who crossed to Spain with Franco's forces in 1936 were volunteers, famine-driven, or coerced by qaids.",
+  "positions": [
+   { "party": "Volunteers", "position": "Enlistment was voluntary and paid.", "interest": "The Francoist account." },
+   { "party": "Famine-driven", "position": "Recruitment followed severe rural distress in the Spanish zone.", "interest": "Economic explanation." },
+   { "party": "Coerced by qaids", "position": "Local notables filled quotas.", "interest": "Implicates the Moroccan intermediary class." }
+  ],
+  "status": "Open",
+  "settledBy": "TNA FO 371 and NARA — both watched recruitment in the Spanish zone. Also AGA recruitment records.",
+  "whyDisinterested": "Britain and the United States were observing the Spanish zone without a recruitment interest of their own.",
+  "whatItWouldTake": "Under-researched and uncomfortable for everyone. Neither French nor Moroccan national memory has anywhere to put the fact that Morocco supplied tens of thousands of Regulares to Franco's war.",
+  "phase": "VI 1934-1944"
+ },
+ {
+  "n": 15,
+  "slug": "what-roosevelt-said-at-anfa",
+  "dispute": "What Roosevelt said to Sultan Mohammed ben Youssef at the Anfa dinner on 22 January 1943.",
+  "positions": [
+   { "party": "Moroccan nationalist claim", "position": "Roosevelt promised support for independence.", "interest": "A founding instrument of the nationalist case." },
+   { "party": "US government, subsequently", "position": "Denied that any such promises were made.", "interest": "Alliance management with France." },
+   { "party": "FRUS, Document 376", "position": "An editorial note, not a memorandum of conversation. No single official record of the dinner exists.", "interest": "The American official series stating its own limits." }
+  ],
+  "status": "Resolved",
+  "resolution": "partly",
+  "before": { "status": "Unknown", "text": "What Roosevelt said at Anfa was recorded as simply unknown." },
+  "after": { "status": "Established", "text": "The substance is Established — Roosevelt expressed sympathy with Morocco's aspirations for independence, out of French earshot. The wording is permanently Unknown, and the site says so rather than leaving the question open." },
+  "settledBy": "FRUS, Casablanca 1943, Document 376 — consulted directly, the first primary source in this corpus read at document level rather than through a scholar.",
+  "whyDisinterested": "The United States was not a colonial power in Morocco and was courted by both the palace and the Istiqlal.",
+  "whatItWouldTake": "Already done. FRUS establishes attendance (the Sultan, the Grand Vizier, the Chief of Protocol, the Crown Prince, Churchill, Noguès, Patton), the topics, and — decisively — that Noguès had difficulty hearing the President's private conversation with the Sultan. The Resident-General was at the table and could not hear what was said to the man he governed.",
+  "phase": "VI 1934-1944",
+  "verification": "Consulted directly"
+ },
+ {
+  "n": 16,
+  "slug": "moulay-abdelhafids-politics-in-exile",
+  "dispute": "Whether Moulay Abdelhafid was politically inert after his abdication in 1912.",
+  "positions": [
+   { "party": "Previous reading", "position": "A pensioned ex-sultan, finished after 1912; German attempts to use him as a figurehead noted vaguely and dismissed.", "interest": "The French and nationalist accounts converge here for different reasons." },
+   { "party": "Ottoman records", "position": "In January–February 1915 he was in Barcelona negotiating with the Ottoman officer Taher Bey the terms on which he would return to lead a general rising against France.", "interest": "Ottoman officers reporting to Istanbul about their own operation." }
+  ],
+  "status": "Resolved",
+  "resolution": "fully",
+  "before": { "status": "Unknown", "text": "Abdelhafid's post-abdication politics were treated as a closed question: a pensioned ex-sultan, politically finished." },
+  "after": { "status": "Established", "text": "He demanded international recognition, 300,000 marks, and — if it failed — a palace in Istanbul and a salary suitable for his position. Enver Pasha approved support in February 1915." },
+  "settledBy": "BOA HR.SYS. D.2392 G.5 (the Barcelona meeting); D.2109 G.10 (Enver's approval). Cited by Kaya and Moreau.",
+  "whyDisinterested": "France had no interest in publicising that the sultan who signed the Protectorate was trying to overthrow it. Moroccan nationalist historiography had no use for a would-be liberator demanding a palace as his downside protection. It took a third archive, in a third language, held by a state that no longer exists.",
+  "whatItWouldTake": "Already done, at the level of scholarship citing the documents. Document-level consultation in Istanbul would close it entirely.",
+  "phase": "IV 1912-1921",
+  "relatedPeople": ["moulay-abdelhafid"],
+  "verification": "Cited by named scholar"
+ }
+]

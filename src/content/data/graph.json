@@ -1,0 +1,1239 @@
+{
+ "nodes": [
+  {
+   "id": "mouha-ou-hammou-zayani",
+   "label": "Mouha ou Hammou Zayani",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Full dossier",
+   "phase": [
+    "II 1830-1900",
+    "III 1900-1912",
+    "IV 1912-1921"
+   ],
+   "category": [
+    "Tribal leader",
+    "Armed resistance",
+    "Makhzen official"
+   ],
+   "degree": 3
+  },
+  {
+   "id": "abdelkhalek-torres",
+   "label": "Abdelkhalek Torres",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "V 1921-1934",
+    "VI 1934-1944",
+    "VII 1944-1956",
+    "VIII 1956-1961"
+   ],
+   "category": [
+    "Nationalist"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "moulay-hassan-i",
+   "label": "Moulay Hassan I",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Full dossier",
+   "phase": [
+    "II 1830-1900"
+   ],
+   "category": [
+    "Sultan / monarch"
+   ],
+   "degree": 3
+  },
+  {
+   "id": "emir-abd-el-malek",
+   "label": "Emir Abd el-Malek",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Substantial",
+   "phase": [
+    "IV 1912-1921",
+    "V 1921-1934"
+   ],
+   "category": [
+    "Armed resistance",
+    "Other foreign"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "ba-ahmed-ibn-musa",
+   "label": "Ba Ahmed ibn Musa",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "II 1830-1900"
+   ],
+   "category": [
+    "Makhzen official"
+   ],
+   "degree": 2
+  },
+  {
+   "id": "assou-oubasslam",
+   "label": "Assou Oubasslam",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "V 1921-1934",
+    "VI 1934-1944",
+    "VII 1944-1956",
+    "VIII 1956-1961"
+   ],
+   "category": [
+    "Tribal leader",
+    "Armed resistance"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "abderrahim-bouabid",
+   "label": "Abderrahim Bouabid",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "VII 1944-1956",
+    "VIII 1956-1961",
+    "IX 1961-1999"
+   ],
+   "category": [
+    "Nationalist"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "hassan-ii",
+   "label": "Hassan II",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "VIII 1956-1961",
+    "IX 1961-1999"
+   ],
+   "category": [
+    "Sultan / monarch"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "alphonse-juin",
+   "label": "Alphonse Juin",
+   "group": "french",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "VII 1944-1956"
+   ],
+   "category": [
+    "French military",
+    "French civil"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "mohamed-oufkir",
+   "label": "Mohamed Oufkir",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "VII 1944-1956",
+    "VIII 1956-1961",
+    "IX 1961-1999"
+   ],
+   "category": [
+    "French military",
+    "Makhzen official"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "charles-mangin",
+   "label": "Charles Mangin",
+   "group": "french",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "III 1900-1912",
+    "IV 1912-1921"
+   ],
+   "category": [
+    "French military"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "harry-maclean",
+   "label": "Harry Maclean",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "II 1830-1900",
+    "III 1900-1912"
+   ],
+   "category": [
+    "Other foreign",
+    "Makhzen official"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "samuel-gummere",
+   "label": "Samuel Gummere",
+   "group": "other",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "III 1900-1912"
+   ],
+   "category": [
+    "Diplomat",
+    "Other foreign"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "bou-hamara",
+   "label": "Bou Hamara",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "III 1900-1912"
+   ],
+   "category": [
+    "Armed resistance",
+    "Makhzen official"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "mohammed-ben-abdelkrim-el-khattabi",
+   "label": "Mohammed ben Abdelkrim El Khattabi",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Full dossier",
+   "phase": [
+    "III 1900-1912",
+    "IV 1912-1921",
+    "V 1921-1934",
+    "VI 1934-1944",
+    "VII 1944-1956",
+    "VIII 1956-1961"
+   ],
+   "category": [
+    "Armed resistance",
+    "Religious leader",
+    "Nationalist"
+   ],
+   "degree": 2
+  },
+  {
+   "id": "taher-bey",
+   "label": "Taher Bey",
+   "group": "other",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "III 1900-1912",
+    "IV 1912-1921"
+   ],
+   "category": [
+    "Other foreign",
+    "Diplomat"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "m-hammad-ben-abdelkrim-el-khattabi",
+   "label": "M'Hammad ben Abdelkrim El Khattabi",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "V 1921-1934",
+    "VI 1934-1944"
+   ],
+   "category": [
+    "Armed resistance"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "moulay-youssef",
+   "label": "Moulay Youssef",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "IV 1912-1921",
+    "V 1921-1934"
+   ],
+   "category": [
+    "Sultan / monarch"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "ahmed-balafrej",
+   "label": "Ahmed Balafrej",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "V 1921-1934",
+    "VI 1934-1944",
+    "VII 1944-1956",
+    "VIII 1956-1961"
+   ],
+   "category": [
+    "Nationalist",
+    "Diplomat"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "hugo-stoltzenberg",
+   "label": "Hugo Stoltzenberg",
+   "group": "other",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "V 1921-1934"
+   ],
+   "category": [
+    "Other foreign"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "damaso-berenguer",
+   "label": "Dámaso Berenguer",
+   "group": "spanish",
+   "shape": "circle",
+   "depth": "Substantial",
+   "phase": [
+    "IV 1912-1921",
+    "V 1921-1934"
+   ],
+   "category": [
+    "Spanish military",
+    "Spanish civil"
+   ],
+   "degree": 2
+  },
+  {
+   "id": "philippe-petain",
+   "label": "Philippe Pétain",
+   "group": "french",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "V 1921-1934",
+    "VI 1934-1944"
+   ],
+   "category": [
+    "French military"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "abdelhadi-boutaleb",
+   "label": "Abdelhadi Boutaleb",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "VII 1944-1956",
+    "VIII 1956-1961",
+    "IX 1961-1999"
+   ],
+   "category": [
+    "Makhzen official",
+    "Nationalist",
+    "Diplomat"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "paul-prosper-henrys",
+   "label": "Paul Prosper Henrys",
+   "group": "french",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "IV 1912-1921"
+   ],
+   "category": [
+    "French military"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "mohamed-hassan-ouazzani",
+   "label": "Mohamed Hassan Ouazzani",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "V 1921-1934",
+    "VI 1934-1944",
+    "VII 1944-1956",
+    "IX 1961-1999"
+   ],
+   "category": [
+    "Nationalist"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "abdallah-ibrahim",
+   "label": "Abdallah Ibrahim",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "VII 1944-1956",
+    "VIII 1956-1961"
+   ],
+   "category": [
+    "Nationalist"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "joseph-francois-poeymirau",
+   "label": "Joseph-François Poeymirau",
+   "group": "french",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "IV 1912-1921"
+   ],
+   "category": [
+    "French military"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "m-barek-bekkay",
+   "label": "M'barek Bekkay",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "VI 1934-1944",
+    "VII 1944-1956",
+    "VIII 1956-1961"
+   ],
+   "category": [
+    "Nationalist",
+    "French military",
+    "Makhzen official"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "henri-gouraud",
+   "label": "Henri Gouraud",
+   "group": "french",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "III 1900-1912",
+    "IV 1912-1921"
+   ],
+   "category": [
+    "French military"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "mehdi-ben-barka",
+   "label": "Mehdi Ben Barka",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Substantial",
+   "phase": [
+    "VII 1944-1956",
+    "VIII 1956-1961",
+    "IX 1961-1999"
+   ],
+   "category": [
+    "Nationalist"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "augustin-guillaume",
+   "label": "Augustin Guillaume",
+   "group": "french",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "VII 1944-1956"
+   ],
+   "category": [
+    "French military",
+    "French civil"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "shakib-arslan",
+   "label": "Shakib Arslan",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "V 1921-1934",
+    "VI 1934-1944"
+   ],
+   "category": [
+    "Other foreign",
+    "Nationalist"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "juan-picasso-gonzalez",
+   "label": "Juan Picasso González",
+   "group": "spanish",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "V 1921-1934"
+   ],
+   "category": [
+    "Spanish military"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "thami-el-glaoui",
+   "label": "Thami El Glaoui",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Full dossier",
+   "phase": [
+    "III 1900-1912",
+    "IV 1912-1921",
+    "V 1921-1934",
+    "VI 1934-1944",
+    "VII 1944-1956"
+   ],
+   "category": [
+    "Collaborating notable",
+    "Tribal leader",
+    "Makhzen official"
+   ],
+   "degree": 2
+  },
+  {
+   "id": "ali-amhaouch",
+   "label": "Ali Amhaouch",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "II 1830-1900",
+    "III 1900-1912",
+    "IV 1912-1921"
+   ],
+   "category": [
+    "Religious leader",
+    "Armed resistance"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "ahmed-bahnini",
+   "label": "Ahmed Bahnini",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "VIII 1956-1961",
+    "IX 1961-1999"
+   ],
+   "category": [
+    "Makhzen official"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "mohammed-iv",
+   "label": "Mohammed IV",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "II 1830-1900"
+   ],
+   "category": [
+    "Sultan / monarch"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "moulay-abdelhafid",
+   "label": "Moulay Abdelhafid",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Full dossier",
+   "phase": [
+    "III 1900-1912"
+   ],
+   "category": [
+    "Sultan / monarch"
+   ],
+   "degree": 5
+  },
+  {
+   "id": "moulay-abdelaziz",
+   "label": "Moulay Abdelaziz",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Full dossier",
+   "phase": [
+    "II 1830-1900",
+    "III 1900-1912"
+   ],
+   "category": [
+    "Sultan / monarch"
+   ],
+   "degree": 2
+  },
+  {
+   "id": "si-madani-el-glaoui",
+   "label": "Si Madani El Glaoui",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "II 1830-1900",
+    "III 1900-1912",
+    "IV 1912-1921"
+   ],
+   "category": [
+    "Tribal leader",
+    "Makhzen official",
+    "Collaborating notable"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "mohammed-ben-arafa",
+   "label": "Mohammed ben Arafa",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "VII 1944-1956"
+   ],
+   "category": [
+    "Sultan / monarch",
+    "Collaborating notable"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "francisco-franco",
+   "label": "Francisco Franco",
+   "group": "spanish",
+   "shape": "circle",
+   "depth": "Substantial",
+   "phase": [
+    "IV 1912-1921",
+    "V 1921-1934",
+    "VI 1934-1944",
+    "VII 1944-1956"
+   ],
+   "category": [
+    "Spanish military",
+    "Spanish civil"
+   ],
+   "degree": 2
+  },
+  {
+   "id": "sidi-mohamed-ben-hammou-identification-unresolved",
+   "label": "Sidi Mohamed Ben Hammou — identification unresolved",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Identified - not yet researched",
+   "phase": [
+    "IV 1912-1921"
+   ],
+   "category": [
+    "Tribal leader"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "salah-sharif-at-tunisi",
+   "label": "Salah Sharif at-Tunisi",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "IV 1912-1921"
+   ],
+   "category": [
+    "Other foreign",
+    "Religious leader"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "eugene-regnault",
+   "label": "Eugène Regnault",
+   "group": "french",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "III 1900-1912"
+   ],
+   "category": [
+    "Diplomat",
+    "French civil"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "miguel-primo-de-rivera",
+   "label": "Miguel Primo de Rivera",
+   "group": "spanish",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "V 1921-1934"
+   ],
+   "category": [
+    "Spanish military",
+    "Spanish civil"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "joseph-gallieni",
+   "label": "Joseph Gallieni",
+   "group": "french",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "II 1830-1900",
+    "III 1900-1912",
+    "IV 1912-1921"
+   ],
+   "category": [
+    "French military"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "moulay-abderrahmane",
+   "label": "Moulay Abderrahmane",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "I pre-1830",
+    "II 1830-1900"
+   ],
+   "category": [
+    "Sultan / monarch"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "alfonso-xiii",
+   "label": "Alfonso XIII",
+   "group": "spanish",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "III 1900-1912",
+    "IV 1912-1921",
+    "V 1921-1934"
+   ],
+   "category": [
+    "Spanish civil"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "ma-al-aynayn",
+   "label": "Ma al-'Aynayn",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Full dossier",
+   "phase": [
+    "II 1830-1900",
+    "III 1900-1912"
+   ],
+   "category": [
+    "Religious leader",
+    "Armed resistance",
+    "Makhzen official"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "ahmed-dlimi",
+   "label": "Ahmed Dlimi",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "IX 1961-1999"
+   ],
+   "category": [
+    "Makhzen official"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "driss-basri",
+   "label": "Driss Basri",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "IX 1961-1999",
+    "X 1999-present"
+   ],
+   "category": [
+    "Makhzen official"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "mohammed-v",
+   "label": "Mohammed V",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Full dossier",
+   "phase": [
+    "V 1921-1934",
+    "VI 1934-1944",
+    "VII 1944-1956",
+    "VIII 1956-1961"
+   ],
+   "category": [
+    "Sultan / monarch",
+    "Nationalist"
+   ],
+   "degree": 3
+  },
+  {
+   "id": "moha-ou-said",
+   "label": "Moha ou Said",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "III 1900-1912",
+    "IV 1912-1921",
+    "V 1921-1934"
+   ],
+   "category": [
+    "Tribal leader",
+    "Armed resistance"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "ahmed-al-hiba",
+   "label": "Ahmed al-Hiba",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "III 1900-1912",
+    "IV 1912-1921"
+   ],
+   "category": [
+    "Armed resistance",
+    "Religious leader",
+    "Sultan / monarch"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "mohamed-ameziane",
+   "label": "Mohamed Ameziane",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "III 1900-1912"
+   ],
+   "category": [
+    "Armed resistance",
+    "Religious leader"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "jose-sanjurjo",
+   "label": "José Sanjurjo",
+   "group": "spanish",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "V 1921-1934",
+    "VI 1934-1944"
+   ],
+   "category": [
+    "Spanish military"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "manuel-fernandez-silvestre",
+   "label": "Manuel Fernández Silvestre",
+   "group": "spanish",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "III 1900-1912",
+    "IV 1912-1921"
+   ],
+   "category": [
+    "Spanish military"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "hubert-lyautey",
+   "label": "Hubert Lyautey",
+   "group": "french",
+   "shape": "circle",
+   "depth": "Full dossier",
+   "phase": [
+    "III 1900-1912",
+    "IV 1912-1921",
+    "V 1921-1934"
+   ],
+   "category": [
+    "French military",
+    "French civil"
+   ],
+   "degree": 3
+  },
+  {
+   "id": "rene-laverdure",
+   "label": "René Laverdure",
+   "group": "french",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "IV 1912-1921"
+   ],
+   "category": [
+    "French military"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "maurice-le-glay",
+   "label": "Maurice Le Glay",
+   "group": "french",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "IV 1912-1921",
+    "V 1921-1934"
+   ],
+   "category": [
+    "French civil"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "mohamed-lyazidi",
+   "label": "Mohamed Lyazidi",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "V 1921-1934",
+    "VI 1934-1944",
+    "VII 1944-1956"
+   ],
+   "category": [
+    "Nationalist"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "allal-el-fassi",
+   "label": "Allal El Fassi",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "V 1921-1934",
+    "VI 1934-1944",
+    "VII 1944-1956",
+    "VIII 1956-1961",
+    "IX 1961-1999"
+   ],
+   "category": [
+    "Nationalist",
+    "Religious leader"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "abderrahmane-youssoufi",
+   "label": "Abderrahmane Youssoufi",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "VII 1944-1956",
+    "VIII 1956-1961",
+    "IX 1961-1999",
+    "X 1999-present"
+   ],
+   "category": [
+    "Nationalist"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "ahmed-al-raisuni",
+   "label": "Ahmed al-Raisuni",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "III 1900-1912",
+    "IV 1912-1921",
+    "V 1921-1934"
+   ],
+   "category": [
+    "Tribal leader",
+    "Religious leader",
+    "Armed resistance",
+    "Collaborating notable"
+   ],
+   "degree": 1
+  }
+ ],
+ "edges": [
+  {
+   "source": "hugo-stoltzenberg",
+   "target": "damaso-berenguer",
+   "relation": "allied with",
+   "strength": "Well-attested in scholarship",
+   "period": "1921–1920s",
+   "evidence": "Approach of 20 Aug 1921 for mustard gas in breach of Versailles; first delivery 1923; later Spanish nationality and involvement in building La Marañosa. Documented in Kunz & Müller (1990) and Balfour (2002).",
+   "id": "stoltzenberg-supplied-chemical-weapons-capability-to-spain-against-the-rif"
+  },
+  {
+   "source": "ba-ahmed-ibn-musa",
+   "target": "moulay-abdelaziz",
+   "relation": "patron of",
+   "strength": "Well-attested in scholarship",
+   "period": "1894–1900",
+   "evidence": "Effective ruler of Morocco for six years; the sultan was systematically excluded from government until Ba Ahmed's death in 1900.",
+   "id": "ba-ahmed-regent-for-moulay-abdelaziz"
+  },
+  {
+   "source": "moulay-hassan-i",
+   "target": "ma-al-aynayn",
+   "relation": "appointed",
+   "strength": "Disputed",
+   "period": "1879 or 1887 — disputed",
+   "evidence": "A dahir appointing him representative over Saharan territories. The date determines whether the act preceded or responded to Spanish occupation at Dakhla — which is the crux of the modern territorial argument.",
+   "id": "hassan-i-appointed-ma-al-aynayn-as-khalifa-of-the-sahara"
+  },
+  {
+   "source": "hubert-lyautey",
+   "target": "moulay-abdelhafid",
+   "relation": "opposed",
+   "strength": "Documented",
+   "period": "13 August 1912",
+   "evidence": "Abdication secured against a large pension; Moulay Youssef installed in his place, chosen for having no independent base.",
+   "id": "lyautey-obtained-the-abdication-of-moulay-abdelhafid"
+  },
+  {
+   "source": "joseph-francois-poeymirau",
+   "target": "mouha-ou-hammou-zayani",
+   "relation": "negotiated with",
+   "strength": "Single source assertion",
+   "period": "June 1920",
+   "evidence": "Hassan and Amharoq submitted, followed by c. 3,000 tents. The claim that they did so on their father's advice is a single-source assertion. The terms of the submission have not been located.",
+   "id": "poeymirau-received-the-submission-of-the-sons-of-mouha-ou-hammou"
+  },
+  {
+   "source": "francisco-franco",
+   "target": "francisco-franco",
+   "relation": "commanded",
+   "strength": "Documented",
+   "period": "17 July 1936",
+   "evidence": "Career made in the Rif war; Legion commander at the Alhucemas landing 1925; airlifted the Army of Africa, Legion and Moroccan Regulares, to the peninsula. Self-referential entry recording the fact that the Spanish Civil War began in Morocco.",
+   "id": "franco-launched-the-1936-coup-from-morocco"
+  },
+  {
+   "source": "ba-ahmed-ibn-musa",
+   "target": "moulay-hassan-i",
+   "relation": "served under",
+   "strength": "Well-attested in scholarship",
+   "period": "June 1894",
+   "evidence": "Chamberlain and grand vizier; concealed the sultan's death on 9 June 1894 while the column was in unsecured country, continuing to issue orders in his name, then proclaimed Abdelaziz. Duration of the concealment is not established.",
+   "id": "ba-ahmed-concealed-the-death-of-hassan-i"
+  },
+  {
+   "source": "hubert-lyautey",
+   "target": "thami-el-glaoui",
+   "relation": "patron of",
+   "strength": "Well-attested in scholarship",
+   "period": "1912–1925",
+   "evidence": "The central client relationship of the politique des grands caïds: France armed, enriched and protected him against rivals, producing authority greater than any pre-Protectorate qaid could have held.",
+   "id": "lyautey-patron-of-thami-el-glaoui"
+  },
+  {
+   "source": "moulay-abdelhafid",
+   "target": "bou-hamara",
+   "relation": "fought",
+   "strength": "Disputed",
+   "period": "1909",
+   "evidence": "Fact and year established; brought to Fez in a cage. The manner of execution is disputed — the widely repeated 'fed to his lions' account is poorly sourced, and shooting and public display also appear.",
+   "id": "moulay-abdelhafid-captured-and-executed-bou-hamara"
+  },
+  {
+   "source": "moulay-hassan-i",
+   "target": "mouha-ou-hammou-zayani",
+   "relation": "appointed",
+   "strength": "Disputed",
+   "period": "1877, 1880 or 1886 — disputed",
+   "evidence": "Reference literature records the investiture as qaid of the Zaian, brokered by the Sherqawa marabout Sidi Ben Dawd, with a black cloak, sharifian infantry and artillery. Three different years appear in works of comparable authority.",
+   "id": "hassan-i-appointed-mouha-ou-hammou-zayani"
+  },
+  {
+   "source": "rene-laverdure",
+   "target": "mouha-ou-hammou-zayani",
+   "relation": "fought",
+   "strength": "Documented",
+   "period": "13 November 1914",
+   "evidence": "Column of 43 officers and 1,187 men; 623 killed including Laverdure. Marched without orders. Two of Hammou's wives captured, later exchanged for the bodies of Laverdure and six officers.",
+   "id": "laverdure-fought-mouha-ou-hammou-zayani-at-el-herri"
+  },
+  {
+   "source": "mohamed-oufkir",
+   "target": "mehdi-ben-barka",
+   "relation": "opposed",
+   "strength": "Documented",
+   "period": "29 October 1965",
+   "evidence": "A 1967 French trial convicted two officers of kidnapping and the judge identified Oufkir as principally responsible. The witness Georges Figon, who testified that Oufkir killed Ben Barka, was later found dead. French files remain classified.",
+   "id": "oufkir-named-as-responsible-for-the-abduction-of-mehdi-ben-barka"
+  },
+  {
+   "source": "moulay-abdelhafid",
+   "target": "moulay-abdelaziz",
+   "relation": "opposed",
+   "strength": "Documented",
+   "period": "1907–1908",
+   "evidence": "Proclaimed Marrakech Aug 1907; conditional bay'a of the Fez ulama Jan 1908; Abdelaziz defeated at the Battle of Marrakech 19 Aug 1908, largely by defection, and abdicated two days later.",
+   "id": "moulay-abdelhafid-deposed-moulay-abdelaziz"
+  },
+  {
+   "source": "thami-el-glaoui",
+   "target": "mohammed-v",
+   "relation": "opposed",
+   "strength": "Disputed",
+   "period": "19 May 1953 – 8 November 1955",
+   "evidence": "Public declaration of loyalty to the Protectorate and demand for the sultan's removal, 19 May 1953. Reversed 25 Oct 1955; knelt in submission 8 Nov 1955 and was pardoned. Whether the initiative was his or the Residency's is unsettled.",
+   "id": "thami-el-glaoui-demanded-the-deposition-of-mohammed-v"
+  },
+  {
+   "source": "manuel-fernandez-silvestre",
+   "target": "mohammed-ben-abdelkrim-el-khattabi",
+   "relation": "fought",
+   "strength": "Documented",
+   "period": "June – August 1921",
+   "evidence": "Expediente Picasso findings on over-extension and command failure. Spanish dead given variously as 7,875 to 13,363 depending on definition. Silvestre's manner of death not established.",
+   "id": "silvestre-fought-abd-el-krim-at-annual"
+  },
+  {
+   "source": "damaso-berenguer",
+   "target": "mohammed-ben-abdelkrim-el-khattabi",
+   "relation": "fought",
+   "strength": "Well-attested in scholarship",
+   "period": "from 12 August 1921",
+   "evidence": "Telegram to War Minister Marichalar, 12 Aug 1921: he would employ such munitions 'con verdadera fruición'. Quoted by Sebastian Balfour from Spanish archives. Not verified at document level by this project. Written three days after Monte Arruit.",
+   "id": "berenguer-authorised-chemical-munitions-against-the-rif"
+  },
+  {
+   "source": "augustin-guillaume",
+   "target": "mohammed-v",
+   "relation": "imprisoned or exiled",
+   "strength": "Disputed",
+   "period": "20 August 1953",
+   "evidence": "Deposition and exile to Corsica, then Antsirabe in Madagascar, executed under his residency. Three versions of who decided — Paris, Guillaume, or El Glaoui and the notables — remain in circulation and are settleable from the Residency-Paris correspondence.",
+   "id": "guillaume-deposed-and-exiled-mohammed-v"
+  },
+  {
+   "source": "eugene-regnault",
+   "target": "moulay-abdelhafid",
+   "relation": "negotiated with",
+   "strength": "Documented",
+   "period": "29–30 March 1912",
+   "evidence": "A negotiation session reported at around six hours on 29 March, with French troops in and around Fez; signed 30 March. Regnault's own reporting to the Quai d'Orsay would establish what pressure was applied and has not been read.",
+   "id": "regnault-negotiated-the-treaty-of-fez-with-moulay-abdelhafid"
+  },
+  {
+   "source": "ahmed-al-raisuni",
+   "target": "harry-maclean",
+   "relation": "opposed",
+   "strength": "Documented",
+   "period": "1906",
+   "evidence": "Ransomed for £20,000 paid by the British government, after Raisuni's removal from the pashalik of Tangier. Note: the date 1907 circulates and appears to be wrong.",
+   "id": "raisuni-abducted-harry-maclean"
+  },
+  {
+   "source": "si-madani-el-glaoui",
+   "target": "moulay-abdelhafid",
+   "relation": "allied with",
+   "strength": "Well-attested in scholarship",
+   "period": "May 1907 – 1908",
+   "evidence": "Prominent among the southern notables who invited Abdelhafid, then khalifa at Marrakech, to take the throne. Became his grand vizier. His brother Thami was made pasha of Marrakech.",
+   "id": "si-madani-el-glaoui-engineered-the-accession-of-moulay-abdelhafid"
+  },
+  {
+   "source": "philippe-petain",
+   "target": "hubert-lyautey",
+   "relation": "commanded",
+   "strength": "Documented",
+   "period": "1925",
+   "evidence": "Sent with overriding authority after Abd el-Krim's April 1925 offensive on the Ouergha; Lyautey resigned. Read structurally, the tache d'huile method had reached its limit against a rival state with an army.",
+   "id": "petain-superseded-lyautey"
+  },
+  {
+   "source": "mohammed-ben-arafa",
+   "target": "mohammed-v",
+   "relation": "succeeded",
+   "strength": "Documented",
+   "period": "August 1953 – 1955",
+   "evidence": "Proclaimed by an assembly of notables. Never accepted; two assassination attempts. The bay'a assembled for him, with its signatories and refusals, is a documentable map of elite alignment in 1953.",
+   "id": "mohammed-ben-arafa-installed-in-place-of-mohammed-v"
+  }
+ ]
+}

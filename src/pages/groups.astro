@@ -1,0 +1,184 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import FacetIndex from '../components/FacetIndex.astro';
+
+const groups = (await getCollection('groups')).map((g) => g.data);
+const sorted = [...groups].sort((a, b) => a.group.localeCompare(b.group));
+
+const facets = [
+  { key: 'type', label: 'Type', values: [...new Set(groups.map((g) => g.type))].sort() },
+  { key: 'language', label: 'Language', values: [...new Set(groups.flatMap((g) => g.language))].sort() },
+];
+---
+
+<Base title="Tribes & groups" description="Confederations, tribes, parties and religious lineages, with their political position stated.">
+  <header class="ihead">
+    <h1>Tribes &amp; groups</h1>
+    <p class="ihead__lede prose">
+      {groups.length} entries. Colonial tribal cartography was an administrative
+      construct; these entries record political position and language without
+      reproducing the hard boundaries that construct implied.
+    </p>
+  </header>
+
+  <FacetIndex facets={facets} countLabel="groups" />
+
+  <ul class="glist" data-index>
+    {
+      sorted.map((g) => (
+        <li
+          class="gitem"
+          id={g.slug}
+          data-type={g.type}
+          data-language={g.language.join('|')}
+          data-search={[g.group, g.otherNames, g.notes, g.politicalPosition].filter(Boolean).join(' ').toLowerCase()}
+        >
+          <div class="gitem__head">
+            <h2 class="gitem__title">{g.group}</h2>
+            <span class="gtype">{g.type}</span>
+          </div>
+
+          {g.aliases.length > 0 && (
+            <p class="gitem__aliases">
+              {g.aliases.map((a) => (
+                <span
+                  class:list={['alias', a.script === 'arabic' && 'rtl']}
+                  dir={a.script === 'arabic' ? 'rtl' : undefined}
+                  lang={a.script === 'arabic' ? 'ar' : undefined}
+                >
+                  {a.value}
+                </span>
+              ))}
+            </p>
+          )}
+
+          {g.politicalPosition && (
+            <p class="gitem__position">
+              <span class="gitem__label">Political position</span> {g.politicalPosition}
+            </p>
+          )}
+
+          {g.notes && <p class="gitem__body">{g.notes}</p>}
+
+          <dl class="gitem__dl">
+            {g.region && (
+              <>
+                <dt>Region</dt>
+                <dd>{g.region}</dd>
+              </>
+            )}
+            {g.language.length > 0 && (
+              <>
+                <dt>Language</dt>
+                <dd>{g.language.join(' · ')}</dd>
+              </>
+            )}
+          </dl>
+        </li>
+      ))
+    }
+  </ul>
+
+  <style>
+    .ihead {
+      margin-bottom: var(--s-5);
+    }
+    .ihead__lede {
+      color: var(--ink-secondary);
+    }
+    .glist {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: var(--s-4);
+      grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    }
+    .gitem {
+      padding: var(--s-4);
+      border: var(--rule);
+      border-radius: var(--radius);
+      background: var(--surface);
+      margin: 0;
+      scroll-margin-top: 6rem;
+    }
+    .gitem__head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: var(--s-2);
+      margin-bottom: var(--s-2);
+    }
+    .gitem__title {
+      font-size: 1.0625rem;
+      margin: 0;
+    }
+    .gtype {
+      font-family: var(--font-ui);
+      font-size: 0.625rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.15em 0.5em;
+      border: var(--rule);
+      border-radius: var(--radius);
+      color: var(--ink-secondary);
+    }
+    .gitem__aliases {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--s-2);
+      margin: 0 0 var(--s-3);
+    }
+    .alias {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+    }
+    .alias.rtl {
+      font-family: var(--font-arabic);
+      font-size: 0.875rem;
+      unicode-bidi: isolate;
+    }
+    .gitem__position {
+      padding: var(--s-2) var(--s-3);
+      background: var(--page-plane);
+      border-radius: var(--radius);
+      font-size: 0.875rem;
+      color: var(--ink-secondary);
+    }
+    .gitem__label {
+      font-family: var(--font-ui);
+      font-size: 0.625rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+      margin-right: 0.4em;
+    }
+    .gitem__body {
+      font-size: 0.9375rem;
+      color: var(--ink-secondary);
+    }
+    .gitem__dl {
+      margin: var(--s-3) 0 0;
+      display: grid;
+      gap: var(--s-1);
+      font-family: var(--font-ui);
+      font-size: 0.8125rem;
+    }
+    .gitem__dl dt {
+      font-size: 0.625rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+    }
+    .gitem__dl dd {
+      margin: 0 0 var(--s-2);
+      color: var(--ink-secondary);
+    }
+  </style>
+</Base>

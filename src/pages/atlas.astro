@@ -1,0 +1,358 @@
+---
+/**
+ * The atlas.
+ *
+ * A plain SVG basemap, deliberately schematic. No modern commercial tile layer:
+ * modern borders would silently assert anachronisms on a map whose whole
+ * subject is a partition that no longer exists.
+ *
+ * The archives layer quietly makes the site's argument — the documents are not
+ * in Morocco — so it is on by default and its table view states the count
+ * explicitly rather than leaving it to be read off pin positions.
+ */
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+const archives = (await getCollection('archives')).map((a) => a.data);
+const places = (await getCollection('places')).map((p) => p.data);
+
+/**
+ * Approximate positions for the schematic basemap, as percentages of the
+ * viewBox. These are cartographic placements for a diagram, not survey
+ * coordinates, and the caption says so.
+ */
+const PLACE_XY: Record<string, [number, number]> = {
+  Fez: [58, 30],
+  Rabat: [44, 31],
+  Khénifra: [55, 38],
+  'El Herri': [56, 40],
+  Tetouan: [51, 15],
+  Melilla: [68, 16],
+  'Ajdir and Alhucemas bay': [60, 15],
+  Smara: [18, 78],
+};
+
+const ARCHIVE_XY: Record<string, [number, number]> = {
+  'Service historique de la Défense (SHD)': [60, -18],
+  'Archives diplomatiques — La Courneuve and Nantes': [50, -20],
+  'Archives nationales d’outre-mer (ANOM)': [66, -10],
+  'Archivo General de la Administración (AGA)': [40, -6],
+  'Hemeroteca Digital — Biblioteca Nacional de España': [37, -4],
+  'The National Archives (TNA)': [46, -30],
+  'US National Archives (NARA) — RG 84, Foreign Service Posts': [4, -22],
+  'Foreign Relations of the United States (FRUS)': [8, -26],
+  'Politisches Archiv des Auswärtigen Amts (A.A.-P.A.)': [76, -26],
+  'Devlet Arşivleri — Osmanlı Arşivi (BOA)': [92, -8],
+  'League of Nations Archives / UN Geneva': [66, -22],
+  'Archivio Storico Diplomatico — Ministero degli Affari Esteri': [74, -12],
+  'Archives du Maroc': [45, 33],
+  'Bibliothèque royale hassaniya (al-Khizāna al-Ḥasaniyya)': [43, 35],
+  'Direction des Archives Royales': [46, 35],
+  'Bibliothèque Nationale du Royaume du Maroc (BNRM)': [42, 33],
+  'Instance Équité et Réconciliation (IER) — final report and archive': [47, 37],
+  'Tangier American Legation Institute for Moroccan Studies (TALIM)': [49, 13],
+};
+
+const placed = archives.filter((a) => ARCHIVE_XY[a.institution]);
+const inMorocco = placed.filter((a) => a.country === 'Morocco');
+const outside = placed.filter((a) => a.country !== 'Morocco');
+const decisive = archives.filter((a) => a.priority === '1 - decisive');
+const decisiveOutside = decisive.filter((a) => a.country !== 'Morocco');
+
+const PRIO_R: Record<string, number> = {
+  '1 - decisive': 7,
+  '2 - structural': 5,
+  '3 - supporting': 3.5,
+  '4 - background': 2.5,
+};
+---
+
+<Base title="Atlas" description="Zones after 1912, event sites, and where the evidence physically is today." wide={true}>
+  <div class="atlas">
+    <header class="ahead">
+      <h1>Atlas</h1>
+      <p class="ahead__lede">
+        A schematic basemap, not a survey. The zones are the Franco-Spanish partition of
+        <strong>27 November 1912</strong>; no modern tile layer is used, because modern
+        borders would silently assert anachronisms on a map about a partition that no longer
+        exists.
+      </p>
+    </header>
+
+    <div class="alayers no-print">
+      <fieldset>
+        <legend>Layers</legend>
+        <label><input type="checkbox" data-layer="zones" checked /> Zones after 1912</label>
+        <label><input type="checkbox" data-layer="places" checked /> Event &amp; place sites</label>
+        <label><input type="checkbox" data-layer="archives" checked /> Archives — where the evidence is</label>
+      </fieldset>
+    </div>
+
+    <figure class="amap">
+      <svg viewBox="0 0 100 100" role="img" aria-labelledby="atlas-title atlas-desc" class="amap__svg">
+        <title id="atlas-title">Schematic map of Morocco and the western Mediterranean</title>
+        <desc id="atlas-desc">
+          A schematic diagram showing the French zone, the Spanish zone, Tangier
+          international zone, territory outside protectorate control shown as hatching, and
+          the location of {placed.length} archives. {outside.length} of the plotted archives
+          are outside Morocco. The same information is listed in the tables below.
+        </desc>
+
+        <defs>
+          <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            <line x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1" />
+          </pattern>
+        </defs>
+
+        <g data-layer-g="zones">
+          <!-- Three validated categorical fills. -->
+          <path class="z z--french" d="M30 26 L72 26 L74 56 L58 68 L36 56 Z" />
+          <path class="z z--spanish" d="M44 10 L72 10 L72 22 L46 22 Z" />
+          <circle class="z z--tangier" cx="47" cy="12" r="3.2" />
+          <!-- Outside protectorate control is an absence: texture, not a fill. -->
+          <path class="z z--outside" d="M12 62 L40 58 L44 92 L14 92 Z" />
+
+          <text class="zlabel" x="51" y="44">French zone</text>
+          <text class="zlabel" x="58" y="17">Spanish zone</text>
+          <text class="zlabel zlabel--sm" x="41" y="9">Tangier</text>
+          <text class="zlabel zlabel--sm" x="20" y="76">Outside protectorate control</text>
+        </g>
+
+        <g data-layer-g="places">
+          {
+            places.map((p) => {
+              const xy = PLACE_XY[p.place];
+              if (!xy) return null;
+              return (
+                <g class="pin pin--place">
+                  <circle cx={xy[0]} cy={xy[1]} r="1.2" />
+                  <text x={xy[0] + 2} y={xy[1] + 1}>{p.place}</text>
+                </g>
+              );
+            })
+          }
+        </g>
+
+        <g data-layer-g="archives">
+          {
+            placed.map((a) => {
+              const [x, y] = ARCHIVE_XY[a.institution];
+              // Negative y places a repository north of the frame — Europe and
+              // beyond — drawn in a band above the Moroccan map body.
+              const cy = y < 0 ? 100 + y : y;
+              return (
+                <g class:list={['pin', 'pin--archive', a.country === 'Morocco' ? 'pin--in' : 'pin--out']}>
+                  <circle cx={x} cy={cy < 0 ? 2 : cy} r={PRIO_R[a.priority] / 4} />
+                </g>
+              );
+            })
+          }
+        </g>
+      </svg>
+
+      <figcaption class="amap__cap">
+        Positions are schematic placements for a diagram, not coordinates. Tribal
+        territories are deliberately not drawn: colonial tribal cartography was an
+        administrative construct, and hard borders would reproduce its central error.
+      </figcaption>
+    </figure>
+
+    <!-- The argument, stated rather than left to be inferred from pins. -->
+    <section class="finding">
+      <p>
+        <strong>
+          {decisiveOutside.length} of the {decisive.length} decisive holdings are outside
+          Morocco.
+        </strong>{' '}
+        Roughly 40% of the colonial administrative archive remained in Morocco at
+        independence; the other 60% went to France. This layer is the quietest argument the
+        site makes: the documents that would settle Moroccan history are largely not in
+        Morocco, and the ones that are tend to be the hardest to get into.
+      </p>
+    </section>
+
+    <!-- Mandatory table view for the map. -->
+    <section>
+      <h2 class="atable__h">Archives layer — table view</h2>
+      <div class="table-scroll">
+        <table>
+          <caption class="visually-hidden">Archives by country and priority</caption>
+          <thead>
+            <tr>
+              <th scope="col">Institution</th>
+              <th scope="col">Country</th>
+              <th scope="col">City</th>
+              <th scope="col">Priority</th>
+              <th scope="col">Digitised</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              archives
+                .slice()
+                .sort((a, b) => a.priority.localeCompare(b.priority) || a.country.localeCompare(b.country))
+                .map((a) => (
+                  <tr>
+                    <td>
+                      <a href={`/archives#${a.slug}`}>{a.institution}</a>
+                    </td>
+                    <td>{a.country}</td>
+                    <td>{a.city ?? '—'}</td>
+                    <td>{a.priority}</td>
+                    <td>{a.digitised}</td>
+                  </tr>
+                ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    document.querySelectorAll<HTMLInputElement>('[data-layer]').forEach((box) => {
+      box.addEventListener('change', () => {
+        const g = document.querySelector(`[data-layer-g="${box.dataset.layer}"]`);
+        if (g) (g as SVGElement).style.display = box.checked ? '' : 'none';
+      });
+    });
+  </script>
+
+  <style>
+    .atlas {
+      max-width: 90rem;
+      margin: 0 auto;
+      padding: 0 var(--s-5);
+    }
+    .ahead {
+      margin-bottom: var(--s-5);
+    }
+    .ahead__lede {
+      max-width: 66ch;
+      color: var(--ink-secondary);
+    }
+
+    .alayers fieldset {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--s-4);
+      border: 0;
+      padding: var(--s-3) 0;
+      margin: 0 0 var(--s-4);
+      border-top: var(--rule);
+      border-bottom: var(--rule);
+      font-family: var(--font-ui);
+      font-size: 0.8125rem;
+    }
+    .alayers legend {
+      font-size: 0.625rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+      padding: 0;
+    }
+    .alayers label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4em;
+      color: var(--ink-secondary);
+    }
+
+    .amap {
+      margin: 0 0 var(--s-5);
+      border: var(--rule);
+      border-radius: var(--radius);
+      background: var(--surface);
+      overflow: hidden;
+    }
+    .amap__svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 34rem;
+      background: var(--page-plane);
+    }
+
+    /* The same three validated categorical slots as the network. */
+    .z--french {
+      fill: color-mix(in srgb, var(--cat-french) 30%, transparent);
+      stroke: var(--cat-french);
+      stroke-width: 0.3;
+    }
+    .z--spanish {
+      fill: color-mix(in srgb, var(--cat-spanish) 30%, transparent);
+      stroke: var(--cat-spanish);
+      stroke-width: 0.3;
+    }
+    .z--tangier {
+      fill: color-mix(in srgb, var(--cat-moroccan) 35%, transparent);
+      stroke: var(--cat-moroccan);
+      stroke-width: 0.3;
+    }
+    /* Not a fourth fill — an absence, drawn as one. */
+    .z--outside {
+      fill: url(#hatch);
+      color: var(--ink-muted);
+      stroke: var(--baseline);
+      stroke-width: 0.3;
+      stroke-dasharray: 1 1;
+    }
+
+    .zlabel {
+      font-family: var(--font-ui);
+      font-size: 2.2px;
+      fill: var(--ink-secondary);
+      font-weight: 600;
+    }
+    .zlabel--sm {
+      font-size: 1.8px;
+      fill: var(--ink-muted);
+    }
+
+    .pin--place circle {
+      fill: var(--ink);
+    }
+    .pin--place text {
+      font-family: var(--font-ui);
+      font-size: 1.8px;
+      fill: var(--ink-secondary);
+    }
+    .pin--archive circle {
+      fill: var(--seq-6);
+      stroke: var(--surface);
+      stroke-width: 0.3;
+    }
+    .pin--in circle {
+      fill: var(--seq-8);
+    }
+
+    .amap__cap {
+      padding: var(--s-2) var(--s-4);
+      border-top: var(--rule);
+      font-family: var(--font-ui);
+      font-size: 0.6875rem;
+      color: var(--ink-muted);
+      line-height: 1.5;
+    }
+
+    .finding {
+      max-width: 66ch;
+      padding: var(--s-4);
+      border: var(--rule);
+      border-left: 3px solid var(--accent);
+      border-radius: var(--radius);
+      background: var(--surface);
+      margin-bottom: var(--s-6);
+    }
+    .finding p {
+      margin: 0;
+      font-size: 0.9375rem;
+      color: var(--ink-secondary);
+    }
+
+    .atable__h {
+      font-size: 1.05rem;
+    }
+  </style>
+</Base>

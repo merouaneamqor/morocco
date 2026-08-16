@@ -1,0 +1,294 @@
+---
+/**
+ * Search.
+ *
+ * Client-side over a build-time index. The requirements that shape it:
+ *
+ *   - Alias search. `Zaïani`, `Zayani`, `Aẓayyi`, `Hammou des Zaïanes`,
+ *     `el caíd Hammu` and `محا أو حمو` must all reach Mouha ou Hammou Zayani.
+ *     Every alias variant is a first-class term in the index.
+ *   - Diacritic folding both ways: `Ma al-Aynayn` finds `Māʾ al-ʿAynayn` and
+ *     vice versa, because both sides of the comparison are folded.
+ *   - Results show claim status and source tier inline, so a searcher sees the
+ *     strength of a hit before opening it.
+ */
+import Base from '../layouts/Base.astro';
+import index from '../content/data/search-index.json';
+import { PHASES } from '../lib/vocab.mjs';
+
+const types = [...new Set(index.map((r) => r.type))];
+const TYPE_LABEL: Record<string, string> = {
+  person: 'People',
+  event: 'Events',
+  source: 'Sources',
+  archive: 'Archives',
+  place: 'Places',
+  group: 'Groups',
+};
+---
+
+<Base title="Search" description="Search across people, events, sources, archives, places and groups — including every alias variant.">
+  <div class="search">
+    <h1>Search</h1>
+    <p class="search__lede prose">
+      {index.length} records. Alias variants are indexed as first-class terms and
+      diacritics fold both ways, so <code>Zaïanes</code>, <code>Zayani</code> and{' '}
+      <code>محا أو حمو</code> all reach the same dossier.
+    </p>
+
+    <form class="search__form" role="search" onsubmit="return false">
+      <label class="visually-hidden" for="q">Search the corpus</label>
+      <input
+        id="q"
+        type="search"
+        placeholder="Name, alias, place, archive…"
+        autocomplete="off"
+        autofocus
+        data-q
+      />
+      <div class="search__facets">
+        <select data-type aria-label="Filter by type">
+          <option value="">All types</option>
+          {types.map((t) => <option value={t}>{TYPE_LABEL[t] ?? t}</option>)}
+        </select>
+        <select data-phase aria-label="Filter by phase">
+          <option value="">All phases</option>
+          {PHASES.map((p) => <option value={p}>{p}</option>)}
+        </select>
+      </div>
+    </form>
+
+    <p class="search__status" data-status aria-live="polite"></p>
+    <ul class="search__results" data-results></ul>
+
+    <noscript>
+      <p class="search__noscript">
+        Search needs JavaScript. Without it, the indexes remain fully browsable:{' '}
+        <a href="/people">People</a>, <a href="/events">Events</a>,{' '}
+        <a href="/sources">Sources</a>, <a href="/archives">Archives</a>,{' '}
+        <a href="/places">Places</a>, <a href="/groups">Groups</a>.
+      </p>
+    </noscript>
+  </div>
+
+  <script define:vars={{ index }}>
+    // Same folding rule as the build-time indexer, so both sides of every
+    // comparison are folded and matching is symmetric.
+    const NON_DECOMPOSABLE = {
+      'ʿ': '', 'ʾ': '', '‘': '', '’': '',
+      'ẓ': 'z', 'ḥ': 'h', 'ṣ': 's', 'ḍ': 'd', 'ṭ': 't', 'ḏ': 'd', 'ṛ': 'r',
+      'ı': 'i', 'ş': 's', 'ğ': 'g',
+    };
+    function fold(s) {
+      return String(s || '')
+        .replace(/[ʿʾ‘’ẓḥṣḍṭḏṛışğ]/g, (c) => NON_DECOMPOSABLE[c] ?? c)
+        .normalize('NFD')
+        .replace(/[̀-ͯ]/g, '')
+        .toLowerCase()
+        .trim();
+    }
+
+    const qEl = document.querySelector('[data-q]');
+    const typeEl = document.querySelector('[data-type]');
+    const phaseEl = document.querySelector('[data-phase]');
+    const out = document.querySelector('[data-results]');
+    const status = document.querySelector('[data-status]');
+
+    const TYPE_LABEL = {
+      person: 'Person', event: 'Event', source: 'Source',
+      archive: 'Archive', place: 'Place', group: 'Group',
+    };
+
+    function score(rec, q) {
+      let best = 0;
+      for (const term of rec.folded) {
+        if (term === q) return 100;
+        if (term.startsWith(q)) best = Math.max(best, 70);
+        else if (term.includes(q)) best = Math.max(best, 45);
+      }
+      // Arabic-script terms are not folded to Latin — transliteration is a
+      // scholarly act, not a string operation — so they match directly.
+      for (const term of rec.terms) {
+        if (term.includes(q)) best = Math.max(best, 60);
+      }
+      return best;
+    }
+
+    function run() {
+      const raw = qEl.value.trim();
+      const q = fold(raw) || raw.toLowerCase();
+      const type = typeEl.value;
+      const phase = phaseEl.value;
+
+      if (!raw) {
+        out.innerHTML = '';
+        status.textContent = '';
+        return;
+      }
+
+      const hits = index
+        .filter((r) => (!type || r.type === type) && (!phase || (r.phase || []).includes(phase)))
+        .map((r) => ({ r, s: score(r, q) }))
+        .filter((x) => x.s > 0)
+        .sort((a, b) => b.s - a.s || a.r.title.localeCompare(b.r.title))
+        .slice(0, 60);
+
+      status.textContent = hits.length
+        ? `${hits.length} result${hits.length === 1 ? '' : 's'}`
+        : `No match for “${raw}”. Try an alias spelling, or browse the indexes.`;
+
+      out.innerHTML = hits
+        .map(({ r }) => {
+          // Show which alias matched, when it was not the primary name.
+          const matched = r.terms.find(
+            (t) => fold(t).includes(q) || t.includes(raw)
+          );
+          const via =
+            matched && fold(matched) !== fold(r.title)
+              ? `<span class="hit__via">matched “${matched}”</span>`
+              : '';
+          const badges = [
+            r.status ? `<span class="hit__badge">${r.status}</span>` : '',
+            r.tier ? `<span class="tier-token"><span class="tier-token__text">${r.tier}</span></span>` : '',
+            r.verification === 'NOT YET VERIFIED'
+              ? '<span class="ref-token ref-token--unverified">NOT YET VERIFIED</span>'
+              : '',
+          ].join('');
+          return `<li class="hit">
+            <a class="hit__link" href="${r.url}">
+              <span class="hit__type">${TYPE_LABEL[r.type] ?? r.type}</span>
+              <span class="hit__title">${r.title}</span>
+              ${r.subtitle ? `<span class="hit__sub">${r.subtitle}</span>` : ''}
+            </a>
+            <span class="hit__meta">${via}${badges}</span>
+          </li>`;
+        })
+        .join('');
+    }
+
+    qEl?.addEventListener('input', run);
+    typeEl?.addEventListener('change', run);
+    phaseEl?.addEventListener('change', run);
+
+    // Deep-linkable: /search?q=Zaïanes
+    const initial = new URLSearchParams(location.search).get('q');
+    if (initial) {
+      qEl.value = initial;
+      run();
+    }
+  </script>
+
+  <style>
+    .search {
+      max-width: 52rem;
+    }
+    .search__lede {
+      color: var(--ink-secondary);
+    }
+    .search__form {
+      display: grid;
+      gap: var(--s-3);
+      margin: var(--s-5) 0 var(--s-4);
+    }
+    .search__form input[type='search'] {
+      width: 100%;
+      font-family: var(--font-body);
+      font-size: 1.125rem;
+      padding: var(--s-3) var(--s-4);
+      background: var(--surface);
+      color: var(--ink);
+      border: var(--rule);
+      border-radius: var(--radius);
+    }
+    .search__facets {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--s-3);
+    }
+    .search__facets select {
+      font-family: var(--font-ui);
+      font-size: 0.8125rem;
+      padding: 0.3em 0.5em;
+      background: var(--surface);
+      color: var(--ink);
+      border: var(--rule);
+      border-radius: var(--radius);
+    }
+    .search__status {
+      font-family: var(--font-ui);
+      font-size: 0.8125rem;
+      color: var(--ink-muted);
+    }
+    .search__results {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-top: var(--rule);
+    }
+    .search__results :global(.hit) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: var(--s-3);
+      padding: var(--s-3) 0;
+      border-bottom: var(--rule);
+      margin: 0;
+    }
+    .search__results :global(.hit__link) {
+      display: grid;
+      gap: 0.1rem;
+      text-decoration: none;
+      color: inherit;
+      min-width: 0;
+      flex: 1 1 20rem;
+    }
+    .search__results :global(.hit__type) {
+      font-family: var(--font-ui);
+      font-size: 0.625rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+    }
+    .search__results :global(.hit__title) {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .search__results :global(.hit__link:hover .hit__title) {
+      text-decoration: underline;
+    }
+    .search__results :global(.hit__sub) {
+      font-size: 0.875rem;
+      color: var(--ink-secondary);
+    }
+    .search__results :global(.hit__meta) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--s-2);
+      align-items: center;
+    }
+    .search__results :global(.hit__via) {
+      font-family: var(--font-ui);
+      font-size: 0.6875rem;
+      color: var(--ink-muted);
+      font-style: italic;
+    }
+    .search__results :global(.hit__badge) {
+      font-family: var(--font-ui);
+      font-size: 0.625rem;
+      font-weight: 600;
+      padding: 0.15em 0.45em;
+      border: var(--rule);
+      border-radius: var(--radius);
+      color: var(--ink-secondary);
+    }
+    .search__noscript {
+      padding: var(--s-4);
+      border: var(--rule);
+      border-radius: var(--radius);
+      background: var(--surface);
+      font-size: 0.9375rem;
+    }
+  </style>
+</Base>

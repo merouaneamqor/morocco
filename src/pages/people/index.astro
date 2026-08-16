@@ -1,0 +1,155 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import FacetIndex from '../../components/FacetIndex.astro';
+
+const people = (await getCollection('people')).map((p) => p.data);
+
+// Sort: full dossiers first, then by the derived year, then by name. The
+// derived year is a sort key only and is never displayed as a date.
+const DEPTH = { 'Full dossier': 0, Substantial: 1, Stub: 2, 'Identified - not yet researched': 3 };
+const sorted = [...people].sort(
+  (a, b) =>
+    DEPTH[a.dossierStatus] - DEPTH[b.dossierStatus] ||
+    (a._derivedBornYear ?? 9999) - (b._derivedBornYear ?? 9999) ||
+    a.name.localeCompare(b.name)
+);
+
+const facets = [
+  { key: 'phase', label: 'Phase', values: [...new Set(people.flatMap((p) => p.phase))].sort() },
+  { key: 'category', label: 'Category', values: [...new Set(people.flatMap((p) => p.category))].sort() },
+  { key: 'region', label: 'Region', values: [...new Set(people.flatMap((p) => p.region))].sort() },
+  { key: 'evidence', label: 'Evidence base', values: [...new Set(people.map((p) => p.evidenceBase))] },
+  { key: 'dossier', label: 'Dossier status', values: [...new Set(people.map((p) => p.dossierStatus))] },
+];
+---
+
+<Base title="People" description={`${people.length} dossiers, graded by evidence base and dossier depth.`}>
+  <header class="ihead">
+    <h1>People</h1>
+    <p class="ihead__lede prose">
+      {people.length} dossiers. Depth is stated rather than disguised: a stub is labelled a
+      stub, because an entry with little evidence behind it should look like one.
+    </p>
+  </header>
+
+  <FacetIndex facets={facets} countLabel="people" />
+
+  <ul class="plist" data-index>
+    {
+      sorted.map((p) => (
+        <li
+          class="pitem"
+          data-phase={p.phase.join('|')}
+          data-category={p.category.join('|')}
+          data-region={p.region.join('|')}
+          data-evidence={p.evidenceBase}
+          data-dossier={p.dossierStatus}
+          data-search={[p.name, ...p.aliases.map((a) => a.folded)].join(' ').toLowerCase()}
+        >
+          <a class="pitem__link" href={`/people/${p.slug}`}>
+            <span class="pitem__name">{p.name}</span>
+            {p.oneLine && <span class="pitem__one">{p.oneLine}</span>}
+          </a>
+          <div class="pitem__meta">
+            <span class:list={['depth', `depth--${DEPTH[p.dossierStatus]}`]}>
+              {p.dossierStatus}
+            </span>
+            <span class="pitem__ev">{p.evidenceBase}</span>
+            <span class="pitem__phases">{p.phase.join(' · ')}</span>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+
+  <style>
+    .ihead {
+      margin-bottom: var(--s-5);
+    }
+    .ihead__lede {
+      color: var(--ink-secondary);
+    }
+
+    .plist {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-top: var(--rule);
+    }
+
+    .pitem {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: var(--s-4);
+      align-items: baseline;
+      padding: var(--s-3) 0;
+      border-bottom: var(--rule);
+      margin: 0;
+    }
+
+    .pitem__link {
+      text-decoration: none;
+      color: inherit;
+      display: grid;
+      gap: 0.15rem;
+      min-width: 0;
+    }
+    .pitem__name {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .pitem__link:hover .pitem__name {
+      text-decoration: underline;
+    }
+    .pitem__one {
+      font-size: 0.875rem;
+      color: var(--ink-secondary);
+    }
+
+    .pitem__meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: var(--s-3);
+      font-family: var(--font-ui);
+      font-size: 0.6875rem;
+      color: var(--ink-muted);
+      text-align: right;
+    }
+
+    /* Dossier depth is ordinal, so it reads as a ramp, not four categories. */
+    .depth {
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+    .depth--0 {
+      color: var(--seq-7);
+    }
+    .depth--1 {
+      color: var(--seq-5);
+    }
+    .depth--2 {
+      color: var(--ink-muted);
+    }
+    .depth--3 {
+      color: var(--ink-muted);
+      opacity: 0.7;
+    }
+
+    .pitem__phases {
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+    }
+
+    @media (max-width: 48rem) {
+      .pitem {
+        grid-template-columns: 1fr;
+      }
+      .pitem__meta {
+        justify-content: flex-start;
+        text-align: left;
+      }
+    }
+  </style>
+</Base>

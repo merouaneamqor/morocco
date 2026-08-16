@@ -1,0 +1,171 @@
+---
+/**
+ * The aliases block is a research tool, not decoration.
+ *
+ * A person may appear under five to ten spellings across archives, and finding
+ * the right one is often the difference between locating a file and not. So
+ * each variant is tagged with the archive tradition it comes from, marked with
+ * its script, and made individually copyable.
+ *
+ * Arabic variants are bidi-isolated so a right-to-left string cannot reorder
+ * the row it sits in.
+ */
+interface AliasVariant {
+  value: string;
+  tradition: string | null;
+  script: 'latin' | 'arabic';
+  folded: string;
+}
+
+interface Props {
+  aliases: AliasVariant[];
+}
+
+const { aliases } = Astro.props;
+
+const TRADITION_LABEL: Record<string, string> = {
+  Ar: 'Arabic',
+  Sp: 'Spanish',
+  Fr: 'French',
+  'Fr. archives': 'French archives',
+  Eng: 'English',
+  Tamazight: 'Tamazight',
+  Tarifit: 'Tarifit',
+  Tashelhit: 'Tashelhit',
+};
+---
+
+<div class="aliases">
+  <p class="aliases__head">
+    Aliases &amp; spellings
+    <span class="aliases__count">{aliases.length}</span>
+  </p>
+  <ul class="aliases__list">
+    {
+      aliases.map((a) => (
+        <li class="aliases__item">
+          <button
+            class="aliases__copy"
+            type="button"
+            data-copy={a.value}
+            title="Copy this spelling"
+            aria-label={`Copy “${a.value}”`}
+          >
+            <span aria-hidden="true">⧉</span>
+          </button>
+          <span
+            class:list={['aliases__value', a.script === 'arabic' && 'rtl']}
+            dir={a.script === 'arabic' ? 'rtl' : undefined}
+            lang={a.script === 'arabic' ? 'ar' : undefined}
+          >
+            {a.value}
+          </span>
+          {a.tradition && (
+            <span class="aliases__tag">{TRADITION_LABEL[a.tradition] ?? a.tradition}</span>
+          )}
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<script>
+  // Copy-to-clipboard for a single alias. Progressive: without JS the value is
+  // still selectable text and the button simply does nothing.
+  document.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const value = btn.dataset.copy ?? '';
+      try {
+        await navigator.clipboard.writeText(value);
+        const prev = btn.innerHTML;
+        btn.innerHTML = '<span aria-hidden="true">✓</span>';
+        setTimeout(() => (btn.innerHTML = prev), 1200);
+      } catch {
+        /* clipboard unavailable — the text remains selectable */
+      }
+    });
+  });
+</script>
+
+<style>
+  .aliases {
+    border: var(--rule);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: var(--s-3) var(--s-4);
+  }
+
+  .aliases__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s-2);
+    margin: 0 0 var(--s-3);
+    font-family: var(--font-ui);
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-muted);
+  }
+
+  .aliases__count {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    color: var(--ink-muted);
+    border: var(--rule);
+    border-radius: var(--radius);
+    padding: 0 0.35em;
+  }
+
+  .aliases__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--s-2);
+  }
+
+  .aliases__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: baseline;
+    gap: var(--s-2);
+    margin: 0;
+  }
+
+  .aliases__value {
+    font-size: 0.8125rem;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+
+  /* Arabic gets its own face and is isolated from the surrounding LTR flow. */
+  .aliases__value.rtl {
+    font-family: var(--font-arabic);
+    font-size: 0.9375rem;
+    unicode-bidi: isolate;
+  }
+
+  .aliases__tag {
+    grid-column: 2;
+    font-family: var(--font-ui);
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--ink-muted);
+  }
+
+  .aliases__copy {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    color: var(--ink-muted);
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+  .aliases__copy:hover {
+    color: var(--accent);
+  }
+</style>

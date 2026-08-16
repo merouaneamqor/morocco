@@ -1,0 +1,452 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ClaimStatus from '../../components/ClaimStatus.astro';
+import AliasList from '../../components/AliasList.astro';
+import StatusFooter from '../../components/StatusFooter.astro';
+import claimsData from '../../content/data/claims.json';
+import { looksWithheld } from '../../lib/markers.mjs';
+
+export async function getStaticPaths() {
+  const people = await getCollection('people');
+  // Most people are stubs with no dossier body. Looking the body up from the
+  // collection rather than with getEntry keeps a missing one an ordinary
+  // absence instead of a build-time warning — a stub having no body is the
+  // expected case, not a fault.
+  const dossiers = await getCollection('dossiers');
+  const bySlug = new Map(dossiers.map((d) => [d.data.slug, d]));
+  return people.map((p) => ({
+    params: { slug: p.data.slug },
+    props: { person: p.data, dossier: bySlug.get(p.data.slug) ?? null },
+  }));
+}
+
+const { person, dossier } = Astro.props;
+
+const rendered = dossier ? await render(dossier) : null;
+const Body = rendered?.Content ?? null;
+
+const allEvents = await getCollection('events');
+const allRels = await getCollection('relationships');
+const allPeople = await getCollection('people');
+
+const events = allEvents.filter((e) => person.events.includes(e.data.slug));
+const rels = allRels.filter((r) => person.relationships.includes(r.data.slug));
+const nameBySlug = new Map(allPeople.map((p) => [p.data.slug, p.data.name]));
+
+const claims = claimsData.claims.filter((c) => c.hostSlug === person.slug);
+const counts = {
+  Established: claims.filter((c) => c.status === 'Established').length,
+  'Highly probable': claims.filter((c) => c.status === 'Highly probable').length,
+  Disputed: claims.filter((c) => c.status === 'Disputed').length,
+  Unknown: claims.filter((c) => c.status === 'Unknown').length,
+};
+const withheldCount = claims.filter((c) => c.withheld).length;
+
+// Withholding is asserted by the corpus, not inferred from a low count.
+// `Contested points` is where the People database records it.
+const contestedIsWithheld = person.contestedPoints
+  ? looksWithheld(person.contestedPoints)
+  : false;
+
+// Table of contents from the dossier headings.
+const headings = rendered ? rendered.headings.filter((h) => h.depth === 2) : [];
+---
+
+<Base title={person.name} description={person.oneLine ?? undefined}>
+  <div class="dossier">
+    <!-- ------------------------------------------------ left: identity -->
+    <aside class="dossier__identity">
+      <div class="idcard">
+        <p class="idcard__eyebrow">Dossier</p>
+        <h1 class="idcard__name">{person.name}</h1>
+        {person.oneLine && <p class="idcard__oneline">{person.oneLine}</p>}
+
+        <dl class="idcard__dl">
+          {/* Verbatim strings. Never reformatted as dates — the uncertainty
+              is carried in the string itself. */}
+          {person.born && (
+            <>
+              <dt>Born</dt>
+              <dd class="idcard__verbatim">{person.born}</dd>
+            </>
+          )}
+          {person.died && (
+            <>
+              <dt>Died</dt>
+              <dd class="idcard__verbatim">{person.died}</dd>
+            </>
+          )}
+          <dt>Evidence base</dt>
+          <dd>{person.evidenceBase}</dd>
+          <dt>Dossier status</dt>
+          <dd>{person.dossierStatus}</dd>
+        </dl>
+
+        <div class="idcard__chips">
+          {person.category.map((c) => <span class="chip chip--cat">{c}</span>)}
+          {person.region.map((r) => <span class="chip">{r}</span>)}
+          {person.phase.map((p) => <span class="chip chip--phase">{p}</span>)}
+        </div>
+      </div>
+
+      {person.aliases.length > 0 && <AliasList aliases={person.aliases} />}
+    </aside>
+
+    <!-- --------------------------------------------------- centre: body -->
+    <article class="dossier__body prose">
+      {
+        contestedIsWithheld && (
+          <div class="withheld-banner">
+            <ClaimStatus status="Unknown" withheld={true} />
+            <p>
+              Part of what is unresolved here is not unknown but <strong>withheld</strong> —
+              held by someone who will not disclose it. That is a different category, and
+              the site records it as one.
+            </p>
+          </div>
+        )
+      }
+
+      {
+        Body ? (
+          <Body />
+        ) : (
+          <div class="dossier__thin">
+            <p class="dossier__thinHead">
+              This dossier is a <strong>{person.dossierStatus.toLowerCase()}</strong>.
+            </p>
+            <p>
+              The corpus records the identification and the framing below, and no more. The
+              site says a thin dossier is thin rather than padding it out — an entry with
+              little evidence behind it should look like one.
+            </p>
+            {person.contestedPoints && (
+              <>
+                <h2>Contested points</h2>
+                <p>{person.contestedPoints}</p>
+              </>
+            )}
+          </div>
+        )
+      }
+
+      {
+        rels.length > 0 && (
+          <section class="dossier__rels">
+            <h2>Documented relationships</h2>
+            <p class="muted dossier__relsNote">
+              Every edge carries its evidence and its strength. Nothing here is inferred by
+              similarity.
+            </p>
+            <div class="table-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Relationship</th>
+                    <th scope="col">Period</th>
+                    <th scope="col">Evidence</th>
+                    <th scope="col">Strength</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {rels.map((r) => {
+                    const other = r.data.from === person.slug ? r.data.to : r.data.from;
+                    return (
+                      <tr>
+                        <td>
+                          <a href={`/people/${other}`}>{r.data.label}</a>
+                        </td>
+                        <td>{r.data.period ?? '—'}</td>
+                        <td>{r.data.evidence ?? '—'}</td>
+                        <td>
+                          <span class="strength" data-strength={r.data.evidenceStrength}>
+                            {r.data.evidenceStrength}
+                          </span>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        )
+      }
+    </article>
+
+    <!-- --------------------------------------------- right: contested/TOC -->
+    <aside class="dossier__aside">
+      {
+        person.contestedPoints && (
+          <div class="contested">
+            <p class="contested__head">
+              <span aria-hidden="true">⇄</span> Contested points
+            </p>
+            <p class="contested__body">{person.contestedPoints}</p>
+          </div>
+        )
+      }
+
+      {
+        headings.length > 0 && (
+          <nav class="toc" aria-label="On this page">
+            <p class="toc__head">On this page</p>
+            <ul>
+              {headings.map((h) => (
+                <li>
+                  <a href={`#${h.slug}`}>{h.text}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )
+      }
+
+      {
+        events.length > 0 && (
+          <nav class="related" aria-label="Related events">
+            <p class="toc__head">Events</p>
+            <ul>
+              {events.map((e) => (
+                <li>
+                  <a href={`/events/${e.data.slug}`}>{e.data.event}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )
+      }
+    </aside>
+  </div>
+
+  <StatusFooter counts={counts} withheld={withheldCount} total={claims.length} />
+</Base>
+
+<style>
+  .dossier {
+    display: grid;
+    grid-template-columns: 17rem minmax(0, 1fr) 16rem;
+    gap: var(--s-6);
+    align-items: start;
+  }
+
+  .dossier__identity,
+  .dossier__aside {
+    position: sticky;
+    top: 5rem;
+    display: grid;
+    gap: var(--s-4);
+  }
+
+  .idcard {
+    border: var(--rule);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: var(--s-4);
+  }
+
+  .idcard__eyebrow {
+    margin: 0 0 var(--s-1);
+    font-family: var(--font-ui);
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-muted);
+  }
+
+  .idcard__name {
+    font-size: 1.375rem;
+    margin: 0 0 var(--s-2);
+  }
+
+  .idcard__oneline {
+    font-size: 0.875rem;
+    color: var(--ink-secondary);
+    margin: 0 0 var(--s-4);
+  }
+
+  .idcard__dl {
+    margin: 0 0 var(--s-4);
+    display: grid;
+    gap: var(--s-2);
+    font-family: var(--font-ui);
+    font-size: 0.8125rem;
+  }
+  .idcard__dl dt {
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-muted);
+  }
+  .idcard__dl dd {
+    margin: 0 0 var(--s-2);
+    color: var(--ink-secondary);
+  }
+
+  /* A verbatim field is visually marked as verbatim so a reader can see that
+     "c. 1857 or c. 1863 — not established" is the record, not a rendering bug. */
+  .idcard__verbatim {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: var(--ink) !important;
+  }
+
+  .idcard__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-1);
+  }
+
+  .chip {
+    font-family: var(--font-ui);
+    font-size: 0.6875rem;
+    padding: 0.15em 0.5em;
+    border: var(--rule);
+    border-radius: var(--radius);
+    color: var(--ink-secondary);
+  }
+  .chip--cat {
+    border-color: color-mix(in srgb, var(--accent) 30%, transparent);
+  }
+  .chip--phase {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+  }
+
+  .dossier__body {
+    min-width: 0;
+  }
+
+  .withheld-banner {
+    display: grid;
+    gap: var(--s-2);
+    padding: var(--s-4);
+    margin-bottom: var(--s-5);
+    border: 1px solid var(--status-withheld);
+    border-left-width: 3px;
+    border-radius: var(--radius);
+    background: var(--status-withheld-bg);
+  }
+  .withheld-banner p {
+    margin: 0;
+    font-size: 0.9375rem;
+    color: var(--ink-secondary);
+  }
+
+  .dossier__thin {
+    padding: var(--s-5);
+    border: 1px dashed var(--baseline);
+    border-radius: var(--radius);
+    color: var(--ink-secondary);
+  }
+  .dossier__thinHead {
+    font-family: var(--font-ui);
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--ink-muted);
+  }
+
+  .dossier__rels {
+    margin-top: var(--s-7);
+  }
+  .dossier__relsNote {
+    font-size: 0.8125rem;
+    margin-top: -0.5rem;
+  }
+
+  .strength {
+    font-family: var(--font-ui);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .strength[data-strength='Documented'] {
+    color: var(--status-established);
+  }
+  .strength[data-strength='Disputed'] {
+    color: var(--status-disputed);
+  }
+
+  .contested {
+    border: 1px solid color-mix(in srgb, var(--status-disputed) 45%, transparent);
+    border-left-width: 3px;
+    border-radius: var(--radius);
+    background: var(--status-disputed-bg);
+    padding: var(--s-3) var(--s-4);
+  }
+  .contested__head {
+    margin: 0 0 var(--s-2);
+    font-family: var(--font-ui);
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-secondary);
+  }
+  .contested__body {
+    margin: 0;
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    color: var(--ink-secondary);
+  }
+
+  .toc,
+  .related {
+    border-top: var(--rule);
+    padding-top: var(--s-3);
+  }
+  .toc__head {
+    margin: 0 0 var(--s-2);
+    font-family: var(--font-ui);
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-muted);
+  }
+  .toc ul,
+  .related ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--s-2);
+  }
+  .toc a,
+  .related a {
+    font-family: var(--font-ui);
+    font-size: 0.8125rem;
+    color: var(--ink-secondary);
+    text-decoration: none;
+  }
+  .toc a:hover,
+  .related a:hover {
+    color: var(--ink);
+    text-decoration: underline;
+  }
+
+  @media (max-width: 78rem) {
+    .dossier {
+      grid-template-columns: 15rem minmax(0, 1fr);
+    }
+    .dossier__aside {
+      grid-column: 1 / -1;
+      position: static;
+      grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    }
+  }
+
+  @media (max-width: 56rem) {
+    .dossier {
+      grid-template-columns: 1fr;
+    }
+    .dossier__identity {
+      position: static;
+    }
+  }
+</style>

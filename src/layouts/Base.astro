@@ -1,0 +1,291 @@
+---
+import '../styles/global.css';
+import '../styles/evidence.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  /** Wide routes (graph, atlas) opt out of the measure-constrained shell. */
+  wide?: boolean;
+}
+
+const { title, description, wide = false } = Astro.props;
+
+const NAV = [
+  { href: '/people', label: 'People' },
+  { href: '/events', label: 'Events' },
+  { href: '/timeline', label: 'Timeline' },
+  { href: '/evidence', label: 'Evidence', star: true },
+  { href: '/disputes', label: 'Disputes', star: true },
+  { href: '/sources', label: 'Sources' },
+  { href: '/archives', label: 'Archives' },
+  { href: '/network', label: 'Network' },
+  { href: '/atlas', label: 'Atlas' },
+  { href: '/method', label: 'Method' },
+];
+
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const full = `${title} · Moroccan History from the Archives`;
+const desc =
+  description ??
+  'A source-critical reconstruction of Moroccan history, c. 1830–present, built from French, Spanish, Moroccan, British, American, German and Ottoman archival sources.';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{full}</title>
+    <meta name="description" content={desc} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content={full} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:type" content="website" />
+    {/* Set the theme before first paint so an explicit choice never flashes. */}
+    <script is:inline>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t === 'dark' || t === 'light') {
+            document.documentElement.setAttribute('data-theme', t);
+          }
+        } catch (e) {
+          /* localStorage unavailable — system preference governs. */
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="masthead no-print">
+      <div class="masthead__inner">
+        <a class="masthead__brand" href="/">
+          <span class="masthead__mark" aria-hidden="true">▤</span>
+          <span class="masthead__name">Moroccan History <em>from the Archives</em></span>
+        </a>
+
+        <nav class="masthead__nav" aria-label="Primary">
+          <ul>
+            {
+              NAV.map((item) => (
+                <li>
+                  <a
+                    href={item.href}
+                    aria-current={path === item.href || path.startsWith(item.href + '/') ? 'page' : undefined}
+                    class:list={[item.star && 'masthead__star']}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+
+        <div class="masthead__tools">
+          <a class="masthead__search" href="/search">Search</a>
+          <button
+            class="masthead__theme"
+            type="button"
+            data-theme-toggle
+            aria-label="Switch between light and dark theme"
+          >
+            <span aria-hidden="true">◐</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class:list={['shell', wide && 'shell--wide']}>
+      <slot />
+    </main>
+
+    <footer class="footer no-print">
+      <div class="footer__inner">
+        <p class="footer__statement">
+          This is a source-critical synthesis of the accessible secondary and catalogue
+          literature, with a precise map of where the primary evidence sits. It is not yet
+          archival research: no carton has been opened, and
+          <strong>no archival reference here has been reconstructed from memory or inferred.</strong>
+        </p>
+        <nav class="footer__nav" aria-label="Long-form">
+          <a href="/synthesis">Synthesis</a>
+          <a href="/bias">Source bias</a>
+          <a href="/cross-verification">Cross-verification</a>
+          <a href="/method">Method</a>
+          <a href="/dev/components">Components</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      // The only global script on the site: a theme toggle. Everything else on
+      // a dossier page is static HTML.
+      const btn = document.querySelector('[data-theme-toggle]');
+      btn?.addEventListener('click', () => {
+        const root = document.documentElement;
+        const current =
+          root.getAttribute('data-theme') ||
+          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        const next = current === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try {
+          localStorage.setItem('theme', next);
+        } catch (e) {
+          /* non-persistent is fine */
+        }
+      });
+    </script>
+
+    <style>
+      .masthead {
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        background: color-mix(in srgb, var(--surface) 92%, transparent);
+        backdrop-filter: blur(8px);
+        border-bottom: var(--rule);
+      }
+
+      .masthead__inner {
+        display: flex;
+        align-items: center;
+        gap: var(--s-5);
+        max-width: 90rem;
+        margin: 0 auto;
+        padding: var(--s-3) var(--s-5);
+      }
+
+      .masthead__brand {
+        display: flex;
+        align-items: baseline;
+        gap: 0.5em;
+        font-family: var(--font-ui);
+        font-size: 0.875rem;
+        font-weight: 700;
+        color: var(--ink);
+        text-decoration: none;
+        white-space: nowrap;
+      }
+      .masthead__brand em {
+        font-style: normal;
+        font-weight: 400;
+        color: var(--ink-muted);
+      }
+      .masthead__mark {
+        color: var(--accent);
+      }
+
+      .masthead__nav {
+        flex: 1;
+        min-width: 0;
+        overflow-x: auto;
+      }
+      .masthead__nav ul {
+        display: flex;
+        gap: var(--s-4);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .masthead__nav a {
+        font-family: var(--font-ui);
+        font-size: 0.8125rem;
+        color: var(--ink-secondary);
+        text-decoration: none;
+        white-space: nowrap;
+        padding-bottom: 2px;
+        border-bottom: 2px solid transparent;
+      }
+      .masthead__nav a:hover {
+        color: var(--ink);
+      }
+      .masthead__nav a[aria-current='page'] {
+        color: var(--ink);
+        border-bottom-color: var(--accent);
+      }
+      /* The two routes that do not exist on any comparable site. */
+      .masthead__star::before {
+        content: '★';
+        font-size: 0.7em;
+        color: var(--accent);
+        margin-right: 0.25em;
+        vertical-align: 0.15em;
+      }
+
+      .masthead__tools {
+        display: flex;
+        align-items: center;
+        gap: var(--s-3);
+      }
+      .masthead__search {
+        font-family: var(--font-ui);
+        font-size: 0.8125rem;
+        color: var(--ink-secondary);
+        text-decoration: none;
+        border: var(--rule);
+        border-radius: var(--radius);
+        padding: 0.25em 0.7em;
+      }
+      .masthead__theme {
+        background: transparent;
+        border: var(--rule);
+        border-radius: var(--radius);
+        color: var(--ink-secondary);
+        cursor: pointer;
+        padding: 0.25em 0.5em;
+        font-size: 0.875rem;
+        line-height: 1.4;
+      }
+
+      .shell {
+        max-width: 90rem;
+        margin: 0 auto;
+        padding: var(--s-6) var(--s-5) var(--s-8);
+      }
+      .shell--wide {
+        max-width: none;
+        padding-inline: 0;
+      }
+
+      .footer {
+        border-top: var(--rule);
+        background: var(--surface);
+        margin-top: var(--s-8);
+      }
+      .footer__inner {
+        max-width: 90rem;
+        margin: 0 auto;
+        padding: var(--s-6) var(--s-5);
+        display: grid;
+        gap: var(--s-4);
+      }
+      .footer__statement {
+        max-width: 60ch;
+        margin: 0;
+        font-size: 0.875rem;
+        color: var(--ink-secondary);
+      }
+      .footer__nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--s-4);
+        font-family: var(--font-ui);
+        font-size: 0.8125rem;
+      }
+
+      @media (max-width: 60rem) {
+        .masthead__inner {
+          flex-wrap: wrap;
+          gap: var(--s-3);
+        }
+        .masthead__nav {
+          order: 3;
+          flex-basis: 100%;
+        }
+      }
+    </style>
+  </body>
+</html>

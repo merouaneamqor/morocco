@@ -1,0 +1,244 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import FacetIndex from '../components/FacetIndex.astro';
+import ArchivalRef from '../components/ArchivalRef.astro';
+
+const archives = (await getCollection('archives')).map((a) => a.data);
+
+const PRIORITY_ORDER = ['1 - decisive', '2 - structural', '3 - supporting', '4 - background'];
+const sorted = [...archives].sort(
+  (a, b) =>
+    PRIORITY_ORDER.indexOf(a.priority) - PRIORITY_ORDER.indexOf(b.priority) ||
+    a.institution.localeCompare(b.institution)
+);
+
+const facets = [
+  { key: 'country', label: 'Country', values: [...new Set(archives.map((a) => a.country))].sort() },
+  { key: 'priority', label: 'Priority', values: PRIORITY_ORDER.filter((p) => archives.some((a) => a.priority === p)) },
+  { key: 'digitised', label: 'Digitised', values: [...new Set(archives.map((a) => a.digitised))] },
+];
+
+// The finding the corpus makes structurally: the documents are not in Morocco.
+const decisive = archives.filter((a) => a.priority === '1 - decisive');
+const decisiveInMorocco = decisive.filter((a) => a.country === 'Morocco');
+---
+
+<Base
+  title="Archives & repositories"
+  description="Every holding worldwide that bears on Moroccan history, with what it can settle."
+>
+  <header class="ihead">
+    <h1>Archives &amp; repositories</h1>
+    <p class="ihead__lede prose">
+      {archives.length} repositories, each with its reference structure, access conditions
+      and — the field that matters most — <em>what it can settle</em>.
+    </p>
+    <p class="finding">
+      <strong>
+        {decisiveInMorocco.length} of {decisive.length} decisive holdings are in Morocco.
+      </strong>
+      The rest are in Vincennes, Nantes, Alcalá de Henares, Kew, College Park, Berlin and
+      Istanbul. Roughly 40% of the colonial administrative archive remained in Morocco at
+      independence; the other 60% went to France. That distribution is not a detail about
+      logistics — it is the central fact about who can write this history.
+    </p>
+  </header>
+
+  <FacetIndex facets={facets} countLabel="repositories" />
+
+  <ul class="alist" data-index>
+    {
+      sorted.map((a) => (
+        <li
+          class="aitem"
+          id={a.slug}
+          data-country={a.country}
+          data-priority={a.priority}
+          data-digitised={a.digitised}
+          data-search={[a.institution, a.city, a.country, a.fonds, a.holdings].filter(Boolean).join(' ').toLowerCase()}
+        >
+          <div class="aitem__head">
+            <span class:list={['prio', `prio--${a.priority[0]}`]}>{a.priority}</span>
+            <span class="aitem__where">
+              {[a.city, a.country].filter(Boolean).join(' · ')}
+            </span>
+          </div>
+
+          <h2 class="aitem__title">
+            {a.url ? (
+              <a href={a.url} rel="noopener">
+                {a.institution}
+              </a>
+            ) : (
+              a.institution
+            )}
+          </h2>
+
+          {a.holdings && <p class="aitem__holdings">{a.holdings}</p>}
+
+          {a.whatItCanSettle && (
+            <div class="settles">
+              <p class="settles__head">What it can settle</p>
+              <p class="settles__body">{a.whatItCanSettle}</p>
+            </div>
+          )}
+
+          {a.fonds && (
+            <ArchivalRef
+              reference={a.fonds}
+              verification={a.verification}
+              scope="fonds"
+              catalogueUrl={a.url ?? undefined}
+            />
+          )}
+
+          <dl class="aitem__dl">
+            {a.coveringDates && (
+              <>
+                <dt>Covering dates</dt>
+                <dd>{a.coveringDates}</dd>
+              </>
+            )}
+            <dt>Digitised</dt>
+            <dd>{a.digitised}</dd>
+            {a.access && (
+              <>
+                <dt>Access</dt>
+                <dd>{a.access}</dd>
+              </>
+            )}
+          </dl>
+        </li>
+      ))
+    }
+  </ul>
+
+  <style>
+    .ihead {
+      margin-bottom: var(--s-5);
+    }
+    .ihead__lede {
+      color: var(--ink-secondary);
+    }
+    .finding {
+      max-width: 62ch;
+      padding: var(--s-4);
+      border: var(--rule);
+      border-left: 3px solid var(--accent);
+      border-radius: var(--radius);
+      background: var(--surface);
+      font-size: 0.9375rem;
+      color: var(--ink-secondary);
+    }
+
+    .alist {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: var(--s-5);
+    }
+    .aitem {
+      padding: var(--s-4);
+      border: var(--rule);
+      border-radius: var(--radius);
+      background: var(--surface);
+      margin: 0;
+      scroll-margin-top: 6rem;
+    }
+    .aitem__head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: var(--s-2);
+      margin-bottom: var(--s-2);
+    }
+    .aitem__where {
+      font-family: var(--font-ui);
+      font-size: 0.6875rem;
+      color: var(--ink-muted);
+    }
+
+    /* Priority is ordinal — a single hue ramp, not four categories. */
+    .prio {
+      font-family: var(--font-ui);
+      font-size: 0.625rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.15em 0.5em;
+      border-radius: var(--radius);
+      color: #fff;
+    }
+    .prio--1 {
+      background: var(--seq-7);
+    }
+    .prio--2 {
+      background: var(--seq-5);
+    }
+    .prio--3 {
+      background: var(--seq-3);
+      color: var(--ink);
+    }
+    .prio--4 {
+      background: var(--seq-1);
+      color: var(--ink);
+    }
+
+    .aitem__title {
+      font-size: 1.0625rem;
+      margin: 0 0 var(--s-2);
+    }
+    .aitem__holdings {
+      margin: 0 0 var(--s-3);
+      font-size: 0.9375rem;
+      color: var(--ink-secondary);
+      max-width: 70ch;
+    }
+
+    .settles {
+      padding: var(--s-3);
+      background: var(--page-plane);
+      border-radius: var(--radius);
+      margin-bottom: var(--s-2);
+    }
+    .settles__head {
+      margin: 0 0 var(--s-1);
+      font-family: var(--font-ui);
+      font-size: 0.625rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+    }
+    .settles__body {
+      margin: 0;
+      font-size: 0.875rem;
+      color: var(--ink-secondary);
+      max-width: 70ch;
+    }
+
+    .aitem__dl {
+      margin: var(--s-3) 0 0;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: var(--s-1) var(--s-3);
+      font-family: var(--font-ui);
+      font-size: 0.8125rem;
+    }
+    .aitem__dl dt {
+      font-size: 0.625rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+      white-space: nowrap;
+      padding-top: 0.15em;
+    }
+    .aitem__dl dd {
+      margin: 0;
+      color: var(--ink-secondary);
+    }
+  </style>
+</Base>

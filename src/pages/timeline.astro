@@ -1,0 +1,482 @@
+---
+/**
+ * The timeline.
+ *
+ * Ten phase bands, labelled, alternating between the two neutral surfaces —
+ * phases are NOT coloured categorically. Ten categorical hues would fail the
+ * separation floors and would also imply the phases are kinds rather than a
+ * sequence.
+ *
+ * Disputed dates render as a hatched uncertainty bar, not a point. Ma
+ * al-ʿAynayn's Saharan appointment spans 1879–1887 and must look like it.
+ *
+ * The no-JS fallback is an ordered list grouped by phase, and it is the thing
+ * that renders first: the visual timeline is an enhancement layered on top,
+ * not the source of truth.
+ */
+import Base from '../layouts/Base.astro';
+import timeline from '../content/data/timeline.json';
+import { getCollection } from 'astro:content';
+
+const disputes = (await getCollection('disputes')).map((d) => d.data);
+const disputeBySlug = new Map(disputes.map((d) => [d.slug, d]));
+
+const { phases, events, uncertain } = timeline;
+
+/** Phase → [startYear, endYear] for laying out the bands. */
+const PHASE_RANGE: Record<string, [number, number]> = {
+  'I pre-1830': [1800, 1830],
+  'II 1830-1900': [1830, 1900],
+  'III 1900-1912': [1900, 1912],
+  'IV 1912-1921': [1912, 1921],
+  'V 1921-1934': [1921, 1934],
+  'VI 1934-1944': [1934, 1944],
+  'VII 1944-1956': [1944, 1956],
+  'VIII 1956-1961': [1956, 1961],
+  'IX 1961-1999': [1961, 1999],
+  'X 1999-present': [1999, 2026],
+};
+
+const MIN = 1800;
+const MAX = 2026;
+const SPAN = MAX - MIN;
+const pos = (y: number) => ((y - MIN) / SPAN) * 100;
+const yearOf = (iso: string | null) => (iso ? Number(iso.slice(0, 4)) : null);
+
+const TYPE_GLYPH: Record<string, string> = {
+  Battle: '✕',
+  Campaign: '▲',
+  'Treaty / agreement': '■',
+  Uprising: '▼',
+  'Diplomatic crisis': '◆',
+  Political: '●',
+  Repression: '▬',
+  Economic: '⬟',
+};
+
+const byPhase = phases
+  .map((p) => ({
+    phase: p,
+    range: PHASE_RANGE[p],
+    events: events.filter((e) => e.phase === p),
+  }))
+  .filter((g) => g.events.length > 0 || uncertain.some((u) => true));
+
+const fmtDate = (iso: string | null) =>
+  iso
+    ? new Date(iso + 'T00:00:00Z').toLocaleDateString('en-GB', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+        timeZone: 'UTC',
+      })
+    : null;
+---
+
+<Base title="Timeline" description="Ten phase bands; disputed dates shown as uncertainty bars, not points.">
+  <header class="thead">
+    <h1>Timeline</h1>
+    <p class="thead__lede prose">
+      Ten phases, {events.length} dated events, and {uncertain.length} dates the sources do
+      not agree on. A disputed date is drawn as a <strong>band</strong>, not a point —
+      because drawing it as a point would assert a precision the evidence does not have.
+    </p>
+  </header>
+
+  <!-- The visual timeline. Enhancement only: it is hidden until the fallback
+       list is present, and it re-uses the same data. -->
+  <section class="tviz" aria-hidden="true">
+    <div class="tviz__scroll">
+      <div class="tviz__inner">
+        <!-- Phase bands: alternating neutral surfaces, never ten hues. -->
+        <div class="tviz__bands">
+          {
+            phases.map((p, i) => {
+              const [from, to] = PHASE_RANGE[p];
+              return (
+                <div
+                  class:list={['band', i % 2 === 0 ? 'band--a' : 'band--b']}
+                  style={`left:${pos(from)}%; width:${pos(to) - pos(from)}%`}
+                >
+                  <span class="band__label">{p}</span>
+                </div>
+              );
+            })
+          }
+        </div>
+
+        <!-- Uncertainty bars, drawn above the event row so they read as spans. -->
+        <div class="tviz__uncertain">
+          {
+            uncertain.map((u) => (
+              <div
+                class="ubar"
+                style={`left:${pos(u.from)}%; width:${Math.max(pos(u.to) - pos(u.from), 0.6)}%`}
+                title={`${u.label}: ${u.from}–${u.to}. ${u.why}`}
+              >
+                <span class="ubar__fill" />
+                <span class="ubar__label">
+                  {u.label} <span class="ubar__span">{u.from}–{u.to}</span>
+                </span>
+              </div>
+            ))
+          }
+        </div>
+
+        <!-- Events. -->
+        <div class="tviz__events">
+          {
+            events.map((e, i) => {
+              const s = yearOf(e.start);
+              const en = yearOf(e.end);
+              if (s === null) return null;
+              const width = en && en > s ? pos(en) - pos(s) : 0;
+              return (
+                <a
+                  class="emark"
+                  href={`/events/${e.slug}`}
+                  style={`left:${pos(s)}%; --row:${i % 5}; ${width ? `width:${width}%` : ''}`}
+                  title={`${e.label} — ${e.summary ?? ''}`}
+                >
+                  {width > 0 && <span class="emark__span" />}
+                  <span class="emark__glyph">{TYPE_GLYPH[e.type[0]] ?? '●'}</span>
+                  <span class="emark__label">{e.label}</span>
+                </a>
+              );
+            })
+          }
+        </div>
+      </div>
+    </div>
+    <p class="tviz__hint">Scroll horizontally · every mark links to its dossier</p>
+  </section>
+
+  <!-- Required, not optional: the ordered list grouped by phase. This is the
+       canonical rendering; the graphic above is the enhancement. -->
+  <section class="tlist">
+    <h2 class="tlist__h">Chronology</h2>
+
+    {
+      uncertain.length > 0 && (
+        <div class="uncertain-list">
+          <h3 class="uncertain-list__h">Dates the sources do not agree on</h3>
+          <ul>
+            {uncertain.map((u) => {
+              const d = u.dispute ? disputeBySlug.get(u.dispute) : null;
+              return (
+                <li>
+                  <p class="uncertain-list__label">
+                    {u.label}
+                    <span class="uncertain-list__span">
+                      {u.from}&ndash;{u.to}
+                    </span>
+                  </p>
+                  <p class="uncertain-list__why">{u.why}</p>
+                  <p class="uncertain-list__links">
+                    {u.subject && <a href={`/people/${u.subject}`}>Dossier</a>}
+                    {d && <a href={`/disputes#${d.slug}`}>Dispute #{d.n} — {d.status}</a>}
+                  </p>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )
+    }
+
+    {
+      byPhase.map((g) => (
+        <div class="phase">
+          <h3 class="phase__h">{g.phase}</h3>
+          {g.events.length === 0 ? (
+            <p class="phase__empty">No events recorded in this phase.</p>
+          ) : (
+            <ol class="phase__list">
+              {g.events.map((e) => (
+                <li>
+                  <p class="phase__date">
+                    {fmtDate(e.start)}
+                    {e.end && e.end !== e.start && <> &ndash; {fmtDate(e.end)}</>}
+                  </p>
+                  <a class="phase__title" href={`/events/${e.slug}`}>
+                    {e.label}
+                  </a>
+                  {e.summary && <p class="phase__summary">{e.summary}</p>}
+                  {e.mainDispute && (
+                    <p class="phase__dispute">
+                      <span aria-hidden="true">⇄</span> {e.mainDispute}
+                    </p>
+                  )}
+                </li>
+              ))}
+            </ol>
+          )}
+        </div>
+      ))
+    }
+  </section>
+
+  <style>
+    .thead {
+      margin-bottom: var(--s-6);
+    }
+    .thead__lede {
+      color: var(--ink-secondary);
+    }
+
+    /* ------------------------------------------------------------- viz */
+    .tviz {
+      margin-bottom: var(--s-8);
+      border: var(--rule);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+    .tviz__scroll {
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+    .tviz__inner {
+      position: relative;
+      min-width: 60rem;
+      height: 22rem;
+      margin: 0;
+    }
+
+    .tviz__bands {
+      position: absolute;
+      inset: 0;
+    }
+    /* Two neutral surfaces alternating. Never ten categorical hues. */
+    .band {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      border-right: 1px solid var(--hairline);
+    }
+    .band--a {
+      background: var(--surface);
+    }
+    .band--b {
+      background: var(--page-plane);
+    }
+    .band__label {
+      position: absolute;
+      top: var(--s-2);
+      left: var(--s-2);
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+      color: var(--ink-muted);
+      white-space: nowrap;
+    }
+
+    .tviz__uncertain {
+      position: absolute;
+      top: 3rem;
+      left: 0;
+      right: 0;
+      height: 5rem;
+    }
+    .ubar {
+      position: absolute;
+      height: 1.4rem;
+    }
+    .ubar:nth-child(2) {
+      top: 1.6rem;
+    }
+    .ubar:nth-child(3) {
+      top: 3.2rem;
+    }
+    /* Hatched, so a fuzzy date is visibly fuzzy rather than a wide point. */
+    .ubar__fill {
+      position: absolute;
+      inset: 0;
+      border: 1px solid var(--status-disputed);
+      border-radius: 2px;
+      color: var(--status-disputed);
+      background-image: var(--texture-45);
+      opacity: 0.9;
+    }
+    .ubar__label {
+      position: absolute;
+      left: calc(100% + 0.4rem);
+      top: 0;
+      white-space: nowrap;
+      font-family: var(--font-ui);
+      font-size: 0.6875rem;
+      color: var(--ink-secondary);
+      line-height: 1.4rem;
+    }
+    .ubar__span {
+      font-family: var(--font-mono);
+      color: var(--status-disputed);
+      margin-left: 0.3em;
+    }
+
+    .tviz__events {
+      position: absolute;
+      top: 9rem;
+      left: 0;
+      right: 0;
+      bottom: 1rem;
+    }
+    .emark {
+      position: absolute;
+      top: calc(var(--row) * 2.3rem);
+      display: flex;
+      align-items: center;
+      gap: 0.3em;
+      text-decoration: none;
+      color: var(--ink-secondary);
+      font-family: var(--font-ui);
+      font-size: 0.6875rem;
+      white-space: nowrap;
+    }
+    .emark__glyph {
+      color: var(--accent);
+      font-size: 0.75rem;
+    }
+    .emark__span {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      height: 2px;
+      background: var(--baseline);
+    }
+    .emark:hover {
+      color: var(--ink);
+    }
+
+    .tviz__hint {
+      margin: 0;
+      padding: var(--s-2) var(--s-4);
+      border-top: var(--rule);
+      font-family: var(--font-ui);
+      font-size: 0.6875rem;
+      color: var(--ink-muted);
+    }
+
+    /* ------------------------------------------------------------ list */
+    .tlist__h {
+      font-size: 1.15rem;
+      padding-bottom: var(--s-2);
+      border-bottom: var(--rule);
+    }
+
+    .uncertain-list {
+      margin: var(--s-5) 0 var(--s-7);
+      padding: var(--s-4);
+      border: 1px solid color-mix(in srgb, var(--status-disputed) 45%, transparent);
+      border-left-width: 3px;
+      border-radius: var(--radius);
+      background: var(--status-disputed-bg);
+    }
+    .uncertain-list__h {
+      margin: 0 0 var(--s-3);
+      font-size: 0.9375rem;
+    }
+    .uncertain-list ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: var(--s-4);
+    }
+    .uncertain-list__label {
+      margin: 0;
+      font-weight: 600;
+      font-size: 0.9375rem;
+    }
+    .uncertain-list__span {
+      font-family: var(--font-mono);
+      color: var(--status-disputed);
+      margin-left: 0.5em;
+    }
+    .uncertain-list__why {
+      margin: var(--s-1) 0 0;
+      font-size: 0.875rem;
+      color: var(--ink-secondary);
+      max-width: 68ch;
+    }
+    .uncertain-list__links {
+      display: flex;
+      gap: var(--s-3);
+      margin: var(--s-2) 0 0;
+      font-family: var(--font-ui);
+      font-size: 0.75rem;
+    }
+
+    .phase {
+      margin-top: var(--s-6);
+    }
+    .phase__h {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      color: var(--ink-muted);
+      text-transform: none;
+      letter-spacing: 0.04em;
+      padding-bottom: var(--s-2);
+      border-bottom: var(--rule);
+      margin-bottom: var(--s-3);
+    }
+    .phase__empty {
+      font-size: 0.875rem;
+      color: var(--ink-muted);
+      font-style: italic;
+    }
+    .phase__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: var(--s-4);
+      counter-reset: none;
+    }
+    .phase__list li {
+      margin: 0;
+      padding-left: var(--s-4);
+      border-left: 2px solid var(--hairline);
+    }
+    .phase__date {
+      margin: 0;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+    }
+    .phase__title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: inherit;
+      text-decoration: none;
+    }
+    .phase__title:hover {
+      text-decoration: underline;
+    }
+    .phase__summary {
+      margin: var(--s-1) 0 0;
+      font-size: 0.875rem;
+      color: var(--ink-secondary);
+      max-width: 72ch;
+    }
+    .phase__dispute {
+      margin: var(--s-2) 0 0;
+      font-family: var(--font-ui);
+      font-size: 0.8125rem;
+      color: var(--ink-secondary);
+      max-width: 72ch;
+    }
+    .phase__dispute span {
+      color: var(--status-disputed);
+      font-weight: 700;
+      margin-right: 0.3em;
+    }
+
+    /* The graphic is decoration over a complete list; hide it where it cannot
+       be used well rather than shrinking it into illegibility. */
+    @media (max-width: 60rem) {
+      .tviz {
+        display: none;
+      }
+    }
+  </style>
+</Base>

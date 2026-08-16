@@ -1,0 +1,376 @@
+---
+/**
+ * ★ The Evidence Index — every extracted claim in the corpus, in one
+ * filterable table.
+ *
+ * The headline stat row is at the top rather than buried, because the honest
+ * headline of this project is that a great deal is disputed or unknown, and
+ * the site should say so on arrival.
+ *
+ * Filtering is done with a small amount of inline JS over a table that is
+ * fully rendered server-side, so the whole index is readable and printable
+ * with JavaScript disabled.
+ */
+import Base from '../layouts/Base.astro';
+import claimsData from '../content/data/claims.json';
+import { PHASES } from '../lib/vocab.mjs';
+
+const claims = claimsData.claims;
+const counts = claimsData.counts;
+
+const graded = ['Established', 'Highly probable', 'Disputed', 'Unknown'] as const;
+const KEY: Record<string, string> = {
+  Established: 'established',
+  'Highly probable': 'probable',
+  Disputed: 'disputed',
+  Unknown: 'unknown',
+};
+const ICON: Record<string, string> = {
+  Established: '●',
+  'Highly probable': '◐',
+  Disputed: '⇄',
+  Unknown: '○',
+};
+
+const gradedTotal = graded.reduce((n, s) => n + (counts[s] ?? 0), 0);
+const pct = (n: number) => (gradedTotal ? Math.round((n / gradedTotal) * 100) : 0);
+
+const phasesPresent = PHASES.filter((p) => claims.some((c) => c.phase === p));
+const hostsPresent = [...new Set(claims.map((c) => c.host))].sort();
+---
+
+<Base
+  title="Evidence Index"
+  description="Every graded claim in the corpus, by status, phase and host page."
+>
+  <header class="ehead">
+    <p class="ehead__eyebrow">★ Evidence Index</p>
+    <h1>Every claim in the corpus, by status</h1>
+    <p class="ehead__lede prose">
+      This is the whole graded corpus in one table. It exists so that
+      &ldquo;what do we actually know?&rdquo; has an answer you can filter,
+      rather than an impression you form by reading around.
+    </p>
+  </header>
+
+  <!-- Headline stat row: on arrival, not buried. -->
+  <section class="stats" aria-label="Corpus totals by status">
+    {
+      graded.map((s) => (
+        <div class:list={['stat', `stat--${KEY[s]}`]}>
+          <p class="stat__n">
+            <span class="stat__icon" aria-hidden="true">
+              {ICON[s]}
+            </span>
+            {counts[s] ?? 0}
+          </p>
+          <p class="stat__label">{s}</p>
+          <p class="stat__pct">{pct(counts[s] ?? 0)}% of graded claims</p>
+        </div>
+      ))
+    }
+    <div class="stat stat--withheld">
+      <p class="stat__n">
+        <span class="stat__icon" aria-hidden="true">⊘</span>
+        {counts.withheld ?? 0}
+      </p>
+      <p class="stat__label">Withheld</p>
+      <p class="stat__pct">
+        A separate flag, not a rung — these have answers someone possesses
+      </p>
+    </div>
+  </section>
+
+  <div class="ebar no-print">
+    <div class="ebar__group">
+      <label class="ebar__label" for="f-status">Status</label>
+      <select id="f-status" data-filter="status">
+        <option value="">All statuses</option>
+        {graded.map((s) => <option value={s}>{s}</option>)}
+        <option value="__withheld">Withheld (flag)</option>
+        <option value="__ungraded">Ungraded</option>
+      </select>
+    </div>
+    <div class="ebar__group">
+      <label class="ebar__label" for="f-phase">Phase</label>
+      <select id="f-phase" data-filter="phase">
+        <option value="">All phases</option>
+        {phasesPresent.map((p) => <option value={p}>{p}</option>)}
+      </select>
+    </div>
+    <div class="ebar__group">
+      <label class="ebar__label" for="f-host">Page</label>
+      <select id="f-host" data-filter="host">
+        <option value="">All pages</option>
+        {hostsPresent.map((h) => <option value={h}>{h}</option>)}
+      </select>
+    </div>
+    <p class="ebar__count" data-count aria-live="polite">{claims.length} claims</p>
+  </div>
+
+  <div class="table-scroll">
+    <table class="etable">
+      <caption class="visually-hidden">
+        Every graded claim in the corpus with its status, host page, section and phase
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Status</th>
+          <th scope="col">Claim</th>
+          <th scope="col">Page</th>
+          <th scope="col">Phase</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          claims.map((c) => (
+            <tr
+              data-status={c.status ?? '__ungraded'}
+              data-withheld={c.withheld ? 'true' : 'false'}
+              data-phase={c.phase ?? ''}
+              data-host={c.host}
+            >
+              <td class="etable__status">
+                <span class:list={['claim', `claim--${c.status ? KEY[c.status] : 'stated'}`]}>
+                  <span class="claim__icon" aria-hidden="true">
+                    {c.status ? ICON[c.status] : '▸'}
+                  </span>
+                  <span class="claim__label">{c.status ?? c.leadIn}</span>
+                </span>
+                {c.withheld && (
+                  <span class="claim__withheld">
+                    <span class="claim__icon" aria-hidden="true">
+                      ⊘
+                    </span>
+                    <span class="claim__label">Withheld</span>
+                  </span>
+                )}
+              </td>
+              <td class="etable__text">
+                <a href={c.url}>{c.text}</a>
+                {c.unverifiedRef && (
+                  <span class="ref-token ref-token--unverified etable__flag">
+                    NOT YET VERIFIED
+                  </span>
+                )}
+                {c.tiers.length > 0 && (
+                  <span class="etable__tiers">
+                    {c.tiers.map((t) => (
+                      <span class="tier-token">
+                        <span class="tier-token__text">{t}</span>
+                      </span>
+                    ))}
+                  </span>
+                )}
+              </td>
+              <td class="etable__host">
+                <a href={c.url.split('#')[0]}>{c.host}</a>
+                {c.section && <span class="muted"> · {c.section}</span>}
+              </td>
+              <td class="etable__phase">{c.phase ?? '—'}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+
+  {
+    claims.length === 0 && (
+      <p class="prose">
+        No claims have been extracted yet. Claims are lifted from the dossier and
+        long-form bodies by <code>scripts/extract-claims.mjs</code>.
+      </p>
+    )
+  }
+
+  <script>
+    const rows = Array.from(document.querySelectorAll<HTMLElement>('.etable tbody tr'));
+    const selects = Array.from(document.querySelectorAll<HTMLSelectElement>('[data-filter]'));
+    const countEl = document.querySelector<HTMLElement>('[data-count]');
+
+    function apply() {
+      const f = Object.fromEntries(
+        selects.map((s) => [s.dataset.filter!, s.value])
+      ) as Record<string, string>;
+      let shown = 0;
+      for (const r of rows) {
+        const statusOk =
+          !f.status ||
+          (f.status === '__withheld'
+            ? r.dataset.withheld === 'true'
+            : r.dataset.status === f.status);
+        const phaseOk = !f.phase || r.dataset.phase === f.phase;
+        const hostOk = !f.host || r.dataset.host === f.host;
+        const ok = statusOk && phaseOk && hostOk;
+        r.hidden = !ok;
+        if (ok) shown++;
+      }
+      if (countEl) countEl.textContent = `${shown} claim${shown === 1 ? '' : 's'}`;
+    }
+
+    selects.forEach((s) => s.addEventListener('change', apply));
+  </script>
+
+  <style>
+    .ehead {
+      margin-bottom: var(--s-6);
+    }
+    .ehead__eyebrow {
+      margin: 0 0 var(--s-2);
+      font-family: var(--font-ui);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+    }
+    .ehead__lede {
+      color: var(--ink-secondary);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+      gap: var(--s-3);
+      margin-bottom: var(--s-6);
+    }
+
+    .stat {
+      border: var(--rule);
+      border-radius: var(--radius);
+      background: var(--surface);
+      padding: var(--s-4);
+    }
+
+    .stat__n {
+      display: flex;
+      align-items: baseline;
+      gap: 0.35em;
+      margin: 0;
+      font-family: var(--font-mono);
+      font-size: 1.75rem;
+      font-variant-numeric: tabular-nums;
+      line-height: 1.1;
+    }
+    .stat__icon {
+      font-size: 0.7em;
+    }
+    .stat__label {
+      margin: var(--s-2) 0 0;
+      font-family: var(--font-ui);
+      font-size: 0.8125rem;
+      font-weight: 700;
+    }
+    .stat__pct {
+      margin: var(--s-1) 0 0;
+      font-family: var(--font-ui);
+      font-size: 0.6875rem;
+      color: var(--ink-muted);
+      line-height: 1.4;
+    }
+
+    .stat--established {
+      border-left: 3px solid var(--status-established);
+    }
+    .stat--established .stat__icon {
+      color: var(--status-established);
+    }
+    .stat--probable {
+      border-left: 3px solid color-mix(in srgb, var(--status-probable) 55%, transparent);
+    }
+    .stat--probable .stat__icon {
+      color: var(--status-probable);
+    }
+    .stat--disputed {
+      border-left: 3px solid var(--status-disputed);
+    }
+    .stat--disputed .stat__icon {
+      color: var(--status-disputed);
+    }
+    .stat--unknown {
+      border-left: 3px solid var(--baseline);
+    }
+    .stat--unknown .stat__icon {
+      color: var(--status-unknown);
+    }
+    .stat--withheld {
+      border-left: 3px solid var(--status-withheld);
+    }
+    .stat--withheld .stat__icon {
+      color: var(--status-withheld);
+    }
+
+    .ebar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      gap: var(--s-4);
+      padding: var(--s-3) 0;
+      border-top: var(--rule);
+      border-bottom: var(--rule);
+      margin-bottom: var(--s-4);
+    }
+    .ebar__group {
+      display: grid;
+      gap: var(--s-1);
+    }
+    .ebar__label {
+      font-family: var(--font-ui);
+      font-size: 0.625rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+    }
+    .ebar select {
+      font-family: var(--font-ui);
+      font-size: 0.8125rem;
+      padding: 0.3em 0.5em;
+      background: var(--surface);
+      color: var(--ink);
+      border: var(--rule);
+      border-radius: var(--radius);
+    }
+    .ebar__count {
+      margin: 0 0 0 auto;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+    }
+
+    .etable__status {
+      white-space: nowrap;
+    }
+    .etable__text {
+      max-width: 44ch;
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+    }
+    .etable__text a {
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .etable__text a:hover {
+      text-decoration: underline;
+    }
+    .etable__flag,
+    .etable__tiers {
+      display: inline-flex;
+      gap: var(--s-1);
+      margin-left: 0.4em;
+      vertical-align: middle;
+    }
+    .etable__host {
+      font-family: var(--font-ui);
+      font-size: 0.8125rem;
+      max-width: 22ch;
+    }
+    .etable__phase {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+      white-space: nowrap;
+    }
+  </style>
+</Base>

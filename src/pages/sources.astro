@@ -1,0 +1,154 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import FacetIndex from '../components/FacetIndex.astro';
+import SourceTier from '../components/SourceTier.astro';
+import ArchivalRef from '../components/ArchivalRef.astro';
+import { TIER_DEFINITIONS } from '../lib/vocab.mjs';
+
+const sources = (await getCollection('sources')).map((s) => s.data);
+
+const TIER_ORDER = Object.keys(TIER_DEFINITIONS);
+const sorted = [...sources].sort(
+  (a, b) => TIER_ORDER.indexOf(a.tier) - TIER_ORDER.indexOf(b.tier) || a.title.localeCompare(b.title)
+);
+
+const facets = [
+  { key: 'tier', label: 'Tier', values: TIER_ORDER.filter((t) => sources.some((s) => s.tier === t)) },
+  { key: 'language', label: 'Language', values: [...new Set(sources.flatMap((s) => s.language))].sort() },
+  { key: 'verification', label: 'Verification', values: [...new Set(sources.map((s) => s.verification))] },
+];
+
+const unverified = sources.filter((s) => s.verification === 'NOT YET VERIFIED').length;
+---
+
+<Base title="Sources" description={`${sources.length} sources, tiered and bias-noted.`}>
+  <header class="ihead">
+    <h1>Sources</h1>
+    <p class="ihead__lede prose">
+      {sources.length} sources, each with its tier, its bias noted, and its archival
+      reference either verbatim or marked unverified. {unverified} currently carry the
+      <span class="ref-token ref-token--unverified">NOT YET VERIFIED</span> flag.
+    </p>
+  </header>
+
+  <FacetIndex facets={facets} countLabel="sources" />
+
+  <ul class="slist" data-index>
+    {
+      sorted.map((s) => (
+        <li
+          class="sitem"
+          id={s.slug}
+          data-tier={s.tier}
+          data-language={s.language.join('|')}
+          data-verification={s.verification}
+          data-search={[s.title, s.author, s.publisher, s.covers].filter(Boolean).join(' ').toLowerCase()}
+        >
+          <div class="sitem__head">
+            <SourceTier tier={s.tier} />
+            <span class="sitem__lang">{s.language.join(' · ')}</span>
+          </div>
+
+          <h2 class="sitem__title">
+            {s.url ? (
+              <a href={s.url} rel="noopener">
+                {s.title}
+              </a>
+            ) : (
+              s.title
+            )}
+          </h2>
+
+          <p class="sitem__byline">
+            {[s.author, s.date, s.publisher].filter(Boolean).join(' · ')}
+          </p>
+
+          {s.covers && (
+            <p class="sitem__covers">
+              <span class="sitem__label">Covers</span> {s.covers}
+            </p>
+          )}
+
+          {s.archivalReference && (
+            <ArchivalRef
+              reference={s.archivalReference}
+              verification={s.verification}
+              catalogueUrl={s.url ?? undefined}
+            />
+          )}
+
+          {s.biasNotes && (
+            <p class="sitem__bias">
+              <span class="sitem__label">Bias</span> {s.biasNotes}
+            </p>
+          )}
+        </li>
+      ))
+    }
+  </ul>
+
+  <style>
+    .ihead {
+      margin-bottom: var(--s-5);
+    }
+    .ihead__lede {
+      color: var(--ink-secondary);
+    }
+    .slist {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: var(--s-5);
+    }
+    .sitem {
+      padding: var(--s-4);
+      border: var(--rule);
+      border-radius: var(--radius);
+      background: var(--surface);
+      margin: 0;
+      scroll-margin-top: 6rem;
+    }
+    .sitem__head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--s-2);
+      margin-bottom: var(--s-2);
+    }
+    .sitem__lang {
+      font-family: var(--font-ui);
+      font-size: 0.6875rem;
+      color: var(--ink-muted);
+    }
+    .sitem__title {
+      font-size: 1rem;
+      margin: 0 0 var(--s-1);
+      line-height: 1.4;
+    }
+    .sitem__byline {
+      margin: 0 0 var(--s-3);
+      font-family: var(--font-ui);
+      font-size: 0.8125rem;
+      color: var(--ink-muted);
+    }
+    .sitem__covers,
+    .sitem__bias {
+      margin: var(--s-2) 0 0;
+      font-size: 0.875rem;
+      color: var(--ink-secondary);
+      max-width: 70ch;
+    }
+    .sitem__label {
+      font-family: var(--font-ui);
+      font-size: 0.625rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+      margin-right: 0.4em;
+    }
+  </style>
+</Base>

@@ -1,0 +1,232 @@
+/**
+ * Styling for the markup emitted by remark-claim-markers.
+ *
+ * These classes are produced by the plugin rather than by an Astro component,
+ * so they live in a global sheet. The rules mirror the component styles
+ * exactly — a claim chip written by hand in a page and one lifted out of a
+ * Notion body must be indistinguishable to the reader.
+ */
+
+/* ---------------------------------------------------------- claim blocks */
+
+/* A graded claim in the dossier body. The gutter marker hangs in the left
+   margin on wide viewports so the epistemic shape of a page can be read by
+   scanning down the margin without reading the prose. */
+.claim-block {
+  position: relative;
+  padding-left: 0;
+}
+
+@media (min-width: 64rem) {
+  .claim-block {
+    padding-left: 0;
+  }
+  .claim-block > .claim--gutter {
+    position: absolute;
+    left: -11rem;
+    top: 0.15em;
+    width: 10rem;
+    text-align: right;
+    align-items: flex-end;
+  }
+}
+
+/* Below the gutter breakpoint the marker sits inline above the claim, which
+   keeps the reading order identical to the DOM order. */
+.claim-block > .claim--gutter {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 0.35em;
+  margin-right: 0.5em;
+}
+
+.claim {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35em;
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.claim__icon {
+  font-size: 0.9em;
+  line-height: 1;
+}
+
+/* Text wears a text token; the coloured mark beside it carries identity. */
+.claim__label {
+  color: var(--ink-secondary);
+}
+
+.claim--gutter {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: normal;
+}
+
+.claim--established .claim__icon {
+  color: var(--status-established);
+}
+.claim--probable .claim__icon {
+  color: var(--status-probable);
+}
+.claim--disputed .claim__icon {
+  color: var(--status-disputed);
+}
+.claim--unknown .claim__icon {
+  color: var(--status-unknown);
+}
+.claim--unknown .claim__label {
+  color: var(--ink-muted);
+}
+.claim--stated .claim__icon {
+  color: var(--ink-muted);
+}
+
+.claim__withheld {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3em;
+  margin-left: 0.35em;
+  padding-left: 0.45em;
+  border-left: 1px solid color-mix(in srgb, var(--status-withheld) 35%, transparent);
+}
+.claim__withheld .claim__icon,
+.claim__withheld .claim__label {
+  color: var(--status-withheld);
+}
+
+/* When a whole block is highlighted by the dossier status filter. */
+.claim-block[data-dimmed='true'] {
+  opacity: 0.28;
+}
+.claim-block[data-highlighted='true'] {
+  background: color-mix(in srgb, var(--accent) 7%, transparent);
+  box-shadow: -0.5rem 0 0 color-mix(in srgb, var(--accent) 7%, transparent),
+    0.5rem 0 0 color-mix(in srgb, var(--accent) 7%, transparent);
+}
+
+/* ------------------------------------------------------ reference tokens */
+
+.ref-token {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3em;
+  font-family: var(--font-mono);
+  font-size: 0.8125em;
+  padding: 0.1em 0.4em;
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+  color: var(--ink-secondary);
+}
+
+/* The IOU treatment: dashed, textured, and never mistakable for a verified
+   reference at a glance. */
+.ref-token--unverified {
+  background: transparent;
+  border: 1px dashed var(--status-withheld);
+  color: var(--status-withheld);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.ref-token--unverified .ref-token__icon {
+  color: var(--status-withheld);
+}
+
+/* ----------------------------------------------------------- tier tokens */
+
+.tier-token {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  font-family: var(--font-ui);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.1em 0.4em;
+  border: var(--rule);
+  border-radius: var(--radius);
+  color: var(--ink-secondary);
+  white-space: nowrap;
+}
+
+/* Ordinal, so the swatch is a step on one hue ramp, never a category hue. */
+.tier-token__swatch {
+  width: 9px;
+  height: 9px;
+  border-radius: 1px;
+  flex: none;
+}
+
+/* -------------------------------------------------------------- callouts */
+
+.enote {
+  margin: var(--s-5) 0;
+  padding: var(--s-4);
+  border: var(--rule);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+
+.enote > :last-child {
+  margin-bottom: 0;
+}
+
+.enote__head {
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+  font-family: var(--font-ui);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-secondary);
+  margin-bottom: var(--s-2);
+}
+
+.enote__icon {
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.enote--evidence {
+  border-left: 3px solid var(--accent);
+}
+.enote--evidence .enote__icon {
+  color: var(--accent);
+}
+
+.enote--terminology {
+  border-left: 3px solid var(--status-disputed);
+  background: var(--status-disputed-bg);
+}
+.enote--terminology .enote__icon {
+  color: var(--status-disputed);
+}
+
+@media (forced-colors: active) {
+  .claim__icon,
+  .claim__label,
+  .ref-token,
+  .tier-token {
+    color: CanvasText;
+  }
+  .ref-token--unverified {
+    border-style: dashed;
+  }
+  .tier-token__swatch {
+    border: 1px solid CanvasText;
+  }
+}

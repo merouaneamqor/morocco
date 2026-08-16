@@ -1,0 +1,145 @@
+[
+ {
+  "url": "https://app.notion.com/3bd885d880428111b799f41bf9288984",
+  "Event": "Act of Algeciras",
+  "Start": "1906-01-16",
+  "End": "1906-04-07",
+  "Location": "Algeciras, Spain",
+  "Phase": "III 1900-1912",
+  "Type": ["Treaty / agreement", "Diplomatic crisis", "Economic"],
+  "Dossier status": "Stub",
+  "People involved": [],
+  "Summary": "International conference following the First Moroccan Crisis; established the State Bank of Morocco and European supervision of customs and police while formally affirming Moroccan sovereignty.",
+  "Main dispute": "Whether it was a genuine multilateral guarantee or a managed transfer of Morocco to France with German consent purchased later."
+ },
+ {
+  "url": "https://app.notion.com/3bd885d88042812c8062dc72e48e4f85",
+  "Event": "Treaty of Fez and the April 1912 rising",
+  "Start": "1912-03-30",
+  "End": "1912-11-27",
+  "Location": "Fez; then Rabat, Madrid, Paris",
+  "Phase": "III 1900-1912",
+  "Type": ["Treaty / agreement", "Uprising", "Repression", "Political"],
+  "Dossier status": "Substantial",
+  "People involved": [
+   "https://app.notion.com/3bd885d880428175877ac0b91db4027e",
+   "https://app.notion.com/3bd885d8804281e48aedd8b54e0772b3"
+  ],
+  "Summary": "Treaty of 30 March 1912 establishing the French protectorate, signed by Abdelhafid and Regnault; the Fez rising of 17 April 1912 on its disclosure; and the Franco-Spanish treaty of 27 November 1912 partitioning the country.",
+  "Main dispute": "Whether the Arabic and French texts differ in substance — the foundation of the Moroccan legal argument that the protectorate was void. Casualties in the April rising. Whether the rising was a soldiers' mutiny over pay or a political insurrection."
+ },
+ {
+  "url": "https://app.notion.com/3bd885d88042813c9fa1dbb4207d72cf",
+  "Event": "Deposition, exile and return of Mohammed V",
+  "Start": "1953-08-20",
+  "End": "1955-11-16",
+  "Location": "Rabat → Corsica → Antsirabe, Madagascar → Rabat",
+  "Phase": "VII 1944-1956",
+  "Type": ["Political", "Repression"],
+  "Dossier status": "Substantial",
+  "People involved": [
+   "https://app.notion.com/3bd885d8804281ba9a61f09c5319fae6",
+   "https://app.notion.com/3bd885d88042816890bbd098d5766577",
+   "https://app.notion.com/3bd885d8804281608a17f613a861af67"
+  ],
+  "Summary": "The French Residency and a coalition of pashas and qaids led by El Glaoui deposed the sultan and installed Ben Arafa; two years of resistance forced his return and led directly to independence.",
+  "Main dispute": "Who decided — Paris, the Residency, or El Glaoui. Casualty figures in the resistance of 1953-55. Whether the Army of Liberation or the negotiations produced independence."
+ },
+ {
+  "url": "https://app.notion.com/3bd885d880428147befce3e3c073c7a3",
+  "Event": "Casablanca 1907 — killings, bombardment and occupation",
+  "Start": "1907-07-30",
+  "End": "1907-08-07",
+  "Location": "Casablanca (Dar el-Beida) and the Chaouia plain",
+  "Phase": "III 1900-1912",
+  "Type": ["Battle", "Repression", "Economic"],
+  "Dossier status": "Substantial",
+  "People involved": ["https://app.notion.com/3bd885d88042817d8120c9c284f3cc2e"],
+  "Summary": "Killing of nine European port workers on 30 July 1907 followed by French naval bombardment 5-7 August, landing, sack of the city, and the occupation of the Chaouia — the first permanent French military presence in Atlantic Morocco.",
+  "Main dispute": "The death toll, where estimates range from 600 to well over 3,000. Whether the bombardment was a proportionate protection of nationals or a pre-planned seizure. Responsibility for the looting."
+ },
+ {
+  "url": "https://app.notion.com/3bd885d88042815dbedbcdbc75ec4555",
+  "Event": "Annual and the Rif War",
+  "Start": "1921-06-01",
+  "End": "1926-05-27",
+  "Location": "Eastern Rif; Melilla hinterland; from 1925 the Ouergha valley in the French zone",
+  "Phase": "V 1921-1934",
+  "Type": ["Battle", "Campaign", "Uprising"],
+  "Dossier status": "Full dossier",
+  "People involved": [
+   "https://app.notion.com/3bd885d8804281329101e22327546d07",
+   "https://app.notion.com/3bd885d8804281e48aedd8b54e0772b3"
+  ],
+  "Summary": "Spanish military collapse in the eastern Rif in July-August 1921, followed by five years of war against the Rif Republic ending with Abd el-Krim's surrender to France at Targuist, 26 May 1926.",
+  "Main dispute": "Total Spanish dead (7,875 to 13,363). Silvestre's manner of death. Alfonso XIII's alleged encouragement of the advance. Whether Monte Arruit was a massacre after surrender on terms or a fight that continued. The scale of Spanish chemical weapons use."
+ },
+ {
+  "url": "https://app.notion.com/3bd885d880428171b491c58793e6fe9c",
+  "Event": "The Berber Dahir",
+  "Start": "1930-05-16",
+  "End": null,
+  "Location": "Rabat; reaction in Salé, Fez and across the French zone",
+  "Phase": "V 1921-1934",
+  "Type": ["Political", "Repression"],
+  "Dossier status": "Stub",
+  "People involved": [],
+  "Summary": "Dahir of 16 May 1930 placing Tamazight-speaking tribes under customary-law tribunals with serious crime before French courts; triggered the Ya Latif campaign and the emergence of mass Moroccan nationalism.",
+  "Main dispute": "Whether it was a deliberate de-Islamisation plot or an extension of existing legislation that was received as one. Whether Mohammed V signed freely."
+ },
+ {
+  "url": "https://app.notion.com/3bd885d880428179b667d5ef5eca59c2",
+  "Event": "Battle of Isly",
+  "Start": "1844-08-14",
+  "End": null,
+  "Location": "Oued Isly, near Oujda",
+  "Phase": "II 1830-1900",
+  "Type": ["Battle"],
+  "Dossier status": "Stub",
+  "People involved": [],
+  "Summary": "Moroccan army under the sultan's son Sidi Mohammed destroyed by Bugeaud's French force; led to the Treaty of Tangier and the Lalla Maghnia border convention.",
+  "Main dispute": "Moroccan troop numbers and casualties, which French accounts inflate. Whether the defeat was as total as French reporting claimed."
+ },
+ {
+  "url": "https://app.notion.com/3bd885d88042819b9e70c295225098ca",
+  "Event": "Madrid Conference on protection",
+  "Start": "1880-05-19",
+  "End": "1880-07-03",
+  "Location": "Madrid",
+  "Phase": "II 1830-1900",
+  "Type": ["Treaty / agreement", "Diplomatic crisis", "Economic"],
+  "Dossier status": "Stub",
+  "People involved": [],
+  "Summary": "Convened at Hassan I's request to limit consular protection; instead codified it and granted foreigners the right to own land in Morocco.",
+  "Main dispute": "How many protected persons there actually were, and what share of taxable wealth they removed from the Makhzen."
+ },
+ {
+  "url": "https://app.notion.com/3bd885d8804281bdb41bd27c3f2ce26a",
+  "Event": "Battle of El Herri",
+  "Start": "1914-11-13",
+  "End": null,
+  "Location": "El Herri (El Hri, Lehri), c. 15 km south of Khénifra, Middle Atlas",
+  "Phase": "IV 1912-1921",
+  "Type": ["Battle", "Campaign"],
+  "Dossier status": "Full dossier",
+  "People involved": [
+   "https://app.notion.com/3bd885d8804281069065dca56f72a3d1",
+   "https://app.notion.com/3bd885d8804281e48aedd8b54e0772b3"
+  ],
+  "Summary": "A French column of 1,230 men under Lt-Col Laverdure raided Mouha ou Hammou Zayani's camp without orders, then was destroyed during its withdrawal. 623 French and colonial troops killed — France's heaviest single defeat in Morocco.",
+  "Main dispute": "Zaian casualties (the French battlefield count of 182 is a French count). Whether responsibility lies with Laverdure's indiscipline (the official French line) or with Lyautey's wartime force posture. Whether the raid's aim was Hammou himself or his camp."
+ },
+ {
+  "url": "https://app.notion.com/3bd885d8804281f494facfc297236860",
+  "Event": "Hispano-Moroccan War and the Treaty of Wad Ras",
+  "Start": "1859-10-22",
+  "End": "1860-04-26",
+  "Location": "Tetouan, Ceuta hinterland",
+  "Phase": "II 1830-1900",
+  "Type": ["Battle", "Treaty / agreement", "Economic"],
+  "Dossier status": "Stub",
+  "People involved": [],
+  "Summary": "Spanish invasion and capture of Tetouan; the resulting indemnity mortgaged Moroccan customs revenue for decades.",
+  "Main dispute": "The real burden of the indemnity as a share of state revenue. Whether Britain brokered the terms to protect its own commercial position."
+ }
+]

@@ -1,0 +1,225 @@
+---
+/**
+ * The sticky footer strip on a dossier: how much of this page is established
+ * and how much is disputed, at a glance.
+ *
+ * Acceptance criterion 1 is that a reader can answer that within five seconds
+ * of landing. Clicking a status highlights the matching blocks in the body and
+ * dims the rest — a filter over the prose, not a navigation away from it.
+ *
+ * The counts render server-side; the highlighting is ~30 lines of inline JS.
+ * With JS disabled the strip is still an accurate summary.
+ */
+interface Props {
+  counts: Record<string, number>;
+  withheld: number;
+  total: number;
+}
+
+const { counts, withheld, total } = Astro.props;
+
+const ORDER = ['Established', 'Highly probable', 'Disputed', 'Unknown'] as const;
+const KEY: Record<string, string> = {
+  Established: 'established',
+  'Highly probable': 'probable',
+  Disputed: 'disputed',
+  Unknown: 'unknown',
+};
+const ICON: Record<string, string> = {
+  Established: '●',
+  'Highly probable': '◐',
+  Disputed: '⇄',
+  Unknown: '○',
+};
+---
+
+{
+  total > 0 && (
+    <div class="statusbar no-print" data-statusbar>
+      <p class="statusbar__label">
+        This dossier
+        <span class="muted"> · {total} graded {total === 1 ? 'claim' : 'claims'}</span>
+      </p>
+      <div class="statusbar__buttons">
+        {ORDER.map((s) => (
+          <button
+            type="button"
+            class:list={['statusbar__btn', `statusbar__btn--${KEY[s]}`]}
+            data-filter={s}
+            disabled={!counts[s]}
+            aria-pressed="false"
+          >
+            <span class="statusbar__icon" aria-hidden="true">
+              {ICON[s]}
+            </span>
+            <span class="statusbar__n">{counts[s] ?? 0}</span>
+            <span class="statusbar__name">{s}</span>
+          </button>
+        ))}
+        {withheld > 0 && (
+          <button
+            type="button"
+            class="statusbar__btn statusbar__btn--withheld"
+            data-filter="__withheld"
+            aria-pressed="false"
+          >
+            <span class="statusbar__icon" aria-hidden="true">
+              ⊘
+            </span>
+            <span class="statusbar__n">{withheld}</span>
+            <span class="statusbar__name">Withheld</span>
+          </button>
+        )}
+        <button type="button" class="statusbar__clear" data-clear hidden>
+          Clear
+        </button>
+      </div>
+    </div>
+  )
+}
+
+<script>
+  const bar = document.querySelector('[data-statusbar]');
+  if (bar) {
+    const blocks = Array.from(document.querySelectorAll<HTMLElement>('.claim-block'));
+    const buttons = Array.from(bar.querySelectorAll<HTMLButtonElement>('[data-filter]'));
+    const clear = bar.querySelector<HTMLButtonElement>('[data-clear]');
+    let active: string | null = null;
+
+    const apply = () => {
+      for (const b of blocks) {
+        if (!active) {
+          delete b.dataset.dimmed;
+          delete b.dataset.highlighted;
+          continue;
+        }
+        const match =
+          active === '__withheld'
+            ? b.dataset.withheld === 'true'
+            : b.dataset.status === active;
+        b.dataset.dimmed = String(!match);
+        b.dataset.highlighted = String(match);
+      }
+      for (const btn of buttons) {
+        btn.setAttribute('aria-pressed', String(btn.dataset.filter === active));
+      }
+      if (clear) clear.hidden = !active;
+    };
+
+    for (const btn of buttons) {
+      btn.addEventListener('click', () => {
+        active = active === btn.dataset.filter ? null : btn.dataset.filter!;
+        apply();
+      });
+    }
+    clear?.addEventListener('click', () => {
+      active = null;
+      apply();
+    });
+  }
+</script>
+
+<style>
+  .statusbar {
+    position: sticky;
+    bottom: 0;
+    z-index: 20;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s-3);
+    margin-top: var(--s-7);
+    padding: var(--s-3) var(--s-4);
+    background: color-mix(in srgb, var(--surface) 94%, transparent);
+    backdrop-filter: blur(8px);
+    border-top: var(--rule);
+    border-bottom: var(--rule);
+  }
+
+  .statusbar__label {
+    margin: 0;
+    font-family: var(--font-ui);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-secondary);
+  }
+
+  .statusbar__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-2);
+    align-items: center;
+  }
+
+  .statusbar__btn {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.4em;
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    padding: 0.25em 0.6em;
+    background: transparent;
+    border: var(--rule);
+    border-radius: var(--radius);
+    color: var(--ink-secondary);
+    cursor: pointer;
+  }
+  .statusbar__btn:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+  .statusbar__btn[aria-pressed='true'] {
+    background: var(--page-plane);
+    border-color: var(--accent);
+    color: var(--ink);
+  }
+
+  .statusbar__n {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .statusbar__name {
+    color: inherit;
+  }
+
+  .statusbar__btn--established .statusbar__icon {
+    color: var(--status-established);
+  }
+  .statusbar__btn--probable .statusbar__icon {
+    color: var(--status-probable);
+  }
+  .statusbar__btn--disputed .statusbar__icon {
+    color: var(--status-disputed);
+  }
+  .statusbar__btn--unknown .statusbar__icon {
+    color: var(--status-unknown);
+  }
+  .statusbar__btn--withheld .statusbar__icon {
+    color: var(--status-withheld);
+  }
+  .statusbar__btn--withheld {
+    border-color: color-mix(in srgb, var(--status-withheld) 40%, transparent);
+  }
+
+  .statusbar__clear {
+    background: transparent;
+    border: 0;
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    color: var(--accent-ink);
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 40rem) {
+    .statusbar__name {
+      display: none;
+    }
+  }
+</style>
