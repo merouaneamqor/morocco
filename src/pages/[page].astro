@@ -9,6 +9,7 @@
  */
 import { getCollection, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import CorpusDrift from '../components/CorpusDrift.astro';
 
 export async function getStaticPaths() {
   const pages = await getCollection('pages');
@@ -21,6 +22,19 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
 const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
+
+/**
+ * The synthesis states the Moroccan-side documentary base is zero. That was
+ * accurate when written; the Sources database has since moved. Rather than
+ * editing the essay, count the Arabic-language sources now present and let the
+ * reader see both. The count is computed, not asserted, so it self-corrects.
+ */
+const sources = await getCollection('sources');
+const arabicSources = sources.filter((s) => s.data.language.includes('Arabic'));
+const moroccanAuthored = arabicSources.filter((s) =>
+  ['PRIMARY_ARCHIVAL', 'PRIMARY_CONTEMPORARY', 'OFFICIAL'].includes(s.data.tier)
+);
+const showDrift = entry.data.slug === 'synthesis' && moroccanAuthored.length > 0;
 ---
 
 <Base title={entry.data.title} description={entry.data.lede}>
@@ -31,6 +45,17 @@ const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
         <h1>{entry.data.title}</h1>
       </header>
       <Content />
+
+      {
+        showDrift && (
+          <CorpusDrift
+            claim="“The Moroccan-side documentary base is currently zero.” Every dossier describes Moroccan actors substantially through European reporting about them."
+            observation={`The Sources database now holds ${arabicSources.length} Arabic-language sources, ${moroccanAuthored.length} of them at primary or official tier — including al-Nasiri's Kitāb al-Istiqsā, the first comprehensive national history of Morocco, and the HCAR resistance cahiers, which carry the first Moroccan-side documentary treatment of El Herri.`}
+            href="/sources"
+            hrefLabel="Filter the sources by language"
+          />
+        )
+      }
     </article>
 
     {

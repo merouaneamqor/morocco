@@ -283,7 +283,12 @@ const sources = defineCollection({
     tier: z.enum(TIERS),
     url: z.string().nullable(),
     archivalReference: z.string().nullable(),
-    verification: z.enum(SOURCE_VERIFICATION),
+    // Nullable, and deliberately not defaulted. The sources added in the
+    // corpus's later sessions carry no Verification value at all. Coercing
+    // those to "NOT YET VERIFIED" would invent a judgement the corpus has not
+    // made, and defaulting them to anything higher would be worse. A missing
+    // verification is rendered as its own visible state — see <ArchivalRef>.
+    verification: z.enum(SOURCE_VERIFICATION).nullable(),
     biasNotes: z.string().nullable(),
     covers: z.string().nullable(),
   }),
