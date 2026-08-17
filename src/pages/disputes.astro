@@ -12,8 +12,18 @@
  */
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import DisputeMatrix from '../components/DisputeMatrix.astro';
 
 const disputes = (await getCollection('disputes')).map((d) => d.data).sort((a, b) => a.n - b.n);
+
+/**
+ * The structured Disputes database, which is a different thing from the
+ * narrative-page contradictions above and is kept separate for that reason.
+ * Six rows were transcribed into it; the rest of the contradictions table has
+ * not been. Merging the two lists would hide exactly that backlog.
+ */
+const records = (await getCollection('disputeRecords')).map((d) => d.data);
+const archives = (await getCollection('archives')).map((a) => a.data);
 
 const resolved = disputes.filter((d) => d.status === 'Resolved');
 const live = disputes.filter((d) => d.status !== 'Resolved');
@@ -58,6 +68,17 @@ const byStatus = live.reduce<Record<string, number>>((acc, d) => {
       }
     </ul>
   </header>
+
+  <section class="matrix-section" aria-labelledby="matrix-h">
+    <h2 id="matrix-h" class="section-h">The matrix — positions side by side</h2>
+    <p class="section-note prose">
+      {records.length} disputes are recorded in the structured database, each with the
+      national positions held apart rather than reconciled. An empty cell is an em-dash,
+      not a gap closed by inference: no Spanish position on the 1953 deposition means
+      Spain is not part of that argument, and saying so is the point.
+    </p>
+    <DisputeMatrix records={records} archives={archives} />
+  </section>
 
   {
     resolved.length > 0 && (

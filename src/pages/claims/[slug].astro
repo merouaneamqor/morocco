@@ -1,0 +1,450 @@
+---
+/**
+ * The evidence chain — the core object of the site.
+ *
+ * Claim → Confidence → Primary evidence → What the document actually says →
+ * Interpretation → Counter-evidence → Conflict → Current assessment.
+ *
+ * Three rules govern this page and none of them are cosmetic:
+ *
+ * 1. Counter-evidence is rendered at exactly the same visual weight as
+ *    primary evidence. Demoting it would let the page argue for the claim.
+ * 2. "What the document actually says" is either a verbatim quotation or an
+ *    explicit not-consulted state. It is never a silent blank, because a
+ *    blank next to a precise-looking archival reference is exactly how a
+ *    reader concludes that somebody checked.
+ * 3. Every prose block carries its evidence-layer badge. A claim mixes the
+ *    document's voice, a historian's and this project's in adjacent
+ *    paragraphs, and they must never be readable as one voice.
+ */
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ClaimStatus from '../../components/ClaimStatus.astro';
+import EvidenceLayer from '../../components/EvidenceLayer.astro';
+import ArchivalRef from '../../components/ArchivalRef.astro';
+import SourceTier from '../../components/SourceTier.astro';
+
+export async function getStaticPaths() {
+  const claims = await getCollection('claims');
+  return claims.map((c) => ({ params: { slug: c.data.slug }, props: { claim: c.data } }));
+}
+
+const { claim } = Astro.props;
+
+const [people, events, sources, archives, disputeRecords, openQuestions] = await Promise.all([
+  getCollection('people'),
+  getCollection('events'),
+  getCollection('sources'),
+  getCollection('archives'),
+  getCollection('disputeRecords'),
+  getCollection('openQuestions'),
+]);
+
+const pick = <T extends { data: { slug: string } }>(all: T[], slugs: string[]) =>
+  slugs.map((s) => all.find((x) => x.data.slug === s)).filter(Boolean) as T[];
+
+const primarySources = pick(sources, claim.primaryEvidence);
+const counterSources = pick(sources, claim.counterEvidenceSources);
+const linkedArchives = pick(archives, claim.archives);
+const linkedPeople = pick(people, claim.people);
+const linkedEvents = pick(events, claim.events);
+const linkedDisputes = pick(disputeRecords, claim.disputes);
+const linkedQuestions = pick(openQuestions, claim.openQuestions);
+
+/**
+ * The corpus writes an unverified reference as a sentence beginning
+ * "ARCHIVAL REFERENCE NOT YET VERIFIED", often followed by the fonds to
+ * request. Split the verdict from the request so <ArchivalRef> can render the
+ * IOU treatment and still show a researcher where to go.
+ */
+const refText = claim.archivalReference ?? '';
+const isUnverified = /ARCHIVAL REFERENCE NOT YET VERIFIED/i.test(refText);
+const requestHint = isUnverified
+  ? refText.replace(/^\s*ARCHIVAL REFERENCE NOT YET VERIFIED\.?\s*/i, '').trim()
+  : '';
+
+/**
+ * A quotation is only a quotation if a document was read. The corpus signals
+ * the opposite in prose ("Not yet consulted directly", "Not applicable"), so
+ * detect that rather than trusting the field to be empty.
+ */
+const saysText = claim.whatTheDocumentSays?.trim() ?? '';
+const hasVerbatim =
+  saysText.length > 0 && !/^not (yet consulted|applicable)/i.test(saysText);
+
+---
+
+<Base title={claim.claim} description={claim.interpretation ?? claim.claim}>
+  <article class="chain">
+    <header class="chain__head">
+      <p class="chain__kicker">Claim</p>
+      <h1>{claim.claim}</h1>
+      <div class="chain__badges">
+        {
+          claim.confidence === 'Withheld' ? (
+            <ClaimStatus status="Unknown" withheld={true} variant="gutter" />
+          ) : claim.confidence ? (
+            <ClaimStatus status={claim.confidence} variant="gutter" />
+          ) : null
+        }
+        {claim.evidenceLayer && <EvidenceLayer layer={claim.evidenceLayer} />}
+        {claim.phase && <span class="chain__phase">{claim.phase}</span>}
+      </div>
+    </header>
+
+    <!-- 1 ─────────────────────────────────────────────── primary evidence -->
+    <section class="rung">
+      <h2>Primary evidence</h2>
+      {
+        linkedArchives.length > 0 && (
+          <dl class="chain__where">
+            {linkedArchives.map((a) => (
+              <>
+                <dt>Archive</dt>
+                <dd>
+                  <a href={`/archives/${a.data.slug}`}>{a.data.institution}</a>
+                  {a.data.city && <span class="muted"> · {a.data.city}</span>}
+                </dd>
+                {a.data.fonds && (
+                  <>
+                    <dt>Fonds / series</dt>
+                    <dd>{a.data.fonds}</dd>
+                  </>
+                )}
+              </>
+            ))}
+          </dl>
+        )
+      }
+
+      {
+        claim.archivalReference && (
+          <ArchivalRef
+            reference={isUnverified ? 'ARCHIVAL REFERENCE NOT YET VERIFIED' : refText}
+            verification={isUnverified ? 'NOT YET VERIFIED' : null}
+            scope="series"
+            settles={requestHint || undefined}
+          />
+        )
+      }
+
+      {
+        primarySources.length > 0 ? (
+          <ul class="srclist">
+            {primarySources.map((s) => (
+              <li>
+                <a href={`/sources#${s.data.slug}`}>{s.data.title}</a>
+                <SourceTier tier={s.data.tier} />
+                {s.data.author && <span class="muted"> · {s.data.author}</span>}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class="absent">
+            No source record is linked to this claim yet. The reference above is the
+            route in, not a citation.
+          </p>
+        )
+      }
+    </section>
+
+    <!-- 2 ───────────────────────────────── what the document actually says -->
+    <section class="rung rung--quote">
+      <h2>What the document actually says</h2>
+      {
+        hasVerbatim ? (
+          <>
+            <EvidenceLayer layer="Primary source" variant="block" />
+            <blockquote class="verbatim">{saysText}</blockquote>
+          </>
+        ) : (
+          <p class="notread">
+            <strong>Not yet consulted directly.</strong>
+            {saysText && <span class="notread__detail"> {saysText}</span>}
+            <span class="notread__why">
+              Nothing is quoted here because no one working on this corpus has read the
+              document. That is a gap in the evidence, not an omission from the page.
+            </span>
+          </p>
+        )
+      }
+    </section>
+
+    <!-- 3 ──────────────────────────────────────────────── interpretation -->
+    {
+      claim.interpretation && (
+        <section class="rung">
+          <h2>Interpretation</h2>
+          <EvidenceLayer
+            layer={claim.evidenceLayer ?? 'Project inference'}
+            variant="block"
+          />
+          <p>{claim.interpretation}</p>
+        </section>
+      )
+    }
+
+    <!-- 4 ─────────────────────────────────────────────── counter-evidence -->
+    <!-- Same heading level, same type scale, same spacing as Primary
+         evidence. This symmetry is the argument. -->
+    <section class="rung">
+      <h2>Counter-evidence</h2>
+      {
+        claim.counterEvidence ? (
+          <>
+            <EvidenceLayer layer="Project inference" variant="block" />
+            <p>{claim.counterEvidence}</p>
+          </>
+        ) : (
+          <p class="absent">None recorded.</p>
+        )
+      }
+      {
+        counterSources.length > 0 && (
+          <ul class="srclist">
+            {counterSources.map((s) => (
+              <li>
+                <a href={`/sources#${s.data.slug}`}>{s.data.title}</a>
+                <SourceTier tier={s.data.tier} />
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </section>
+
+    <!-- 5 ────────────────────────────────────────────────────── conflict -->
+    {
+      (claim.whySourcesDisagree || linkedDisputes.length > 0) && (
+        <section class="rung">
+          <h2>Why the sources disagree</h2>
+          {claim.whySourcesDisagree && (
+            <>
+              <EvidenceLayer layer="Project inference" variant="block" />
+              <p>{claim.whySourcesDisagree}</p>
+            </>
+          )}
+          {linkedDisputes.length > 0 && (
+            <ul class="srclist">
+              {linkedDisputes.map((d) => (
+                <li>
+                  <a href={`/disputes/${d.data.slug}`}>{d.data.dispute}</a>
+                  {d.data.status && <span class="muted"> · {d.data.status}</span>}
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
+      )
+    }
+
+    <!-- 6 ──────────────────────────────────────────── current assessment -->
+    {
+      linkedDisputes.some((d) => d.data.currentAssessment) && (
+        <section class="rung rung--assessment">
+          <h2>Current assessment</h2>
+          <EvidenceLayer layer="Project inference" variant="block" />
+          {linkedDisputes
+            .filter((d) => d.data.currentAssessment)
+            .map((d) => (
+              <p>{d.data.currentAssessment}</p>
+            ))}
+        </section>
+      )
+    }
+
+    <footer class="chain__foot">
+      {
+        (linkedPeople.length > 0 || linkedEvents.length > 0 || linkedQuestions.length > 0) && (
+          <nav class="chain__links">
+            {linkedPeople.length > 0 && (
+              <p>
+                <span class="chain__linklabel">People</span>
+                {linkedPeople.map((p) => (
+                  <a href={`/people/${p.data.slug}`}>{p.data.name}</a>
+                ))}
+              </p>
+            )}
+            {linkedEvents.length > 0 && (
+              <p>
+                <span class="chain__linklabel">Events</span>
+                {linkedEvents.map((e) => (
+                  <a href={`/events/${e.data.slug}`}>{e.data.event}</a>
+                ))}
+              </p>
+            )}
+            {linkedQuestions.length > 0 && (
+              <p>
+                <span class="chain__linklabel">Open questions</span>
+                {linkedQuestions.map((q) => (
+                  <a href={`/open-questions#${q.data.slug}`}>{q.data.question}</a>
+                ))}
+              </p>
+            )}
+          </nav>
+        )
+      }
+      {
+        claim.lastReviewed && (
+          <p class="chain__reviewed">Last reviewed {claim.lastReviewed}</p>
+        )
+      }
+    </footer>
+  </article>
+</Base>
+
+<style>
+  .chain {
+    max-width: var(--measure);
+  }
+
+  .chain__kicker {
+    font-family: var(--font-ui);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin: 0 0 var(--s-2);
+  }
+
+  .chain__head h1 {
+    font-size: 1.6rem;
+    line-height: var(--leading-tight);
+    margin: 0 0 var(--s-4);
+  }
+
+  .chain__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-3);
+    align-items: center;
+    padding-bottom: var(--s-5);
+    border-bottom: 2px solid var(--baseline);
+  }
+
+  .chain__phase {
+    font-family: var(--font-ui);
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  /* Every rung gets identical chrome. Primary evidence and counter-evidence
+     are indistinguishable as containers on purpose. */
+  .rung {
+    padding: var(--s-5) 0;
+    border-bottom: var(--rule);
+  }
+
+  .rung h2 {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-secondary);
+    margin: 0 0 var(--s-3);
+  }
+
+  .rung p {
+    margin: 0 0 var(--s-3);
+    line-height: var(--leading);
+  }
+
+  .chain__where {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: var(--s-2) var(--s-4);
+    margin: 0 0 var(--s-4);
+    font-size: 0.9rem;
+  }
+
+  .chain__where dt {
+    font-family: var(--font-ui);
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  .chain__where dd {
+    margin: 0;
+  }
+
+  .srclist {
+    list-style: none;
+    padding: 0;
+    margin: var(--s-3) 0 0;
+    display: grid;
+    gap: var(--s-2);
+    font-size: 0.9rem;
+  }
+
+  .verbatim {
+    margin: 0;
+    padding: var(--s-4);
+    border-left: 3px solid var(--layer-primary);
+    background: var(--layer-primary-bg);
+    font-style: italic;
+  }
+
+  /* The not-consulted state is deliberately prominent. It is the most
+     common state in this corpus and the most important one to read. */
+  .notread {
+    padding: var(--s-4);
+    border: 1px dashed var(--status-disputed);
+    background: var(--status-disputed-bg);
+  }
+
+  .notread__detail {
+    display: block;
+    margin-top: var(--s-2);
+  }
+
+  .notread__why {
+    display: block;
+    margin-top: var(--s-3);
+    font-size: 0.85rem;
+    color: var(--ink-secondary);
+  }
+
+  .absent {
+    color: var(--ink-secondary);
+    font-style: italic;
+  }
+
+  .muted {
+    color: var(--ink-muted);
+  }
+
+  .chain__foot {
+    padding-top: var(--s-5);
+  }
+
+  .chain__links p {
+    margin: 0 0 var(--s-2);
+    font-size: 0.9rem;
+  }
+
+  .chain__linklabel {
+    display: inline-block;
+    min-width: 9ch;
+    font-family: var(--font-ui);
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  .chain__links a + a::before {
+    content: ' · ';
+    color: var(--ink-muted);
+  }
+
+  .chain__reviewed {
+    margin-top: var(--s-4);
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+  }
+</style>

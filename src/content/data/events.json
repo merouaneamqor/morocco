@@ -15,7 +15,11 @@
   "dossierStatus": "Stub",
   "summary": "International conference following the First Moroccan Crisis; established the State Bank of Morocco and European supervision of customs and police while formally affirming Moroccan sovereignty.",
   "mainDispute": "Whether it was a genuine multilateral guarantee or a managed transfer of Morocco to France with German consent purchased later.",
-  "people": []
+  "people": [],
+  "claims": [],
+  "disputes": [],
+  "openQuestions": [],
+  "archives": []
  },
  {
   "slug": "treaty-of-fez-and-the-april-1912-rising",
@@ -37,6 +41,15 @@
   "people": [
    "moulay-abdelhafid",
    "hubert-lyautey"
+  ],
+  "claims": [],
+  "disputes": [],
+  "openQuestions": [
+   "do-the-arabic-and-french-texts-of-the-treaty-of-fez-differ-in-substance-clause-by-clause"
+  ],
+  "archives": [
+   "archives-du-maroc",
+   "archives-diplomatiques-la-courneuve-and-nantes"
   ]
  },
  {
@@ -58,6 +71,17 @@
    "mohammed-v",
    "thami-el-glaoui",
    "augustin-guillaume"
+  ],
+  "claims": [
+   "the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables"
+  ],
+  "disputes": [
+   "who-decided-the-1953-deposition-of-mohammed-v"
+  ],
+  "openQuestions": [],
+  "archives": [
+   "archives-du-maroc",
+   "archives-diplomatiques-la-courneuve-and-nantes"
   ]
  },
  {
@@ -78,7 +102,17 @@
   "mainDispute": "The death toll, where estimates range from 600 to well over 3,000. Whether the bombardment was a proportionate protection of nationals or a pre-planned seizure. Responsibility for the looting.",
   "people": [
    "moulay-abdelaziz"
-  ]
+  ],
+  "claims": [
+   "casablanca-july-august-1907-bombardment-and-occupation-killed-roughly-600-to-3-000"
+  ],
+  "disputes": [
+   "casablanca-1907-deaths"
+  ],
+  "openQuestions": [
+   "what-did-roosevelt-actually-say-to-mohammed-v-at-anfa-22-january-1943"
+  ],
+  "archives": []
  },
  {
   "slug": "annual-and-the-rif-war",
@@ -99,6 +133,18 @@
   "people": [
    "mohammed-ben-abdelkrim-el-khattabi",
    "hubert-lyautey"
+  ],
+  "claims": [
+   "annual-july-1921-spanish-dead-ranged-7-875-to-13-363"
+  ],
+  "disputes": [
+   "annual-dead-july-1921"
+  ],
+  "openQuestions": [
+   "how-did-silvestre-die-at-annual-july-1921"
+  ],
+  "archives": [
+   "archivo-general-de-la-administracion-aga"
   ]
  },
  {
@@ -116,7 +162,11 @@
   "dossierStatus": "Stub",
   "summary": "Dahir of 16 May 1930 placing Tamazight-speaking tribes under customary-law tribunals with serious crime before French courts; triggered the Ya Latif campaign and the emergence of mass Moroccan nationalism.",
   "mainDispute": "Whether it was a deliberate de-Islamisation plot or an extension of existing legislation that was received as one. Whether Mohammed V signed freely.",
-  "people": []
+  "people": [],
+  "claims": [],
+  "disputes": [],
+  "openQuestions": [],
+  "archives": []
  },
  {
   "slug": "battle-of-isly",
@@ -132,7 +182,11 @@
   "dossierStatus": "Stub",
   "summary": "Moroccan army under the sultan's son Sidi Mohammed destroyed by Bugeaud's French force; led to the Treaty of Tangier and the Lalla Maghnia border convention.",
   "mainDispute": "Moroccan troop numbers and casualties, which French accounts inflate. Whether the defeat was as total as French reporting claimed.",
-  "people": []
+  "people": [],
+  "claims": [],
+  "disputes": [],
+  "openQuestions": [],
+  "archives": []
  },
  {
   "slug": "madrid-conference-on-protection",
@@ -150,7 +204,11 @@
   "dossierStatus": "Stub",
   "summary": "Convened at Hassan I's request to limit consular protection; instead codified it and granted foreigners the right to own land in Morocco.",
   "mainDispute": "How many protected persons there actually were, and what share of taxable wealth they removed from the Makhzen.",
-  "people": []
+  "people": [],
+  "claims": [],
+  "disputes": [],
+  "openQuestions": [],
+  "archives": []
  },
  {
   "slug": "battle-of-el-herri",
@@ -170,6 +228,17 @@
   "people": [
    "mouha-ou-hammou-zayani",
    "hubert-lyautey"
+  ],
+  "claims": [
+   "el-herri-13-november-1914-zaian-dead-numbered-182"
+  ],
+  "disputes": [
+   "zaian-dead-at-el-herri-13-november-1914"
+  ],
+  "openQuestions": [],
+  "archives": [
+   "service-historique-de-la-defense-shd",
+   "haut-commissariat-aux-anciens-resistants-et-anciens-membres-de-l-armee-de-liberation-hcar"
   ]
  },
  {
@@ -188,7 +257,11 @@
   "dossierStatus": "Stub",
   "summary": "Spanish invasion and capture of Tetouan; the resulting indemnity mortgaged Moroccan customs revenue for decades.",
   "mainDispute": "The real burden of the indemnity as a share of state revenue. Whether Britain brokered the terms to protect its own commercial position.",
-  "people": []
+  "people": [],
+  "claims": [],
+  "disputes": [],
+  "openQuestions": [],
+  "archives": []
  },
  {
   "slug": "the-rif-revolt-and-its-suppression",
@@ -210,7 +283,11 @@
    "hassan-ii",
    "mohamed-oufkir",
    "mohammed-v"
-  ]
+  ],
+  "claims": [],
+  "disputes": [],
+  "openQuestions": [],
+  "archives": []
  },
  {
   "slug": "casablanca-massacre-7-8-april-1947",
@@ -229,7 +306,11 @@
   "mainDispute": "The death toll — a tenfold range. Whether the shooting was a breakdown of discipline or a deliberate operation to prevent the sultan's Tangier journey.",
   "people": [
    "mohammed-v"
-  ]
+  ],
+  "claims": [],
+  "disputes": [],
+  "openQuestions": [],
+  "archives": []
  },
  {
   "slug": "battle-of-ksar-el-kebir-battle-of-the-three-kings",
@@ -246,7 +327,11 @@
   "dossierStatus": "Stub",
   "summary": "Saadian victory over a Portuguese invasion force; three kings died. Portugal lost its king and its independence; Morocco gained fifty years of wealth and standing under Ahmad al-Mansur.",
   "mainDispute": "Force numbers and casualties on both sides. Not yet researched here — this entry exists to open Phase I, not to close it.",
-  "people": []
+  "people": [],
+  "claims": [],
+  "disputes": [],
+  "openQuestions": [],
+  "archives": []
  },
  {
   "slug": "battle-of-tazigzawt",
@@ -263,6 +348,10 @@
   "dossierStatus": "Stub",
   "summary": "A late-conquest engagement in which c. 1,000 resistance fighters faced two French divisions. Identified through the Amazigh oral tradition, where it is the most celebrated subject of resistance balladry.",
   "mainDispute": "Everything. Dates beyond the year, casualties, tribes involved, and the outcome are all unresearched here. The French operational record has not been consulted.",
-  "people": []
+  "people": [],
+  "claims": [],
+  "disputes": [],
+  "openQuestions": [],
+  "archives": []
  }
 ]

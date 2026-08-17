@@ -301,3 +301,99 @@ test('alias splitting loses nothing', async () => {
   // An unquoted string containing a comma is not a list and stays whole.
   assert.deepEqual(splitQuotedVariants('Rabat, near Bab Rouah'), ['Rabat, near Bab Rouah']);
 });
+
+// ------------------------------------------------- claims & disputes layer
+
+test('every claim relation resolves to a record that exists', () => {
+  const claims = readData('claim-records.json');
+  const has = (file, key = 'slug') => new Set(readData(file).map((r) => r[key]));
+  const people = has('people.json');
+  const events = has('events.json');
+  const sources = has('sources.json');
+  const archives = has('archives.json');
+  const disputes = has('dispute-records.json');
+  const questions = has('open-questions.json');
+
+  for (const c of claims) {
+    for (const [field, set] of [
+      ['people', people],
+      ['events', events],
+      ['primaryEvidence', sources],
+      ['counterEvidenceSources', sources],
+      ['archives', archives],
+      ['disputes', disputes],
+      ['openQuestions', questions],
+    ]) {
+      for (const slug of c[field]) {
+        assert.ok(set.has(slug), `claim "${c.slug}" points at missing ${field} "${slug}"`);
+      }
+    }
+  }
+});
+
+test('a claim with no verbatim quotation says so, rather than leaving it blank', () => {
+  // The failure this guards: a blank quotation field beside a precise-looking
+  // archival reference reads exactly like a citation.
+  for (const c of readData('claim-records.json')) {
+    assert.ok(
+      typeof c.whatTheDocumentSays === 'string' && c.whatTheDocumentSays.trim() !== '',
+      `claim "${c.slug}" leaves the document quotation empty instead of stating its absence`
+    );
+  }
+});
+
+test('dispute positions stay four separate fields and are never merged', () => {
+  for (const d of readData('dispute-records.json')) {
+    assert.deepEqual(
+      Object.keys(d.positions).sort(),
+      ['french', 'moroccan', 'other', 'spanish'],
+      `dispute "${d.slug}" has the wrong position fields`
+    );
+    for (const [k, v] of Object.entries(d.positions)) {
+      assert.ok(v === null || typeof v === 'string', `dispute "${d.slug}" position ${k} is not a string or null`);
+    }
+  }
+  // The distinction is only meaningful if some position really is absent.
+  const someSilent = readData('dispute-records.json').some((d) =>
+    Object.values(d.positions).some((v) => v === null)
+  );
+  assert.ok(someSilent, 'no dispute has an absent position — the em-dash case would be untested');
+});
+
+test('closed-with-an-answer is a distinct research status from stalled', () => {
+  const questions = readData('open-questions.json');
+  const answered = questions.filter((q) => q.researchStatus === 'Closed - answer found');
+  assert.ok(
+    answered.length > 0,
+    'no question is closed with an answer — the success state would never render'
+  );
+  // Anfa is the case: establishing that no verbatim record exists IS the answer.
+  for (const q of answered) {
+    assert.ok(q.whatWeKnow, `answered question "${q.slug}" records no answer`);
+  }
+});
+
+test('the graph namespaces node ids so slugs cannot collide across kinds', () => {
+  const graph = JSON.parse(readFileSync(join(DATA, 'graph.json'), 'utf8'));
+  const ids = new Set();
+  for (const n of graph.nodes) {
+    assert.match(n.id, /^(person|claim|source|archive):/, `node id "${n.id}" is not namespaced`);
+    assert.ok(!ids.has(n.id), `duplicate node id ${n.id}`);
+    ids.add(n.id);
+  }
+  for (const e of graph.edges) {
+    assert.ok(ids.has(e.source), `edge ${e.id} has unresolved source ${e.source}`);
+    assert.ok(ids.has(e.target), `edge ${e.id} has unresolved target ${e.target}`);
+  }
+});
+
+test('node kind is encoded as shape, never as a fourth colour slot', () => {
+  const graph = JSON.parse(readFileSync(join(DATA, 'graph.json'), 'utf8'));
+  const GROUPS = new Set(['moroccan', 'french', 'spanish', 'other', 'unaligned']);
+  const shapes = new Set();
+  for (const n of graph.nodes) {
+    assert.ok(GROUPS.has(n.group), `node ${n.id} uses colour slot "${n.group}" outside the palette`);
+    shapes.add(n.shape);
+  }
+  assert.ok(shapes.size >= 4, 'the four node kinds must be distinguishable by shape');
+});

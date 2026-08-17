@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import ClaimStatus from '../../components/ClaimStatus.astro';
 import StatusFooter from '../../components/StatusFooter.astro';
+import RecordClaims from '../../components/RecordClaims.astro';
 import claimsData from '../../content/data/claims.json';
 
 export async function getStaticPaths() {
@@ -20,6 +21,13 @@ const rendered = body ? await render(body) : null;
 const Body = rendered?.Content ?? null;
 
 const people = await getCollection('people');
+const allClaimRecords = await getCollection('claims');
+const allDisputeRecords = await getCollection('disputeRecords');
+const allArchives = await getCollection('archives');
+
+const claimRecords = allClaimRecords.filter((c) => event.claims.includes(c.data.slug)).map((c) => c.data);
+const eventDisputeRecords = allDisputeRecords.filter((d) => event.disputes.includes(d.data.slug)).map((d) => d.data);
+const holdingArchives = allArchives.filter((a) => event.archives.includes(a.data.slug)).map((a) => a.data);
 const involved = people.filter((p) => event.people.includes(p.data.slug));
 
 const disputes = (await getCollection('disputes'))
@@ -135,6 +143,13 @@ const fmt = (iso: string | null) =>
       }
     </article>
   </div>
+
+  <RecordClaims
+    claims={claimRecords}
+    disputes={eventDisputeRecords}
+    archives={holdingArchives}
+    subject="this event"
+  />
 
   <StatusFooter counts={counts} withheld={claims.filter((c) => c.withheld).length} total={claims.length} />
 </Base>

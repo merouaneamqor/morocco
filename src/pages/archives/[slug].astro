@@ -1,0 +1,322 @@
+---
+/**
+ * An archive as a research target, not a catalogue entry.
+ *
+ * The field this page exists for is "Not yet searched". It sits high on the
+ * page in its own block because it is the most useful thing here: it tells a
+ * researcher what nobody has done. Recording what you have *not* looked at is
+ * how a corpus stays honest about its own coverage.
+ *
+ * Empty fields render as "Not yet documented" rather than disappearing. A
+ * holding with no search plan written for it is itself a finding, and hiding
+ * the row would make 19 of 25 archives look complete.
+ */
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ClaimStatus from '../../components/ClaimStatus.astro';
+import { countrySlug } from '../../lib/country-slug.mjs';
+
+export async function getStaticPaths() {
+  const archives = await getCollection('archives');
+  return archives.map((a) => ({ params: { slug: a.data.slug }, props: { archive: a.data } }));
+}
+
+const { archive } = Astro.props;
+
+const [people, events, sources, claims, openQuestions] = await Promise.all([
+  getCollection('people'),
+  getCollection('events'),
+  getCollection('sources'),
+  getCollection('claims'),
+  getCollection('openQuestions'),
+]);
+
+const relatedPeople = people.filter((p) => archive.relatedPeople.includes(p.data.slug));
+const relatedEvents = events.filter((e) => archive.relatedEvents.includes(e.data.slug));
+const linkedClaims = claims.filter((c) => c.data.archives.includes(archive.slug));
+const linkedQuestions = openQuestions.filter((q) => q.data.archives.includes(archive.slug));
+
+/**
+ * Sources whose archival reference names this institution. Matched on the
+ * institution's short form, so this under-reports rather than over-reports —
+ * the safer error when the claim is "this source came from here".
+ */
+const shortName = archive.institution.replace(/\s*\(.*\)\s*$/, '').trim();
+const heldSources = sources.filter((s) =>
+  [s.data.archivalReference, s.data.publisher].some(
+    (f) => f && f.toLowerCase().includes(shortName.toLowerCase())
+  )
+);
+
+const FIELDS = [
+  ['Country', archive.country],
+  ['City', archive.city],
+  ['Priority', archive.priority],
+  ['Covering dates', archive.coveringDates],
+  ['Fonds / series', archive.fonds],
+  ['Access', archive.access],
+  ['Digitised', archive.digitised],
+  ['Verification', archive.verification],
+  ['Language', archive.language.length ? archive.language.join(' · ') : null],
+] as const;
+---
+
+<Base title={archive.institution} description={archive.whatItCanSettle ?? archive.holdings ?? ''}>
+  <article class="arch">
+    <header>
+      <p class="arch__kicker">
+        <a href="/archives">Archives</a> ·
+        <a href={`/archives/country/${countrySlug(archive.country)}`}>
+          {archive.country}
+        </a>
+      </p>
+      <h1>{archive.institution}</h1>
+      {
+        archive.url && (
+          <p class="arch__url">
+            <a href={archive.url} rel="noopener">
+              Catalogue ↗
+            </a>
+          </p>
+        )
+      }
+    </header>
+
+    <!-- The backlog, deliberately near the top. -->
+    <section class="backlog">
+      <h2>Not yet searched</h2>
+      {
+        archive.notYetSearched ? (
+          <p>{archive.notYetSearched}</p>
+        ) : (
+          <p class="undoc">
+            Not yet documented. Nobody has written down what remains unsearched in this
+            holding — which is not the same as nothing remaining.
+          </p>
+        )
+      }
+    </section>
+
+    {
+      archive.whatItCanSettle && (
+        <section class="settle">
+          <h2>What it can settle</h2>
+          <p>{archive.whatItCanSettle}</p>
+        </section>
+      )
+    }
+
+    <dl class="arch__fields">
+      {
+        FIELDS.map(([label, value]) => (
+          <>
+            <dt>{label}</dt>
+            <dd class={value ? '' : 'undoc'}>{value ?? 'Not yet documented'}</dd>
+          </>
+        ))
+      }
+    </dl>
+
+    {
+      archive.holdings && (
+        <section>
+          <h2>Holdings</h2>
+          <p>{archive.holdings}</p>
+        </section>
+      )
+    }
+
+    <section>
+      <h2>Search terms to use</h2>
+      {
+        archive.searchTerms ? (
+          <ul class="terms">
+            {archive.searchTerms.split(';').map((t) => (
+              <li>{t.trim()}</li>
+            ))}
+          </ul>
+        ) : (
+          <p class="undoc">Not yet documented.</p>
+        )
+      }
+    </section>
+
+    {
+      linkedClaims.length > 0 && (
+        <section>
+          <h2>Claims that would be settled here</h2>
+          <ul class="linklist">
+            {linkedClaims.map((c) => (
+              <li>
+                <a href={`/claims/${c.data.slug}`}>{c.data.claim}</a>
+                {c.data.confidence && c.data.confidence !== 'Withheld' && (
+                  <ClaimStatus status={c.data.confidence} />
+                )}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    {
+      linkedQuestions.length > 0 && (
+        <section>
+          <h2>Open questions pointing here</h2>
+          <ul class="linklist">
+            {linkedQuestions.map((q) => (
+              <li>
+                <a href={`/open-questions#${q.data.slug}`}>{q.data.question}</a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    {
+      heldSources.length > 0 && (
+        <section>
+          <h2>Sources in this corpus from this holding</h2>
+          <ul class="linklist">
+            {heldSources.map((s) => (
+              <li>
+                <a href={`/sources#${s.data.slug}`}>{s.data.title}</a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    {
+      (relatedPeople.length > 0 || relatedEvents.length > 0) && (
+        <section>
+          <h2>Bears on</h2>
+          <ul class="linklist">
+            {relatedPeople.map((p) => (
+              <li>
+                <a href={`/people/${p.data.slug}`}>{p.data.name}</a>
+              </li>
+            ))}
+            {relatedEvents.map((e) => (
+              <li>
+                <a href={`/events/${e.data.slug}`}>{e.data.event}</a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+  </article>
+</Base>
+
+<style>
+  .arch {
+    max-width: var(--measure);
+  }
+
+  .arch__kicker {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin: 0 0 var(--s-2);
+  }
+
+  .arch h1 {
+    font-size: 1.5rem;
+    line-height: var(--leading-tight);
+    margin: 0;
+  }
+
+  .arch__url {
+    margin: var(--s-2) 0 0;
+    font-size: 0.9rem;
+  }
+
+  .arch section {
+    margin-top: var(--s-5);
+  }
+
+  .arch h2 {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-secondary);
+    margin: 0 0 var(--s-3);
+  }
+
+  .arch p {
+    margin: 0;
+    line-height: var(--leading);
+  }
+
+  /* The backlog is the point of the page, so it gets the only tinted block. */
+  .backlog {
+    margin-top: var(--s-5);
+    padding: var(--s-4);
+    border-left: 3px solid var(--status-disputed);
+    background: var(--status-disputed-bg);
+  }
+
+  .settle p {
+    font-size: 1.05rem;
+  }
+
+  .arch__fields {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: var(--s-2) var(--s-5);
+    margin: var(--s-5) 0 0;
+    padding-top: var(--s-4);
+    border-top: var(--rule);
+    font-size: 0.9rem;
+  }
+
+  .arch__fields dt {
+    font-family: var(--font-ui);
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  .arch__fields dd {
+    margin: 0;
+  }
+
+  .undoc {
+    color: var(--ink-muted);
+    font-style: italic;
+  }
+
+  .terms {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-2);
+  }
+
+  .terms li {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    padding: 0.15em 0.5em;
+    border: var(--rule);
+    border-radius: var(--radius);
+    background: var(--page-plane);
+  }
+
+  .linklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: var(--s-2);
+    font-size: 0.95rem;
+  }
+</style>

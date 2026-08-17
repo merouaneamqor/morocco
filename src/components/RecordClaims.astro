@@ -1,0 +1,151 @@
+---
+/**
+ * <RecordClaims> — the Claims-database rows attached to a person or event,
+ * plus the archives that hold material on them.
+ *
+ * Distinct from the claim markers lifted out of dossier prose, which are
+ * counted in the status footer. These are structured records with their own
+ * evidence chain, so they link out rather than summarising in place.
+ *
+ * Renders nothing when a record has neither, rather than an empty shell: 65
+ * of 70 people currently have no worked claim, and a row of empty headings on
+ * every one of those dossiers would be noise, not honesty. The claim index
+ * carries the corpus-wide count.
+ */
+import ClaimStatus from './ClaimStatus.astro';
+import EvidenceLayer from './EvidenceLayer.astro';
+
+interface Props {
+  claims: any[];
+  disputes?: any[];
+  archives?: any[];
+  /** What the archives hold material on — 'this figure' / 'this event'. */
+  subject?: string;
+}
+
+const { claims, disputes = [], archives = [], subject = 'this figure' } = Astro.props;
+
+/** Strongest first, so the best-evidenced claim leads. */
+const ORDER = ['Established', 'Highly probable', 'Disputed', 'Unknown', 'Withheld'];
+const sorted = [...claims].sort(
+  (a, b) => ORDER.indexOf(a.confidence ?? '') - ORDER.indexOf(b.confidence ?? '')
+);
+---
+
+{
+  (claims.length > 0 || disputes.length > 0 || archives.length > 0) && (
+    <div class="rc">
+      {sorted.length > 0 && (
+        <section>
+          <h2>Claims</h2>
+          <ul class="rc__list">
+            {sorted.map((c) => (
+              <li>
+                <a href={`/claims/${c.slug}`}>{c.claim}</a>
+                <div class="rc__meta">
+                  {c.confidence === 'Withheld' ? (
+                    <ClaimStatus status="Unknown" withheld={true} />
+                  ) : c.confidence ? (
+                    <ClaimStatus status={c.confidence} />
+                  ) : null}
+                  {c.evidenceLayer && <EvidenceLayer layer={c.evidenceLayer} />}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {disputes.length > 0 && (
+        <section>
+          <h2>Disputes</h2>
+          <ul class="rc__list">
+            {disputes.map((d) => (
+              <li>
+                <a href={`/disputes/${d.slug}`}>{d.dispute}</a>
+                <div class="rc__meta">
+                  <span class="rc__status">{d.status ?? 'Status not recorded'}</span>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {archives.length > 0 && (
+        <section>
+          <h2>Archives holding material on {subject}</h2>
+          <ul class="rc__list">
+            {archives.map((a) => (
+              <li>
+                <a href={`/archives/${a.slug}`}>{a.institution}</a>
+                <div class="rc__meta">
+                  <span class="rc__status">
+                    {a.country}
+                    {a.language.length > 0 && <> · {a.language.join(' · ')}</>}
+                  </span>
+                </div>
+                {a.notYetSearched && <p class="rc__backlog">Not yet searched: {a.notYetSearched}</p>}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+    </div>
+  )
+}
+
+<style>
+  .rc {
+    margin-top: var(--s-6);
+    padding-top: var(--s-5);
+    border-top: 2px solid var(--baseline);
+  }
+
+  .rc section + section {
+    margin-top: var(--s-5);
+  }
+
+  .rc h2 {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-secondary);
+    margin: 0 0 var(--s-3);
+  }
+
+  .rc__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .rc__list li {
+    padding: var(--s-3) 0;
+    border-bottom: var(--rule);
+  }
+
+  .rc__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-3);
+    align-items: center;
+    margin-top: var(--s-2);
+  }
+
+  .rc__status {
+    font-family: var(--font-ui);
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  .rc__backlog {
+    margin: var(--s-2) 0 0;
+    font-size: 0.85rem;
+    line-height: var(--leading);
+    color: var(--ink-secondary);
+  }
+</style>

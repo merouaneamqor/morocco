@@ -1,0 +1,248 @@
+---
+/**
+ * One dispute, in full.
+ *
+ * The positions are stacked rather than tabulated here, each under the name of
+ * the tradition holding it, at identical weight. Below them: why the sources
+ * disagree, this project's current assessment clearly marked as an inference,
+ * and every claim that turns on the question.
+ */
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ClaimStatus from '../../components/ClaimStatus.astro';
+import EvidenceLayer from '../../components/EvidenceLayer.astro';
+
+export async function getStaticPaths() {
+  const records = await getCollection('disputeRecords');
+  return records.map((d) => ({ params: { slug: d.data.slug }, props: { record: d.data } }));
+}
+
+const { record } = Astro.props;
+
+const [claims, people, events] = await Promise.all([
+  getCollection('claims'),
+  getCollection('people'),
+  getCollection('events'),
+]);
+
+const linkedClaims = claims.filter((c) => record.claims.includes(c.data.slug));
+const linkedPeople = people.filter((p) => record.people.includes(p.data.slug));
+const linkedEvents = events.filter((e) => record.events.includes(e.data.slug));
+
+const POSITIONS = [
+  ['French', record.positions.french],
+  ['Spanish', record.positions.spanish],
+  ['Moroccan', record.positions.moroccan],
+  ['Other', record.positions.other],
+] as const;
+
+const held = POSITIONS.filter(([, v]) => v);
+const silent = POSITIONS.filter(([, v]) => !v).map(([k]) => k);
+---
+
+<Base title={record.dispute} description={record.currentAssessment ?? record.dispute}>
+  <article class="dsp">
+    <header>
+      <p class="dsp__kicker"><a href="/disputes">Disputes</a></p>
+      <h1>{record.dispute}</h1>
+      <p class="dsp__meta">
+        {record.status ?? 'Status not recorded'}
+        {record.phase && <span> · {record.phase}</span>}
+      </p>
+    </header>
+
+    <section>
+      <h2>Positions</h2>
+      <div class="pos">
+        {
+          held.map(([tradition, text]) => (
+            <div class="pos__item">
+              <p class="pos__who">{tradition}</p>
+              <p class="pos__what">{text}</p>
+            </div>
+          ))
+        }
+      </div>
+      {
+        silent.length > 0 && (
+          <p class="pos__silent">
+            No position recorded from: {silent.join(', ')}. Silence here is not agreement —
+            it means this corpus has not found that tradition taking a position on the
+            question.
+          </p>
+        )
+      }
+    </section>
+
+    {
+      record.whySourcesDisagree && (
+        <section>
+          <h2>Why the sources disagree</h2>
+          <EvidenceLayer layer="Project inference" variant="block" />
+          <p>{record.whySourcesDisagree}</p>
+        </section>
+      )
+    }
+
+    {
+      record.currentAssessment && (
+        <section class="assess">
+          <h2>Current assessment</h2>
+          <EvidenceLayer layer="Project inference" variant="block" />
+          <p>{record.currentAssessment}</p>
+        </section>
+      )
+    }
+
+    {
+      linkedClaims.length > 0 && (
+        <section>
+          <h2>Claims that turn on this</h2>
+          <ul class="cards">
+            {linkedClaims.map((c) => (
+              <li>
+                <a href={`/claims/${c.data.slug}`}>{c.data.claim}</a>
+                <div class="cards__meta">
+                  {c.data.confidence === 'Withheld' ? (
+                    <ClaimStatus status="Unknown" withheld={true} />
+                  ) : c.data.confidence ? (
+                    <ClaimStatus status={c.data.confidence} />
+                  ) : null}
+                  {c.data.evidenceLayer && <EvidenceLayer layer={c.data.evidenceLayer} />}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    {
+      (linkedPeople.length > 0 || linkedEvents.length > 0) && (
+        <footer class="dsp__foot">
+          {linkedPeople.map((p) => (
+            <a href={`/people/${p.data.slug}`}>{p.data.name}</a>
+          ))}
+          {linkedEvents.map((e) => (
+            <a href={`/events/${e.data.slug}`}>{e.data.event}</a>
+          ))}
+        </footer>
+      )
+    }
+  </article>
+</Base>
+
+<style>
+  .dsp {
+    max-width: var(--measure);
+  }
+
+  .dsp__kicker {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin: 0 0 var(--s-2);
+  }
+
+  .dsp h1 {
+    font-size: 1.5rem;
+    line-height: var(--leading-tight);
+    margin: 0;
+  }
+
+  .dsp__meta {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin: var(--s-2) 0 0;
+    padding-bottom: var(--s-4);
+    border-bottom: 2px solid var(--baseline);
+  }
+
+  .dsp section {
+    margin-top: var(--s-5);
+  }
+
+  .dsp h2 {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-secondary);
+    margin: 0 0 var(--s-3);
+  }
+
+  .dsp p {
+    margin: 0;
+    line-height: var(--leading);
+  }
+
+  /* Equal columns, no ordering cue. Each position is one tradition's, and
+     none of them is the site's. */
+  .pos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: var(--s-4);
+  }
+
+  .pos__item {
+    padding-top: var(--s-3);
+    border-top: var(--rule);
+  }
+
+  .pos__who {
+    font-family: var(--font-ui);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: var(--s-2) !important;
+  }
+
+  .pos__what {
+    font-size: 0.95rem;
+  }
+
+  .pos__silent {
+    margin-top: var(--s-4) !important;
+    font-size: 0.85rem;
+    color: var(--ink-secondary);
+    font-style: italic;
+  }
+
+  .assess p {
+    font-size: 1.05rem;
+  }
+
+  .cards {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .cards li {
+    padding: var(--s-3) 0;
+    border-bottom: var(--rule);
+  }
+
+  .cards__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-3);
+    margin-top: var(--s-2);
+  }
+
+  .dsp__foot {
+    margin-top: var(--s-6);
+    padding-top: var(--s-4);
+    border-top: var(--rule);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-4);
+    font-size: 0.9rem;
+  }
+</style>

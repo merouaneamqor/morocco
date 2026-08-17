@@ -1,0 +1,260 @@
+---
+/**
+ * What we don't know — as a research agenda, not a list of failures.
+ *
+ * Grouped by research status, and "Closed - answer found" is rendered as a
+ * success. Establishing that no verbatim record of Anfa exists IS an answer;
+ * filing it next to "paused" and "never searched" would misrepresent the one
+ * question here that has actually been settled.
+ *
+ * "Why we don't know" is a kind, not a degree. Destroyed, classified, never
+ * searched and contradictory are four different problems with four different
+ * remedies, so they are never rolled up into a single "unknown" count.
+ */
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+const questions = (await getCollection('openQuestions')).map((q) => q.data);
+const [archives, events, claims] = await Promise.all([
+  getCollection('archives'),
+  getCollection('events'),
+  getCollection('claims'),
+]);
+
+/** Answered first — the point is that closing a question is an outcome. */
+const STATUS_ORDER = [
+  'Closed - answer found',
+  'Active investigation',
+  'Paused',
+  'Closed - unanswerable',
+];
+
+const grouped = STATUS_ORDER.map((status) => ({
+  status,
+  rows: questions.filter((q) => q.researchStatus === status),
+})).filter((g) => g.rows.length > 0);
+
+const unrecorded = questions.filter(
+  (q) => !q.researchStatus || !STATUS_ORDER.includes(q.researchStatus)
+);
+if (unrecorded.length) grouped.push({ status: 'Status not recorded', rows: unrecorded });
+
+const byWhy = questions.reduce<Record<string, number>>((acc, q) => {
+  const k = q.whyWeDontKnow ?? 'Not recorded';
+  acc[k] = (acc[k] ?? 0) + 1;
+  return acc;
+}, {});
+
+const isAnswered = (s: string) => s === 'Closed - answer found';
+---
+
+<Base
+  title="Open questions"
+  description="What this corpus does not know, why it does not know it, and which archive would answer it."
+>
+  <h1>Open questions</h1>
+
+  <p class="lede">
+    Not a list of gaps to be embarrassed about — a research agenda. Each question records
+    what is known, what is missing, which documents would settle it, and <em>why</em> it is
+    open. Destroyed, withheld, never searched and contradictory are four different
+    problems, and only one of them is solved by looking harder.
+  </p>
+
+  <ul class="why">
+    {
+      Object.entries(byWhy).map(([why, n]) => (
+        <li>
+          <span class="why__n">{n}</span> {why.toLowerCase()}
+        </li>
+      ))
+    }
+  </ul>
+
+  {
+    grouped.map((g) => (
+      <section class:list={['group', isAnswered(g.status) && 'group--answered']}>
+        <h2>
+          {g.status}
+          <span class="group__count">{g.rows.length}</span>
+        </h2>
+        {isAnswered(g.status) && (
+          <p class="group__note">
+            Answered. Establishing that a record does not exist is a result, not a dead
+            end — it closes the question for anyone who comes after.
+          </p>
+        )}
+
+        {g.rows.map((q) => {
+          const qArchives = archives.filter((a) => q.archives.includes(a.data.slug));
+          const qEvents = events.filter((e) => q.events.includes(e.data.slug));
+          const qClaims = claims.filter((c) => q.claims.includes(c.data.slug));
+          return (
+            <article class="q" id={q.slug}>
+              <h3>{q.question}</h3>
+              <p class="q__why">
+                <span class="q__whylabel">Why it is open</span>
+                {q.whyWeDontKnow ?? 'Not recorded'}
+              </p>
+
+              <dl class="q__fields">
+                {q.whatWeKnow && (
+                  <>
+                    <dt>What we know</dt>
+                    <dd>{q.whatWeKnow}</dd>
+                  </>
+                )}
+                {q.missingEvidence && (
+                  <>
+                    <dt>Missing evidence</dt>
+                    <dd>{q.missingEvidence}</dd>
+                  </>
+                )}
+                {q.documentsRequested && (
+                  <>
+                    <dt>Documents requested</dt>
+                    <dd>{q.documentsRequested}</dd>
+                  </>
+                )}
+              </dl>
+
+              {(qArchives.length > 0 || qEvents.length > 0 || qClaims.length > 0) && (
+                <p class="q__links">
+                  {qArchives.map((a) => (
+                    <a href={`/archives/${a.data.slug}`}>{a.data.institution}</a>
+                  ))}
+                  {qEvents.map((e) => (
+                    <a href={`/events/${e.data.slug}`}>{e.data.event}</a>
+                  ))}
+                  {qClaims.map((c) => (
+                    <a href={`/claims/${c.data.slug}`}>{c.data.claim}</a>
+                  ))}
+                </p>
+              )}
+            </article>
+          );
+        })}
+      </section>
+    ))
+  }
+</Base>
+
+<style>
+  .lede {
+    max-width: var(--measure);
+    color: var(--ink-secondary);
+  }
+
+  .why {
+    list-style: none;
+    padding: var(--s-4) 0;
+    margin: var(--s-5) 0 var(--s-6);
+    border-top: 2px solid var(--baseline);
+    border-bottom: var(--rule);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-5);
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    color: var(--ink-secondary);
+  }
+
+  .why__n {
+    font-size: 1.2rem;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .group {
+    margin-bottom: var(--s-7);
+  }
+
+  .group h2 {
+    display: flex;
+    align-items: baseline;
+    gap: var(--s-3);
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-secondary);
+    border-bottom: 2px solid var(--baseline);
+    padding-bottom: var(--s-2);
+  }
+
+  /* Answered questions get the established hue — the only place on this page
+     a status colour appears, because it is the only outcome here. */
+  .group--answered h2 {
+    color: var(--status-established);
+    border-bottom-color: var(--status-established);
+  }
+
+  .group__count {
+    color: var(--ink-muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .group__note {
+    max-width: var(--measure);
+    font-size: 0.85rem;
+    color: var(--ink-secondary);
+    font-style: italic;
+  }
+
+  .q {
+    max-width: var(--measure);
+    padding: var(--s-5) 0;
+    border-bottom: var(--rule);
+  }
+
+  .q h3 {
+    font-size: 1.1rem;
+    line-height: var(--leading-tight);
+    margin: 0 0 var(--s-3);
+  }
+
+  .q__why {
+    margin: 0 0 var(--s-4);
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+  }
+
+  .q__whylabel {
+    display: block;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  .q__fields {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: var(--s-3) var(--s-5);
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .q__fields dt {
+    font-family: var(--font-ui);
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  .q__fields dd {
+    margin: 0;
+    line-height: var(--leading);
+  }
+
+  .q__links {
+    margin: var(--s-4) 0 0;
+    font-size: 0.85rem;
+  }
+
+  .q__links a + a::before {
+    content: ' · ';
+    color: var(--ink-muted);
+  }
+</style>

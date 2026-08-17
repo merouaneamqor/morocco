@@ -1,244 +1,230 @@
 ---
+/**
+ * The Archive Explorer.
+ *
+ * Grouped by country by default, which is what makes the Moroccan and Spanish
+ * layers fall out without a separate taxonomy: the distribution of holdings
+ * across states IS the finding, and grouping by anything else buries it.
+ *
+ * Each row carries whether a search plan has been written for it. Nineteen of
+ * the twenty-five have none, and the page shows that as a count rather than
+ * letting a reader assume the coverage is even.
+ */
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import FacetIndex from '../components/FacetIndex.astro';
-import ArchivalRef from '../components/ArchivalRef.astro';
+import { countrySlug } from '../lib/country-slug.mjs';
 
 const archives = (await getCollection('archives')).map((a) => a.data);
 
 const PRIORITY_ORDER = ['1 - decisive', '2 - structural', '3 - supporting', '4 - background'];
-const sorted = [...archives].sort(
-  (a, b) =>
-    PRIORITY_ORDER.indexOf(a.priority) - PRIORITY_ORDER.indexOf(b.priority) ||
-    a.institution.localeCompare(b.institution)
-);
 
 const facets = [
   { key: 'country', label: 'Country', values: [...new Set(archives.map((a) => a.country))].sort() },
-  { key: 'priority', label: 'Priority', values: PRIORITY_ORDER.filter((p) => archives.some((a) => a.priority === p)) },
+  {
+    key: 'priority',
+    label: 'Priority',
+    values: PRIORITY_ORDER.filter((p) => archives.some((a) => a.priority === p)),
+  },
   { key: 'digitised', label: 'Digitised', values: [...new Set(archives.map((a) => a.digitised))] },
+  {
+    key: 'verification',
+    label: 'Verification',
+    values: [...new Set(archives.map((a) => a.verification))],
+  },
+  {
+    key: 'language',
+    label: 'Language',
+    values: [...new Set(archives.flatMap((a) => a.language))].sort(),
+  },
+  { key: 'backlog', label: 'Search plan', values: ['Written', 'Not yet documented'] },
 ];
 
-// The finding the corpus makes structurally: the documents are not in Morocco.
+/** Group by country, countries with decisive holdings first. */
+const byCountry = new Map<string, typeof archives>();
+for (const a of archives) byCountry.set(a.country, [...(byCountry.get(a.country) ?? []), a]);
+
+const countries = [...byCountry.entries()]
+  .map(([country, rows]) => ({
+    country,
+    slug: countrySlug(country),
+    rows: [...rows].sort(
+      (a, b) =>
+        PRIORITY_ORDER.indexOf(a.priority) - PRIORITY_ORDER.indexOf(b.priority) ||
+        a.institution.localeCompare(b.institution)
+    ),
+    decisive: rows.filter((r) => r.priority === '1 - decisive').length,
+  }))
+  .sort((a, b) => b.decisive - a.decisive || b.rows.length - a.rows.length);
+
+// The structural finding: the decisive documents are not held in Morocco.
 const decisive = archives.filter((a) => a.priority === '1 - decisive');
 const decisiveInMorocco = decisive.filter((a) => a.country === 'Morocco');
+const withPlan = archives.filter((a) => a.notYetSearched).length;
 ---
 
 <Base
-  title="Archives & repositories"
-  description="Every holding worldwide that bears on Moroccan history, with what it can settle."
+  title="Archives"
+  description="Every holding that bears on Moroccan history — what it can settle, what to search for, and what nobody has searched yet."
 >
-  <header class="ihead">
-    <h1>Archives &amp; repositories</h1>
-    <p class="ihead__lede prose">
-      {archives.length} repositories, each with its reference structure, access conditions
-      and — the field that matters most — <em>what it can settle</em>.
-    </p>
-    <p class="finding">
-      <strong>
-        {decisiveInMorocco.length} of {decisive.length} decisive holdings are in Morocco.
-      </strong>
-      The rest are in Vincennes, Nantes, Alcalá de Henares, Kew, College Park, Berlin and
-      Istanbul. Roughly 40% of the colonial administrative archive remained in Morocco at
-      independence; the other 60% went to France. That distribution is not a detail about
-      logistics — it is the central fact about who can write this history.
-    </p>
-  </header>
+  <h1>Archives &amp; repositories</h1>
 
-  <FacetIndex facets={facets} countLabel="repositories" />
+  <p class="lede">
+    Grouped by the state that holds them, because the distribution is itself a finding:
+    <strong>{decisiveInMorocco.length} of {decisive.length}</strong> decisive holdings are in
+    Morocco. A history of Morocco assembled from these archives is, structurally, a history
+    of what other states wrote down about it.
+  </p>
 
-  <ul class="alist" data-index>
-    {
-      sorted.map((a) => (
-        <li
-          class="aitem"
-          id={a.slug}
-          data-country={a.country}
-          data-priority={a.priority}
-          data-digitised={a.digitised}
-          data-search={[a.institution, a.city, a.country, a.fonds, a.holdings].filter(Boolean).join(' ').toLowerCase()}
-        >
-          <div class="aitem__head">
-            <span class:list={['prio', `prio--${a.priority[0]}`]}>{a.priority}</span>
-            <span class="aitem__where">
-              {[a.city, a.country].filter(Boolean).join(' · ')}
-            </span>
-          </div>
+  <p class="lede lede--backlog">
+    <strong>{withPlan} of {archives.length}</strong> holdings have a search plan recorded — what
+    to look for and what remains unsearched. The other {archives.length - withPlan} are listed with
+    that field marked <em>not yet documented</em>, which means nobody has written the backlog
+    down, not that there is nothing left to find.
+  </p>
 
-          <h2 class="aitem__title">
-            {a.url ? (
-              <a href={a.url} rel="noopener">
-                {a.institution}
-              </a>
-            ) : (
-              a.institution
-            )}
-          </h2>
+  <FacetIndex facets={facets} countLabel="holdings" />
 
-          {a.holdings && <p class="aitem__holdings">{a.holdings}</p>}
+  {
+    countries.map((c) => (
+      <section class="country" id={c.slug}>
+        <h2>
+          <a href={`/archives/country/${c.slug}`}>{c.country}</a>
+          <span class="country__count">
+            {c.rows.length}
+            {c.decisive > 0 && <span class="country__decisive"> · {c.decisive} decisive</span>}
+          </span>
+        </h2>
 
-          {a.whatItCanSettle && (
-            <div class="settles">
-              <p class="settles__head">What it can settle</p>
-              <p class="settles__body">{a.whatItCanSettle}</p>
-            </div>
-          )}
-
-          {a.fonds && (
-            <ArchivalRef
-              reference={a.fonds}
-              verification={a.verification}
-              scope="fonds"
-              catalogueUrl={a.url ?? undefined}
-            />
-          )}
-
-          <dl class="aitem__dl">
-            {a.coveringDates && (
-              <>
-                <dt>Covering dates</dt>
-                <dd>{a.coveringDates}</dd>
-              </>
-            )}
-            <dt>Digitised</dt>
-            <dd>{a.digitised}</dd>
-            {a.access && (
-              <>
-                <dt>Access</dt>
-                <dd>{a.access}</dd>
-              </>
-            )}
-          </dl>
-        </li>
-      ))
-    }
-  </ul>
-
-  <style>
-    .ihead {
-      margin-bottom: var(--s-5);
-    }
-    .ihead__lede {
-      color: var(--ink-secondary);
-    }
-    .finding {
-      max-width: 62ch;
-      padding: var(--s-4);
-      border: var(--rule);
-      border-left: 3px solid var(--accent);
-      border-radius: var(--radius);
-      background: var(--surface);
-      font-size: 0.9375rem;
-      color: var(--ink-secondary);
-    }
-
-    .alist {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: grid;
-      gap: var(--s-5);
-    }
-    .aitem {
-      padding: var(--s-4);
-      border: var(--rule);
-      border-radius: var(--radius);
-      background: var(--surface);
-      margin: 0;
-      scroll-margin-top: 6rem;
-    }
-    .aitem__head {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: var(--s-2);
-      margin-bottom: var(--s-2);
-    }
-    .aitem__where {
-      font-family: var(--font-ui);
-      font-size: 0.6875rem;
-      color: var(--ink-muted);
-    }
-
-    /* Priority is ordinal — a single hue ramp, not four categories. */
-    .prio {
-      font-family: var(--font-ui);
-      font-size: 0.625rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding: 0.15em 0.5em;
-      border-radius: var(--radius);
-      color: #fff;
-    }
-    .prio--1 {
-      background: var(--seq-7);
-    }
-    .prio--2 {
-      background: var(--seq-5);
-    }
-    .prio--3 {
-      background: var(--seq-3);
-      color: var(--ink);
-    }
-    .prio--4 {
-      background: var(--seq-1);
-      color: var(--ink);
-    }
-
-    .aitem__title {
-      font-size: 1.0625rem;
-      margin: 0 0 var(--s-2);
-    }
-    .aitem__holdings {
-      margin: 0 0 var(--s-3);
-      font-size: 0.9375rem;
-      color: var(--ink-secondary);
-      max-width: 70ch;
-    }
-
-    .settles {
-      padding: var(--s-3);
-      background: var(--page-plane);
-      border-radius: var(--radius);
-      margin-bottom: var(--s-2);
-    }
-    .settles__head {
-      margin: 0 0 var(--s-1);
-      font-family: var(--font-ui);
-      font-size: 0.625rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--ink-muted);
-    }
-    .settles__body {
-      margin: 0;
-      font-size: 0.875rem;
-      color: var(--ink-secondary);
-      max-width: 70ch;
-    }
-
-    .aitem__dl {
-      margin: var(--s-3) 0 0;
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: var(--s-1) var(--s-3);
-      font-family: var(--font-ui);
-      font-size: 0.8125rem;
-    }
-    .aitem__dl dt {
-      font-size: 0.625rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--ink-muted);
-      white-space: nowrap;
-      padding-top: 0.15em;
-    }
-    .aitem__dl dd {
-      margin: 0;
-      color: var(--ink-secondary);
-    }
-  </style>
+        <ul class="rows">
+          {c.rows.map((a) => (
+            <li
+              data-row
+              data-country={a.country}
+              data-priority={a.priority}
+              data-digitised={a.digitised}
+              data-verification={a.verification}
+              data-language={a.language.join('|')}
+              data-backlog={a.notYetSearched ? 'Written' : 'Not yet documented'}
+              data-search={`${a.institution} ${a.city ?? ''} ${a.fonds ?? ''} ${a.searchTerms ?? ''}`}
+            >
+              <div class="rows__head">
+                <a href={`/archives/${a.slug}`}>{a.institution}</a>
+                <span class="rows__pri" data-pri={a.priority}>
+                  {a.priority}
+                </span>
+              </div>
+              {a.whatItCanSettle && <p class="rows__settle">{a.whatItCanSettle}</p>}
+              <p class={a.notYetSearched ? 'rows__backlog' : 'rows__backlog rows__backlog--none'}>
+                <span class="rows__backloglabel">Not yet searched</span>
+                {a.notYetSearched ?? 'Not yet documented'}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
 </Base>
+
+<style>
+  .lede {
+    max-width: var(--measure);
+    color: var(--ink-secondary);
+  }
+
+  .lede--backlog {
+    padding-top: var(--s-3);
+    border-top: var(--rule);
+  }
+
+  .country {
+    margin-top: var(--s-6);
+  }
+
+  .country h2 {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--s-3);
+    font-size: 1.1rem;
+    border-bottom: 2px solid var(--baseline);
+    padding-bottom: var(--s-2);
+    margin-bottom: 0;
+  }
+
+  .country__count {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .country__decisive {
+    color: var(--ink-secondary);
+  }
+
+  .rows {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .rows li {
+    padding: var(--s-4) 0;
+    border-bottom: var(--rule);
+  }
+
+  .rows__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--s-3);
+  }
+
+  .rows__head a {
+    font-size: 1rem;
+  }
+
+  .rows__pri {
+    font-family: var(--font-ui);
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    white-space: nowrap;
+  }
+
+  .rows__pri[data-pri='1 - decisive'] {
+    color: var(--ink);
+  }
+
+  .rows__settle {
+    margin: var(--s-2) 0 0;
+    font-size: 0.9rem;
+    line-height: var(--leading);
+  }
+
+  .rows__backlog {
+    margin: var(--s-3) 0 0;
+    font-size: 0.85rem;
+    line-height: var(--leading);
+    color: var(--ink-secondary);
+  }
+
+  .rows__backloglabel {
+    display: block;
+    font-family: var(--font-ui);
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  .rows__backlog--none {
+    color: var(--ink-muted);
+    font-style: italic;
+  }
+</style>

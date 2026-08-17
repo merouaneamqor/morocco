@@ -12,7 +12,16 @@
   "Digitised": "Catalogue online only",
   "Verification": "Catalogue verified",
   "Priority": "1 - decisive",
-  "URL": "http://pares.mcu.es/"
+  "URL": "http://pares.mcu.es/",
+  "Search terms to use": "Alta Comisaría de España en Marruecos; Regulares; Rif; Abd el-Krim; Silvestre; Picasso; Annual",
+  "Not yet searched": "Spanish chemical operations: sortie records, munition expenditure, target lists 1923–1927. The Expediente Picasso original itself has not been consulted at document level by this project — see Claims: ‘Annual, July 1921: Spanish dead ranged 7,875 to 13,363.’",
+  "Language": [
+   "Spanish"
+  ],
+  "Related people": [],
+  "Related events": [
+   "https://app.notion.com/3bd885d88042815dbedbcdbc75ec4555"
+  ]
  },
  {
   "url": "https://app.notion.com/3bd885d88042810ebbf2dda17bbdbee4",
@@ -27,7 +36,18 @@
   "Digitised": "Catalogue online only",
   "Verification": "Catalogue verified",
   "Priority": "1 - decisive",
-  "URL": "https://www.servicehistorique.sga.defense.gouv.fr/"
+  "URL": "https://www.servicehistorique.sga.defense.gouv.fr/",
+  "Search terms to use": "El Herri; Khénifra; Zaian; Commandement Supérieur 3H 314–752; Goums 3H 2375–2711; Bougafer 1933",
+  "Not yet searched": "Khénifra Bureau des Affaires Indigènes political bulletins, Nov 1914 and Mar–Apr 1921; Khénifra–regional command correspondence, 1–13 November 1914; the Lyautey–Millerand exchange after El Herri (série N, 5N 39–64); 1933 Bougafer operations reports and aerial reconnaissance.",
+  "Language": [
+   "French"
+  ],
+  "Related people": [
+   "https://app.notion.com/3bd885d8804281069065dca56f72a3d1"
+  ],
+  "Related events": [
+   "https://app.notion.com/3bd885d8804281bdb41bd27c3f2ce26a"
+  ]
  },
  {
   "url": "https://app.notion.com/3bd885d88042811f89b1e8ec961b8231",
@@ -42,7 +62,12 @@
   "Digitised": "Partly online",
   "Verification": "Catalogue verified",
   "Priority": "1 - decisive",
-  "URL": "https://discovery.nationalarchives.gov.uk/"
+  "URL": "https://discovery.nationalarchives.gov.uk/",
+  "Search terms to use": null,
+  "Not yet searched": null,
+  "Language": [],
+  "Related people": [],
+  "Related events": []
  },
  {
   "url": "https://app.notion.com/3bd885d88042812583c7d06aff637d5f",
@@ -57,7 +82,18 @@
   "Digitised": "On-site only",
   "Verification": "Described by named scholar",
   "Priority": "1 - decisive",
-  "URL": "https://hazine.info/tag/morocco-en/"
+  "URL": "https://hazine.info/tag/morocco-en/",
+  "Search terms to use": "Fonds Protectorat; Traité de Fès; bay'a 1953; ben Arafa",
+  "Not yet searched": "The Arabic instrument of the Treaty of Fez, and the 1953 ben Arafa bay'a with its signatories — neither has been consulted. Together they would settle two of this workspace's Tier-1 disputes.",
+  "Language": [
+   "Arabic",
+   "French"
+  ],
+  "Related people": [],
+  "Related events": [
+   "https://app.notion.com/3bd885d88042812c8062dc72e48e4f85",
+   "https://app.notion.com/3bd885d88042813c9fa1dbb4207d72cf"
+  ]
  },
  {
   "url": "https://app.notion.com/3bd885d88042813f93eac1fd57c04d00",
@@ -72,7 +108,12 @@
   "Digitised": "Catalogue online only",
   "Verification": "Described by named scholar",
   "Priority": "1 - decisive",
-  "URL": null
+  "URL": null,
+  "Search terms to use": null,
+  "Not yet searched": null,
+  "Language": [],
+  "Related people": [],
+  "Related events": []
  },
  {
   "url": "https://app.notion.com/3bd885d88042814b8f66cde87630f291",
@@ -87,7 +128,12 @@
   "Digitised": "Catalogue online only",
   "Verification": "Catalogue verified",
   "Priority": "2 - structural",
-  "URL": "https://www.archives.gov/research/guide-fed-records/groups/084.html"
+  "URL": "https://www.archives.gov/research/guide-fed-records/groups/084.html",
+  "Search terms to use": null,
+  "Not yet searched": null,
+  "Language": [],
+  "Related people": [],
+  "Related events": []
  },
  {
   "url": "https://app.notion.com/3bd885d88042815b910bf3742aee48f9",
@@ -102,7 +148,12 @@
   "Digitised": "Catalogue online only",
   "Verification": "Described by named scholar",
   "Priority": "1 - decisive",
-  "URL": null
+  "URL": null,
+  "Search terms to use": null,
+  "Not yet searched": null,
+  "Language": [],
+  "Related people": [],
+  "Related events": []
  },
  {
   "url": "https://app.notion.com/3bd885d88042815eaa78ecbddfedda5f",
@@ -117,7 +168,12 @@
   "Digitised": "Substantially online",
   "Verification": "Catalogue verified",
   "Priority": "2 - structural",
-  "URL": "https://gallica.bnf.fr/"
+  "URL": "https://gallica.bnf.fr/",
+  "Search terms to use": null,
+  "Not yet searched": null,
+  "Language": [],
+  "Related people": [],
+  "Related events": []
  },
  {
   "url": "https://app.notion.com/3bd885d88042816ba5e7f337c516fa46",
@@ -132,7 +188,14 @@
   "Digitised": "Catalogue online only",
   "Verification": "Described by named scholar",
   "Priority": "1 - decisive",
-  "URL": "https://www.persee.fr/doc/gazar_0016-5522_1979_num_107_1_2714_t1_0306_0000_2"
+  "URL": "https://www.persee.fr/doc/gazar_0016-5522_1979_num_107_1_2714_t1_0306_0000_2",
+  "Search terms to use": "al-Wathā'iq; Makhzen correspondence",
+  "Not yet searched": "The published al-Wathā'iq volumes, issued since 1976, are the accessible entry point and have not yet been read by this project — the single largest gap in this workspace, and one that requires no reading-room permit.",
+  "Language": [
+   "Arabic"
+  ],
+  "Related people": [],
+  "Related events": []
  },
  {
   "url": "https://app.notion.com/3bd885d88042817caadbec370fd82cba",
@@ -147,7 +210,12 @@
   "Digitised": "Substantially online",
   "Verification": "Catalogue verified",
   "Priority": "2 - structural",
-  "URL": "https://hemerotecadigital.bne.es/"
+  "URL": "https://hemerotecadigital.bne.es/",
+  "Search terms to use": null,
+  "Not yet searched": null,
+  "Language": [],
+  "Related people": [],
+  "Related events": []
  },
  {
   "url": "https://app.notion.com/3bd885d8804281839fe7efd863dbb395",
@@ -162,7 +230,12 @@
   "Digitised": "Substantially online",
   "Verification": "Catalogue verified",
   "Priority": "1 - decisive",
-  "URL": "https://history.state.gov/historicaldocuments"
+  "URL": "https://history.state.gov/historicaldocuments",
+  "Search terms to use": null,
+  "Not yet searched": null,
+  "Language": [],
+  "Related people": [],
+  "Related events": []
  },
  {
   "url": "https://app.notion.com/3bd885d8804281a584eecfaa5b90180d",
@@ -177,7 +250,12 @@
   "Digitised": "Partly online",
   "Verification": "Catalogue verified",
   "Priority": "2 - structural",
-  "URL": null
+  "URL": null,
+  "Search terms to use": null,
+  "Not yet searched": null,
+  "Language": [],
+  "Related people": [],
+  "Related events": []
  },
  {
   "url": "https://app.notion.com/3bd885d8804281a68b01d3d0e10c5a1e",
@@ -192,7 +270,12 @@
   "Digitised": "Partly online",
   "Verification": "Reported",
   "Priority": "3 - supporting",
-  "URL": null
+  "URL": null,
+  "Search terms to use": null,
+  "Not yet searched": null,
+  "Language": [],
+  "Related people": [],
+  "Related events": []
  },
  {
   "url": "https://app.notion.com/3bd885d8804281d1bd17e182c0c10d07",
@@ -207,7 +290,12 @@
   "Digitised": "Partly online",
   "Verification": "Reported",
   "Priority": "3 - supporting",
-  "URL": "https://legation.org/"
+  "URL": "https://legation.org/",
+  "Search terms to use": null,
+  "Not yet searched": null,
+  "Language": [],
+  "Related people": [],
+  "Related events": []
  },
  {
   "url": "https://app.notion.com/3bd885d8804281e19b7fe5742ae0f9a3",
@@ -222,7 +310,12 @@
   "Digitised": "Partly online",
   "Verification": "Reported",
   "Priority": "1 - decisive",
-  "URL": "https://www.hrw.org/reports/morocco1105frwcover.pdf"
+  "URL": "https://www.hrw.org/reports/morocco1105frwcover.pdf",
+  "Search terms to use": null,
+  "Not yet searched": null,
+  "Language": [],
+  "Related people": [],
+  "Related events": []
  },
  {
   "url": "https://app.notion.com/3bd885d8804281ed8b1cfa55fdf14a6e",
@@ -237,7 +330,12 @@
   "Digitised": "On-site only",
   "Verification": "Described by named scholar",
   "Priority": "1 - decisive",
-  "URL": null
+  "URL": null,
+  "Search terms to use": null,
+  "Not yet searched": null,
+  "Language": [],
+  "Related people": [],
+  "Related events": []
  },
  {
   "url": "https://app.notion.com/3bd885d8804281ef9949c1347d952a40",
@@ -252,7 +350,20 @@
   "Digitised": "Catalogue online only",
   "Verification": "Catalogue verified",
   "Priority": "1 - decisive",
-  "URL": "https://archivesdiplomatiques.diplomatie.gouv.fr/"
+  "URL": "https://archivesdiplomatiques.diplomatie.gouv.fr/",
+  "Search terms to use": "Correspondance politique Maroc; Régnault; Résidence Générale 1953; Traité de Fès",
+  "Not yet searched": "Regnault's reporting to the Quai d'Orsay, 29–31 March 1912; the Résidence Générale–Paris correspondence, May–August 1953 — the document that would settle who decided the 1953 deposition of Mohammed V (see Disputes).",
+  "Language": [
+   "French"
+  ],
+  "Related people": [
+   "https://app.notion.com/3bd885d8804281ba9a61f09c5319fae6",
+   "https://app.notion.com/3bd885d88042816890bbd098d5766577"
+  ],
+  "Related events": [
+   "https://app.notion.com/3bd885d88042812c8062dc72e48e4f85",
+   "https://app.notion.com/3bd885d88042813c9fa1dbb4207d72cf"
+  ]
  },
  {
   "url": "https://app.notion.com/3bd885d8804281f0ad5af3108416043e",
@@ -267,7 +378,12 @@
   "Digitised": "Substantially online",
   "Verification": "Catalogue verified",
   "Priority": "2 - structural",
-  "URL": "https://archive.org/"
+  "URL": "https://archive.org/",
+  "Search terms to use": null,
+  "Not yet searched": null,
+  "Language": [],
+  "Related people": [],
+  "Related events": []
  },
  {
   "url": "https://app.notion.com/3bd885d8804281f398b6def120ccfe87",
@@ -282,7 +398,12 @@
   "Digitised": "Catalogue online only",
   "Verification": "Reported",
   "Priority": "3 - supporting",
-  "URL": null
+  "URL": null,
+  "Search terms to use": null,
+  "Not yet searched": null,
+  "Language": [],
+  "Related people": [],
+  "Related events": []
  },
  {
   "url": "https://app.notion.com/3bd885d8804281fea843d666fceed7a4",
@@ -297,7 +418,12 @@
   "Digitised": "Partly online",
   "Verification": "Catalogue verified",
   "Priority": "2 - structural",
-  "URL": "https://www.bnrm.ma/bnrm/fr/bibliotheque/nos-collections.html"
+  "URL": "https://www.bnrm.ma/bnrm/fr/bibliotheque/nos-collections.html",
+  "Search terms to use": null,
+  "Not yet searched": null,
+  "Language": [],
+  "Related people": [],
+  "Related events": []
  },
  {
   "url": "https://app.notion.com/3be885d8804281068031f75be6266879",
@@ -312,7 +438,12 @@
   "Digitised": "Partly online",
   "Verification": "Reported",
   "Priority": "1 - decisive",
-  "URL": "https://www.ircam.ma/fr"
+  "URL": "https://www.ircam.ma/fr",
+  "Search terms to use": null,
+  "Not yet searched": null,
+  "Language": [],
+  "Related people": [],
+  "Related events": []
  },
  {
   "url": "https://app.notion.com/3be885d88042810ab51ddb7d37c7d57e",
@@ -327,7 +458,12 @@
   "Digitised": "Partly online",
   "Verification": "Reported",
   "Priority": "3 - supporting",
-  "URL": "https://amrh.ma/"
+  "URL": "https://amrh.ma/",
+  "Search terms to use": null,
+  "Not yet searched": null,
+  "Language": [],
+  "Related people": [],
+  "Related events": []
  },
  {
   "url": "https://app.notion.com/3be885d880428110b647c18dff9432d7",
@@ -342,7 +478,12 @@
   "Digitised": "Substantially online",
   "Verification": "Catalogue verified",
   "Priority": "1 - decisive",
-  "URL": "https://hesperis-tamuda.com/"
+  "URL": "https://hesperis-tamuda.com/",
+  "Search terms to use": null,
+  "Not yet searched": null,
+  "Language": [],
+  "Related people": [],
+  "Related events": []
  },
  {
   "url": "https://app.notion.com/3be885d88042811784a0e67ca8fa2187",
@@ -357,7 +498,12 @@
   "Digitised": "Substantially online",
   "Verification": "Catalogue verified",
   "Priority": "1 - decisive",
-  "URL": "https://shamela.ws/book/6627"
+  "URL": "https://shamela.ws/book/6627",
+  "Search terms to use": null,
+  "Not yet searched": null,
+  "Language": [],
+  "Related people": [],
+  "Related events": []
  },
  {
   "url": "https://app.notion.com/3be885d88042816d9e0cf535a7e3fa3c",
@@ -372,6 +518,18 @@
   "Digitised": "Partly online",
   "Verification": "Catalogue verified",
   "Priority": "1 - decisive",
-  "URL": "http://hcar.gov.ma/"
+  "URL": "http://hcar.gov.ma/",
+  "Search terms to use": "El Herri; Moha ou Hammou Zayani; Zaïd Ou Hmad; Cahiers des Documents Historiques de la Résistance",
+  "Not yet searched": "The Moroccan-side testimony of survivors and families in the El Herri cahier has not yet been read in full by this project.",
+  "Language": [
+   "Arabic",
+   "French"
+  ],
+  "Related people": [
+   "https://app.notion.com/3bd885d8804281069065dca56f72a3d1"
+  ],
+  "Related events": [
+   "https://app.notion.com/3bd885d8804281bdb41bd27c3f2ce26a"
+  ]
  }
 ]

@@ -1,0 +1,123 @@
+---
+/**
+ * <EvidenceLayer> — which of three voices is speaking.
+ *
+ * Primary source     what a document says
+ * Secondary interp.  what a named historian argues from it
+ * Project inference  what this project concludes
+ *
+ * These are never blended, and the badge appears on EVERY prose block rather
+ * than once per page, because a single claim mixes all three in adjacent
+ * paragraphs. A reader who cannot tell which voice a sentence is in will
+ * mistake this project's reasoning for an archival fact, which is the failure
+ * the whole corpus is built to prevent.
+ *
+ * The encoding is ordinal, not categorical: the three are ordered by distance
+ * from the document, so they take one hue in three lightness steps. See
+ * tokens.css — the page already spends its categorical hues on claim status
+ * and narrative tradition, and the magenta-purple family is the only one left
+ * that clears the colour-vision floors against both of those systems.
+ *
+ * Colour is never the only channel: icon and text label are not optional.
+ */
+import { EVIDENCE_LAYERS } from '../content.config';
+
+type Layer = (typeof EVIDENCE_LAYERS)[number];
+
+interface Props {
+  layer: Layer;
+  /** 'chip' inline, 'block' when it heads a prose block. */
+  variant?: 'chip' | 'block';
+  class?: string;
+}
+
+const { layer, variant = 'chip', class: className = '' } = Astro.props;
+
+const KEYS: Record<Layer, string> = {
+  'Primary source': 'primary',
+  'Secondary interpretation': 'secondary',
+  'Project inference': 'inference',
+};
+
+/**
+ * Icons read as distance from the document: a filled mark for the document
+ * itself, a half mark for a historian reading it, an open mark for us
+ * reasoning at one further remove.
+ */
+const ICONS: Record<Layer, string> = {
+  'Primary source': '▣',
+  'Secondary interpretation': '◪',
+  'Project inference': '◫',
+};
+
+const EXPLAIN: Record<Layer, string> = {
+  'Primary source': 'What a document produced at the time says.',
+  'Secondary interpretation': 'What a named scholar argues from the evidence.',
+  'Project inference': 'What this project concludes. Not a source.',
+};
+
+const key = KEYS[layer];
+---
+
+<span
+  class:list={['layer', `layer--${key}`, `layer--${variant}`, className]}
+  data-evidence-layer={layer}
+  title={EXPLAIN[layer]}
+>
+  <span class="layer__icon" aria-hidden="true">{ICONS[layer]}</span>
+  <span class="layer__label">{layer}</span>
+</span>
+
+<style>
+  .layer {
+    display: inline-flex;
+    align-items: baseline;
+    gap: var(--s-2);
+    font-family: var(--font-ui);
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 1.2;
+    border: 1px solid currentColor;
+    border-radius: var(--radius);
+    padding: 0.15em 0.45em;
+    white-space: nowrap;
+  }
+
+  .layer__icon {
+    font-size: 0.85em;
+  }
+
+  .layer--primary {
+    color: var(--layer-primary);
+    background: var(--layer-primary-bg);
+  }
+  .layer--secondary {
+    color: var(--layer-secondary);
+    background: var(--layer-secondary-bg);
+  }
+  .layer--inference {
+    color: var(--layer-inference);
+    background: var(--layer-inference-bg);
+  }
+
+  /* The lightest step sits below 3:1 on the light surface by construction —
+     it is the far end of an ordinal ramp. The label carries it, and on a
+     block the text is ink, never the ramp colour. */
+  .layer--inference .layer__label {
+    color: var(--ink-secondary);
+  }
+
+  .layer--block {
+    display: inline-flex;
+    margin-bottom: var(--s-2);
+  }
+
+  @media (forced-colors: active) {
+    .layer {
+      border: 1px solid CanvasText;
+      background: Canvas;
+      color: CanvasText;
+    }
+  }
+</style>

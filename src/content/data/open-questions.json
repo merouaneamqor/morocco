@@ -1,0 +1,85 @@
+[
+ {
+  "slug": "how-did-silvestre-die-at-annual-july-1921",
+  "notionId": "3bf885d880428105bcc9e5582ed74b5e",
+  "question": "How did Silvestre die at Annual, July 1921?",
+  "whatWeKnow": "Suicide is the most repeated account. It is repeated, not documented.",
+  "missingEvidence": "Any eyewitness or forensic account from July 1921 itself.",
+  "documentsRequested": "The Expediente Picasso, not yet consulted directly by this project.",
+  "whyWeDontKnow": "Contradictory",
+  "researchStatus": "Active investigation",
+  "phase": null,
+  "archives": [],
+  "people": [],
+  "events": [
+   "annual-and-the-rif-war"
+  ],
+  "claims": [
+   "annual-july-1921-spanish-dead-ranged-7-875-to-13-363"
+  ]
+ },
+ {
+  "slug": "do-the-arabic-and-french-texts-of-the-treaty-of-fez-differ-in-substance-clause-by-clause",
+  "notionId": "3bf885d88042810baeddf247bab6d3b5",
+  "question": "Do the Arabic and French texts of the Treaty of Fez differ in substance, clause by clause?",
+  "whatWeKnow": "A Moroccan legal argument holds they differ in substance and that this is the foundation of the claim the Protectorate was legally void. No comparison has been performed within this workspace.",
+  "missingEvidence": "A clause-by-clause bilingual comparison of both signed instruments.",
+  "documentsRequested": "The two signed texts of the Treaty of Fez, 30 March 1912 — Archives diplomatiques (Traites); Archives du Maroc / Hasaniya Library, Rabat. This workspace's own highest verification priority.",
+  "whyWeDontKnow": "Never searched",
+  "researchStatus": "Active investigation",
+  "phase": null,
+  "archives": [],
+  "people": [],
+  "events": [
+   "treaty-of-fez-and-the-april-1912-rising"
+  ],
+  "claims": []
+ },
+ {
+  "slug": "what-did-roosevelt-actually-say-to-mohammed-v-at-anfa-22-january-1943",
+  "notionId": "3bf885d8804281609839c388fc82221e",
+  "question": "What did Roosevelt actually say to Mohammed V at Anfa, 22 January 1943?",
+  "whatWeKnow": "FRUS Document 376 was consulted directly. It establishes that no verbatim record of the dinner-party conversation exists.",
+  "missingEvidence": "A stenographic or contemporaneous written record, if one was ever made — none has been found.",
+  "documentsRequested": "None further identified. Stenner (2014) works from State Department cables and photographs of Roosevelt's later letters to the sultan, not from a transcript of the conversation itself.",
+  "whyWeDontKnow": "Unclear",
+  "researchStatus": "Closed - answer found",
+  "phase": null,
+  "archives": [],
+  "people": [],
+  "events": [
+   "casablanca-1907-killings-bombardment-and-occupation"
+  ],
+  "claims": []
+ },
+ {
+  "slug": "what-do-the-withheld-french-and-cia-files-on-ben-barka-s-disappearance-actually-contain",
+  "notionId": "3bf885d88042818ba4d3c07bdf1076c1",
+  "question": "What do the withheld French and CIA files on Ben Barka's disappearance actually contain?",
+  "whatWeKnow": "A French court named Oufkir. Dlimi, Mossad and CIA involvement are alleged, not established.",
+  "missingEvidence": "The content of files understood to exist and not to have been released — roughly 1,800 CIA documents are acknowledged but undisclosed, per the Archival research plan.",
+  "documentsRequested": "Not obtainable through ordinary catalogue research. This is a case of withholding, not absence.",
+  "whyWeDontKnow": "Classified or withheld",
+  "researchStatus": "Paused",
+  "phase": null,
+  "archives": [],
+  "people": [],
+  "events": [],
+  "claims": []
+ },
+ {
+  "slug": "is-sidi-mohamed-ben-hammou-one-person-or-a-conflation-of-two",
+  "notionId": "3bf885d8804281d4a76ecef3a3885687",
+  "question": "Is 'Sidi Mohamed Ben Hammou' one person or a conflation of two?",
+  "whatWeKnow": "The name recurs in sources touching on this workspace's already-flagged near-duplicate identities (compare Moha ou Said vs Mouha ou Hammou Zayani, and the two men named Ameziane). The corpus deliberately declines to resolve this identification rather than guess.",
+  "missingEvidence": "A source-by-source table of every instance of the name with full context, cross-checked against the two already-distinguished cases.",
+  "documentsRequested": "Not yet specified — this is a research task, not yet an archive-request task.",
+  "whyWeDontKnow": "Contradictory",
+  "researchStatus": "Active investigation",
+  "phase": null,
+  "archives": [],
+  "people": [],
+  "events": [],
+  "claims": []
+ }
+]

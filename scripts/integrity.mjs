@@ -32,6 +32,12 @@ const warnings = [];
 const err = (rule, msg) => errors.push({ rule, msg });
 const warn = (rule, msg) => warnings.push({ rule, msg });
 
+/** A normalized collection, or null when it has not been generated. */
+const readJson = (name) => {
+  const p = join(DATA, name);
+  return existsSync(p) ? JSON.parse(readFileSync(p, 'utf8')) : null;
+};
+
 /** Walk dist/ for HTML files. */
 function htmlFiles(dir = DIST, out = []) {
   if (!existsSync(dir)) return out;
@@ -353,12 +359,133 @@ function ruleContestedAgreesWithDisputed() {
   }
 }
 
+// ---------------------------------------------------------------- rule 6
+/**
+ * ERROR — a claim page must never show a quotation it does not have.
+ *
+ * The failure this catches is the one the whole evidence chain exists to
+ * prevent: a rendered page that looks like somebody read the document. If the
+ * corpus says "not yet consulted directly", the built page has to say so in
+ * words a reader will see. A silent blank beside a precise-looking archival
+ * reference is indistinguishable from a citation.
+ */
+function ruleClaimQuotationHonesty() {
+  const claims = readJson('claim-records.json');
+  if (!claims) return;
+
+  for (const c of claims) {
+    const says = (c.whatTheDocumentSays ?? '').trim();
+    const notRead = says === '' || /^not (yet consulted|applicable)/i.test(says);
+    if (!notRead) continue;
+
+    const file = join(DIST, 'claims', c.slug, 'index.html');
+    if (!existsSync(file)) {
+      err('claim-quote', `${c.slug}: no built page at claims/${c.slug}/`);
+      continue;
+    }
+    const html = readFileSync(file, 'utf8');
+    if (!/Not yet consulted directly/i.test(html)) {
+      err(
+        'claim-quote',
+        `${c.slug}: no document has been read, but the page never says so. ` +
+          'An unstated absence reads as a citation.'
+      );
+    }
+    // A blockquote on such a page would be a quotation of nothing.
+    if (/<blockquote class="verbatim"/.test(html)) {
+      err(
+        'claim-quote',
+        `${c.slug}: renders a verbatim blockquote although no document has been consulted.`
+      );
+    }
+  }
+}
+
+// ---------------------------------------------------------------- rule 7
+/**
+ * ERROR — an unverified archival reference on a claim must render as such.
+ *
+ * Same rule as #3, applied to the Claims database rather than to dossier
+ * prose. The corpus's standing rule is that a reference is written out only
+ * when it can be seen; a claim carrying NOT YET VERIFIED must carry those
+ * words into the HTML.
+ */
+function ruleClaimRefHonesty() {
+  const claims = readJson('claim-records.json');
+  if (!claims) return;
+
+  for (const c of claims) {
+    if (!/ARCHIVAL REFERENCE NOT YET VERIFIED/i.test(c.archivalReference ?? '')) continue;
+    const file = join(DIST, 'claims', c.slug, 'index.html');
+    if (!existsSync(file)) continue;
+    if (!/NOT YET VERIFIED/.test(readFileSync(file, 'utf8'))) {
+      err(
+        'claim-ref',
+        `${c.slug}: archival reference is NOT YET VERIFIED but the page does not say so.`
+      );
+    }
+  }
+}
+
+// ---------------------------------------------------------------- rule 8
+/**
+ * ERROR — no dispute column may be styled as the answer.
+ *
+ * The matrix keeps four national positions apart. If a future edit gives one
+ * of them distinct emphasis, the side-by-side presentation silently becomes
+ * an argument. Checked structurally: every position cell in a row carries the
+ * same class set, and empty ones render a visible em-dash rather than nothing.
+ */
+function ruleDisputeColumnsNeutral() {
+  const file = join(DIST, 'disputes', 'index.html');
+  if (!existsSync(file)) return;
+  const html = readFileSync(file, 'utf8');
+
+  const rows = html.match(/<tr[^>]*data-mx-row[\s\S]*?<\/tr>/g) ?? [];
+  if (!rows.length) {
+    err('dispute-matrix', 'the disputes page has no matrix rows — the matrix did not render.');
+    return;
+  }
+
+  for (const row of rows) {
+    const cells = row.match(/<td[^>]*>/g) ?? [];
+    // Four national positions + the assessment column.
+    if (cells.length !== 5) {
+      err('dispute-matrix', `a matrix row has ${cells.length} cells, expected 5.`);
+      continue;
+    }
+    const positionCells = cells.slice(0, 4);
+    const classes = positionCells.map((c) => (c.match(/class="([^"]*)"/)?.[1] ?? '').trim());
+    const distinct = new Set(classes.map((c) => c.replace(/\bmx__empty\b/, '').trim()));
+    if (distinct.size > 1) {
+      err(
+        'dispute-matrix',
+        `position columns carry different classes (${[...distinct].join(' | ')}) — ` +
+          'one column is being styled as the answer.'
+      );
+    }
+  }
+
+  // Empty positions must be visible, not collapsed away.
+  const emptyCells = (html.match(/class="mx__empty"[^>]*>([^<]*)</g) ?? []).map((m) =>
+    m.slice(m.indexOf('>') + 1, -1).trim()
+  );
+  for (const text of emptyCells) {
+    if (text !== '—') {
+      err('dispute-matrix', `an empty position cell renders "${text}" instead of an em-dash.`);
+    }
+  }
+}
+
 // -------------------------------------------------------------------- run
 ruleUnknownSelects();
 ruleUnverifiedRefText();
 ruleBareFigures();
 ruleColonialTerms();
 ruleContestedAgreesWithDisputed();
+ruleClaimQuotationHonesty();
+ruleClaimRefHonesty();
+ruleDisputeColumnsNeutral();
 
 const seen = new Set();
 const dedupe = (list) =>
