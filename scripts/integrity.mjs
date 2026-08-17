@@ -109,6 +109,11 @@ function ruleUnknownSelects() {
     },
   };
 
+  // Fields where a missing value is a recorded gap rather than a fault, and
+  // is surfaced in the UI as its own state. These warn instead of failing —
+  // but they do warn, so the gap stays visible rather than becoming normal.
+  const NULLABLE_WITH_WARNING = { 'sources.json': ['verification'] };
+
   for (const [file, fields] of Object.entries(VOCAB)) {
     const p = join(DATA, file);
     if (!existsSync(p)) continue;
@@ -116,7 +121,17 @@ function ruleUnknownSelects() {
     for (const row of rows) {
       for (const [field, allowed] of Object.entries(fields)) {
         const v = row[field];
-        if (v == null) continue;
+        if (v == null) {
+          if (NULLABLE_WITH_WARNING[file]?.includes(field)) {
+            warn(
+              'missing-verification',
+              `${file}: ${row.slug ?? '?'} has no ${field}. The site renders this as ` +
+                `"verification not recorded" rather than assuming a value — but the corpus ` +
+                `should eventually state one.`
+            );
+          }
+          continue;
+        }
         if (!allowed.includes(v)) {
           err(
             'unknown-select',
@@ -173,7 +188,7 @@ function ruleBareFigures() {
       // and could still assert a bare figure further down; checking only the
       // first hit would find the qualified one and skip the rest of the page.
       const bare = figure.replace(/,/g, '');
-      const re = new RegExp(`(?<![\\d.,])(${figure}|${bare})(?![\\d.,])`, 'g');
+      const re = new RegExp(`(?<![\\d.,])(${figure}|${bare})(?![\\d]|[.,]\\d)`, 'g');
 
       for (const hit of text.matchAll(re)) {
         // The spread may legitimately span a clause or two, so look for
@@ -189,7 +204,7 @@ function ruleBareFigures() {
         const showsSpread = members.some((other) => {
           if (other === figure) return false;
           const otherBare = other.replace(/,/g, '');
-          return new RegExp(`(?<![\\d.,])(${other}|${otherBare})(?![\\d.,])`).test(wide);
+          return new RegExp(`(?<![\\d.,])(${other}|${otherBare})(?![\\d]|[.,]\\d)`).test(wide);
         });
         if (showsSpread) continue;
 

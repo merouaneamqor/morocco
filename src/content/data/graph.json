@@ -1034,6 +1034,82 @@
     "Collaborating notable"
    ],
    "degree": 1
+  },
+  {
+   "id": "germain-ayache",
+   "label": "Germain Ayache",
+   "group": "other",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "IX 1961-1999"
+   ],
+   "category": [
+    "Other foreign"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "ahmad-ibn-khalid-al-nasiri",
+   "label": "Ahmad ibn Khalid al-Nasiri",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Substantial",
+   "phase": [
+    "II 1830-1900"
+   ],
+   "category": [
+    "Religious leader",
+    "Makhzen official"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "zaid-ou-hmad",
+   "label": "Zaïd Ou Hmad",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Identified - not yet researched",
+   "phase": [
+    "V 1921-1934",
+    "VI 1934-1944"
+   ],
+   "category": [
+    "Armed resistance",
+    "Tribal leader"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "mohammed-sellam-ameziane",
+   "label": "Mohammed Sellam Ameziane",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "VII 1944-1956",
+    "VIII 1956-1961"
+   ],
+   "category": [
+    "Armed resistance",
+    "Nationalist"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "abdallah-laroui",
+   "label": "Abdallah Laroui",
+   "group": "other",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "IX 1961-1999",
+    "X 1999-present"
+   ],
+   "category": [
+    "Other foreign"
+   ],
+   "degree": 0
   }
  ],
  "edges": [

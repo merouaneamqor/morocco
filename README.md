@@ -142,8 +142,25 @@ this one.
 
 ## State of the corpus
 
-65 people (9 full dossiers, 4 substantial, 51 stubs), 10 events, 14 sources,
-20 archives, 8 places, 8 groups, 22 documented relationships, 16 mapped disputes.
+70 people (9 full dossiers, 5 substantial), 14 events, 26 sources, 25 archives,
+8 places, 8 groups, 22 documented relationships, 16 mapped disputes.
+
+The corpus's later sessions began closing its own largest gap. It now holds six
+Arabic-language sources — five at primary or official tier — including al-Nasiri's
+*Kitāb al-Istiqsā* and the HCAR resistance cahiers, which carry the first
+Moroccan-side documentary treatment of El Herri. The synthesis essay still states
+that the Moroccan documentary base is zero, because it was written before those
+were added. **The site renders the essay verbatim and shows the discrepancy beside
+it** rather than editing corpus text: resolving it is a historiographical judgement
+that belongs to the corpus, not to its renderer.
+
+### A third verification state
+
+Sources added in those later sessions carry no `Verification` value at all. That is
+distinct from `NOT YET VERIFIED`: one is a judgement the corpus has made, the other
+is a judgement it has not. They render differently — dashed and warning-coloured for
+unverified, dotted and muted for unrecorded — and `integrity.mjs` warns on every
+missing value so the gap stays visible instead of becoming normal.
 
 **The site says a thin dossier is thin rather than padding it out.** Dossier bodies
 for the remaining stubs have not yet been pulled from Notion; those pages render

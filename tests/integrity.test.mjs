@@ -150,6 +150,22 @@ test('rule 2: scans every occurrence, not just the first', () => {
   );
 });
 
+test('rule 2: a figure at the end of a sentence is still detected', () => {
+  // The trailing boundary must reject a continuation of the number, not
+  // sentence punctuation. `(?![\d.,])` rejected any figure followed by a full
+  // stop, so a bare contested number ending a sentence went undetected —
+  // which is a common way to write one.
+  const boundary = (fig) =>
+    new RegExp(`(?<![\\d.,])(${fig}|${fig.replace(/,/g, '')})(?![\\d]|[.,]\\d)`);
+
+  assert.ok(boundary('13,363').test('The Spanish lost 13,363.'), 'end of sentence');
+  assert.ok(boundary('13,363').test('The Spanish lost 13,363 men'), 'mid sentence');
+  assert.ok(boundary('13,363').test('(13,363)'), 'parenthesised');
+  // But a longer number that merely contains it is still not a match.
+  assert.ok(!boundary('13,363').test('reference 13,3635'), 'not a longer integer');
+  assert.ok(!boundary('13,363').test('value 13,363.5'), 'not a decimal');
+});
+
 // ---------------------------------------------------------------- rule 6
 test('rule 6: Born and Died render verbatim, never reformatted as dates', () => {
   const people = readData('people.json');
