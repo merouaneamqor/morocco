@@ -1,0 +1,72 @@
+[
+ {
+  "url": "https://app.notion.com/3bf885d880428105bcc9e5582ed74b5e",
+  "Question": "How did Silvestre die at Annual, July 1921?",
+  "What we know": "Suicide is the most repeated account. It is repeated, not documented.",
+  "Missing evidence": "Any eyewitness or forensic account from July 1921 itself.",
+  "Documents requested": "The Expediente Picasso, not yet consulted directly by this project.",
+  "Why we don't know": "Contradictory",
+  "Research status": "Active investigation",
+  "Phase": null,
+  "Archives likely to hold it": [],
+  "People": [],
+  "Events": ["https://app.notion.com/3bd885d88042815dbedbcdbc75ec4555"],
+  "Related claims": ["https://app.notion.com/3bf885d8804281bea498c5bc39a03858"]
+ },
+ {
+  "url": "https://app.notion.com/3bf885d88042810baeddf247bab6d3b5",
+  "Question": "Do the Arabic and French texts of the Treaty of Fez differ in substance, clause by clause?",
+  "What we know": "A Moroccan legal argument holds they differ in substance and that this is the foundation of the claim the Protectorate was legally void. No comparison has been performed within this workspace.",
+  "Missing evidence": "A clause-by-clause bilingual comparison of both signed instruments.",
+  "Documents requested": "The two signed texts of the Treaty of Fez, 30 March 1912 — Archives diplomatiques (Traites); Archives du Maroc / Hasaniya Library, Rabat. This workspace's own highest verification priority.",
+  "Why we don't know": "Never searched",
+  "Research status": "Active investigation",
+  "Phase": null,
+  "Archives likely to hold it": [],
+  "People": [],
+  "Events": ["https://app.notion.com/3bd885d88042812c8062dc72e48e4f85"],
+  "Related claims": []
+ },
+ {
+  "url": "https://app.notion.com/3bf885d8804281609839c388fc82221e",
+  "Question": "What did Roosevelt actually say to Mohammed V at Anfa, 22 January 1943?",
+  "What we know": "FRUS Document 376 was consulted directly. It establishes that no verbatim record of the dinner-party conversation exists.",
+  "Missing evidence": "A stenographic or contemporaneous written record, if one was ever made — none has been found.",
+  "Documents requested": "None further identified. Stenner (2014) works from State Department cables and photographs of Roosevelt's later letters to the sultan, not from a transcript of the conversation itself.",
+  "Why we don't know": "Unclear",
+  "Research status": "Closed - answer found",
+  "Phase": null,
+  "Archives likely to hold it": [],
+  "People": [],
+  "Events": ["https://app.notion.com/3bd885d880428147befce3e3c073c7a3"],
+  "Related claims": []
+ },
+ {
+  "url": "https://app.notion.com/3bf885d88042818ba4d3c07bdf1076c1",
+  "Question": "What do the withheld French and CIA files on Ben Barka's disappearance actually contain?",
+  "What we know": "A French court named Oufkir. Dlimi, Mossad and CIA involvement are alleged, not established.",
+  "Missing evidence": "The content of files understood to exist and not to have been released — roughly 1,800 CIA documents are acknowledged but undisclosed, per the Archival research plan.",
+  "Documents requested": "Not obtainable through ordinary catalogue research. This is a case of withholding, not absence.",
+  "Why we don't know": "Classified or withheld",
+  "Research status": "Paused",
+  "Phase": null,
+  "Archives likely to hold it": [],
+  "People": [],
+  "Events": [],
+  "Related claims": []
+ },
+ {
+  "url": "https://app.notion.com/3bf885d8804281d4a76ecef3a3885687",
+  "Question": "Is 'Sidi Mohamed Ben Hammou' one person or a conflation of two?",
+  "What we know": "The name recurs in sources touching on this workspace's already-flagged near-duplicate identities (compare Moha ou Said vs Mouha ou Hammou Zayani, and the two men named Ameziane). The corpus deliberately declines to resolve this identification rather than guess.",
+  "Missing evidence": "A source-by-source table of every instance of the name with full context, cross-checked against the two already-distinguished cases.",
+  "Documents requested": "Not yet specified — this is a research task, not yet an archive-request task.",
+  "Why we don't know": "Contradictory",
+  "Research status": "Active investigation",
+  "Phase": null,
+  "Archives likely to hold it": [],
+  "People": [],
+  "Events": [],
+  "Related claims": []
+ }
+]

@@ -1,0 +1,185 @@
+---
+/**
+ * The claim index.
+ *
+ * Five rows. That is the whole corpus of worked claims, and the page says so
+ * rather than padding the list or hiding the count. The header states how many
+ * of them rest on a document somebody has actually read, because that number
+ * — currently zero — is the most important fact about this collection.
+ */
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ClaimStatus from '../../components/ClaimStatus.astro';
+import EvidenceLayer from '../../components/EvidenceLayer.astro';
+
+const claims = (await getCollection('claims')).map((c) => c.data);
+
+const consulted = claims.filter(
+  (c) =>
+    c.whatTheDocumentSays &&
+    !/^not (yet consulted|applicable)/i.test(c.whatTheDocumentSays.trim())
+).length;
+
+const unverifiedRefs = claims.filter((c) =>
+  /ARCHIVAL REFERENCE NOT YET VERIFIED/i.test(c.archivalReference ?? '')
+).length;
+
+const byConfidence = new Map<string, typeof claims>();
+for (const c of claims) {
+  const k = c.confidence ?? 'Not recorded';
+  byConfidence.set(k, [...(byConfidence.get(k) ?? []), c]);
+}
+---
+
+<Base
+  title="Claims"
+  description="The atomic unit of the corpus: a claim, the evidence under it, what the document actually says, and the counter-evidence."
+>
+  <h1>Claims</h1>
+
+  <p class="lede">
+    A claim is the atomic unit here. Each one carries the evidence beneath it, what the
+    document actually says, the counter-evidence, and why the sources disagree — so that
+    a reader can audit the reasoning rather than take it on trust.
+  </p>
+
+  <!-- The honest header. These three numbers are the state of the work. -->
+  <dl class="state">
+    <div>
+      <dt>Worked claims</dt>
+      <dd>{claims.length}</dd>
+    </div>
+    <div>
+      <dt>Resting on a document read directly</dt>
+      <dd>{consulted}</dd>
+    </div>
+    <div>
+      <dt>Carrying an unverified archival reference</dt>
+      <dd>{unverifiedRefs}</dd>
+    </div>
+  </dl>
+
+  <p class="state__note">
+    {
+      consulted === 0
+        ? 'No claim here rests on a document this project has read at document level. Every archival reference below is a route to the evidence, not a citation of it. That is the current state of the work and it is stated rather than disguised.'
+        : `${consulted} of ${claims.length} claims rest on a document read directly.`
+    }
+  </p>
+
+  {
+    [...byConfidence.entries()].map(([confidence, rows]) => (
+      <section class="group">
+        <h2>
+          {confidence}
+          <span class="group__count">{rows.length}</span>
+        </h2>
+        <ul class="claimlist">
+          {rows.map((c) => (
+            <li>
+              <a href={`/claims/${c.slug}`}>{c.claim}</a>
+              <div class="claimlist__meta">
+                {c.confidence === 'Withheld' ? (
+                  <ClaimStatus status="Unknown" withheld={true} />
+                ) : c.confidence ? (
+                  <ClaimStatus status={c.confidence} />
+                ) : null}
+                {c.evidenceLayer && <EvidenceLayer layer={c.evidenceLayer} />}
+                {c.phase && <span class="claimlist__phase">{c.phase}</span>}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+</Base>
+
+<style>
+  .lede {
+    max-width: var(--measure);
+    color: var(--ink-secondary);
+  }
+
+  .state {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: var(--s-4);
+    margin: var(--s-6) 0 var(--s-3);
+    padding: var(--s-4) 0;
+    border-top: 2px solid var(--baseline);
+    border-bottom: var(--rule);
+  }
+
+  .state dt {
+    font-family: var(--font-ui);
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  .state dd {
+    margin: var(--s-1) 0 0;
+    font-size: 1.8rem;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .state__note {
+    max-width: var(--measure);
+    font-size: 0.9rem;
+    color: var(--ink-secondary);
+    margin-bottom: var(--s-6);
+  }
+
+  .group h2 {
+    display: flex;
+    align-items: baseline;
+    gap: var(--s-3);
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-secondary);
+    border-bottom: var(--rule);
+    padding-bottom: var(--s-2);
+  }
+
+  .group__count {
+    color: var(--ink-muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .claimlist {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--s-6);
+  }
+
+  .claimlist li {
+    padding: var(--s-4) 0;
+    border-bottom: var(--rule);
+  }
+
+  .claimlist a {
+    font-size: 1.05rem;
+    line-height: var(--leading-tight);
+  }
+
+  .claimlist__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-3);
+    align-items: center;
+    margin-top: var(--s-3);
+  }
+
+  .claimlist__phase {
+    font-family: var(--font-ui);
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+</style>

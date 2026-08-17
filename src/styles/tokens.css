@@ -43,6 +43,25 @@
   --status-unknown-bg: #f2f2ef;
   --status-withheld-bg: #fbeded;
 
+  /* ------------------------------------------------- evidence layer */
+  /* Distance from the document: what a source says → what a historian
+     argues → what this project concludes. Ordinal, not categorical: the
+     order carries the meaning, so it is ONE hue in three lightness steps
+     rather than three hues. That is also what makes it affordable — the
+     page already spends its categorical budget on claim status and on
+     narrative tradition, and a third set of competing hues is what makes
+     two legible systems into three illegible ones.
+     Magenta-purple because it is the only family left with clearance:
+     violet collided with --cat-moroccan (normal-vision ΔE 8.8, floor 15).
+     Validated in both modes — every pair against every status and
+     tradition hue clears CVD ΔE 8.8+ and normal-vision 15.7+. */
+  --layer-primary: #7a2472;
+  --layer-secondary: #a8359c;
+  --layer-inference: #cf86c6;
+  --layer-primary-bg: #f7edf6;
+  --layer-secondary-bg: #f9f0f8;
+  --layer-inference-bg: #fbf5fa;
+
   /* ------------------------------------------- categorical (3 + grey) */
   --cat-moroccan: #2a78d6;
   --cat-french: #eb6834;
@@ -117,6 +136,14 @@
     --status-unknown-bg: #242422;
     --status-withheld-bg: #2c1a1a;
 
+    /* Anchor flips in dark: nearest-the-document is the lightest step. */
+    --layer-primary: #eaa8e0;
+    --layer-secondary: #b84fae;
+    --layer-inference: #8c3a83;
+    --layer-primary-bg: #2b1a29;
+    --layer-secondary-bg: #251722;
+    --layer-inference-bg: #20141e;
+
     --cat-moroccan: #3987e5;
     --cat-french: #d95926;
     --cat-spanish: #199e70;
@@ -156,6 +183,14 @@
   --status-disputed-bg: #2b2415;
   --status-unknown-bg: #242422;
   --status-withheld-bg: #2c1a1a;
+
+  /* Anchor flips in dark: nearest-the-document is the lightest step. */
+  --layer-primary: #eaa8e0;
+  --layer-secondary: #b84fae;
+  --layer-inference: #8c3a83;
+  --layer-primary-bg: #2b1a29;
+  --layer-secondary-bg: #251722;
+  --layer-inference-bg: #20141e;
 
   --cat-moroccan: #3987e5;
   --cat-french: #d95926;

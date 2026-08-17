@@ -200,6 +200,15 @@ function main() {
       verification: clean(r.Verification),
       priority: clean(r.Priority),
       url: clean(r.URL),
+      // The research-agenda columns. `notYetSearched` is the point of the
+      // whole explorer: it records what a researcher still has to go and do,
+      // so a null here means "nobody has written the backlog down yet", which
+      // is not the same as "nothing left to search". The templates say so.
+      searchTerms: clean(r['Search terms to use']),
+      notYetSearched: clean(r['Not yet searched']),
+      language: arr(r.Language),
+      _relatedPeopleIds: arr(r['Related people']).map(notionId).filter(Boolean),
+      _relatedEventIds: arr(r['Related events']).map(notionId).filter(Boolean),
     };
   });
 
@@ -279,6 +288,169 @@ function main() {
     throw new Error(`${unresolved.length} relationship endpoint(s) could not be resolved to a person.`);
   }
 
+  // ---------------------------------------------------- claims & disputes
+  // The claim is the core object: everything below resolves onto it.
+  //
+  // Relations are resolved through the same idToSlug map the graph uses, so a
+  // claim can never point at a person the site does not render. A relation
+  // that fails to resolve is collected and thrown on, exactly as a dangling
+  // relationship edge is — an invented endpoint is the one thing this corpus
+  // cannot afford.
+  const danglingClaimRefs = [];
+  const resolveMany = (values, label, where) =>
+    arr(values)
+      .map(notionId)
+      .filter(Boolean)
+      .map((id) => {
+        const hit = idToSlug.get(id);
+        if (!hit) danglingClaimRefs.push({ where, label, id });
+        return hit ?? null;
+      })
+      .filter(Boolean);
+
+  const takenDisputeRecords = new Map();
+  const disputeRecords = read('dispute-records').map((r) => {
+    const slug = slugifyUnique(r.Dispute, takenDisputeRecords);
+    idToSlug.set(notionId(r.url), { slug, collection: 'dispute-records', name: r.Dispute });
+    return {
+      slug,
+      notionId: notionId(r.url),
+      dispute: r.Dispute,
+      // The four positions stay separate fields and are never merged into a
+      // single "what happened". A null is rendered as a visible em-dash: the
+      // absence of a Spanish position is itself information.
+      positions: {
+        french: clean(r['French position']),
+        spanish: clean(r['Spanish position']),
+        moroccan: clean(r['Moroccan position']),
+        other: clean(r['Other position']),
+      },
+      currentAssessment: clean(r['Current assessment']),
+      whySourcesDisagree: clean(r['Why the sources disagree']),
+      status: clean(r.Status),
+      phase: clean(r.Phase),
+      _peopleIds: arr(r.People),
+      _eventIds: arr(r.Events),
+      _claimIds: arr(r['Related claims']),
+    };
+  });
+
+  const takenOpenQuestions = new Map();
+  const openQuestions = read('open-questions').map((r) => {
+    const slug = slugifyUnique(r.Question, takenOpenQuestions);
+    idToSlug.set(notionId(r.url), { slug, collection: 'open-questions', name: r.Question });
+    return {
+      slug,
+      notionId: notionId(r.url),
+      question: r.Question,
+      whatWeKnow: clean(r['What we know']),
+      missingEvidence: clean(r['Missing evidence']),
+      documentsRequested: clean(r['Documents requested']),
+      whyWeDontKnow: clean(r["Why we don't know"]),
+      researchStatus: clean(r['Research status']),
+      phase: clean(r.Phase),
+      _archiveIds: arr(r['Archives likely to hold it']),
+      _peopleIds: arr(r.People),
+      _eventIds: arr(r.Events),
+      _claimIds: arr(r['Related claims']),
+    };
+  });
+
+  const takenClaims = new Map();
+  const claims = read('claims').map((r) => {
+    const slug = slugifyUnique(r.Claim, takenClaims);
+    idToSlug.set(notionId(r.url), { slug, collection: 'claims', name: r.Claim });
+    return {
+      slug,
+      notionId: notionId(r.url),
+      claim: r.Claim,
+      confidence: clean(r.Confidence),
+      evidenceLayer: clean(r['Evidence layer']),
+      phase: clean(r.Phase),
+      // Verbatim or nothing. The site renders a null here as an explicit
+      // "not yet consulted directly" state rather than an empty panel, so a
+      // reader can never mistake silence for a quotation.
+      whatTheDocumentSays: clean(r['What the document says']),
+      interpretation: clean(r.Interpretation),
+      counterEvidence: clean(r['Counter-evidence']),
+      whySourcesDisagree: clean(r['Why sources disagree']),
+      archivalReference: clean(r['Archival reference']),
+      _primaryEvidenceIds: arr(r['Primary evidence']),
+      _counterEvidenceIds: arr(r['Counter-evidence sources']),
+      _archiveIds: arr(r.Archive),
+      _peopleIds: arr(r.People),
+      _eventIds: arr(r.Events),
+      _disputeIds: arr(r.Disputes),
+      _openQuestionIds: arr(r['Open questions']),
+      lastReviewed: clean(r['Last reviewed']),
+    };
+  });
+
+  const bibliography = read('bibliography').map((r) => ({
+    slug: slugify(r.Entry ?? ''),
+    notionId: notionId(r.url),
+    entry: clean(r.Entry),
+    type: clean(r.Type),
+    authors: clean(r['Author(s)']),
+    year: clean(r.Year), // text, never parsed — same rule as Born/Died
+    identifier: clean(r.Identifier),
+    url: clean(r['Catalogue/access URL']),
+    language: arr(r.Language),
+    notes: clean(r.Notes),
+  }));
+
+  // Resolve every claim/dispute/question relation now that all ids are known.
+  const slugsOf = (ids, label, where) => resolveMany(ids, label, where).map((h) => h.slug);
+  for (const c of claims) {
+    c.primaryEvidence = slugsOf(c._primaryEvidenceIds, 'Primary evidence', c.slug);
+    c.counterEvidenceSources = slugsOf(c._counterEvidenceIds, 'Counter-evidence sources', c.slug);
+    c.archives = slugsOf(c._archiveIds, 'Archive', c.slug);
+    c.people = slugsOf(c._peopleIds, 'People', c.slug);
+    c.events = slugsOf(c._eventIds, 'Events', c.slug);
+    c.disputes = slugsOf(c._disputeIds, 'Disputes', c.slug);
+    c.openQuestions = slugsOf(c._openQuestionIds, 'Open questions', c.slug);
+    for (const k of Object.keys(c)) if (k.startsWith('_')) delete c[k];
+  }
+  for (const d of disputeRecords) {
+    d.people = slugsOf(d._peopleIds, 'People', d.slug);
+    d.events = slugsOf(d._eventIds, 'Events', d.slug);
+    d.claims = slugsOf(d._claimIds, 'Related claims', d.slug);
+    for (const k of Object.keys(d)) if (k.startsWith('_')) delete d[k];
+  }
+  for (const q of openQuestions) {
+    q.archives = slugsOf(q._archiveIds, 'Archives likely to hold it', q.slug);
+    q.people = slugsOf(q._peopleIds, 'People', q.slug);
+    q.events = slugsOf(q._eventIds, 'Events', q.slug);
+    q.claims = slugsOf(q._claimIds, 'Related claims', q.slug);
+    for (const k of Object.keys(q)) if (k.startsWith('_')) delete q[k];
+  }
+  for (const a of archives) {
+    a.relatedPeople = a._relatedPeopleIds
+      .map((id) => idToSlug.get(id)?.slug)
+      .filter(Boolean);
+    a.relatedEvents = a._relatedEventIds.map((id) => idToSlug.get(id)?.slug).filter(Boolean);
+    delete a._relatedPeopleIds;
+    delete a._relatedEventIds;
+  }
+
+  if (danglingClaimRefs.length) {
+    console.error('\n  Unresolved claim/dispute/question relations:');
+    for (const d of danglingClaimRefs) console.error(`   ${d.where} → ${d.label} → ${d.id}`);
+    throw new Error(`${danglingClaimRefs.length} relation(s) could not be resolved.`);
+  }
+
+  // Back-links, so a person page can list its claims without scanning.
+  for (const c of claims) {
+    for (const d of c.disputes) {
+      const rec = disputeRecords.find((x) => x.slug === d);
+      if (rec && !rec.claims.includes(c.slug)) rec.claims.push(c.slug);
+    }
+  }
+  for (const a of archives) {
+    a.claims = claims.filter((c) => c.archives.includes(a.slug)).map((c) => c.slug);
+    a.openQuestions = openQuestions.filter((q) => q.archives.includes(a.slug)).map((q) => q.slug);
+  }
+
   // Back-link events → people by slug, and people → events.
   const peopleBySlug = new Map(people.map((p) => [p.slug, p]));
   for (const e of events) {
@@ -290,31 +462,137 @@ function main() {
     p.relationships = relationships
       .filter((r) => r.from === p.slug || r.to === p.slug)
       .map((r) => r.slug);
+    p.claims = claims.filter((c) => c.people.includes(p.slug)).map((c) => c.slug);
+    p.disputes = disputeRecords.filter((d) => d.people.includes(p.slug)).map((d) => d.slug);
+    // "Archives holding material on this person" — the section that actually
+    // delivers the side-by-side French/Spanish/Moroccan comparison per figure.
+    p.archives = archives.filter((a) => a.relatedPeople.includes(p.slug)).map((a) => a.slug);
+  }
+  for (const e of events) {
+    e.claims = claims.filter((c) => c.events.includes(e.slug)).map((c) => c.slug);
+    e.disputes = disputeRecords.filter((d) => d.events.includes(e.slug)).map((d) => d.slug);
+    e.openQuestions = openQuestions.filter((q) => q.events.includes(e.slug)).map((q) => q.slug);
+    e.archives = archives.filter((a) => a.relatedEvents.includes(e.slug)).map((a) => a.slug);
   }
 
   // ------------------------------------------------------ derived indexes
+  // The graph carries four node kinds now: person, claim, source and archive.
+  //
+  // Colour stays on the three-slot narrative-tradition palette — a network
+  // view puts every pair on screen at once, and the palette only clears its
+  // separation floors at three categorical slots under that condition. Node
+  // *kind* is therefore encoded as shape, never as a fourth hue.
+  //
+  // It ships sparse on purpose. Five claims is what the corpus has; padding
+  // the graph to look denser would be the same failure as smoothing a gap.
   const graph = {
-    nodes: people.map((p) => ({
-      id: p.slug,
-      label: p.name,
-      // Narrative position drives colour — exactly three categorical slots
-      // plus a recessive grey, per the design system. Assigned from Category.
-      group: narrativePosition(p.category),
-      shape: 'circle',
-      depth: p.dossierStatus,
-      phase: p.phase,
-      category: p.category,
-      degree: 0,
-    })),
-    edges: relationships.map((r) => ({
-      source: r.from,
-      target: r.to,
-      relation: r.relation,
-      strength: r.evidenceStrength,
-      period: r.period,
-      evidence: r.evidence,
-      id: r.slug,
-    })),
+    nodes: [
+      ...people.map((p) => ({
+        id: `person:${p.slug}`,
+        slug: p.slug,
+        kind: 'person',
+        label: p.name,
+        group: narrativePosition(p.category),
+        shape: 'circle',
+        depth: p.dossierStatus,
+        phase: p.phase,
+        category: p.category,
+        degree: 0,
+      })),
+      ...claims.map((c) => ({
+        id: `claim:${c.slug}`,
+        slug: c.slug,
+        kind: 'claim',
+        label: c.claim,
+        group: 'unaligned',
+        shape: 'diamond',
+        confidence: c.confidence,
+        evidenceLayer: c.evidenceLayer,
+        phase: c.phase ? [c.phase] : [],
+        degree: 0,
+      })),
+      ...sources.map((s) => ({
+        id: `source:${s.slug}`,
+        slug: s.slug,
+        kind: 'source',
+        label: s.title,
+        group: 'unaligned',
+        shape: 'square',
+        tier: s.tier,
+        verification: s.verification,
+        phase: [],
+        degree: 0,
+      })),
+      ...archives.map((a) => ({
+        id: `archive:${a.slug}`,
+        slug: a.slug,
+        kind: 'archive',
+        label: a.institution,
+        group: 'unaligned',
+        shape: 'triangle',
+        country: a.country,
+        priority: a.priority,
+        phase: [],
+        degree: 0,
+      })),
+    ],
+    edges: [
+      ...relationships.map((r) => ({
+        source: `person:${r.from}`,
+        target: `person:${r.to}`,
+        kind: 'person-person',
+        relation: r.relation,
+        strength: r.evidenceStrength,
+        period: r.period,
+        evidence: r.evidence,
+        id: r.slug,
+      })),
+      ...claims.flatMap((c) => [
+        ...c.people.map((p) => ({
+          source: `person:${p}`,
+          target: `claim:${c.slug}`,
+          kind: 'person-claim',
+          relation: 'is the subject of',
+          id: `${p}--${c.slug}`,
+        })),
+        ...c.primaryEvidence.map((s) => ({
+          source: `claim:${c.slug}`,
+          target: `source:${s}`,
+          kind: 'claim-source',
+          relation: 'rests on',
+          id: `${c.slug}--${s}`,
+        })),
+        ...c.counterEvidenceSources.map((s) => ({
+          source: `claim:${c.slug}`,
+          target: `source:${s}`,
+          kind: 'claim-counter-source',
+          relation: 'is contradicted by',
+          id: `${c.slug}--counter--${s}`,
+        })),
+        ...c.archives.map((a) => ({
+          source: `claim:${c.slug}`,
+          target: `archive:${a}`,
+          kind: 'claim-archive',
+          relation: 'would be settled at',
+          id: `${c.slug}--${a}`,
+        })),
+      ]),
+      // Claim ↔ claim "contradicts", derived from sharing a Disputes row.
+      // Derived, not asserted: two claims in one dispute are in tension by
+      // construction, which is the only basis the corpus actually has.
+      ...disputeRecords.flatMap((d) =>
+        d.claims.flatMap((a, i) =>
+          d.claims.slice(i + 1).map((b) => ({
+            source: `claim:${a}`,
+            target: `claim:${b}`,
+            kind: 'claim-claim',
+            relation: 'contradicts',
+            via: d.slug,
+            id: `${a}--contradicts--${b}`,
+          }))
+        )
+      ),
+    ],
   };
   const degree = new Map();
   for (const e of graph.edges) {
@@ -382,6 +660,14 @@ function main() {
     places: write('places', places),
     groups: write('groups', groups),
     relationships: write('relationships', relationships),
+    // NOT `claims.json` — that name belongs to the prose-extracted claim
+    // markers written by extract-claims.mjs, which is a different thing with
+    // a different shape. Two collections called claims is how one silently
+    // overwrites the other.
+    'claim-records': write('claim-records', claims),
+    'dispute-records': write('dispute-records', disputeRecords),
+    'open-questions': write('open-questions', openQuestions),
+    bibliography: write('bibliography', bibliography),
   };
   write('graph', graph);
   write('timeline', timeline);

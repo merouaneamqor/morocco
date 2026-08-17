@@ -1,0 +1,135 @@
+[
+ {
+  "slug": "zaian-dead-at-el-herri-13-november-1914",
+  "notionId": "3bf885d88042815bb922e4b96c78ca24",
+  "dispute": "Zaian dead at El Herri, 13 November 1914",
+  "positions": {
+   "french": "182 (French battlefield count)",
+   "spanish": null,
+   "moroccan": "182 (the 1991 HCAR/state monument repeats the French figure)",
+   "other": null
+  },
+  "currentAssessment": "A French floor, not an independently corroborated total. The monument is not independent corroboration.",
+  "whySourcesDisagree": "Not a French-vs-Moroccan dispute in the usual sense — both traditions currently repeat the same uncorroborated number.",
+  "status": "Disputed",
+  "phase": "IV 1912-1921",
+  "people": [
+   "mouha-ou-hammou-zayani"
+  ],
+  "events": [
+   "battle-of-el-herri"
+  ],
+  "claims": [
+   "el-herri-13-november-1914-zaian-dead-numbered-182"
+  ]
+ },
+ {
+  "slug": "annual-dead-july-1921",
+  "notionId": "3bf885d8804281dd9ed0fd77df363c07",
+  "dispute": "Annual dead, July 1921",
+  "positions": {
+   "french": null,
+   "spanish": "7,875 / 8,180 / 8,668 / 13,363 — competing totals depending on whether Moroccan Regulares are counted",
+   "moroccan": null,
+   "other": null
+  },
+  "currentAssessment": "Definitional, not merely evidentiary. State the range and the definitions.",
+  "whySourcesDisagree": "The count depends on who is counted as Spanish — Spanish sources are, uniquely, unreliable on their own casualties.",
+  "status": "Disputed - definitional",
+  "phase": "V 1921-1934",
+  "people": [],
+  "events": [
+   "annual-and-the-rif-war"
+  ],
+  "claims": [
+   "annual-july-1921-spanish-dead-ranged-7-875-to-13-363"
+  ]
+ },
+ {
+  "slug": "casablanca-1907-deaths",
+  "notionId": "3bf885d8804281ae80eff6604072164a",
+  "dispute": "Casablanca 1907 deaths",
+  "positions": {
+   "french": "600–1,500",
+   "spanish": null,
+   "moroccan": "Reported higher; no Moroccan primary count located yet by this workspace",
+   "other": "German 2,000–3,000 (embarrassing France served Berlin's interests during the 1905–1911 crisis period)"
+  },
+  "currentAssessment": "Unresolvable on present evidence. State the range and the definitions; do not collapse to one figure.",
+  "whySourcesDisagree": "No party to the bombardment had an incentive to count accurately: France to minimise a scandal, Germany to maximise one.",
+  "status": "Unresolvable on present evidence",
+  "phase": "III 1900-1912",
+  "people": [],
+  "events": [
+   "casablanca-1907-killings-bombardment-and-occupation"
+  ],
+  "claims": [
+   "casablanca-july-august-1907-bombardment-and-occupation-killed-roughly-600-to-3-000"
+  ]
+ },
+ {
+  "slug": "mouha-ou-hammou-zayani-s-death",
+  "notionId": "3bf885d8804281b69a92d9becca392bf",
+  "dispute": "Mouha ou Hammou Zayani's death",
+  "positions": {
+   "french": "Killed in a clash with French-allied partisans",
+   "spanish": null,
+   "moroccan": "Killed by his own son Hassan (most repeated); alternatively, in a clash with a party his sons had joined",
+   "other": null
+  },
+  "currentAssessment": "Disputed. Three different claims routinely collapsed into one. Treat the patricide narrative with particular caution.",
+  "whySourcesDisagree": "The patricide version is narratively convenient in a way that should itself prompt scrutiny, not confidence.",
+  "status": "Disputed",
+  "phase": null,
+  "people": [
+   "mouha-ou-hammou-zayani"
+  ],
+  "events": [],
+  "claims": [
+   "mouha-ou-hammou-zayani-was-killed-by-his-own-son-hassan"
+  ]
+ },
+ {
+  "slug": "who-decided-the-1953-deposition-of-mohammed-v",
+  "notionId": "3bf885d880428173ad6fd581deb3529b",
+  "dispute": "Who decided the 1953 deposition of Mohammed V",
+  "positions": {
+   "french": "El Glaoui and the notables took the initiative",
+   "spanish": null,
+   "moroccan": "Paris and the Résidence orchestrated it; El Glaoui's role was instrumental, not originating",
+   "other": null
+  },
+  "currentAssessment": "Settleable from Résidence–Paris correspondence, May–August 1953, not yet consulted.",
+  "whySourcesDisagree": "Each tradition places responsibility with the actor least sympathetic to it.",
+  "status": "Settleable - request identified",
+  "phase": "VII 1944-1956",
+  "people": [
+   "mohammed-v",
+   "thami-el-glaoui"
+  ],
+  "events": [
+   "deposition-exile-and-return-of-mohammed-v"
+  ],
+  "claims": [
+   "the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables"
+  ]
+ },
+ {
+  "slug": "ben-barka-s-disappearance-1965",
+  "notionId": "3bf885d8804281fa87fef7a2090dc1c5",
+  "dispute": "Ben Barka's disappearance, 1965",
+  "positions": {
+   "french": "Oufkir named by a French court",
+   "spanish": null,
+   "moroccan": null,
+   "other": "Dlimi, Mossad and CIA involvement alleged but not established"
+  },
+  "currentAssessment": "Documents exist and are withheld. A different category from unknown.",
+  "whySourcesDisagree": "This is not primarily a source-conflict; it is an access-conflict. Distinguish withheld from unknown, per standing rule 5.",
+  "status": "Unresolvable on present evidence",
+  "phase": "IX 1961-1999",
+  "people": [],
+  "events": [],
+  "claims": []
+ }
+]

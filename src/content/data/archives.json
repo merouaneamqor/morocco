@@ -13,7 +13,18 @@
   "digitised": "Catalogue online only",
   "verification": "Catalogue verified",
   "priority": "1 - decisive",
-  "url": "http://pares.mcu.es/"
+  "url": "http://pares.mcu.es/",
+  "searchTerms": "Alta Comisaría de España en Marruecos; Regulares; Rif; Abd el-Krim; Silvestre; Picasso; Annual",
+  "notYetSearched": "Spanish chemical operations: sortie records, munition expenditure, target lists 1923–1927. The Expediente Picasso original itself has not been consulted at document level by this project — see Claims: ‘Annual, July 1921: Spanish dead ranged 7,875 to 13,363.’",
+  "language": [
+   "Spanish"
+  ],
+  "relatedPeople": [],
+  "relatedEvents": [
+   "annual-and-the-rif-war"
+  ],
+  "claims": [],
+  "openQuestions": []
  },
  {
   "slug": "service-historique-de-la-defense-shd",
@@ -29,7 +40,20 @@
   "digitised": "Catalogue online only",
   "verification": "Catalogue verified",
   "priority": "1 - decisive",
-  "url": "https://www.servicehistorique.sga.defense.gouv.fr/"
+  "url": "https://www.servicehistorique.sga.defense.gouv.fr/",
+  "searchTerms": "El Herri; Khénifra; Zaian; Commandement Supérieur 3H 314–752; Goums 3H 2375–2711; Bougafer 1933",
+  "notYetSearched": "Khénifra Bureau des Affaires Indigènes political bulletins, Nov 1914 and Mar–Apr 1921; Khénifra–regional command correspondence, 1–13 November 1914; the Lyautey–Millerand exchange after El Herri (série N, 5N 39–64); 1933 Bougafer operations reports and aerial reconnaissance.",
+  "language": [
+   "French"
+  ],
+  "relatedPeople": [
+   "mouha-ou-hammou-zayani"
+  ],
+  "relatedEvents": [
+   "battle-of-el-herri"
+  ],
+  "claims": [],
+  "openQuestions": []
  },
  {
   "slug": "the-national-archives-tna",
@@ -45,7 +69,14 @@
   "digitised": "Partly online",
   "verification": "Catalogue verified",
   "priority": "1 - decisive",
-  "url": "https://discovery.nationalarchives.gov.uk/"
+  "url": "https://discovery.nationalarchives.gov.uk/",
+  "searchTerms": null,
+  "notYetSearched": null,
+  "language": [],
+  "relatedPeople": [],
+  "relatedEvents": [],
+  "claims": [],
+  "openQuestions": []
  },
  {
   "slug": "archives-du-maroc",
@@ -61,7 +92,20 @@
   "digitised": "On-site only",
   "verification": "Described by named scholar",
   "priority": "1 - decisive",
-  "url": "https://hazine.info/tag/morocco-en/"
+  "url": "https://hazine.info/tag/morocco-en/",
+  "searchTerms": "Fonds Protectorat; Traité de Fès; bay'a 1953; ben Arafa",
+  "notYetSearched": "The Arabic instrument of the Treaty of Fez, and the 1953 ben Arafa bay'a with its signatories — neither has been consulted. Together they would settle two of this workspace's Tier-1 disputes.",
+  "language": [
+   "Arabic",
+   "French"
+  ],
+  "relatedPeople": [],
+  "relatedEvents": [
+   "treaty-of-fez-and-the-april-1912-rising",
+   "deposition-exile-and-return-of-mohammed-v"
+  ],
+  "claims": [],
+  "openQuestions": []
  },
  {
   "slug": "politisches-archiv-des-auswartigen-amts-a-a-p-a",
@@ -77,7 +121,14 @@
   "digitised": "Catalogue online only",
   "verification": "Described by named scholar",
   "priority": "1 - decisive",
-  "url": null
+  "url": null,
+  "searchTerms": null,
+  "notYetSearched": null,
+  "language": [],
+  "relatedPeople": [],
+  "relatedEvents": [],
+  "claims": [],
+  "openQuestions": []
  },
  {
   "slug": "us-national-archives-nara-rg-84-foreign-service-posts",
@@ -93,7 +144,14 @@
   "digitised": "Catalogue online only",
   "verification": "Catalogue verified",
   "priority": "2 - structural",
-  "url": "https://www.archives.gov/research/guide-fed-records/groups/084.html"
+  "url": "https://www.archives.gov/research/guide-fed-records/groups/084.html",
+  "searchTerms": null,
+  "notYetSearched": null,
+  "language": [],
+  "relatedPeople": [],
+  "relatedEvents": [],
+  "claims": [],
+  "openQuestions": []
  },
  {
   "slug": "devlet-arsivleri-osmanli-arsivi-boa",
@@ -109,7 +167,14 @@
   "digitised": "Catalogue online only",
   "verification": "Described by named scholar",
   "priority": "1 - decisive",
-  "url": null
+  "url": null,
+  "searchTerms": null,
+  "notYetSearched": null,
+  "language": [],
+  "relatedPeople": [],
+  "relatedEvents": [],
+  "claims": [],
+  "openQuestions": []
  },
  {
   "slug": "gallica-bibliotheque-nationale-de-france",
@@ -125,7 +190,14 @@
   "digitised": "Substantially online",
   "verification": "Catalogue verified",
   "priority": "2 - structural",
-  "url": "https://gallica.bnf.fr/"
+  "url": "https://gallica.bnf.fr/",
+  "searchTerms": null,
+  "notYetSearched": null,
+  "language": [],
+  "relatedPeople": [],
+  "relatedEvents": [],
+  "claims": [],
+  "openQuestions": []
  },
  {
   "slug": "direction-des-archives-royales",
@@ -141,7 +213,16 @@
   "digitised": "Catalogue online only",
   "verification": "Described by named scholar",
   "priority": "1 - decisive",
-  "url": "https://www.persee.fr/doc/gazar_0016-5522_1979_num_107_1_2714_t1_0306_0000_2"
+  "url": "https://www.persee.fr/doc/gazar_0016-5522_1979_num_107_1_2714_t1_0306_0000_2",
+  "searchTerms": "al-Wathā'iq; Makhzen correspondence",
+  "notYetSearched": "The published al-Wathā'iq volumes, issued since 1976, are the accessible entry point and have not yet been read by this project — the single largest gap in this workspace, and one that requires no reading-room permit.",
+  "language": [
+   "Arabic"
+  ],
+  "relatedPeople": [],
+  "relatedEvents": [],
+  "claims": [],
+  "openQuestions": []
  },
  {
   "slug": "hemeroteca-digital-biblioteca-nacional-de-espana",
@@ -157,7 +238,14 @@
   "digitised": "Substantially online",
   "verification": "Catalogue verified",
   "priority": "2 - structural",
-  "url": "https://hemerotecadigital.bne.es/"
+  "url": "https://hemerotecadigital.bne.es/",
+  "searchTerms": null,
+  "notYetSearched": null,
+  "language": [],
+  "relatedPeople": [],
+  "relatedEvents": [],
+  "claims": [],
+  "openQuestions": []
  },
  {
   "slug": "foreign-relations-of-the-united-states-frus",
@@ -173,7 +261,14 @@
   "digitised": "Substantially online",
   "verification": "Catalogue verified",
   "priority": "1 - decisive",
-  "url": "https://history.state.gov/historicaldocuments"
+  "url": "https://history.state.gov/historicaldocuments",
+  "searchTerms": null,
+  "notYetSearched": null,
+  "language": [],
+  "relatedPeople": [],
+  "relatedEvents": [],
+  "claims": [],
+  "openQuestions": []
  },
  {
   "slug": "archives-nationales-d-outre-mer-anom",
@@ -189,7 +284,14 @@
   "digitised": "Partly online",
   "verification": "Catalogue verified",
   "priority": "2 - structural",
-  "url": null
+  "url": null,
+  "searchTerms": null,
+  "notYetSearched": null,
+  "language": [],
+  "relatedPeople": [],
+  "relatedEvents": [],
+  "claims": [],
+  "openQuestions": []
  },
  {
   "slug": "league-of-nations-archives-un-geneva",
@@ -205,7 +307,14 @@
   "digitised": "Partly online",
   "verification": "Reported",
   "priority": "3 - supporting",
-  "url": null
+  "url": null,
+  "searchTerms": null,
+  "notYetSearched": null,
+  "language": [],
+  "relatedPeople": [],
+  "relatedEvents": [],
+  "claims": [],
+  "openQuestions": []
  },
  {
   "slug": "tangier-american-legation-institute-for-moroccan-studies-talim",
@@ -221,7 +330,14 @@
   "digitised": "Partly online",
   "verification": "Reported",
   "priority": "3 - supporting",
-  "url": "https://legation.org/"
+  "url": "https://legation.org/",
+  "searchTerms": null,
+  "notYetSearched": null,
+  "language": [],
+  "relatedPeople": [],
+  "relatedEvents": [],
+  "claims": [],
+  "openQuestions": []
  },
  {
   "slug": "instance-equite-et-reconciliation-ier-final-report-and-archive",
@@ -237,7 +353,14 @@
   "digitised": "Partly online",
   "verification": "Reported",
   "priority": "1 - decisive",
-  "url": "https://www.hrw.org/reports/morocco1105frwcover.pdf"
+  "url": "https://www.hrw.org/reports/morocco1105frwcover.pdf",
+  "searchTerms": null,
+  "notYetSearched": null,
+  "language": [],
+  "relatedPeople": [],
+  "relatedEvents": [],
+  "claims": [],
+  "openQuestions": []
  },
  {
   "slug": "bibliotheque-royale-hassaniya-al-khizana-al-hasaniyya",
@@ -253,7 +376,14 @@
   "digitised": "On-site only",
   "verification": "Described by named scholar",
   "priority": "1 - decisive",
-  "url": null
+  "url": null,
+  "searchTerms": null,
+  "notYetSearched": null,
+  "language": [],
+  "relatedPeople": [],
+  "relatedEvents": [],
+  "claims": [],
+  "openQuestions": []
  },
  {
   "slug": "archives-diplomatiques-la-courneuve-and-nantes",
@@ -269,7 +399,22 @@
   "digitised": "Catalogue online only",
   "verification": "Catalogue verified",
   "priority": "1 - decisive",
-  "url": "https://archivesdiplomatiques.diplomatie.gouv.fr/"
+  "url": "https://archivesdiplomatiques.diplomatie.gouv.fr/",
+  "searchTerms": "Correspondance politique Maroc; Régnault; Résidence Générale 1953; Traité de Fès",
+  "notYetSearched": "Regnault's reporting to the Quai d'Orsay, 29–31 March 1912; the Résidence Générale–Paris correspondence, May–August 1953 — the document that would settle who decided the 1953 deposition of Mohammed V (see Disputes).",
+  "language": [
+   "French"
+  ],
+  "relatedPeople": [
+   "mohammed-v",
+   "thami-el-glaoui"
+  ],
+  "relatedEvents": [
+   "treaty-of-fez-and-the-april-1912-rising",
+   "deposition-exile-and-return-of-mohammed-v"
+  ],
+  "claims": [],
+  "openQuestions": []
  },
  {
   "slug": "internet-archive",
@@ -285,7 +430,14 @@
   "digitised": "Substantially online",
   "verification": "Catalogue verified",
   "priority": "2 - structural",
-  "url": "https://archive.org/"
+  "url": "https://archive.org/",
+  "searchTerms": null,
+  "notYetSearched": null,
+  "language": [],
+  "relatedPeople": [],
+  "relatedEvents": [],
+  "claims": [],
+  "openQuestions": []
  },
  {
   "slug": "archivio-storico-diplomatico-ministero-degli-affari-esteri",
@@ -301,7 +453,14 @@
   "digitised": "Catalogue online only",
   "verification": "Reported",
   "priority": "3 - supporting",
-  "url": null
+  "url": null,
+  "searchTerms": null,
+  "notYetSearched": null,
+  "language": [],
+  "relatedPeople": [],
+  "relatedEvents": [],
+  "claims": [],
+  "openQuestions": []
  },
  {
   "slug": "bibliotheque-nationale-du-royaume-du-maroc-bnrm",
@@ -317,7 +476,14 @@
   "digitised": "Partly online",
   "verification": "Catalogue verified",
   "priority": "2 - structural",
-  "url": "https://www.bnrm.ma/bnrm/fr/bibliotheque/nos-collections.html"
+  "url": "https://www.bnrm.ma/bnrm/fr/bibliotheque/nos-collections.html",
+  "searchTerms": null,
+  "notYetSearched": null,
+  "language": [],
+  "relatedPeople": [],
+  "relatedEvents": [],
+  "claims": [],
+  "openQuestions": []
  },
  {
   "slug": "institut-royal-de-la-culture-amazighe-ircam",
@@ -333,7 +499,14 @@
   "digitised": "Partly online",
   "verification": "Reported",
   "priority": "1 - decisive",
-  "url": "https://www.ircam.ma/fr"
+  "url": "https://www.ircam.ma/fr",
+  "searchTerms": null,
+  "notYetSearched": null,
+  "language": [],
+  "relatedPeople": [],
+  "relatedEvents": [],
+  "claims": [],
+  "openQuestions": []
  },
  {
   "slug": "association-marocaine-pour-la-recherche-historique-amrh",
@@ -349,7 +522,14 @@
   "digitised": "Partly online",
   "verification": "Reported",
   "priority": "3 - supporting",
-  "url": "https://amrh.ma/"
+  "url": "https://amrh.ma/",
+  "searchTerms": null,
+  "notYetSearched": null,
+  "language": [],
+  "relatedPeople": [],
+  "relatedEvents": [],
+  "claims": [],
+  "openQuestions": []
  },
  {
   "slug": "hesperis-tamuda-universite-mohammed-v",
@@ -365,7 +545,14 @@
   "digitised": "Substantially online",
   "verification": "Catalogue verified",
   "priority": "1 - decisive",
-  "url": "https://hesperis-tamuda.com/"
+  "url": "https://hesperis-tamuda.com/",
+  "searchTerms": null,
+  "notYetSearched": null,
+  "language": [],
+  "relatedPeople": [],
+  "relatedEvents": [],
+  "claims": [],
+  "openQuestions": []
  },
  {
   "slug": "al-maktaba-al-shamela",
@@ -381,7 +568,14 @@
   "digitised": "Substantially online",
   "verification": "Catalogue verified",
   "priority": "1 - decisive",
-  "url": "https://shamela.ws/book/6627"
+  "url": "https://shamela.ws/book/6627",
+  "searchTerms": null,
+  "notYetSearched": null,
+  "language": [],
+  "relatedPeople": [],
+  "relatedEvents": [],
+  "claims": [],
+  "openQuestions": []
  },
  {
   "slug": "haut-commissariat-aux-anciens-resistants-et-anciens-membres-de-l-armee-de-liberation-hcar",
@@ -397,6 +591,20 @@
   "digitised": "Partly online",
   "verification": "Catalogue verified",
   "priority": "1 - decisive",
-  "url": "http://hcar.gov.ma/"
+  "url": "http://hcar.gov.ma/",
+  "searchTerms": "El Herri; Moha ou Hammou Zayani; Zaïd Ou Hmad; Cahiers des Documents Historiques de la Résistance",
+  "notYetSearched": "The Moroccan-side testimony of survivors and families in the El Herri cahier has not yet been read in full by this project.",
+  "language": [
+   "Arabic",
+   "French"
+  ],
+  "relatedPeople": [
+   "mouha-ou-hammou-zayani"
+  ],
+  "relatedEvents": [
+   "battle-of-el-herri"
+  ],
+  "claims": [],
+  "openQuestions": []
  }
 ]

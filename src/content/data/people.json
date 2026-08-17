@@ -106,6 +106,18 @@
    "poeymirau-received-the-submission-of-the-sons-of-mouha-ou-hammou",
    "hassan-i-appointed-mouha-ou-hammou-zayani",
    "laverdure-fought-mouha-ou-hammou-zayani-at-el-herri"
+  ],
+  "claims": [
+   "el-herri-13-november-1914-zaian-dead-numbered-182",
+   "mouha-ou-hammou-zayani-was-killed-by-his-own-son-hassan"
+  ],
+  "disputes": [
+   "zaian-dead-at-el-herri-13-november-1914",
+   "mouha-ou-hammou-zayani-s-death"
+  ],
+  "archives": [
+   "service-historique-de-la-defense-shd",
+   "haut-commissariat-aux-anciens-resistants-et-anciens-membres-de-l-armee-de-liberation-hcar"
   ]
  },
  {
@@ -161,7 +173,10 @@
   "oneLine": "Leader of nationalism in the Spanish zone; founder of the Partido de Reformas Nacionales at Tetouan.",
   "contestedPoints": "The extent of Spanish (and later Francoist) tolerance or sponsorship of northern nationalism as a lever against France, and how far that compromised the movement.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "moulay-hassan-i",
@@ -249,7 +264,10 @@
    "hassan-i-appointed-ma-al-aynayn-as-khalifa-of-the-sahara",
    "ba-ahmed-concealed-the-death-of-hassan-i",
    "hassan-i-appointed-mouha-ou-hammou-zayani"
-  ]
+  ],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "emir-abd-el-malek",
@@ -321,7 +339,10 @@
   "oneLine": "Descendant of the Algerian emir Abd el-Kader and a former Ottoman officer; commanded the Ottoman- and German-backed resistance around Taza and the eastern Rif from 1915.",
   "contestedPoints": "Whether he was a son or a grandson of Abd el-Kader — two named scholars working from the same archives differ. His dates. Whether his movement was independent or 'forced to support the Germans for money and weapons'. His fate after 1918.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "ba-ahmed-ibn-musa",
@@ -382,7 +403,10 @@
   "relationships": [
    "ba-ahmed-regent-for-moulay-abdelaziz",
    "ba-ahmed-concealed-the-death-of-hassan-i"
-  ]
+  ],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "assou-oubasslam",
@@ -444,7 +468,10 @@
   "oneLine": "Aït Atta commander at the siege of Bougafer (Jbel Saghro) in 1933, one of the last organised resistances to the French conquest.",
   "contestedPoints": "The terms on which Bougafer ended — negotiated terms or surrender. Casualties on both sides. Whether French aerial bombardment of civilians occurred, as Moroccan and Amazigh accounts hold.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "abderrahim-bouabid",
@@ -485,7 +512,10 @@
   "oneLine": "Istiqlal then UNFP/USFP leader; economics minister at independence and the principal figure of the legal opposition until his death.",
   "contestedPoints": "The 1981 imprisonment over his position on the Western Sahara referendum — the limits of permitted dissent under Hassan II.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "hassan-ii",
@@ -534,7 +564,10 @@
   "events": [
    "the-rif-revolt-and-its-suppression"
   ],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "alphonse-juin",
@@ -575,7 +608,10 @@
   "oneLine": "Resident-General 1947–1951; confronted Mohammed V directly and began the campaign to isolate him from the Istiqlal.",
   "contestedPoints": "The extent to which he built the coalition of pashas and qaids later used to depose the sultan in 1953.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "mohamed-oufkir",
@@ -628,7 +664,10 @@
   ],
   "relationships": [
    "oufkir-named-as-responsible-for-the-abduction-of-mehdi-ben-barka"
-  ]
+  ],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "charles-mangin",
@@ -675,7 +714,10 @@
   "oneLine": "Commanded the column that destroyed Ahmed al-Hiba at Sidi Bou Othmane, 6 September 1912; advocate of the 'Force Noire'.",
   "contestedPoints": "Casualty figures at Sidi Bou Othmane. His broader doctrine of using African colonial troops, and how it shaped who did the dying in Morocco.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "harry-maclean",
@@ -731,7 +773,10 @@
   "events": [],
   "relationships": [
    "raisuni-abducted-harry-maclean"
-  ]
+  ],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "samuel-gummere",
@@ -771,7 +816,10 @@
   "oneLine": "American diplomat at Tangier during the Perdicaris affair of 1904 and the first US Minister to Morocco.",
   "contestedPoints": "How far the 'Perdicaris alive or Raisuli dead' telegram reflected policy as against domestic electioneering by Roosevelt.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "bou-hamara",
@@ -845,7 +893,10 @@
   "events": [],
   "relationships": [
    "moulay-abdelhafid-captured-and-executed-bou-hamara"
-  ]
+  ],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "mohammed-ben-abdelkrim-el-khattabi",
@@ -944,7 +995,10 @@
   "relationships": [
    "silvestre-fought-abd-el-krim-at-annual",
    "berenguer-authorised-chemical-munitions-against-the-rif"
-  ]
+  ],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "taher-bey",
@@ -998,7 +1052,10 @@
   "oneLine": "Ottoman major who headed the Teşkilât-ı Mahsusa mission to Morocco from Madrid, 1914–1916.",
   "contestedPoints": "Why he was dismissed in early 1916 — the sources say German pressure. Whether his assessments of tribal leaders were accurate or self-serving.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "m-hammad-ben-abdelkrim-el-khattabi",
@@ -1044,7 +1101,10 @@
   "oneLine": "Brother of Abd el-Krim; mining engineer trained in Spain, field commander and the Rif Republic's technical and diplomatic organiser.",
   "contestedPoints": "Division of authority between the brothers. His role in the Republic's foreign contacts and in the mining question.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "moulay-youssef",
@@ -1091,7 +1151,10 @@
   "oneLine": "Sultan 1912–1927; installed by Lyautey after Abdelhafid's abdication and reigned throughout the pacification wars.",
   "contestedPoints": "Whether he exercised any independent authority. His role, if any, in the Rif war and in the wartime German approaches.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "ahmed-balafrej",
@@ -1140,7 +1203,10 @@
   "oneLine": "Istiqlal secretary-general and drafter of the 1944 Independence Manifesto; first foreign minister of independent Morocco.",
   "contestedPoints": "His authorship share of the 1944 Manifesto. His role in the internationalisation strategy at the UN and in the Arab League.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "hugo-stoltzenberg",
@@ -1181,7 +1247,10 @@
   "events": [],
   "relationships": [
    "stoltzenberg-supplied-chemical-weapons-capability-to-spain-against-the-rif"
-  ]
+  ],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "damaso-berenguer",
@@ -1227,7 +1296,10 @@
   "relationships": [
    "stoltzenberg-supplied-chemical-weapons-capability-to-spain-against-the-rif",
    "berenguer-authorised-chemical-munitions-against-the-rif"
-  ]
+  ],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "philippe-petain",
@@ -1270,7 +1342,10 @@
   "events": [],
   "relationships": [
    "petain-superseded-lyautey"
-  ]
+  ],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "abdelhadi-boutaleb",
@@ -1314,7 +1389,10 @@
   "oneLine": "Tutor to Hassan II, minister, ambassador and secretary-general of the Organisation of the Islamic Conference; a memoirist of the palace.",
   "contestedPoints": "The reliability of his memoirs, which are among the few insider accounts of the palace and are written by a loyal servant of it.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "paul-prosper-henrys",
@@ -1354,7 +1432,10 @@
   "oneLine": "Commanded French forces in the Middle Atlas from 1914; took Taza and Khénifra and directed the Zaian war after El Herri.",
   "contestedPoints": "His prior knowledge of Laverdure's intentions before 13 November 1914. The human cost of the 'submit or starve' policy he adopted afterwards.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "mohamed-hassan-ouazzani",
@@ -1408,7 +1489,10 @@
   "oneLine": "Nationalist leader and journalist; split from Allal El Fassi in 1937 to found a rival party, and remained outside Istiqlal thereafter.",
   "contestedPoints": "The causes of the 1937 split — personal, ideological, or over the movement's relationship to the throne.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "abdallah-ibrahim",
@@ -1455,7 +1539,10 @@
   "oneLine": "Prime minister 1958–1960; led the only government of independent Morocco to attempt a socialist economic programme.",
   "contestedPoints": "Why his government was dismissed in May 1960 and how far its economic programme had actually gone.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "joseph-francois-poeymirau",
@@ -1503,7 +1590,10 @@
   "events": [],
   "relationships": [
    "poeymirau-received-the-submission-of-the-sons-of-mouha-ou-hammou"
-  ]
+  ],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "m-barek-bekkay",
@@ -1558,7 +1648,10 @@
   "oneLine": "French army officer who resigned as pasha of Sefrou over the 1953 deposition and became independent Morocco's first prime minister.",
   "contestedPoints": "Whether his appointment in 1955 was a nationalist choice or a compromise designed to reassure France.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "henri-gouraud",
@@ -1606,7 +1699,10 @@
   "oneLine": "Commanded in Mauritania against Ma al-'Aynayn's networks and in Morocco from 1911; later High Commissioner in the Levant.",
   "contestedPoints": "His conduct of the Mauritanian campaigns and the destruction of Saharan religious centres.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "mehdi-ben-barka",
@@ -1656,7 +1752,10 @@
   "events": [],
   "relationships": [
    "oufkir-named-as-responsible-for-the-abduction-of-mehdi-ben-barka"
-  ]
+  ],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "augustin-guillaume",
@@ -1701,7 +1800,10 @@
   ],
   "relationships": [
    "guillaume-deposed-and-exiled-mohammed-v"
-  ]
+  ],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "shakib-arslan",
@@ -1754,7 +1856,10 @@
   "oneLine": "Druze-Lebanese pan-Islamic publicist based in Geneva who internationalised the Moroccan campaign against the 1930 Berber dahir.",
   "contestedPoints": "The extent of his direct influence on the Moroccan nationalist leadership as against parallel development. His wartime political alignments.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "juan-picasso-gonzalez",
@@ -1800,7 +1905,10 @@
   "oneLine": "Spanish general appointed to investigate the Annual disaster; author of the inquiry that remains the primary documentary base for it.",
   "contestedPoints": "How much of the original file survives and in what condition. What his brief permitted him to investigate and what it excluded.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "thami-el-glaoui",
@@ -1893,6 +2001,15 @@
   "relationships": [
    "lyautey-patron-of-thami-el-glaoui",
    "thami-el-glaoui-demanded-the-deposition-of-mohammed-v"
+  ],
+  "claims": [
+   "the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables"
+  ],
+  "disputes": [
+   "who-decided-the-1953-deposition-of-mohammed-v"
+  ],
+  "archives": [
+   "archives-diplomatiques-la-courneuve-and-nantes"
   ]
  },
  {
@@ -1954,7 +2071,10 @@
   "oneLine": "Darqawi-linked religious leader of the Middle Atlas whose spiritual authority organised resistance across tribal boundaries.",
   "contestedPoints": "Extent of his authority. His relationship with Mouha ou Hammou — alliance, rivalry, or division of spheres. His prophecies, which French intelligence took seriously as a mobilising force.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "ahmed-bahnini",
@@ -1994,7 +2114,10 @@
   "oneLine": "Jurist and prime minister 1963–1965; killed in the Skhirat palace attack of 10 July 1971.",
   "contestedPoints": "His government's handling of the 1963 opposition trials and the 1965 crisis.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "mohammed-iv",
@@ -2040,7 +2163,10 @@
   "oneLine": "Sultan 1859–1873; lost the Hispano-Moroccan war of 1859–60 and accepted the indemnity that mortgaged Moroccan customs.",
   "contestedPoints": "Size and payment mechanism of the Tetouan indemnity, and what share of state revenue it consumed.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "moulay-abdelhafid",
@@ -2113,7 +2239,10 @@
    "moulay-abdelhafid-deposed-moulay-abdelaziz",
    "regnault-negotiated-the-treaty-of-fez-with-moulay-abdelhafid",
    "si-madani-el-glaoui-engineered-the-accession-of-moulay-abdelhafid"
-  ]
+  ],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "moulay-abdelaziz",
@@ -2190,7 +2319,10 @@
   "relationships": [
    "ba-ahmed-regent-for-moulay-abdelaziz",
    "moulay-abdelhafid-deposed-moulay-abdelaziz"
-  ]
+  ],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "si-madani-el-glaoui",
@@ -2249,7 +2381,10 @@
   "events": [],
   "relationships": [
    "si-madani-el-glaoui-engineered-the-accession-of-moulay-abdelhafid"
-  ]
+  ],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "mohammed-ben-arafa",
@@ -2304,7 +2439,10 @@
   "events": [],
   "relationships": [
    "mohammed-ben-arafa-installed-in-place-of-mohammed-v"
-  ]
+  ],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "francisco-franco",
@@ -2357,7 +2495,10 @@
   "events": [],
   "relationships": [
    "franco-launched-the-1936-coup-from-morocco"
-  ]
+  ],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "sidi-mohamed-ben-hammou-identification-unresolved",
@@ -2390,7 +2531,10 @@
   "oneLine": "A name requiring identification before any biography can be written.",
   "contestedPoints": "Everything. The name as given matches several distinct people and no identification has been established.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "salah-sharif-at-tunisi",
@@ -2437,7 +2581,10 @@
   "oneLine": "Tunisian scholar who wrote the pan-Islamic propaganda distributed in Morocco during the First World War.",
   "contestedPoints": "The reach and effect of the pamphlets. Whether the Tamazight-language material was actually produced or only planned.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "eugene-regnault",
@@ -2480,7 +2627,10 @@
   "events": [],
   "relationships": [
    "regnault-negotiated-the-treaty-of-fez-with-moulay-abdelhafid"
-  ]
+  ],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "miguel-primo-de-rivera",
@@ -2521,7 +2671,10 @@
   "oneLine": "Dictator of Spain 1923–1930; came to power on the Annual crisis and directed the war that destroyed the Rif Republic.",
   "contestedPoints": "Whether he was an abandonista who reversed himself or a pragmatist who waited for French co-belligerence. His authorisation of chemical weapons use.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "joseph-gallieni",
@@ -2562,7 +2715,10 @@
   "oneLine": "Colonial commander in Sudan, Tonkin and Madagascar; Lyautey's mentor and the originator of the doctrine applied in Morocco.",
   "contestedPoints": "How much of the 'tache d'huile' method was his and how much Lyautey's later systematisation and self-promotion.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "moulay-abderrahmane",
@@ -2609,7 +2765,10 @@
   "oneLine": "Sultan 1822–1859; support for Abd al-Qadir led to defeat at Isly (1844) and the first treaty concessions to France.",
   "contestedPoints": "Scale of the Isly defeat. Whether support for Abd al-Qadir was strategic or forced by popular pressure.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "alfonso-xiii",
@@ -2650,7 +2809,10 @@
   "oneLine": "King of Spain 1886–1931; his reign covers the whole Spanish protectorate project and the Annual disaster that helped end it.",
   "contestedPoints": "Whether he encouraged Silvestre's 1921 advance by direct telegram over the heads of government and High Commissioner. Alleged, never proven. His role in shelving the Expediente Picasso and in amnestying Berenguer.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "ma-al-aynayn",
@@ -2737,7 +2899,10 @@
   "events": [],
   "relationships": [
    "hassan-i-appointed-ma-al-aynayn-as-khalifa-of-the-sahara"
-  ]
+  ],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "ahmed-dlimi",
@@ -2783,7 +2948,10 @@
   "oneLine": "Security chief and later commander of Moroccan forces in the Western Sahara; implicated in the Ben Barka affair; died in disputed circumstances in 1983.",
   "contestedPoints": "His role in the Ben Barka abduction — he surrendered voluntarily to the French court and was acquitted. The circumstances of his death, which almost no independent account accepts as accidental.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "driss-basri",
@@ -2823,7 +2991,10 @@
   "oneLine": "Interior minister 1979–1999; the operational architect of Hassan II's internal control system and of the Western Sahara administration.",
   "contestedPoints": "The extent of his personal responsibility versus the king's for the Years of Lead. Election management. His dismissal in November 1999 and what it signalled.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "mohammed-v",
@@ -2905,6 +3076,15 @@
    "thami-el-glaoui-demanded-the-deposition-of-mohammed-v",
    "guillaume-deposed-and-exiled-mohammed-v",
    "mohammed-ben-arafa-installed-in-place-of-mohammed-v"
+  ],
+  "claims": [
+   "the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables"
+  ],
+  "disputes": [
+   "who-decided-the-1953-deposition-of-mohammed-v"
+  ],
+  "archives": [
+   "archives-diplomatiques-la-courneuve-and-nantes"
   ]
  },
  {
@@ -2966,7 +3146,10 @@
   "oneLine": "Aït Ouirra leader who fought France from before 1912 until his death in 1924, outlasting the Zaian war by three years.",
   "contestedPoints": "His birth date and early career. His relationship with Mouha ou Hammou — the two are frequently confused in the literature, including by name.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "ahmed-al-hiba",
@@ -3028,7 +3211,10 @@
   "oneLine": "Son of Ma al-'Aynayn; proclaimed sultan at Tiznit in 1912, took Marrakech, and was destroyed at Sidi Bou Othmane on 6 September 1912.",
   "contestedPoints": "Exact death date. Scale of his following. Whether the sultanate claim was widely accepted or confined to the south. The fate of the French hostages taken at Marrakech.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "mohamed-ameziane",
@@ -3086,7 +3272,10 @@
   "oneLine": "Rifian leader of resistance to Spanish expansion around Melilla 1909–1912; commanded at the Barranco del Lobo.",
   "contestedPoints": "Spanish casualty figures at the Barranco del Lobo (July 1909). Whether he acted with Makhzen sanction. Circumstances of his death.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "jose-sanjurjo",
@@ -3127,7 +3316,10 @@
   "oneLine": "Africanista commander in the Rif war, ennobled as marqués del Rif; nominal leader of the July 1936 coup, killed in an air crash days into it.",
   "contestedPoints": "His role in the Alhucemas landing relative to other commanders. The extent of his authority over the 1936 rising.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "manuel-fernandez-silvestre",
@@ -3170,7 +3362,10 @@
   "events": [],
   "relationships": [
    "silvestre-fought-abd-el-krim-at-annual"
-  ]
+  ],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "hubert-lyautey",
@@ -3241,7 +3436,10 @@
    "lyautey-obtained-the-abdication-of-moulay-abdelhafid",
    "lyautey-patron-of-thami-el-glaoui",
    "petain-superseded-lyautey"
-  ]
+  ],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "rene-laverdure",
@@ -3282,7 +3480,10 @@
   "events": [],
   "relationships": [
    "laverdure-fought-mouha-ou-hammou-zayani-at-el-herri"
-  ]
+  ],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "maurice-le-glay",
@@ -3322,7 +3523,10 @@
   "oneLine": "Officer of Affaires Indigènes, Berberist ethnographer and writer; named in the literature as an author of the policy behind the 1930 dahir.",
   "contestedPoints": "His actual authorship of the 1930 dahir versus his role as its intellectual precursor. Whether his ethnography is usable evidence or ideology.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "mohamed-lyazidi",
@@ -3370,7 +3574,10 @@
   "oneLine": "Nationalist organiser from the 1930 anti-dahir campaign onward; signatory of the 1944 Independence Manifesto.",
   "contestedPoints": "His organisational role relative to the better-known leaders — probably underestimated.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "allal-el-fassi",
@@ -3420,7 +3627,10 @@
   "oneLine": "Salafi scholar and founder-leader of the Istiqlal party; the dominant intellectual figure of Moroccan nationalism.",
   "contestedPoints": "His 'Greater Morocco' territorial doctrine and its later use in the Western Sahara conflict. His relationship with the monarchy after 1956. The degree of Salafi versus liberal content in his programme.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "abderrahmane-youssoufi",
@@ -3463,7 +3673,10 @@
   "oneLine": "Resistance lawyer, UNFP/USFP leader, death-sentenced in absentia and long exiled; prime minister of the 1998 alternance government.",
   "contestedPoints": "Whether the 1998 alternance was a genuine democratic transition or a managed co-optation of the opposition. His own later published reservations bear on this.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "ahmed-al-raisuni",
@@ -3539,7 +3752,10 @@
   "events": [],
   "relationships": [
    "raisuni-abducted-harry-maclean"
-  ]
+  ],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "germain-ayache",
@@ -3579,7 +3795,10 @@
   "oneLine": "Moroccan historian who founded a national school of Moroccan history written against colonial historiography; author of Les origines de la guerre du Rif.",
   "contestedPoints": "His dates as recorded here are the conventional ones and have not been verified in this session. How far his method genuinely escaped the colonial framework he attacked.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "ahmad-ibn-khalid-al-nasiri",
@@ -3644,7 +3863,10 @@
   "oneLine": "Moroccan historian; author of Kitab al-Istiqsa, the first comprehensive national history of Morocco, completed in 1894.",
   "contestedPoints": "His exact birth date (March vs April 1835). How far his account of European encroachment is shaped by his position inside the Makhzen order. Whether his use of European sources makes him more reliable or differently compromised.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "zaid-ou-hmad",
@@ -3698,7 +3920,10 @@
   "oneLine": "Resistance leader active 1934-1936, after the date France declared the pacification of Morocco complete.",
   "contestedPoints": "Everything — dates, region, tribe, the scale of his following. Identified in Session 4 from a Moroccan state publication and not yet researched anywhere else.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "mohammed-sellam-ameziane",
@@ -3751,7 +3976,10 @@
   "oneLine": "Qarawiyyin graduate and Liberation Army veteran who directed the 1958-59 Rif revolt against the independent Moroccan government.",
   "contestedPoints": "His dates and fate. Whether the 18-point programme was his drafting. Whether the revolt sought reform within the state or something more.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  },
  {
   "slug": "abdallah-laroui",
@@ -3803,6 +4031,9 @@
   "oneLine": "Moroccan historian and philosopher; the most influential critic of colonial and orientalist historiography of Morocco.",
   "contestedPoints": "Whether his Marxist framework substitutes one external theory for another. His later testimony on Hassan II, written by a man who had access to the palace.",
   "events": [],
-  "relationships": []
+  "relationships": [],
+  "claims": [],
+  "disputes": [],
+  "archives": []
  }
 ]

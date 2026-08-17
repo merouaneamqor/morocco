@@ -1,7 +1,9 @@
 {
  "nodes": [
   {
-   "id": "mouha-ou-hammou-zayani",
+   "id": "person:mouha-ou-hammou-zayani",
+   "slug": "mouha-ou-hammou-zayani",
+   "kind": "person",
    "label": "Mouha ou Hammou Zayani",
    "group": "moroccan",
    "shape": "circle",
@@ -16,10 +18,12 @@
     "Armed resistance",
     "Makhzen official"
    ],
-   "degree": 3
+   "degree": 5
   },
   {
-   "id": "abdelkhalek-torres",
+   "id": "person:abdelkhalek-torres",
+   "slug": "abdelkhalek-torres",
+   "kind": "person",
    "label": "Abdelkhalek Torres",
    "group": "moroccan",
    "shape": "circle",
@@ -36,7 +40,9 @@
    "degree": 0
   },
   {
-   "id": "moulay-hassan-i",
+   "id": "person:moulay-hassan-i",
+   "slug": "moulay-hassan-i",
+   "kind": "person",
    "label": "Moulay Hassan I",
    "group": "moroccan",
    "shape": "circle",
@@ -50,7 +56,9 @@
    "degree": 3
   },
   {
-   "id": "emir-abd-el-malek",
+   "id": "person:emir-abd-el-malek",
+   "slug": "emir-abd-el-malek",
+   "kind": "person",
    "label": "Emir Abd el-Malek",
    "group": "moroccan",
    "shape": "circle",
@@ -66,7 +74,9 @@
    "degree": 0
   },
   {
-   "id": "ba-ahmed-ibn-musa",
+   "id": "person:ba-ahmed-ibn-musa",
+   "slug": "ba-ahmed-ibn-musa",
+   "kind": "person",
    "label": "Ba Ahmed ibn Musa",
    "group": "moroccan",
    "shape": "circle",
@@ -80,7 +90,9 @@
    "degree": 2
   },
   {
-   "id": "assou-oubasslam",
+   "id": "person:assou-oubasslam",
+   "slug": "assou-oubasslam",
+   "kind": "person",
    "label": "Assou Oubasslam",
    "group": "moroccan",
    "shape": "circle",
@@ -98,7 +110,9 @@
    "degree": 0
   },
   {
-   "id": "abderrahim-bouabid",
+   "id": "person:abderrahim-bouabid",
+   "slug": "abderrahim-bouabid",
+   "kind": "person",
    "label": "Abderrahim Bouabid",
    "group": "moroccan",
    "shape": "circle",
@@ -114,7 +128,9 @@
    "degree": 0
   },
   {
-   "id": "hassan-ii",
+   "id": "person:hassan-ii",
+   "slug": "hassan-ii",
+   "kind": "person",
    "label": "Hassan II",
    "group": "moroccan",
    "shape": "circle",
@@ -129,7 +145,9 @@
    "degree": 0
   },
   {
-   "id": "alphonse-juin",
+   "id": "person:alphonse-juin",
+   "slug": "alphonse-juin",
+   "kind": "person",
    "label": "Alphonse Juin",
    "group": "french",
    "shape": "circle",
@@ -144,7 +162,9 @@
    "degree": 0
   },
   {
-   "id": "mohamed-oufkir",
+   "id": "person:mohamed-oufkir",
+   "slug": "mohamed-oufkir",
+   "kind": "person",
    "label": "Mohamed Oufkir",
    "group": "moroccan",
    "shape": "circle",
@@ -161,7 +181,9 @@
    "degree": 1
   },
   {
-   "id": "charles-mangin",
+   "id": "person:charles-mangin",
+   "slug": "charles-mangin",
+   "kind": "person",
    "label": "Charles Mangin",
    "group": "french",
    "shape": "circle",
@@ -176,7 +198,9 @@
    "degree": 0
   },
   {
-   "id": "harry-maclean",
+   "id": "person:harry-maclean",
+   "slug": "harry-maclean",
+   "kind": "person",
    "label": "Harry Maclean",
    "group": "moroccan",
    "shape": "circle",
@@ -192,7 +216,9 @@
    "degree": 1
   },
   {
-   "id": "samuel-gummere",
+   "id": "person:samuel-gummere",
+   "slug": "samuel-gummere",
+   "kind": "person",
    "label": "Samuel Gummere",
    "group": "other",
    "shape": "circle",
@@ -207,7 +233,9 @@
    "degree": 0
   },
   {
-   "id": "bou-hamara",
+   "id": "person:bou-hamara",
+   "slug": "bou-hamara",
+   "kind": "person",
    "label": "Bou Hamara",
    "group": "moroccan",
    "shape": "circle",
@@ -222,7 +250,9 @@
    "degree": 1
   },
   {
-   "id": "mohammed-ben-abdelkrim-el-khattabi",
+   "id": "person:mohammed-ben-abdelkrim-el-khattabi",
+   "slug": "mohammed-ben-abdelkrim-el-khattabi",
+   "kind": "person",
    "label": "Mohammed ben Abdelkrim El Khattabi",
    "group": "moroccan",
    "shape": "circle",
@@ -243,7 +273,9 @@
    "degree": 2
   },
   {
-   "id": "taher-bey",
+   "id": "person:taher-bey",
+   "slug": "taher-bey",
+   "kind": "person",
    "label": "Taher Bey",
    "group": "other",
    "shape": "circle",
@@ -259,7 +291,9 @@
    "degree": 0
   },
   {
-   "id": "m-hammad-ben-abdelkrim-el-khattabi",
+   "id": "person:m-hammad-ben-abdelkrim-el-khattabi",
+   "slug": "m-hammad-ben-abdelkrim-el-khattabi",
+   "kind": "person",
    "label": "M'Hammad ben Abdelkrim El Khattabi",
    "group": "moroccan",
    "shape": "circle",
@@ -274,7 +308,9 @@
    "degree": 0
   },
   {
-   "id": "moulay-youssef",
+   "id": "person:moulay-youssef",
+   "slug": "moulay-youssef",
+   "kind": "person",
    "label": "Moulay Youssef",
    "group": "moroccan",
    "shape": "circle",
@@ -289,7 +325,9 @@
    "degree": 0
   },
   {
-   "id": "ahmed-balafrej",
+   "id": "person:ahmed-balafrej",
+   "slug": "ahmed-balafrej",
+   "kind": "person",
    "label": "Ahmed Balafrej",
    "group": "moroccan",
    "shape": "circle",
@@ -307,7 +345,9 @@
    "degree": 0
   },
   {
-   "id": "hugo-stoltzenberg",
+   "id": "person:hugo-stoltzenberg",
+   "slug": "hugo-stoltzenberg",
+   "kind": "person",
    "label": "Hugo Stoltzenberg",
    "group": "other",
    "shape": "circle",
@@ -321,7 +361,9 @@
    "degree": 1
   },
   {
-   "id": "damaso-berenguer",
+   "id": "person:damaso-berenguer",
+   "slug": "damaso-berenguer",
+   "kind": "person",
    "label": "Dámaso Berenguer",
    "group": "spanish",
    "shape": "circle",
@@ -337,7 +379,9 @@
    "degree": 2
   },
   {
-   "id": "philippe-petain",
+   "id": "person:philippe-petain",
+   "slug": "philippe-petain",
+   "kind": "person",
    "label": "Philippe Pétain",
    "group": "french",
    "shape": "circle",
@@ -352,7 +396,9 @@
    "degree": 1
   },
   {
-   "id": "abdelhadi-boutaleb",
+   "id": "person:abdelhadi-boutaleb",
+   "slug": "abdelhadi-boutaleb",
+   "kind": "person",
    "label": "Abdelhadi Boutaleb",
    "group": "moroccan",
    "shape": "circle",
@@ -370,7 +416,9 @@
    "degree": 0
   },
   {
-   "id": "paul-prosper-henrys",
+   "id": "person:paul-prosper-henrys",
+   "slug": "paul-prosper-henrys",
+   "kind": "person",
    "label": "Paul Prosper Henrys",
    "group": "french",
    "shape": "circle",
@@ -384,7 +432,9 @@
    "degree": 0
   },
   {
-   "id": "mohamed-hassan-ouazzani",
+   "id": "person:mohamed-hassan-ouazzani",
+   "slug": "mohamed-hassan-ouazzani",
+   "kind": "person",
    "label": "Mohamed Hassan Ouazzani",
    "group": "moroccan",
    "shape": "circle",
@@ -401,7 +451,9 @@
    "degree": 0
   },
   {
-   "id": "abdallah-ibrahim",
+   "id": "person:abdallah-ibrahim",
+   "slug": "abdallah-ibrahim",
+   "kind": "person",
    "label": "Abdallah Ibrahim",
    "group": "moroccan",
    "shape": "circle",
@@ -416,7 +468,9 @@
    "degree": 0
   },
   {
-   "id": "joseph-francois-poeymirau",
+   "id": "person:joseph-francois-poeymirau",
+   "slug": "joseph-francois-poeymirau",
+   "kind": "person",
    "label": "Joseph-François Poeymirau",
    "group": "french",
    "shape": "circle",
@@ -430,7 +484,9 @@
    "degree": 1
   },
   {
-   "id": "m-barek-bekkay",
+   "id": "person:m-barek-bekkay",
+   "slug": "m-barek-bekkay",
+   "kind": "person",
    "label": "M'barek Bekkay",
    "group": "moroccan",
    "shape": "circle",
@@ -448,7 +504,9 @@
    "degree": 0
   },
   {
-   "id": "henri-gouraud",
+   "id": "person:henri-gouraud",
+   "slug": "henri-gouraud",
+   "kind": "person",
    "label": "Henri Gouraud",
    "group": "french",
    "shape": "circle",
@@ -463,7 +521,9 @@
    "degree": 0
   },
   {
-   "id": "mehdi-ben-barka",
+   "id": "person:mehdi-ben-barka",
+   "slug": "mehdi-ben-barka",
+   "kind": "person",
    "label": "Mehdi Ben Barka",
    "group": "moroccan",
    "shape": "circle",
@@ -479,7 +539,9 @@
    "degree": 1
   },
   {
-   "id": "augustin-guillaume",
+   "id": "person:augustin-guillaume",
+   "slug": "augustin-guillaume",
+   "kind": "person",
    "label": "Augustin Guillaume",
    "group": "french",
    "shape": "circle",
@@ -494,7 +556,9 @@
    "degree": 1
   },
   {
-   "id": "shakib-arslan",
+   "id": "person:shakib-arslan",
+   "slug": "shakib-arslan",
+   "kind": "person",
    "label": "Shakib Arslan",
    "group": "moroccan",
    "shape": "circle",
@@ -510,7 +574,9 @@
    "degree": 0
   },
   {
-   "id": "juan-picasso-gonzalez",
+   "id": "person:juan-picasso-gonzalez",
+   "slug": "juan-picasso-gonzalez",
+   "kind": "person",
    "label": "Juan Picasso González",
    "group": "spanish",
    "shape": "circle",
@@ -524,7 +590,9 @@
    "degree": 0
   },
   {
-   "id": "thami-el-glaoui",
+   "id": "person:thami-el-glaoui",
+   "slug": "thami-el-glaoui",
+   "kind": "person",
    "label": "Thami El Glaoui",
    "group": "moroccan",
    "shape": "circle",
@@ -541,10 +609,12 @@
     "Tribal leader",
     "Makhzen official"
    ],
-   "degree": 2
+   "degree": 3
   },
   {
-   "id": "ali-amhaouch",
+   "id": "person:ali-amhaouch",
+   "slug": "ali-amhaouch",
+   "kind": "person",
    "label": "Ali Amhaouch",
    "group": "moroccan",
    "shape": "circle",
@@ -561,7 +631,9 @@
    "degree": 0
   },
   {
-   "id": "ahmed-bahnini",
+   "id": "person:ahmed-bahnini",
+   "slug": "ahmed-bahnini",
+   "kind": "person",
    "label": "Ahmed Bahnini",
    "group": "moroccan",
    "shape": "circle",
@@ -576,7 +648,9 @@
    "degree": 0
   },
   {
-   "id": "mohammed-iv",
+   "id": "person:mohammed-iv",
+   "slug": "mohammed-iv",
+   "kind": "person",
    "label": "Mohammed IV",
    "group": "moroccan",
    "shape": "circle",
@@ -590,7 +664,9 @@
    "degree": 0
   },
   {
-   "id": "moulay-abdelhafid",
+   "id": "person:moulay-abdelhafid",
+   "slug": "moulay-abdelhafid",
+   "kind": "person",
    "label": "Moulay Abdelhafid",
    "group": "moroccan",
    "shape": "circle",
@@ -604,7 +680,9 @@
    "degree": 5
   },
   {
-   "id": "moulay-abdelaziz",
+   "id": "person:moulay-abdelaziz",
+   "slug": "moulay-abdelaziz",
+   "kind": "person",
    "label": "Moulay Abdelaziz",
    "group": "moroccan",
    "shape": "circle",
@@ -619,7 +697,9 @@
    "degree": 2
   },
   {
-   "id": "si-madani-el-glaoui",
+   "id": "person:si-madani-el-glaoui",
+   "slug": "si-madani-el-glaoui",
+   "kind": "person",
    "label": "Si Madani El Glaoui",
    "group": "moroccan",
    "shape": "circle",
@@ -637,7 +717,9 @@
    "degree": 1
   },
   {
-   "id": "mohammed-ben-arafa",
+   "id": "person:mohammed-ben-arafa",
+   "slug": "mohammed-ben-arafa",
+   "kind": "person",
    "label": "Mohammed ben Arafa",
    "group": "moroccan",
    "shape": "circle",
@@ -652,7 +734,9 @@
    "degree": 1
   },
   {
-   "id": "francisco-franco",
+   "id": "person:francisco-franco",
+   "slug": "francisco-franco",
+   "kind": "person",
    "label": "Francisco Franco",
    "group": "spanish",
    "shape": "circle",
@@ -670,7 +754,9 @@
    "degree": 2
   },
   {
-   "id": "sidi-mohamed-ben-hammou-identification-unresolved",
+   "id": "person:sidi-mohamed-ben-hammou-identification-unresolved",
+   "slug": "sidi-mohamed-ben-hammou-identification-unresolved",
+   "kind": "person",
    "label": "Sidi Mohamed Ben Hammou — identification unresolved",
    "group": "moroccan",
    "shape": "circle",
@@ -684,7 +770,9 @@
    "degree": 0
   },
   {
-   "id": "salah-sharif-at-tunisi",
+   "id": "person:salah-sharif-at-tunisi",
+   "slug": "salah-sharif-at-tunisi",
+   "kind": "person",
    "label": "Salah Sharif at-Tunisi",
    "group": "moroccan",
    "shape": "circle",
@@ -699,7 +787,9 @@
    "degree": 0
   },
   {
-   "id": "eugene-regnault",
+   "id": "person:eugene-regnault",
+   "slug": "eugene-regnault",
+   "kind": "person",
    "label": "Eugène Regnault",
    "group": "french",
    "shape": "circle",
@@ -714,7 +804,9 @@
    "degree": 1
   },
   {
-   "id": "miguel-primo-de-rivera",
+   "id": "person:miguel-primo-de-rivera",
+   "slug": "miguel-primo-de-rivera",
+   "kind": "person",
    "label": "Miguel Primo de Rivera",
    "group": "spanish",
    "shape": "circle",
@@ -729,7 +821,9 @@
    "degree": 0
   },
   {
-   "id": "joseph-gallieni",
+   "id": "person:joseph-gallieni",
+   "slug": "joseph-gallieni",
+   "kind": "person",
    "label": "Joseph Gallieni",
    "group": "french",
    "shape": "circle",
@@ -745,7 +839,9 @@
    "degree": 0
   },
   {
-   "id": "moulay-abderrahmane",
+   "id": "person:moulay-abderrahmane",
+   "slug": "moulay-abderrahmane",
+   "kind": "person",
    "label": "Moulay Abderrahmane",
    "group": "moroccan",
    "shape": "circle",
@@ -760,7 +856,9 @@
    "degree": 0
   },
   {
-   "id": "alfonso-xiii",
+   "id": "person:alfonso-xiii",
+   "slug": "alfonso-xiii",
+   "kind": "person",
    "label": "Alfonso XIII",
    "group": "spanish",
    "shape": "circle",
@@ -776,7 +874,9 @@
    "degree": 0
   },
   {
-   "id": "ma-al-aynayn",
+   "id": "person:ma-al-aynayn",
+   "slug": "ma-al-aynayn",
+   "kind": "person",
    "label": "Ma al-'Aynayn",
    "group": "moroccan",
    "shape": "circle",
@@ -793,7 +893,9 @@
    "degree": 1
   },
   {
-   "id": "ahmed-dlimi",
+   "id": "person:ahmed-dlimi",
+   "slug": "ahmed-dlimi",
+   "kind": "person",
    "label": "Ahmed Dlimi",
    "group": "moroccan",
    "shape": "circle",
@@ -807,7 +909,9 @@
    "degree": 0
   },
   {
-   "id": "driss-basri",
+   "id": "person:driss-basri",
+   "slug": "driss-basri",
+   "kind": "person",
    "label": "Driss Basri",
    "group": "moroccan",
    "shape": "circle",
@@ -822,7 +926,9 @@
    "degree": 0
   },
   {
-   "id": "mohammed-v",
+   "id": "person:mohammed-v",
+   "slug": "mohammed-v",
+   "kind": "person",
    "label": "Mohammed V",
    "group": "moroccan",
    "shape": "circle",
@@ -837,10 +943,12 @@
     "Sultan / monarch",
     "Nationalist"
    ],
-   "degree": 3
+   "degree": 4
   },
   {
-   "id": "moha-ou-said",
+   "id": "person:moha-ou-said",
+   "slug": "moha-ou-said",
+   "kind": "person",
    "label": "Moha ou Said",
    "group": "moroccan",
    "shape": "circle",
@@ -857,7 +965,9 @@
    "degree": 0
   },
   {
-   "id": "ahmed-al-hiba",
+   "id": "person:ahmed-al-hiba",
+   "slug": "ahmed-al-hiba",
+   "kind": "person",
    "label": "Ahmed al-Hiba",
    "group": "moroccan",
    "shape": "circle",
@@ -874,7 +984,9 @@
    "degree": 0
   },
   {
-   "id": "mohamed-ameziane",
+   "id": "person:mohamed-ameziane",
+   "slug": "mohamed-ameziane",
+   "kind": "person",
    "label": "Mohamed Ameziane",
    "group": "moroccan",
    "shape": "circle",
@@ -889,7 +1001,9 @@
    "degree": 0
   },
   {
-   "id": "jose-sanjurjo",
+   "id": "person:jose-sanjurjo",
+   "slug": "jose-sanjurjo",
+   "kind": "person",
    "label": "José Sanjurjo",
    "group": "spanish",
    "shape": "circle",
@@ -904,7 +1018,9 @@
    "degree": 0
   },
   {
-   "id": "manuel-fernandez-silvestre",
+   "id": "person:manuel-fernandez-silvestre",
+   "slug": "manuel-fernandez-silvestre",
+   "kind": "person",
    "label": "Manuel Fernández Silvestre",
    "group": "spanish",
    "shape": "circle",
@@ -919,7 +1035,9 @@
    "degree": 1
   },
   {
-   "id": "hubert-lyautey",
+   "id": "person:hubert-lyautey",
+   "slug": "hubert-lyautey",
+   "kind": "person",
    "label": "Hubert Lyautey",
    "group": "french",
    "shape": "circle",
@@ -936,7 +1054,9 @@
    "degree": 3
   },
   {
-   "id": "rene-laverdure",
+   "id": "person:rene-laverdure",
+   "slug": "rene-laverdure",
+   "kind": "person",
    "label": "René Laverdure",
    "group": "french",
    "shape": "circle",
@@ -950,7 +1070,9 @@
    "degree": 1
   },
   {
-   "id": "maurice-le-glay",
+   "id": "person:maurice-le-glay",
+   "slug": "maurice-le-glay",
+   "kind": "person",
    "label": "Maurice Le Glay",
    "group": "french",
    "shape": "circle",
@@ -965,7 +1087,9 @@
    "degree": 0
   },
   {
-   "id": "mohamed-lyazidi",
+   "id": "person:mohamed-lyazidi",
+   "slug": "mohamed-lyazidi",
+   "kind": "person",
    "label": "Mohamed Lyazidi",
    "group": "moroccan",
    "shape": "circle",
@@ -981,7 +1105,9 @@
    "degree": 0
   },
   {
-   "id": "allal-el-fassi",
+   "id": "person:allal-el-fassi",
+   "slug": "allal-el-fassi",
+   "kind": "person",
    "label": "Allal El Fassi",
    "group": "moroccan",
    "shape": "circle",
@@ -1000,7 +1126,9 @@
    "degree": 0
   },
   {
-   "id": "abderrahmane-youssoufi",
+   "id": "person:abderrahmane-youssoufi",
+   "slug": "abderrahmane-youssoufi",
+   "kind": "person",
    "label": "Abderrahmane Youssoufi",
    "group": "moroccan",
    "shape": "circle",
@@ -1017,7 +1145,9 @@
    "degree": 0
   },
   {
-   "id": "ahmed-al-raisuni",
+   "id": "person:ahmed-al-raisuni",
+   "slug": "ahmed-al-raisuni",
+   "kind": "person",
    "label": "Ahmed al-Raisuni",
    "group": "moroccan",
    "shape": "circle",
@@ -1036,7 +1166,9 @@
    "degree": 1
   },
   {
-   "id": "germain-ayache",
+   "id": "person:germain-ayache",
+   "slug": "germain-ayache",
+   "kind": "person",
    "label": "Germain Ayache",
    "group": "other",
    "shape": "circle",
@@ -1050,7 +1182,9 @@
    "degree": 0
   },
   {
-   "id": "ahmad-ibn-khalid-al-nasiri",
+   "id": "person:ahmad-ibn-khalid-al-nasiri",
+   "slug": "ahmad-ibn-khalid-al-nasiri",
+   "kind": "person",
    "label": "Ahmad ibn Khalid al-Nasiri",
    "group": "moroccan",
    "shape": "circle",
@@ -1065,7 +1199,9 @@
    "degree": 0
   },
   {
-   "id": "zaid-ou-hmad",
+   "id": "person:zaid-ou-hmad",
+   "slug": "zaid-ou-hmad",
+   "kind": "person",
    "label": "Zaïd Ou Hmad",
    "group": "moroccan",
    "shape": "circle",
@@ -1081,7 +1217,9 @@
    "degree": 0
   },
   {
-   "id": "mohammed-sellam-ameziane",
+   "id": "person:mohammed-sellam-ameziane",
+   "slug": "mohammed-sellam-ameziane",
+   "kind": "person",
    "label": "Mohammed Sellam Ameziane",
    "group": "moroccan",
    "shape": "circle",
@@ -1097,7 +1235,9 @@
    "degree": 0
   },
   {
-   "id": "abdallah-laroui",
+   "id": "person:abdallah-laroui",
+   "slug": "abdallah-laroui",
+   "kind": "person",
    "label": "Abdallah Laroui",
    "group": "other",
    "shape": "circle",
@@ -1110,12 +1250,693 @@
     "Other foreign"
    ],
    "degree": 0
+  },
+  {
+   "id": "claim:el-herri-13-november-1914-zaian-dead-numbered-182",
+   "slug": "el-herri-13-november-1914-zaian-dead-numbered-182",
+   "kind": "claim",
+   "label": "El Herri, 13 November 1914: Zaian dead numbered 182",
+   "group": "unaligned",
+   "shape": "diamond",
+   "confidence": "Disputed",
+   "evidenceLayer": "Primary source",
+   "phase": [
+    "IV 1912-1921"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "claim:annual-july-1921-spanish-dead-ranged-7-875-to-13-363",
+   "slug": "annual-july-1921-spanish-dead-ranged-7-875-to-13-363",
+   "kind": "claim",
+   "label": "Annual, July 1921: Spanish dead ranged 7,875 to 13,363",
+   "group": "unaligned",
+   "shape": "diamond",
+   "confidence": "Disputed",
+   "evidenceLayer": "Primary source",
+   "phase": [
+    "V 1921-1934"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "claim:casablanca-july-august-1907-bombardment-and-occupation-killed-roughly-600-to-3-000",
+   "slug": "casablanca-july-august-1907-bombardment-and-occupation-killed-roughly-600-to-3-000",
+   "kind": "claim",
+   "label": "Casablanca, July–August 1907: bombardment and occupation killed roughly 600 to 3,000+",
+   "group": "unaligned",
+   "shape": "diamond",
+   "confidence": "Disputed",
+   "evidenceLayer": "Primary source",
+   "phase": [
+    "III 1900-1912"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "claim:mouha-ou-hammou-zayani-was-killed-by-his-own-son-hassan",
+   "slug": "mouha-ou-hammou-zayani-was-killed-by-his-own-son-hassan",
+   "kind": "claim",
+   "label": "Mouha ou Hammou Zayani was killed by his own son Hassan",
+   "group": "unaligned",
+   "shape": "diamond",
+   "confidence": "Disputed",
+   "evidenceLayer": "Secondary interpretation",
+   "phase": [],
+   "degree": 1
+  },
+  {
+   "id": "claim:the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables",
+   "slug": "the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables",
+   "kind": "claim",
+   "label": "The August 1953 decision to depose Mohammed V originated in Paris, with Resident-General Guillaume, or with El Glaoui and the notables",
+   "group": "unaligned",
+   "shape": "diamond",
+   "confidence": "Disputed",
+   "evidenceLayer": "Secondary interpretation",
+   "phase": [
+    "VII 1944-1956"
+   ],
+   "degree": 2
+  },
+  {
+   "id": "source:did-amrika-promise-morocco-s-independence-the-nationalist-movement-the-sultan-and-the-making-of-the-roosevelt-myth",
+   "slug": "did-amrika-promise-morocco-s-independence-the-nationalist-movement-the-sultan-and-the-making-of-the-roosevelt-myth",
+   "kind": "source",
+   "label": "Did Amrika promise Morocco's independence? The nationalist movement, the Sultan, and the making of the 'Roosevelt Myth'",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "ACADEMIC",
+   "verification": "Cited by named scholar",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:fo-413-foreign-office-confidential-print-morocco-and-north-west-africa",
+   "slug": "fo-413-foreign-office-confidential-print-morocco-and-north-west-africa",
+   "kind": "source",
+   "label": "FO 413 — Foreign Office: Confidential Print Morocco and North West Africa",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "PRIMARY_ARCHIVAL",
+   "verification": "Catalogue verified",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:deadly-embrace-morocco-and-the-road-to-the-spanish-civil-war",
+   "slug": "deadly-embrace-morocco-and-the-road-to-the-spanish-civil-war",
+   "kind": "source",
+   "label": "Deadly Embrace: Morocco and the Road to the Spanish Civil War",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "ACADEMIC",
+   "verification": "Cited by named scholar",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:ottoman-empire-and-moroccan-resistance-to-the-french-protectorate-in-the-first-world-war-activities-of-teskilat-i-mahsusa-in-morocco",
+   "slug": "ottoman-empire-and-moroccan-resistance-to-the-french-protectorate-in-the-first-world-war-activities-of-teskilat-i-mahsusa-in-morocco",
+   "kind": "source",
+   "label": "Ottoman Empire and Moroccan Resistance to the French Protectorate in the First World War: Activities of Teşkilat-ı Mahsusa in Morocco",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "ACADEMIC",
+   "verification": "Cited by named scholar",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:hazine-guide-to-archives-and-libraries-of-the-middle-east-and-north-africa",
+   "slug": "hazine-guide-to-archives-and-libraries-of-the-middle-east-and-north-africa",
+   "kind": "source",
+   "label": "Hazine — guide to archives and libraries of the Middle East and North Africa",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "SECONDARY",
+   "verification": "Consulted directly",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:lords-of-the-atlas-the-rise-and-fall-of-the-house-of-glaoua",
+   "slug": "lords-of-the-atlas-the-rise-and-fall-of-the-house-of-glaoua",
+   "kind": "source",
+   "label": "Lords of the Atlas: The Rise and Fall of the House of Glaoua",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "SECONDARY",
+   "verification": "NOT YET VERIFIED",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:alta-comisaria-de-espana-en-marruecos-fonds-record",
+   "slug": "alta-comisaria-de-espana-en-marruecos-fonds-record",
+   "kind": "source",
+   "label": "Alta Comisaría de España en Marruecos (fonds record)",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "PRIMARY_ARCHIVAL",
+   "verification": "Catalogue verified",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:al-watha-iq-les-archives-published-makhzen-documents",
+   "slug": "al-watha-iq-les-archives-published-makhzen-documents",
+   "kind": "source",
+   "label": "al-Wathā'iq (« Les Archives ») — published Makhzen documents",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "PRIMARY_ARCHIVAL",
+   "verification": "Cited by named scholar",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:shd-guide-des-sources-sur-le-maroc-sous-serie-gr-3h",
+   "slug": "shd-guide-des-sources-sur-le-maroc-sous-serie-gr-3h",
+   "kind": "source",
+   "label": "SHD — Guide des sources sur le Maroc (sous-série GR 3H)",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "OFFICIAL",
+   "verification": "Catalogue verified",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:abdelkrim-memoires-d-abd-el-krim",
+   "slug": "abdelkrim-memoires-d-abd-el-krim",
+   "kind": "source",
+   "label": "Abdelkrim, Mémoires d'Abd el Krim",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "PRIMARY_CONTEMPORARY",
+   "verification": "NOT YET VERIFIED",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:inventaire-des-archives-du-maroc-sous-serie-3h",
+   "slug": "inventaire-des-archives-du-maroc-sous-serie-3h",
+   "kind": "source",
+   "label": "Inventaire des archives du Maroc — sous-série 3H",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "OFFICIAL",
+   "verification": "Catalogue verified",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:moroccan-resistance-pan-islam-and-german-war-strategy-1914-1918",
+   "slug": "moroccan-resistance-pan-islam-and-german-war-strategy-1914-1918",
+   "kind": "source",
+   "label": "Moroccan Resistance, Pan-Islam and German War Strategy, 1914–1918",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "ACADEMIC",
+   "verification": "Cited by named scholar",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:expediente-picasso",
+   "slug": "expediente-picasso",
+   "kind": "source",
+   "label": "Expediente Picasso",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "OFFICIAL",
+   "verification": "Cited by named scholar",
+   "phase": [],
+   "degree": 1
+  },
+  {
+   "id": "source:ottoman-support-to-moroccan-local-resistance-in-north-africa-1914-1918",
+   "slug": "ottoman-support-to-moroccan-local-resistance-in-north-africa-1914-1918",
+   "kind": "source",
+   "label": "Ottoman Support to Moroccan Local Resistance in North Africa (1914–1918)",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "ACADEMIC",
+   "verification": "Cited by named scholar",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:kitab-al-istiqsa-li-akhbar-duwal-al-maghrib-al-aqsa",
+   "slug": "kitab-al-istiqsa-li-akhbar-duwal-al-maghrib-al-aqsa",
+   "kind": "source",
+   "label": "Kitāb al-Istiqsā li-akhbār duwal al-Maghrib al-Aqsā",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "PRIMARY_CONTEMPORARY",
+   "verification": null,
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:كتاب-الاستقصا-arabic-text-al-maktaba-al-shamela",
+   "slug": "كتاب-الاستقصا-arabic-text-al-maktaba-al-shamela",
+   "kind": "source",
+   "label": "كتاب الاستقصا — Arabic text, al-Maktaba al-Shamela",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "PRIMARY_CONTEMPORARY",
+   "verification": null,
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:les-origines-de-la-guerre-du-rif",
+   "slug": "les-origines-de-la-guerre-du-rif",
+   "kind": "source",
+   "label": "Les origines de la guerre du Rif",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "ACADEMIC",
+   "verification": null,
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:reconsidering-the-rif-revolt-1958-1959",
+   "slug": "reconsidering-the-rif-revolt-1958-1959",
+   "kind": "source",
+   "label": "Reconsidering the Rif Revolt (1958–1959)",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "ACADEMIC",
+   "verification": null,
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:archives-marocaines-series",
+   "slug": "archives-marocaines-series",
+   "kind": "source",
+   "label": "Archives Marocaines (series)",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "PRIMARY_CONTEMPORARY",
+   "verification": null,
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:bataille-elhri-digitised-document",
+   "slug": "bataille-elhri-digitised-document",
+   "kind": "source",
+   "label": "Bataille Elhri (digitised document)",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "SECONDARY",
+   "verification": null,
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:cahiers-des-documents-historiques-de-la-resistance-et-de-la-liberation",
+   "slug": "cahiers-des-documents-historiques-de-la-resistance-et-de-la-liberation",
+   "kind": "source",
+   "label": "Cahiers des Documents Historiques de la Résistance et de la Libération",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "OFFICIAL",
+   "verification": null,
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:frus-conferences-at-washington-and-casablanca-1941-1943-document-376-roosevelt-dinner-party-22-january-1943",
+   "slug": "frus-conferences-at-washington-and-casablanca-1941-1943-document-376-roosevelt-dinner-party-22-january-1943",
+   "kind": "source",
+   "label": "FRUS, Conferences at Washington and Casablanca 1941–1943, Document 376 — Roosevelt dinner party, 22 January 1943",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "OFFICIAL",
+   "verification": null,
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:hesperis-tamuda",
+   "slug": "hesperis-tamuda",
+   "kind": "source",
+   "label": "Hespéris-Tamuda",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "ACADEMIC",
+   "verification": null,
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:les-origines-sociales-et-culturelles-du-nationalisme-marocain-1830-1912",
+   "slug": "les-origines-sociales-et-culturelles-du-nationalisme-marocain-1830-1912",
+   "kind": "source",
+   "label": "Les origines sociales et culturelles du nationalisme marocain, 1830–1912",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "ACADEMIC",
+   "verification": null,
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:les-sources-inedites-de-l-histoire-du-maroc-de-1530-a-1845",
+   "slug": "les-sources-inedites-de-l-histoire-du-maroc-de-1530-a-1845",
+   "kind": "source",
+   "label": "Les sources inédites de l'histoire du Maroc de 1530 à 1845",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "PRIMARY_ARCHIVAL",
+   "verification": null,
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:wandering-minstrels-and-epic-poetry-from-morocco-s-berber-highlands",
+   "slug": "wandering-minstrels-and-epic-poetry-from-morocco-s-berber-highlands",
+   "kind": "source",
+   "label": "Wandering Minstrels and Epic Poetry from Morocco's Berber Highlands",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "ACADEMIC",
+   "verification": null,
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "archive:archivo-general-de-la-administracion-aga",
+   "slug": "archivo-general-de-la-administracion-aga",
+   "kind": "archive",
+   "label": "Archivo General de la Administración (AGA)",
+   "group": "unaligned",
+   "shape": "triangle",
+   "country": "Spain",
+   "priority": "1 - decisive",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "archive:service-historique-de-la-defense-shd",
+   "slug": "service-historique-de-la-defense-shd",
+   "kind": "archive",
+   "label": "Service historique de la Défense (SHD)",
+   "group": "unaligned",
+   "shape": "triangle",
+   "country": "France",
+   "priority": "1 - decisive",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "archive:the-national-archives-tna",
+   "slug": "the-national-archives-tna",
+   "kind": "archive",
+   "label": "The National Archives (TNA)",
+   "group": "unaligned",
+   "shape": "triangle",
+   "country": "United Kingdom",
+   "priority": "1 - decisive",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "archive:archives-du-maroc",
+   "slug": "archives-du-maroc",
+   "kind": "archive",
+   "label": "Archives du Maroc",
+   "group": "unaligned",
+   "shape": "triangle",
+   "country": "Morocco",
+   "priority": "1 - decisive",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "archive:politisches-archiv-des-auswartigen-amts-a-a-p-a",
+   "slug": "politisches-archiv-des-auswartigen-amts-a-a-p-a",
+   "kind": "archive",
+   "label": "Politisches Archiv des Auswärtigen Amts (A.A.-P.A.)",
+   "group": "unaligned",
+   "shape": "triangle",
+   "country": "Germany",
+   "priority": "1 - decisive",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "archive:us-national-archives-nara-rg-84-foreign-service-posts",
+   "slug": "us-national-archives-nara-rg-84-foreign-service-posts",
+   "kind": "archive",
+   "label": "US National Archives (NARA) — RG 84, Foreign Service Posts",
+   "group": "unaligned",
+   "shape": "triangle",
+   "country": "United States",
+   "priority": "2 - structural",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "archive:devlet-arsivleri-osmanli-arsivi-boa",
+   "slug": "devlet-arsivleri-osmanli-arsivi-boa",
+   "kind": "archive",
+   "label": "Devlet Arşivleri — Osmanlı Arşivi (BOA)",
+   "group": "unaligned",
+   "shape": "triangle",
+   "country": "Turkey / Ottoman",
+   "priority": "1 - decisive",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "archive:gallica-bibliotheque-nationale-de-france",
+   "slug": "gallica-bibliotheque-nationale-de-france",
+   "kind": "archive",
+   "label": "Gallica — Bibliothèque nationale de France",
+   "group": "unaligned",
+   "shape": "triangle",
+   "country": "France",
+   "priority": "2 - structural",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "archive:direction-des-archives-royales",
+   "slug": "direction-des-archives-royales",
+   "kind": "archive",
+   "label": "Direction des Archives Royales",
+   "group": "unaligned",
+   "shape": "triangle",
+   "country": "Morocco",
+   "priority": "1 - decisive",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "archive:hemeroteca-digital-biblioteca-nacional-de-espana",
+   "slug": "hemeroteca-digital-biblioteca-nacional-de-espana",
+   "kind": "archive",
+   "label": "Hemeroteca Digital — Biblioteca Nacional de España",
+   "group": "unaligned",
+   "shape": "triangle",
+   "country": "Spain",
+   "priority": "2 - structural",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "archive:foreign-relations-of-the-united-states-frus",
+   "slug": "foreign-relations-of-the-united-states-frus",
+   "kind": "archive",
+   "label": "Foreign Relations of the United States (FRUS)",
+   "group": "unaligned",
+   "shape": "triangle",
+   "country": "United States",
+   "priority": "1 - decisive",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "archive:archives-nationales-d-outre-mer-anom",
+   "slug": "archives-nationales-d-outre-mer-anom",
+   "kind": "archive",
+   "label": "Archives nationales d'outre-mer (ANOM)",
+   "group": "unaligned",
+   "shape": "triangle",
+   "country": "France",
+   "priority": "2 - structural",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "archive:league-of-nations-archives-un-geneva",
+   "slug": "league-of-nations-archives-un-geneva",
+   "kind": "archive",
+   "label": "League of Nations Archives / UN Geneva",
+   "group": "unaligned",
+   "shape": "triangle",
+   "country": "International",
+   "priority": "3 - supporting",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "archive:tangier-american-legation-institute-for-moroccan-studies-talim",
+   "slug": "tangier-american-legation-institute-for-moroccan-studies-talim",
+   "kind": "archive",
+   "label": "Tangier American Legation Institute for Moroccan Studies (TALIM)",
+   "group": "unaligned",
+   "shape": "triangle",
+   "country": "United States",
+   "priority": "3 - supporting",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "archive:instance-equite-et-reconciliation-ier-final-report-and-archive",
+   "slug": "instance-equite-et-reconciliation-ier-final-report-and-archive",
+   "kind": "archive",
+   "label": "Instance Équité et Réconciliation (IER) — final report and archive",
+   "group": "unaligned",
+   "shape": "triangle",
+   "country": "Morocco",
+   "priority": "1 - decisive",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "archive:bibliotheque-royale-hassaniya-al-khizana-al-hasaniyya",
+   "slug": "bibliotheque-royale-hassaniya-al-khizana-al-hasaniyya",
+   "kind": "archive",
+   "label": "Bibliothèque royale hassaniya (al-Khizāna al-Ḥasaniyya)",
+   "group": "unaligned",
+   "shape": "triangle",
+   "country": "Morocco",
+   "priority": "1 - decisive",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "archive:archives-diplomatiques-la-courneuve-and-nantes",
+   "slug": "archives-diplomatiques-la-courneuve-and-nantes",
+   "kind": "archive",
+   "label": "Archives diplomatiques — La Courneuve and Nantes",
+   "group": "unaligned",
+   "shape": "triangle",
+   "country": "France",
+   "priority": "1 - decisive",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "archive:internet-archive",
+   "slug": "internet-archive",
+   "kind": "archive",
+   "label": "Internet Archive",
+   "group": "unaligned",
+   "shape": "triangle",
+   "country": "International",
+   "priority": "2 - structural",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "archive:archivio-storico-diplomatico-ministero-degli-affari-esteri",
+   "slug": "archivio-storico-diplomatico-ministero-degli-affari-esteri",
+   "kind": "archive",
+   "label": "Archivio Storico Diplomatico — Ministero degli Affari Esteri",
+   "group": "unaligned",
+   "shape": "triangle",
+   "country": "Italy",
+   "priority": "3 - supporting",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "archive:bibliotheque-nationale-du-royaume-du-maroc-bnrm",
+   "slug": "bibliotheque-nationale-du-royaume-du-maroc-bnrm",
+   "kind": "archive",
+   "label": "Bibliothèque Nationale du Royaume du Maroc (BNRM)",
+   "group": "unaligned",
+   "shape": "triangle",
+   "country": "Morocco",
+   "priority": "2 - structural",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "archive:institut-royal-de-la-culture-amazighe-ircam",
+   "slug": "institut-royal-de-la-culture-amazighe-ircam",
+   "kind": "archive",
+   "label": "Institut Royal de la Culture Amazighe (IRCAM)",
+   "group": "unaligned",
+   "shape": "triangle",
+   "country": "Morocco",
+   "priority": "1 - decisive",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "archive:association-marocaine-pour-la-recherche-historique-amrh",
+   "slug": "association-marocaine-pour-la-recherche-historique-amrh",
+   "kind": "archive",
+   "label": "Association Marocaine pour la Recherche Historique (AMRH)",
+   "group": "unaligned",
+   "shape": "triangle",
+   "country": "Morocco",
+   "priority": "3 - supporting",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "archive:hesperis-tamuda-universite-mohammed-v",
+   "slug": "hesperis-tamuda-universite-mohammed-v",
+   "kind": "archive",
+   "label": "Hespéris-Tamuda — Université Mohammed V",
+   "group": "unaligned",
+   "shape": "triangle",
+   "country": "Morocco",
+   "priority": "1 - decisive",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "archive:al-maktaba-al-shamela",
+   "slug": "al-maktaba-al-shamela",
+   "kind": "archive",
+   "label": "al-Maktaba al-Shamela",
+   "group": "unaligned",
+   "shape": "triangle",
+   "country": "International",
+   "priority": "1 - decisive",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "archive:haut-commissariat-aux-anciens-resistants-et-anciens-membres-de-l-armee-de-liberation-hcar",
+   "slug": "haut-commissariat-aux-anciens-resistants-et-anciens-membres-de-l-armee-de-liberation-hcar",
+   "kind": "archive",
+   "label": "Haut Commissariat aux Anciens Résistants et Anciens Membres de l'Armée de Libération (HCAR)",
+   "group": "unaligned",
+   "shape": "triangle",
+   "country": "Morocco",
+   "priority": "1 - decisive",
+   "phase": [],
+   "degree": 0
   }
  ],
  "edges": [
   {
-   "source": "hugo-stoltzenberg",
-   "target": "damaso-berenguer",
+   "source": "person:hugo-stoltzenberg",
+   "target": "person:damaso-berenguer",
+   "kind": "person-person",
    "relation": "allied with",
    "strength": "Well-attested in scholarship",
    "period": "1921–1920s",
@@ -1123,8 +1944,9 @@
    "id": "stoltzenberg-supplied-chemical-weapons-capability-to-spain-against-the-rif"
   },
   {
-   "source": "ba-ahmed-ibn-musa",
-   "target": "moulay-abdelaziz",
+   "source": "person:ba-ahmed-ibn-musa",
+   "target": "person:moulay-abdelaziz",
+   "kind": "person-person",
    "relation": "patron of",
    "strength": "Well-attested in scholarship",
    "period": "1894–1900",
@@ -1132,8 +1954,9 @@
    "id": "ba-ahmed-regent-for-moulay-abdelaziz"
   },
   {
-   "source": "moulay-hassan-i",
-   "target": "ma-al-aynayn",
+   "source": "person:moulay-hassan-i",
+   "target": "person:ma-al-aynayn",
+   "kind": "person-person",
    "relation": "appointed",
    "strength": "Disputed",
    "period": "1879 or 1887 — disputed",
@@ -1141,8 +1964,9 @@
    "id": "hassan-i-appointed-ma-al-aynayn-as-khalifa-of-the-sahara"
   },
   {
-   "source": "hubert-lyautey",
-   "target": "moulay-abdelhafid",
+   "source": "person:hubert-lyautey",
+   "target": "person:moulay-abdelhafid",
+   "kind": "person-person",
    "relation": "opposed",
    "strength": "Documented",
    "period": "13 August 1912",
@@ -1150,8 +1974,9 @@
    "id": "lyautey-obtained-the-abdication-of-moulay-abdelhafid"
   },
   {
-   "source": "joseph-francois-poeymirau",
-   "target": "mouha-ou-hammou-zayani",
+   "source": "person:joseph-francois-poeymirau",
+   "target": "person:mouha-ou-hammou-zayani",
+   "kind": "person-person",
    "relation": "negotiated with",
    "strength": "Single source assertion",
    "period": "June 1920",
@@ -1159,8 +1984,9 @@
    "id": "poeymirau-received-the-submission-of-the-sons-of-mouha-ou-hammou"
   },
   {
-   "source": "francisco-franco",
-   "target": "francisco-franco",
+   "source": "person:francisco-franco",
+   "target": "person:francisco-franco",
+   "kind": "person-person",
    "relation": "commanded",
    "strength": "Documented",
    "period": "17 July 1936",
@@ -1168,8 +1994,9 @@
    "id": "franco-launched-the-1936-coup-from-morocco"
   },
   {
-   "source": "ba-ahmed-ibn-musa",
-   "target": "moulay-hassan-i",
+   "source": "person:ba-ahmed-ibn-musa",
+   "target": "person:moulay-hassan-i",
+   "kind": "person-person",
    "relation": "served under",
    "strength": "Well-attested in scholarship",
    "period": "June 1894",
@@ -1177,8 +2004,9 @@
    "id": "ba-ahmed-concealed-the-death-of-hassan-i"
   },
   {
-   "source": "hubert-lyautey",
-   "target": "thami-el-glaoui",
+   "source": "person:hubert-lyautey",
+   "target": "person:thami-el-glaoui",
+   "kind": "person-person",
    "relation": "patron of",
    "strength": "Well-attested in scholarship",
    "period": "1912–1925",
@@ -1186,8 +2014,9 @@
    "id": "lyautey-patron-of-thami-el-glaoui"
   },
   {
-   "source": "moulay-abdelhafid",
-   "target": "bou-hamara",
+   "source": "person:moulay-abdelhafid",
+   "target": "person:bou-hamara",
+   "kind": "person-person",
    "relation": "fought",
    "strength": "Disputed",
    "period": "1909",
@@ -1195,8 +2024,9 @@
    "id": "moulay-abdelhafid-captured-and-executed-bou-hamara"
   },
   {
-   "source": "moulay-hassan-i",
-   "target": "mouha-ou-hammou-zayani",
+   "source": "person:moulay-hassan-i",
+   "target": "person:mouha-ou-hammou-zayani",
+   "kind": "person-person",
    "relation": "appointed",
    "strength": "Disputed",
    "period": "1877, 1880 or 1886 — disputed",
@@ -1204,8 +2034,9 @@
    "id": "hassan-i-appointed-mouha-ou-hammou-zayani"
   },
   {
-   "source": "rene-laverdure",
-   "target": "mouha-ou-hammou-zayani",
+   "source": "person:rene-laverdure",
+   "target": "person:mouha-ou-hammou-zayani",
+   "kind": "person-person",
    "relation": "fought",
    "strength": "Documented",
    "period": "13 November 1914",
@@ -1213,8 +2044,9 @@
    "id": "laverdure-fought-mouha-ou-hammou-zayani-at-el-herri"
   },
   {
-   "source": "mohamed-oufkir",
-   "target": "mehdi-ben-barka",
+   "source": "person:mohamed-oufkir",
+   "target": "person:mehdi-ben-barka",
+   "kind": "person-person",
    "relation": "opposed",
    "strength": "Documented",
    "period": "29 October 1965",
@@ -1222,8 +2054,9 @@
    "id": "oufkir-named-as-responsible-for-the-abduction-of-mehdi-ben-barka"
   },
   {
-   "source": "moulay-abdelhafid",
-   "target": "moulay-abdelaziz",
+   "source": "person:moulay-abdelhafid",
+   "target": "person:moulay-abdelaziz",
+   "kind": "person-person",
    "relation": "opposed",
    "strength": "Documented",
    "period": "1907–1908",
@@ -1231,8 +2064,9 @@
    "id": "moulay-abdelhafid-deposed-moulay-abdelaziz"
   },
   {
-   "source": "thami-el-glaoui",
-   "target": "mohammed-v",
+   "source": "person:thami-el-glaoui",
+   "target": "person:mohammed-v",
+   "kind": "person-person",
    "relation": "opposed",
    "strength": "Disputed",
    "period": "19 May 1953 – 8 November 1955",
@@ -1240,8 +2074,9 @@
    "id": "thami-el-glaoui-demanded-the-deposition-of-mohammed-v"
   },
   {
-   "source": "manuel-fernandez-silvestre",
-   "target": "mohammed-ben-abdelkrim-el-khattabi",
+   "source": "person:manuel-fernandez-silvestre",
+   "target": "person:mohammed-ben-abdelkrim-el-khattabi",
+   "kind": "person-person",
    "relation": "fought",
    "strength": "Documented",
    "period": "June – August 1921",
@@ -1249,8 +2084,9 @@
    "id": "silvestre-fought-abd-el-krim-at-annual"
   },
   {
-   "source": "damaso-berenguer",
-   "target": "mohammed-ben-abdelkrim-el-khattabi",
+   "source": "person:damaso-berenguer",
+   "target": "person:mohammed-ben-abdelkrim-el-khattabi",
+   "kind": "person-person",
    "relation": "fought",
    "strength": "Well-attested in scholarship",
    "period": "from 12 August 1921",
@@ -1258,8 +2094,9 @@
    "id": "berenguer-authorised-chemical-munitions-against-the-rif"
   },
   {
-   "source": "augustin-guillaume",
-   "target": "mohammed-v",
+   "source": "person:augustin-guillaume",
+   "target": "person:mohammed-v",
+   "kind": "person-person",
    "relation": "imprisoned or exiled",
    "strength": "Disputed",
    "period": "20 August 1953",
@@ -1267,8 +2104,9 @@
    "id": "guillaume-deposed-and-exiled-mohammed-v"
   },
   {
-   "source": "eugene-regnault",
-   "target": "moulay-abdelhafid",
+   "source": "person:eugene-regnault",
+   "target": "person:moulay-abdelhafid",
+   "kind": "person-person",
    "relation": "negotiated with",
    "strength": "Documented",
    "period": "29–30 March 1912",
@@ -1276,8 +2114,9 @@
    "id": "regnault-negotiated-the-treaty-of-fez-with-moulay-abdelhafid"
   },
   {
-   "source": "ahmed-al-raisuni",
-   "target": "harry-maclean",
+   "source": "person:ahmed-al-raisuni",
+   "target": "person:harry-maclean",
+   "kind": "person-person",
    "relation": "opposed",
    "strength": "Documented",
    "period": "1906",
@@ -1285,8 +2124,9 @@
    "id": "raisuni-abducted-harry-maclean"
   },
   {
-   "source": "si-madani-el-glaoui",
-   "target": "moulay-abdelhafid",
+   "source": "person:si-madani-el-glaoui",
+   "target": "person:moulay-abdelhafid",
+   "kind": "person-person",
    "relation": "allied with",
    "strength": "Well-attested in scholarship",
    "period": "May 1907 – 1908",
@@ -1294,8 +2134,9 @@
    "id": "si-madani-el-glaoui-engineered-the-accession-of-moulay-abdelhafid"
   },
   {
-   "source": "philippe-petain",
-   "target": "hubert-lyautey",
+   "source": "person:philippe-petain",
+   "target": "person:hubert-lyautey",
+   "kind": "person-person",
    "relation": "commanded",
    "strength": "Documented",
    "period": "1925",
@@ -1303,13 +2144,49 @@
    "id": "petain-superseded-lyautey"
   },
   {
-   "source": "mohammed-ben-arafa",
-   "target": "mohammed-v",
+   "source": "person:mohammed-ben-arafa",
+   "target": "person:mohammed-v",
+   "kind": "person-person",
    "relation": "succeeded",
    "strength": "Documented",
    "period": "August 1953 – 1955",
    "evidence": "Proclaimed by an assembly of notables. Never accepted; two assassination attempts. The bay'a assembled for him, with its signatories and refusals, is a documentable map of elite alignment in 1953.",
    "id": "mohammed-ben-arafa-installed-in-place-of-mohammed-v"
+  },
+  {
+   "source": "person:mouha-ou-hammou-zayani",
+   "target": "claim:el-herri-13-november-1914-zaian-dead-numbered-182",
+   "kind": "person-claim",
+   "relation": "is the subject of",
+   "id": "mouha-ou-hammou-zayani--el-herri-13-november-1914-zaian-dead-numbered-182"
+  },
+  {
+   "source": "claim:annual-july-1921-spanish-dead-ranged-7-875-to-13-363",
+   "target": "source:expediente-picasso",
+   "kind": "claim-source",
+   "relation": "rests on",
+   "id": "annual-july-1921-spanish-dead-ranged-7-875-to-13-363--expediente-picasso"
+  },
+  {
+   "source": "person:mouha-ou-hammou-zayani",
+   "target": "claim:mouha-ou-hammou-zayani-was-killed-by-his-own-son-hassan",
+   "kind": "person-claim",
+   "relation": "is the subject of",
+   "id": "mouha-ou-hammou-zayani--mouha-ou-hammou-zayani-was-killed-by-his-own-son-hassan"
+  },
+  {
+   "source": "person:mohammed-v",
+   "target": "claim:the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables",
+   "kind": "person-claim",
+   "relation": "is the subject of",
+   "id": "mohammed-v--the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables"
+  },
+  {
+   "source": "person:thami-el-glaoui",
+   "target": "claim:the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables",
+   "kind": "person-claim",
+   "relation": "is the subject of",
+   "id": "thami-el-glaoui--the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables"
   }
  ]
 }

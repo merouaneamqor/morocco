@@ -209,6 +209,68 @@ export const GROUP_LANGUAGES = [
 
 export const CLAIM_STATUSES = ['Established', 'Highly probable', 'Disputed', 'Unknown'] as const;
 
+/**
+ * Confidence on a Claims record.
+ *
+ * `Withheld` is here and NOT in CLAIM_STATUSES on purpose. In prose it is a
+ * separate flag — a claim can be Unknown *and* Withheld. On a Claims row the
+ * corpus makes it a value of the Confidence select, because a withheld record
+ * is a statement about access, not about degree of belief, and the database
+ * has nowhere else to put it. The renderer keeps them visually distinct so a
+ * reader never reads "Withheld" as the bottom rung of a confidence ladder.
+ */
+export const CLAIM_CONFIDENCE = [
+  'Established',
+  'Highly probable',
+  'Disputed',
+  'Unknown',
+  'Withheld',
+] as const;
+
+/**
+ * The three evidence layers, never blended: what a document says, what a
+ * historian argues from it, and what this project concludes. This is a
+ * separate axis from confidence and gets its own palette — a page mixes all
+ * three in adjacent paragraphs and the reader must keep both systems apart.
+ */
+export const EVIDENCE_LAYERS = [
+  'Primary source',
+  'Secondary interpretation',
+  'Project inference',
+] as const;
+
+/** Status on a Disputes record — six-way, from unresolvable to resolved. */
+export const DISPUTE_RECORD_STATUSES = [
+  'Disputed',
+  'Disputed - definitional',
+  'Settleable - request identified',
+  'Unresolvable on present evidence',
+  'Withheld',
+  'Resolved',
+] as const;
+
+/** Why an open question is open. Not a ladder — these are different kinds. */
+export const WHY_UNKNOWN = [
+  'Destroyed',
+  'Inaccessible',
+  'Contradictory',
+  'Never searched',
+  'Classified or withheld',
+  'Oral-only',
+  'Unclear',
+] as const;
+
+/**
+ * Research status. `Closed - answer found` is a success state and is rendered
+ * as one: establishing that no record exists is an answer, not a dead end.
+ */
+export const RESEARCH_STATUSES = [
+  'Active investigation',
+  'Paused',
+  'Closed - answer found',
+  'Closed - unanswerable',
+] as const;
+
 export const DISPUTE_STATUSES = [
   'Open',
   'Settleable',
@@ -249,6 +311,9 @@ const people = defineCollection({
     contestedPoints: z.string().nullable(),
     events: z.array(z.string()),
     relationships: z.array(z.string()),
+    claims: z.array(z.string()),
+    disputes: z.array(z.string()),
+    archives: z.array(z.string()),
   }),
 });
 
@@ -267,6 +332,10 @@ const events = defineCollection({
     summary: z.string().nullable(),
     mainDispute: z.string().nullable(),
     people: z.array(z.string()),
+    claims: z.array(z.string()),
+    disputes: z.array(z.string()),
+    openQuestions: z.array(z.string()),
+    archives: z.array(z.string()),
   }),
 });
 
@@ -311,6 +380,121 @@ const archives = defineCollection({
     verification: z.enum(ARCHIVE_VERIFICATION),
     priority: z.enum(PRIORITY),
     url: z.string().nullable(),
+    // The research-agenda columns, added when the claim became the core
+    // object. Nullable because only six of the 25 rows carry them, and the
+    // explorer renders the absence as "Not yet documented" rather than
+    // hiding the row — a holding nobody has written a search plan for is
+    // itself a finding.
+    searchTerms: z.string().nullable(),
+    notYetSearched: z.string().nullable(),
+    language: z.array(z.enum(LANGUAGES)),
+    relatedPeople: z.array(z.string()),
+    relatedEvents: z.array(z.string()),
+    claims: z.array(z.string()),
+    openQuestions: z.array(z.string()),
+  }),
+});
+
+/**
+ * Claims — the atomic unit of the corpus.
+ *
+ * Every field that could carry a document quotation is nullable, and the
+ * renderer is required to say so out loud. A blank `whatTheDocumentSays` next
+ * to a populated `archivalReference` is the exact shape of a claim nobody has
+ * checked, and it must read that way on the page.
+ */
+const claims = defineCollection({
+  loader: file('src/content/data/claim-records.json', { parser: (t) => JSON.parse(t) }),
+  schema: z.object({
+    slug: z.string(),
+    notionId: z.string().nullable(),
+    claim: z.string(),
+    confidence: z.enum(CLAIM_CONFIDENCE).nullable(),
+    evidenceLayer: z.enum(EVIDENCE_LAYERS).nullable(),
+    phase: z.enum(PHASES).nullable(),
+    whatTheDocumentSays: z.string().nullable(),
+    interpretation: z.string().nullable(),
+    counterEvidence: z.string().nullable(),
+    whySourcesDisagree: z.string().nullable(),
+    archivalReference: z.string().nullable(),
+    primaryEvidence: z.array(z.string()),
+    counterEvidenceSources: z.array(z.string()),
+    archives: z.array(z.string()),
+    people: z.array(z.string()),
+    events: z.array(z.string()),
+    disputes: z.array(z.string()),
+    openQuestions: z.array(z.string()),
+    lastReviewed: z.string().nullable(),
+  }),
+});
+
+/**
+ * Disputes — the matrix. Four national positions kept as four separate
+ * nullable fields so that "Spain said nothing about this" survives into the
+ * rendered table as a visible gap rather than a collapsed column.
+ */
+const disputeRecords = defineCollection({
+  loader: file('src/content/data/dispute-records.json', { parser: (t) => JSON.parse(t) }),
+  schema: z.object({
+    slug: z.string(),
+    notionId: z.string().nullable(),
+    dispute: z.string(),
+    positions: z.object({
+      french: z.string().nullable(),
+      spanish: z.string().nullable(),
+      moroccan: z.string().nullable(),
+      other: z.string().nullable(),
+    }),
+    currentAssessment: z.string().nullable(),
+    whySourcesDisagree: z.string().nullable(),
+    status: z.enum(DISPUTE_RECORD_STATUSES).nullable(),
+    phase: z.enum(PHASES).nullable(),
+    people: z.array(z.string()),
+    events: z.array(z.string()),
+    claims: z.array(z.string()),
+  }),
+});
+
+/** Open questions — the research agenda, not a list of failures. */
+const openQuestions = defineCollection({
+  loader: file('src/content/data/open-questions.json', { parser: (t) => JSON.parse(t) }),
+  schema: z.object({
+    slug: z.string(),
+    notionId: z.string().nullable(),
+    question: z.string(),
+    whatWeKnow: z.string().nullable(),
+    missingEvidence: z.string().nullable(),
+    documentsRequested: z.string().nullable(),
+    whyWeDontKnow: z.enum(WHY_UNKNOWN).nullable(),
+    researchStatus: z.enum(RESEARCH_STATUSES).nullable(),
+    phase: z.enum(PHASES).nullable(),
+    archives: z.array(z.string()),
+    people: z.array(z.string()),
+    events: z.array(z.string()),
+    claims: z.array(z.string()),
+  }),
+});
+
+/**
+ * Bibliography — currently empty, and defined anyway.
+ *
+ * The collection exists so the site can state that it has no entries yet,
+ * which is true and useful, rather than omitting a section and letting the
+ * reader assume the citations are elsewhere.
+ */
+const bibliography = defineCollection({
+  loader: file('src/content/data/bibliography.json', { parser: (t) => JSON.parse(t) }),
+  schema: z.object({
+    slug: z.string(),
+    notionId: z.string().nullable(),
+    entry: z.string().nullable(),
+    type: z.string().nullable(),
+    authors: z.string().nullable(),
+    year: z.string().nullable(), // text, never parsed — same rule as Born/Died
+    identifier: z.string().nullable(),
+    url: z.string().nullable(),
+    language: z.array(z.string()),
+    notes: z.string().nullable(),
   }),
 });
 
@@ -433,6 +617,13 @@ export const collections = {
   places,
   groups,
   relationships,
+  claims,
+  disputeRecords,
+  openQuestions,
+  bibliography,
+  // The narrative-page contradictions, extracted from prose. Distinct from
+  // `disputeRecords`, which is the structured Notion database — different
+  // provenance, so they are never merged into one list.
   disputes,
   pages,
   dossiers,
