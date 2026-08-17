@@ -4,6 +4,7 @@ import Base from '../../layouts/Base.astro';
 import ClaimStatus from '../../components/ClaimStatus.astro';
 import AliasList from '../../components/AliasList.astro';
 import StatusFooter from '../../components/StatusFooter.astro';
+import RecordClaims from '../../components/RecordClaims.astro';
 import claimsData from '../../content/data/claims.json';
 import { looksWithheld } from '../../lib/markers.mjs';
 
@@ -29,10 +30,17 @@ const Body = rendered?.Content ?? null;
 const allEvents = await getCollection('events');
 const allRels = await getCollection('relationships');
 const allPeople = await getCollection('people');
+const allClaimRecords = await getCollection('claims');
+const allDisputeRecords = await getCollection('disputeRecords');
+const allArchives = await getCollection('archives');
 
 const events = allEvents.filter((e) => person.events.includes(e.data.slug));
 const rels = allRels.filter((r) => person.relationships.includes(r.data.slug));
 const nameBySlug = new Map(allPeople.map((p) => [p.data.slug, p.data.name]));
+
+const claimRecords = allClaimRecords.filter((c) => person.claims.includes(c.data.slug)).map((c) => c.data);
+const disputeRecords = allDisputeRecords.filter((d) => person.disputes.includes(d.data.slug)).map((d) => d.data);
+const holdingArchives = allArchives.filter((a) => person.archives.includes(a.data.slug)).map((a) => a.data);
 
 const claims = claimsData.claims.filter((c) => c.hostSlug === person.slug);
 const counts = {
@@ -219,6 +227,13 @@ const headings = rendered ? rendered.headings.filter((h) => h.depth === 2) : [];
       }
     </aside>
   </div>
+
+  <RecordClaims
+    claims={claimRecords}
+    disputes={disputeRecords}
+    archives={holdingArchives}
+    subject="this figure"
+  />
 
   <StatusFooter counts={counts} withheld={withheldCount} total={claims.length} />
 </Base>

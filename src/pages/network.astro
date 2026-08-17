@@ -27,7 +27,33 @@ const GROUP_LABEL: Record<string, string> = {
 };
 
 const nodeById = new Map(nodes.map((n) => [n.id, n]));
-const sortedEdges = [...edges].sort(
+
+/**
+ * Node ids are namespaced (`person:slug`, `claim:slug`, …) because the graph
+ * now carries four kinds and their slugs can collide across collections.
+ * Routes differ per kind, so every link goes through here.
+ */
+const ROUTE: Record<string, string> = {
+  person: '/people/',
+  claim: '/claims/',
+  source: '/sources#',
+  archive: '/archives/',
+};
+const hrefFor = (id: string) => {
+  const n = nodeById.get(id);
+  if (!n) return '#';
+  return `${ROUTE[n.kind] ?? '/'}${n.slug}`;
+};
+
+/**
+ * The person↔person layer is the graph people came for; the claim layer is
+ * five nodes deep and would otherwise be invisible next to 70 people. Counted
+ * separately rather than summed, so the sparseness is stated, not smoothed.
+ */
+const personEdges = edges.filter((e) => e.kind === 'person-person');
+const evidenceEdges = edges.filter((e) => e.kind !== 'person-person');
+const claimNodes = nodes.filter((n) => n.kind === 'claim');
+const sortedEdges = [...personEdges].sort(
   (a, b) =>
     EVIDENCE_STRENGTH_ORDER.indexOf(a.strength as never) -
       EVIDENCE_STRENGTH_ORDER.indexOf(b.strength as never) ||
@@ -36,7 +62,7 @@ const sortedEdges = [...edges].sort(
 
 const strengthCounts = EVIDENCE_STRENGTH_ORDER.map((s) => ({
   strength: s,
-  n: edges.filter((e) => e.strength === s).length,
+  n: personEdges.filter((e) => e.strength === s).length,
 }));
 ---
 
@@ -49,10 +75,14 @@ const strengthCounts = EVIDENCE_STRENGTH_ORDER.map((s) => ({
     <header class="nhead">
       <h1>Relationship network</h1>
       <p class="nhead__lede">
-        {edges.length} documented relationships between {nodes.filter((n) => n.degree > 0).length}{' '}
-        people. Every edge carries its evidence text and its strength.
-        <strong>Nothing here is inferred by similarity</strong> — if a connection is drawn,
-        someone documented it.
+        {personEdges.length} documented relationships between{' '}
+        {nodes.filter((n) => n.kind === 'person' && n.degree > 0).length} people, plus{' '}
+        {claimNodes.length} claims linked to the people, sources and archives they turn on
+        by {evidenceEdges.length} further edges. Every edge carries its evidence text and its
+        strength. <strong>Nothing here is inferred by similarity</strong> — if a connection is
+        drawn, someone documented it. The claim layer is deliberately sparse: five worked
+        claims is what the corpus has, and padding it would break the same rule the rest of
+        the site keeps.
       </p>
     </header>
 
@@ -99,7 +129,10 @@ const strengthCounts = EVIDENCE_STRENGTH_ORDER.map((s) => ({
       <canvas data-graph width="1200" height="640" role="img"
         aria-label={`Force-directed graph of ${nodes.length} people and ${edges.length} documented relationships. The same data is listed in full in the edge table below.`}></canvas>
       <figcaption class="ncanvas-cap">
-        Node shape: circle = person. Size: dossier depth. Edge weight and dash: evidence
+        Node shape: circle = person, diamond = claim, square = source, triangle =
+        archive — shape, not a fourth colour, because the palette clears its
+        colour-vision floors at three categorical slots and a network shows all pairs
+        at once. Size: dossier depth. Edge weight and dash: evidence
         strength, from Documented (thickest, solid) to Disputed (thin, dashed). Hover or
         focus any node for its label; click to open its dossier.
       </figcaption>
@@ -131,11 +164,11 @@ const strengthCounts = EVIDENCE_STRENGTH_ORDER.map((s) => ({
               sortedEdges.map((e) => (
                 <tr data-strength={e.strength}>
                   <td>
-                    <a href={`/people/${e.source}`}>{nodeById.get(e.source)?.label}</a>
+                    <a href={hrefFor(e.source)}>{nodeById.get(e.source)?.label}</a>
                   </td>
                   <td class="edgetable__verb">{e.relation}</td>
                   <td>
-                    <a href={`/people/${e.target}`}>{nodeById.get(e.target)?.label}</a>
+                    <a href={hrefFor(e.target)}>{nodeById.get(e.target)?.label}</a>
                   </td>
                   <td class="edgetable__period">{e.period ?? '—'}</td>
                   <td class="edgetable__ev">{e.evidence ?? '—'}</td>
@@ -263,9 +296,28 @@ const strengthCounts = EVIDENCE_STRENGTH_ORDER.map((s) => ({
           if (!nodeVisible(p)) continue;
           const r = DEPTH_R[p.depth] ?? 4;
           // Colour follows the entity, never its rank or its filter state.
+          // Node KIND is shape, never a fourth hue: this is an all-pairs view
+          // and the palette only clears its separation floors at three slots.
           ctx.fillStyle = colour(p.group);
           ctx.beginPath();
-          ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
+          if (p.shape === 'diamond') {
+            const d = r + 2;
+            ctx.moveTo(p.x, p.y - d);
+            ctx.lineTo(p.x + d, p.y);
+            ctx.lineTo(p.x, p.y + d);
+            ctx.lineTo(p.x - d, p.y);
+            ctx.closePath();
+          } else if (p.shape === 'square') {
+            ctx.rect(p.x - r, p.y - r, r * 2, r * 2);
+          } else if (p.shape === 'triangle') {
+            const d = r + 2;
+            ctx.moveTo(p.x, p.y - d);
+            ctx.lineTo(p.x + d, p.y + d * 0.8);
+            ctx.lineTo(p.x - d, p.y + d * 0.8);
+            ctx.closePath();
+          } else {
+            ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
+          }
           ctx.fill();
           ctx.lineWidth = 1.5;
           ctx.strokeStyle = surface;
@@ -324,7 +376,15 @@ const strengthCounts = EVIDENCE_STRENGTH_ORDER.map((s) => ({
         const mx = ((ev.clientX - rect.left) / rect.width) * canvas.width;
         const my = ((ev.clientY - rect.top) / rect.height) * canvas.height;
         const hit = hitTest(mx, my);
-        if (hit) location.href = `/people/${hit.id}`;
+        if (hit) {
+          const ROUTE = {
+            person: '/people/',
+            claim: '/claims/',
+            source: '/sources#',
+            archive: '/archives/',
+          };
+          location.href = `${ROUTE[hit.kind] ?? '/people/'}${hit.slug}`;
+        }
       });
 
       const floorInput = document.querySelector('[data-floor]');

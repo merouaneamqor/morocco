@@ -1,0 +1,294 @@
+---
+/**
+ * <DisputeMatrix> — the four national positions, side by side.
+ *
+ * Two rules carry the whole component:
+ *
+ * 1. No column is styled as the answer. French, Spanish, Moroccan and Other
+ *    get identical width, weight and ground. "Current assessment" is visually
+ *    separated and labelled as this project's reading, not as the truth the
+ *    other columns were approximating.
+ *
+ * 2. An empty cell renders a visible em-dash and is never collapsed. That
+ *    Spain holds no position on the 1953 deposition is a fact about the
+ *    dispute; a blank cell would read as an oversight, and a collapsed column
+ *    would erase it.
+ *
+ * Wide by nature, so it scrolls inside its own container rather than making
+ * the page scroll sideways.
+ */
+interface Props {
+  records: any[];
+  archives: any[];
+}
+
+const { records, archives } = Astro.props;
+
+const COLUMNS = [
+  ['french', 'French'],
+  ['spanish', 'Spanish'],
+  ['moroccan', 'Moroccan'],
+  ['other', 'Other'],
+] as const;
+
+const STATUS_TONE: Record<string, string> = {
+  Disputed: 'open',
+  'Disputed - definitional': 'open',
+  'Settleable - request identified': 'settleable',
+  'Unresolvable on present evidence': 'unresolvable',
+  Withheld: 'withheld',
+  Resolved: 'resolved',
+};
+
+/**
+ * A "settleable" dispute should lead somewhere. Match it to a holding whose
+ * unsearched backlog mentions the same request, so the row links to the thing
+ * that would actually settle it rather than just asserting that it could be.
+ */
+function settlingArchive(record: any) {
+  if (record.status !== 'Settleable - request identified') return null;
+  const text = `${record.currentAssessment ?? ''}`.toLowerCase();
+  return (
+    archives.find(
+      (a) =>
+        a.notYetSearched &&
+        text
+          .split(/[^a-zà-ÿ]+/)
+          .filter((w: string) => w.length > 5)
+          .some((w: string) => a.notYetSearched.toLowerCase().includes(w))
+    ) ?? null
+  );
+}
+
+const statuses = [...new Set(records.map((r) => r.status).filter(Boolean))];
+const phases = [...new Set(records.map((r) => r.phase).filter(Boolean))].sort();
+---
+
+<div class="mx">
+  <div class="mx__filters no-print">
+    <label>
+      <span>Status</span>
+      <select data-mx-filter="status">
+        <option value="">All</option>
+        {statuses.map((s) => <option value={s}>{s}</option>)}
+      </select>
+    </label>
+    <label>
+      <span>Phase</span>
+      <select data-mx-filter="phase">
+        <option value="">All</option>
+        {phases.map((p) => <option value={p}>{p}</option>)}
+      </select>
+    </label>
+    <p class="mx__count" data-mx-count>{records.length} disputes</p>
+  </div>
+
+  <div class="mx__scroll">
+    <table class="mx__table">
+      <caption class="visually-hidden">
+        Disputes with French, Spanish, Moroccan and other positions shown side by side. No
+        column is the answer; the current assessment is this project's reading.
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col" class="mx__q">Question</th>
+          {COLUMNS.map(([, label]) => <th scope="col">{label}</th>)}
+          <th scope="col" class="mx__assess">Current assessment</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          records.map((r) => {
+            const settles = settlingArchive(r);
+            return (
+              <tr data-mx-row data-status={r.status ?? ''} data-phase={r.phase ?? ''}>
+                <th scope="row" class="mx__q">
+                  <a href={`/disputes/${r.slug}`}>{r.dispute}</a>
+                  <span class:list={['mx__status', `mx__status--${STATUS_TONE[r.status] ?? 'open'}`]}>
+                    {r.status ?? 'Not recorded'}
+                  </span>
+                  {settles && (
+                    <a class="mx__settles" href={`/archives/${settles.slug}`}>
+                      → request at {settles.institution}
+                    </a>
+                  )}
+                </th>
+                {COLUMNS.map(([key]) => (
+                  <td class={r.positions[key] ? '' : 'mx__empty'}>
+                    {r.positions[key] ?? '—'}
+                  </td>
+                ))}
+                <td class="mx__assess">{r.currentAssessment ?? '—'}</td>
+              </tr>
+            );
+          })
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  // Filters hide rows; they never reorder or recolour them.
+  const root = document.querySelector('.mx');
+  if (root) {
+    const rows = [...root.querySelectorAll<HTMLElement>('[data-mx-row]')];
+    const count = root.querySelector<HTMLElement>('[data-mx-count]');
+    const selects = [...root.querySelectorAll<HTMLSelectElement>('[data-mx-filter]')];
+
+    const apply = () => {
+      let shown = 0;
+      for (const row of rows) {
+        const ok = selects.every((s) => {
+          const want = s.value;
+          return !want || row.dataset[s.dataset.mxFilter as string] === want;
+        });
+        row.hidden = !ok;
+        if (ok) shown++;
+      }
+      if (count) count.textContent = `${shown} dispute${shown === 1 ? '' : 's'}`;
+    };
+
+    for (const s of selects) s.addEventListener('change', apply);
+  }
+</script>
+
+<style>
+  .mx__filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-4);
+    align-items: end;
+    margin-bottom: var(--s-4);
+  }
+
+  .mx__filters label {
+    display: grid;
+    gap: var(--s-1);
+    font-family: var(--font-ui);
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  .mx__filters select {
+    font-family: var(--font-ui);
+    font-size: 0.85rem;
+    padding: 0.25em 0.4em;
+    border: var(--rule);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--ink);
+    text-transform: none;
+    letter-spacing: normal;
+  }
+
+  .mx__count {
+    margin: 0;
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Wide content scrolls inside its own box; the page never scrolls sideways. */
+  .mx__scroll {
+    overflow-x: auto;
+    border-top: 2px solid var(--baseline);
+  }
+
+  .mx__table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 60rem;
+    font-size: 0.85rem;
+  }
+
+  .mx__table th,
+  .mx__table td {
+    text-align: left;
+    vertical-align: top;
+    padding: var(--s-3) var(--s-3);
+    border-bottom: var(--rule);
+    line-height: var(--leading);
+  }
+
+  .mx__table thead th {
+    font-family: var(--font-ui);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    font-weight: normal;
+    border-bottom: var(--rule);
+  }
+
+  /* Identical treatment across all four national columns: equal width, equal
+     weight, no ground. Styling one as primary would answer the question the
+     table exists to keep open. */
+  .mx__table thead th:not(.mx__q):not(.mx__assess),
+  .mx__table tbody td:not(.mx__assess) {
+    width: 17%;
+  }
+
+  .mx__q {
+    width: 20%;
+    font-weight: normal;
+  }
+
+  .mx__q a {
+    display: block;
+    font-size: 0.95rem;
+    line-height: var(--leading-tight);
+  }
+
+  .mx__status {
+    display: block;
+    margin-top: var(--s-2);
+    font-family: var(--font-ui);
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  .mx__status--settleable {
+    color: var(--status-established);
+  }
+  .mx__status--unresolvable,
+  .mx__status--withheld {
+    color: var(--status-withheld);
+  }
+
+  .mx__settles {
+    display: block;
+    margin-top: var(--s-1);
+    font-family: var(--font-ui);
+    font-size: 0.7rem;
+  }
+
+  /* The em-dash is the content. Muted so it reads as "nothing recorded"
+     rather than as a value, but never hidden. */
+  .mx__empty {
+    color: var(--ink-muted);
+    text-align: center;
+  }
+
+  /* Separated from the national columns by a rule, so it reads as a
+     different kind of statement rather than a fifth position. */
+  .mx__assess {
+    width: 22%;
+    border-left: 2px solid var(--baseline);
+    color: var(--ink-secondary);
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+</style>
