@@ -68,6 +68,11 @@ program
   .option('--snapshot <file>', 'Validate a specific snapshot instead of the latest')
   .option('--json', 'Machine-readable output')
   .option('--markdown', 'Markdown output')
+  .option(
+    '--exit-zero',
+    'Report findings but exit 0. For smoke-testing that the tool runs against ' +
+      'real data; NOT for gating a corpus, where a finding is the point.'
+  )
   .action((opts) => {
     const config = loadConfig(ROOT);
     try {
@@ -79,7 +84,10 @@ program
       console.log(
         opts.json ? renderJson(input) : opts.markdown ? renderMarkdown(input) : renderTerminal(input)
       );
-      process.exitCode = exitCodeFor(findings);
+      // A crash is always a failure. Corpus findings are a failure only when
+      // the caller is auditing the corpus rather than exercising the tool —
+      // see the note on --exit-zero above, and .github/workflows/mhka.yml.
+      process.exitCode = opts.exitZero ? 0 : exitCodeFor(findings);
     } catch (e) {
       console.error((e as Error).message);
       process.exitCode = 1;

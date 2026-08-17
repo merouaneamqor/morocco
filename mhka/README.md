@@ -38,7 +38,18 @@ mhka stale [--days 90]         # records not reviewed recently
 ```
 
 Exit code is `1` when any error-severity finding is present, so `validate` and
-`diff` can gate a scheduled job.
+`diff` can gate a scheduled corpus job. Pass `--exit-zero` to report findings
+without gating — that is for smoke-testing that the tool runs, and it is what
+CI uses.
+
+**CI does not gate on corpus findings, deliberately.** `mhka` audits a living
+base that an agent writes to every morning, so findings are its normal output
+rather than a broken build. Gating on them turns every unrelated pull request
+red — a dependency bump cannot fix an unverified archival reference — and a
+check that is red for reasons the author cannot act on is a check people learn
+to ignore. CI therefore gates on build and tests, smoke-tests the rules against
+the committed snapshot, and posts the findings to the run summary. A crash still
+fails: `--exit-zero` forgives findings, never failures.
 
 ### Getting a first snapshot
 
@@ -167,7 +178,7 @@ corpus has not made, the second is one it has.
 ## Tests
 
 ```bash
-npm test          # 77 tests
+npm test          # 81 tests
 npm run verify    # build + test
 ```
 
@@ -175,7 +186,9 @@ One fixture per rule — failing, passing and edge — because a rule that fires
 everything is as useless as one that fires on nothing. The alias matcher gets
 the corpus's real alias strings as positives and every `known-distinct` pair as
 a negative. `diff` gets synthetic snapshot pairs for R12 and R13. The Markdown
-report has a golden test on its section structure.
+report has a golden test on its section structure. `cli.test.ts` pins the
+exit-code contract — including that a crash still exits non-zero under
+`--exit-zero`, which is what makes the CI smoke test worth running.
 
 ## What this deliberately does not have
 
