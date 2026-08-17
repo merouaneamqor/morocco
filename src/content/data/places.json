@@ -9,19 +9,22 @@
     "value": "Es-Semara",
     "tradition": null,
     "script": "latin",
-    "folded": "es-semara"
+    "folded": "es-semara",
+    "isNote": false
    },
    {
     "value": "al-Smāra",
     "tradition": null,
     "script": "latin",
-    "folded": "al-smara"
+    "folded": "al-smara",
+    "isNote": false
    },
    {
     "value": "السمارة",
     "tradition": "Ar",
     "script": "arabic",
-    "folded": "السمارة"
+    "folded": "السمارة",
+    "isNote": false
    }
   ],
   "region": "Sahara / Saguia el-Hamra",
@@ -40,25 +43,29 @@
     "value": "Fès",
     "tradition": null,
     "script": "latin",
-    "folded": "fes"
+    "folded": "fes",
+    "isNote": false
    },
    {
     "value": "Fás",
     "tradition": null,
     "script": "latin",
-    "folded": "fas"
+    "folded": "fas",
+    "isNote": false
    },
    {
     "value": "فاس",
     "tradition": "Ar",
     "script": "arabic",
-    "folded": "فاس"
+    "folded": "فاس",
+    "isNote": false
    },
    {
     "value": "Fez (Sp./Eng.)",
     "tradition": null,
     "script": "latin",
-    "folded": "fez (sp./eng.)"
+    "folded": "fez (sp./eng.)",
+    "isNote": false
    }
   ],
   "region": "Fez / Saiss",
@@ -77,19 +84,22 @@
     "value": "الرباط",
     "tradition": "Ar",
     "script": "arabic",
-    "folded": "الرباط"
+    "folded": "الرباط",
+    "isNote": false
    },
    {
     "value": "Rabat",
     "tradition": null,
     "script": "latin",
-    "folded": "rabat"
+    "folded": "rabat",
+    "isNote": false
    },
    {
     "value": "Salé across the Bou Regreg",
     "tradition": null,
     "script": "latin",
-    "folded": "sale across the bou regreg"
+    "folded": "sale across the bou regreg",
+    "isNote": false
    }
   ],
   "region": "Atlantic plains",
@@ -108,19 +118,22 @@
     "value": "Jenífra (Sp.)",
     "tradition": null,
     "script": "latin",
-    "folded": "jenifra (sp.)"
+    "folded": "jenifra (sp.)",
+    "isNote": false
    },
    {
     "value": "خنيفرة",
     "tradition": "Ar",
     "script": "arabic",
-    "folded": "خنيفرة"
+    "folded": "خنيفرة",
+    "isNote": false
    },
    {
     "value": "Xnifra",
     "tradition": "Tamazight",
     "script": "latin",
-    "folded": "xnifra"
+    "folded": "xnifra",
+    "isNote": false
    }
   ],
   "region": "Middle Atlas",
@@ -139,31 +152,36 @@
     "value": "Axdir",
     "tradition": null,
     "script": "latin",
-    "folded": "axdir"
+    "folded": "axdir",
+    "isNote": false
    },
    {
     "value": "أجدير",
     "tradition": "Ar",
     "script": "arabic",
-    "folded": "أجدير"
+    "folded": "أجدير",
+    "isNote": false
    },
    {
     "value": "Alhucemas",
     "tradition": null,
     "script": "latin",
-    "folded": "alhucemas"
+    "folded": "alhucemas",
+    "isNote": false
    },
    {
     "value": "Al Hoceima",
     "tradition": null,
     "script": "latin",
-    "folded": "al hoceima"
+    "folded": "al hoceima",
+    "isNote": false
    },
    {
     "value": "Bahía de Alhucemas",
     "tradition": "Sp",
     "script": "latin",
-    "folded": "bahia de alhucemas"
+    "folded": "bahia de alhucemas",
+    "isNote": false
    }
   ],
   "region": "Rif",
@@ -182,19 +200,22 @@
     "value": "Mlilya",
     "tradition": null,
     "script": "latin",
-    "folded": "mlilya"
+    "folded": "mlilya",
+    "isNote": false
    },
    {
     "value": "مليلية",
     "tradition": "Ar",
     "script": "arabic",
-    "folded": "مليلية"
+    "folded": "مليلية",
+    "isNote": false
    },
    {
     "value": "Melilla (Sp.)",
     "tradition": null,
     "script": "latin",
-    "folded": "melilla (sp.)"
+    "folded": "melilla (sp.)",
+    "isNote": false
    }
   ],
   "region": "Rif",
@@ -213,19 +234,22 @@
     "value": "Titṭawin",
     "tradition": null,
     "script": "latin",
-    "folded": "tittawin"
+    "folded": "tittawin",
+    "isNote": false
    },
    {
     "value": "تطوان",
     "tradition": "Ar",
     "script": "arabic",
-    "folded": "تطوان"
+    "folded": "تطوان",
+    "isNote": false
    },
    {
     "value": "Tetuán (Sp.)",
     "tradition": null,
     "script": "latin",
-    "folded": "tetuan (sp.)"
+    "folded": "tetuan (sp.)",
+    "isNote": false
    }
   ],
   "region": "Jebala / Tangier",
@@ -244,19 +268,22 @@
     "value": "El Hri",
     "tradition": null,
     "script": "latin",
-    "folded": "el hri"
+    "folded": "el hri",
+    "isNote": false
    },
    {
     "value": "Lehri",
     "tradition": null,
     "script": "latin",
-    "folded": "lehri"
+    "folded": "lehri",
+    "isNote": false
    },
    {
     "value": "الهري",
     "tradition": "Ar",
     "script": "arabic",
-    "folded": "الهري"
+    "folded": "الهري",
+    "isNote": false
    }
   ],
   "region": "Middle Atlas",

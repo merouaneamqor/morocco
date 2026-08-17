@@ -1,0 +1,120 @@
+---
+/**
+ * <Assessment> — signed opinion, fenced.
+ *
+ * The corpus's rule is absolute and this component exists to keep it: an
+ * assessment is never a source. Judgement lives in exactly two places — this
+ * property and blocks headed `## Assessment` — and it must be impossible for
+ * a reader to carry a sentence from here back into the evidence record
+ * believing an archive said it.
+ *
+ * The fence is built from three things at once, because any one alone is too
+ * easy to miss: the block is labelled Project inference on the evidence-layer
+ * ramp, it is set apart by a heavy rule and its own ground, and it says in
+ * words that it is the project's judgement rather than a finding.
+ *
+ * Impact sits here rather than beside the dossier status for the same reason.
+ * It is a judgement about significance written by the same process, and
+ * putting it among the factual properties would launder it into one.
+ */
+import EvidenceLayer from './EvidenceLayer.astro';
+
+interface Props {
+  assessment: string | null;
+  impact?: string | null;
+  lastReviewed?: string | null;
+}
+
+const { assessment, impact, lastReviewed } = Astro.props;
+---
+
+{
+  (assessment || impact) && (
+    <aside class="assess" aria-labelledby="assess-h">
+      <div class="assess__head">
+        <h2 id="assess-h">Assessment — signed opinion</h2>
+        <EvidenceLayer layer="Project inference" />
+      </div>
+
+      <p class="assess__fence">
+        This is the project's judgement, not a finding from the record. It is kept here,
+        apart from the evidence, so that it can never be cited as one.
+      </p>
+
+      {impact && (
+        <p class="assess__impact">
+          <span class="assess__label">Impact</span>
+          {impact}
+        </p>
+      )}
+
+      {assessment && <p class="assess__body">{assessment}</p>}
+
+      {lastReviewed && <p class="assess__rev">Last reviewed {lastReviewed}</p>}
+    </aside>
+  )
+}
+
+<style>
+  .assess {
+    margin-top: var(--s-6);
+    padding: var(--s-5);
+    border: 1px solid var(--layer-inference);
+    border-left: 4px solid var(--layer-inference);
+    background: var(--layer-inference-bg);
+    max-width: var(--measure);
+  }
+
+  .assess__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--s-3);
+    margin-bottom: var(--s-3);
+  }
+
+  .assess h2 {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-secondary);
+    margin: 0;
+  }
+
+  .assess__fence {
+    margin: 0 0 var(--s-4);
+    padding-bottom: var(--s-3);
+    border-bottom: 1px solid var(--layer-inference);
+    font-size: 0.85rem;
+    color: var(--ink-secondary);
+    font-style: italic;
+  }
+
+  .assess__impact {
+    margin: 0 0 var(--s-3);
+    font-family: var(--font-ui);
+    font-size: 0.85rem;
+  }
+
+  .assess__label {
+    display: block;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  .assess__body {
+    margin: 0;
+    line-height: var(--leading);
+  }
+
+  .assess__rev {
+    margin: var(--s-4) 0 0;
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+  }
+</style>

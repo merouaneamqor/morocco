@@ -15,6 +15,14 @@ interface AliasVariant {
   tradition: string | null;
   script: 'latin' | 'arabic';
   folded: string;
+  /**
+   * A caveat the corpus wrote into the aliases field rather than a spelling —
+   * e.g. "Do not merge with Mouha ou Hammou Zayani … without evidence." It is
+   * shown, because corpus text is never dropped, but it is not a name: it gets
+   * no copy button and it is excluded from the search index, so nobody can be
+   * found under a warning about somebody else.
+   */
+  isNote: boolean;
 }
 
 interface Props {
@@ -38,11 +46,17 @@ const TRADITION_LABEL: Record<string, string> = {
 <div class="aliases">
   <p class="aliases__head">
     Aliases &amp; spellings
-    <span class="aliases__count">{aliases.length}</span>
+    <span class="aliases__count">{aliases.filter((a) => !a.isNote).length}</span>
   </p>
   <ul class="aliases__list">
     {
-      aliases.map((a) => (
+      aliases.map((a) =>
+        a.isNote ? (
+          <li class="aliases__item aliases__item--note">
+            <span class="aliases__notelabel">Note</span>
+            <span class="aliases__note">{a.value}</span>
+          </li>
+        ) : (
         <li class="aliases__item">
           <button
             class="aliases__copy"
@@ -64,7 +78,8 @@ const TRADITION_LABEL: Record<string, string> = {
             <span class="aliases__tag">{TRADITION_LABEL[a.tradition] ?? a.tradition}</span>
           )}
         </li>
-      ))
+        )
+      )
     }
   </ul>
 </div>
@@ -88,6 +103,24 @@ const TRADITION_LABEL: Record<string, string> = {
 </script>
 
 <style>
+  /* A note is not a spelling: no copy affordance, no monospace, set back. */
+  .aliases__item--note {
+    display: block;
+    color: var(--ink-secondary);
+    font-size: 0.85rem;
+    line-height: var(--leading);
+  }
+
+  .aliases__notelabel {
+    display: inline-block;
+    margin-right: var(--s-2);
+    font-family: var(--font-ui);
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
   .aliases {
     border: var(--rule);
     border-radius: var(--radius);

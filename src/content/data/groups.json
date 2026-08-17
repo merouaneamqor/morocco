@@ -9,19 +9,22 @@
     "value": "Aith Waryaghar",
     "tradition": null,
     "script": "latin",
-    "folded": "aith waryaghar"
+    "folded": "aith waryaghar",
+    "isNote": false
    },
    {
     "value": "Beni Ouriaghel",
     "tradition": null,
     "script": "latin",
-    "folded": "beni ouriaghel"
+    "folded": "beni ouriaghel",
+    "isNote": false
    },
    {
     "value": "Beni Urriaguel",
     "tradition": "Sp",
     "script": "latin",
-    "folded": "beni urriaguel"
+    "folded": "beni urriaguel",
+    "isNote": false
    }
   ],
   "type": "Tribe",
@@ -42,19 +45,22 @@
     "value": "حزب الاستقلال",
     "tradition": "Ar",
     "script": "arabic",
-    "folded": "حزب الاستقلال"
+    "folded": "حزب الاستقلال",
+    "isNote": false
    },
    {
     "value": "Hizb al-Istiqlal",
     "tradition": null,
     "script": "latin",
-    "folded": "hizb al-istiqlal"
+    "folded": "hizb al-istiqlal",
+    "isNote": false
    },
    {
     "value": "Parti de lIndépendance",
     "tradition": null,
     "script": "latin",
-    "folded": "parti de lindependance"
+    "folded": "parti de lindependance",
+    "isNote": false
    }
   ],
   "type": "Political party",
@@ -75,25 +81,29 @@
     "value": "Glaoui",
     "tradition": null,
     "script": "latin",
-    "folded": "glaoui"
+    "folded": "glaoui",
+    "isNote": false
    },
    {
     "value": "Glawa",
     "tradition": null,
     "script": "latin",
-    "folded": "glawa"
+    "folded": "glawa",
+    "isNote": false
    },
    {
     "value": "Iglawen",
     "tradition": null,
     "script": "latin",
-    "folded": "iglawen"
+    "folded": "iglawen",
+    "isNote": false
    },
    {
     "value": "les Glaoua",
     "tradition": "Fr",
     "script": "latin",
-    "folded": "les glaoua"
+    "folded": "les glaoua",
+    "isNote": false
    }
   ],
   "type": "Tribe",
@@ -114,19 +124,22 @@
     "value": "Rhamna",
     "tradition": null,
     "script": "latin",
-    "folded": "rhamna"
+    "folded": "rhamna",
+    "isNote": false
    },
    {
     "value": "Rehamna",
     "tradition": null,
     "script": "latin",
-    "folded": "rehamna"
+    "folded": "rehamna",
+    "isNote": false
    },
    {
     "value": "les Rehamna",
     "tradition": "Fr",
     "script": "latin",
-    "folded": "les rehamna"
+    "folded": "les rehamna",
+    "isNote": false
    }
   ],
   "type": "Tribe",
@@ -147,19 +160,22 @@
     "value": "Jbala",
     "tradition": null,
     "script": "latin",
-    "folded": "jbala"
+    "folded": "jbala",
+    "isNote": false
    },
    {
     "value": "Djebala",
     "tradition": null,
     "script": "latin",
-    "folded": "djebala"
+    "folded": "djebala",
+    "isNote": false
    },
    {
     "value": "los yebalas",
     "tradition": "Sp",
     "script": "latin",
-    "folded": "los yebalas"
+    "folded": "los yebalas",
+    "isNote": false
    }
   ],
   "type": "Tribal confederation",
@@ -181,13 +197,15 @@
     "value": "Chaouiya",
     "tradition": null,
     "script": "latin",
-    "folded": "chaouiya"
+    "folded": "chaouiya",
+    "isNote": false
    },
    {
     "value": "la Chaouia",
     "tradition": "Fr",
     "script": "latin",
-    "folded": "la chaouia"
+    "folded": "la chaouia",
+    "isNote": false
    }
   ],
   "type": "Tribal confederation",
@@ -208,31 +226,36 @@
     "value": "Zaïans",
     "tradition": null,
     "script": "latin",
-    "folded": "zaians"
+    "folded": "zaians",
+    "isNote": false
    },
    {
     "value": "Zaïanes",
     "tradition": null,
     "script": "latin",
-    "folded": "zaianes"
+    "folded": "zaianes",
+    "isNote": false
    },
    {
     "value": "Zayanes (Sp.)",
     "tradition": null,
     "script": "latin",
-    "folded": "zayanes (sp.)"
+    "folded": "zayanes (sp.)",
+    "isNote": false
    },
    {
     "value": "Izayyan",
     "tradition": null,
     "script": "latin",
-    "folded": "izayyan"
+    "folded": "izayyan",
+    "isNote": false
    },
    {
     "value": "Aït Yaʿqoub and Aït Harkat (halves/sections)",
     "tradition": null,
     "script": "latin",
-    "folded": "ait yaqoub and ait harkat (halves/sections)"
+    "folded": "ait yaqoub and ait harkat (halves/sections)",
+    "isNote": false
    }
   ],
   "type": "Tribal confederation",
@@ -253,19 +276,22 @@
     "value": "Ait Atta",
     "tradition": null,
     "script": "latin",
-    "folded": "ait atta"
+    "folded": "ait atta",
+    "isNote": false
    },
    {
     "value": "Aït Atta",
     "tradition": null,
     "script": "latin",
-    "folded": "ait atta"
+    "folded": "ait atta",
+    "isNote": false
    },
    {
     "value": "les Aït Atta",
     "tradition": "Fr",
     "script": "latin",
-    "folded": "les ait atta"
+    "folded": "les ait atta",
+    "isNote": false
    }
   ],
   "type": "Tribal confederation",

@@ -97,9 +97,31 @@ function parseAliases(raw) {
           tradition: tradition ?? (script === 'arabic' ? 'Ar' : null),
           script,
           folded: fold(value),
+          isNote: isProseNote(value),
         };
       });
     });
+}
+
+/**
+ * Is this alias entry a name, or a note about the name?
+ *
+ * The corpus sometimes writes a caveat into `Aliases & spellings` — the
+ * unresolved Ben Hammou record carries "Name as supplied. … Do not merge with
+ * Mouha ou Hammou Zayani or with his sons without evidence."
+ *
+ * Indexing that as a spelling made a search for "Zayani" land on the one
+ * record that exists to warn against exactly that conflation. So a prose note
+ * is still displayed — corpus text is never dropped — but it is not offered
+ * as a name someone can be found under.
+ *
+ * Both conditions are required. A sentence break alone would misread
+ * abbreviations, and length alone would misread multi-form entries like
+ * "Mouha ou Hammou Zaïani / Zaïani / Zayani".
+ */
+function isProseNote(value) {
+  const s = String(value ?? '');
+  return /\.\s+\S/.test(s) && s.split(/\s+/).length >= 6;
 }
 
 function main() {
@@ -129,8 +151,12 @@ function main() {
       phase: arr(r.Phase),
       dossierStatus: clean(r['Dossier status']),
       evidenceBase: clean(r['Evidence base']),
+      impact: clean(r.Impact),
       oneLine: clean(r['One-line']),
       contestedPoints: clean(r['Contested points']),
+      // Judgement, carried through verbatim and fenced by the renderer.
+      assessment: clean(r['Assessment (signed opinion)']),
+      lastReviewed: clean(r['Last reviewed']),
     };
   });
 
@@ -714,7 +740,8 @@ function buildSearchIndex({ people, events, sources, archives, places, groups })
   const records = [];
 
   for (const p of people) {
-    const terms = [p.name, ...p.aliases.map((a) => a.value)];
+    // Notes are displayed on the dossier but are not findable names.
+    const terms = [p.name, ...p.aliases.filter((a) => !a.isNote).map((a) => a.value)];
     records.push({
       type: 'person',
       slug: p.slug,

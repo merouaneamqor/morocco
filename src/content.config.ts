@@ -210,6 +210,23 @@ export const GROUP_LANGUAGES = [
 export const CLAIM_STATUSES = ['Established', 'Highly probable', 'Disputed', 'Unknown'] as const;
 
 /**
+ * Impact — how much turned on this person.
+ *
+ * This is a judgement, not a finding, and the corpus treats it as one: it is
+ * written by the same process that writes the signed assessment, and
+ * `Contested - impact itself disputed` exists precisely so that the scale
+ * cannot quietly resolve an argument about significance.
+ */
+export const IMPACT = [
+  'Decisive - events turn on them',
+  'Major - reshaped a region or institution',
+  'Significant - materially changed outcomes',
+  'Local or sectoral',
+  'Marginal in effect',
+  'Contested - impact itself disputed',
+] as const;
+
+/**
  * Confidence on a Claims record.
  *
  * `Withheld` is here and NOT in CLAIM_STATUSES on purpose. In prose it is a
@@ -239,14 +256,20 @@ export const EVIDENCE_LAYERS = [
   'Project inference',
 ] as const;
 
-/** Status on a Disputes record — six-way, from unresolvable to resolved. */
+/**
+ * Status on a Disputes record — six-way, from unresolvable to resolved.
+ * Transcribed from the Notion select, which is the corpus. Two of these were
+ * guessed when the database was first ingested and guessed wrongly: the real
+ * end states are `Moving toward resolution` and `Resolved by new evidence`,
+ * which say how a dispute closed rather than merely that it did.
+ */
 export const DISPUTE_RECORD_STATUSES = [
-  'Disputed',
-  'Disputed - definitional',
-  'Settleable - request identified',
   'Unresolvable on present evidence',
-  'Withheld',
-  'Resolved',
+  'Disputed - definitional',
+  'Disputed',
+  'Settleable - request identified',
+  'Moving toward resolution',
+  'Resolved by new evidence',
 ] as const;
 
 /** Why an open question is open. Not a ladder — these are different kinds. */
@@ -256,7 +279,7 @@ export const WHY_UNKNOWN = [
   'Contradictory',
   'Never searched',
   'Classified or withheld',
-  'Oral-only',
+  'Oral-only and undocumented',
   'Unclear',
 ] as const;
 
@@ -268,7 +291,7 @@ export const RESEARCH_STATUSES = [
   'Active investigation',
   'Paused',
   'Closed - answer found',
-  'Closed - unanswerable',
+  'Closed - judged unanswerable',
 ] as const;
 
 export const DISPUTE_STATUSES = [
@@ -286,6 +309,8 @@ const aliasVariant = z.object({
   tradition: z.string().nullable(),
   script: z.enum(['latin', 'arabic']),
   folded: z.string(),
+  /** Prose caveat rather than a spelling — shown, but never indexed as a name. */
+  isNote: z.boolean(),
 });
 
 const people = defineCollection({
@@ -307,8 +332,18 @@ const people = defineCollection({
     phase: z.array(z.enum(PHASES)),
     dossierStatus: z.enum(DOSSIER_STATUS),
     evidenceBase: z.enum(EVIDENCE_BASE),
+    impact: z.enum(IMPACT).nullable(),
     oneLine: z.string().nullable(),
     contestedPoints: z.string().nullable(),
+    /**
+     * Signed opinion, fenced. The corpus's rule is that judgement lives in
+     * exactly two places and is never a source; the site keeps that fence by
+     * rendering it in its own block, labelled as project inference, well
+     * clear of the evidence record. Null means no judgement has been made —
+     * which is different from a judgement that there is nothing to say.
+     */
+    assessment: z.string().nullable(),
+    lastReviewed: z.string().nullable(),
     events: z.array(z.string()),
     relationships: z.array(z.string()),
     claims: z.array(z.string()),

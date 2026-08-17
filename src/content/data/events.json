@@ -1,5 +1,149 @@
 [
  {
+  "slug": "skhirat-coup-attempt-10-july-1971",
+  "notionId": "3bf885d88042814aa671fca9a2009d1c",
+  "event": "Skhirat coup attempt, 10 July 1971",
+  "start": "1971-07-10",
+  "end": null,
+  "location": "Royal Palace, Skhirat, Morocco",
+  "phase": "IX 1961-1999",
+  "type": [
+   "Uprising"
+  ],
+  "dossierStatus": "Stub",
+  "summary": "During King Hassan II's 42nd birthday celebration at the royal palace in Skhirat, roughly 1,400 cadets from the Ahermoumou military school, organised by General Mohamed Medbouh, opened fire on the assembled guests. Sources consulted report roughly a hundred guests killed and about 200 wounded, alongside cadet casualties in the confusion. The king survived by hiding in a dressing-room adjoining the throne room. Seventy-four officers were later tried; ten senior officers, including four generals, were executed.",
+  "mainDispute": "Oufkir was not named among the plotters, but the harsh military-justice response that followed took place under his authority as the security apparatus's central figure at the time — the extent of his personal role in the post-coup trials and executions has not been established in sources consulted here. Colonel Chelouati, one of the plotters, is described as close to Oufkir; this is noted, not treated as evidence.",
+  "people": [
+   "mohamed-medbouh",
+   "mohamed-oufkir"
+  ],
+  "claims": [],
+  "disputes": [],
+  "openQuestions": [],
+  "archives": []
+ },
+ {
+  "slug": "the-aviators-plot-attack-on-hassan-ii-s-boeing-16-august-1972",
+  "notionId": "3bf885d8804281b68780d9e8c33e6c39",
+  "event": "The Aviators' Plot — attack on Hassan II's Boeing, 16 August 1972",
+  "start": "1972-08-16",
+  "end": null,
+  "location": "Airspace over Morocco (near Tangier) and Rabat-Salé Airport",
+  "phase": "IX 1961-1999",
+  "type": [
+   "Political"
+  ],
+  "dossierStatus": "Stub",
+  "summary": "Four Royal Moroccan Air Force F-5 fighters, led by Kouera el-Ouafi and organised with Kenitra air base commander Mohammed Amekrane, attacked King Hassan II's Royal Air Maroc Boeing 727 as it returned from France. Sources consulted report eight dead and dozens wounded, though accounts vary on whether these casualties came from the airborne attack, a second strafing pass at Rabat-Salé airport, or both. The king's pilot, Mohammed Kabbaj, is reported to have landed the damaged aircraft (two of three engines hit) despite a jammed wheel causing a runway excursion. Hassan II had his bodyguard broadcast a false report of his own death, which caused the attacking pilots to stand down. General Mohamed Oufkir, defence minister, is named in every source consulted as the plot's principal organiser. Amekrane fled to Gibraltar, was extradited, and was executed. Oufkir died that same evening; the official cause was suicide. Sixty detained conspirators were later transferred to Tazmamart prison in 1973, where sources report only 28 of 58 survived eighteen years of detention.",
+  "mainDispute": "Oufkir's precise motive and whether he was sole author of the plot or one of several; the manner of his own death hours later — official suicide, versus wounds his daughter Malika Oufkir has described as inconsistent with suicide. See Claims and Disputes for both.",
+  "people": [
+   "mohamed-oufkir",
+   "mohammed-amekrane",
+   "kouera-el-ouafi",
+   "mohammed-kabbaj-pilot"
+  ],
+  "claims": [
+   "oufkir-died-by-suicide-on-the-evening-of-16-august-1972",
+   "oufkir-orchestrated-the-16-august-1972-attack-on-hassan-ii-s-boeing"
+  ],
+  "disputes": [
+   "manner-of-mohamed-oufkir-s-death-16-august-1972"
+  ],
+  "openQuestions": [],
+  "archives": []
+ },
+ {
+  "slug": "battle-of-tazigzawt",
+  "notionId": "3be885d8804281999933e6c9c28afbc8",
+  "event": "Battle of Tazigzawt",
+  "start": "1932-01-01",
+  "end": null,
+  "location": "Tazigzawt, Middle Atlas",
+  "phase": "V 1921-1934",
+  "type": [
+   "Battle",
+   "Campaign"
+  ],
+  "dossierStatus": "Stub",
+  "summary": "A late-conquest engagement in which c. 1,000 resistance fighters faced two French divisions. Identified through the Amazigh oral tradition, where it is the most celebrated subject of resistance balladry.",
+  "mainDispute": "Everything. Dates beyond the year, casualties, tribes involved, and the outcome are all unresearched here. The French operational record has not been consulted.",
+  "people": [],
+  "claims": [],
+  "disputes": [],
+  "openQuestions": [],
+  "archives": []
+ },
+ {
+  "slug": "casablanca-massacre-7-8-april-1947",
+  "notionId": "3be885d880428132a10eeeecff60f9b9",
+  "event": "Casablanca massacre, 7-8 April 1947",
+  "start": "1947-04-07",
+  "end": "1947-04-08",
+  "location": "Casablanca — working-class quarters including Derb Kebir",
+  "phase": "VII 1944-1956",
+  "type": [
+   "Repression",
+   "Political"
+  ],
+  "dossierStatus": "Substantial",
+  "summary": "Senegalese tirailleurs in French service fired on Moroccan civilians in Casablanca over roughly 24 hours, two days before Mohammed V's Tangier speech. Estimates range from 180 to over 2,000 dead.",
+  "mainDispute": "The death toll — a tenfold range. Whether the shooting was a breakdown of discipline or a deliberate operation to prevent the sultan's Tangier journey.",
+  "people": [
+   "mohammed-v"
+  ],
+  "claims": [],
+  "disputes": [],
+  "openQuestions": [],
+  "archives": []
+ },
+ {
+  "slug": "battle-of-ksar-el-kebir-battle-of-the-three-kings",
+  "notionId": "3be885d88042817abeb9f85153fd250c",
+  "event": "Battle of Ksar el-Kebir (Battle of the Three Kings)",
+  "start": "1578-08-04",
+  "end": null,
+  "location": "Wadi al-Makhazin, near Ksar el-Kebir, northern Morocco",
+  "phase": "I pre-1830",
+  "type": [
+   "Battle",
+   "Political"
+  ],
+  "dossierStatus": "Stub",
+  "summary": "Saadian victory over a Portuguese invasion force; three kings died. Portugal lost its king and its independence; Morocco gained fifty years of wealth and standing under Ahmad al-Mansur.",
+  "mainDispute": "Force numbers and casualties on both sides. Not yet researched here — this entry exists to open Phase I, not to close it.",
+  "people": [],
+  "claims": [],
+  "disputes": [],
+  "openQuestions": [],
+  "archives": []
+ },
+ {
+  "slug": "the-rif-revolt-and-its-suppression",
+  "notionId": "3be885d88042810aa0dffd093969414c",
+  "event": "The Rif revolt and its suppression",
+  "start": "1958-10-01",
+  "end": "1959-02-28",
+  "location": "The Rif — Al Hoceima, Nador, Beni Hadifa, Ait Ouriaghel country",
+  "phase": "VIII 1956-1961",
+  "type": [
+   "Uprising",
+   "Repression",
+   "Political"
+  ],
+  "dossierStatus": "Substantial",
+  "summary": "Armed revolt in the Rif against the post-independence government, suppressed by the Royal Armed Forces under Crown Prince Hassan and Commander Oufkir with c. 20,000 troops and French air support.",
+  "mainDispute": "Rifian dead: 2,000-8,000 in circulation against c. 1,000 army dead. Whether napalm was used. Whether this was a regional grievance, an Istiqlal-monarchy proxy fight, or the suppression of an alternative political settlement.",
+  "people": [
+   "hassan-ii",
+   "mohamed-oufkir",
+   "mohammed-v"
+  ],
+  "claims": [],
+  "disputes": [],
+  "openQuestions": [],
+  "archives": []
+ },
+ {
   "slug": "act-of-algeciras",
   "notionId": "3bd885d880428111b799f41bf9288984",
   "event": "Act of Algeciras",
@@ -15,6 +159,123 @@
   "dossierStatus": "Stub",
   "summary": "International conference following the First Moroccan Crisis; established the State Bank of Morocco and European supervision of customs and police while formally affirming Moroccan sovereignty.",
   "mainDispute": "Whether it was a genuine multilateral guarantee or a managed transfer of Morocco to France with German consent purchased later.",
+  "people": [],
+  "claims": [],
+  "disputes": [],
+  "openQuestions": [],
+  "archives": []
+ },
+ {
+  "slug": "deposition-exile-and-return-of-mohammed-v",
+  "notionId": "3bd885d88042813c9fa1dbb4207d72cf",
+  "event": "Deposition, exile and return of Mohammed V",
+  "start": "1953-08-20",
+  "end": "1955-11-16",
+  "location": "Rabat → Corsica → Antsirabe, Madagascar → Rabat",
+  "phase": "VII 1944-1956",
+  "type": [
+   "Political",
+   "Repression"
+  ],
+  "dossierStatus": "Substantial",
+  "summary": "The French Residency and a coalition of pashas and qaids led by El Glaoui deposed the sultan and installed Ben Arafa; two years of resistance forced his return and led directly to independence.",
+  "mainDispute": "Who decided — Paris, the Residency, or El Glaoui. Casualty figures in the resistance of 1953-55. Whether the Army of Liberation or the negotiations produced independence.",
+  "people": [
+   "mohammed-v",
+   "thami-el-glaoui",
+   "augustin-guillaume"
+  ],
+  "claims": [
+   "the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables"
+  ],
+  "disputes": [
+   "who-decided-the-1953-deposition-of-mohammed-v"
+  ],
+  "openQuestions": [],
+  "archives": [
+   "archives-du-maroc",
+   "archives-diplomatiques-la-courneuve-and-nantes"
+  ]
+ },
+ {
+  "slug": "the-berber-dahir",
+  "notionId": "3bd885d880428171b491c58793e6fe9c",
+  "event": "The Berber Dahir",
+  "start": "1930-05-16",
+  "end": null,
+  "location": "Rabat; reaction in Salé, Fez and across the French zone",
+  "phase": "V 1921-1934",
+  "type": [
+   "Political",
+   "Repression"
+  ],
+  "dossierStatus": "Stub",
+  "summary": "Dahir of 16 May 1930 placing Tamazight-speaking tribes under customary-law tribunals with serious crime before French courts; triggered the Ya Latif campaign and the emergence of mass Moroccan nationalism.",
+  "mainDispute": "Whether it was a deliberate de-Islamisation plot or an extension of existing legislation that was received as one. Whether Mohammed V signed freely.",
+  "people": [],
+  "claims": [],
+  "disputes": [],
+  "openQuestions": [],
+  "archives": []
+ },
+ {
+  "slug": "battle-of-isly",
+  "notionId": "3bd885d880428179b667d5ef5eca59c2",
+  "event": "Battle of Isly",
+  "start": "1844-08-14",
+  "end": null,
+  "location": "Oued Isly, near Oujda",
+  "phase": "II 1830-1900",
+  "type": [
+   "Battle"
+  ],
+  "dossierStatus": "Stub",
+  "summary": "Moroccan army under the sultan's son Sidi Mohammed destroyed by Bugeaud's French force; led to the Treaty of Tangier and the Lalla Maghnia border convention.",
+  "mainDispute": "Moroccan troop numbers and casualties, which French accounts inflate. Whether the defeat was as total as French reporting claimed.",
+  "people": [],
+  "claims": [],
+  "disputes": [],
+  "openQuestions": [],
+  "archives": []
+ },
+ {
+  "slug": "madrid-conference-on-protection",
+  "notionId": "3bd885d88042819b9e70c295225098ca",
+  "event": "Madrid Conference on protection",
+  "start": "1880-05-19",
+  "end": "1880-07-03",
+  "location": "Madrid",
+  "phase": "II 1830-1900",
+  "type": [
+   "Treaty / agreement",
+   "Diplomatic crisis",
+   "Economic"
+  ],
+  "dossierStatus": "Stub",
+  "summary": "Convened at Hassan I's request to limit consular protection; instead codified it and granted foreigners the right to own land in Morocco.",
+  "mainDispute": "How many protected persons there actually were, and what share of taxable wealth they removed from the Makhzen.",
+  "people": [],
+  "claims": [],
+  "disputes": [],
+  "openQuestions": [],
+  "archives": []
+ },
+ {
+  "slug": "hispano-moroccan-war-and-the-treaty-of-wad-ras",
+  "notionId": "3bd885d8804281f494facfc297236860",
+  "event": "Hispano-Moroccan War and the Treaty of Wad Ras",
+  "start": "1859-10-22",
+  "end": "1860-04-26",
+  "location": "Tetouan, Ceuta hinterland",
+  "phase": "II 1830-1900",
+  "type": [
+   "Battle",
+   "Treaty / agreement",
+   "Economic"
+  ],
+  "dossierStatus": "Stub",
+  "summary": "Spanish invasion and capture of Tetouan; the resulting indemnity mortgaged Moroccan customs revenue for decades.",
+  "mainDispute": "The real burden of the indemnity as a share of state revenue. Whether Britain brokered the terms to protect its own commercial position.",
   "people": [],
   "claims": [],
   "disputes": [],
@@ -47,38 +308,6 @@
   "openQuestions": [
    "do-the-arabic-and-french-texts-of-the-treaty-of-fez-differ-in-substance-clause-by-clause"
   ],
-  "archives": [
-   "archives-du-maroc",
-   "archives-diplomatiques-la-courneuve-and-nantes"
-  ]
- },
- {
-  "slug": "deposition-exile-and-return-of-mohammed-v",
-  "notionId": "3bd885d88042813c9fa1dbb4207d72cf",
-  "event": "Deposition, exile and return of Mohammed V",
-  "start": "1953-08-20",
-  "end": "1955-11-16",
-  "location": "Rabat → Corsica → Antsirabe, Madagascar → Rabat",
-  "phase": "VII 1944-1956",
-  "type": [
-   "Political",
-   "Repression"
-  ],
-  "dossierStatus": "Substantial",
-  "summary": "The French Residency and a coalition of pashas and qaids led by El Glaoui deposed the sultan and installed Ben Arafa; two years of resistance forced his return and led directly to independence.",
-  "mainDispute": "Who decided — Paris, the Residency, or El Glaoui. Casualty figures in the resistance of 1953-55. Whether the Army of Liberation or the negotiations produced independence.",
-  "people": [
-   "mohammed-v",
-   "thami-el-glaoui",
-   "augustin-guillaume"
-  ],
-  "claims": [
-   "the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables"
-  ],
-  "disputes": [
-   "who-decided-the-1953-deposition-of-mohammed-v"
-  ],
-  "openQuestions": [],
   "archives": [
    "archives-du-maroc",
    "archives-diplomatiques-la-courneuve-and-nantes"
@@ -148,69 +377,6 @@
   ]
  },
  {
-  "slug": "the-berber-dahir",
-  "notionId": "3bd885d880428171b491c58793e6fe9c",
-  "event": "The Berber Dahir",
-  "start": "1930-05-16",
-  "end": null,
-  "location": "Rabat; reaction in Salé, Fez and across the French zone",
-  "phase": "V 1921-1934",
-  "type": [
-   "Political",
-   "Repression"
-  ],
-  "dossierStatus": "Stub",
-  "summary": "Dahir of 16 May 1930 placing Tamazight-speaking tribes under customary-law tribunals with serious crime before French courts; triggered the Ya Latif campaign and the emergence of mass Moroccan nationalism.",
-  "mainDispute": "Whether it was a deliberate de-Islamisation plot or an extension of existing legislation that was received as one. Whether Mohammed V signed freely.",
-  "people": [],
-  "claims": [],
-  "disputes": [],
-  "openQuestions": [],
-  "archives": []
- },
- {
-  "slug": "battle-of-isly",
-  "notionId": "3bd885d880428179b667d5ef5eca59c2",
-  "event": "Battle of Isly",
-  "start": "1844-08-14",
-  "end": null,
-  "location": "Oued Isly, near Oujda",
-  "phase": "II 1830-1900",
-  "type": [
-   "Battle"
-  ],
-  "dossierStatus": "Stub",
-  "summary": "Moroccan army under the sultan's son Sidi Mohammed destroyed by Bugeaud's French force; led to the Treaty of Tangier and the Lalla Maghnia border convention.",
-  "mainDispute": "Moroccan troop numbers and casualties, which French accounts inflate. Whether the defeat was as total as French reporting claimed.",
-  "people": [],
-  "claims": [],
-  "disputes": [],
-  "openQuestions": [],
-  "archives": []
- },
- {
-  "slug": "madrid-conference-on-protection",
-  "notionId": "3bd885d88042819b9e70c295225098ca",
-  "event": "Madrid Conference on protection",
-  "start": "1880-05-19",
-  "end": "1880-07-03",
-  "location": "Madrid",
-  "phase": "II 1830-1900",
-  "type": [
-   "Treaty / agreement",
-   "Diplomatic crisis",
-   "Economic"
-  ],
-  "dossierStatus": "Stub",
-  "summary": "Convened at Hassan I's request to limit consular protection; instead codified it and granted foreigners the right to own land in Morocco.",
-  "mainDispute": "How many protected persons there actually were, and what share of taxable wealth they removed from the Makhzen.",
-  "people": [],
-  "claims": [],
-  "disputes": [],
-  "openQuestions": [],
-  "archives": []
- },
- {
   "slug": "battle-of-el-herri",
   "notionId": "3bd885d8804281bdb41bd27c3f2ce26a",
   "event": "Battle of El Herri",
@@ -240,118 +406,5 @@
    "service-historique-de-la-defense-shd",
    "haut-commissariat-aux-anciens-resistants-et-anciens-membres-de-l-armee-de-liberation-hcar"
   ]
- },
- {
-  "slug": "hispano-moroccan-war-and-the-treaty-of-wad-ras",
-  "notionId": "3bd885d8804281f494facfc297236860",
-  "event": "Hispano-Moroccan War and the Treaty of Wad Ras",
-  "start": "1859-10-22",
-  "end": "1860-04-26",
-  "location": "Tetouan, Ceuta hinterland",
-  "phase": "II 1830-1900",
-  "type": [
-   "Battle",
-   "Treaty / agreement",
-   "Economic"
-  ],
-  "dossierStatus": "Stub",
-  "summary": "Spanish invasion and capture of Tetouan; the resulting indemnity mortgaged Moroccan customs revenue for decades.",
-  "mainDispute": "The real burden of the indemnity as a share of state revenue. Whether Britain brokered the terms to protect its own commercial position.",
-  "people": [],
-  "claims": [],
-  "disputes": [],
-  "openQuestions": [],
-  "archives": []
- },
- {
-  "slug": "the-rif-revolt-and-its-suppression",
-  "notionId": "3be885d88042810aa0dffd093969414c",
-  "event": "The Rif revolt and its suppression",
-  "start": "1958-10-01",
-  "end": "1959-02-28",
-  "location": "The Rif — Al Hoceima, Nador, Beni Hadifa, Ait Ouriaghel country",
-  "phase": "VIII 1956-1961",
-  "type": [
-   "Uprising",
-   "Repression",
-   "Political"
-  ],
-  "dossierStatus": "Substantial",
-  "summary": "Armed revolt in the Rif against the post-independence government, suppressed by the Royal Armed Forces under Crown Prince Hassan and Commander Oufkir with c. 20,000 troops and French air support.",
-  "mainDispute": "Rifian dead: 2,000-8,000 in circulation against c. 1,000 army dead. Whether napalm was used. Whether this was a regional grievance, an Istiqlal-monarchy proxy fight, or the suppression of an alternative political settlement.",
-  "people": [
-   "hassan-ii",
-   "mohamed-oufkir",
-   "mohammed-v"
-  ],
-  "claims": [],
-  "disputes": [],
-  "openQuestions": [],
-  "archives": []
- },
- {
-  "slug": "casablanca-massacre-7-8-april-1947",
-  "notionId": "3be885d880428132a10eeeecff60f9b9",
-  "event": "Casablanca massacre, 7-8 April 1947",
-  "start": "1947-04-07",
-  "end": "1947-04-08",
-  "location": "Casablanca — working-class quarters including Derb Kebir",
-  "phase": "VII 1944-1956",
-  "type": [
-   "Repression",
-   "Political"
-  ],
-  "dossierStatus": "Substantial",
-  "summary": "Senegalese tirailleurs in French service fired on Moroccan civilians in Casablanca over roughly 24 hours, two days before Mohammed V's Tangier speech. Estimates range from 180 to over 2,000 dead.",
-  "mainDispute": "The death toll — a tenfold range. Whether the shooting was a breakdown of discipline or a deliberate operation to prevent the sultan's Tangier journey.",
-  "people": [
-   "mohammed-v"
-  ],
-  "claims": [],
-  "disputes": [],
-  "openQuestions": [],
-  "archives": []
- },
- {
-  "slug": "battle-of-ksar-el-kebir-battle-of-the-three-kings",
-  "notionId": "3be885d88042817abeb9f85153fd250c",
-  "event": "Battle of Ksar el-Kebir (Battle of the Three Kings)",
-  "start": "1578-08-04",
-  "end": null,
-  "location": "Wadi al-Makhazin, near Ksar el-Kebir, northern Morocco",
-  "phase": "I pre-1830",
-  "type": [
-   "Battle",
-   "Political"
-  ],
-  "dossierStatus": "Stub",
-  "summary": "Saadian victory over a Portuguese invasion force; three kings died. Portugal lost its king and its independence; Morocco gained fifty years of wealth and standing under Ahmad al-Mansur.",
-  "mainDispute": "Force numbers and casualties on both sides. Not yet researched here — this entry exists to open Phase I, not to close it.",
-  "people": [],
-  "claims": [],
-  "disputes": [],
-  "openQuestions": [],
-  "archives": []
- },
- {
-  "slug": "battle-of-tazigzawt",
-  "notionId": "3be885d8804281999933e6c9c28afbc8",
-  "event": "Battle of Tazigzawt",
-  "start": "1932-01-01",
-  "end": null,
-  "location": "Tazigzawt, Middle Atlas",
-  "phase": "V 1921-1934",
-  "type": [
-   "Battle",
-   "Campaign"
-  ],
-  "dossierStatus": "Stub",
-  "summary": "A late-conquest engagement in which c. 1,000 resistance fighters faced two French divisions. Identified through the Amazigh oral tradition, where it is the most celebrated subject of resistance balladry.",
-  "mainDispute": "Everything. Dates beyond the year, casualties, tribes involved, and the outcome are all unresearched here. The French operational record has not been consulted.",
-  "people": [],
-  "claims": [],
-  "disputes": [],
-  "openQuestions": [],
-  "archives": []
  }
 ]
