@@ -1,0 +1,38 @@
+name: mhka
+
+on:
+  push:
+    branches: ['**']
+    paths: ['mhka/**', '.github/workflows/mhka.yml']
+  pull_request:
+    paths: ['mhka/**', '.github/workflows/mhka.yml']
+
+defaults:
+  run:
+    working-directory: mhka
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: mhka/package-lock.json
+      - run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      # 77 tests, including the assertion that no Notion write method is
+      # reachable from the built bundle and that no --fix/--force flag exists.
+      - name: Tests
+        run: npm test
+
+      # Validate the committed snapshot. This runs the rules against real
+      # corpus data, so a rule that breaks on real input fails here rather
+      # than silently on the next daily run.
+      - name: Validate committed snapshot
+        run: node dist/cli.js validate

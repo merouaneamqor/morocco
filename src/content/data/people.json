@@ -531,7 +531,9 @@
   "evidenceBase": "Contested",
   "oneLine": "King 1961–1999; presided over the Years of Lead, two coup attempts, the Green March and the Western Sahara war.",
   "contestedPoints": "Command responsibility for the 1958–59 Rif repression, the 1965 Casablanca killings, Ben Barka, Tazmamart, and the disappearances. Almost every major question of this reign is contested and much of the record is closed.",
-  "events": [],
+  "events": [
+   "the-rif-revolt-and-its-suppression"
+  ],
   "relationships": []
  },
  {
@@ -621,7 +623,9 @@
   "evidenceBase": "Contested",
   "oneLine": "French army officer who became interior minister and defence minister; central to the repression of the 1960s and to the Ben Barka affair; died after the 1972 coup attempt.",
   "contestedPoints": "The manner of his death (multiple gunshot wounds are reported, which is difficult to reconcile with suicide). His personal role in Ben Barka's death. The extent of his authorship of the 1972 coup attempt.",
-  "events": [],
+  "events": [
+   "the-rif-revolt-and-its-suppression"
+  ],
   "relationships": [
    "oufkir-named-as-responsible-for-the-abduction-of-mehdi-ben-barka"
   ]
@@ -2893,7 +2897,9 @@
   "oneLine": "Sultan from 1927 and King from 1957; installed by France as a compliant minor and became the central symbol of Moroccan independence.",
   "contestedPoints": "Whether he signed the 1930 Berber dahir freely, under duress, or without grasping its consequences. The extent and nature of his protection of Moroccan Jews under Vichy. What Roosevelt actually said at Anfa in 1943. Whether the 1953 deposition was primarily French or Glaoui-driven. His responsibility for the 1958-59 Rif repression.",
   "events": [
-   "deposition-exile-and-return-of-mohammed-v"
+   "deposition-exile-and-return-of-mohammed-v",
+   "the-rif-revolt-and-its-suppression",
+   "casablanca-massacre-7-8-april-1947"
   ],
   "relationships": [
    "thami-el-glaoui-demanded-the-deposition-of-mohammed-v",
@@ -3534,5 +3540,269 @@
   "relationships": [
    "raisuni-abducted-harry-maclean"
   ]
+ },
+ {
+  "slug": "germain-ayache",
+  "notionId": "3be885d880428163abd3e2885a8cca7e",
+  "name": "Germain Ayache",
+  "aliasesRaw": "Germain Ayache · جرمان عياش",
+  "aliases": [
+   {
+    "value": "Germain Ayache",
+    "tradition": null,
+    "script": "latin",
+    "folded": "germain ayache"
+   },
+   {
+    "value": "جرمان عياش",
+    "tradition": "Ar",
+    "script": "arabic",
+    "folded": "جرمان عياش"
+   }
+  ],
+  "born": "1915",
+  "died": "1990",
+  "_derivedBornYear": 1915,
+  "_derivedDiedYear": 1990,
+  "category": [
+   "Other foreign"
+  ],
+  "region": [
+   "Atlantic plains",
+   "Rif"
+  ],
+  "phase": [
+   "IX 1961-1999"
+  ],
+  "dossierStatus": "Stub",
+  "evidenceBase": "Moderate - academic",
+  "oneLine": "Moroccan historian who founded a national school of Moroccan history written against colonial historiography; author of Les origines de la guerre du Rif.",
+  "contestedPoints": "His dates as recorded here are the conventional ones and have not been verified in this session. How far his method genuinely escaped the colonial framework he attacked.",
+  "events": [],
+  "relationships": []
+ },
+ {
+  "slug": "ahmad-ibn-khalid-al-nasiri",
+  "notionId": "3be885d88042817fb71afa54258d61fc",
+  "name": "Ahmad ibn Khalid al-Nasiri",
+  "aliasesRaw": "أحمد بن خالد الناصري · al-Nasiri al-Slawi · an-Nasiri · Fr.: 'Ahmed Ben Khaled en-Naciri es-Slaoui' · Ennaciri · An-Nasiri",
+  "aliases": [
+   {
+    "value": "أحمد بن خالد الناصري",
+    "tradition": "Ar",
+    "script": "arabic",
+    "folded": "أحمد بن خالد الناصري"
+   },
+   {
+    "value": "al-Nasiri al-Slawi",
+    "tradition": null,
+    "script": "latin",
+    "folded": "al-nasiri al-slawi"
+   },
+   {
+    "value": "an-Nasiri",
+    "tradition": null,
+    "script": "latin",
+    "folded": "an-nasiri"
+   },
+   {
+    "value": "Ahmed Ben Khaled en-Naciri es-Slaoui",
+    "tradition": "Fr",
+    "script": "latin",
+    "folded": "ahmed ben khaled en-naciri es-slaoui"
+   },
+   {
+    "value": "Ennaciri",
+    "tradition": null,
+    "script": "latin",
+    "folded": "ennaciri"
+   },
+   {
+    "value": "An-Nasiri",
+    "tradition": null,
+    "script": "latin",
+    "folded": "an-nasiri"
+   }
+  ],
+  "born": "20 March or 20 April 1835, Salé",
+  "died": "13 October 1897",
+  "_derivedBornYear": 1835,
+  "_derivedDiedYear": 1897,
+  "category": [
+   "Religious leader",
+   "Makhzen official"
+  ],
+  "region": [
+   "Atlantic plains",
+   "Fez / Saiss"
+  ],
+  "phase": [
+   "II 1830-1900"
+  ],
+  "dossierStatus": "Substantial",
+  "evidenceBase": "Moderate - academic",
+  "oneLine": "Moroccan historian; author of Kitab al-Istiqsa, the first comprehensive national history of Morocco, completed in 1894.",
+  "contestedPoints": "His exact birth date (March vs April 1835). How far his account of European encroachment is shaped by his position inside the Makhzen order. Whether his use of European sources makes him more reliable or differently compromised.",
+  "events": [],
+  "relationships": []
+ },
+ {
+  "slug": "zaid-ou-hmad",
+  "notionId": "3be885d8804281b29906ee39cba7e233",
+  "name": "Zaïd Ou Hmad",
+  "aliasesRaw": "زايد أو حماد · Zayd u Hmad · Zaïd Ou Hmad · Zaïd Ouhmad. Spelling not standardised; French archival forms not yet established.",
+  "aliases": [
+   {
+    "value": "زايد أو حماد",
+    "tradition": "Ar",
+    "script": "arabic",
+    "folded": "زايد أو حماد"
+   },
+   {
+    "value": "Zayd u Hmad",
+    "tradition": null,
+    "script": "latin",
+    "folded": "zayd u hmad"
+   },
+   {
+    "value": "Zaïd Ou Hmad",
+    "tradition": null,
+    "script": "latin",
+    "folded": "zaid ou hmad"
+   },
+   {
+    "value": "Zaïd Ouhmad. Spelling not standardised; French archival forms not yet established.",
+    "tradition": null,
+    "script": "latin",
+    "folded": "zaid ouhmad. spelling not standardised; french archival forms not yet established."
+   }
+  ],
+  "born": "not established",
+  "died": "not established",
+  "_derivedBornYear": null,
+  "_derivedDiedYear": null,
+  "category": [
+   "Armed resistance",
+   "Tribal leader"
+  ],
+  "region": [
+   "High Atlas",
+   "Sous / Anti-Atlas"
+  ],
+  "phase": [
+   "V 1921-1934",
+   "VI 1934-1944"
+  ],
+  "dossierStatus": "Identified - not yet researched",
+  "evidenceBase": "Thin - encyclopedic leads only",
+  "oneLine": "Resistance leader active 1934-1936, after the date France declared the pacification of Morocco complete.",
+  "contestedPoints": "Everything — dates, region, tribe, the scale of his following. Identified in Session 4 from a Moroccan state publication and not yet researched anywhere else.",
+  "events": [],
+  "relationships": []
+ },
+ {
+  "slug": "mohammed-sellam-ameziane",
+  "notionId": "3be885d8804281db96bcec0a2235be89",
+  "name": "Mohammed Sellam Ameziane",
+  "aliasesRaw": "محمد سلام أمزيان · Sellam Amezian · Salam Amezyan · Mohammed Sellam Ameziane. Not to be confused with Mohamed Ameziane (d. 1912), the Rif leader against Spain — different men, similar names, half a century apart.",
+  "aliases": [
+   {
+    "value": "محمد سلام أمزيان",
+    "tradition": "Ar",
+    "script": "arabic",
+    "folded": "محمد سلام أمزيان"
+   },
+   {
+    "value": "Sellam Amezian",
+    "tradition": null,
+    "script": "latin",
+    "folded": "sellam amezian"
+   },
+   {
+    "value": "Salam Amezyan",
+    "tradition": null,
+    "script": "latin",
+    "folded": "salam amezyan"
+   },
+   {
+    "value": "Mohammed Sellam Ameziane. Not to be confused with Mohamed Ameziane (d. 1912), the Rif leader against Spain — different men, similar names, half a century apart.",
+    "tradition": null,
+    "script": "latin",
+    "folded": "mohammed sellam ameziane. not to be confused with mohamed ameziane (d. 1912), the rif leader against spain — different men, similar names, half a century apart."
+   }
+  ],
+  "born": "not established",
+  "died": "not established — escaped to Spain, then Egypt and Iraq",
+  "_derivedBornYear": null,
+  "_derivedDiedYear": null,
+  "category": [
+   "Armed resistance",
+   "Nationalist"
+  ],
+  "region": [
+   "Rif"
+  ],
+  "phase": [
+   "VII 1944-1956",
+   "VIII 1956-1961"
+  ],
+  "dossierStatus": "Stub",
+  "evidenceBase": "Thin - encyclopedic leads only",
+  "oneLine": "Qarawiyyin graduate and Liberation Army veteran who directed the 1958-59 Rif revolt against the independent Moroccan government.",
+  "contestedPoints": "His dates and fate. Whether the 18-point programme was his drafting. Whether the revolt sought reform within the state or something more.",
+  "events": [],
+  "relationships": []
+ },
+ {
+  "slug": "abdallah-laroui",
+  "notionId": "3be885d8804281eba5b5c4520d4947e1",
+  "name": "Abdallah Laroui",
+  "aliasesRaw": "عبد الله العروي · Abdallah Laroui · Abdellah Laroui · al-ʿArwi",
+  "aliases": [
+   {
+    "value": "عبد الله العروي",
+    "tradition": "Ar",
+    "script": "arabic",
+    "folded": "عبد الله العروي"
+   },
+   {
+    "value": "Abdallah Laroui",
+    "tradition": null,
+    "script": "latin",
+    "folded": "abdallah laroui"
+   },
+   {
+    "value": "Abdellah Laroui",
+    "tradition": null,
+    "script": "latin",
+    "folded": "abdellah laroui"
+   },
+   {
+    "value": "al-ʿArwi",
+    "tradition": null,
+    "script": "latin",
+    "folded": "al-arwi"
+   }
+  ],
+  "born": "7 November 1933, Azemmour",
+  "died": "living as of the sources consulted",
+  "_derivedBornYear": 1933,
+  "_derivedDiedYear": null,
+  "category": [
+   "Other foreign"
+  ],
+  "region": [
+   "Atlantic plains"
+  ],
+  "phase": [
+   "IX 1961-1999",
+   "X 1999-present"
+  ],
+  "dossierStatus": "Stub",
+  "evidenceBase": "Moderate - academic",
+  "oneLine": "Moroccan historian and philosopher; the most influential critic of colonial and orientalist historiography of Morocco.",
+  "contestedPoints": "Whether his Marxist framework substitutes one external theory for another. His later testimony on Hassan II, written by a man who had access to the palace.",
+  "events": [],
+  "relationships": []
  }
 ]

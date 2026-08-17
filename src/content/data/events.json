@@ -189,5 +189,80 @@
   "summary": "Spanish invasion and capture of Tetouan; the resulting indemnity mortgaged Moroccan customs revenue for decades.",
   "mainDispute": "The real burden of the indemnity as a share of state revenue. Whether Britain brokered the terms to protect its own commercial position.",
   "people": []
+ },
+ {
+  "slug": "the-rif-revolt-and-its-suppression",
+  "notionId": "3be885d88042810aa0dffd093969414c",
+  "event": "The Rif revolt and its suppression",
+  "start": "1958-10-01",
+  "end": "1959-02-28",
+  "location": "The Rif — Al Hoceima, Nador, Beni Hadifa, Ait Ouriaghel country",
+  "phase": "VIII 1956-1961",
+  "type": [
+   "Uprising",
+   "Repression",
+   "Political"
+  ],
+  "dossierStatus": "Substantial",
+  "summary": "Armed revolt in the Rif against the post-independence government, suppressed by the Royal Armed Forces under Crown Prince Hassan and Commander Oufkir with c. 20,000 troops and French air support.",
+  "mainDispute": "Rifian dead: 2,000-8,000 in circulation against c. 1,000 army dead. Whether napalm was used. Whether this was a regional grievance, an Istiqlal-monarchy proxy fight, or the suppression of an alternative political settlement.",
+  "people": [
+   "hassan-ii",
+   "mohamed-oufkir",
+   "mohammed-v"
+  ]
+ },
+ {
+  "slug": "casablanca-massacre-7-8-april-1947",
+  "notionId": "3be885d880428132a10eeeecff60f9b9",
+  "event": "Casablanca massacre, 7-8 April 1947",
+  "start": "1947-04-07",
+  "end": "1947-04-08",
+  "location": "Casablanca — working-class quarters including Derb Kebir",
+  "phase": "VII 1944-1956",
+  "type": [
+   "Repression",
+   "Political"
+  ],
+  "dossierStatus": "Substantial",
+  "summary": "Senegalese tirailleurs in French service fired on Moroccan civilians in Casablanca over roughly 24 hours, two days before Mohammed V's Tangier speech. Estimates range from 180 to over 2,000 dead.",
+  "mainDispute": "The death toll — a tenfold range. Whether the shooting was a breakdown of discipline or a deliberate operation to prevent the sultan's Tangier journey.",
+  "people": [
+   "mohammed-v"
+  ]
+ },
+ {
+  "slug": "battle-of-ksar-el-kebir-battle-of-the-three-kings",
+  "notionId": "3be885d88042817abeb9f85153fd250c",
+  "event": "Battle of Ksar el-Kebir (Battle of the Three Kings)",
+  "start": "1578-08-04",
+  "end": null,
+  "location": "Wadi al-Makhazin, near Ksar el-Kebir, northern Morocco",
+  "phase": "I pre-1830",
+  "type": [
+   "Battle",
+   "Political"
+  ],
+  "dossierStatus": "Stub",
+  "summary": "Saadian victory over a Portuguese invasion force; three kings died. Portugal lost its king and its independence; Morocco gained fifty years of wealth and standing under Ahmad al-Mansur.",
+  "mainDispute": "Force numbers and casualties on both sides. Not yet researched here — this entry exists to open Phase I, not to close it.",
+  "people": []
+ },
+ {
+  "slug": "battle-of-tazigzawt",
+  "notionId": "3be885d8804281999933e6c9c28afbc8",
+  "event": "Battle of Tazigzawt",
+  "start": "1932-01-01",
+  "end": null,
+  "location": "Tazigzawt, Middle Atlas",
+  "phase": "V 1921-1934",
+  "type": [
+   "Battle",
+   "Campaign"
+  ],
+  "dossierStatus": "Stub",
+  "summary": "A late-conquest engagement in which c. 1,000 resistance fighters faced two French divisions. Identified through the Amazigh oral tradition, where it is the most celebrated subject of resistance balladry.",
+  "mainDispute": "Everything. Dates beyond the year, casualties, tribes involved, and the outcome are all unresearched here. The French operational record has not been consulted.",
+  "people": []
  }
 ]

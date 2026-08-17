@@ -1,0 +1,123 @@
+---
+/**
+ * A dated note recording that one part of the corpus has moved on from
+ * another.
+ *
+ * This exists because of a real discrepancy. The synthesis states that "the
+ * Moroccan-side documentary base is currently zero" — accurate when it was
+ * written — while the Sources database has since acquired al-Nasiri's
+ * chronicle in Arabic, the HCAR resistance cahiers, Ayache and Laroui.
+ *
+ * The rule this follows: **the site does not edit corpus text.** Rewriting the
+ * synthesis to match the database would be the site making a historiographical
+ * judgement on the corpus's behalf, which is exactly what this project exists
+ * not to do. So the essay renders verbatim and this note sits beside it,
+ * visibly attributed to the site rather than to the corpus, with its figures
+ * computed from the database rather than asserted.
+ *
+ * If the corpus updates the essay, the note stops being true and should be
+ * removed — it is scaffolding over a gap, not a permanent feature.
+ */
+interface Props {
+  /** What the page says. */
+  claim: string;
+  /** What the data now shows. */
+  observation: string;
+  /** Where a reader can check for themselves. */
+  href?: string;
+  hrefLabel?: string;
+}
+
+const { claim, observation, href, hrefLabel } = Astro.props;
+---
+
+<aside class="drift" role="note" aria-label="Note added by the site">
+  <p class="drift__head">
+    <span class="drift__icon" aria-hidden="true">⇄</span>
+    Added by the site, not by the corpus
+  </p>
+  <dl class="drift__dl">
+    <dt>This page states</dt>
+    <dd>{claim}</dd>
+    <dt>The databases now show</dt>
+    <dd>
+      {observation}
+      {
+        href && (
+          <>
+            {' '}
+            <a href={href}>{hrefLabel ?? 'Check the data'}</a>.
+          </>
+        )
+      }
+    </dd>
+  </dl>
+  <p class="drift__rule">
+    The essay above is rendered verbatim. The site does not edit corpus text — resolving
+    the discrepancy is a historiographical judgement, and that judgement belongs to the
+    corpus, not to its renderer.
+  </p>
+</aside>
+
+<style>
+  /* Deliberately distinct from every corpus-authored treatment: this is the
+     site talking, and it should not be mistakable for the source material. */
+  .drift {
+    margin: var(--s-6) 0;
+    padding: var(--s-4);
+    border: 1px dashed var(--baseline);
+    border-radius: var(--radius);
+    background: var(--page-plane);
+  }
+
+  .drift__head {
+    display: flex;
+    align-items: center;
+    gap: 0.45em;
+    margin: 0 0 var(--s-3);
+    font-family: var(--font-ui);
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-muted);
+  }
+
+  .drift__icon {
+    color: var(--status-disputed);
+    font-size: 0.9rem;
+  }
+
+  .drift__dl {
+    margin: 0;
+    display: grid;
+    gap: var(--s-1);
+  }
+
+  .drift__dl dt {
+    font-family: var(--font-ui);
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-muted);
+    margin-top: var(--s-2);
+  }
+
+  .drift__dl dd {
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    color: var(--ink-secondary);
+  }
+
+  .drift__rule {
+    margin: var(--s-3) 0 0;
+    padding-top: var(--s-3);
+    border-top: var(--rule);
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: var(--ink-muted);
+  }
+</style>

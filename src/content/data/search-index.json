@@ -1727,6 +1727,135 @@
   "dossierStatus": "Stub"
  },
  {
+  "type": "person",
+  "slug": "germain-ayache",
+  "url": "/people/germain-ayache",
+  "title": "Germain Ayache",
+  "subtitle": "Moroccan historian who founded a national school of Moroccan history written against colonial historiography; author of Les origines de la guerre du Rif.",
+  "terms": [
+   "Germain Ayache",
+   "Germain Ayache",
+   "جرمان عياش"
+  ],
+  "folded": [
+   "germain ayache",
+   "جرمان عياش"
+  ],
+  "phase": [
+   "IX 1961-1999"
+  ],
+  "status": "Moderate - academic",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "ahmad-ibn-khalid-al-nasiri",
+  "url": "/people/ahmad-ibn-khalid-al-nasiri",
+  "title": "Ahmad ibn Khalid al-Nasiri",
+  "subtitle": "Moroccan historian; author of Kitab al-Istiqsa, the first comprehensive national history of Morocco, completed in 1894.",
+  "terms": [
+   "Ahmad ibn Khalid al-Nasiri",
+   "أحمد بن خالد الناصري",
+   "al-Nasiri al-Slawi",
+   "an-Nasiri",
+   "Ahmed Ben Khaled en-Naciri es-Slaoui",
+   "Ennaciri",
+   "An-Nasiri"
+  ],
+  "folded": [
+   "ahmad ibn khalid al-nasiri",
+   "أحمد بن خالد الناصري",
+   "al-nasiri al-slawi",
+   "an-nasiri",
+   "ahmed ben khaled en-naciri es-slaoui",
+   "ennaciri"
+  ],
+  "phase": [
+   "II 1830-1900"
+  ],
+  "status": "Moderate - academic",
+  "dossierStatus": "Substantial"
+ },
+ {
+  "type": "person",
+  "slug": "zaid-ou-hmad",
+  "url": "/people/zaid-ou-hmad",
+  "title": "Zaïd Ou Hmad",
+  "subtitle": "Resistance leader active 1934-1936, after the date France declared the pacification of Morocco complete.",
+  "terms": [
+   "Zaïd Ou Hmad",
+   "زايد أو حماد",
+   "Zayd u Hmad",
+   "Zaïd Ou Hmad",
+   "Zaïd Ouhmad. Spelling not standardised; French archival forms not yet established."
+  ],
+  "folded": [
+   "zaid ou hmad",
+   "زايد أو حماد",
+   "zayd u hmad",
+   "zaid ouhmad. spelling not standardised; french archival forms not yet established."
+  ],
+  "phase": [
+   "V 1921-1934",
+   "VI 1934-1944"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Identified - not yet researched"
+ },
+ {
+  "type": "person",
+  "slug": "mohammed-sellam-ameziane",
+  "url": "/people/mohammed-sellam-ameziane",
+  "title": "Mohammed Sellam Ameziane",
+  "subtitle": "Qarawiyyin graduate and Liberation Army veteran who directed the 1958-59 Rif revolt against the independent Moroccan government.",
+  "terms": [
+   "Mohammed Sellam Ameziane",
+   "محمد سلام أمزيان",
+   "Sellam Amezian",
+   "Salam Amezyan",
+   "Mohammed Sellam Ameziane. Not to be confused with Mohamed Ameziane (d. 1912), the Rif leader against Spain — different men, similar names, half a century apart."
+  ],
+  "folded": [
+   "mohammed sellam ameziane",
+   "محمد سلام أمزيان",
+   "sellam amezian",
+   "salam amezyan",
+   "mohammed sellam ameziane. not to be confused with mohamed ameziane (d. 1912), the rif leader against spain — different men, similar names, half a century apart."
+  ],
+  "phase": [
+   "VII 1944-1956",
+   "VIII 1956-1961"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "abdallah-laroui",
+  "url": "/people/abdallah-laroui",
+  "title": "Abdallah Laroui",
+  "subtitle": "Moroccan historian and philosopher; the most influential critic of colonial and orientalist historiography of Morocco.",
+  "terms": [
+   "Abdallah Laroui",
+   "عبد الله العروي",
+   "Abdallah Laroui",
+   "Abdellah Laroui",
+   "al-ʿArwi"
+  ],
+  "folded": [
+   "abdallah laroui",
+   "عبد الله العروي",
+   "abdellah laroui",
+   "al-arwi"
+  ],
+  "phase": [
+   "IX 1961-1999",
+   "X 1999-present"
+  ],
+  "status": "Moderate - academic",
+  "dossierStatus": "Stub"
+ },
+ {
   "type": "event",
   "slug": "act-of-algeciras",
   "url": "/events/act-of-algeciras",
@@ -1913,6 +2042,82 @@
   ],
   "phase": [
    "II 1830-1900"
+  ],
+  "status": "Stub"
+ },
+ {
+  "type": "event",
+  "slug": "the-rif-revolt-and-its-suppression",
+  "url": "/events/the-rif-revolt-and-its-suppression",
+  "title": "The Rif revolt and its suppression",
+  "subtitle": "Armed revolt in the Rif against the post-independence government, suppressed by the Royal Armed Forces under Crown Prince Hassan and Commander Oufkir with c. 20,000 troops and French air support.",
+  "terms": [
+   "The Rif revolt and its suppression",
+   "The Rif — Al Hoceima, Nador, Beni Hadifa, Ait Ouriaghel country"
+  ],
+  "folded": [
+   "the rif revolt and its suppression",
+   "the rif — al hoceima, nador, beni hadifa, ait ouriaghel country"
+  ],
+  "phase": [
+   "VIII 1956-1961"
+  ],
+  "status": "Substantial"
+ },
+ {
+  "type": "event",
+  "slug": "casablanca-massacre-7-8-april-1947",
+  "url": "/events/casablanca-massacre-7-8-april-1947",
+  "title": "Casablanca massacre, 7-8 April 1947",
+  "subtitle": "Senegalese tirailleurs in French service fired on Moroccan civilians in Casablanca over roughly 24 hours, two days before Mohammed V's Tangier speech. Estimates range from 180 to over 2,000 dead.",
+  "terms": [
+   "Casablanca massacre, 7-8 April 1947",
+   "Casablanca — working-class quarters including Derb Kebir"
+  ],
+  "folded": [
+   "casablanca massacre, 7-8 april 1947",
+   "casablanca — working-class quarters including derb kebir"
+  ],
+  "phase": [
+   "VII 1944-1956"
+  ],
+  "status": "Substantial"
+ },
+ {
+  "type": "event",
+  "slug": "battle-of-ksar-el-kebir-battle-of-the-three-kings",
+  "url": "/events/battle-of-ksar-el-kebir-battle-of-the-three-kings",
+  "title": "Battle of Ksar el-Kebir (Battle of the Three Kings)",
+  "subtitle": "Saadian victory over a Portuguese invasion force; three kings died. Portugal lost its king and its independence; Morocco gained fifty years of wealth and standing under Ahmad al-Mansur.",
+  "terms": [
+   "Battle of Ksar el-Kebir (Battle of the Three Kings)",
+   "Wadi al-Makhazin, near Ksar el-Kebir, northern Morocco"
+  ],
+  "folded": [
+   "battle of ksar el-kebir (battle of the three kings)",
+   "wadi al-makhazin, near ksar el-kebir, northern morocco"
+  ],
+  "phase": [
+   "I pre-1830"
+  ],
+  "status": "Stub"
+ },
+ {
+  "type": "event",
+  "slug": "battle-of-tazigzawt",
+  "url": "/events/battle-of-tazigzawt",
+  "title": "Battle of Tazigzawt",
+  "subtitle": "A late-conquest engagement in which c. 1,000 resistance fighters faced two French divisions. Identified through the Amazigh oral tradition, where it is the most celebrated subject of resistance balladry.",
+  "terms": [
+   "Battle of Tazigzawt",
+   "Tazigzawt, Middle Atlas"
+  ],
+  "folded": [
+   "battle of tazigzawt",
+   "tazigzawt, middle atlas"
+  ],
+  "phase": [
+   "V 1921-1934"
   ],
   "status": "Stub"
  },
@@ -2181,6 +2386,234 @@
   "phase": [],
   "tier": "ACADEMIC",
   "verification": "Cited by named scholar"
+ },
+ {
+  "type": "source",
+  "slug": "kitab-al-istiqsa-li-akhbar-duwal-al-maghrib-al-aqsa",
+  "url": "/sources#kitab-al-istiqsa-li-akhbar-duwal-al-maghrib-al-aqsa",
+  "title": "Kitāb al-Istiqsā li-akhbār duwal al-Maghrib al-Aqsā",
+  "subtitle": "Ahmad ibn Khalid al-Nasiri al-Slawi (1835–1897)",
+  "terms": [
+   "Kitāb al-Istiqsā li-akhbār duwal al-Maghrib al-Aqsā",
+   "Ahmad ibn Khalid al-Nasiri al-Slawi (1835–1897)",
+   "French translation published in **Archives Marocaines**: vols **IX (1906)** and **X (1907)**, *Chronique de la dynastie alaouie du Maroc*, with a preface by **Eugène Fumey**; superseded by the five-tome edition in vol. **XXX (1923–1936)**, translated by **A. Graulle, I. Hamet and M. en-Nacîri**, covering the Berbers, Idrisids, Almoravids, Almohads, Marinids and Saadians (1509–1609). Verified against the Archives Marocaines series index."
+  ],
+  "folded": [
+   "kitab al-istiqsa li-akhbar duwal al-maghrib al-aqsa",
+   "ahmad ibn khalid al-nasiri al-slawi (1835–1897)"
+  ],
+  "phase": [],
+  "tier": "PRIMARY_CONTEMPORARY",
+  "verification": null
+ },
+ {
+  "type": "source",
+  "slug": "كتاب-الاستقصا-arabic-text-al-maktaba-al-shamela",
+  "url": "/sources#كتاب-الاستقصا-arabic-text-al-maktaba-al-shamela",
+  "title": "كتاب الاستقصا — Arabic text, al-Maktaba al-Shamela",
+  "subtitle": "Ahmad ibn Khalid al-Nasiri; edition of Ja'far al-Nasiri and Muhammad al-Nasiri",
+  "terms": [
+   "كتاب الاستقصا — Arabic text, al-Maktaba al-Shamela",
+   "Ahmad ibn Khalid al-Nasiri; edition of Ja'far al-Nasiri and Muhammad al-Nasiri",
+   "Shamela book ID 6627. Fully browsable by volume, chapter and printed page number. The Shamela instance indexes three volumes running from the Islamic conquest through the Saadian period into the seventeenth century."
+  ],
+  "folded": [
+   "كتاب الاستقصا — arabic text, al-maktaba al-shamela",
+   "ahmad ibn khalid al-nasiri; edition of ja'far al-nasiri and muhammad al-nasiri"
+  ],
+  "phase": [],
+  "tier": "PRIMARY_CONTEMPORARY",
+  "verification": null
+ },
+ {
+  "type": "source",
+  "slug": "les-origines-de-la-guerre-du-rif",
+  "url": "/sources#les-origines-de-la-guerre-du-rif",
+  "title": "Les origines de la guerre du Rif",
+  "subtitle": "Germain Ayache",
+  "terms": [
+   "Les origines de la guerre du Rif",
+   "Germain Ayache",
+   "Full text on Internet Archive, identifier `lesoriginesdelaguerredurifgermainayache`."
+  ],
+  "folded": [
+   "les origines de la guerre du rif",
+   "germain ayache"
+  ],
+  "phase": [],
+  "tier": "ACADEMIC",
+  "verification": null
+ },
+ {
+  "type": "source",
+  "slug": "reconsidering-the-rif-revolt-1958-1959",
+  "url": "/sources#reconsidering-the-rif-revolt-1958-1959",
+  "title": "Reconsidering the Rif Revolt (1958–1959)",
+  "subtitle": "Nabil Mouline",
+  "terms": [
+   "Reconsidering the Rif Revolt (1958–1959)",
+   "Nabil Mouline",
+   "n/a — essay format; underlying sources not itemised in the accessible text."
+  ],
+  "folded": [
+   "reconsidering the rif revolt (1958–1959)",
+   "nabil mouline"
+  ],
+  "phase": [],
+  "tier": "ACADEMIC",
+  "verification": null
+ },
+ {
+  "type": "source",
+  "slug": "archives-marocaines-series",
+  "url": "/sources#archives-marocaines-series",
+  "title": "Archives Marocaines (series)",
+  "subtitle": "Mission scientifique du Maroc",
+  "terms": [
+   "Archives Marocaines (series)",
+   "Mission scientifique du Maroc",
+   "Volumes verified present on Internet Archive include I (1905), VI (1906), IX (1906), XIV (1908), XV (1909), XIX (1913, *Dawhat al-Nāshir* of Ibn ʿAskar), XX (1913, *Le Gharb*), XXI (1913), XXVII (1927, *Confréries religieuses au Maroc*), XXXIV (1917)."
+  ],
+  "folded": [
+   "archives marocaines (series)",
+   "mission scientifique du maroc"
+  ],
+  "phase": [],
+  "tier": "PRIMARY_CONTEMPORARY",
+  "verification": null
+ },
+ {
+  "type": "source",
+  "slug": "bataille-elhri-digitised-document",
+  "url": "/sources#bataille-elhri-digitised-document",
+  "title": "Bataille Elhri (digitised document)",
+  "subtitle": "Author not stated in the item metadata",
+  "terms": [
+   "Bataille Elhri (digitised document)",
+   "Author not stated in the item metadata",
+   "Internet Archive identifier `bataille.-elhri`. 14.3 MB, scanned 600 DPI with OCR."
+  ],
+  "folded": [
+   "bataille elhri (digitised document)",
+   "author not stated in the item metadata"
+  ],
+  "phase": [],
+  "tier": "SECONDARY",
+  "verification": null
+ },
+ {
+  "type": "source",
+  "slug": "cahiers-des-documents-historiques-de-la-resistance-et-de-la-liberation",
+  "url": "/sources#cahiers-des-documents-historiques-de-la-resistance-et-de-la-liberation",
+  "title": "Cahiers des Documents Historiques de la Résistance et de la Libération",
+  "subtitle": "Haut Commissariat aux Anciens Résistants et Anciens Membres de l'Armée de Libération (HCAR)",
+  "terms": [
+   "Cahiers des Documents Historiques de la Résistance et de la Libération",
+   "Haut Commissariat aux Anciens Résistants et Anciens Membres de l'Armée de Libération (HCAR)",
+   "Thematic *cahiers*, each on a single topic. Verified contents include a cahier on **the Battle of El Herri, 13 November 1914**; **Moha ou Hammou Zayani**; **Zaïd Ou Hmad** (resistance leader, 1934–1936); Sultan Sidi Mohammed ben Youssef; and the Manifesto of Independence of 11 January 1944."
+  ],
+  "folded": [
+   "cahiers des documents historiques de la resistance et de la liberation",
+   "haut commissariat aux anciens resistants et anciens membres de l'armee de liberation (hcar)"
+  ],
+  "phase": [],
+  "tier": "OFFICIAL",
+  "verification": null
+ },
+ {
+  "type": "source",
+  "slug": "frus-conferences-at-washington-and-casablanca-1941-1943-document-376-roosevelt-dinner-party-22-january-1943",
+  "url": "/sources#frus-conferences-at-washington-and-casablanca-1941-1943-document-376-roosevelt-dinner-party-22-january-1943",
+  "title": "FRUS, Conferences at Washington and Casablanca 1941–1943, Document 376 — Roosevelt dinner party, 22 January 1943",
+  "subtitle": "US Department of State, Office of the Historian",
+  "terms": [
+   "FRUS, Conferences at Washington and Casablanca 1941–1943, Document 376 — Roosevelt dinner party, 22 January 1943",
+   "US Department of State, Office of the Historian",
+   "FRUS, The Conferences at Washington, 1941–1942, and Casablanca, 1943, Document 376. Section: Friday, January 22, 1943 (ch9subch9)."
+  ],
+  "folded": [
+   "frus, conferences at washington and casablanca 1941–1943, document 376 — roosevelt dinner party, 22 january 1943",
+   "us department of state, office of the historian"
+  ],
+  "phase": [],
+  "tier": "OFFICIAL",
+  "verification": null
+ },
+ {
+  "type": "source",
+  "slug": "hesperis-tamuda",
+  "url": "/sources#hesperis-tamuda",
+  "title": "Hespéris-Tamuda",
+  "subtitle": "Faculté des Lettres et des Sciences Humaines, Université Mohammed V, Rabat",
+  "terms": [
+   "Hespéris-Tamuda",
+   "Faculté des Lettres et des Sciences Humaines, Université Mohammed V, Rabat",
+   "Archive organised by decade, 1921–1929 through 2020–2025. Back runs also on Internet Archive (identifier `HespresTamuda`, arranged by year)."
+  ],
+  "folded": [
+   "hesperis-tamuda",
+   "faculte des lettres et des sciences humaines, universite mohammed v, rabat"
+  ],
+  "phase": [],
+  "tier": "ACADEMIC",
+  "verification": null
+ },
+ {
+  "type": "source",
+  "slug": "les-origines-sociales-et-culturelles-du-nationalisme-marocain-1830-1912",
+  "url": "/sources#les-origines-sociales-et-culturelles-du-nationalisme-marocain-1830-1912",
+  "title": "Les origines sociales et culturelles du nationalisme marocain, 1830–1912",
+  "subtitle": "Abdallah Laroui",
+  "terms": [
+   "Les origines sociales et culturelles du nationalisme marocain, 1830–1912",
+   "Abdallah Laroui",
+   "n/a — monograph, originally his doctoral thesis."
+  ],
+  "folded": [
+   "les origines sociales et culturelles du nationalisme marocain, 1830–1912",
+   "abdallah laroui"
+  ],
+  "phase": [],
+  "tier": "ACADEMIC",
+  "verification": null
+ },
+ {
+  "type": "source",
+  "slug": "les-sources-inedites-de-l-histoire-du-maroc-de-1530-a-1845",
+  "url": "/sources#les-sources-inedites-de-l-histoire-du-maroc-de-1530-a-1845",
+  "title": "Les sources inédites de l'histoire du Maroc de 1530 à 1845",
+  "subtitle": "Henry, comte de Castries (1850–1927); continued by Pierre de Cenival and Philippe de Cossé-Brissac",
+  "terms": [
+   "Les sources inédites de l'histoire du Maroc de 1530 à 1845",
+   "Henry, comte de Castries (1850–1927); continued by Pierre de Cenival and Philippe de Cossé-Brissac",
+   "Series organised by holding country: *Archives et bibliothèques de France*, *d'Angleterre*, *d'Espagne*, *des Pays-Bas*, *du Portugal*. Multiple tomes per series. Volumes verified present on Gallica (Pays-Bas t.1–6; Angleterre série 1 t.1–2; France t.1) and on Internet Archive."
+  ],
+  "folded": [
+   "les sources inedites de l'histoire du maroc de 1530 a 1845",
+   "henry, comte de castries (1850–1927); continued by pierre de cenival and philippe de cosse-brissac"
+  ],
+  "phase": [],
+  "tier": "PRIMARY_ARCHIVAL",
+  "verification": null
+ },
+ {
+  "type": "source",
+  "slug": "wandering-minstrels-and-epic-poetry-from-morocco-s-berber-highlands",
+  "url": "/sources#wandering-minstrels-and-epic-poetry-from-morocco-s-berber-highlands",
+  "title": "Wandering Minstrels and Epic Poetry from Morocco's Berber Highlands",
+  "subtitle": "Michael Peyron",
+  "terms": [
+   "Wandering Minstrels and Epic Poetry from Morocco's Berber Highlands",
+   "Michael Peyron",
+   "Fieldwork 2005–2007; earlier collections 1974–1988. Collaborators named: **Arsène Roux, Fatima Kadiri, Rkia Mountassir, Jeanine Drouin**."
+  ],
+  "folded": [
+   "wandering minstrels and epic poetry from morocco's berber highlands",
+   "michael peyron"
+  ],
+  "phase": [],
+  "tier": "ACADEMIC",
+  "verification": null
  },
  {
   "type": "archive",
@@ -2601,6 +3034,111 @@
   "phase": [],
   "country": "Morocco",
   "priority": "2 - structural"
+ },
+ {
+  "type": "archive",
+  "slug": "institut-royal-de-la-culture-amazighe-ircam",
+  "url": "/archives#institut-royal-de-la-culture-amazighe-ircam",
+  "title": "Institut Royal de la Culture Amazighe (IRCAM)",
+  "subtitle": "Rabat — Morocco",
+  "terms": [
+   "Institut Royal de la Culture Amazighe (IRCAM)",
+   "Rabat",
+   "Morocco",
+   "Publications programme and the journal Asinag. Collection of oral literature, lexicography and Amazigh history."
+  ],
+  "folded": [
+   "institut royal de la culture amazighe (ircam)",
+   "rabat",
+   "morocco"
+  ],
+  "phase": [],
+  "country": "Morocco",
+  "priority": "1 - decisive"
+ },
+ {
+  "type": "archive",
+  "slug": "association-marocaine-pour-la-recherche-historique-amrh",
+  "url": "/archives#association-marocaine-pour-la-recherche-historique-amrh",
+  "title": "Association Marocaine pour la Recherche Historique (AMRH)",
+  "subtitle": "Rabat — Morocco",
+  "terms": [
+   "Association Marocaine pour la Recherche Historique (AMRH)",
+   "Rabat",
+   "Morocco",
+   "Learned society; publications and communiqués on Moroccan historical research."
+  ],
+  "folded": [
+   "association marocaine pour la recherche historique (amrh)",
+   "rabat",
+   "morocco"
+  ],
+  "phase": [],
+  "country": "Morocco",
+  "priority": "3 - supporting"
+ },
+ {
+  "type": "archive",
+  "slug": "hesperis-tamuda-universite-mohammed-v",
+  "url": "/archives#hesperis-tamuda-universite-mohammed-v",
+  "title": "Hespéris-Tamuda — Université Mohammed V",
+  "subtitle": "Rabat — Morocco",
+  "terms": [
+   "Hespéris-Tamuda — Université Mohammed V",
+   "Rabat",
+   "Morocco",
+   "Journal archive by decade, 1921–2025. Predecessors: Hespéris (from 1921, Institut des Hautes Études Marocaines) and Tamuda (Spanish zone), merged 1960."
+  ],
+  "folded": [
+   "hesperis-tamuda — universite mohammed v",
+   "rabat",
+   "morocco"
+  ],
+  "phase": [],
+  "country": "Morocco",
+  "priority": "1 - decisive"
+ },
+ {
+  "type": "archive",
+  "slug": "al-maktaba-al-shamela",
+  "url": "/archives#al-maktaba-al-shamela",
+  "title": "al-Maktaba al-Shamela",
+  "subtitle": "Online — International",
+  "terms": [
+   "al-Maktaba al-Shamela",
+   "Online",
+   "International",
+   "Digital library of Arabic texts, browsable by book, volume, chapter and printed page."
+  ],
+  "folded": [
+   "al-maktaba al-shamela",
+   "online",
+   "international"
+  ],
+  "phase": [],
+  "country": "International",
+  "priority": "1 - decisive"
+ },
+ {
+  "type": "archive",
+  "slug": "haut-commissariat-aux-anciens-resistants-et-anciens-membres-de-l-armee-de-liberation-hcar",
+  "url": "/archives#haut-commissariat-aux-anciens-resistants-et-anciens-membres-de-l-armee-de-liberation-hcar",
+  "title": "Haut Commissariat aux Anciens Résistants et Anciens Membres de l'Armée de Libération (HCAR)",
+  "subtitle": "Rabat — Morocco",
+  "terms": [
+   "Haut Commissariat aux Anciens Résistants et Anciens Membres de l'Armée de Libération (HCAR)",
+   "Rabat",
+   "Morocco",
+   "Cahiers des Documents Historiques de la Résistance et de la Libération — thematic volumes. Verified subjects include the Battle of El Herri (13 Nov 1914), Moha ou Hammou Zayani, Zaïd Ou Hmad (1934–1936), Sidi Mohammed ben Youssef, and the Manifesto of 11 January 1944."
+  ],
+  "folded": [
+   "haut commissariat aux anciens resistants et anciens membres de l'armee de liberation (hcar)",
+   "rabat",
+   "morocco"
+  ],
+  "phase": [],
+  "country": "Morocco",
+  "priority": "1 - decisive"
  },
  {
   "type": "place",

@@ -16,10 +16,20 @@ const sorted = [...sources].sort(
 const facets = [
   { key: 'tier', label: 'Tier', values: TIER_ORDER.filter((t) => sources.some((s) => s.tier === t)) },
   { key: 'language', label: 'Language', values: [...new Set(sources.flatMap((s) => s.language))].sort() },
-  { key: 'verification', label: 'Verification', values: [...new Set(sources.map((s) => s.verification))] },
+  {
+    key: 'verification',
+    label: 'Verification',
+    // Sources with no recorded verification get their own facet value rather
+    // than being folded into an existing one or dropped from the filter.
+    values: [
+      ...new Set(sources.map((s) => s.verification).filter(Boolean) as string[]),
+      ...(sources.some((s) => s.verification == null) ? ['Not recorded'] : []),
+    ],
+  },
 ];
 
 const unverified = sources.filter((s) => s.verification === 'NOT YET VERIFIED').length;
+const unrecorded = sources.filter((s) => s.verification == null).length;
 ---
 
 <Base title="Sources" description={`${sources.length} sources, tiered and bias-noted.`}>
@@ -28,7 +38,16 @@ const unverified = sources.filter((s) => s.verification === 'NOT YET VERIFIED').
     <p class="ihead__lede prose">
       {sources.length} sources, each with its tier, its bias noted, and its archival
       reference either verbatim or marked unverified. {unverified} currently carry the
-      <span class="ref-token ref-token--unverified">NOT YET VERIFIED</span> flag.
+      <span class="ref-token ref-token--unverified">NOT YET VERIFIED</span> flag
+      {
+        unrecorded > 0 && (
+          <>
+            , and <strong>{unrecorded}</strong> carry no verification status at all — a
+            judgement the corpus has not yet made, shown as its own state rather than
+            folded into either of the others
+          </>
+        )
+      }.
     </p>
   </header>
 
@@ -42,7 +61,7 @@ const unverified = sources.filter((s) => s.verification === 'NOT YET VERIFIED').
           id={s.slug}
           data-tier={s.tier}
           data-language={s.language.join('|')}
-          data-verification={s.verification}
+          data-verification={s.verification ?? 'Not recorded'}
           data-search={[s.title, s.author, s.publisher, s.covers].filter(Boolean).join(' ').toLowerCase()}
         >
           <div class="sitem__head">

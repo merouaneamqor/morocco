@@ -1,0 +1,51 @@
+{
+  "_comment": "Contested quantities that must never appear as a single unqualified number. Seed data for R03. Each carries `context` terms: a bare number is only a finding when the surrounding text is actually about that quantity. Without this, 2,000 matches three different quantities at once and the rule becomes noise — and a noisy rule gets disabled, and a disabled rule guards nothing.",
+  "quantities": [
+    {
+      "id": "annual-spanish-dead",
+      "label": "Spanish dead, Annual 1921",
+      "values": [7875, 8180, 8668, 13363],
+      "low": 7875,
+      "high": 13363,
+      "context": ["annual", "picasso", "spanish dead", "monte arruit", "silvestre", "1921"],
+      "spread": "definitional — whether Moroccan troops in Spanish service are counted, and whether the count runs to Monte Arruit or through the whole campaign"
+    },
+    {
+      "id": "casablanca-1907-dead",
+      "label": "Casablanca 1907 civilian dead",
+      "values": [600, 1500, 3000],
+      "low": 600,
+      "high": 3000,
+      "context": ["casablanca", "chaouia", "bombardment", "1907"],
+      "spread": "French estimates 600-1,500; German 2,000-3,000; Moroccan accounts higher"
+    },
+    {
+      "id": "casablanca-1947-dead",
+      "label": "Casablanca massacre 1947 dead",
+      "values": [180],
+      "low": 180,
+      "high": 2000,
+      "context": ["1947", "tirailleurs", "derb kebir", "tangier speech", "massacre"],
+      "spread": "unresolved — a tenfold range, 180 to over 2,000"
+    },
+    {
+      "id": "rif-1958-dead",
+      "label": "Rifian dead, 1958-59",
+      "values": [8000],
+      "low": 2000,
+      "high": 8000,
+      "context": ["1958", "1959", "rif revolt", "beni hadifa", "oufkir", "royal armed forces"],
+      "spread": "unresolved; c. 1,000 army dead is a separate figure"
+    },
+    {
+      "id": "el-herri-zaian-dead",
+      "label": "Zaian dead, El Herri 1914",
+      "values": [182],
+      "low": 182,
+      "high": null,
+      "floorOnly": true,
+      "context": ["el herri", "elhri", "zaian", "khenifra", "khénifra", "laverdure", "1914", "obelisk", "monument"],
+      "spread": "a French battlefield count made by the losing side; a floor, not a total. The 1991 Moroccan monument repeats the French figure rather than corroborating it."
+    }
+  ]
+}

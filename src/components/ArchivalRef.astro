@@ -19,13 +19,21 @@
  */
 interface Props {
   reference: string;
+  /**
+   * `null` means the corpus records no verification status for this reference.
+   * That is a third state, distinct from both verified and NOT YET VERIFIED:
+   * "not yet verified" is a judgement the corpus has made, "not recorded" is a
+   * judgement it has not made. Collapsing the two would either invent a
+   * verdict or hide a gap.
+   */
   verification:
     | 'Consulted directly'
     | 'Catalogue verified'
     | 'Cited by named scholar'
     | 'Described by named scholar'
     | 'Reported'
-    | 'NOT YET VERIFIED';
+    | 'NOT YET VERIFIED'
+    | null;
   /** Granularity of the reference. */
   scope?: 'document' | 'series' | 'fonds';
   /** What consulting it would settle. */
@@ -48,6 +56,7 @@ const {
 } = Astro.props;
 
 const unverified = verification === 'NOT YET VERIFIED';
+const unrecorded = verification == null;
 const SCOPE_LABEL: Record<string, string> = {
   document: 'Document-level',
   series: 'Series-level',
@@ -56,12 +65,23 @@ const SCOPE_LABEL: Record<string, string> = {
 ---
 
 <div
-  class:list={['archival-ref', unverified && 'archival-ref--unverified', className]}
-  data-verification={verification}
+  class:list={[
+    'archival-ref',
+    unverified && 'archival-ref--unverified',
+    unrecorded && 'archival-ref--unrecorded',
+    className,
+  ]}
+  data-verification={verification ?? 'NOT RECORDED'}
 >
   <div class="archival-ref__head">
-    <span class:list={['archival-ref__chip', unverified && 'archival-ref__chip--unverified']}>
-      {unverified ? 'NOT YET VERIFIED' : verification}
+    <span
+      class:list={[
+        'archival-ref__chip',
+        unverified && 'archival-ref__chip--unverified',
+        unrecorded && 'archival-ref__chip--unrecorded',
+      ]}
+    >
+      {unverified ? 'NOT YET VERIFIED' : unrecorded ? 'VERIFICATION NOT RECORDED' : verification}
     </span>
     {scope && <span class="archival-ref__scope">{SCOPE_LABEL[scope] ?? scope}</span>}
   </div>
@@ -69,7 +89,7 @@ const SCOPE_LABEL: Record<string, string> = {
   {/* Never truncated, never ellipsised — the whole string or nothing. */}
   <p class="archival-ref__ref">
     {
-      catalogueUrl && !unverified ? (
+      catalogueUrl && !unverified && !unrecorded ? (
         <a href={catalogueUrl} rel="noopener">
           {reference}
         </a>
@@ -86,6 +106,16 @@ const SCOPE_LABEL: Record<string, string> = {
         {request
           ? `Request: ${request}`
           : 'No reference number here has been reconstructed from memory or inferred.'}
+      </p>
+    )
+  }
+
+  {
+    unrecorded && (
+      <p class="archival-ref__request">
+        <strong>The corpus records no verification status for this reference.</strong>{' '}
+        That is not the same as unverified — it is a judgement the corpus has not yet made,
+        and the site will not make it on the corpus's behalf.
       </p>
     )
   }
@@ -194,9 +224,33 @@ const SCOPE_LABEL: Record<string, string> = {
     color: var(--ink);
   }
 
+  /* ------------------------------------------------------- unrecorded */
+  /* Neutral, not alarming. An absent judgement is a gap in the record, not a
+     negative finding — so it reads as muted and incomplete rather than as a
+     warning, which is what NOT YET VERIFIED is. */
+  .archival-ref--unrecorded {
+    background: transparent;
+    border: 1px dotted var(--baseline);
+    border-left-width: 3px;
+  }
+
+  .archival-ref--unrecorded .archival-ref__chip {
+    background: transparent;
+    color: var(--ink-muted);
+    border-color: var(--baseline);
+    border-style: dotted;
+  }
+
+  .archival-ref--unrecorded .archival-ref__ref {
+    color: var(--ink-secondary);
+  }
+
   @media (forced-colors: active) {
     .archival-ref--unverified {
       border-style: dashed;
+    }
+    .archival-ref--unrecorded {
+      border-style: dotted;
     }
   }
 </style>
