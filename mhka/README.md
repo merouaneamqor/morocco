@@ -37,10 +37,11 @@ mhka aliases <name>            # resolve a name across transliterations
 mhka stale [--days 90]         # records not reviewed recently
 ```
 
-Exit code is `1` when any error-severity finding is present, so `validate` and
-`diff` can gate a scheduled corpus job. Pass `--exit-zero` to report findings
-without gating — that is for smoke-testing that the tool runs, and it is what
-CI uses.
+Exit code is `1` when any error-severity finding is present, so `validate`,
+`diff` and `report` can gate a scheduled corpus job. All three take
+`--exit-zero` to report findings without gating — that is for smoke-testing
+that the tool runs, and it is what CI uses. It forgives findings, never
+failures: a missing snapshot or a rule that throws still exits `1`.
 
 **CI does not gate on corpus findings, deliberately.** `mhka` audits a living
 base that an agent writes to every morning, so findings are its normal output
@@ -178,7 +179,7 @@ corpus has not made, the second is one it has.
 ## Tests
 
 ```bash
-npm test          # 81 tests
+npm test          # 82 tests
 npm run verify    # build + test
 ```
 

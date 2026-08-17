@@ -6,7 +6,7 @@
  * research agent acts on the report.
  */
 
-import { Command } from 'commander';
+import { Command, Option } from 'commander';
 import { config as loadEnv } from 'dotenv';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
@@ -68,11 +68,7 @@ program
   .option('--snapshot <file>', 'Validate a specific snapshot instead of the latest')
   .option('--json', 'Machine-readable output')
   .option('--markdown', 'Markdown output')
-  .option(
-    '--exit-zero',
-    'Report findings but exit 0. For smoke-testing that the tool runs against ' +
-      'real data; NOT for gating a corpus, where a finding is the point.'
-  )
+  .addOption(exitZeroOption())
   .action((opts) => {
     const config = loadConfig(ROOT);
     try {
@@ -104,6 +100,7 @@ program
   .option('--to <file>', 'Explicit later snapshot')
   .option('--json', 'Machine-readable output')
   .option('--markdown', 'Markdown output')
+  .addOption(exitZeroOption())
   .action((opts) => {
     const config = loadConfig(ROOT);
     try {
@@ -136,7 +133,7 @@ program
       console.log(
         opts.json ? renderJson(input) : opts.markdown ? renderMarkdown(input) : renderTerminal(input)
       );
-      process.exitCode = exitCodeFor([...findings, ...result.suspicious]);
+      process.exitCode = opts.exitZero ? 0 : exitCodeFor([...findings, ...result.suspicious]);
     } catch (e) {
       console.error((e as Error).message);
       process.exitCode = 1;
@@ -151,6 +148,7 @@ program
   .option('--markdown', 'Markdown, ready to paste as a Research-log appendix')
   .option('--json', 'Machine-readable output')
   .option('--out <file>', 'Write to reports/<file> instead of stdout')
+  .addOption(exitZeroOption())
   .action((opts) => {
     const config = loadConfig(ROOT);
     try {
@@ -183,7 +181,9 @@ program
       } else {
         console.log(text);
       }
-      process.exitCode = exitCodeFor([...findings, ...(diff?.suspicious ?? [])]);
+      process.exitCode = opts.exitZero
+        ? 0
+        : exitCodeFor([...findings, ...(diff?.suspicious ?? [])]);
     } catch (e) {
       console.error((e as Error).message);
       process.exitCode = 1;
@@ -283,6 +283,22 @@ program
 
 function exitCodeFor(findings: Finding[]): number {
   return findings.some((f) => f.severity === 'error') ? 1 : 0;
+}
+
+/**
+ * Shared so every command that reports findings can be run without gating.
+ *
+ * Defined once rather than per-command because the first version of this only
+ * reached `validate`, and CI then failed on the `report` step instead — the
+ * whole point is that a caller exercising the tool never trips over corpus
+ * findings, and that is a property of the tool, not of one subcommand.
+ */
+function exitZeroOption(): Option {
+  return new Option(
+    '--exit-zero',
+    'Report findings but exit 0. For smoke-testing that the tool runs against ' +
+      'real data; NOT for gating a corpus, where a finding is the point.'
+  );
 }
 
 program.parse();

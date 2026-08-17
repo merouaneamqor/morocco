@@ -63,8 +63,17 @@ describe('validate exit codes', () => {
   });
 
   it.skipIf(!hasSnapshot)('report --markdown renders for the CI step summary', () => {
-    const { out } = run(['report', '--markdown']);
+    const { out } = run(['report', '--markdown', '--exit-zero']);
     expect(out).toContain('# Integrity report');
     expect(out).toContain('## Corpus health');
+  });
+
+  // `report` gates on findings exactly as `validate` does, and CI pipes it
+  // into the step summary under `bash -e`. The first version of this fix only
+  // reached `validate`, so the job kept failing one step later. Every command
+  // CI invokes needs the flag, and each one is asserted here.
+  it.skipIf(!hasSnapshot)('report gates by default and honours --exit-zero', () => {
+    expect([0, 1]).toContain(run(['report']).code);
+    expect(run(['report', '--exit-zero']).code).toBe(0);
   });
 });
