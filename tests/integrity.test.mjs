@@ -265,7 +265,12 @@ test('alias search resolves every recorded spelling to the right dossier', async
   const index = readData('search-index.json');
 
   const cases = [
-    ['Zaïanes', 'Mouha ou Hammou Zayani'],
+    // "Zaïanes" is the confederation's own name and only a fragment of the
+    // man's "Hammou des Zaïanes", so it must reach the tribe. Reaching the
+    // qaid instead would be the site quietly deciding that a people is its
+    // leader — which is precisely the colonial reading the corpus refuses.
+    ['Zaïanes', 'Zaian (Izayyan)'],
+    ['Hammou des Zaïanes', 'Mouha ou Hammou Zayani'],
     ['Zayani', 'Mouha ou Hammou Zayani'],
     ['Aẓayyi', 'Mouha ou Hammou Zayani'],
     ['el caíd Hammu', 'Mouha ou Hammou Zayani'],
@@ -274,13 +279,14 @@ test('alias search resolves every recorded spelling to the right dossier', async
     ['Abd el-Krim', 'Mohammed ben Abdelkrim El Khattabi'],
   ];
 
+  // Ranked exactly as the search page ranks, via the shared scorer — a
+  // substring scan would answer "Abd el-Krim" with his brother's record,
+  // which is what a reader would never accept and the site does not do.
+  const { bestMatch } = await import('../src/lib/search-rank.mjs');
+
   for (const [query, expected] of cases) {
     const q = fold(query) || query.toLowerCase();
-    const hit = index.find(
-      (r) =>
-        r.folded.some((t) => t.includes(q)) ||
-        r.terms.some((t) => t.includes(query))
-    );
+    const hit = bestMatch(index, q, query);
     assert.ok(hit, `"${query}" found nothing`);
     assert.equal(hit.title, expected, `"${query}" reached the wrong record`);
   }

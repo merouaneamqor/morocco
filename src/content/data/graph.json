@@ -1,13 +1,293 @@
 {
  "nodes": [
   {
-   "id": "person:mouha-ou-hammou-zayani",
-   "slug": "mouha-ou-hammou-zayani",
+   "id": "person:kouera-el-ouafi",
+   "slug": "kouera-el-ouafi",
    "kind": "person",
-   "label": "Mouha ou Hammou Zayani",
+   "label": "Kouera el-Ouafi",
+   "group": "other",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "IX 1961-1999"
+   ],
+   "category": [],
+   "degree": 1
+  },
+  {
+   "id": "person:mohammed-amekrane",
+   "slug": "mohammed-amekrane",
+   "kind": "person",
+   "label": "Mohammed Amekrane",
+   "group": "other",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "IX 1961-1999"
+   ],
+   "category": [],
+   "degree": 1
+  },
+  {
+   "id": "person:mohammed-kabbaj-pilot",
+   "slug": "mohammed-kabbaj-pilot",
+   "kind": "person",
+   "label": "Mohammed Kabbaj (pilot)",
+   "group": "other",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "IX 1961-1999"
+   ],
+   "category": [],
+   "degree": 0
+  },
+  {
+   "id": "person:mohamed-medbouh",
+   "slug": "mohamed-medbouh",
+   "kind": "person",
+   "label": "Mohamed Medbouh",
+   "group": "other",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "IX 1961-1999"
+   ],
+   "category": [],
+   "degree": 0
+  },
+  {
+   "id": "person:germain-ayache",
+   "slug": "germain-ayache",
+   "kind": "person",
+   "label": "Germain Ayache",
+   "group": "other",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "IX 1961-1999"
+   ],
+   "category": [
+    "Other foreign"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:zaid-ou-hmad",
+   "slug": "zaid-ou-hmad",
+   "kind": "person",
+   "label": "Zaïd Ou Hmad",
    "group": "moroccan",
    "shape": "circle",
-   "depth": "Full dossier",
+   "depth": "Identified - not yet researched",
+   "phase": [
+    "V 1921-1934",
+    "VI 1934-1944"
+   ],
+   "category": [
+    "Armed resistance",
+    "Tribal leader"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:abdallah-laroui",
+   "slug": "abdallah-laroui",
+   "kind": "person",
+   "label": "Abdallah Laroui",
+   "group": "other",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "IX 1961-1999",
+    "X 1999-present"
+   ],
+   "category": [
+    "Other foreign"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:ahmad-ibn-khalid-al-nasiri",
+   "slug": "ahmad-ibn-khalid-al-nasiri",
+   "kind": "person",
+   "label": "Ahmad ibn Khalid al-Nasiri",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Substantial",
+   "phase": [
+    "II 1830-1900"
+   ],
+   "category": [
+    "Religious leader",
+    "Makhzen official"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:mohammed-sellam-ameziane",
+   "slug": "mohammed-sellam-ameziane",
+   "kind": "person",
+   "label": "Mohammed Sellam Ameziane",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "VII 1944-1956",
+    "VIII 1956-1961"
+   ],
+   "category": [
+    "Armed resistance",
+    "Nationalist"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:samuel-gummere",
+   "slug": "samuel-gummere",
+   "kind": "person",
+   "label": "Samuel Gummere",
+   "group": "other",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "III 1900-1912"
+   ],
+   "category": [
+    "Diplomat",
+    "Other foreign"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:taher-bey",
+   "slug": "taher-bey",
+   "kind": "person",
+   "label": "Taher Bey",
+   "group": "other",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "III 1900-1912",
+    "IV 1912-1921"
+   ],
+   "category": [
+    "Other foreign",
+    "Diplomat"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:salah-sharif-at-tunisi",
+   "slug": "salah-sharif-at-tunisi",
+   "kind": "person",
+   "label": "Salah Sharif at-Tunisi",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "IV 1912-1921"
+   ],
+   "category": [
+    "Other foreign",
+    "Religious leader"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:emir-abd-el-malek",
+   "slug": "emir-abd-el-malek",
+   "kind": "person",
+   "label": "Emir Abd el-Malek",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Substantial",
+   "phase": [
+    "IV 1912-1921",
+    "V 1921-1934"
+   ],
+   "category": [
+    "Armed resistance",
+    "Other foreign"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:harry-maclean",
+   "slug": "harry-maclean",
+   "kind": "person",
+   "label": "Harry Maclean",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "II 1830-1900",
+    "III 1900-1912"
+   ],
+   "category": [
+    "Other foreign",
+    "Makhzen official"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "person:hugo-stoltzenberg",
+   "slug": "hugo-stoltzenberg",
+   "kind": "person",
+   "label": "Hugo Stoltzenberg",
+   "group": "other",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "V 1921-1934"
+   ],
+   "category": [
+    "Other foreign"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "person:shakib-arslan",
+   "slug": "shakib-arslan",
+   "kind": "person",
+   "label": "Shakib Arslan",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "V 1921-1934",
+    "VI 1934-1944"
+   ],
+   "category": [
+    "Other foreign",
+    "Nationalist"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:juan-picasso-gonzalez",
+   "slug": "juan-picasso-gonzalez",
+   "kind": "person",
+   "label": "Juan Picasso González",
+   "group": "spanish",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "V 1921-1934"
+   ],
+   "category": [
+    "Spanish military"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:si-madani-el-glaoui",
+   "slug": "si-madani-el-glaoui",
+   "kind": "person",
+   "label": "Si Madani El Glaoui",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
    "phase": [
     "II 1830-1900",
     "III 1900-1912",
@@ -15,10 +295,391 @@
    ],
    "category": [
     "Tribal leader",
-    "Armed resistance",
+    "Makhzen official",
+    "Collaborating notable"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "person:maurice-le-glay",
+   "slug": "maurice-le-glay",
+   "kind": "person",
+   "label": "Maurice Le Glay",
+   "group": "french",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "IV 1912-1921",
+    "V 1921-1934"
+   ],
+   "category": [
+    "French civil"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:damaso-berenguer",
+   "slug": "damaso-berenguer",
+   "kind": "person",
+   "label": "Dámaso Berenguer",
+   "group": "spanish",
+   "shape": "circle",
+   "depth": "Substantial",
+   "phase": [
+    "IV 1912-1921",
+    "V 1921-1934"
+   ],
+   "category": [
+    "Spanish military",
+    "Spanish civil"
+   ],
+   "degree": 2
+  },
+  {
+   "id": "person:francisco-franco",
+   "slug": "francisco-franco",
+   "kind": "person",
+   "label": "Francisco Franco",
+   "group": "spanish",
+   "shape": "circle",
+   "depth": "Substantial",
+   "phase": [
+    "IV 1912-1921",
+    "V 1921-1934",
+    "VI 1934-1944",
+    "VII 1944-1956"
+   ],
+   "category": [
+    "Spanish military",
+    "Spanish civil"
+   ],
+   "degree": 2
+  },
+  {
+   "id": "person:miguel-primo-de-rivera",
+   "slug": "miguel-primo-de-rivera",
+   "kind": "person",
+   "label": "Miguel Primo de Rivera",
+   "group": "spanish",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "V 1921-1934"
+   ],
+   "category": [
+    "Spanish military",
+    "Spanish civil"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:alfonso-xiii",
+   "slug": "alfonso-xiii",
+   "kind": "person",
+   "label": "Alfonso XIII",
+   "group": "spanish",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "III 1900-1912",
+    "IV 1912-1921",
+    "V 1921-1934"
+   ],
+   "category": [
+    "Spanish civil"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:jose-sanjurjo",
+   "slug": "jose-sanjurjo",
+   "kind": "person",
+   "label": "José Sanjurjo",
+   "group": "spanish",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "V 1921-1934",
+    "VI 1934-1944"
+   ],
+   "category": [
+    "Spanish military"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:manuel-fernandez-silvestre",
+   "slug": "manuel-fernandez-silvestre",
+   "kind": "person",
+   "label": "Manuel Fernández Silvestre",
+   "group": "spanish",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "III 1900-1912",
+    "IV 1912-1921"
+   ],
+   "category": [
+    "Spanish military"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "person:alphonse-juin",
+   "slug": "alphonse-juin",
+   "kind": "person",
+   "label": "Alphonse Juin",
+   "group": "french",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "VII 1944-1956"
+   ],
+   "category": [
+    "French military",
+    "French civil"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:philippe-petain",
+   "slug": "philippe-petain",
+   "kind": "person",
+   "label": "Philippe Pétain",
+   "group": "french",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "V 1921-1934",
+    "VI 1934-1944"
+   ],
+   "category": [
+    "French military"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "person:henri-gouraud",
+   "slug": "henri-gouraud",
+   "kind": "person",
+   "label": "Henri Gouraud",
+   "group": "french",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "III 1900-1912",
+    "IV 1912-1921"
+   ],
+   "category": [
+    "French military"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:augustin-guillaume",
+   "slug": "augustin-guillaume",
+   "kind": "person",
+   "label": "Augustin Guillaume",
+   "group": "french",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "VII 1944-1956"
+   ],
+   "category": [
+    "French military",
+    "French civil"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "person:eugene-regnault",
+   "slug": "eugene-regnault",
+   "kind": "person",
+   "label": "Eugène Regnault",
+   "group": "french",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "III 1900-1912"
+   ],
+   "category": [
+    "Diplomat",
+    "French civil"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "person:charles-mangin",
+   "slug": "charles-mangin",
+   "kind": "person",
+   "label": "Charles Mangin",
+   "group": "french",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "III 1900-1912",
+    "IV 1912-1921"
+   ],
+   "category": [
+    "French military"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:paul-prosper-henrys",
+   "slug": "paul-prosper-henrys",
+   "kind": "person",
+   "label": "Paul Prosper Henrys",
+   "group": "french",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "IV 1912-1921"
+   ],
+   "category": [
+    "French military"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:joseph-francois-poeymirau",
+   "slug": "joseph-francois-poeymirau",
+   "kind": "person",
+   "label": "Joseph-François Poeymirau",
+   "group": "french",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "IV 1912-1921"
+   ],
+   "category": [
+    "French military"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "person:joseph-gallieni",
+   "slug": "joseph-gallieni",
+   "kind": "person",
+   "label": "Joseph Gallieni",
+   "group": "french",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "II 1830-1900",
+    "III 1900-1912",
+    "IV 1912-1921"
+   ],
+   "category": [
+    "French military"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:rene-laverdure",
+   "slug": "rene-laverdure",
+   "kind": "person",
+   "label": "René Laverdure",
+   "group": "french",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "IV 1912-1921"
+   ],
+   "category": [
+    "French military"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "person:mohamed-oufkir",
+   "slug": "mohamed-oufkir",
+   "kind": "person",
+   "label": "Mohamed Oufkir",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Substantial",
+   "phase": [
+    "VII 1944-1956",
+    "VIII 1956-1961",
+    "IX 1961-1999"
+   ],
+   "category": [
+    "French military",
     "Makhzen official"
    ],
-   "degree": 5
+   "degree": 3
+  },
+  {
+   "id": "person:abdelhadi-boutaleb",
+   "slug": "abdelhadi-boutaleb",
+   "kind": "person",
+   "label": "Abdelhadi Boutaleb",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "VII 1944-1956",
+    "VIII 1956-1961",
+    "IX 1961-1999"
+   ],
+   "category": [
+    "Makhzen official",
+    "Nationalist",
+    "Diplomat"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:ahmed-bahnini",
+   "slug": "ahmed-bahnini",
+   "kind": "person",
+   "label": "Ahmed Bahnini",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "VIII 1956-1961",
+    "IX 1961-1999"
+   ],
+   "category": [
+    "Makhzen official"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:ahmed-dlimi",
+   "slug": "ahmed-dlimi",
+   "kind": "person",
+   "label": "Ahmed Dlimi",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "IX 1961-1999"
+   ],
+   "category": [
+    "Makhzen official"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:driss-basri",
+   "slug": "driss-basri",
+   "kind": "person",
+   "label": "Driss Basri",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "IX 1961-1999",
+    "X 1999-present"
+   ],
+   "category": [
+    "Makhzen official"
+   ],
+   "degree": 0
   },
   {
    "id": "person:abdelkhalek-torres",
@@ -40,36 +701,172 @@
    "degree": 0
   },
   {
-   "id": "person:moulay-hassan-i",
-   "slug": "moulay-hassan-i",
+   "id": "person:abdallah-ibrahim",
+   "slug": "abdallah-ibrahim",
    "kind": "person",
-   "label": "Moulay Hassan I",
+   "label": "Abdallah Ibrahim",
    "group": "moroccan",
    "shape": "circle",
-   "depth": "Full dossier",
+   "depth": "Stub",
    "phase": [
-    "II 1830-1900"
+    "VII 1944-1956",
+    "VIII 1956-1961"
    ],
    "category": [
-    "Sultan / monarch"
+    "Nationalist"
    ],
-   "degree": 3
+   "degree": 0
   },
   {
-   "id": "person:emir-abd-el-malek",
-   "slug": "emir-abd-el-malek",
+   "id": "person:m-barek-bekkay",
+   "slug": "m-barek-bekkay",
    "kind": "person",
-   "label": "Emir Abd el-Malek",
+   "label": "M'barek Bekkay",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "VI 1934-1944",
+    "VII 1944-1956",
+    "VIII 1956-1961"
+   ],
+   "category": [
+    "Nationalist",
+    "French military",
+    "Makhzen official"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:mohamed-lyazidi",
+   "slug": "mohamed-lyazidi",
+   "kind": "person",
+   "label": "Mohamed Lyazidi",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "V 1921-1934",
+    "VI 1934-1944",
+    "VII 1944-1956"
+   ],
+   "category": [
+    "Nationalist"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:abderrahmane-youssoufi",
+   "slug": "abderrahmane-youssoufi",
+   "kind": "person",
+   "label": "Abderrahmane Youssoufi",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "VII 1944-1956",
+    "VIII 1956-1961",
+    "IX 1961-1999",
+    "X 1999-present"
+   ],
+   "category": [
+    "Nationalist"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:abderrahim-bouabid",
+   "slug": "abderrahim-bouabid",
+   "kind": "person",
+   "label": "Abderrahim Bouabid",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "VII 1944-1956",
+    "VIII 1956-1961",
+    "IX 1961-1999"
+   ],
+   "category": [
+    "Nationalist"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:ahmed-balafrej",
+   "slug": "ahmed-balafrej",
+   "kind": "person",
+   "label": "Ahmed Balafrej",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "V 1921-1934",
+    "VI 1934-1944",
+    "VII 1944-1956",
+    "VIII 1956-1961"
+   ],
+   "category": [
+    "Nationalist",
+    "Diplomat"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:mohamed-hassan-ouazzani",
+   "slug": "mohamed-hassan-ouazzani",
+   "kind": "person",
+   "label": "Mohamed Hassan Ouazzani",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "V 1921-1934",
+    "VI 1934-1944",
+    "VII 1944-1956",
+    "IX 1961-1999"
+   ],
+   "category": [
+    "Nationalist"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:mehdi-ben-barka",
+   "slug": "mehdi-ben-barka",
+   "kind": "person",
+   "label": "Mehdi Ben Barka",
    "group": "moroccan",
    "shape": "circle",
    "depth": "Substantial",
    "phase": [
-    "IV 1912-1921",
-    "V 1921-1934"
+    "VII 1944-1956",
+    "VIII 1956-1961",
+    "IX 1961-1999"
    ],
    "category": [
-    "Armed resistance",
-    "Other foreign"
+    "Nationalist"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "person:allal-el-fassi",
+   "slug": "allal-el-fassi",
+   "kind": "person",
+   "label": "Allal El Fassi",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "V 1921-1934",
+    "VI 1934-1944",
+    "VII 1944-1956",
+    "VIII 1956-1961",
+    "IX 1961-1999"
+   ],
+   "category": [
+    "Nationalist",
+    "Religious leader"
    ],
    "degree": 0
   },
@@ -110,129 +907,6 @@
    "degree": 0
   },
   {
-   "id": "person:abderrahim-bouabid",
-   "slug": "abderrahim-bouabid",
-   "kind": "person",
-   "label": "Abderrahim Bouabid",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "VII 1944-1956",
-    "VIII 1956-1961",
-    "IX 1961-1999"
-   ],
-   "category": [
-    "Nationalist"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:hassan-ii",
-   "slug": "hassan-ii",
-   "kind": "person",
-   "label": "Hassan II",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "VIII 1956-1961",
-    "IX 1961-1999"
-   ],
-   "category": [
-    "Sultan / monarch"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:alphonse-juin",
-   "slug": "alphonse-juin",
-   "kind": "person",
-   "label": "Alphonse Juin",
-   "group": "french",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "VII 1944-1956"
-   ],
-   "category": [
-    "French military",
-    "French civil"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:mohamed-oufkir",
-   "slug": "mohamed-oufkir",
-   "kind": "person",
-   "label": "Mohamed Oufkir",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "VII 1944-1956",
-    "VIII 1956-1961",
-    "IX 1961-1999"
-   ],
-   "category": [
-    "French military",
-    "Makhzen official"
-   ],
-   "degree": 1
-  },
-  {
-   "id": "person:charles-mangin",
-   "slug": "charles-mangin",
-   "kind": "person",
-   "label": "Charles Mangin",
-   "group": "french",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "III 1900-1912",
-    "IV 1912-1921"
-   ],
-   "category": [
-    "French military"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:harry-maclean",
-   "slug": "harry-maclean",
-   "kind": "person",
-   "label": "Harry Maclean",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "II 1830-1900",
-    "III 1900-1912"
-   ],
-   "category": [
-    "Other foreign",
-    "Makhzen official"
-   ],
-   "degree": 1
-  },
-  {
-   "id": "person:samuel-gummere",
-   "slug": "samuel-gummere",
-   "kind": "person",
-   "label": "Samuel Gummere",
-   "group": "other",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "III 1900-1912"
-   ],
-   "category": [
-    "Diplomat",
-    "Other foreign"
-   ],
-   "degree": 0
-  },
-  {
    "id": "person:bou-hamara",
    "slug": "bou-hamara",
    "kind": "person",
@@ -250,43 +924,37 @@
    "degree": 1
   },
   {
-   "id": "person:mohammed-ben-abdelkrim-el-khattabi",
-   "slug": "mohammed-ben-abdelkrim-el-khattabi",
+   "id": "person:sidi-mohamed-ben-hammou-identification-unresolved",
+   "slug": "sidi-mohamed-ben-hammou-identification-unresolved",
    "kind": "person",
-   "label": "Mohammed ben Abdelkrim El Khattabi",
+   "label": "Sidi Mohamed Ben Hammou — identification unresolved",
    "group": "moroccan",
    "shape": "circle",
-   "depth": "Full dossier",
+   "depth": "Identified - not yet researched",
    "phase": [
-    "III 1900-1912",
-    "IV 1912-1921",
-    "V 1921-1934",
-    "VI 1934-1944",
-    "VII 1944-1956",
-    "VIII 1956-1961"
+    "IV 1912-1921"
    ],
    "category": [
-    "Armed resistance",
-    "Religious leader",
-    "Nationalist"
+    "Tribal leader"
    ],
-   "degree": 2
+   "degree": 0
   },
   {
-   "id": "person:taher-bey",
-   "slug": "taher-bey",
+   "id": "person:moha-ou-said",
+   "slug": "moha-ou-said",
    "kind": "person",
-   "label": "Taher Bey",
-   "group": "other",
+   "label": "Moha ou Said",
+   "group": "moroccan",
    "shape": "circle",
    "depth": "Stub",
    "phase": [
     "III 1900-1912",
-    "IV 1912-1921"
+    "IV 1912-1921",
+    "V 1921-1934"
    ],
    "category": [
-    "Other foreign",
-    "Diplomat"
+    "Tribal leader",
+    "Armed resistance"
    ],
    "degree": 0
   },
@@ -308,310 +976,6 @@
    "degree": 0
   },
   {
-   "id": "person:moulay-youssef",
-   "slug": "moulay-youssef",
-   "kind": "person",
-   "label": "Moulay Youssef",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "IV 1912-1921",
-    "V 1921-1934"
-   ],
-   "category": [
-    "Sultan / monarch"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:ahmed-balafrej",
-   "slug": "ahmed-balafrej",
-   "kind": "person",
-   "label": "Ahmed Balafrej",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "V 1921-1934",
-    "VI 1934-1944",
-    "VII 1944-1956",
-    "VIII 1956-1961"
-   ],
-   "category": [
-    "Nationalist",
-    "Diplomat"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:hugo-stoltzenberg",
-   "slug": "hugo-stoltzenberg",
-   "kind": "person",
-   "label": "Hugo Stoltzenberg",
-   "group": "other",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "V 1921-1934"
-   ],
-   "category": [
-    "Other foreign"
-   ],
-   "degree": 1
-  },
-  {
-   "id": "person:damaso-berenguer",
-   "slug": "damaso-berenguer",
-   "kind": "person",
-   "label": "Dámaso Berenguer",
-   "group": "spanish",
-   "shape": "circle",
-   "depth": "Substantial",
-   "phase": [
-    "IV 1912-1921",
-    "V 1921-1934"
-   ],
-   "category": [
-    "Spanish military",
-    "Spanish civil"
-   ],
-   "degree": 2
-  },
-  {
-   "id": "person:philippe-petain",
-   "slug": "philippe-petain",
-   "kind": "person",
-   "label": "Philippe Pétain",
-   "group": "french",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "V 1921-1934",
-    "VI 1934-1944"
-   ],
-   "category": [
-    "French military"
-   ],
-   "degree": 1
-  },
-  {
-   "id": "person:abdelhadi-boutaleb",
-   "slug": "abdelhadi-boutaleb",
-   "kind": "person",
-   "label": "Abdelhadi Boutaleb",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "VII 1944-1956",
-    "VIII 1956-1961",
-    "IX 1961-1999"
-   ],
-   "category": [
-    "Makhzen official",
-    "Nationalist",
-    "Diplomat"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:paul-prosper-henrys",
-   "slug": "paul-prosper-henrys",
-   "kind": "person",
-   "label": "Paul Prosper Henrys",
-   "group": "french",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "IV 1912-1921"
-   ],
-   "category": [
-    "French military"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:mohamed-hassan-ouazzani",
-   "slug": "mohamed-hassan-ouazzani",
-   "kind": "person",
-   "label": "Mohamed Hassan Ouazzani",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "V 1921-1934",
-    "VI 1934-1944",
-    "VII 1944-1956",
-    "IX 1961-1999"
-   ],
-   "category": [
-    "Nationalist"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:abdallah-ibrahim",
-   "slug": "abdallah-ibrahim",
-   "kind": "person",
-   "label": "Abdallah Ibrahim",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "VII 1944-1956",
-    "VIII 1956-1961"
-   ],
-   "category": [
-    "Nationalist"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:joseph-francois-poeymirau",
-   "slug": "joseph-francois-poeymirau",
-   "kind": "person",
-   "label": "Joseph-François Poeymirau",
-   "group": "french",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "IV 1912-1921"
-   ],
-   "category": [
-    "French military"
-   ],
-   "degree": 1
-  },
-  {
-   "id": "person:m-barek-bekkay",
-   "slug": "m-barek-bekkay",
-   "kind": "person",
-   "label": "M'barek Bekkay",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "VI 1934-1944",
-    "VII 1944-1956",
-    "VIII 1956-1961"
-   ],
-   "category": [
-    "Nationalist",
-    "French military",
-    "Makhzen official"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:henri-gouraud",
-   "slug": "henri-gouraud",
-   "kind": "person",
-   "label": "Henri Gouraud",
-   "group": "french",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "III 1900-1912",
-    "IV 1912-1921"
-   ],
-   "category": [
-    "French military"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:mehdi-ben-barka",
-   "slug": "mehdi-ben-barka",
-   "kind": "person",
-   "label": "Mehdi Ben Barka",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Substantial",
-   "phase": [
-    "VII 1944-1956",
-    "VIII 1956-1961",
-    "IX 1961-1999"
-   ],
-   "category": [
-    "Nationalist"
-   ],
-   "degree": 1
-  },
-  {
-   "id": "person:augustin-guillaume",
-   "slug": "augustin-guillaume",
-   "kind": "person",
-   "label": "Augustin Guillaume",
-   "group": "french",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "VII 1944-1956"
-   ],
-   "category": [
-    "French military",
-    "French civil"
-   ],
-   "degree": 1
-  },
-  {
-   "id": "person:shakib-arslan",
-   "slug": "shakib-arslan",
-   "kind": "person",
-   "label": "Shakib Arslan",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "V 1921-1934",
-    "VI 1934-1944"
-   ],
-   "category": [
-    "Other foreign",
-    "Nationalist"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:juan-picasso-gonzalez",
-   "slug": "juan-picasso-gonzalez",
-   "kind": "person",
-   "label": "Juan Picasso González",
-   "group": "spanish",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "V 1921-1934"
-   ],
-   "category": [
-    "Spanish military"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:thami-el-glaoui",
-   "slug": "thami-el-glaoui",
-   "kind": "person",
-   "label": "Thami El Glaoui",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Full dossier",
-   "phase": [
-    "III 1900-1912",
-    "IV 1912-1921",
-    "V 1921-1934",
-    "VI 1934-1944",
-    "VII 1944-1956"
-   ],
-   "category": [
-    "Collaborating notable",
-    "Tribal leader",
-    "Makhzen official"
-   ],
-   "degree": 3
-  },
-  {
    "id": "person:ali-amhaouch",
    "slug": "ali-amhaouch",
    "kind": "person",
@@ -626,340 +990,6 @@
    ],
    "category": [
     "Religious leader",
-    "Armed resistance"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:ahmed-bahnini",
-   "slug": "ahmed-bahnini",
-   "kind": "person",
-   "label": "Ahmed Bahnini",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "VIII 1956-1961",
-    "IX 1961-1999"
-   ],
-   "category": [
-    "Makhzen official"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:mohammed-iv",
-   "slug": "mohammed-iv",
-   "kind": "person",
-   "label": "Mohammed IV",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "II 1830-1900"
-   ],
-   "category": [
-    "Sultan / monarch"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:moulay-abdelhafid",
-   "slug": "moulay-abdelhafid",
-   "kind": "person",
-   "label": "Moulay Abdelhafid",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Full dossier",
-   "phase": [
-    "III 1900-1912"
-   ],
-   "category": [
-    "Sultan / monarch"
-   ],
-   "degree": 5
-  },
-  {
-   "id": "person:moulay-abdelaziz",
-   "slug": "moulay-abdelaziz",
-   "kind": "person",
-   "label": "Moulay Abdelaziz",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Full dossier",
-   "phase": [
-    "II 1830-1900",
-    "III 1900-1912"
-   ],
-   "category": [
-    "Sultan / monarch"
-   ],
-   "degree": 2
-  },
-  {
-   "id": "person:si-madani-el-glaoui",
-   "slug": "si-madani-el-glaoui",
-   "kind": "person",
-   "label": "Si Madani El Glaoui",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "II 1830-1900",
-    "III 1900-1912",
-    "IV 1912-1921"
-   ],
-   "category": [
-    "Tribal leader",
-    "Makhzen official",
-    "Collaborating notable"
-   ],
-   "degree": 1
-  },
-  {
-   "id": "person:mohammed-ben-arafa",
-   "slug": "mohammed-ben-arafa",
-   "kind": "person",
-   "label": "Mohammed ben Arafa",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "VII 1944-1956"
-   ],
-   "category": [
-    "Sultan / monarch",
-    "Collaborating notable"
-   ],
-   "degree": 1
-  },
-  {
-   "id": "person:francisco-franco",
-   "slug": "francisco-franco",
-   "kind": "person",
-   "label": "Francisco Franco",
-   "group": "spanish",
-   "shape": "circle",
-   "depth": "Substantial",
-   "phase": [
-    "IV 1912-1921",
-    "V 1921-1934",
-    "VI 1934-1944",
-    "VII 1944-1956"
-   ],
-   "category": [
-    "Spanish military",
-    "Spanish civil"
-   ],
-   "degree": 2
-  },
-  {
-   "id": "person:sidi-mohamed-ben-hammou-identification-unresolved",
-   "slug": "sidi-mohamed-ben-hammou-identification-unresolved",
-   "kind": "person",
-   "label": "Sidi Mohamed Ben Hammou — identification unresolved",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Identified - not yet researched",
-   "phase": [
-    "IV 1912-1921"
-   ],
-   "category": [
-    "Tribal leader"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:salah-sharif-at-tunisi",
-   "slug": "salah-sharif-at-tunisi",
-   "kind": "person",
-   "label": "Salah Sharif at-Tunisi",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "IV 1912-1921"
-   ],
-   "category": [
-    "Other foreign",
-    "Religious leader"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:eugene-regnault",
-   "slug": "eugene-regnault",
-   "kind": "person",
-   "label": "Eugène Regnault",
-   "group": "french",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "III 1900-1912"
-   ],
-   "category": [
-    "Diplomat",
-    "French civil"
-   ],
-   "degree": 1
-  },
-  {
-   "id": "person:miguel-primo-de-rivera",
-   "slug": "miguel-primo-de-rivera",
-   "kind": "person",
-   "label": "Miguel Primo de Rivera",
-   "group": "spanish",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "V 1921-1934"
-   ],
-   "category": [
-    "Spanish military",
-    "Spanish civil"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:joseph-gallieni",
-   "slug": "joseph-gallieni",
-   "kind": "person",
-   "label": "Joseph Gallieni",
-   "group": "french",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "II 1830-1900",
-    "III 1900-1912",
-    "IV 1912-1921"
-   ],
-   "category": [
-    "French military"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:moulay-abderrahmane",
-   "slug": "moulay-abderrahmane",
-   "kind": "person",
-   "label": "Moulay Abderrahmane",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "I pre-1830",
-    "II 1830-1900"
-   ],
-   "category": [
-    "Sultan / monarch"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:alfonso-xiii",
-   "slug": "alfonso-xiii",
-   "kind": "person",
-   "label": "Alfonso XIII",
-   "group": "spanish",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "III 1900-1912",
-    "IV 1912-1921",
-    "V 1921-1934"
-   ],
-   "category": [
-    "Spanish civil"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:ma-al-aynayn",
-   "slug": "ma-al-aynayn",
-   "kind": "person",
-   "label": "Ma al-'Aynayn",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Full dossier",
-   "phase": [
-    "II 1830-1900",
-    "III 1900-1912"
-   ],
-   "category": [
-    "Religious leader",
-    "Armed resistance",
-    "Makhzen official"
-   ],
-   "degree": 1
-  },
-  {
-   "id": "person:ahmed-dlimi",
-   "slug": "ahmed-dlimi",
-   "kind": "person",
-   "label": "Ahmed Dlimi",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "IX 1961-1999"
-   ],
-   "category": [
-    "Makhzen official"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:driss-basri",
-   "slug": "driss-basri",
-   "kind": "person",
-   "label": "Driss Basri",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "IX 1961-1999",
-    "X 1999-present"
-   ],
-   "category": [
-    "Makhzen official"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:mohammed-v",
-   "slug": "mohammed-v",
-   "kind": "person",
-   "label": "Mohammed V",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Full dossier",
-   "phase": [
-    "V 1921-1934",
-    "VI 1934-1944",
-    "VII 1944-1956",
-    "VIII 1956-1961"
-   ],
-   "category": [
-    "Sultan / monarch",
-    "Nationalist"
-   ],
-   "degree": 4
-  },
-  {
-   "id": "person:moha-ou-said",
-   "slug": "moha-ou-said",
-   "kind": "person",
-   "label": "Moha ou Said",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "III 1900-1912",
-    "IV 1912-1921",
-    "V 1921-1934"
-   ],
-   "category": [
-    "Tribal leader",
     "Armed resistance"
    ],
    "degree": 0
@@ -1001,150 +1031,6 @@
    "degree": 0
   },
   {
-   "id": "person:jose-sanjurjo",
-   "slug": "jose-sanjurjo",
-   "kind": "person",
-   "label": "José Sanjurjo",
-   "group": "spanish",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "V 1921-1934",
-    "VI 1934-1944"
-   ],
-   "category": [
-    "Spanish military"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:manuel-fernandez-silvestre",
-   "slug": "manuel-fernandez-silvestre",
-   "kind": "person",
-   "label": "Manuel Fernández Silvestre",
-   "group": "spanish",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "III 1900-1912",
-    "IV 1912-1921"
-   ],
-   "category": [
-    "Spanish military"
-   ],
-   "degree": 1
-  },
-  {
-   "id": "person:hubert-lyautey",
-   "slug": "hubert-lyautey",
-   "kind": "person",
-   "label": "Hubert Lyautey",
-   "group": "french",
-   "shape": "circle",
-   "depth": "Full dossier",
-   "phase": [
-    "III 1900-1912",
-    "IV 1912-1921",
-    "V 1921-1934"
-   ],
-   "category": [
-    "French military",
-    "French civil"
-   ],
-   "degree": 3
-  },
-  {
-   "id": "person:rene-laverdure",
-   "slug": "rene-laverdure",
-   "kind": "person",
-   "label": "René Laverdure",
-   "group": "french",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "IV 1912-1921"
-   ],
-   "category": [
-    "French military"
-   ],
-   "degree": 1
-  },
-  {
-   "id": "person:maurice-le-glay",
-   "slug": "maurice-le-glay",
-   "kind": "person",
-   "label": "Maurice Le Glay",
-   "group": "french",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "IV 1912-1921",
-    "V 1921-1934"
-   ],
-   "category": [
-    "French civil"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:mohamed-lyazidi",
-   "slug": "mohamed-lyazidi",
-   "kind": "person",
-   "label": "Mohamed Lyazidi",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "V 1921-1934",
-    "VI 1934-1944",
-    "VII 1944-1956"
-   ],
-   "category": [
-    "Nationalist"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:allal-el-fassi",
-   "slug": "allal-el-fassi",
-   "kind": "person",
-   "label": "Allal El Fassi",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "V 1921-1934",
-    "VI 1934-1944",
-    "VII 1944-1956",
-    "VIII 1956-1961",
-    "IX 1961-1999"
-   ],
-   "category": [
-    "Nationalist",
-    "Religious leader"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:abderrahmane-youssoufi",
-   "slug": "abderrahmane-youssoufi",
-   "kind": "person",
-   "label": "Abderrahmane Youssoufi",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Stub",
-   "phase": [
-    "VII 1944-1956",
-    "VIII 1956-1961",
-    "IX 1961-1999",
-    "X 1999-present"
-   ],
-   "category": [
-    "Nationalist"
-   ],
-   "degree": 0
-  },
-  {
    "id": "person:ahmed-al-raisuni",
    "slug": "ahmed-al-raisuni",
    "kind": "person",
@@ -1166,90 +1052,302 @@
    "degree": 1
   },
   {
-   "id": "person:germain-ayache",
-   "slug": "germain-ayache",
+   "id": "person:hassan-ii",
+   "slug": "hassan-ii",
    "kind": "person",
-   "label": "Germain Ayache",
-   "group": "other",
+   "label": "Hassan II",
+   "group": "moroccan",
    "shape": "circle",
    "depth": "Stub",
    "phase": [
+    "VIII 1956-1961",
     "IX 1961-1999"
    ],
    "category": [
-    "Other foreign"
+    "Sultan / monarch"
    ],
    "degree": 0
   },
   {
-   "id": "person:ahmad-ibn-khalid-al-nasiri",
-   "slug": "ahmad-ibn-khalid-al-nasiri",
+   "id": "person:moulay-youssef",
+   "slug": "moulay-youssef",
    "kind": "person",
-   "label": "Ahmad ibn Khalid al-Nasiri",
+   "label": "Moulay Youssef",
    "group": "moroccan",
    "shape": "circle",
-   "depth": "Substantial",
+   "depth": "Stub",
+   "phase": [
+    "IV 1912-1921",
+    "V 1921-1934"
+   ],
+   "category": [
+    "Sultan / monarch"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:mohammed-iv",
+   "slug": "mohammed-iv",
+   "kind": "person",
+   "label": "Mohammed IV",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
    "phase": [
     "II 1830-1900"
    ],
    "category": [
-    "Religious leader",
-    "Makhzen official"
+    "Sultan / monarch"
    ],
    "degree": 0
   },
   {
-   "id": "person:zaid-ou-hmad",
-   "slug": "zaid-ou-hmad",
+   "id": "person:mohammed-ben-arafa",
+   "slug": "mohammed-ben-arafa",
    "kind": "person",
-   "label": "Zaïd Ou Hmad",
-   "group": "moroccan",
-   "shape": "circle",
-   "depth": "Identified - not yet researched",
-   "phase": [
-    "V 1921-1934",
-    "VI 1934-1944"
-   ],
-   "category": [
-    "Armed resistance",
-    "Tribal leader"
-   ],
-   "degree": 0
-  },
-  {
-   "id": "person:mohammed-sellam-ameziane",
-   "slug": "mohammed-sellam-ameziane",
-   "kind": "person",
-   "label": "Mohammed Sellam Ameziane",
+   "label": "Mohammed ben Arafa",
    "group": "moroccan",
    "shape": "circle",
    "depth": "Stub",
    "phase": [
+    "VII 1944-1956"
+   ],
+   "category": [
+    "Sultan / monarch",
+    "Collaborating notable"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "person:moulay-abderrahmane",
+   "slug": "moulay-abderrahmane",
+   "kind": "person",
+   "label": "Moulay Abderrahmane",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Stub",
+   "phase": [
+    "I pre-1830",
+    "II 1830-1900"
+   ],
+   "category": [
+    "Sultan / monarch"
+   ],
+   "degree": 0
+  },
+  {
+   "id": "person:mohammed-v",
+   "slug": "mohammed-v",
+   "kind": "person",
+   "label": "Mohammed V",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Full dossier",
+   "phase": [
+    "V 1921-1934",
+    "VI 1934-1944",
+    "VII 1944-1956",
+    "VIII 1956-1961"
+   ],
+   "category": [
+    "Sultan / monarch",
+    "Nationalist"
+   ],
+   "degree": 4
+  },
+  {
+   "id": "person:ma-al-aynayn",
+   "slug": "ma-al-aynayn",
+   "kind": "person",
+   "label": "Ma al-'Aynayn",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Full dossier",
+   "phase": [
+    "II 1830-1900",
+    "III 1900-1912"
+   ],
+   "category": [
+    "Religious leader",
+    "Armed resistance",
+    "Makhzen official"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "person:thami-el-glaoui",
+   "slug": "thami-el-glaoui",
+   "kind": "person",
+   "label": "Thami El Glaoui",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Full dossier",
+   "phase": [
+    "III 1900-1912",
+    "IV 1912-1921",
+    "V 1921-1934",
+    "VI 1934-1944",
+    "VII 1944-1956"
+   ],
+   "category": [
+    "Collaborating notable",
+    "Tribal leader",
+    "Makhzen official"
+   ],
+   "degree": 3
+  },
+  {
+   "id": "person:hubert-lyautey",
+   "slug": "hubert-lyautey",
+   "kind": "person",
+   "label": "Hubert Lyautey",
+   "group": "french",
+   "shape": "circle",
+   "depth": "Full dossier",
+   "phase": [
+    "III 1900-1912",
+    "IV 1912-1921",
+    "V 1921-1934"
+   ],
+   "category": [
+    "French military",
+    "French civil"
+   ],
+   "degree": 3
+  },
+  {
+   "id": "person:mohammed-ben-abdelkrim-el-khattabi",
+   "slug": "mohammed-ben-abdelkrim-el-khattabi",
+   "kind": "person",
+   "label": "Mohammed ben Abdelkrim El Khattabi",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Full dossier",
+   "phase": [
+    "III 1900-1912",
+    "IV 1912-1921",
+    "V 1921-1934",
+    "VI 1934-1944",
     "VII 1944-1956",
     "VIII 1956-1961"
    ],
    "category": [
     "Armed resistance",
+    "Religious leader",
     "Nationalist"
    ],
-   "degree": 0
+   "degree": 2
   },
   {
-   "id": "person:abdallah-laroui",
-   "slug": "abdallah-laroui",
+   "id": "person:mouha-ou-hammou-zayani",
+   "slug": "mouha-ou-hammou-zayani",
    "kind": "person",
-   "label": "Abdallah Laroui",
-   "group": "other",
+   "label": "Mouha ou Hammou Zayani",
+   "group": "moroccan",
    "shape": "circle",
-   "depth": "Stub",
+   "depth": "Full dossier",
    "phase": [
-    "IX 1961-1999",
-    "X 1999-present"
+    "II 1830-1900",
+    "III 1900-1912",
+    "IV 1912-1921"
    ],
    "category": [
-    "Other foreign"
+    "Tribal leader",
+    "Armed resistance",
+    "Makhzen official"
    ],
-   "degree": 0
+   "degree": 5
+  },
+  {
+   "id": "person:moulay-abdelhafid",
+   "slug": "moulay-abdelhafid",
+   "kind": "person",
+   "label": "Moulay Abdelhafid",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Full dossier",
+   "phase": [
+    "III 1900-1912"
+   ],
+   "category": [
+    "Sultan / monarch"
+   ],
+   "degree": 5
+  },
+  {
+   "id": "person:moulay-hassan-i",
+   "slug": "moulay-hassan-i",
+   "kind": "person",
+   "label": "Moulay Hassan I",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Full dossier",
+   "phase": [
+    "II 1830-1900"
+   ],
+   "category": [
+    "Sultan / monarch"
+   ],
+   "degree": 3
+  },
+  {
+   "id": "person:moulay-abdelaziz",
+   "slug": "moulay-abdelaziz",
+   "kind": "person",
+   "label": "Moulay Abdelaziz",
+   "group": "moroccan",
+   "shape": "circle",
+   "depth": "Full dossier",
+   "phase": [
+    "II 1830-1900",
+    "III 1900-1912"
+   ],
+   "category": [
+    "Sultan / monarch"
+   ],
+   "degree": 2
+  },
+  {
+   "id": "claim:oufkir-died-by-suicide-on-the-evening-of-16-august-1972",
+   "slug": "oufkir-died-by-suicide-on-the-evening-of-16-august-1972",
+   "kind": "claim",
+   "label": "Oufkir died by suicide on the evening of 16 August 1972",
+   "group": "unaligned",
+   "shape": "diamond",
+   "confidence": "Disputed",
+   "evidenceLayer": "Secondary interpretation",
+   "phase": [
+    "IX 1961-1999"
+   ],
+   "degree": 1
+  },
+  {
+   "id": "claim:oufkir-orchestrated-the-16-august-1972-attack-on-hassan-ii-s-boeing",
+   "slug": "oufkir-orchestrated-the-16-august-1972-attack-on-hassan-ii-s-boeing",
+   "kind": "claim",
+   "label": "Oufkir orchestrated the 16 August 1972 attack on Hassan II's Boeing",
+   "group": "unaligned",
+   "shape": "diamond",
+   "confidence": "Highly probable",
+   "evidenceLayer": "Secondary interpretation",
+   "phase": [
+    "IX 1961-1999"
+   ],
+   "degree": 7
+  },
+  {
+   "id": "claim:the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables",
+   "slug": "the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables",
+   "kind": "claim",
+   "label": "The August 1953 decision to depose Mohammed V originated in Paris, with Resident-General Guillaume, or with El Glaoui and the notables",
+   "group": "unaligned",
+   "shape": "diamond",
+   "confidence": "Disputed",
+   "evidenceLayer": "Secondary interpretation",
+   "phase": [
+    "VII 1944-1956"
+   ],
+   "degree": 2
   },
   {
    "id": "claim:el-herri-13-november-1914-zaian-dead-numbered-182",
@@ -1262,20 +1360,6 @@
    "evidenceLayer": "Primary source",
    "phase": [
     "IV 1912-1921"
-   ],
-   "degree": 1
-  },
-  {
-   "id": "claim:annual-july-1921-spanish-dead-ranged-7-875-to-13-363",
-   "slug": "annual-july-1921-spanish-dead-ranged-7-875-to-13-363",
-   "kind": "claim",
-   "label": "Annual, July 1921: Spanish dead ranged 7,875 to 13,363",
-   "group": "unaligned",
-   "shape": "diamond",
-   "confidence": "Disputed",
-   "evidenceLayer": "Primary source",
-   "phase": [
-    "V 1921-1934"
    ],
    "degree": 1
   },
@@ -1294,6 +1378,20 @@
    "degree": 0
   },
   {
+   "id": "claim:annual-july-1921-spanish-dead-ranged-7-875-to-13-363",
+   "slug": "annual-july-1921-spanish-dead-ranged-7-875-to-13-363",
+   "kind": "claim",
+   "label": "Annual, July 1921: Spanish dead ranged 7,875 to 13,363",
+   "group": "unaligned",
+   "shape": "diamond",
+   "confidence": "Disputed",
+   "evidenceLayer": "Primary source",
+   "phase": [
+    "V 1921-1934"
+   ],
+   "degree": 1
+  },
+  {
    "id": "claim:mouha-ou-hammou-zayani-was-killed-by-his-own-son-hassan",
    "slug": "mouha-ou-hammou-zayani-was-killed-by-his-own-son-hassan",
    "kind": "claim",
@@ -1306,18 +1404,232 @@
    "degree": 1
   },
   {
-   "id": "claim:the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables",
-   "slug": "the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables",
-   "kind": "claim",
-   "label": "The August 1953 decision to depose Mohammed V originated in Paris, with Resident-General Guillaume, or with El Glaoui and the notables",
+   "id": "source:coup-d-etat-de-skhirat-wikipedia-french",
+   "slug": "coup-d-etat-de-skhirat-wikipedia-french",
+   "kind": "source",
+   "label": "Coup d'État de Skhirat — Wikipédia (French)",
    "group": "unaligned",
-   "shape": "diamond",
-   "confidence": "Disputed",
-   "evidenceLayer": "Secondary interpretation",
-   "phase": [
-    "VII 1944-1956"
-   ],
-   "degree": 2
+   "shape": "square",
+   "tier": "ENCYCLOPEDIC",
+   "verification": "Consulted directly",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:failed-coup-of-august-16-1972-the-account-of-king-hassan-ii-s-bodyguard-telquel",
+   "slug": "failed-coup-of-august-16-1972-the-account-of-king-hassan-ii-s-bodyguard-telquel",
+   "kind": "source",
+   "label": "Failed coup of August 16, 1972: the account of King Hassan II's bodyguard — TelQuel",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "JOURNALISTIC",
+   "verification": "Consulted directly",
+   "phase": [],
+   "degree": 1
+  },
+  {
+   "id": "source:coup-d-etat-des-aviateurs-wikipedia-french",
+   "slug": "coup-d-etat-des-aviateurs-wikipedia-french",
+   "kind": "source",
+   "label": "Coup d'État des aviateurs — Wikipédia (French)",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "ENCYCLOPEDIC",
+   "verification": "Consulted directly",
+   "phase": [],
+   "degree": 1
+  },
+  {
+   "id": "source:un-officier-au-service-du-roi-5-aujourd-hui-le-maroc",
+   "slug": "un-officier-au-service-du-roi-5-aujourd-hui-le-maroc",
+   "kind": "source",
+   "label": "Un officier au service du Roi (5) — Aujourd'hui le Maroc",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "JOURNALISTIC",
+   "verification": "Consulted directly",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:une-nouvelle-video-sur-la-tentative-de-coup-d-etat-du-16-aout-1972-medias24",
+   "slug": "une-nouvelle-video-sur-la-tentative-de-coup-d-etat-du-16-aout-1972-medias24",
+   "kind": "source",
+   "label": "Une nouvelle vidéo sur la tentative de coup d'État du 16 août 1972 — Médias24",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "JOURNALISTIC",
+   "verification": "Consulted directly",
+   "phase": [],
+   "degree": 1
+  },
+  {
+   "id": "source:1972-moroccan-coup-attempt-wikipedia",
+   "slug": "1972-moroccan-coup-attempt-wikipedia",
+   "kind": "source",
+   "label": "1972 Moroccan coup attempt — Wikipedia",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "ENCYCLOPEDIC",
+   "verification": "Consulted directly",
+   "phase": [],
+   "degree": 1
+  },
+  {
+   "id": "source:les-proteges-contribution-a-l-histoire-contemporaine-du-maroc",
+   "slug": "les-proteges-contribution-a-l-histoire-contemporaine-du-maroc",
+   "kind": "source",
+   "label": "Les protégés — contribution à l'histoire contemporaine du Maroc",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "ACADEMIC",
+   "verification": "Catalogue verified",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:wandering-minstrels-and-epic-poetry-from-morocco-s-berber-highlands",
+   "slug": "wandering-minstrels-and-epic-poetry-from-morocco-s-berber-highlands",
+   "kind": "source",
+   "label": "Wandering Minstrels and Epic Poetry from Morocco's Berber Highlands",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "ACADEMIC",
+   "verification": "Consulted directly",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:cahiers-des-documents-historiques-de-la-resistance-et-de-la-liberation",
+   "slug": "cahiers-des-documents-historiques-de-la-resistance-et-de-la-liberation",
+   "kind": "source",
+   "label": "Cahiers des Documents Historiques de la Résistance et de la Libération",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "OFFICIAL",
+   "verification": "Consulted directly",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:les-origines-sociales-et-culturelles-du-nationalisme-marocain-1830-1912",
+   "slug": "les-origines-sociales-et-culturelles-du-nationalisme-marocain-1830-1912",
+   "kind": "source",
+   "label": "Les origines sociales et culturelles du nationalisme marocain, 1830–1912",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "ACADEMIC",
+   "verification": "Cited by named scholar",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:hesperis-tamuda",
+   "slug": "hesperis-tamuda",
+   "kind": "source",
+   "label": "Hespéris-Tamuda",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "ACADEMIC",
+   "verification": "Catalogue verified",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:كتاب-الاستقصا-arabic-text-al-maktaba-al-shamela",
+   "slug": "كتاب-الاستقصا-arabic-text-al-maktaba-al-shamela",
+   "kind": "source",
+   "label": "كتاب الاستقصا — Arabic text, al-Maktaba al-Shamela",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "PRIMARY_CONTEMPORARY",
+   "verification": "Consulted directly",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:les-origines-de-la-guerre-du-rif",
+   "slug": "les-origines-de-la-guerre-du-rif",
+   "kind": "source",
+   "label": "Les origines de la guerre du Rif",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "ACADEMIC",
+   "verification": "Catalogue verified",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:reconsidering-the-rif-revolt-1958-1959",
+   "slug": "reconsidering-the-rif-revolt-1958-1959",
+   "kind": "source",
+   "label": "Reconsidering the Rif Revolt (1958–1959)",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "ACADEMIC",
+   "verification": "Cited by named scholar",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:les-sources-inedites-de-l-histoire-du-maroc-de-1530-a-1845",
+   "slug": "les-sources-inedites-de-l-histoire-du-maroc-de-1530-a-1845",
+   "kind": "source",
+   "label": "Les sources inédites de l'histoire du Maroc de 1530 à 1845",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "PRIMARY_ARCHIVAL",
+   "verification": "Catalogue verified",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:bataille-elhri-digitised-document",
+   "slug": "bataille-elhri-digitised-document",
+   "kind": "source",
+   "label": "Bataille Elhri (digitised document)",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "SECONDARY",
+   "verification": "Catalogue verified",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:archives-marocaines-series",
+   "slug": "archives-marocaines-series",
+   "kind": "source",
+   "label": "Archives Marocaines (series)",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "PRIMARY_CONTEMPORARY",
+   "verification": "Catalogue verified",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:kitab-al-istiqsa-li-akhbar-duwal-al-maghrib-al-aqsa",
+   "slug": "kitab-al-istiqsa-li-akhbar-duwal-al-maghrib-al-aqsa",
+   "kind": "source",
+   "label": "Kitāb al-Istiqsā li-akhbār duwal al-Maghrib al-Aqsā",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "PRIMARY_CONTEMPORARY",
+   "verification": "Catalogue verified",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:frus-conferences-at-washington-and-casablanca-1941-1943-document-376-roosevelt-dinner-party-22-january-1943",
+   "slug": "frus-conferences-at-washington-and-casablanca-1941-1943-document-376-roosevelt-dinner-party-22-january-1943",
+   "kind": "source",
+   "label": "FRUS, Conferences at Washington and Casablanca 1941–1943, Document 376 — Roosevelt dinner party, 22 January 1943",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "OFFICIAL",
+   "verification": "Consulted directly",
+   "phase": [],
+   "degree": 0
   },
   {
    "id": "source:did-amrika-promise-morocco-s-independence-the-nationalist-movement-the-sultan-and-the-making-of-the-roosevelt-myth",
@@ -1340,18 +1652,6 @@
    "shape": "square",
    "tier": "PRIMARY_ARCHIVAL",
    "verification": "Catalogue verified",
-   "phase": [],
-   "degree": 0
-  },
-  {
-   "id": "source:deadly-embrace-morocco-and-the-road-to-the-spanish-civil-war",
-   "slug": "deadly-embrace-morocco-and-the-road-to-the-spanish-civil-war",
-   "kind": "source",
-   "label": "Deadly Embrace: Morocco and the Road to the Spanish Civil War",
-   "group": "unaligned",
-   "shape": "square",
-   "tier": "ACADEMIC",
-   "verification": "Cited by named scholar",
    "phase": [],
    "degree": 0
   },
@@ -1380,6 +1680,42 @@
    "degree": 0
   },
   {
+   "id": "source:al-watha-iq-les-archives-published-makhzen-documents",
+   "slug": "al-watha-iq-les-archives-published-makhzen-documents",
+   "kind": "source",
+   "label": "al-Wathā'iq (« Les Archives ») — published Makhzen documents",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "PRIMARY_ARCHIVAL",
+   "verification": "Cited by named scholar",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:ottoman-support-to-moroccan-local-resistance-in-north-africa-1914-1918",
+   "slug": "ottoman-support-to-moroccan-local-resistance-in-north-africa-1914-1918",
+   "kind": "source",
+   "label": "Ottoman Support to Moroccan Local Resistance in North Africa (1914–1918)",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "ACADEMIC",
+   "verification": "Cited by named scholar",
+   "phase": [],
+   "degree": 0
+  },
+  {
+   "id": "source:deadly-embrace-morocco-and-the-road-to-the-spanish-civil-war",
+   "slug": "deadly-embrace-morocco-and-the-road-to-the-spanish-civil-war",
+   "kind": "source",
+   "label": "Deadly Embrace: Morocco and the Road to the Spanish Civil War",
+   "group": "unaligned",
+   "shape": "square",
+   "tier": "ACADEMIC",
+   "verification": "Cited by named scholar",
+   "phase": [],
+   "degree": 0
+  },
+  {
    "id": "source:lords-of-the-atlas-the-rise-and-fall-of-the-house-of-glaoua",
    "slug": "lords-of-the-atlas-the-rise-and-fall-of-the-house-of-glaoua",
    "kind": "source",
@@ -1400,18 +1736,6 @@
    "shape": "square",
    "tier": "PRIMARY_ARCHIVAL",
    "verification": "Catalogue verified",
-   "phase": [],
-   "degree": 0
-  },
-  {
-   "id": "source:al-watha-iq-les-archives-published-makhzen-documents",
-   "slug": "al-watha-iq-les-archives-published-makhzen-documents",
-   "kind": "source",
-   "label": "al-Wathā'iq (« Les Archives ») — published Makhzen documents",
-   "group": "unaligned",
-   "shape": "square",
-   "tier": "PRIMARY_ARCHIVAL",
-   "verification": "Cited by named scholar",
    "phase": [],
    "degree": 0
   },
@@ -1474,162 +1798,6 @@
    "verification": "Cited by named scholar",
    "phase": [],
    "degree": 1
-  },
-  {
-   "id": "source:ottoman-support-to-moroccan-local-resistance-in-north-africa-1914-1918",
-   "slug": "ottoman-support-to-moroccan-local-resistance-in-north-africa-1914-1918",
-   "kind": "source",
-   "label": "Ottoman Support to Moroccan Local Resistance in North Africa (1914–1918)",
-   "group": "unaligned",
-   "shape": "square",
-   "tier": "ACADEMIC",
-   "verification": "Cited by named scholar",
-   "phase": [],
-   "degree": 0
-  },
-  {
-   "id": "source:kitab-al-istiqsa-li-akhbar-duwal-al-maghrib-al-aqsa",
-   "slug": "kitab-al-istiqsa-li-akhbar-duwal-al-maghrib-al-aqsa",
-   "kind": "source",
-   "label": "Kitāb al-Istiqsā li-akhbār duwal al-Maghrib al-Aqsā",
-   "group": "unaligned",
-   "shape": "square",
-   "tier": "PRIMARY_CONTEMPORARY",
-   "verification": null,
-   "phase": [],
-   "degree": 0
-  },
-  {
-   "id": "source:كتاب-الاستقصا-arabic-text-al-maktaba-al-shamela",
-   "slug": "كتاب-الاستقصا-arabic-text-al-maktaba-al-shamela",
-   "kind": "source",
-   "label": "كتاب الاستقصا — Arabic text, al-Maktaba al-Shamela",
-   "group": "unaligned",
-   "shape": "square",
-   "tier": "PRIMARY_CONTEMPORARY",
-   "verification": null,
-   "phase": [],
-   "degree": 0
-  },
-  {
-   "id": "source:les-origines-de-la-guerre-du-rif",
-   "slug": "les-origines-de-la-guerre-du-rif",
-   "kind": "source",
-   "label": "Les origines de la guerre du Rif",
-   "group": "unaligned",
-   "shape": "square",
-   "tier": "ACADEMIC",
-   "verification": null,
-   "phase": [],
-   "degree": 0
-  },
-  {
-   "id": "source:reconsidering-the-rif-revolt-1958-1959",
-   "slug": "reconsidering-the-rif-revolt-1958-1959",
-   "kind": "source",
-   "label": "Reconsidering the Rif Revolt (1958–1959)",
-   "group": "unaligned",
-   "shape": "square",
-   "tier": "ACADEMIC",
-   "verification": null,
-   "phase": [],
-   "degree": 0
-  },
-  {
-   "id": "source:archives-marocaines-series",
-   "slug": "archives-marocaines-series",
-   "kind": "source",
-   "label": "Archives Marocaines (series)",
-   "group": "unaligned",
-   "shape": "square",
-   "tier": "PRIMARY_CONTEMPORARY",
-   "verification": null,
-   "phase": [],
-   "degree": 0
-  },
-  {
-   "id": "source:bataille-elhri-digitised-document",
-   "slug": "bataille-elhri-digitised-document",
-   "kind": "source",
-   "label": "Bataille Elhri (digitised document)",
-   "group": "unaligned",
-   "shape": "square",
-   "tier": "SECONDARY",
-   "verification": null,
-   "phase": [],
-   "degree": 0
-  },
-  {
-   "id": "source:cahiers-des-documents-historiques-de-la-resistance-et-de-la-liberation",
-   "slug": "cahiers-des-documents-historiques-de-la-resistance-et-de-la-liberation",
-   "kind": "source",
-   "label": "Cahiers des Documents Historiques de la Résistance et de la Libération",
-   "group": "unaligned",
-   "shape": "square",
-   "tier": "OFFICIAL",
-   "verification": null,
-   "phase": [],
-   "degree": 0
-  },
-  {
-   "id": "source:frus-conferences-at-washington-and-casablanca-1941-1943-document-376-roosevelt-dinner-party-22-january-1943",
-   "slug": "frus-conferences-at-washington-and-casablanca-1941-1943-document-376-roosevelt-dinner-party-22-january-1943",
-   "kind": "source",
-   "label": "FRUS, Conferences at Washington and Casablanca 1941–1943, Document 376 — Roosevelt dinner party, 22 January 1943",
-   "group": "unaligned",
-   "shape": "square",
-   "tier": "OFFICIAL",
-   "verification": null,
-   "phase": [],
-   "degree": 0
-  },
-  {
-   "id": "source:hesperis-tamuda",
-   "slug": "hesperis-tamuda",
-   "kind": "source",
-   "label": "Hespéris-Tamuda",
-   "group": "unaligned",
-   "shape": "square",
-   "tier": "ACADEMIC",
-   "verification": null,
-   "phase": [],
-   "degree": 0
-  },
-  {
-   "id": "source:les-origines-sociales-et-culturelles-du-nationalisme-marocain-1830-1912",
-   "slug": "les-origines-sociales-et-culturelles-du-nationalisme-marocain-1830-1912",
-   "kind": "source",
-   "label": "Les origines sociales et culturelles du nationalisme marocain, 1830–1912",
-   "group": "unaligned",
-   "shape": "square",
-   "tier": "ACADEMIC",
-   "verification": null,
-   "phase": [],
-   "degree": 0
-  },
-  {
-   "id": "source:les-sources-inedites-de-l-histoire-du-maroc-de-1530-a-1845",
-   "slug": "les-sources-inedites-de-l-histoire-du-maroc-de-1530-a-1845",
-   "kind": "source",
-   "label": "Les sources inédites de l'histoire du Maroc de 1530 à 1845",
-   "group": "unaligned",
-   "shape": "square",
-   "tier": "PRIMARY_ARCHIVAL",
-   "verification": null,
-   "phase": [],
-   "degree": 0
-  },
-  {
-   "id": "source:wandering-minstrels-and-epic-poetry-from-morocco-s-berber-highlands",
-   "slug": "wandering-minstrels-and-epic-poetry-from-morocco-s-berber-highlands",
-   "kind": "source",
-   "label": "Wandering Minstrels and Epic Poetry from Morocco's Berber Highlands",
-   "group": "unaligned",
-   "shape": "square",
-   "tier": "ACADEMIC",
-   "verification": null,
-   "phase": [],
-   "degree": 0
   },
   {
    "id": "archive:archivo-general-de-la-administracion-aga",
@@ -2154,6 +2322,76 @@
    "id": "mohammed-ben-arafa-installed-in-place-of-mohammed-v"
   },
   {
+   "source": "person:mohamed-oufkir",
+   "target": "claim:oufkir-died-by-suicide-on-the-evening-of-16-august-1972",
+   "kind": "person-claim",
+   "relation": "is the subject of",
+   "id": "mohamed-oufkir--oufkir-died-by-suicide-on-the-evening-of-16-august-1972"
+  },
+  {
+   "source": "person:mohamed-oufkir",
+   "target": "claim:oufkir-orchestrated-the-16-august-1972-attack-on-hassan-ii-s-boeing",
+   "kind": "person-claim",
+   "relation": "is the subject of",
+   "id": "mohamed-oufkir--oufkir-orchestrated-the-16-august-1972-attack-on-hassan-ii-s-boeing"
+  },
+  {
+   "source": "person:mohammed-amekrane",
+   "target": "claim:oufkir-orchestrated-the-16-august-1972-attack-on-hassan-ii-s-boeing",
+   "kind": "person-claim",
+   "relation": "is the subject of",
+   "id": "mohammed-amekrane--oufkir-orchestrated-the-16-august-1972-attack-on-hassan-ii-s-boeing"
+  },
+  {
+   "source": "person:kouera-el-ouafi",
+   "target": "claim:oufkir-orchestrated-the-16-august-1972-attack-on-hassan-ii-s-boeing",
+   "kind": "person-claim",
+   "relation": "is the subject of",
+   "id": "kouera-el-ouafi--oufkir-orchestrated-the-16-august-1972-attack-on-hassan-ii-s-boeing"
+  },
+  {
+   "source": "claim:oufkir-orchestrated-the-16-august-1972-attack-on-hassan-ii-s-boeing",
+   "target": "source:1972-moroccan-coup-attempt-wikipedia",
+   "kind": "claim-source",
+   "relation": "rests on",
+   "id": "oufkir-orchestrated-the-16-august-1972-attack-on-hassan-ii-s-boeing--1972-moroccan-coup-attempt-wikipedia"
+  },
+  {
+   "source": "claim:oufkir-orchestrated-the-16-august-1972-attack-on-hassan-ii-s-boeing",
+   "target": "source:coup-d-etat-des-aviateurs-wikipedia-french",
+   "kind": "claim-source",
+   "relation": "rests on",
+   "id": "oufkir-orchestrated-the-16-august-1972-attack-on-hassan-ii-s-boeing--coup-d-etat-des-aviateurs-wikipedia-french"
+  },
+  {
+   "source": "claim:oufkir-orchestrated-the-16-august-1972-attack-on-hassan-ii-s-boeing",
+   "target": "source:failed-coup-of-august-16-1972-the-account-of-king-hassan-ii-s-bodyguard-telquel",
+   "kind": "claim-source",
+   "relation": "rests on",
+   "id": "oufkir-orchestrated-the-16-august-1972-attack-on-hassan-ii-s-boeing--failed-coup-of-august-16-1972-the-account-of-king-hassan-ii-s-bodyguard-telquel"
+  },
+  {
+   "source": "claim:oufkir-orchestrated-the-16-august-1972-attack-on-hassan-ii-s-boeing",
+   "target": "source:une-nouvelle-video-sur-la-tentative-de-coup-d-etat-du-16-aout-1972-medias24",
+   "kind": "claim-source",
+   "relation": "rests on",
+   "id": "oufkir-orchestrated-the-16-august-1972-attack-on-hassan-ii-s-boeing--une-nouvelle-video-sur-la-tentative-de-coup-d-etat-du-16-aout-1972-medias24"
+  },
+  {
+   "source": "person:mohammed-v",
+   "target": "claim:the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables",
+   "kind": "person-claim",
+   "relation": "is the subject of",
+   "id": "mohammed-v--the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables"
+  },
+  {
+   "source": "person:thami-el-glaoui",
+   "target": "claim:the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables",
+   "kind": "person-claim",
+   "relation": "is the subject of",
+   "id": "thami-el-glaoui--the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables"
+  },
+  {
    "source": "person:mouha-ou-hammou-zayani",
    "target": "claim:el-herri-13-november-1914-zaian-dead-numbered-182",
    "kind": "person-claim",
@@ -2173,20 +2411,6 @@
    "kind": "person-claim",
    "relation": "is the subject of",
    "id": "mouha-ou-hammou-zayani--mouha-ou-hammou-zayani-was-killed-by-his-own-son-hassan"
-  },
-  {
-   "source": "person:mohammed-v",
-   "target": "claim:the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables",
-   "kind": "person-claim",
-   "relation": "is the subject of",
-   "id": "mohammed-v--the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables"
-  },
-  {
-   "source": "person:thami-el-glaoui",
-   "target": "claim:the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables",
-   "kind": "person-claim",
-   "relation": "is the subject of",
-   "id": "thami-el-glaoui--the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables"
   }
  ]
 }

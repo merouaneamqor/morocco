@@ -1,6 +1,366 @@
 [
  {
-  "url": "https://app.notion.com/3bd885d88042810dab24f7e50935b08f",
+  "url": "https://app.notion.com/p/3bf885d88042816db88ac8a5a5f59787",
+  "Title": "Coup d'État de Skhirat — Wikipédia (French)",
+  "Author / producer": null,
+  "Date": "Accessed 2026-08-17",
+  "Institution / publisher": "Wikipédia",
+  "Language": [
+   "French"
+  ],
+  "Tier": "ENCYCLOPEDIC",
+  "URL": "https://fr.wikipedia.org/wiki/Coup_d'État_de_Skhirat",
+  "Archival reference": "ARCHIVAL REFERENCE NOT YET VERIFIED",
+  "Verification": "Consulted directly",
+  "Bias notes": "Tertiary source, used as a lead only.",
+  "Covers": "The 10 July 1971 Skhirat coup attempt against Hassan II",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
+ },
+ {
+  "url": "https://app.notion.com/p/3bf885d880428178b704e8be7948b222",
+  "Title": "Failed coup of August 16, 1972: the account of King Hassan II's bodyguard — TelQuel",
+  "Author / producer": null,
+  "Date": "27 January 2025 (accessed 2026-08-17)",
+  "Institution / publisher": "TelQuel",
+  "Language": [
+   "English"
+  ],
+  "Tier": "JOURNALISTIC",
+  "URL": "https://telquel.ma/2025/01/27/failed-coup-of-august-16-1972-the-account-of-king-hassan-iis-bodyguard_1914877",
+  "Archival reference": "ARCHIVAL REFERENCE NOT YET VERIFIED",
+  "Verification": "Consulted directly",
+  "Bias notes": "Built on the bodyguard's own account, an interested first-person source refracted through a 2025 magazine feature — not independently verified here.",
+  "Covers": "A 2025 retelling of the 16 August 1972 attack from bodyguard Raymond Sasia's account",
+  "Claims (as primary evidence)": [
+   "https://app.notion.com/p/3bf885d8804281e7be75f535d7ecae8c"
+  ],
+  "Claims (as counter-evidence)": []
+ },
+ {
+  "url": "https://app.notion.com/p/3bf885d8804281bc902ff5e7bd5695f1",
+  "Title": "Coup d'État des aviateurs — Wikipédia (French)",
+  "Author / producer": null,
+  "Date": "Accessed 2026-08-17",
+  "Institution / publisher": "Wikipédia",
+  "Language": [
+   "French"
+  ],
+  "Tier": "ENCYCLOPEDIC",
+  "URL": "https://fr.wikipedia.org/wiki/Coup_d'État_des_aviateurs",
+  "Archival reference": "ARCHIVAL REFERENCE NOT YET VERIFIED",
+  "Verification": "Consulted directly",
+  "Bias notes": "The only source consulted here that names the royal pilot — spelled 'Kebbaj', against 'Kabbaj' in the two Moroccan press sources below. Tertiary source, used as a lead only.",
+  "Covers": "The 16 August 1972 attack on Hassan II's Boeing and its aftermath, including Tazmamart",
+  "Claims (as primary evidence)": [
+   "https://app.notion.com/p/3bf885d8804281e7be75f535d7ecae8c"
+  ],
+  "Claims (as counter-evidence)": []
+ },
+ {
+  "url": "https://app.notion.com/p/3bf885d8804281cd9cc8dd3d69fe4620",
+  "Title": "Un officier au service du Roi (5) — Aujourd'hui le Maroc",
+  "Author / producer": null,
+  "Date": "Accessed 2026-08-17",
+  "Institution / publisher": "Aujourd'hui le Maroc",
+  "Language": [
+   "French"
+  ],
+  "Tier": "JOURNALISTIC",
+  "URL": "https://aujourdhui.ma/archives/un-officier-au-service-du-roi-5-89595",
+  "Archival reference": "ARCHIVAL REFERENCE NOT YET VERIFIED",
+  "Verification": "Consulted directly",
+  "Bias notes": "Commemorative/admiring tone toward the late king; useful chiefly for the pilot's full name.",
+  "Covers": "Names the royal Boeing's pilot: 'Mohammed Kabbaj, commandant de bord'",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
+ },
+ {
+  "url": "https://app.notion.com/p/3bf885d8804281d48d04c206f546b925",
+  "Title": "Une nouvelle vidéo sur la tentative de coup d'État du 16 août 1972 — Médias24",
+  "Author / producer": null,
+  "Date": "13 October 2014 (accessed 2026-08-17)",
+  "Institution / publisher": "Médias24",
+  "Language": [
+   "French"
+  ],
+  "Tier": "JOURNALISTIC",
+  "URL": "https://medias24.com/2014/10/13/une-nouvelle-video-sur-la-tentative-de-coup-detat-du-16-aout-1972/",
+  "Archival reference": "ARCHIVAL REFERENCE NOT YET VERIFIED",
+  "Verification": "Consulted directly",
+  "Bias notes": null,
+  "Covers": "The 16 August 1972 attack: Oufkir, Kouera, Amokrane, and pilot Kabbaj",
+  "Claims (as primary evidence)": [
+   "https://app.notion.com/p/3bf885d8804281e7be75f535d7ecae8c"
+  ],
+  "Claims (as counter-evidence)": []
+ },
+ {
+  "url": "https://app.notion.com/p/3bf885d8804281fcba92c4607aa4f7a6",
+  "Title": "1972 Moroccan coup attempt — Wikipedia",
+  "Author / producer": "Wikipedia contributors",
+  "Date": "Accessed 2026-08-17",
+  "Institution / publisher": "Wikipedia",
+  "Language": [
+   "English"
+  ],
+  "Tier": "ENCYCLOPEDIC",
+  "URL": "https://en.wikipedia.org/wiki/1972_Moroccan_coup_attempt",
+  "Archival reference": "ARCHIVAL REFERENCE NOT YET VERIFIED",
+  "Verification": "Consulted directly",
+  "Bias notes": "Tertiary source. Useful as a lead and for cross-checking names, dates and figures against other tellings; not final authority for contested points (Oufkir's motive, the manner of his death).",
+  "Covers": "The 16 August 1972 attack on King Hassan II's Boeing 727 and its aftermath",
+  "Claims (as primary evidence)": [
+   "https://app.notion.com/p/3bf885d8804281e7be75f535d7ecae8c"
+  ],
+  "Claims (as counter-evidence)": []
+ },
+ {
+  "url": "https://app.notion.com/p/3bf885d88042819ea168d7f208c6d159",
+  "Title": "Les protégés — contribution à l'histoire contemporaine du Maroc",
+  "Author / producer": "Mohamed Kenbib (محمد كنبيب)",
+  "Date": "1980 thesis · 1996 French · 2011 revised Arabic",
+  "Institution / publisher": "Doctoral thesis, Paris, 1980. Published Rabat: Publications de la Faculté des Lettres et des Sciences humaines, série Thèses et Mémoires, 1996. Revised Arabic edition, same publisher, 2011, 489 pp. (المحميون: مساهمة في تاريخ المغرب المعاصر)",
+  "Language": [
+   "French",
+   "Arabic"
+  ],
+  "Tier": "ACADEMIC",
+  "URL": null,
+  "Archival reference": "ARCHIVAL REFERENCE NOT YET VERIFIED — Kenbib's own footnotes have not been read",
+  "Verification": "Catalogue verified",
+  "Bias notes": "The monographic study of the protégé question by a Moroccan historian, and the direct answer to this workspace's most load-bearing unquantified claim (Assessment 1). NOT YET READ. One figure is currently held from it at second hand, through a named review (Ribāt al-Kutub): Makhzen payments to the French and their protégés rising from 160,000 francs in 1861 to 3,000,000 francs in 1889. That is Kenbib's figure as reported by a reviewer, not as read in Kenbib. Until the text is read it is a quotation, not evidence, and its own documentary basis is Unknown. Caution: a French thesis of 1980 re-issued in Arabic in 2011 by a state faculty may read differently in the two versions; both should be checked.",
+  "Covers": "The consular protection system in Morocco, c. 1856–1912",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
+ },
+ {
+  "url": "https://app.notion.com/p/3be885d880428122b59ee8fa14ab9f19",
+  "Title": "Wandering Minstrels and Epic Poetry from Morocco's Berber Highlands",
+  "Author / producer": "Michael Peyron",
+  "Date": "2023",
+  "Institution / publisher": "Tamazgha Studies Journal, Fall 2023, issue 01",
+  "Language": [
+   "English",
+   "Tamazight"
+  ],
+  "Tier": "ACADEMIC",
+  "URL": "https://www.tamazghastudiesjournal.org/articles-fall2023-issue-01-article13",
+  "Archival reference": "Fieldwork 2005–2007; earlier collections 1974–1988. Collaborators named: Arsène Roux, Fatima Kadiri, Rkia Mountassir, Jeanine Drouin.",
+  "Verification": "Consulted directly",
+  "Bias notes": "A European scholar of Middle Atlas Amazigh tradition, working with Moroccan collaborators. The corpus is oral and was collected decades after the events it describes; it is strong evidence of experience and community memory, and weak evidence of chronology and number — the workspace's standing rule for oral tradition applies unchanged.",
+  "Covers": "The Amazigh counter-archive this project has repeatedly flagged as missing. Genres: tamdyazt and tayffart, ballads of forty couplets or more, performed by travelling bards (imdyazn) under a ššix, with fiddle, tambourine and the reed-flute player (bu wɣanim) who doubled as scout and clown. A resistance-poetry corpus covering the anti-French campaigns of 1908–1936 exists and has been collected. Named poets include Rwisha (Khenifra, active c. 1984), Hmad Waqqa (Ayt Yahya) and the poetess Tawkhettalt of Tizi n-Isly. The most celebrated ballads commemorate the Battle of Tazigzawt (1932), where c. 1,000 fighters faced two French divisions.",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
+ },
+ {
+  "url": "https://app.notion.com/p/3be885d88042812eb0efca0e02eaa9c1",
+  "Title": "Cahiers des Documents Historiques de la Résistance et de la Libération",
+  "Author / producer": "Haut Commissariat aux Anciens Résistants et Anciens Membres de l'Armée de Libération (HCAR)",
+  "Date": "series ongoing; the body in its current form dates from 11 January 2017",
+  "Institution / publisher": "HCAR, Rabat — Kingdom of Morocco",
+  "Language": [
+   "Arabic",
+   "French"
+  ],
+  "Tier": "OFFICIAL",
+  "URL": "http://hcar.gov.ma/wp-content/uploads/2024/09/dafatere.pdf",
+  "Archival reference": "Thematic cahiers, each on a single topic. Verified contents include a cahier on the Battle of El Herri, 13 November 1914; Moha ou Hammou Zayani; Zaïd Ou Hmad (resistance leader, 1934–1936); Sultan Sidi Mohammed ben Youssef; and the Manifesto of Independence of 11 January 1944.",
+  "Verification": "Consulted directly",
+  "Bias notes": "A Moroccan state body publishing the documentary record of the resistance — and therefore an official national memory project, not a neutral archive. Its remit is to honour resisters and members of the Liberation Army; it selects accordingly. Read it exactly as the Résidence Générale files are read: for what it records, not for what it concludes. Note also that a body founded to commemorate resistance has an institutional interest in the resistance being continuous and national, which is precisely one of the contested points in this workspace.",
+  "Covers": "The first Moroccan-side documentary treatment of El Herri identified in this project — the workspace's flagship event, previously reconstructed entirely from French returns. Also the route to Zaïd Ou Hmad, whose dates of 1934–1936 confirm that armed resistance continued after the official end of 'pacification'. Coverage runs c. 1914–1954.",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
+ },
+ {
+  "url": "https://app.notion.com/p/3be885d88042814b9832f62f995caff4",
+  "Title": "Les origines sociales et culturelles du nationalisme marocain, 1830–1912",
+  "Author / producer": "Abdallah Laroui",
+  "Date": "1977",
+  "Institution / publisher": "Paris",
+  "Language": [
+   "French"
+  ],
+  "Tier": "ACADEMIC",
+  "URL": null,
+  "Archival reference": "n/a — monograph, originally his doctoral thesis.",
+  "Verification": "Cited by named scholar",
+  "Bias notes": "Laroui's scholarship is explicitly guided by a Marxist reading of history and a radical critique of culture, language and tradition. He is the most influential Moroccan critic of colonial and orientalist historiography, and his critique is itself a theoretical commitment rather than a neutral corrective.",
+  "Covers": "Exactly the period this workspace calls Phase II — 1830 to 1912 — written by a Moroccan historian asking where Moroccan nationalism came from. Directly relevant to the workspace's central causal argument about fiscal capture, the protection system and the collapse of Makhzen authority. Laroui (b. 1933, Azemmour; taught at Mohammed V, Rabat) also wrote L'Histoire du Maghreb: un essai de synthèse (1970) and Le Maroc et Hassan II: un témoignage (2005).",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
+ },
+ {
+  "url": "https://app.notion.com/p/3be885d88042816ab348d3d0ae997253",
+  "Title": "Hespéris-Tamuda",
+  "Author / producer": "Faculté des Lettres et des Sciences Humaines, Université Mohammed V, Rabat",
+  "Date": "Hespéris founded 1921; merged with the Spanish-language Tamuda in 1960; Arabic articles from 1991",
+  "Institution / publisher": "Université Mohammed V, Rabat. ISSN 0018-1005",
+  "Language": [
+   "Arabic",
+   "French",
+   "Spanish",
+   "English"
+  ],
+  "Tier": "ACADEMIC",
+  "URL": "https://hesperis-tamuda.com/",
+  "Archival reference": "Archive organised by decade, 1921–1929 through 2020–2025. Back runs also on Internet Archive (identifier HespresTamuda, arranged by year).",
+  "Verification": "Catalogue verified",
+  "Bias notes": "Its own history is the history of Moroccan historiography. Hespéris was founded in 1921 as the organ of the French Institut des Hautes Études Marocaines — colonial scholarship in the service of the Protectorate. Tamuda was its Spanish-zone counterpart. Their 1960 merger under a Moroccan university, and the appearance of Arabic articles only from 1991, tracks the slow decolonisation of the field with unusual precision. Volumes must therefore be dated before they are weighed.",
+  "Covers": "The principal scholarly journal of Moroccan history for a century, in four languages. Indexed in Web of Science (ESCI, 2016) and Scopus (2024). The obvious place to find Moroccan scholarship on every disputed point in this workspace.",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
+ },
+ {
+  "url": "https://app.notion.com/p/3be885d8804281fbad50d8d7bc191e79",
+  "Title": "كتاب الاستقصا — Arabic text, al-Maktaba al-Shamela",
+  "Author / producer": "Ahmad ibn Khalid al-Nasiri; edition of Ja'far al-Nasiri and Muhammad al-Nasiri",
+  "Date": "chronicle completed 1894; this edition Dar al-Kitab, Casablanca",
+  "Institution / publisher": "al-Maktaba al-Shamela (shamela.ws), book 6627",
+  "Language": [
+   "Arabic"
+  ],
+  "Tier": "PRIMARY_CONTEMPORARY",
+  "URL": "https://shamela.ws/book/6627",
+  "Archival reference": "Shamela book ID 6627. Fully browsable by volume, chapter and printed page number. The Shamela instance indexes three volumes running from the Islamic conquest through the Saadian period into the seventeenth century.",
+  "Verification": "Consulted directly",
+  "Bias notes": "The Moroccan author's own words, in Arabic, without a French translator between the reader and the text. His commitments — sharifian legitimacy, the propriety of the Makhzen order — are legible and declared. A separate 8-part Moroccan scholarly edition exists, annotated by Ahmad al-Nasiri with publication supervised by Mohamed Hajji, Ibrahim Boutaleb and Ahmed Toufiq, recorded in the National Library of Israel catalogue (record seen in search results; the catalogue page itself returned 403 and was not retrieved). That edition, not this one, is the scholarly standard.",
+  "Covers": "The Arabic text is online and free. The Shamela instance appears to end with the Saadians; the Alaouite and nineteenth-century volumes — the ones that matter most for Phase II — were not visible in its index and must be located separately. A separate Arabic printing of 1906, 427pp, is on Internet Archive as kitabelistiqali01salgoog.",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
+ },
+ {
+  "url": "https://app.notion.com/p/3be885d8804281fcb072c5cc290b7f84",
+  "Title": "Les origines de la guerre du Rif",
+  "Author / producer": "Germain Ayache",
+  "Date": "1981",
+  "Institution / publisher": "Publications de la Sorbonne (série internationale no. 19) and Société Marocaine des Éditeurs Réunis, Rabat. 374 pp.",
+  "Language": [
+   "French"
+  ],
+  "Tier": "ACADEMIC",
+  "URL": "https://archive.org/details/lesoriginesdelaguerredurifgermainayache",
+  "Archival reference": "Full text on Internet Archive, identifier lesoriginesdelaguerredurifgermainayache.",
+  "Verification": "Catalogue verified",
+  "Bias notes": "The founding work of a Moroccan national school of history. Ayache — a Moroccan Jewish historian who taught in Rabat — wrote deliberately against colonial historiography, and is described in the literature as constituting a historical school in his own right. He has a position: that Moroccan society had its own political logic which colonial accounts systematically failed to see. That position is an argument, not a neutral vantage, and should be read as one.",
+  "Covers": "The single most important secondary work for the Rif war from a Moroccan vantage, and the counterpart to Balfour's Deadly Embrace, which reads the same war from Spain. Reading the two against each other is the obvious next step for Phase V. Freely readable now. The book's specific argument has not yet been extracted — the metadata page carries no summary and the full text was too large to retrieve in this session.",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
+ },
+ {
+  "url": "https://app.notion.com/p/3be885d880428113a65de450339225e0",
+  "Title": "Reconsidering the Rif Revolt (1958–1959)",
+  "Author / producer": "Nabil Mouline",
+  "Date": "2016",
+  "Institution / publisher": "Jadaliyya",
+  "Language": [
+   "English"
+  ],
+  "Tier": "ACADEMIC",
+  "URL": "https://www.jadaliyya.com/Details/31718",
+  "Archival reference": "n/a — essay format; underlying sources not itemised in the accessible text.",
+  "Verification": "Cited by named scholar",
+  "Bias notes": "A short public-facing essay by a serious historian of Moroccan political power; the argument is careful but the evidentiary apparatus is not exposed, so figures taken from it should be treated as reported rather than documented.",
+  "Covers": "The 1958–59 Rif revolt: causes in post-independence economic collapse and elite capture by French-zone Istiqlal figures; Mohammed Sallam Ameziane as director; c. 20,000 troops deployed, described as four-fifths of the royal army; Prince Moulay Hassan directing, Oufkir on the ground; c. 1,000 soldiers killed and the massacre of 400 inhabitants at Beni Hadifa; and Hassan II's 1984 remark to northern Moroccans that they 'have previously known the violence of the crown prince; it will be best for them not to know that of the king's.'",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
+ },
+ {
+  "url": "https://app.notion.com/p/3be885d880428114b79de27fb4608c44",
+  "Title": "Les sources inédites de l'histoire du Maroc de 1530 à 1845",
+  "Author / producer": "Henry, comte de Castries (1850–1927); continued by Pierre de Cenival and Philippe de Cossé-Brissac",
+  "Date": "from 1905",
+  "Institution / publisher": "E. Leroux, Paris",
+  "Language": [
+   "French",
+   "Spanish",
+   "English",
+   "Other"
+  ],
+  "Tier": "PRIMARY_ARCHIVAL",
+  "URL": "https://archive.org/details/pt05lessourcesindi02castuoft",
+  "Archival reference": "Series organised by holding country: Archives et bibliothèques de France, d'Angleterre, d'Espagne, des Pays-Bas, du Portugal. Multiple tomes per series. Volumes verified present on Gallica (Pays-Bas t.1–6; Angleterre série 1 t.1–2; France t.1) and on Internet Archive.",
+  "Verification": "Catalogue verified",
+  "Bias notes": "A French colonial-era scholarly enterprise, begun in 1905 — the year of the Tangier crisis — and continued through the Protectorate. Selecting and publishing the European documentary record of Morocco was itself part of establishing a European claim to know the country. But the documents reproduced are transcribed in the original, which makes the collection usable against the intentions of its editors.",
+  "Covers": "The entry point to Phase I and early Phase II, which this workspace had left entirely empty. Diplomatic and commercial documents on Morocco, 1530–1845, drawn from five European national archives and published in the original languages with French apparatus. Freely readable on Gallica and Internet Archive.",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
+ },
+ {
+  "url": "https://app.notion.com/p/3be885d880428147ab82eba744c50492",
+  "Title": "Bataille Elhri (digitised document)",
+  "Author / producer": "Author not stated in the item metadata",
+  "Date": "uploaded 2021; subject 13 November 1914",
+  "Institution / publisher": "Internet Archive",
+  "Language": [
+   "French"
+  ],
+  "Tier": "SECONDARY",
+  "URL": "https://archive.org/details/bataille.-elhri",
+  "Archival reference": "Internet Archive identifier bataille.-elhri. 14.3 MB, scanned 600 DPI with OCR.",
+  "Verification": "Catalogue verified",
+  "Bias notes": "Authorship not established. An unattributed scanned French-language text; until the author and publication are identified it cannot be tiered above SECONDARY, and any figure taken from it must be cross-checked. Flagged here so that a later researcher does not mistake a digitised object for a documented one.",
+  "Covers": "The battle of 13 November 1914 at El Herri, 15 km from Khénifra, in Zaian territory. Located during the Session 3 sweep of Internet Archive; not yet read in full.",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
+ },
+ {
+  "url": "https://app.notion.com/p/3be885d88042818f8d9bdba51f3c99e7",
+  "Title": "Archives Marocaines (series)",
+  "Author / producer": "Mission scientifique du Maroc",
+  "Date": "1904–1930s",
+  "Institution / publisher": "E. Leroux, Paris",
+  "Language": [
+   "French",
+   "Arabic"
+  ],
+  "Tier": "PRIMARY_CONTEMPORARY",
+  "URL": "https://archive.org/details/history-morocco",
+  "Archival reference": "Volumes verified present on Internet Archive include I (1905), VI (1906), IX (1906), XIV (1908), XV (1909), XIX (1913, Dawhat al-Nāshir of Ibn ʿAskar), XX (1913, Le Gharb), XXI (1913), XXVII (1927, Confréries religieuses au Maroc), XXXIV (1917).",
+  "Verification": "Catalogue verified",
+  "Bias notes": "The archetype of colonial knowledge production: French scholars translating and publishing the Moroccan textual tradition in the years the Protectorate was being established, in order to govern it. Its translations are usable; its framing and its selection are evidence about France, not about Morocco. Read exactly as the Bureau des Affaires Indigènes ethnography is read.",
+  "Covers": "French translations of Moroccan chronicles, biographical dictionaries, hagiographies and regional monographs — including al-Nasiri's al-Istiqsā. Freely readable on Internet Archive, which makes it the most accessible route to Moroccan textual sources currently identified.",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
+ },
+ {
+  "url": "https://app.notion.com/p/3be885d8804281bf8e86f11da75babb0",
+  "Title": "Kitāb al-Istiqsā li-akhbār duwal al-Maghrib al-Aqsā",
+  "Author / producer": "Ahmad ibn Khalid al-Nasiri al-Slawi (1835–1897)",
+  "Date": "completed c. 1894; first published Cairo 1894",
+  "Institution / publisher": "Cairo, 1894. Annotated 8-volume edition, Keta Books, 2002.",
+  "Language": [
+   "Arabic"
+  ],
+  "Tier": "PRIMARY_CONTEMPORARY",
+  "URL": "https://en.wikipedia.org/wiki/Al-Istiqsa",
+  "Archival reference": "French translation published in Archives Marocaines: vols IX (1906) and X (1907), Chronique de la dynastie alaouie du Maroc, with a preface by Eugène Fumey; superseded by the five-tome edition in vol. XXX (1923–1936), translated by A. Graulle, I. Hamet and M. en-Nacîri, covering the Berbers, Idrisids, Almoravids, Almohads, Marinids and Saadians (1509–1609). Verified against the Archives Marocaines series index.",
+  "Verification": "Catalogue verified",
+  "Bias notes": "A Moroccan scholar of a Sufi family, writing from within the Makhzen's intellectual world, finishing in the year Hassan I died. He has his own commitments — dynastic legitimacy, the sharifian order, the propriety of the state. But the alternative currently in use across this workspace is French consular reporting, which has commitments too and fewer scruples about them.",
+  "Covers": "The single most important Moroccan-authored source identified so far. The first comprehensive national history of Morocco rather than a dynastic chronicle, running from the Muslim conquest of the Maghreb to the reign of Abdelaziz in 1894 — i.e. a contemporaneous Moroccan account of the whole of Phase II. Leví-Provençal noted it was the first Moroccan historical work to cite non-Muslim European sources; Gibb called it the 'last worthy representative' of traditional Arabic historiography.",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
+ },
+ {
+  "url": "https://app.notion.com/p/3be885d8804281c982a6fa8bdc2e9448",
+  "Title": "FRUS, Conferences at Washington and Casablanca 1941–1943, Document 376 — Roosevelt dinner party, 22 January 1943",
+  "Author / producer": "US Department of State, Office of the Historian",
+  "Date": "event 22 January 1943; volume published 1968",
+  "Institution / publisher": "Foreign Relations of the United States",
+  "Language": [
+   "English"
+  ],
+  "Tier": "OFFICIAL",
+  "URL": "https://history.state.gov/historicaldocuments/frus1941-43/d376",
+  "Archival reference": "FRUS, The Conferences at Washington, 1941–1942, and Casablanca, 1943, Document 376. Section: Friday, January 22, 1943 (ch9subch9).",
+  "Verification": "Consulted directly",
+  "Bias notes": "The crucial fact about this document is what it is. It is an editorial note, not a memorandum of conversation — which means the US government's own official documentary series states, in effect, that no single official record of the Anfa dinner exists. FRUS reconstructs it from Hopkins's notes, McCrea's sketch, Roosevelt's later press conference, and the memoirs of Elliott Roosevelt, Kenneth Pendar and Robert Murphy. Three of those five are memoirs.",
+  "Covers": "Attendance confirmed: the Sultan, his Grand Vizier, his Chief of Protocol, the Crown Prince, Churchill, General Noguès (Resident-General of Morocco) and Patton. Topics: Morocco's post-war economic development, possible American participation in it, and 'the colonial question as it applied to Morocco'. The note states Roosevelt expressed sympathy with Morocco's aspirations for independence. It also records that Noguès had difficulty hearing the President's private conversation with the Sultan — i.e. the Resident-General was present but excluded from the substance.",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
+ },
+ {
+  "url": "https://app.notion.com/p/3bd885d88042810dab24f7e50935b08f",
   "Title": "Did Amrika promise Morocco's independence? The nationalist movement, the Sultan, and the making of the 'Roosevelt Myth'",
   "Author / producer": "David Stenner",
   "Date": "2014",
@@ -13,10 +373,12 @@
   "Archival reference": "State Department records; diplomatic cables and consular reports; photographs of Roosevelt's letters to Sultan Mohammed ben Youssef; White House press statements; nationalist documents; al-'Alam and al-Istiqlal.",
   "Verification": "Cited by named scholar",
   "Bias notes": "Careful and even-handed: it neither endorses the nationalist myth nor dismisses it, arguing the promises were real and their political use was constructed. Written from a US-Moroccan relations vantage point.",
-  "Covers": "Anfa, 22 January 1943. Moves this workspace's 'what did Roosevelt say' question from Unknown to Established-with-wording-unverified."
+  "Covers": "Anfa, 22 January 1943. Moves this workspace's 'what did Roosevelt say' question from Unknown to Established-with-wording-unverified.",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
  },
  {
-  "url": "https://app.notion.com/3bd885d88042813c9c06e5e41da37985",
+  "url": "https://app.notion.com/p/3bd885d88042813c9c06e5e41da37985",
   "Title": "FO 413 — Foreign Office: Confidential Print Morocco and North West Africa",
   "Author / producer": "British Foreign Office",
   "Date": "1839–1969",
@@ -29,26 +391,12 @@
   "Archival reference": "FO 413. Covers Morocco throughout; extended to Algeria and Tunisia from 1952.",
   "Verification": "Catalogue verified",
   "Bias notes": "British state reporting, with British interests — an active Moroccan policy until 1904 and Mediterranean and Gibraltar interests thereafter. But Britain was not a claimant in Morocco after 1904, which makes it the nearest thing to a disinterested European observer of Franco-Spanish conduct.",
-  "Covers": "A curated printed chronological digest of British reporting across 130 years, including Foreign Office 'descriptions of leading personalities'. The most efficient single entry point to third-party evidence in the entire workspace."
+  "Covers": "A curated printed chronological digest of British reporting across 130 years, including Foreign Office 'descriptions of leading personalities'. The most efficient single entry point to third-party evidence in the entire workspace.",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
  },
  {
-  "url": "https://app.notion.com/3bd885d880428155ae90f302a751f345",
-  "Title": "Deadly Embrace: Morocco and the Road to the Spanish Civil War",
-  "Author / producer": "Sebastian Balfour",
-  "Date": "2002",
-  "Institution / publisher": "Oxford University Press",
-  "Language": [
-   "English"
-  ],
-  "Tier": "ACADEMIC",
-  "URL": null,
-  "Archival reference": "Built on Spanish, French and British archives; the source of the Berenguer 'con verdadera fruición' quotation used in this workspace.",
-  "Verification": "Cited by named scholar",
-  "Bias notes": "Rigorous and archive-based. Its thesis — that the Rif war formed the officer corps that made the 1936 coup — is an argument, well supported but an argument. Written from a Spanish-history vantage point; Moroccan agency is present but not the primary subject.",
-  "Covers": "Rif war; Spanish chemical weapons; the africanista officer corps; Annual; Abd el-Krim. The single most useful secondary work for Phase V."
- },
- {
-  "url": "https://app.notion.com/3bd885d880428161a503fcb9b41bedfe",
+  "url": "https://app.notion.com/p/3bd885d880428161a503fcb9b41bedfe",
   "Title": "Ottoman Empire and Moroccan Resistance to the French Protectorate in the First World War: Activities of Teşkilat-ı Mahsusa in Morocco",
   "Author / producer": "Halil Kaya",
   "Date": "February 2023",
@@ -62,10 +410,12 @@
   "Archival reference": "Cites BOA: BEO 1993-149432, 4135-310078; DH.KMS. 29-28; DH.MKT. 2885-31; HR.SYS. D.2109 G.10, D.2392 G.5, D.2393 G.1-3; İ.HB.",
   "Verification": "Cited by named scholar",
   "Bias notes": "Turkish scholarship working from Ottoman state records, so it reports the operation as its organisers saw it — including their own assessments of German interference. That vantage point is precisely its value: it is neither French nor Moroccan. Its judgement that the operation 'achieved unconventional war objectives' is an interpretation.",
-  "Covers": "Emir Abd el-Malek; Taher Bey and the Ottoman officers; Moulay Abdelhafid's Barcelona negotiation 1915; al-Hiba; Raisuni; Moha ou Hammou; Sheikh Sharif ben Seddik; German funding; submarine and false-passport routes. The source of the first document-level archival references in this workspace."
+  "Covers": "Emir Abd el-Malek; Taher Bey and the Ottoman officers; Moulay Abdelhafid's Barcelona negotiation 1915; al-Hiba; Raisuni; Moha ou Hammou; Sheikh Sharif ben Seddik; German funding; submarine and false-passport routes. The source of the first document-level archival references in this workspace.",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
  },
  {
-  "url": "https://app.notion.com/3bd885d880428169822fd37260a7d399",
+  "url": "https://app.notion.com/p/3bd885d880428169822fd37260a7d399",
   "Title": "Hazine — guide to archives and libraries of the Middle East and North Africa",
   "Author / producer": "Hazine collective",
   "Date": "ongoing",
@@ -78,42 +428,12 @@
   "Archival reference": "n/a — a guide to holdings",
   "Verification": "Consulted directly",
   "Bias notes": "Practical researcher-written guidance rather than scholarship. Access details change; verify before travelling.",
-  "Covers": "Concrete, current access information for Archives du Maroc, the BNRM, the Hassaniya palace library and the Direction des Archives Royales: opening hours, permit requirements, fees, photography rules, catalogue quality. The source of the access details recorded in the Archives & repositories database."
+  "Covers": "Concrete, current access information for Archives du Maroc, the BNRM, the Hassaniya palace library and the Direction des Archives Royales: opening hours, permit requirements, fees, photography rules, catalogue quality. The source of the access details recorded in the Archives & repositories database.",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
  },
  {
-  "url": "https://app.notion.com/3bd885d88042816c9f2ac74f2cfd0efd",
-  "Title": "Lords of the Atlas: The Rise and Fall of the House of Glaoua",
-  "Author / producer": "Gavin Maxwell",
-  "Date": "1966",
-  "Institution / publisher": "Longmans",
-  "Language": [
-   "English"
-  ],
-  "Tier": "SECONDARY",
-  "URL": null,
-  "Archival reference": "n/a",
-  "Verification": "NOT YET VERIFIED",
-  "Bias notes": "The source of much of the English-language image of the Glaoua, and a book written with novelistic technique. Several of the most-repeated anecdotes — the 1893 Telouet rescue, the Krupp cannon, the details of El Glaoui's vice interests — trace back here. Compelling, influential, and not a substitute for documentation. Flag every claim that depends on it.",
-  "Covers": "Madani and Thami El Glaoui; the High Atlas; the 1953 deposition."
- },
- {
-  "url": "https://app.notion.com/3bd885d8804281859ab0e10f5fad2251",
-  "Title": "Alta Comisaría de España en Marruecos (fonds record)",
-  "Author / producer": "Spanish High Commission in Morocco",
-  "Date": "1750–1979",
-  "Institution / publisher": "Archivo General de la Administración, Alcalá de Henares; catalogued in PARES",
-  "Language": [
-   "Spanish"
-  ],
-  "Tier": "PRIMARY_ARCHIVAL",
-  "URL": "http://pares.mcu.es/ParesBusquedas20/catalogo/description/167585",
-  "Archival reference": "AGA, Fondo África, 1.2.5.1 Órganos Centrales — Alta Comisaría de España en Marruecos. 4,990 cajas.",
-  "Verification": "Catalogue verified",
-  "Bias notes": "The administrative record of the Spanish protectorate, produced by it. Uses 'cabecilla', 'rebelde', 'bandido' as classifications of Moroccan political actors. Also contains the output of Moroccan officials in Spanish service — including Abd el-Krim before 1915.",
-  "Covers": "The core Spanish holding for the Rif war, the Jebala, Tetouan, northern nationalism, and the whole protectorate administration. Box-level references NOT YET VERIFIED."
- },
- {
-  "url": "https://app.notion.com/3bd885d880428199a7d8e3ee7f4560d2",
+  "url": "https://app.notion.com/p/3bd885d880428199a7d8e3ee7f4560d2",
   "Title": "al-Wathā'iq (« Les Archives ») — published Makhzen documents",
   "Author / producer": "Direction des Archives Royales, Morocco",
   "Date": "from 1976",
@@ -126,90 +446,12 @@
   "Archival reference": "Periodical volumes of documents published from the Royal Archives.",
   "Verification": "Cited by named scholar",
   "Bias notes": "Selected and published by the Moroccan state, with an emphasis on pre-colonial international relations — that is, on the material that supports Moroccan sovereignty claims. Selection is itself an argument. But it is Makhzen documents in the original, which is what this workspace has been missing entirely.",
-  "Covers": "The single most important corrective available to this workspace. Makhzen correspondence in Arabic, published and therefore accessible without a palace reading-room permit. The obvious first target for anyone continuing this work."
+  "Covers": "The single most important corrective available to this workspace. Makhzen correspondence in Arabic, published and therefore accessible without a palace reading-room permit. The obvious first target for anyone continuing this work.",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
  },
  {
-  "url": "https://app.notion.com/3bd885d8804281a38c2fc2d6c595e32e",
-  "Title": "SHD — Guide des sources sur le Maroc (sous-série GR 3H)",
-  "Author / producer": "Service historique de la Défense",
-  "Date": "guide consulted 2026; covers holdings 1877–1960",
-  "Institution / publisher": "SHD, Vincennes",
-  "Language": [
-   "French"
-  ],
-  "Tier": "OFFICIAL",
-  "URL": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/2020-04/Guide-Maroc.pdf",
-  "Archival reference": "Sous-série GR 3H, c. 3,000 articles. Commandement Supérieur 3H 314–752 (1st–4th bureaux; Fes, Meknes, Marrakech, Taza, Tadla, Oujda). Goums 3H 2375–2711 (1906–1958). Ministerial cabinet telegrams on Morocco in série N at 5N 39–64.",
-  "Verification": "Catalogue verified",
-  "Bias notes": "A finding aid produced by the institution that generated the records. It describes what France chose to keep and how France classified it — e.g. 'affaires indigènes', 'dissidence'. Its categories are evidence about the Protectorate's mind, not neutral description.",
-  "Covers": "The single most important French holding for Moroccan military and Affaires Indigènes history. Series-level ranges above are from the guide itself; individual carton references remain NOT YET VERIFIED."
- },
- {
-  "url": "https://app.notion.com/3bd885d8804281b1b189f191f9b76cd0",
-  "Title": "Abdelkrim, Mémoires d'Abd el Krim",
-  "Author / producer": "Mohammed ben Abdelkrim El Khattabi; edited by J. Roger-Mathieu",
-  "Date": "1927",
-  "Institution / publisher": "Paris",
-  "Language": [
-   "French"
-  ],
-  "Tier": "PRIMARY_CONTEMPORARY",
-  "URL": null,
-  "Archival reference": "n/a — published memoir",
-  "Verification": "NOT YET VERIFIED",
-  "Bias notes": "Use with care. A Moroccan leader's account, produced in French, through a French editor, in the year after his surrender and while he was in French custody or exile. The mediation is heavy and the editorial agenda is not neutral. It is nonetheless one of very few first-person Moroccan sources for the Rif war.",
-  "Covers": "Abd el-Krim's own account of the Rif war and the Republic."
- },
- {
-  "url": "https://app.notion.com/3bd885d8804281b4930fdf78f1e39893",
-  "Title": "Inventaire des archives du Maroc — sous-série 3H",
-  "Author / producer": "Service historique de la Défense",
-  "Date": "inventory covers 1836–1963",
-  "Institution / publisher": "SHD, Vincennes",
-  "Language": [
-   "French"
-  ],
-  "Tier": "OFFICIAL",
-  "URL": "https://www.servicehistorique.sga.defense.gouv.fr/ark/1024809",
-  "Archival reference": "Organised geographically: Région de Marrakech (1916–1955); Territoire de Ouarzazate (1929–1956); Cercle du Dadès-Todhra (1936–1956); Cercle de Zagora (1928–1956); Territoire du Tadla (1909–1956). Personnel dossiers 1929–1956; confidential outgoing-mail registers from 1929.",
-  "Verification": "Catalogue verified",
-  "Bias notes": "Same caution as the guide. Note that the geographic hierarchy — région → cercle → bureau/annexe → chronological — is itself the shape of French administrative control, so the archive is easiest to search in the terms France used.",
-  "Covers": "Regional political reports, tribal intelligence, situation reports, indigenous affairs, operations, personnel. Essential for El Herri, the Zaian war, Bougafer and the pacification generally."
- },
- {
-  "url": "https://app.notion.com/3bd885d8804281c8b5c4e22b1a6fd970",
-  "Title": "Moroccan Resistance, Pan-Islam and German War Strategy, 1914–1918",
-  "Author / producer": "Edmund Burke III",
-  "Date": "1975",
-  "Institution / publisher": "Francia, vol. 3, pp. 434–464",
-  "Language": [
-   "English"
-  ],
-  "Tier": "ACADEMIC",
-  "URL": null,
-  "Archival reference": "Uses French and German archival material.",
-  "Verification": "Cited by named scholar",
-  "Bias notes": "The standard treatment of the German and Ottoman effort to raise Morocco against France during the First World War. Assesses that effort as largely ineffective — a judgement worth testing against German records directly.",
-  "Covers": "Zaian war context; German funding via Madrid (figures up to 600,000 pesetas a month appear in this literature); Ottoman training and propaganda; attempts to use Abdelaziz and Abdelhafid as figureheads."
- },
- {
-  "url": "https://app.notion.com/3bd885d8804281dbbd9ac11a1981b4f7",
-  "Title": "Expediente Picasso",
-  "Author / producer": "General Juan Picasso González",
-  "Date": "inquiry reported July 1922; published edition 1931",
-  "Institution / publisher": "Spanish Army / Cortes",
-  "Language": [
-   "Spanish"
-  ],
-  "Tier": "OFFICIAL",
-  "URL": null,
-  "Archival reference": "The inquiry file into the Annual disaster. Location and completeness of the original NOT YET VERIFIED by this project.",
-  "Verification": "Cited by named scholar",
-  "Bias notes": "A state investigating its own catastrophe, under political constraint. It named military failings and was structurally unable to reach the crown. Its casualty total of 13,363 is the highest in circulation and is the most inclusive definition, not necessarily the most accurate.",
-  "Covers": "Annual, July–August 1921: command failures, positions, testimony, casualty returns. The primary documentary base for the disaster."
- },
- {
-  "url": "https://app.notion.com/3bd885d8804281e9b15dea6bda200765",
+  "url": "https://app.notion.com/p/3bd885d8804281e9b15dea6bda200765",
   "Title": "Ottoman Support to Moroccan Local Resistance in North Africa (1914–1918)",
   "Author / producer": "Odile Moreau (Université Paul-Valéry Montpellier III)",
   "Date": "n.d. — Türk Tarih Kurumu publication",
@@ -222,207 +464,154 @@
   "Archival reference": "Cites BOA HR.SYS. 2392/2, 2393/1, 2393/2, 2393/4; German A.A.-P.A. WK Nr. 11 1.",
   "Verification": "Cited by named scholar",
   "Bias notes": "French-based scholar using Ottoman and German archives — a useful cross-check on Kaya, and the two differ on a point of fact (whether Abd el-Malek was Abd el-Kader's son or grandson), which is exactly why both are recorded.",
-  "Covers": "Teskilât-ı Mahsusa structure and personnel; Abd el-Malek's c. 1,500 fighters from March 1915; the Madrid and Barcelona rear bases; German payment of 70 liras monthly per officer from Nov 1916; the Ifni submarine expedition of Oct 1916; Salah Sharif at-Tunisi's pamphlets in French, Arabic and Tamazight."
+  "Covers": "Teskilât-ı Mahsusa structure and personnel; Abd el-Malek's c. 1,500 fighters from March 1915; the Madrid and Barcelona rear bases; German payment of 70 liras monthly per officer from Nov 1916; the Ifni submarine expedition of Oct 1916; Salah Sharif at-Tunisi's pamphlets in French, Arabic and Tamazight.",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
  },
  {
-  "url": "https://app.notion.com/3be885d8804281bf8e86f11da75babb0",
-  "Title": "Kitāb al-Istiqsā li-akhbār duwal al-Maghrib al-Aqsā",
-  "Author / producer": "Ahmad ibn Khalid al-Nasiri al-Slawi (1835–1897)",
-  "Date": "completed c. 1894; first published Cairo 1894",
-  "Institution / publisher": "Cairo, 1894. Annotated 8-volume edition, Keta Books, 2002.",
-  "Language": [
-   "Arabic"
-  ],
-  "Tier": "PRIMARY_CONTEMPORARY",
-  "URL": "https://en.wikipedia.org/wiki/Al-Istiqsa",
-  "Archival reference": "French translation published in **Archives Marocaines**: vols **IX (1906)** and **X (1907)**, *Chronique de la dynastie alaouie du Maroc*, with a preface by **Eugène Fumey**; superseded by the five-tome edition in vol. **XXX (1923–1936)**, translated by **A. Graulle, I. Hamet and M. en-Nacîri**, covering the Berbers, Idrisids, Almoravids, Almohads, Marinids and Saadians (1509–1609). Verified against the Archives Marocaines series index.",
-  "Verification": null,
-  "Bias notes": "A Moroccan scholar of a Sufi family, writing from within the Makhzen's intellectual world, finishing in the year Hassan I died. He has his own commitments — dynastic legitimacy, the sharifian order, the propriety of the state. But the alternative currently in use across this workspace is French consular reporting, which has commitments too and fewer scruples about them.",
-  "Covers": "**The single most important Moroccan-authored source identified so far.** The first comprehensive *national* history of Morocco rather than a dynastic chronicle, running from the Muslim conquest of the Maghreb to the reign of Abdelaziz in 1894 — i.e. a contemporaneous Moroccan account of the whole of Phase II. Leví-Provençal noted it was the first Moroccan historical work to cite non-Muslim European sources; Gibb called it the 'last worthy representative' of traditional Arabic historiography."
- },
- {
-  "url": "https://app.notion.com/3be885d8804281fbad50d8d7bc191e79",
-  "Title": "كتاب الاستقصا — Arabic text, al-Maktaba al-Shamela",
-  "Author / producer": "Ahmad ibn Khalid al-Nasiri; edition of Ja'far al-Nasiri and Muhammad al-Nasiri",
-  "Date": "chronicle completed 1894; this edition Dar al-Kitab, Casablanca",
-  "Institution / publisher": "al-Maktaba al-Shamela (shamela.ws), book 6627",
-  "Language": [
-   "Arabic"
-  ],
-  "Tier": "PRIMARY_CONTEMPORARY",
-  "URL": "https://shamela.ws/book/6627",
-  "Archival reference": "Shamela book ID 6627. Fully browsable by volume, chapter and printed page number. The Shamela instance indexes three volumes running from the Islamic conquest through the Saadian period into the seventeenth century.",
-  "Verification": null,
-  "Bias notes": "The Moroccan author's own words, in Arabic, without a French translator between the reader and the text. His commitments — sharifian legitimacy, the propriety of the Makhzen order — are legible and declared. **A separate 8-part Moroccan scholarly edition exists**, annotated by Ahmad al-Nasiri with publication supervised by **Mohamed Hajji, Ibrahim Boutaleb and Ahmed Toufiq**, recorded in the National Library of Israel catalogue (record seen in search results; the catalogue page itself returned 403 and was not retrieved). That edition, not this one, is the scholarly standard.",
-  "Covers": "**The Arabic text is online and free.** The Shamela instance appears to end with the Saadians; the Alaouite and nineteenth-century volumes — the ones that matter most for Phase II — were not visible in its index and must be located separately. A separate Arabic printing of 1906, 427pp, is on Internet Archive as `kitabelistiqali01salgoog`."
- },
- {
-  "url": "https://app.notion.com/3be885d8804281fcb072c5cc290b7f84",
-  "Title": "Les origines de la guerre du Rif",
-  "Author / producer": "Germain Ayache",
-  "Date": "1981",
-  "Institution / publisher": "Publications de la Sorbonne (série internationale no. 19) and Société Marocaine des Éditeurs Réunis, Rabat. 374 pp.",
-  "Language": [
-   "French"
-  ],
-  "Tier": "ACADEMIC",
-  "URL": "https://archive.org/details/lesoriginesdelaguerredurifgermainayache",
-  "Archival reference": "Full text on Internet Archive, identifier `lesoriginesdelaguerredurifgermainayache`.",
-  "Verification": null,
-  "Bias notes": "**The founding work of a Moroccan national school of history.** Ayache — a Moroccan Jewish historian who taught in Rabat — wrote deliberately against colonial historiography, and is described in the literature as constituting a historical school in his own right. He has a position: that Moroccan society had its own political logic which colonial accounts systematically failed to see. That position is an argument, not a neutral vantage, and should be read as one.",
-  "Covers": "**The single most important secondary work for the Rif war from a Moroccan vantage**, and the counterpart to Balfour's *Deadly Embrace*, which reads the same war from Spain. Reading the two against each other is the obvious next step for Phase V. **Freely readable now.** The book's specific argument has not yet been extracted — the metadata page carries no summary and the full text was too large to retrieve in this session."
- },
- {
-  "url": "https://app.notion.com/3be885d880428113a65de450339225e0",
-  "Title": "Reconsidering the Rif Revolt (1958–1959)",
-  "Author / producer": "Nabil Mouline",
-  "Date": "2016",
-  "Institution / publisher": "Jadaliyya",
+  "url": "https://app.notion.com/p/3bd885d880428155ae90f302a751f345",
+  "Title": "Deadly Embrace: Morocco and the Road to the Spanish Civil War",
+  "Author / producer": "Sebastian Balfour",
+  "Date": "2002",
+  "Institution / publisher": "Oxford University Press",
   "Language": [
    "English"
   ],
   "Tier": "ACADEMIC",
-  "URL": "https://www.jadaliyya.com/Details/31718",
-  "Archival reference": "n/a — essay format; underlying sources not itemised in the accessible text.",
-  "Verification": null,
-  "Bias notes": "A short public-facing essay by a serious historian of Moroccan political power; the argument is careful but the evidentiary apparatus is not exposed, so figures taken from it should be treated as reported rather than documented.",
-  "Covers": "The 1958–59 Rif revolt: causes in post-independence economic collapse and elite capture by French-zone Istiqlal figures; Mohammed Sallam Ameziane as director; c. 20,000 troops deployed, described as **four-fifths of the royal army**; Prince Moulay Hassan directing, Oufkir on the ground; c. 1,000 soldiers killed and **the massacre of 400 inhabitants at Beni Hadifa**; and Hassan II's 1984 remark to northern Moroccans that they 'have previously known the violence of the crown prince; it will be best for them not to know that of the king's.'"
+  "URL": null,
+  "Archival reference": "Built on Spanish, French and British archives; the source of the Berenguer 'con verdadera fruición' quotation used in this workspace.",
+  "Verification": "Cited by named scholar",
+  "Bias notes": "Rigorous and archive-based. Its thesis — that the Rif war formed the officer corps that made the 1936 coup — is an argument, well supported but an argument. Written from a Spanish-history vantage point; Moroccan agency is present but not the primary subject.",
+  "Covers": "Rif war; Spanish chemical weapons; the africanista officer corps; Annual; Abd el-Krim. The single most useful secondary work for Phase V.",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
  },
  {
-  "url": "https://app.notion.com/3be885d88042818f8d9bdba51f3c99e7",
-  "Title": "Archives Marocaines (series)",
-  "Author / producer": "Mission scientifique du Maroc",
-  "Date": "1904–1930s",
-  "Institution / publisher": "E. Leroux, Paris",
+  "url": "https://app.notion.com/p/3bd885d88042816c9f2ac74f2cfd0efd",
+  "Title": "Lords of the Atlas: The Rise and Fall of the House of Glaoua",
+  "Author / producer": "Gavin Maxwell",
+  "Date": "1966",
+  "Institution / publisher": "Longmans",
   "Language": [
-   "French",
-   "Arabic"
-  ],
-  "Tier": "PRIMARY_CONTEMPORARY",
-  "URL": "https://archive.org/details/history-morocco",
-  "Archival reference": "Volumes verified present on Internet Archive include I (1905), VI (1906), IX (1906), XIV (1908), XV (1909), XIX (1913, *Dawhat al-Nāshir* of Ibn ʿAskar), XX (1913, *Le Gharb*), XXI (1913), XXVII (1927, *Confréries religieuses au Maroc*), XXXIV (1917).",
-  "Verification": null,
-  "Bias notes": "**The archetype of colonial knowledge production**: French scholars translating and publishing the Moroccan textual tradition in the years the Protectorate was being established, in order to govern it. Its translations are usable; its framing and its selection are evidence about France, not about Morocco. Read exactly as the Bureau des Affaires Indigènes ethnography is read.",
-  "Covers": "French translations of Moroccan chronicles, biographical dictionaries, hagiographies and regional monographs — including al-Nasiri's *al-Istiqsā*. **Freely readable on Internet Archive**, which makes it the most accessible route to Moroccan textual sources currently identified."
- },
- {
-  "url": "https://app.notion.com/3be885d880428147ab82eba744c50492",
-  "Title": "Bataille Elhri (digitised document)",
-  "Author / producer": "Author not stated in the item metadata",
-  "Date": "uploaded 2021; subject 13 November 1914",
-  "Institution / publisher": "Internet Archive",
-  "Language": [
-   "French"
+   "English"
   ],
   "Tier": "SECONDARY",
-  "URL": "https://archive.org/details/bataille.-elhri",
-  "Archival reference": "Internet Archive identifier `bataille.-elhri`. 14.3 MB, scanned 600 DPI with OCR.",
-  "Verification": null,
-  "Bias notes": "**Authorship not established.** An unattributed scanned French-language text; until the author and publication are identified it cannot be tiered above SECONDARY, and any figure taken from it must be cross-checked. Flagged here so that a later researcher does not mistake a digitised object for a documented one.",
-  "Covers": "The battle of 13 November 1914 at El Herri, 15 km from Khénifra, in Zaian territory. Located during the Session 3 sweep of Internet Archive; **not yet read in full.**"
+  "URL": null,
+  "Archival reference": "n/a",
+  "Verification": "NOT YET VERIFIED",
+  "Bias notes": "The source of much of the English-language image of the Glaoua, and a book written with novelistic technique. Several of the most-repeated anecdotes — the 1893 Telouet rescue, the Krupp cannon, the details of El Glaoui's vice interests — trace back here. Compelling, influential, and not a substitute for documentation. Flag every claim that depends on it.",
+  "Covers": "Madani and Thami El Glaoui; the High Atlas; the 1953 deposition.",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
  },
  {
-  "url": "https://app.notion.com/3be885d88042812eb0efca0e02eaa9c1",
-  "Title": "Cahiers des Documents Historiques de la Résistance et de la Libération",
-  "Author / producer": "Haut Commissariat aux Anciens Résistants et Anciens Membres de l'Armée de Libération (HCAR)",
-  "Date": "series ongoing; the body in its current form dates from 11 January 2017",
-  "Institution / publisher": "HCAR, Rabat — Kingdom of Morocco",
+  "url": "https://app.notion.com/p/3bd885d8804281859ab0e10f5fad2251",
+  "Title": "Alta Comisaría de España en Marruecos (fonds record)",
+  "Author / producer": "Spanish High Commission in Morocco",
+  "Date": "1750–1979",
+  "Institution / publisher": "Archivo General de la Administración, Alcalá de Henares; catalogued in PARES",
   "Language": [
-   "Arabic",
+   "Spanish"
+  ],
+  "Tier": "PRIMARY_ARCHIVAL",
+  "URL": "http://pares.mcu.es/ParesBusquedas20/catalogo/description/167585",
+  "Archival reference": "AGA, Fondo África, 1.2.5.1 Órganos Centrales — Alta Comisaría de España en Marruecos. 4,990 cajas.",
+  "Verification": "Catalogue verified",
+  "Bias notes": "The administrative record of the Spanish protectorate, produced by it. Uses 'cabecilla', 'rebelde', 'bandido' as classifications of Moroccan political actors. Also contains the output of Moroccan officials in Spanish service — including Abd el-Krim before 1915.",
+  "Covers": "The core Spanish holding for the Rif war, the Jebala, Tetouan, northern nationalism, and the whole protectorate administration. Box-level references NOT YET VERIFIED.",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
+ },
+ {
+  "url": "https://app.notion.com/p/3bd885d8804281a38c2fc2d6c595e32e",
+  "Title": "SHD — Guide des sources sur le Maroc (sous-série GR 3H)",
+  "Author / producer": "Service historique de la Défense",
+  "Date": "guide consulted 2026; covers holdings 1877–1960",
+  "Institution / publisher": "SHD, Vincennes",
+  "Language": [
    "French"
   ],
   "Tier": "OFFICIAL",
-  "URL": "http://hcar.gov.ma/wp-content/uploads/2024/09/dafatere.pdf",
-  "Archival reference": "Thematic *cahiers*, each on a single topic. Verified contents include a cahier on **the Battle of El Herri, 13 November 1914**; **Moha ou Hammou Zayani**; **Zaïd Ou Hmad** (resistance leader, 1934–1936); Sultan Sidi Mohammed ben Youssef; and the Manifesto of Independence of 11 January 1944.",
-  "Verification": null,
-  "Bias notes": "**A Moroccan state body publishing the documentary record of the resistance — and therefore an official national memory project, not a neutral archive.** Its remit is to honour resisters and members of the Liberation Army; it selects accordingly. Read it exactly as the Résidence Générale files are read: for what it records, not for what it concludes. Note also that a body founded to commemorate resistance has an institutional interest in the resistance being continuous and national, which is precisely one of the contested points in this workspace.",
-  "Covers": "**The first Moroccan-side documentary treatment of El Herri identified in this project** — the workspace's flagship event, previously reconstructed entirely from French returns. Also the route to **Zaïd Ou Hmad**, whose dates of 1934–1936 confirm that armed resistance continued after the official end of 'pacification'. Coverage runs c. 1914–1954."
+  "URL": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/2020-04/Guide-Maroc.pdf",
+  "Archival reference": "Sous-série GR 3H, c. 3,000 articles. Commandement Supérieur 3H 314–752 (1st–4th bureaux; Fes, Meknes, Marrakech, Taza, Tadla, Oujda). Goums 3H 2375–2711 (1906–1958). Ministerial cabinet telegrams on Morocco in série N at 5N 39–64.",
+  "Verification": "Catalogue verified",
+  "Bias notes": "A finding aid produced by the institution that generated the records. It describes what France chose to keep and how France classified it — e.g. 'affaires indigènes', 'dissidence'. Its categories are evidence about the Protectorate's mind, not neutral description.",
+  "Covers": "The single most important French holding for Moroccan military and Affaires Indigènes history. Series-level ranges above are from the guide itself; individual carton references remain NOT YET VERIFIED.",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
  },
  {
-  "url": "https://app.notion.com/3be885d8804281c982a6fa8bdc2e9448",
-  "Title": "FRUS, Conferences at Washington and Casablanca 1941–1943, Document 376 — Roosevelt dinner party, 22 January 1943",
-  "Author / producer": "US Department of State, Office of the Historian",
-  "Date": "event 22 January 1943; volume published 1968",
-  "Institution / publisher": "Foreign Relations of the United States",
-  "Language": [
-   "English"
-  ],
-  "Tier": "OFFICIAL",
-  "URL": "https://history.state.gov/historicaldocuments/frus1941-43/d376",
-  "Archival reference": "FRUS, The Conferences at Washington, 1941–1942, and Casablanca, 1943, Document 376. Section: Friday, January 22, 1943 (ch9subch9).",
-  "Verification": null,
-  "Bias notes": "**The crucial fact about this document is what it is.** It is an *editorial note*, not a memorandum of conversation — which means the US government's own official documentary series states, in effect, that **no single official record of the Anfa dinner exists.** FRUS reconstructs it from Hopkins's notes, McCrea's sketch, Roosevelt's later press conference, and the memoirs of Elliott Roosevelt, Kenneth Pendar and Robert Murphy. Three of those five are memoirs.",
-  "Covers": "Attendance confirmed: the Sultan, his Grand Vizier, his Chief of Protocol, the Crown Prince, Churchill, **General Noguès** (Resident-General of Morocco) and Patton. Topics: Morocco's post-war economic development, possible American participation in it, and 'the colonial question as it applied to Morocco'. The note states Roosevelt expressed sympathy with Morocco's aspirations for independence. **It also records that Noguès had difficulty hearing the President's private conversation with the Sultan** — i.e. the Resident-General was present but excluded from the substance."
- },
- {
-  "url": "https://app.notion.com/3be885d88042816ab348d3d0ae997253",
-  "Title": "Hespéris-Tamuda",
-  "Author / producer": "Faculté des Lettres et des Sciences Humaines, Université Mohammed V, Rabat",
-  "Date": "Hespéris founded 1921; merged with the Spanish-language *Tamuda* in 1960; Arabic articles from 1991",
-  "Institution / publisher": "Université Mohammed V, Rabat. ISSN 0018-1005",
-  "Language": [
-   "Arabic",
-   "French",
-   "Spanish",
-   "English"
-  ],
-  "Tier": "ACADEMIC",
-  "URL": "https://hesperis-tamuda.com/",
-  "Archival reference": "Archive organised by decade, 1921–1929 through 2020–2025. Back runs also on Internet Archive (identifier `HespresTamuda`, arranged by year).",
-  "Verification": null,
-  "Bias notes": "**Its own history is the history of Moroccan historiography.** *Hespéris* was founded in 1921 as the organ of the French Institut des Hautes Études Marocaines — colonial scholarship in the service of the Protectorate. *Tamuda* was its Spanish-zone counterpart. Their 1960 merger under a Moroccan university, and the appearance of Arabic articles only from 1991, tracks the slow decolonisation of the field with unusual precision. **Volumes must therefore be dated before they are weighed.**",
-  "Covers": "The principal scholarly journal of Moroccan history for a century, in four languages. Indexed in Web of Science (ESCI, 2016) and Scopus (2024). **The obvious place to find Moroccan scholarship on every disputed point in this workspace.**"
- },
- {
-  "url": "https://app.notion.com/3be885d88042814b9832f62f995caff4",
-  "Title": "Les origines sociales et culturelles du nationalisme marocain, 1830–1912",
-  "Author / producer": "Abdallah Laroui",
-  "Date": "1977",
+  "url": "https://app.notion.com/p/3bd885d8804281b1b189f191f9b76cd0",
+  "Title": "Abdelkrim, Mémoires d'Abd el Krim",
+  "Author / producer": "Mohammed ben Abdelkrim El Khattabi; edited by J. Roger-Mathieu",
+  "Date": "1927",
   "Institution / publisher": "Paris",
   "Language": [
    "French"
   ],
+  "Tier": "PRIMARY_CONTEMPORARY",
+  "URL": null,
+  "Archival reference": "n/a — published memoir",
+  "Verification": "NOT YET VERIFIED",
+  "Bias notes": "Use with care. A Moroccan leader's account, produced in French, through a French editor, in the year after his surrender and while he was in French custody or exile. The mediation is heavy and the editorial agenda is not neutral. It is nonetheless one of very few first-person Moroccan sources for the Rif war.",
+  "Covers": "Abd el-Krim's own account of the Rif war and the Republic.",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
+ },
+ {
+  "url": "https://app.notion.com/p/3bd885d8804281b4930fdf78f1e39893",
+  "Title": "Inventaire des archives du Maroc — sous-série 3H",
+  "Author / producer": "Service historique de la Défense",
+  "Date": "inventory covers 1836–1963",
+  "Institution / publisher": "SHD, Vincennes",
+  "Language": [
+   "French"
+  ],
+  "Tier": "OFFICIAL",
+  "URL": "https://www.servicehistorique.sga.defense.gouv.fr/ark/1024809",
+  "Archival reference": "Organised geographically: Région de Marrakech (1916–1955); Territoire de Ouarzazate (1929–1956); Cercle du Dadès-Todhra (1936–1956); Cercle de Zagora (1928–1956); Territoire du Tadla (1909–1956). Personnel dossiers 1929–1956; confidential outgoing-mail registers from 1929.",
+  "Verification": "Catalogue verified",
+  "Bias notes": "Same caution as the guide. Note that the geographic hierarchy — région → cercle → bureau/annexe → chronological — is itself the shape of French administrative control, so the archive is easiest to search in the terms France used.",
+  "Covers": "Regional political reports, tribal intelligence, situation reports, indigenous affairs, operations, personnel. Essential for El Herri, the Zaian war, Bougafer and the pacification generally.",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
+ },
+ {
+  "url": "https://app.notion.com/p/3bd885d8804281c8b5c4e22b1a6fd970",
+  "Title": "Moroccan Resistance, Pan-Islam and German War Strategy, 1914–1918",
+  "Author / producer": "Edmund Burke III",
+  "Date": "1975",
+  "Institution / publisher": "Francia, vol. 3, pp. 434–464",
+  "Language": [
+   "English"
+  ],
   "Tier": "ACADEMIC",
   "URL": null,
-  "Archival reference": "n/a — monograph, originally his doctoral thesis.",
-  "Verification": null,
-  "Bias notes": "Laroui's scholarship is explicitly guided by a Marxist reading of history and a radical critique of culture, language and tradition. **He is the most influential Moroccan critic of colonial and orientalist historiography**, and his critique is itself a theoretical commitment rather than a neutral corrective.",
-  "Covers": "**Exactly the period this workspace calls Phase II — 1830 to 1912 — written by a Moroccan historian asking where Moroccan nationalism came from.** Directly relevant to the workspace's central causal argument about fiscal capture, the protection system and the collapse of Makhzen authority. Laroui (b. 1933, Azemmour; taught at Mohammed V, Rabat) also wrote *L'Histoire du Maghreb: un essai de synthèse* (1970) and *Le Maroc et Hassan II: un témoignage* (2005)."
+  "Archival reference": "Uses French and German archival material.",
+  "Verification": "Cited by named scholar",
+  "Bias notes": "The standard treatment of the German and Ottoman effort to raise Morocco against France during the First World War. Assesses that effort as largely ineffective — a judgement worth testing against German records directly.",
+  "Covers": "Zaian war context; German funding via Madrid (figures up to 600,000 pesetas a month appear in this literature); Ottoman training and propaganda; attempts to use Abdelaziz and Abdelhafid as figureheads.",
+  "Claims (as primary evidence)": [],
+  "Claims (as counter-evidence)": []
  },
  {
-  "url": "https://app.notion.com/3be885d880428114b79de27fb4608c44",
-  "Title": "Les sources inédites de l'histoire du Maroc de 1530 à 1845",
-  "Author / producer": "Henry, comte de Castries (1850–1927); continued by Pierre de Cenival and Philippe de Cossé-Brissac",
-  "Date": "from 1905",
-  "Institution / publisher": "E. Leroux, Paris",
+  "url": "https://app.notion.com/p/3bd885d8804281dbbd9ac11a1981b4f7",
+  "Title": "Expediente Picasso",
+  "Author / producer": "General Juan Picasso González",
+  "Date": "inquiry reported July 1922; published edition 1931",
+  "Institution / publisher": "Spanish Army / Cortes",
   "Language": [
-   "French",
-   "Spanish",
-   "English",
-   "Other"
+   "Spanish"
   ],
-  "Tier": "PRIMARY_ARCHIVAL",
-  "URL": "https://archive.org/details/pt05lessourcesindi02castuoft",
-  "Archival reference": "Series organised by holding country: *Archives et bibliothèques de France*, *d'Angleterre*, *d'Espagne*, *des Pays-Bas*, *du Portugal*. Multiple tomes per series. Volumes verified present on Gallica (Pays-Bas t.1–6; Angleterre série 1 t.1–2; France t.1) and on Internet Archive.",
-  "Verification": null,
-  "Bias notes": "A French colonial-era scholarly enterprise, begun in 1905 — the year of the Tangier crisis — and continued through the Protectorate. **Selecting and publishing the European documentary record of Morocco was itself part of establishing a European claim to know the country.** But the documents reproduced are transcribed in the original, which makes the collection usable against the intentions of its editors.",
-  "Covers": "**The entry point to Phase I and early Phase II, which this workspace had left entirely empty.** Diplomatic and commercial documents on Morocco, 1530–1845, drawn from five European national archives and published in the original languages with French apparatus. Freely readable on Gallica and Internet Archive."
- },
- {
-  "url": "https://app.notion.com/3be885d880428122b59ee8fa14ab9f19",
-  "Title": "Wandering Minstrels and Epic Poetry from Morocco's Berber Highlands",
-  "Author / producer": "Michael Peyron",
-  "Date": "2023",
-  "Institution / publisher": "Tamazgha Studies Journal, Fall 2023, issue 01",
-  "Language": [
-   "English",
-   "Tamazight"
+  "Tier": "OFFICIAL",
+  "URL": null,
+  "Archival reference": "The inquiry file into the Annual disaster. Location and completeness of the original NOT YET VERIFIED by this project.",
+  "Verification": "Cited by named scholar",
+  "Bias notes": "A state investigating its own catastrophe, under political constraint. It named military failings and was structurally unable to reach the crown. Its casualty total of 13,363 is the highest in circulation and is the most inclusive definition, not necessarily the most accurate.",
+  "Covers": "Annual, July–August 1921: command failures, positions, testimony, casualty returns. The primary documentary base for the disaster.",
+  "Claims (as primary evidence)": [
+   "https://app.notion.com/p/3bf885d8804281bea498c5bc39a03858"
   ],
-  "Tier": "ACADEMIC",
-  "URL": "https://www.tamazghastudiesjournal.org/articles-fall2023-issue-01-article13",
-  "Archival reference": "Fieldwork 2005–2007; earlier collections 1974–1988. Collaborators named: **Arsène Roux, Fatima Kadiri, Rkia Mountassir, Jeanine Drouin**.",
-  "Verification": null,
-  "Bias notes": "A European scholar of Middle Atlas Amazigh tradition, working with Moroccan collaborators. The corpus is oral and was collected decades after the events it describes; it is strong evidence of experience and community memory, and weak evidence of chronology and number — the workspace's standing rule for oral tradition applies unchanged.",
-  "Covers": "The Amazigh counter-archive this project has repeatedly flagged as missing. Genres: ***tamdyazt*** and ***tayffart***, ballads of forty couplets or more, performed by travelling bards (***imdyazn***) under a *ššix*, with fiddle, tambourine and the reed-flute player (*bu wɣanim*) who doubled as scout and clown. **A resistance-poetry corpus covering the anti-French campaigns of 1908–1936 exists and has been collected.** Named poets include **Rwisha** (Khenifra, active c. 1984), **Hmad Waqqa** (Ayt Yahya) and the poetess **Tawkhettalt** of Tizi n-Isly. The most celebrated ballads commemorate the **Battle of Tazigzawt (1932)**, where c. 1,000 fighters faced two French divisions."
+  "Claims (as counter-evidence)": []
  }
 ]

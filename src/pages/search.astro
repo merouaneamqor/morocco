@@ -71,7 +71,17 @@ const TYPE_LABEL: Record<string, string> = {
     </noscript>
   </div>
 
-  <script define:vars={{ index }}>
+  <script type="application/json" data-search-index set:html={JSON.stringify(index)} />
+
+  <script>
+    // A module script, not define:vars, so the ranking rule can be imported
+    // rather than copied. The copy is what drifts.
+    import { scoreRecord } from '../lib/search-rank.mjs';
+
+    const index = JSON.parse(
+      document.querySelector('[data-search-index]')?.textContent || '[]'
+    );
+
     // Same folding rule as the build-time indexer, so both sides of every
     // comparison are folded and matching is symmetric.
     const NON_DECOMPOSABLE = {
@@ -99,20 +109,7 @@ const TYPE_LABEL: Record<string, string> = {
       archive: 'Archive', place: 'Place', group: 'Group',
     };
 
-    function score(rec, q) {
-      let best = 0;
-      for (const term of rec.folded) {
-        if (term === q) return 100;
-        if (term.startsWith(q)) best = Math.max(best, 70);
-        else if (term.includes(q)) best = Math.max(best, 45);
-      }
-      // Arabic-script terms are not folded to Latin — transliteration is a
-      // scholarly act, not a string operation — so they match directly.
-      for (const term of rec.terms) {
-        if (term.includes(q)) best = Math.max(best, 60);
-      }
-      return best;
-    }
+
 
     function run() {
       const raw = qEl.value.trim();
@@ -128,7 +125,7 @@ const TYPE_LABEL: Record<string, string> = {
 
       const hits = index
         .filter((r) => (!type || r.type === type) && (!phase || (r.phase || []).includes(phase)))
-        .map((r) => ({ r, s: score(r, q) }))
+        .map((r) => ({ r, s: scoreRecord(r, q, raw) }))
         .filter((x) => x.s > 0)
         .sort((a, b) => b.s - a.s || a.r.title.localeCompare(b.r.title))
         .slice(0, 60);

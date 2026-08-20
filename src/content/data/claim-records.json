@@ -1,5 +1,92 @@
 [
  {
+  "slug": "oufkir-died-by-suicide-on-the-evening-of-16-august-1972",
+  "notionId": "3bf885d88042811d8142d604e1e7b577",
+  "claim": "Oufkir died by suicide on the evening of 16 August 1972",
+  "confidence": "Disputed",
+  "evidenceLayer": "Secondary interpretation",
+  "phase": "IX 1961-1999",
+  "whatTheDocumentSays": "Not yet consulted directly — no autopsy or official death record has been read by this project.",
+  "interpretation": "This is the official cause of death recorded by the Moroccan state.",
+  "counterEvidence": "His daughter Malika Oufkir has described multiple gunshot wounds — reported variously as three to the back and one to the neck, or wounds across several organs — which she and others argue are difficult to reconcile with self-infliction.",
+  "whySourcesDisagree": "The state that benefited from Oufkir's removal is also the sole source of the official cause of death — a structural conflict of interest that neither confirms nor disproves the suicide account by itself.",
+  "archivalReference": "ARCHIVAL REFERENCE NOT YET VERIFIED.",
+  "lastReviewed": "2026-08-17",
+  "primaryEvidence": [],
+  "counterEvidenceSources": [],
+  "archives": [],
+  "people": [
+   "mohamed-oufkir"
+  ],
+  "events": [
+   "the-aviators-plot-attack-on-hassan-ii-s-boeing-16-august-1972"
+  ],
+  "disputes": [
+   "manner-of-mohamed-oufkir-s-death-16-august-1972"
+  ],
+  "openQuestions": []
+ },
+ {
+  "slug": "oufkir-orchestrated-the-16-august-1972-attack-on-hassan-ii-s-boeing",
+  "notionId": "3bf885d8804281e7be75f535d7ecae8c",
+  "claim": "Oufkir orchestrated the 16 August 1972 attack on Hassan II's Boeing",
+  "confidence": "Highly probable",
+  "evidenceLayer": "Secondary interpretation",
+  "phase": "IX 1961-1999",
+  "whatTheDocumentSays": "Not yet consulted directly — no military-tribunal record or primary document has been read by this project.",
+  "interpretation": "Six independent secondary and encyclopedic sources consulted (English and French Wikipedia, TelQuel, Médias24, Aujourd'hui le Maroc) converge on Oufkir, then defence minister, as the plot's principal organiser, with Kenitra air base commander Mohammed Amekrane and pilot Kouera el-Ouafi as operational executors.",
+  "counterEvidence": "His exact motive is not established. Accounts speculate variously that he opposed monarchical corruption or feared his own removal after a suspicious helicopter incident in May 1972 — neither explanation has been checked against a primary source by this project.",
+  "whySourcesDisagree": "Not disagreement so much as convergence on attribution with divergence on motive — a distinction worth preserving rather than collapsing into one tidy explanation.",
+  "archivalReference": "ARCHIVAL REFERENCE NOT YET VERIFIED. A researcher would request the 1972 military tribunal records (220 Kenitra air base personnel were prosecuted) and any surviving Défense-ministry correspondence.",
+  "lastReviewed": "2026-08-17",
+  "primaryEvidence": [
+   "1972-moroccan-coup-attempt-wikipedia",
+   "coup-d-etat-des-aviateurs-wikipedia-french",
+   "failed-coup-of-august-16-1972-the-account-of-king-hassan-ii-s-bodyguard-telquel",
+   "une-nouvelle-video-sur-la-tentative-de-coup-d-etat-du-16-aout-1972-medias24"
+  ],
+  "counterEvidenceSources": [],
+  "archives": [],
+  "people": [
+   "mohamed-oufkir",
+   "mohammed-amekrane",
+   "kouera-el-ouafi"
+  ],
+  "events": [
+   "the-aviators-plot-attack-on-hassan-ii-s-boeing-16-august-1972"
+  ],
+  "disputes": [],
+  "openQuestions": []
+ },
+ {
+  "slug": "the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables",
+  "notionId": "3bf885d880428172a567e92cf0c82b51",
+  "claim": "The August 1953 decision to depose Mohammed V originated in Paris, with Resident-General Guillaume, or with El Glaoui and the notables",
+  "confidence": "Disputed",
+  "evidenceLayer": "Secondary interpretation",
+  "phase": "VII 1944-1956",
+  "whatTheDocumentSays": "Not yet consulted directly.",
+  "interpretation": "Three candidate loci of decision are in circulation and this workspace has not established which, because the request that would settle it has not been consulted.",
+  "counterEvidence": "None yet catalogued — this is an evidentiary gap, not a case of conflicting documents.",
+  "whySourcesDisagree": "Each tradition tends to place responsibility with the actor least sympathetic to it: French administrative memory emphasises El Glaoui's initiative; Moroccan nationalist memory emphasises French orchestration.",
+  "archivalReference": "ARCHIVAL REFERENCE NOT YET VERIFIED. A researcher would request the Résidence Générale–Paris correspondence, May–August 1953, Archives diplomatiques de Nantes, Protectorat Maroc.",
+  "lastReviewed": "2026-08-17",
+  "primaryEvidence": [],
+  "counterEvidenceSources": [],
+  "archives": [],
+  "people": [
+   "mohammed-v",
+   "thami-el-glaoui"
+  ],
+  "events": [
+   "deposition-exile-and-return-of-mohammed-v"
+  ],
+  "disputes": [
+   "who-decided-the-1953-deposition-of-mohammed-v"
+  ],
+  "openQuestions": []
+ },
+ {
   "slug": "el-herri-13-november-1914-zaian-dead-numbered-182",
   "notionId": "3bf885d8804281969c3cedf26ca73e5e",
   "claim": "El Herri, 13 November 1914: Zaian dead numbered 182",
@@ -23,6 +110,31 @@
   ],
   "disputes": [
    "zaian-dead-at-el-herri-13-november-1914"
+  ],
+  "openQuestions": []
+ },
+ {
+  "slug": "casablanca-july-august-1907-bombardment-and-occupation-killed-roughly-600-to-3-000",
+  "notionId": "3bf885d88042819885baed9888c17b7a",
+  "claim": "Casablanca, July–August 1907: bombardment and occupation killed roughly 600 to 3,000+",
+  "confidence": "Disputed",
+  "evidenceLayer": "Primary source",
+  "phase": "III 1900-1912",
+  "whatTheDocumentSays": "Not yet consulted directly.",
+  "interpretation": "The range is itself evidence of the reporting institutions' incentives: French sources undercount to minimise the scandal of shelling a port city; German sources, for whom embarrassing France served Berlin's interests during the 1905–1911 crisis period, run three to five times higher.",
+  "counterEvidence": "Moroccan-side figures, where cited at all, run higher still. This workspace has not yet located a Moroccan primary count.",
+  "whySourcesDisagree": "French 600–1,500; German 2,000–3,000; Moroccan reporting higher still. No party to the event was a disinterested counter.",
+  "archivalReference": "ARCHIVAL REFERENCE NOT YET VERIFIED. A researcher would request SHD Marine naval and ministerial orders for July 1907, and contemporary press via Gallica (Le Temps, L'Illustration).",
+  "lastReviewed": "2026-08-17",
+  "primaryEvidence": [],
+  "counterEvidenceSources": [],
+  "archives": [],
+  "people": [],
+  "events": [
+   "casablanca-1907-killings-bombardment-and-occupation"
+  ],
+  "disputes": [
+   "casablanca-1907-deaths"
   ],
   "openQuestions": []
  },
@@ -56,31 +168,6 @@
   ]
  },
  {
-  "slug": "casablanca-july-august-1907-bombardment-and-occupation-killed-roughly-600-to-3-000",
-  "notionId": "3bf885d88042819885baed9888c17b7a",
-  "claim": "Casablanca, July–August 1907: bombardment and occupation killed roughly 600 to 3,000+",
-  "confidence": "Disputed",
-  "evidenceLayer": "Primary source",
-  "phase": "III 1900-1912",
-  "whatTheDocumentSays": "Not yet consulted directly.",
-  "interpretation": "The range is itself evidence of the reporting institutions' incentives: French sources undercount to minimise the scandal of shelling a port city; German sources, for whom embarrassing France served Berlin's interests during the 1905–1911 crisis period, run three to five times higher.",
-  "counterEvidence": "Moroccan-side figures, where cited at all, run higher still. This workspace has not yet located a Moroccan primary count.",
-  "whySourcesDisagree": "French 600–1,500; German 2,000–3,000; Moroccan reporting higher still. No party to the event was a disinterested counter.",
-  "archivalReference": "ARCHIVAL REFERENCE NOT YET VERIFIED. A researcher would request SHD Marine naval and ministerial orders for July 1907, and contemporary press via Gallica (Le Temps, L'Illustration).",
-  "lastReviewed": "2026-08-17",
-  "primaryEvidence": [],
-  "counterEvidenceSources": [],
-  "archives": [],
-  "people": [],
-  "events": [
-   "casablanca-1907-killings-bombardment-and-occupation"
-  ],
-  "disputes": [
-   "casablanca-1907-deaths"
-  ],
-  "openQuestions": []
- },
- {
   "slug": "mouha-ou-hammou-zayani-was-killed-by-his-own-son-hassan",
   "notionId": "3bf885d8804281c0bfeff084b8de02d1",
   "claim": "Mouha ou Hammou Zayani was killed by his own son Hassan",
@@ -102,34 +189,6 @@
   "events": [],
   "disputes": [
    "mouha-ou-hammou-zayani-s-death"
-  ],
-  "openQuestions": []
- },
- {
-  "slug": "the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables",
-  "notionId": "3bf885d880428172a567e92cf0c82b51",
-  "claim": "The August 1953 decision to depose Mohammed V originated in Paris, with Resident-General Guillaume, or with El Glaoui and the notables",
-  "confidence": "Disputed",
-  "evidenceLayer": "Secondary interpretation",
-  "phase": "VII 1944-1956",
-  "whatTheDocumentSays": "Not yet consulted directly.",
-  "interpretation": "Three candidate loci of decision are in circulation and this workspace has not established which, because the request that would settle it has not been consulted.",
-  "counterEvidence": "None yet catalogued — this is an evidentiary gap, not a case of conflicting documents.",
-  "whySourcesDisagree": "Each tradition tends to place responsibility with the actor least sympathetic to it: French administrative memory emphasises El Glaoui's initiative; Moroccan nationalist memory emphasises French orchestration.",
-  "archivalReference": "ARCHIVAL REFERENCE NOT YET VERIFIED. A researcher would request the Résidence Générale–Paris correspondence, May–August 1953, Archives diplomatiques de Nantes, Protectorat Maroc.",
-  "lastReviewed": "2026-08-17",
-  "primaryEvidence": [],
-  "counterEvidenceSources": [],
-  "archives": [],
-  "people": [
-   "mohammed-v",
-   "thami-el-glaoui"
-  ],
-  "events": [
-   "deposition-exile-and-return-of-mohammed-v"
-  ],
-  "disputes": [
-   "who-decided-the-1953-deposition-of-mohammed-v"
   ],
   "openQuestions": []
  }

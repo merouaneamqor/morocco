@@ -5,6 +5,7 @@ import ClaimStatus from '../../components/ClaimStatus.astro';
 import AliasList from '../../components/AliasList.astro';
 import StatusFooter from '../../components/StatusFooter.astro';
 import RecordClaims from '../../components/RecordClaims.astro';
+import Assessment from '../../components/Assessment.astro';
 import claimsData from '../../content/data/claims.json';
 import { looksWithheld } from '../../lib/markers.mjs';
 
@@ -227,6 +228,12 @@ const headings = rendered ? rendered.headings.filter((h) => h.depth === 2) : [];
       }
     </aside>
   </div>
+
+  <Assessment
+    assessment={person.assessment}
+    impact={person.impact}
+    lastReviewed={person.lastReviewed}
+  />
 
   <RecordClaims
     claims={claimRecords}

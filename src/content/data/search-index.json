@@ -1,69 +1,214 @@
 [
  {
   "type": "person",
-  "slug": "mouha-ou-hammou-zayani",
-  "url": "/people/mouha-ou-hammou-zayani",
-  "title": "Mouha ou Hammou Zayani",
-  "subtitle": "Qaid of the Zaian confederation, appointed by the Makhzen in the 1870s–80s; led the Zaian war against France 1914–1921 and commanded at El Herri.",
+  "slug": "kouera-el-ouafi",
+  "url": "/people/kouera-el-ouafi",
+  "title": "Kouera el-Ouafi",
+  "subtitle": "Moroccan Air Force officer who led the F-5 fighter attack on Hassan II's Boeing on 16 August 1972.",
   "terms": [
-   "Mouha ou Hammou Zayani",
-   "Muḥa u Ḥemmu Aẓayyi",
-   "Moha ou Hammou",
-   "Mouha ou Hammou Zaïani / Zaïani / Zayani",
-   "Moha ou Hammou Azayi",
-   "Moha ou Hammou",
-   "le caïd Hammou",
-   "Hammou des Zaïanes",
-   "le chef zaïan",
-   "Mohamed Hammou",
-   "el caíd Hammu",
-   "los zayanes",
-   "محا أو حمو الزياني"
+   "Kouera el-Ouafi",
+   "Kouera el-Ouafi",
+   "Louafi Kouera",
+   "Major/Commandant Kouera — word order and spelling vary across sources consulted; not resolved here"
   ],
   "folded": [
-   "mouha ou hammou zayani",
-   "muha u hemmu azayyi",
-   "moha ou hammou",
-   "mouha ou hammou zaiani / zaiani / zayani",
-   "moha ou hammou azayi",
-   "le caid hammou",
-   "hammou des zaianes",
-   "le chef zaian",
-   "mohamed hammou",
-   "el caid hammu",
-   "los zayanes",
-   "محا أو حمو الزياني"
+   "kouera el-ouafi",
+   "louafi kouera",
+   "major/commandant kouera — word order and spelling vary across sources consulted; not resolved here"
   ],
   "phase": [
-   "II 1830-1900",
-   "III 1900-1912",
-   "IV 1912-1921"
+   "IX 1961-1999"
   ],
-  "status": "Moderate - academic",
-  "dossierStatus": "Full dossier"
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
  },
  {
   "type": "person",
-  "slug": "abdelkhalek-torres",
-  "url": "/people/abdelkhalek-torres",
-  "title": "Abdelkhalek Torres",
-  "subtitle": "Leader of nationalism in the Spanish zone; founder of the Partido de Reformas Nacionales at Tetouan.",
+  "slug": "mohammed-amekrane",
+  "url": "/people/mohammed-amekrane",
+  "title": "Mohammed Amekrane",
+  "subtitle": "Kenitra air base commander who co-led the 16 August 1972 attack on Hassan II's Boeing; fled to Gibraltar, was extradited, and executed.",
   "terms": [
-   "Abdelkhalek Torres",
-   "عبد الخالق الطريس",
-   "Abdelkhalek Torres",
-   "Abd al-Khaliq al-Torres",
-   "Abdeljalak Torres"
+   "Mohammed Amekrane",
+   "Mohammed Amekrane",
+   "Mohamed Amokrane",
+   "Lieutenant-Colonel Amekrane"
   ],
   "folded": [
-   "abdelkhalek torres",
-   "عبد الخالق الطريس",
-   "abd al-khaliq al-torres",
-   "abdeljalak torres"
+   "mohammed amekrane",
+   "mohamed amokrane",
+   "lieutenant-colonel amekrane"
+  ],
+  "phase": [
+   "IX 1961-1999"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "mohammed-kabbaj-pilot",
+  "url": "/people/mohammed-kabbaj-pilot",
+  "title": "Mohammed Kabbaj (pilot)",
+  "subtitle": "Royal Air Maroc captain and the king's private pilot who flew Hassan II's Boeing 727 during the 16 August 1972 attack and landed it despite battle damage.",
+  "terms": [
+   "Mohammed Kabbaj (pilot)",
+   "Mohammed Kabbaj",
+   "commandant Kebbaj (French Wikipedia spelling)",
+   "commandant de bord Kabbaj"
+  ],
+  "folded": [
+   "mohammed kabbaj (pilot)",
+   "mohammed kabbaj",
+   "commandant kebbaj (french wikipedia spelling)",
+   "commandant de bord kabbaj"
+  ],
+  "phase": [
+   "IX 1961-1999"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "mohamed-medbouh",
+  "url": "/people/mohamed-medbouh",
+  "title": "Mohamed Medbouh",
+  "subtitle": "Moroccan general who led the 10 July 1971 Skhirat coup attempt against Hassan II.",
+  "terms": [
+   "Mohamed Medbouh",
+   "Mohamed Medbouh",
+   "General Medbouh"
+  ],
+  "folded": [
+   "mohamed medbouh",
+   "general medbouh"
+  ],
+  "phase": [
+   "IX 1961-1999"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "germain-ayache",
+  "url": "/people/germain-ayache",
+  "title": "Germain Ayache",
+  "subtitle": "Moroccan historian who founded a national school of Moroccan history written against colonial historiography; author of Les origines de la guerre du Rif.",
+  "terms": [
+   "Germain Ayache",
+   "Germain Ayache",
+   "جرمان عياش"
+  ],
+  "folded": [
+   "germain ayache",
+   "جرمان عياش"
+  ],
+  "phase": [
+   "IX 1961-1999"
+  ],
+  "status": "Moderate - academic",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "zaid-ou-hmad",
+  "url": "/people/zaid-ou-hmad",
+  "title": "Zaïd Ou Hmad",
+  "subtitle": "Resistance leader active 1934-1936, after the date France declared the pacification of Morocco complete.",
+  "terms": [
+   "Zaïd Ou Hmad",
+   "زايد أو حماد",
+   "Zayd u Hmad",
+   "Zaïd Ou Hmad"
+  ],
+  "folded": [
+   "zaid ou hmad",
+   "زايد أو حماد",
+   "zayd u hmad"
   ],
   "phase": [
    "V 1921-1934",
-   "VI 1934-1944",
+   "VI 1934-1944"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Identified - not yet researched"
+ },
+ {
+  "type": "person",
+  "slug": "abdallah-laroui",
+  "url": "/people/abdallah-laroui",
+  "title": "Abdallah Laroui",
+  "subtitle": "Moroccan historian and philosopher; the most influential critic of colonial and orientalist historiography of Morocco.",
+  "terms": [
+   "Abdallah Laroui",
+   "عبد الله العروي",
+   "Abdallah Laroui",
+   "Abdellah Laroui",
+   "al-ʿArwi"
+  ],
+  "folded": [
+   "abdallah laroui",
+   "عبد الله العروي",
+   "abdellah laroui",
+   "al-arwi"
+  ],
+  "phase": [
+   "IX 1961-1999",
+   "X 1999-present"
+  ],
+  "status": "Moderate - academic",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "ahmad-ibn-khalid-al-nasiri",
+  "url": "/people/ahmad-ibn-khalid-al-nasiri",
+  "title": "Ahmad ibn Khalid al-Nasiri",
+  "subtitle": "Moroccan historian; author of Kitab al-Istiqsa, the first comprehensive national history of Morocco, completed in 1894.",
+  "terms": [
+   "Ahmad ibn Khalid al-Nasiri",
+   "أحمد بن خالد الناصري",
+   "al-Nasiri al-Slawi",
+   "an-Nasiri",
+   "Ahmed Ben Khaled en-Naciri es-Slaoui",
+   "Ennaciri",
+   "An-Nasiri"
+  ],
+  "folded": [
+   "ahmad ibn khalid al-nasiri",
+   "أحمد بن خالد الناصري",
+   "al-nasiri al-slawi",
+   "an-nasiri",
+   "ahmed ben khaled en-naciri es-slaoui",
+   "ennaciri"
+  ],
+  "phase": [
+   "II 1830-1900"
+  ],
+  "status": "Moderate - academic",
+  "dossierStatus": "Substantial"
+ },
+ {
+  "type": "person",
+  "slug": "mohammed-sellam-ameziane",
+  "url": "/people/mohammed-sellam-ameziane",
+  "title": "Mohammed Sellam Ameziane",
+  "subtitle": "Qarawiyyin graduate and Liberation Army veteran who directed the 1958-59 Rif revolt against the independent Moroccan government.",
+  "terms": [
+   "Mohammed Sellam Ameziane",
+   "محمد سلام أمزيان",
+   "Sellam Amezian",
+   "Salam Amezyan"
+  ],
+  "folded": [
+   "mohammed sellam ameziane",
+   "محمد سلام أمزيان",
+   "sellam amezian",
+   "salam amezyan"
+  ],
+  "phase": [
    "VII 1944-1956",
    "VIII 1956-1961"
   ],
@@ -72,38 +217,74 @@
  },
  {
   "type": "person",
-  "slug": "moulay-hassan-i",
-  "url": "/people/moulay-hassan-i",
-  "title": "Moulay Hassan I",
-  "subtitle": "Alaouite sultan 1873–1894; attempted military and fiscal centralisation of the Makhzen under mounting European financial and territorial pressure.",
+  "slug": "samuel-gummere",
+  "url": "/people/samuel-gummere",
+  "title": "Samuel Gummere",
+  "subtitle": "American diplomat at Tangier during the Perdicaris affair of 1904 and the first US Minister to Morocco.",
   "terms": [
-   "Moulay Hassan I",
-   "الحسن بن محمد (al-Ḥasan ibn Muḥammad)",
-   "Mawlay al-Hasan al-Awwal",
-   "Moulay Hassan I",
-   "Mulay Hasan",
-   "Muley Hassan (Sp.)",
-   "Mouley el-Hassan (Fr. consular usage)",
-   "Abū ʿAlī al-Ḥasan ibn Muḥammad",
-   "the last great sultan (historiographical epithet",
-   "not contemporary)"
+   "Samuel Gummere",
+   "Samuel Rene Gummere",
+   "Consul-General then Minister to Morocco"
   ],
   "folded": [
-   "moulay hassan i",
-   "الحسن بن محمد (al-hasan ibn muhammad)",
-   "mawlay al-hasan al-awwal",
-   "mulay hasan",
-   "muley hassan (sp.)",
-   "mouley el-hassan (fr. consular usage)",
-   "abu ali al-hasan ibn muhammad",
-   "the last great sultan (historiographical epithet",
-   "not contemporary)"
+   "samuel gummere",
+   "samuel rene gummere",
+   "consul-general then minister to morocco"
   ],
   "phase": [
-   "II 1830-1900"
+   "III 1900-1912"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "taher-bey",
+  "url": "/people/taher-bey",
+  "title": "Taher Bey",
+  "subtitle": "Ottoman major who headed the Teşkilât-ı Mahsusa mission to Morocco from Madrid, 1914–1916.",
+  "terms": [
+   "Taher Bey",
+   "Tahir Bey",
+   "Taher Bey",
+   "Yanyalı Tahir Bey",
+   "the name appears as both Tahir and Taher in the two principal studies"
+  ],
+  "folded": [
+   "taher bey",
+   "tahir bey",
+   "yanyali tahir bey",
+   "the name appears as both tahir and taher in the two principal studies"
+  ],
+  "phase": [
+   "III 1900-1912",
+   "IV 1912-1921"
   ],
   "status": "Moderate - academic",
-  "dossierStatus": "Full dossier"
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "salah-sharif-at-tunisi",
+  "url": "/people/salah-sharif-at-tunisi",
+  "title": "Salah Sharif at-Tunisi",
+  "subtitle": "Tunisian scholar who wrote the pan-Islamic propaganda distributed in Morocco during the First World War.",
+  "terms": [
+   "Salah Sharif at-Tunisi",
+   "صالح الشريف التونسي",
+   "Salah Sharif at-Tunisi",
+   "Salih al-Sharif al-Tunisi"
+  ],
+  "folded": [
+   "salah sharif at-tunisi",
+   "صالح الشريف التونسي",
+   "salih al-sharif al-tunisi"
+  ],
+  "phase": [
+   "IV 1912-1921"
+  ],
+  "status": "Moderate - academic",
+  "dossierStatus": "Stub"
  },
  {
   "type": "person",
@@ -137,6 +318,895 @@
   ],
   "status": "Moderate - academic",
   "dossierStatus": "Substantial"
+ },
+ {
+  "type": "person",
+  "slug": "harry-maclean",
+  "url": "/people/harry-maclean",
+  "title": "Harry Maclean",
+  "subtitle": "Scottish officer who commanded and trained the Moroccan sultan's army from the 1870s to 1907; kidnapped by Raisuni.",
+  "terms": [
+   "Harry Maclean",
+   "Harry Aubrey de Vere Maclean",
+   "Caid Maclean",
+   "Kaid Sir Harry Maclean",
+   "القائد ماكلين"
+  ],
+  "folded": [
+   "harry maclean",
+   "harry aubrey de vere maclean",
+   "caid maclean",
+   "kaid sir harry maclean",
+   "القائد ماكلين"
+  ],
+  "phase": [
+   "II 1830-1900",
+   "III 1900-1912"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "hugo-stoltzenberg",
+  "url": "/people/hugo-stoltzenberg",
+  "title": "Hugo Stoltzenberg",
+  "subtitle": "German chemist who supplied Spain with chemical weapons capability for the Rif war, in breach of the Versailles Treaty.",
+  "terms": [
+   "Hugo Stoltzenberg",
+   "Hugo Stoltzenberg",
+   "Chemische Fabrik Stoltzenberg, Hamburg"
+  ],
+  "folded": [
+   "hugo stoltzenberg",
+   "chemische fabrik stoltzenberg, hamburg"
+  ],
+  "phase": [
+   "V 1921-1934"
+  ],
+  "status": "Moderate - academic",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "shakib-arslan",
+  "url": "/people/shakib-arslan",
+  "title": "Shakib Arslan",
+  "subtitle": "Druze-Lebanese pan-Islamic publicist based in Geneva who internationalised the Moroccan campaign against the 1930 Berber dahir.",
+  "terms": [
+   "Shakib Arslan",
+   "شكيب أرسلان",
+   "Shakib Arslan",
+   "amīr al-bayān",
+   "lémir Chekib Arslan"
+  ],
+  "folded": [
+   "shakib arslan",
+   "شكيب أرسلان",
+   "amir al-bayan",
+   "lemir chekib arslan"
+  ],
+  "phase": [
+   "V 1921-1934",
+   "VI 1934-1944"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "juan-picasso-gonzalez",
+  "url": "/people/juan-picasso-gonzalez",
+  "title": "Juan Picasso González",
+  "subtitle": "Spanish general appointed to investigate the Annual disaster; author of the inquiry that remains the primary documentary base for it.",
+  "terms": [
+   "Juan Picasso González",
+   "Juan Picasso González",
+   "el general Picasso",
+   "the Expediente Picasso"
+  ],
+  "folded": [
+   "juan picasso gonzalez",
+   "el general picasso",
+   "the expediente picasso"
+  ],
+  "phase": [
+   "V 1921-1934"
+  ],
+  "status": "Moderate - academic",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "si-madani-el-glaoui",
+  "url": "/people/si-madani-el-glaoui",
+  "title": "Si Madani El Glaoui",
+  "subtitle": "Elder brother of Thami; head of the Glaoua, grand vizier under Abdelhafid, and the actual architect of the family's rise.",
+  "terms": [
+   "Si Madani El Glaoui",
+   "المدني الڣلاوي",
+   "Si Madani el Glaoui",
+   "El Madani",
+   "le grand vizir El Madani"
+  ],
+  "folded": [
+   "si madani el glaoui",
+   "المدني الڣلاوي",
+   "el madani",
+   "le grand vizir el madani"
+  ],
+  "phase": [
+   "II 1830-1900",
+   "III 1900-1912",
+   "IV 1912-1921"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "maurice-le-glay",
+  "url": "/people/maurice-le-glay",
+  "title": "Maurice Le Glay",
+  "subtitle": "Officer of Affaires Indigènes, Berberist ethnographer and writer; named in the literature as an author of the policy behind the 1930 dahir.",
+  "terms": [
+   "Maurice Le Glay",
+   "Maurice Le Glay",
+   "le contrôleur civil Le Glay"
+  ],
+  "folded": [
+   "maurice le glay",
+   "le controleur civil le glay"
+  ],
+  "phase": [
+   "IV 1912-1921",
+   "V 1921-1934"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "damaso-berenguer",
+  "url": "/people/damaso-berenguer",
+  "title": "Dámaso Berenguer",
+  "subtitle": "High Commissioner in Morocco 1919–1922; found negligent by the Expediente Picasso and the author of the documented authorisation of chemical munitions.",
+  "terms": [
+   "Dámaso Berenguer",
+   "Dámaso Berenguer y Fusté, conde de Xauen",
+   "el Alto Comisario"
+  ],
+  "folded": [
+   "damaso berenguer",
+   "damaso berenguer y fuste, conde de xauen",
+   "el alto comisario"
+  ],
+  "phase": [
+   "IV 1912-1921",
+   "V 1921-1934"
+  ],
+  "status": "Moderate - academic",
+  "dossierStatus": "Substantial"
+ },
+ {
+  "type": "person",
+  "slug": "francisco-franco",
+  "url": "/people/francisco-franco",
+  "title": "Francisco Franco",
+  "subtitle": "Made his career in the Rif war; commanded the Legion at Alhucemas; launched the 1936 coup from Morocco with Moroccan troops.",
+  "terms": [
+   "Francisco Franco",
+   "Francisco Franco Bahamonde",
+   "el Caudillo",
+   "Franco"
+  ],
+  "folded": [
+   "francisco franco",
+   "francisco franco bahamonde",
+   "el caudillo",
+   "franco"
+  ],
+  "phase": [
+   "IV 1912-1921",
+   "V 1921-1934",
+   "VI 1934-1944",
+   "VII 1944-1956"
+  ],
+  "status": "Moderate - academic",
+  "dossierStatus": "Substantial"
+ },
+ {
+  "type": "person",
+  "slug": "miguel-primo-de-rivera",
+  "url": "/people/miguel-primo-de-rivera",
+  "title": "Miguel Primo de Rivera",
+  "subtitle": "Dictator of Spain 1923–1930; came to power on the Annual crisis and directed the war that destroyed the Rif Republic.",
+  "terms": [
+   "Miguel Primo de Rivera",
+   "Miguel Primo de Rivera y Orbaneja, marqués de Estella",
+   "el Dictador"
+  ],
+  "folded": [
+   "miguel primo de rivera",
+   "miguel primo de rivera y orbaneja, marques de estella",
+   "el dictador"
+  ],
+  "phase": [
+   "V 1921-1934"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "alfonso-xiii",
+  "url": "/people/alfonso-xiii",
+  "title": "Alfonso XIII",
+  "subtitle": "King of Spain 1886–1931; his reign covers the whole Spanish protectorate project and the Annual disaster that helped end it.",
+  "terms": [
+   "Alfonso XIII",
+   "Alfonso XIII de Borbón",
+   "el Rey Alfonso"
+  ],
+  "folded": [
+   "alfonso xiii",
+   "alfonso xiii de borbon",
+   "el rey alfonso"
+  ],
+  "phase": [
+   "III 1900-1912",
+   "IV 1912-1921",
+   "V 1921-1934"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "jose-sanjurjo",
+  "url": "/people/jose-sanjurjo",
+  "title": "José Sanjurjo",
+  "subtitle": "Africanista commander in the Rif war, ennobled as marqués del Rif; nominal leader of the July 1936 coup, killed in an air crash days into it.",
+  "terms": [
+   "José Sanjurjo",
+   "José Sanjurjo Sacanell, marqués del Rif",
+   "el León del Rif"
+  ],
+  "folded": [
+   "jose sanjurjo",
+   "jose sanjurjo sacanell, marques del rif",
+   "el leon del rif"
+  ],
+  "phase": [
+   "V 1921-1934",
+   "VI 1934-1944"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "manuel-fernandez-silvestre",
+  "url": "/people/manuel-fernandez-silvestre",
+  "title": "Manuel Fernández Silvestre",
+  "subtitle": "Comandante General of Melilla; drove the advance that collapsed at Annual in July 1921 and died there.",
+  "terms": [
+   "Manuel Fernández Silvestre",
+   "Manuel Fernández Silvestre y Pantiga",
+   "el general Silvestre"
+  ],
+  "folded": [
+   "manuel fernandez silvestre",
+   "manuel fernandez silvestre y pantiga",
+   "el general silvestre"
+  ],
+  "phase": [
+   "III 1900-1912",
+   "IV 1912-1921"
+  ],
+  "status": "Contested",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "alphonse-juin",
+  "url": "/people/alphonse-juin",
+  "title": "Alphonse Juin",
+  "subtitle": "Resident-General 1947–1951; confronted Mohammed V directly and began the campaign to isolate him from the Istiqlal.",
+  "terms": [
+   "Alphonse Juin",
+   "Alphonse Pierre Juin",
+   "Maréchal Juin"
+  ],
+  "folded": [
+   "alphonse juin",
+   "alphonse pierre juin",
+   "marechal juin"
+  ],
+  "phase": [
+   "VII 1944-1956"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "philippe-petain",
+  "url": "/people/philippe-petain",
+  "title": "Philippe Pétain",
+  "subtitle": "Sent to Morocco in 1925 with authority over Lyautey to defeat Abd el-Krim; later head of the Vichy state.",
+  "terms": [
+   "Philippe Pétain",
+   "Henri Philippe Bénoni Omer Joseph Pétain",
+   "Maréchal Pétain"
+  ],
+  "folded": [
+   "philippe petain",
+   "henri philippe benoni omer joseph petain",
+   "marechal petain"
+  ],
+  "phase": [
+   "V 1921-1934",
+   "VI 1934-1944"
+  ],
+  "status": "Moderate - academic",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "henri-gouraud",
+  "url": "/people/henri-gouraud",
+  "title": "Henri Gouraud",
+  "subtitle": "Commanded in Mauritania against Ma al-'Aynayn's networks and in Morocco from 1911; later High Commissioner in the Levant.",
+  "terms": [
+   "Henri Gouraud",
+   "Henri Joseph Eugène Gouraud",
+   "Général Gouraud",
+   "le manchot (after losing an arm at Gallipoli)"
+  ],
+  "folded": [
+   "henri gouraud",
+   "henri joseph eugene gouraud",
+   "general gouraud",
+   "le manchot (after losing an arm at gallipoli)"
+  ],
+  "phase": [
+   "III 1900-1912",
+   "IV 1912-1921"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "augustin-guillaume",
+  "url": "/people/augustin-guillaume",
+  "title": "Augustin Guillaume",
+  "subtitle": "Resident-General 1951–1954; executed the deposition and exile of Mohammed V in August 1953.",
+  "terms": [
+   "Augustin Guillaume",
+   "Augustin Léon Guillaume",
+   "Général Guillaume"
+  ],
+  "folded": [
+   "augustin guillaume",
+   "augustin leon guillaume",
+   "general guillaume"
+  ],
+  "phase": [
+   "VII 1944-1956"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "eugene-regnault",
+  "url": "/people/eugene-regnault",
+  "title": "Eugène Regnault",
+  "subtitle": "French minister at Tangier who negotiated and signed the Treaty of Fez with Moulay Abdelhafid on 30 March 1912.",
+  "terms": [
+   "Eugène Regnault",
+   "Eugène Regnault",
+   "le ministre Regnault"
+  ],
+  "folded": [
+   "eugene regnault",
+   "le ministre regnault"
+  ],
+  "phase": [
+   "III 1900-1912"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "charles-mangin",
+  "url": "/people/charles-mangin",
+  "title": "Charles Mangin",
+  "subtitle": "Commanded the column that destroyed Ahmed al-Hiba at Sidi Bou Othmane, 6 September 1912; advocate of the 'Force Noire'.",
+  "terms": [
+   "Charles Mangin",
+   "Charles Marie Emmanuel Mangin",
+   "Fr. press: le boucher",
+   "the Butcher"
+  ],
+  "folded": [
+   "charles mangin",
+   "charles marie emmanuel mangin",
+   "fr. press: le boucher",
+   "the butcher"
+  ],
+  "phase": [
+   "III 1900-1912",
+   "IV 1912-1921"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "paul-prosper-henrys",
+  "url": "/people/paul-prosper-henrys",
+  "title": "Paul Prosper Henrys",
+  "subtitle": "Commanded French forces in the Middle Atlas from 1914; took Taza and Khénifra and directed the Zaian war after El Herri.",
+  "terms": [
+   "Paul Prosper Henrys",
+   "Paul Prosper Henrys",
+   "Général Henrys"
+  ],
+  "folded": [
+   "paul prosper henrys",
+   "general henrys"
+  ],
+  "phase": [
+   "IV 1912-1921"
+  ],
+  "status": "Moderate - academic",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "joseph-francois-poeymirau",
+  "url": "/people/joseph-francois-poeymirau",
+  "title": "Joseph-François Poeymirau",
+  "subtitle": "Succeeded Henrys in the Middle Atlas; established French control of the Moulouya and received the submission of Mouha ou Hammou's sons in 1920.",
+  "terms": [
+   "Joseph-François Poeymirau",
+   "Joseph-François Poeymirau",
+   "Général Poeymirau",
+   "Poeymirau le fougueux"
+  ],
+  "folded": [
+   "joseph-francois poeymirau",
+   "general poeymirau",
+   "poeymirau le fougueux"
+  ],
+  "phase": [
+   "IV 1912-1921"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "joseph-gallieni",
+  "url": "/people/joseph-gallieni",
+  "title": "Joseph Gallieni",
+  "subtitle": "Colonial commander in Sudan, Tonkin and Madagascar; Lyautey's mentor and the originator of the doctrine applied in Morocco.",
+  "terms": [
+   "Joseph Gallieni",
+   "Joseph-Simon Gallieni",
+   "Maréchal Gallieni (posthumous, 1921)"
+  ],
+  "folded": [
+   "joseph gallieni",
+   "joseph-simon gallieni",
+   "marechal gallieni (posthumous, 1921)"
+  ],
+  "phase": [
+   "II 1830-1900",
+   "III 1900-1912",
+   "IV 1912-1921"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "rene-laverdure",
+  "url": "/people/rene-laverdure",
+  "title": "René Laverdure",
+  "subtitle": "Commander at Khénifra; marched without orders on 13 November 1914 and was killed with 623 of his men at El Herri.",
+  "terms": [
+   "René Laverdure",
+   "René Laverdure",
+   "Lieutenant-colonel Laverdure"
+  ],
+  "folded": [
+   "rene laverdure",
+   "lieutenant-colonel laverdure"
+  ],
+  "phase": [
+   "IV 1912-1921"
+  ],
+  "status": "Moderate - academic",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "mohamed-oufkir",
+  "url": "/people/mohamed-oufkir",
+  "title": "Mohamed Oufkir",
+  "subtitle": "French army officer who became interior minister and defence minister; central to the repression of the 1960s and to the Ben Barka affair; died after the 1972 coup attempt.",
+  "terms": [
+   "Mohamed Oufkir",
+   "محمد أوفقير",
+   "Mohamed Oufkir",
+   "General Oufkir"
+  ],
+  "folded": [
+   "mohamed oufkir",
+   "محمد أوفقير",
+   "general oufkir"
+  ],
+  "phase": [
+   "VII 1944-1956",
+   "VIII 1956-1961",
+   "IX 1961-1999"
+  ],
+  "status": "Contested",
+  "dossierStatus": "Substantial"
+ },
+ {
+  "type": "person",
+  "slug": "abdelhadi-boutaleb",
+  "url": "/people/abdelhadi-boutaleb",
+  "title": "Abdelhadi Boutaleb",
+  "subtitle": "Tutor to Hassan II, minister, ambassador and secretary-general of the Organisation of the Islamic Conference; a memoirist of the palace.",
+  "terms": [
+   "Abdelhadi Boutaleb",
+   "عبد الهادي بوطالب",
+   "Abdelhadi Boutaleb"
+  ],
+  "folded": [
+   "abdelhadi boutaleb",
+   "عبد الهادي بوطالب"
+  ],
+  "phase": [
+   "VII 1944-1956",
+   "VIII 1956-1961",
+   "IX 1961-1999"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "ahmed-bahnini",
+  "url": "/people/ahmed-bahnini",
+  "title": "Ahmed Bahnini",
+  "subtitle": "Jurist and prime minister 1963–1965; killed in the Skhirat palace attack of 10 July 1971.",
+  "terms": [
+   "Ahmed Bahnini",
+   "أحمد باحنيني",
+   "Ahmed Bahnini"
+  ],
+  "folded": [
+   "ahmed bahnini",
+   "أحمد باحنيني"
+  ],
+  "phase": [
+   "VIII 1956-1961",
+   "IX 1961-1999"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "ahmed-dlimi",
+  "url": "/people/ahmed-dlimi",
+  "title": "Ahmed Dlimi",
+  "subtitle": "Security chief and later commander of Moroccan forces in the Western Sahara; implicated in the Ben Barka affair; died in disputed circumstances in 1983.",
+  "terms": [
+   "Ahmed Dlimi",
+   "أحمد الدليمي",
+   "Ahmed Dlimi",
+   "General Dlimi"
+  ],
+  "folded": [
+   "ahmed dlimi",
+   "أحمد الدليمي",
+   "general dlimi"
+  ],
+  "phase": [
+   "IX 1961-1999"
+  ],
+  "status": "Contested",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "driss-basri",
+  "url": "/people/driss-basri",
+  "title": "Driss Basri",
+  "subtitle": "Interior minister 1979–1999; the operational architect of Hassan II's internal control system and of the Western Sahara administration.",
+  "terms": [
+   "Driss Basri",
+   "إدريس البصري",
+   "Driss Basri"
+  ],
+  "folded": [
+   "driss basri",
+   "إدريس البصري"
+  ],
+  "phase": [
+   "IX 1961-1999",
+   "X 1999-present"
+  ],
+  "status": "Contested",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "abdelkhalek-torres",
+  "url": "/people/abdelkhalek-torres",
+  "title": "Abdelkhalek Torres",
+  "subtitle": "Leader of nationalism in the Spanish zone; founder of the Partido de Reformas Nacionales at Tetouan.",
+  "terms": [
+   "Abdelkhalek Torres",
+   "عبد الخالق الطريس",
+   "Abdelkhalek Torres",
+   "Abd al-Khaliq al-Torres",
+   "Abdeljalak Torres"
+  ],
+  "folded": [
+   "abdelkhalek torres",
+   "عبد الخالق الطريس",
+   "abd al-khaliq al-torres",
+   "abdeljalak torres"
+  ],
+  "phase": [
+   "V 1921-1934",
+   "VI 1934-1944",
+   "VII 1944-1956",
+   "VIII 1956-1961"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "abdallah-ibrahim",
+  "url": "/people/abdallah-ibrahim",
+  "title": "Abdallah Ibrahim",
+  "subtitle": "Prime minister 1958–1960; led the only government of independent Morocco to attempt a socialist economic programme.",
+  "terms": [
+   "Abdallah Ibrahim",
+   "عبد الله إبراهيم",
+   "Abdallah Ibrahim",
+   "Abdellah Ibrahim"
+  ],
+  "folded": [
+   "abdallah ibrahim",
+   "عبد الله إبراهيم",
+   "abdellah ibrahim"
+  ],
+  "phase": [
+   "VII 1944-1956",
+   "VIII 1956-1961"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "m-barek-bekkay",
+  "url": "/people/m-barek-bekkay",
+  "title": "M'barek Bekkay",
+  "subtitle": "French army officer who resigned as pasha of Sefrou over the 1953 deposition and became independent Morocco's first prime minister.",
+  "terms": [
+   "M'barek Bekkay",
+   "المبارك البكاي",
+   "MBarek Bekkai Lahbil",
+   "Si Bekkay",
+   "le colonel Bekkay"
+  ],
+  "folded": [
+   "m'barek bekkay",
+   "المبارك البكاي",
+   "mbarek bekkai lahbil",
+   "si bekkay",
+   "le colonel bekkay"
+  ],
+  "phase": [
+   "VI 1934-1944",
+   "VII 1944-1956",
+   "VIII 1956-1961"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "mohamed-lyazidi",
+  "url": "/people/mohamed-lyazidi",
+  "title": "Mohamed Lyazidi",
+  "subtitle": "Nationalist organiser from the 1930 anti-dahir campaign onward; signatory of the 1944 Independence Manifesto.",
+  "terms": [
+   "Mohamed Lyazidi",
+   "محمد اليزيدي",
+   "Mohamed Lyazidi",
+   "al-Yazidi"
+  ],
+  "folded": [
+   "mohamed lyazidi",
+   "محمد اليزيدي",
+   "al-yazidi"
+  ],
+  "phase": [
+   "V 1921-1934",
+   "VI 1934-1944",
+   "VII 1944-1956"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "abderrahmane-youssoufi",
+  "url": "/people/abderrahmane-youssoufi",
+  "title": "Abderrahmane Youssoufi",
+  "subtitle": "Resistance lawyer, UNFP/USFP leader, death-sentenced in absentia and long exiled; prime minister of the 1998 alternance government.",
+  "terms": [
+   "Abderrahmane Youssoufi",
+   "عبد الرحمن اليوسفي",
+   "Abderrahmane Youssoufi"
+  ],
+  "folded": [
+   "abderrahmane youssoufi",
+   "عبد الرحمن اليوسفي"
+  ],
+  "phase": [
+   "VII 1944-1956",
+   "VIII 1956-1961",
+   "IX 1961-1999",
+   "X 1999-present"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "abderrahim-bouabid",
+  "url": "/people/abderrahim-bouabid",
+  "title": "Abderrahim Bouabid",
+  "subtitle": "Istiqlal then UNFP/USFP leader; economics minister at independence and the principal figure of the legal opposition until his death.",
+  "terms": [
+   "Abderrahim Bouabid",
+   "عبد الرحيم بوعبيد",
+   "Abderrahim Bouabid"
+  ],
+  "folded": [
+   "abderrahim bouabid",
+   "عبد الرحيم بوعبيد"
+  ],
+  "phase": [
+   "VII 1944-1956",
+   "VIII 1956-1961",
+   "IX 1961-1999"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "ahmed-balafrej",
+  "url": "/people/ahmed-balafrej",
+  "title": "Ahmed Balafrej",
+  "subtitle": "Istiqlal secretary-general and drafter of the 1944 Independence Manifesto; first foreign minister of independent Morocco.",
+  "terms": [
+   "Ahmed Balafrej",
+   "أحمد بلفريج",
+   "Ahmed Balafrej",
+   "Balafrej"
+  ],
+  "folded": [
+   "ahmed balafrej",
+   "أحمد بلفريج",
+   "balafrej"
+  ],
+  "phase": [
+   "V 1921-1934",
+   "VI 1934-1944",
+   "VII 1944-1956",
+   "VIII 1956-1961"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "mohamed-hassan-ouazzani",
+  "url": "/people/mohamed-hassan-ouazzani",
+  "title": "Mohamed Hassan Ouazzani",
+  "subtitle": "Nationalist leader and journalist; split from Allal El Fassi in 1937 to found a rival party, and remained outside Istiqlal thereafter.",
+  "terms": [
+   "Mohamed Hassan Ouazzani",
+   "محمد بن الحسن الوزاني",
+   "Ouazzani",
+   "Wazzani",
+   "El Ouezzani"
+  ],
+  "folded": [
+   "mohamed hassan ouazzani",
+   "محمد بن الحسن الوزاني",
+   "ouazzani",
+   "wazzani",
+   "el ouezzani"
+  ],
+  "phase": [
+   "V 1921-1934",
+   "VI 1934-1944",
+   "VII 1944-1956",
+   "IX 1961-1999"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "mehdi-ben-barka",
+  "url": "/people/mehdi-ben-barka",
+  "title": "Mehdi Ben Barka",
+  "subtitle": "Mathematician, Istiqlal then UNFP leader and Tricontinental organiser; abducted in Paris in 1965 and never seen again.",
+  "terms": [
+   "Mehdi Ben Barka",
+   "المهدي بن بركة",
+   "Mehdi Ben Barka",
+   "El Mehdi Ben Barka"
+  ],
+  "folded": [
+   "mehdi ben barka",
+   "المهدي بن بركة",
+   "el mehdi ben barka"
+  ],
+  "phase": [
+   "VII 1944-1956",
+   "VIII 1956-1961",
+   "IX 1961-1999"
+  ],
+  "status": "Contested",
+  "dossierStatus": "Substantial"
+ },
+ {
+  "type": "person",
+  "slug": "allal-el-fassi",
+  "url": "/people/allal-el-fassi",
+  "title": "Allal El Fassi",
+  "subtitle": "Salafi scholar and founder-leader of the Istiqlal party; the dominant intellectual figure of Moroccan nationalism.",
+  "terms": [
+   "Allal El Fassi",
+   "علال الفاسي",
+   "Allal al-Fassi",
+   "Allal el Fassi"
+  ],
+  "folded": [
+   "allal el fassi",
+   "علال الفاسي",
+   "allal al-fassi"
+  ],
+  "phase": [
+   "V 1921-1934",
+   "VI 1934-1944",
+   "VII 1944-1956",
+   "VIII 1956-1961",
+   "IX 1961-1999"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
  },
  {
   "type": "person",
@@ -199,174 +1269,6 @@
  },
  {
   "type": "person",
-  "slug": "abderrahim-bouabid",
-  "url": "/people/abderrahim-bouabid",
-  "title": "Abderrahim Bouabid",
-  "subtitle": "Istiqlal then UNFP/USFP leader; economics minister at independence and the principal figure of the legal opposition until his death.",
-  "terms": [
-   "Abderrahim Bouabid",
-   "عبد الرحيم بوعبيد",
-   "Abderrahim Bouabid"
-  ],
-  "folded": [
-   "abderrahim bouabid",
-   "عبد الرحيم بوعبيد"
-  ],
-  "phase": [
-   "VII 1944-1956",
-   "VIII 1956-1961",
-   "IX 1961-1999"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "hassan-ii",
-  "url": "/people/hassan-ii",
-  "title": "Hassan II",
-  "subtitle": "King 1961–1999; presided over the Years of Lead, two coup attempts, the Green March and the Western Sahara war.",
-  "terms": [
-   "Hassan II",
-   "الحسن الثاني",
-   "Moulay Hassan ben Mohammed",
-   "Hassan II"
-  ],
-  "folded": [
-   "hassan ii",
-   "الحسن الثاني",
-   "moulay hassan ben mohammed"
-  ],
-  "phase": [
-   "VIII 1956-1961",
-   "IX 1961-1999"
-  ],
-  "status": "Contested",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "alphonse-juin",
-  "url": "/people/alphonse-juin",
-  "title": "Alphonse Juin",
-  "subtitle": "Resident-General 1947–1951; confronted Mohammed V directly and began the campaign to isolate him from the Istiqlal.",
-  "terms": [
-   "Alphonse Juin",
-   "Alphonse Pierre Juin",
-   "Maréchal Juin"
-  ],
-  "folded": [
-   "alphonse juin",
-   "alphonse pierre juin",
-   "marechal juin"
-  ],
-  "phase": [
-   "VII 1944-1956"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "mohamed-oufkir",
-  "url": "/people/mohamed-oufkir",
-  "title": "Mohamed Oufkir",
-  "subtitle": "French army officer who became interior minister and defence minister; central to the repression of the 1960s and to the Ben Barka affair; died after the 1972 coup attempt.",
-  "terms": [
-   "Mohamed Oufkir",
-   "محمد أوفقير",
-   "Mohamed Oufkir",
-   "General Oufkir"
-  ],
-  "folded": [
-   "mohamed oufkir",
-   "محمد أوفقير",
-   "general oufkir"
-  ],
-  "phase": [
-   "VII 1944-1956",
-   "VIII 1956-1961",
-   "IX 1961-1999"
-  ],
-  "status": "Contested",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "charles-mangin",
-  "url": "/people/charles-mangin",
-  "title": "Charles Mangin",
-  "subtitle": "Commanded the column that destroyed Ahmed al-Hiba at Sidi Bou Othmane, 6 September 1912; advocate of the 'Force Noire'.",
-  "terms": [
-   "Charles Mangin",
-   "Charles Marie Emmanuel Mangin",
-   "Fr. press: le boucher",
-   "the Butcher"
-  ],
-  "folded": [
-   "charles mangin",
-   "charles marie emmanuel mangin",
-   "fr. press: le boucher",
-   "the butcher"
-  ],
-  "phase": [
-   "III 1900-1912",
-   "IV 1912-1921"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "harry-maclean",
-  "url": "/people/harry-maclean",
-  "title": "Harry Maclean",
-  "subtitle": "Scottish officer who commanded and trained the Moroccan sultan's army from the 1870s to 1907; kidnapped by Raisuni.",
-  "terms": [
-   "Harry Maclean",
-   "Harry Aubrey de Vere Maclean",
-   "Caid Maclean",
-   "Kaid Sir Harry Maclean",
-   "القائد ماكلين"
-  ],
-  "folded": [
-   "harry maclean",
-   "harry aubrey de vere maclean",
-   "caid maclean",
-   "kaid sir harry maclean",
-   "القائد ماكلين"
-  ],
-  "phase": [
-   "II 1830-1900",
-   "III 1900-1912"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "samuel-gummere",
-  "url": "/people/samuel-gummere",
-  "title": "Samuel Gummere",
-  "subtitle": "American diplomat at Tangier during the Perdicaris affair of 1904 and the first US Minister to Morocco.",
-  "terms": [
-   "Samuel Gummere",
-   "Samuel Rene Gummere",
-   "Consul-General then Minister to Morocco"
-  ],
-  "folded": [
-   "samuel gummere",
-   "samuel rene gummere",
-   "consul-general then minister to morocco"
-  ],
-  "phase": [
-   "III 1900-1912"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
   "slug": "bou-hamara",
   "url": "/people/bou-hamara",
   "title": "Bou Hamara",
@@ -399,71 +1301,49 @@
  },
  {
   "type": "person",
-  "slug": "mohammed-ben-abdelkrim-el-khattabi",
-  "url": "/people/mohammed-ben-abdelkrim-el-khattabi",
-  "title": "Mohammed ben Abdelkrim El Khattabi",
-  "subtitle": "Qadi and Spanish-administration official who led the Rif war 1921–1926 and headed the Rif Republic; the most heavily documented Moroccan resistance figure in European archives.",
+  "slug": "sidi-mohamed-ben-hammou-identification-unresolved",
+  "url": "/people/sidi-mohamed-ben-hammou-identification-unresolved",
+  "title": "Sidi Mohamed Ben Hammou — identification unresolved",
+  "subtitle": "A name requiring identification before any biography can be written.",
   "terms": [
-   "Mohammed ben Abdelkrim El Khattabi",
-   "محمد بن عبد الكريم الخطابي",
-   "Abd el-Krim",
-   "Abd-el-Krim",
-   "Abdelkrim",
-   "Abd al-Karim al-Khattabi",
-   "Sp. archives: Abd-el-Krim",
-   "el cabecilla",
-   "el jefe rebelde",
-   "lémir du Rif",
-   "Muḥemmed n ʿEbdkrim Lxṭṭabi"
+   "Sidi Mohamed Ben Hammou — identification unresolved"
   ],
   "folded": [
-   "mohammed ben abdelkrim el khattabi",
-   "محمد بن عبد الكريم الخطابي",
-   "abd el-krim",
-   "abd-el-krim",
-   "abdelkrim",
-   "abd al-karim al-khattabi",
-   "sp. archives: abd-el-krim",
-   "el cabecilla",
-   "el jefe rebelde",
-   "lemir du rif",
-   "muhemmed n ebdkrim lxttabi"
+   "sidi mohamed ben hammou — identification unresolved"
+  ],
+  "phase": [
+   "IV 1912-1921"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Identified - not yet researched"
+ },
+ {
+  "type": "person",
+  "slug": "moha-ou-said",
+  "url": "/people/moha-ou-said",
+  "title": "Moha ou Said",
+  "subtitle": "Aït Ouirra leader who fought France from before 1912 until his death in 1924, outlasting the Zaian war by three years.",
+  "terms": [
+   "Moha ou Said",
+   "محا أو سعيد",
+   "Moha ou Saïd",
+   "Mouha ou Said",
+   "Moha u Saʿid",
+   "Moha ou Saïd, chef des Aït Ouirra"
+  ],
+  "folded": [
+   "moha ou said",
+   "محا أو سعيد",
+   "mouha ou said",
+   "moha u said",
+   "moha ou said, chef des ait ouirra"
   ],
   "phase": [
    "III 1900-1912",
    "IV 1912-1921",
-   "V 1921-1934",
-   "VI 1934-1944",
-   "VII 1944-1956",
-   "VIII 1956-1961"
+   "V 1921-1934"
   ],
-  "status": "Strong - archival + academic",
-  "dossierStatus": "Full dossier"
- },
- {
-  "type": "person",
-  "slug": "taher-bey",
-  "url": "/people/taher-bey",
-  "title": "Taher Bey",
-  "subtitle": "Ottoman major who headed the Teşkilât-ı Mahsusa mission to Morocco from Madrid, 1914–1916.",
-  "terms": [
-   "Taher Bey",
-   "Tahir Bey",
-   "Taher Bey",
-   "Yanyalı Tahir Bey",
-   "the name appears as both Tahir and Taher in the two principal studies"
-  ],
-  "folded": [
-   "taher bey",
-   "tahir bey",
-   "yanyali tahir bey",
-   "the name appears as both tahir and taher in the two principal studies"
-  ],
-  "phase": [
-   "III 1900-1912",
-   "IV 1912-1921"
-  ],
-  "status": "Moderate - academic",
+  "status": "Thin - encyclopedic leads only",
   "dossierStatus": "Stub"
  },
  {
@@ -493,431 +1373,6 @@
  },
  {
   "type": "person",
-  "slug": "moulay-youssef",
-  "url": "/people/moulay-youssef",
-  "title": "Moulay Youssef",
-  "subtitle": "Sultan 1912–1927; installed by Lyautey after Abdelhafid's abdication and reigned throughout the pacification wars.",
-  "terms": [
-   "Moulay Youssef",
-   "يوسف بن الحسن",
-   "Yusef of Morocco",
-   "Moulay Youssef ben Hassan"
-  ],
-  "folded": [
-   "moulay youssef",
-   "يوسف بن الحسن",
-   "yusef of morocco",
-   "moulay youssef ben hassan"
-  ],
-  "phase": [
-   "IV 1912-1921",
-   "V 1921-1934"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "ahmed-balafrej",
-  "url": "/people/ahmed-balafrej",
-  "title": "Ahmed Balafrej",
-  "subtitle": "Istiqlal secretary-general and drafter of the 1944 Independence Manifesto; first foreign minister of independent Morocco.",
-  "terms": [
-   "Ahmed Balafrej",
-   "أحمد بلفريج",
-   "Ahmed Balafrej",
-   "Balafrej"
-  ],
-  "folded": [
-   "ahmed balafrej",
-   "أحمد بلفريج",
-   "balafrej"
-  ],
-  "phase": [
-   "V 1921-1934",
-   "VI 1934-1944",
-   "VII 1944-1956",
-   "VIII 1956-1961"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "hugo-stoltzenberg",
-  "url": "/people/hugo-stoltzenberg",
-  "title": "Hugo Stoltzenberg",
-  "subtitle": "German chemist who supplied Spain with chemical weapons capability for the Rif war, in breach of the Versailles Treaty.",
-  "terms": [
-   "Hugo Stoltzenberg",
-   "Hugo Stoltzenberg",
-   "Chemische Fabrik Stoltzenberg, Hamburg"
-  ],
-  "folded": [
-   "hugo stoltzenberg",
-   "chemische fabrik stoltzenberg, hamburg"
-  ],
-  "phase": [
-   "V 1921-1934"
-  ],
-  "status": "Moderate - academic",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "damaso-berenguer",
-  "url": "/people/damaso-berenguer",
-  "title": "Dámaso Berenguer",
-  "subtitle": "High Commissioner in Morocco 1919–1922; found negligent by the Expediente Picasso and the author of the documented authorisation of chemical munitions.",
-  "terms": [
-   "Dámaso Berenguer",
-   "Dámaso Berenguer y Fusté, conde de Xauen",
-   "el Alto Comisario"
-  ],
-  "folded": [
-   "damaso berenguer",
-   "damaso berenguer y fuste, conde de xauen",
-   "el alto comisario"
-  ],
-  "phase": [
-   "IV 1912-1921",
-   "V 1921-1934"
-  ],
-  "status": "Moderate - academic",
-  "dossierStatus": "Substantial"
- },
- {
-  "type": "person",
-  "slug": "philippe-petain",
-  "url": "/people/philippe-petain",
-  "title": "Philippe Pétain",
-  "subtitle": "Sent to Morocco in 1925 with authority over Lyautey to defeat Abd el-Krim; later head of the Vichy state.",
-  "terms": [
-   "Philippe Pétain",
-   "Henri Philippe Bénoni Omer Joseph Pétain",
-   "Maréchal Pétain"
-  ],
-  "folded": [
-   "philippe petain",
-   "henri philippe benoni omer joseph petain",
-   "marechal petain"
-  ],
-  "phase": [
-   "V 1921-1934",
-   "VI 1934-1944"
-  ],
-  "status": "Moderate - academic",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "abdelhadi-boutaleb",
-  "url": "/people/abdelhadi-boutaleb",
-  "title": "Abdelhadi Boutaleb",
-  "subtitle": "Tutor to Hassan II, minister, ambassador and secretary-general of the Organisation of the Islamic Conference; a memoirist of the palace.",
-  "terms": [
-   "Abdelhadi Boutaleb",
-   "عبد الهادي بوطالب",
-   "Abdelhadi Boutaleb"
-  ],
-  "folded": [
-   "abdelhadi boutaleb",
-   "عبد الهادي بوطالب"
-  ],
-  "phase": [
-   "VII 1944-1956",
-   "VIII 1956-1961",
-   "IX 1961-1999"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "paul-prosper-henrys",
-  "url": "/people/paul-prosper-henrys",
-  "title": "Paul Prosper Henrys",
-  "subtitle": "Commanded French forces in the Middle Atlas from 1914; took Taza and Khénifra and directed the Zaian war after El Herri.",
-  "terms": [
-   "Paul Prosper Henrys",
-   "Paul Prosper Henrys",
-   "Général Henrys"
-  ],
-  "folded": [
-   "paul prosper henrys",
-   "general henrys"
-  ],
-  "phase": [
-   "IV 1912-1921"
-  ],
-  "status": "Moderate - academic",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "mohamed-hassan-ouazzani",
-  "url": "/people/mohamed-hassan-ouazzani",
-  "title": "Mohamed Hassan Ouazzani",
-  "subtitle": "Nationalist leader and journalist; split from Allal El Fassi in 1937 to found a rival party, and remained outside Istiqlal thereafter.",
-  "terms": [
-   "Mohamed Hassan Ouazzani",
-   "محمد بن الحسن الوزاني",
-   "Ouazzani",
-   "Wazzani",
-   "El Ouezzani"
-  ],
-  "folded": [
-   "mohamed hassan ouazzani",
-   "محمد بن الحسن الوزاني",
-   "ouazzani",
-   "wazzani",
-   "el ouezzani"
-  ],
-  "phase": [
-   "V 1921-1934",
-   "VI 1934-1944",
-   "VII 1944-1956",
-   "IX 1961-1999"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "abdallah-ibrahim",
-  "url": "/people/abdallah-ibrahim",
-  "title": "Abdallah Ibrahim",
-  "subtitle": "Prime minister 1958–1960; led the only government of independent Morocco to attempt a socialist economic programme.",
-  "terms": [
-   "Abdallah Ibrahim",
-   "عبد الله إبراهيم",
-   "Abdallah Ibrahim",
-   "Abdellah Ibrahim"
-  ],
-  "folded": [
-   "abdallah ibrahim",
-   "عبد الله إبراهيم",
-   "abdellah ibrahim"
-  ],
-  "phase": [
-   "VII 1944-1956",
-   "VIII 1956-1961"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "joseph-francois-poeymirau",
-  "url": "/people/joseph-francois-poeymirau",
-  "title": "Joseph-François Poeymirau",
-  "subtitle": "Succeeded Henrys in the Middle Atlas; established French control of the Moulouya and received the submission of Mouha ou Hammou's sons in 1920.",
-  "terms": [
-   "Joseph-François Poeymirau",
-   "Joseph-François Poeymirau",
-   "Général Poeymirau",
-   "Poeymirau le fougueux"
-  ],
-  "folded": [
-   "joseph-francois poeymirau",
-   "general poeymirau",
-   "poeymirau le fougueux"
-  ],
-  "phase": [
-   "IV 1912-1921"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "m-barek-bekkay",
-  "url": "/people/m-barek-bekkay",
-  "title": "M'barek Bekkay",
-  "subtitle": "French army officer who resigned as pasha of Sefrou over the 1953 deposition and became independent Morocco's first prime minister.",
-  "terms": [
-   "M'barek Bekkay",
-   "المبارك البكاي",
-   "MBarek Bekkai Lahbil",
-   "Si Bekkay",
-   "le colonel Bekkay"
-  ],
-  "folded": [
-   "m'barek bekkay",
-   "المبارك البكاي",
-   "mbarek bekkai lahbil",
-   "si bekkay",
-   "le colonel bekkay"
-  ],
-  "phase": [
-   "VI 1934-1944",
-   "VII 1944-1956",
-   "VIII 1956-1961"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "henri-gouraud",
-  "url": "/people/henri-gouraud",
-  "title": "Henri Gouraud",
-  "subtitle": "Commanded in Mauritania against Ma al-'Aynayn's networks and in Morocco from 1911; later High Commissioner in the Levant.",
-  "terms": [
-   "Henri Gouraud",
-   "Henri Joseph Eugène Gouraud",
-   "Général Gouraud",
-   "le manchot (after losing an arm at Gallipoli)"
-  ],
-  "folded": [
-   "henri gouraud",
-   "henri joseph eugene gouraud",
-   "general gouraud",
-   "le manchot (after losing an arm at gallipoli)"
-  ],
-  "phase": [
-   "III 1900-1912",
-   "IV 1912-1921"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "mehdi-ben-barka",
-  "url": "/people/mehdi-ben-barka",
-  "title": "Mehdi Ben Barka",
-  "subtitle": "Mathematician, Istiqlal then UNFP leader and Tricontinental organiser; abducted in Paris in 1965 and never seen again.",
-  "terms": [
-   "Mehdi Ben Barka",
-   "المهدي بن بركة",
-   "Mehdi Ben Barka",
-   "El Mehdi Ben Barka"
-  ],
-  "folded": [
-   "mehdi ben barka",
-   "المهدي بن بركة",
-   "el mehdi ben barka"
-  ],
-  "phase": [
-   "VII 1944-1956",
-   "VIII 1956-1961",
-   "IX 1961-1999"
-  ],
-  "status": "Contested",
-  "dossierStatus": "Substantial"
- },
- {
-  "type": "person",
-  "slug": "augustin-guillaume",
-  "url": "/people/augustin-guillaume",
-  "title": "Augustin Guillaume",
-  "subtitle": "Resident-General 1951–1954; executed the deposition and exile of Mohammed V in August 1953.",
-  "terms": [
-   "Augustin Guillaume",
-   "Augustin Léon Guillaume",
-   "Général Guillaume"
-  ],
-  "folded": [
-   "augustin guillaume",
-   "augustin leon guillaume",
-   "general guillaume"
-  ],
-  "phase": [
-   "VII 1944-1956"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "shakib-arslan",
-  "url": "/people/shakib-arslan",
-  "title": "Shakib Arslan",
-  "subtitle": "Druze-Lebanese pan-Islamic publicist based in Geneva who internationalised the Moroccan campaign against the 1930 Berber dahir.",
-  "terms": [
-   "Shakib Arslan",
-   "شكيب أرسلان",
-   "Shakib Arslan",
-   "amīr al-bayān",
-   "lémir Chekib Arslan"
-  ],
-  "folded": [
-   "shakib arslan",
-   "شكيب أرسلان",
-   "amir al-bayan",
-   "lemir chekib arslan"
-  ],
-  "phase": [
-   "V 1921-1934",
-   "VI 1934-1944"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "juan-picasso-gonzalez",
-  "url": "/people/juan-picasso-gonzalez",
-  "title": "Juan Picasso González",
-  "subtitle": "Spanish general appointed to investigate the Annual disaster; author of the inquiry that remains the primary documentary base for it.",
-  "terms": [
-   "Juan Picasso González",
-   "Juan Picasso González",
-   "el general Picasso",
-   "the Expediente Picasso"
-  ],
-  "folded": [
-   "juan picasso gonzalez",
-   "el general picasso",
-   "the expediente picasso"
-  ],
-  "phase": [
-   "V 1921-1934"
-  ],
-  "status": "Moderate - academic",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "thami-el-glaoui",
-  "url": "/people/thami-el-glaoui",
-  "title": "Thami El Glaoui",
-  "subtitle": "Pasha of Marrakech 1907–1956 and the Protectorate's principal Moroccan intermediary in the south; central actor in the 1953 deposition of Mohammed V.",
-  "terms": [
-   "Thami El Glaoui",
-   "التهامي الڣلاوي",
-   "Thami el Glaoui",
-   "Thami El Glaoui",
-   "Si Thami",
-   "le Glaoui",
-   "the Lord of the Atlas (English literary coinage",
-   "Gavin Maxwell)",
-   "le Pacha de Marrakech",
-   "el Glaui"
-  ],
-  "folded": [
-   "thami el glaoui",
-   "التهامي الڣلاوي",
-   "si thami",
-   "le glaoui",
-   "the lord of the atlas (english literary coinage",
-   "gavin maxwell)",
-   "le pacha de marrakech",
-   "el glaui"
-  ],
-  "phase": [
-   "III 1900-1912",
-   "IV 1912-1921",
-   "V 1921-1934",
-   "VI 1934-1944",
-   "VII 1944-1956"
-  ],
-  "status": "Moderate - academic",
-  "dossierStatus": "Full dossier"
- },
- {
-  "type": "person",
   "slug": "ali-amhaouch",
   "url": "/people/ali-amhaouch",
   "title": "Ali Amhaouch",
@@ -942,500 +1397,6 @@
    "II 1830-1900",
    "III 1900-1912",
    "IV 1912-1921"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "ahmed-bahnini",
-  "url": "/people/ahmed-bahnini",
-  "title": "Ahmed Bahnini",
-  "subtitle": "Jurist and prime minister 1963–1965; killed in the Skhirat palace attack of 10 July 1971.",
-  "terms": [
-   "Ahmed Bahnini",
-   "أحمد باحنيني",
-   "Ahmed Bahnini"
-  ],
-  "folded": [
-   "ahmed bahnini",
-   "أحمد باحنيني"
-  ],
-  "phase": [
-   "VIII 1956-1961",
-   "IX 1961-1999"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "mohammed-iv",
-  "url": "/people/mohammed-iv",
-  "title": "Mohammed IV",
-  "subtitle": "Sultan 1859–1873; lost the Hispano-Moroccan war of 1859–60 and accepted the indemnity that mortgaged Moroccan customs.",
-  "terms": [
-   "Mohammed IV",
-   "محمد بن عبد الرحمن",
-   "Sidi Mohammed ben Abderrahmane",
-   "Muley Mohamed (Sp.)"
-  ],
-  "folded": [
-   "mohammed iv",
-   "محمد بن عبد الرحمن",
-   "sidi mohammed ben abderrahmane",
-   "muley mohamed (sp.)"
-  ],
-  "phase": [
-   "II 1830-1900"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "moulay-abdelhafid",
-  "url": "/people/moulay-abdelhafid",
-  "title": "Moulay Abdelhafid",
-  "subtitle": "Alaouite sultan 1908–1912; came to power on an explicitly anti-European conditional bay'a and signed the Treaty of Fez four years later.",
-  "terms": [
-   "Moulay Abdelhafid",
-   "عبد الحفيظ بن الحسن (ʿAbd al-Ḥafīẓ ibn al-Ḥasan)",
-   "Abd al-Hafid",
-   "Moulay Hafid (Fr. usage)",
-   "Muley Hafid (Sp.)",
-   "Mulai Hafid (Ger./Br. press)",
-   "al-Sulṭān al-Ḥāfiẓ"
-  ],
-  "folded": [
-   "moulay abdelhafid",
-   "عبد الحفيظ بن الحسن (abd al-hafiz ibn al-hasan)",
-   "abd al-hafid",
-   "moulay hafid (fr. usage)",
-   "muley hafid (sp.)",
-   "mulai hafid (ger./br. press)",
-   "al-sultan al-hafiz"
-  ],
-  "phase": [
-   "III 1900-1912"
-  ],
-  "status": "Moderate - academic",
-  "dossierStatus": "Full dossier"
- },
- {
-  "type": "person",
-  "slug": "moulay-abdelaziz",
-  "url": "/people/moulay-abdelaziz",
-  "title": "Moulay Abdelaziz",
-  "subtitle": "Alaouite sultan 1894–1908; his reign covers the fiscal capture of the Makhzen by European lenders and the diplomatic partition of Morocco between 1904 and 1906.",
-  "terms": [
-   "Moulay Abdelaziz",
-   "عبد العزيز بن الحسن (ʿAbd al-ʿAzīz ibn al-Ḥasan)",
-   "Abd al-Aziz",
-   "Abdelaziz IV",
-   "Moulay Abd el-Aziz (Fr.)",
-   "Muley Abd-el-Aziz (Sp.)",
-   "Abdul Aziz (Br. press)",
-   "le sultan aux jouets (hostile French press epithet)"
-  ],
-  "folded": [
-   "moulay abdelaziz",
-   "عبد العزيز بن الحسن (abd al-aziz ibn al-hasan)",
-   "abd al-aziz",
-   "abdelaziz iv",
-   "moulay abd el-aziz (fr.)",
-   "muley abd-el-aziz (sp.)",
-   "abdul aziz (br. press)",
-   "le sultan aux jouets (hostile french press epithet)"
-  ],
-  "phase": [
-   "II 1830-1900",
-   "III 1900-1912"
-  ],
-  "status": "Moderate - academic",
-  "dossierStatus": "Full dossier"
- },
- {
-  "type": "person",
-  "slug": "si-madani-el-glaoui",
-  "url": "/people/si-madani-el-glaoui",
-  "title": "Si Madani El Glaoui",
-  "subtitle": "Elder brother of Thami; head of the Glaoua, grand vizier under Abdelhafid, and the actual architect of the family's rise.",
-  "terms": [
-   "Si Madani El Glaoui",
-   "المدني الڣلاوي",
-   "Si Madani el Glaoui",
-   "El Madani",
-   "le grand vizir El Madani"
-  ],
-  "folded": [
-   "si madani el glaoui",
-   "المدني الڣلاوي",
-   "el madani",
-   "le grand vizir el madani"
-  ],
-  "phase": [
-   "II 1830-1900",
-   "III 1900-1912",
-   "IV 1912-1921"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "mohammed-ben-arafa",
-  "url": "/people/mohammed-ben-arafa",
-  "title": "Mohammed ben Arafa",
-  "subtitle": "Installed as sultan by the French and El Glaoui in August 1953 after the deposition of Mohammed V; never accepted; removed 1955.",
-  "terms": [
-   "Mohammed ben Arafa",
-   "محمد بن عرفة",
-   "Mohammed Ben Aarafa",
-   "Moulay Ben Arafa",
-   "le sultan Ben Arafa"
-  ],
-  "folded": [
-   "mohammed ben arafa",
-   "محمد بن عرفة",
-   "mohammed ben aarafa",
-   "moulay ben arafa",
-   "le sultan ben arafa"
-  ],
-  "phase": [
-   "VII 1944-1956"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "francisco-franco",
-  "url": "/people/francisco-franco",
-  "title": "Francisco Franco",
-  "subtitle": "Made his career in the Rif war; commanded the Legion at Alhucemas; launched the 1936 coup from Morocco with Moroccan troops.",
-  "terms": [
-   "Francisco Franco",
-   "Francisco Franco Bahamonde",
-   "el Caudillo",
-   "Franco"
-  ],
-  "folded": [
-   "francisco franco",
-   "francisco franco bahamonde",
-   "el caudillo",
-   "franco"
-  ],
-  "phase": [
-   "IV 1912-1921",
-   "V 1921-1934",
-   "VI 1934-1944",
-   "VII 1944-1956"
-  ],
-  "status": "Moderate - academic",
-  "dossierStatus": "Substantial"
- },
- {
-  "type": "person",
-  "slug": "sidi-mohamed-ben-hammou-identification-unresolved",
-  "url": "/people/sidi-mohamed-ben-hammou-identification-unresolved",
-  "title": "Sidi Mohamed Ben Hammou — identification unresolved",
-  "subtitle": "A name requiring identification before any biography can be written.",
-  "terms": [
-   "Sidi Mohamed Ben Hammou — identification unresolved",
-   "Name as supplied. Candidate identifications and their variants are set out in the page body. Do not merge with Mouha ou Hammou Zayani or with his sons without evidence."
-  ],
-  "folded": [
-   "sidi mohamed ben hammou — identification unresolved",
-   "name as supplied. candidate identifications and their variants are set out in the page body. do not merge with mouha ou hammou zayani or with his sons without evidence."
-  ],
-  "phase": [
-   "IV 1912-1921"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Identified - not yet researched"
- },
- {
-  "type": "person",
-  "slug": "salah-sharif-at-tunisi",
-  "url": "/people/salah-sharif-at-tunisi",
-  "title": "Salah Sharif at-Tunisi",
-  "subtitle": "Tunisian scholar who wrote the pan-Islamic propaganda distributed in Morocco during the First World War.",
-  "terms": [
-   "Salah Sharif at-Tunisi",
-   "صالح الشريف التونسي",
-   "Salah Sharif at-Tunisi",
-   "Salih al-Sharif al-Tunisi"
-  ],
-  "folded": [
-   "salah sharif at-tunisi",
-   "صالح الشريف التونسي",
-   "salih al-sharif al-tunisi"
-  ],
-  "phase": [
-   "IV 1912-1921"
-  ],
-  "status": "Moderate - academic",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "eugene-regnault",
-  "url": "/people/eugene-regnault",
-  "title": "Eugène Regnault",
-  "subtitle": "French minister at Tangier who negotiated and signed the Treaty of Fez with Moulay Abdelhafid on 30 March 1912.",
-  "terms": [
-   "Eugène Regnault",
-   "Eugène Regnault",
-   "le ministre Regnault"
-  ],
-  "folded": [
-   "eugene regnault",
-   "le ministre regnault"
-  ],
-  "phase": [
-   "III 1900-1912"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "miguel-primo-de-rivera",
-  "url": "/people/miguel-primo-de-rivera",
-  "title": "Miguel Primo de Rivera",
-  "subtitle": "Dictator of Spain 1923–1930; came to power on the Annual crisis and directed the war that destroyed the Rif Republic.",
-  "terms": [
-   "Miguel Primo de Rivera",
-   "Miguel Primo de Rivera y Orbaneja, marqués de Estella",
-   "el Dictador"
-  ],
-  "folded": [
-   "miguel primo de rivera",
-   "miguel primo de rivera y orbaneja, marques de estella",
-   "el dictador"
-  ],
-  "phase": [
-   "V 1921-1934"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "joseph-gallieni",
-  "url": "/people/joseph-gallieni",
-  "title": "Joseph Gallieni",
-  "subtitle": "Colonial commander in Sudan, Tonkin and Madagascar; Lyautey's mentor and the originator of the doctrine applied in Morocco.",
-  "terms": [
-   "Joseph Gallieni",
-   "Joseph-Simon Gallieni",
-   "Maréchal Gallieni (posthumous, 1921)"
-  ],
-  "folded": [
-   "joseph gallieni",
-   "joseph-simon gallieni",
-   "marechal gallieni (posthumous, 1921)"
-  ],
-  "phase": [
-   "II 1830-1900",
-   "III 1900-1912",
-   "IV 1912-1921"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "moulay-abderrahmane",
-  "url": "/people/moulay-abderrahmane",
-  "title": "Moulay Abderrahmane",
-  "subtitle": "Sultan 1822–1859; support for Abd al-Qadir led to defeat at Isly (1844) and the first treaty concessions to France.",
-  "terms": [
-   "Moulay Abderrahmane",
-   "عبد الرحمن بن هشام",
-   "Abd al-Rahman ibn Hisham",
-   "Muley Abderrahman (Sp.)"
-  ],
-  "folded": [
-   "moulay abderrahmane",
-   "عبد الرحمن بن هشام",
-   "abd al-rahman ibn hisham",
-   "muley abderrahman (sp.)"
-  ],
-  "phase": [
-   "I pre-1830",
-   "II 1830-1900"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "alfonso-xiii",
-  "url": "/people/alfonso-xiii",
-  "title": "Alfonso XIII",
-  "subtitle": "King of Spain 1886–1931; his reign covers the whole Spanish protectorate project and the Annual disaster that helped end it.",
-  "terms": [
-   "Alfonso XIII",
-   "Alfonso XIII de Borbón",
-   "el Rey Alfonso"
-  ],
-  "folded": [
-   "alfonso xiii",
-   "alfonso xiii de borbon",
-   "el rey alfonso"
-  ],
-  "phase": [
-   "III 1900-1912",
-   "IV 1912-1921",
-   "V 1921-1934"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "ma-al-aynayn",
-  "url": "/people/ma-al-aynayn",
-  "title": "Ma al-'Aynayn",
-  "subtitle": "Sufi shaykh, scholar and Makhzen khalifa of the Sahara; founder of Smara and organiser of Saharan resistance to French expansion.",
-  "terms": [
-   "Ma al-'Aynayn",
-   "ماء العينين",
-   "Ma al-ʿAynayn",
-   "Ma el Ainïn",
-   "Ma El Aininn",
-   "Cheikh Ma el Ainín (Fr.)",
-   "Ma-el-Ainin (Sp.)",
-   "birth name Muḥammad Muṣṭafā wuld Muḥammad Faḍil",
-   "le marabout Ma el Aïnin",
-   "le cheikh du Sahara"
-  ],
-  "folded": [
-   "ma al-'aynayn",
-   "ماء العينين",
-   "ma al-aynayn",
-   "ma el ainin",
-   "ma el aininn",
-   "cheikh ma el ainin (fr.)",
-   "ma-el-ainin (sp.)",
-   "birth name muhammad mustafa wuld muhammad fadil",
-   "le marabout ma el ainin",
-   "le cheikh du sahara"
-  ],
-  "phase": [
-   "II 1830-1900",
-   "III 1900-1912"
-  ],
-  "status": "Moderate - academic",
-  "dossierStatus": "Full dossier"
- },
- {
-  "type": "person",
-  "slug": "ahmed-dlimi",
-  "url": "/people/ahmed-dlimi",
-  "title": "Ahmed Dlimi",
-  "subtitle": "Security chief and later commander of Moroccan forces in the Western Sahara; implicated in the Ben Barka affair; died in disputed circumstances in 1983.",
-  "terms": [
-   "Ahmed Dlimi",
-   "أحمد الدليمي",
-   "Ahmed Dlimi",
-   "General Dlimi"
-  ],
-  "folded": [
-   "ahmed dlimi",
-   "أحمد الدليمي",
-   "general dlimi"
-  ],
-  "phase": [
-   "IX 1961-1999"
-  ],
-  "status": "Contested",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "driss-basri",
-  "url": "/people/driss-basri",
-  "title": "Driss Basri",
-  "subtitle": "Interior minister 1979–1999; the operational architect of Hassan II's internal control system and of the Western Sahara administration.",
-  "terms": [
-   "Driss Basri",
-   "إدريس البصري",
-   "Driss Basri"
-  ],
-  "folded": [
-   "driss basri",
-   "إدريس البصري"
-  ],
-  "phase": [
-   "IX 1961-1999",
-   "X 1999-present"
-  ],
-  "status": "Contested",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "mohammed-v",
-  "url": "/people/mohammed-v",
-  "title": "Mohammed V",
-  "subtitle": "Sultan from 1927 and King from 1957; installed by France as a compliant minor and became the central symbol of Moroccan independence.",
-  "terms": [
-   "Mohammed V",
-   "محمد الخامس",
-   "Sidi Mohammed ben Youssef",
-   "Mohammed ben Youssef",
-   "Sidi Mohammed",
-   "le Sultan",
-   "Mohamed V",
-   "Sultan 1927–1957, King from 1957"
-  ],
-  "folded": [
-   "mohammed v",
-   "محمد الخامس",
-   "sidi mohammed ben youssef",
-   "mohammed ben youssef",
-   "sidi mohammed",
-   "le sultan",
-   "mohamed v",
-   "sultan 1927–1957, king from 1957"
-  ],
-  "phase": [
-   "V 1921-1934",
-   "VI 1934-1944",
-   "VII 1944-1956",
-   "VIII 1956-1961"
-  ],
-  "status": "Moderate - academic",
-  "dossierStatus": "Full dossier"
- },
- {
-  "type": "person",
-  "slug": "moha-ou-said",
-  "url": "/people/moha-ou-said",
-  "title": "Moha ou Said",
-  "subtitle": "Aït Ouirra leader who fought France from before 1912 until his death in 1924, outlasting the Zaian war by three years.",
-  "terms": [
-   "Moha ou Said",
-   "محا أو سعيد",
-   "Moha ou Saïd",
-   "Mouha ou Said",
-   "Moha u Saʿid",
-   "Moha ou Saïd, chef des Aït Ouirra"
-  ],
-  "folded": [
-   "moha ou said",
-   "محا أو سعيد",
-   "mouha ou said",
-   "moha u said",
-   "moha ou said, chef des ait ouirra"
-  ],
-  "phase": [
-   "III 1900-1912",
-   "IV 1912-1921",
-   "V 1921-1934"
   ],
   "status": "Thin - encyclopedic leads only",
   "dossierStatus": "Stub"
@@ -1499,201 +1460,6 @@
  },
  {
   "type": "person",
-  "slug": "jose-sanjurjo",
-  "url": "/people/jose-sanjurjo",
-  "title": "José Sanjurjo",
-  "subtitle": "Africanista commander in the Rif war, ennobled as marqués del Rif; nominal leader of the July 1936 coup, killed in an air crash days into it.",
-  "terms": [
-   "José Sanjurjo",
-   "José Sanjurjo Sacanell, marqués del Rif",
-   "el León del Rif"
-  ],
-  "folded": [
-   "jose sanjurjo",
-   "jose sanjurjo sacanell, marques del rif",
-   "el leon del rif"
-  ],
-  "phase": [
-   "V 1921-1934",
-   "VI 1934-1944"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "manuel-fernandez-silvestre",
-  "url": "/people/manuel-fernandez-silvestre",
-  "title": "Manuel Fernández Silvestre",
-  "subtitle": "Comandante General of Melilla; drove the advance that collapsed at Annual in July 1921 and died there.",
-  "terms": [
-   "Manuel Fernández Silvestre",
-   "Manuel Fernández Silvestre y Pantiga",
-   "el general Silvestre"
-  ],
-  "folded": [
-   "manuel fernandez silvestre",
-   "manuel fernandez silvestre y pantiga",
-   "el general silvestre"
-  ],
-  "phase": [
-   "III 1900-1912",
-   "IV 1912-1921"
-  ],
-  "status": "Contested",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "hubert-lyautey",
-  "url": "/people/hubert-lyautey",
-  "title": "Hubert Lyautey",
-  "subtitle": "First French Resident-General of Morocco 1912–1925; architect of the Protectorate's system of indirect rule, urban segregation and 'pacification'.",
-  "terms": [
-   "Hubert Lyautey",
-   "Louis-Hubert Gonzalve Lyautey",
-   "Maréchal Lyautey",
-   "le Résident",
-   "Ar. usage: ليوطي",
-   "in Moroccan sources often simply al-Ḥāmī al-ʿĀmm (the Resident-General)"
-  ],
-  "folded": [
-   "hubert lyautey",
-   "louis-hubert gonzalve lyautey",
-   "marechal lyautey",
-   "le resident",
-   "ar. usage: ليوطي",
-   "in moroccan sources often simply al-hami al-amm (the resident-general)"
-  ],
-  "phase": [
-   "III 1900-1912",
-   "IV 1912-1921",
-   "V 1921-1934"
-  ],
-  "status": "Strong - archival + academic",
-  "dossierStatus": "Full dossier"
- },
- {
-  "type": "person",
-  "slug": "rene-laverdure",
-  "url": "/people/rene-laverdure",
-  "title": "René Laverdure",
-  "subtitle": "Commander at Khénifra; marched without orders on 13 November 1914 and was killed with 623 of his men at El Herri.",
-  "terms": [
-   "René Laverdure",
-   "René Laverdure",
-   "Lieutenant-colonel Laverdure"
-  ],
-  "folded": [
-   "rene laverdure",
-   "lieutenant-colonel laverdure"
-  ],
-  "phase": [
-   "IV 1912-1921"
-  ],
-  "status": "Moderate - academic",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "maurice-le-glay",
-  "url": "/people/maurice-le-glay",
-  "title": "Maurice Le Glay",
-  "subtitle": "Officer of Affaires Indigènes, Berberist ethnographer and writer; named in the literature as an author of the policy behind the 1930 dahir.",
-  "terms": [
-   "Maurice Le Glay",
-   "Maurice Le Glay",
-   "le contrôleur civil Le Glay"
-  ],
-  "folded": [
-   "maurice le glay",
-   "le controleur civil le glay"
-  ],
-  "phase": [
-   "IV 1912-1921",
-   "V 1921-1934"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "mohamed-lyazidi",
-  "url": "/people/mohamed-lyazidi",
-  "title": "Mohamed Lyazidi",
-  "subtitle": "Nationalist organiser from the 1930 anti-dahir campaign onward; signatory of the 1944 Independence Manifesto.",
-  "terms": [
-   "Mohamed Lyazidi",
-   "محمد اليزيدي",
-   "Mohamed Lyazidi",
-   "al-Yazidi"
-  ],
-  "folded": [
-   "mohamed lyazidi",
-   "محمد اليزيدي",
-   "al-yazidi"
-  ],
-  "phase": [
-   "V 1921-1934",
-   "VI 1934-1944",
-   "VII 1944-1956"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "allal-el-fassi",
-  "url": "/people/allal-el-fassi",
-  "title": "Allal El Fassi",
-  "subtitle": "Salafi scholar and founder-leader of the Istiqlal party; the dominant intellectual figure of Moroccan nationalism.",
-  "terms": [
-   "Allal El Fassi",
-   "علال الفاسي",
-   "Allal al-Fassi",
-   "Allal el Fassi"
-  ],
-  "folded": [
-   "allal el fassi",
-   "علال الفاسي",
-   "allal al-fassi"
-  ],
-  "phase": [
-   "V 1921-1934",
-   "VI 1934-1944",
-   "VII 1944-1956",
-   "VIII 1956-1961",
-   "IX 1961-1999"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "abderrahmane-youssoufi",
-  "url": "/people/abderrahmane-youssoufi",
-  "title": "Abderrahmane Youssoufi",
-  "subtitle": "Resistance lawyer, UNFP/USFP leader, death-sentenced in absentia and long exiled; prime minister of the 1998 alternance government.",
-  "terms": [
-   "Abderrahmane Youssoufi",
-   "عبد الرحمن اليوسفي",
-   "Abderrahmane Youssoufi"
-  ],
-  "folded": [
-   "abderrahmane youssoufi",
-   "عبد الرحمن اليوسفي"
-  ],
-  "phase": [
-   "VII 1944-1956",
-   "VIII 1956-1961",
-   "IX 1961-1999",
-   "X 1999-present"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
   "slug": "ahmed-al-raisuni",
   "url": "/people/ahmed-al-raisuni",
   "title": "Ahmed al-Raisuni",
@@ -1728,132 +1494,565 @@
  },
  {
   "type": "person",
-  "slug": "germain-ayache",
-  "url": "/people/germain-ayache",
-  "title": "Germain Ayache",
-  "subtitle": "Moroccan historian who founded a national school of Moroccan history written against colonial historiography; author of Les origines de la guerre du Rif.",
+  "slug": "hassan-ii",
+  "url": "/people/hassan-ii",
+  "title": "Hassan II",
+  "subtitle": "King 1961–1999; presided over the Years of Lead, two coup attempts, the Green March and the Western Sahara war.",
   "terms": [
-   "Germain Ayache",
-   "Germain Ayache",
-   "جرمان عياش"
+   "Hassan II",
+   "الحسن الثاني",
+   "Moulay Hassan ben Mohammed",
+   "Hassan II"
   ],
   "folded": [
-   "germain ayache",
-   "جرمان عياش"
+   "hassan ii",
+   "الحسن الثاني",
+   "moulay hassan ben mohammed"
   ],
   "phase": [
+   "VIII 1956-1961",
    "IX 1961-1999"
   ],
-  "status": "Moderate - academic",
+  "status": "Contested",
   "dossierStatus": "Stub"
  },
  {
   "type": "person",
-  "slug": "ahmad-ibn-khalid-al-nasiri",
-  "url": "/people/ahmad-ibn-khalid-al-nasiri",
-  "title": "Ahmad ibn Khalid al-Nasiri",
-  "subtitle": "Moroccan historian; author of Kitab al-Istiqsa, the first comprehensive national history of Morocco, completed in 1894.",
+  "slug": "moulay-youssef",
+  "url": "/people/moulay-youssef",
+  "title": "Moulay Youssef",
+  "subtitle": "Sultan 1912–1927; installed by Lyautey after Abdelhafid's abdication and reigned throughout the pacification wars.",
   "terms": [
-   "Ahmad ibn Khalid al-Nasiri",
-   "أحمد بن خالد الناصري",
-   "al-Nasiri al-Slawi",
-   "an-Nasiri",
-   "Ahmed Ben Khaled en-Naciri es-Slaoui",
-   "Ennaciri",
-   "An-Nasiri"
+   "Moulay Youssef",
+   "يوسف بن الحسن",
+   "Yusef of Morocco",
+   "Moulay Youssef ben Hassan"
   ],
   "folded": [
-   "ahmad ibn khalid al-nasiri",
-   "أحمد بن خالد الناصري",
-   "al-nasiri al-slawi",
-   "an-nasiri",
-   "ahmed ben khaled en-naciri es-slaoui",
-   "ennaciri"
+   "moulay youssef",
+   "يوسف بن الحسن",
+   "yusef of morocco",
+   "moulay youssef ben hassan"
+  ],
+  "phase": [
+   "IV 1912-1921",
+   "V 1921-1934"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "mohammed-iv",
+  "url": "/people/mohammed-iv",
+  "title": "Mohammed IV",
+  "subtitle": "Sultan 1859–1873; lost the Hispano-Moroccan war of 1859–60 and accepted the indemnity that mortgaged Moroccan customs.",
+  "terms": [
+   "Mohammed IV",
+   "محمد بن عبد الرحمن",
+   "Sidi Mohammed ben Abderrahmane",
+   "Muley Mohamed (Sp.)"
+  ],
+  "folded": [
+   "mohammed iv",
+   "محمد بن عبد الرحمن",
+   "sidi mohammed ben abderrahmane",
+   "muley mohamed (sp.)"
+  ],
+  "phase": [
+   "II 1830-1900"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "mohammed-ben-arafa",
+  "url": "/people/mohammed-ben-arafa",
+  "title": "Mohammed ben Arafa",
+  "subtitle": "Installed as sultan by the French and El Glaoui in August 1953 after the deposition of Mohammed V; never accepted; removed 1955.",
+  "terms": [
+   "Mohammed ben Arafa",
+   "محمد بن عرفة",
+   "Mohammed Ben Aarafa",
+   "Moulay Ben Arafa",
+   "le sultan Ben Arafa"
+  ],
+  "folded": [
+   "mohammed ben arafa",
+   "محمد بن عرفة",
+   "mohammed ben aarafa",
+   "moulay ben arafa",
+   "le sultan ben arafa"
+  ],
+  "phase": [
+   "VII 1944-1956"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "moulay-abderrahmane",
+  "url": "/people/moulay-abderrahmane",
+  "title": "Moulay Abderrahmane",
+  "subtitle": "Sultan 1822–1859; support for Abd al-Qadir led to defeat at Isly (1844) and the first treaty concessions to France.",
+  "terms": [
+   "Moulay Abderrahmane",
+   "عبد الرحمن بن هشام",
+   "Abd al-Rahman ibn Hisham",
+   "Muley Abderrahman (Sp.)"
+  ],
+  "folded": [
+   "moulay abderrahmane",
+   "عبد الرحمن بن هشام",
+   "abd al-rahman ibn hisham",
+   "muley abderrahman (sp.)"
+  ],
+  "phase": [
+   "I pre-1830",
+   "II 1830-1900"
+  ],
+  "status": "Thin - encyclopedic leads only",
+  "dossierStatus": "Stub"
+ },
+ {
+  "type": "person",
+  "slug": "mohammed-v",
+  "url": "/people/mohammed-v",
+  "title": "Mohammed V",
+  "subtitle": "Sultan from 1927 and King from 1957; installed by France as a compliant minor and became the central symbol of Moroccan independence.",
+  "terms": [
+   "Mohammed V",
+   "محمد الخامس",
+   "Sidi Mohammed ben Youssef",
+   "Mohammed ben Youssef",
+   "Sidi Mohammed",
+   "le Sultan",
+   "Mohamed V",
+   "Sultan 1927–1957, King from 1957"
+  ],
+  "folded": [
+   "mohammed v",
+   "محمد الخامس",
+   "sidi mohammed ben youssef",
+   "mohammed ben youssef",
+   "sidi mohammed",
+   "le sultan",
+   "mohamed v",
+   "sultan 1927–1957, king from 1957"
+  ],
+  "phase": [
+   "V 1921-1934",
+   "VI 1934-1944",
+   "VII 1944-1956",
+   "VIII 1956-1961"
+  ],
+  "status": "Moderate - academic",
+  "dossierStatus": "Full dossier"
+ },
+ {
+  "type": "person",
+  "slug": "ma-al-aynayn",
+  "url": "/people/ma-al-aynayn",
+  "title": "Ma al-'Aynayn",
+  "subtitle": "Sufi shaykh, scholar and Makhzen khalifa of the Sahara; founder of Smara and organiser of Saharan resistance to French expansion.",
+  "terms": [
+   "Ma al-'Aynayn",
+   "ماء العينين",
+   "Ma al-ʿAynayn",
+   "Ma el Ainïn",
+   "Ma El Aininn",
+   "Cheikh Ma el Ainín (Fr.)",
+   "Ma-el-Ainin (Sp.)",
+   "birth name Muḥammad Muṣṭafā wuld Muḥammad Faḍil",
+   "le marabout Ma el Aïnin",
+   "le cheikh du Sahara"
+  ],
+  "folded": [
+   "ma al-'aynayn",
+   "ماء العينين",
+   "ma al-aynayn",
+   "ma el ainin",
+   "ma el aininn",
+   "cheikh ma el ainin (fr.)",
+   "ma-el-ainin (sp.)",
+   "birth name muhammad mustafa wuld muhammad fadil",
+   "le marabout ma el ainin",
+   "le cheikh du sahara"
+  ],
+  "phase": [
+   "II 1830-1900",
+   "III 1900-1912"
+  ],
+  "status": "Moderate - academic",
+  "dossierStatus": "Full dossier"
+ },
+ {
+  "type": "person",
+  "slug": "thami-el-glaoui",
+  "url": "/people/thami-el-glaoui",
+  "title": "Thami El Glaoui",
+  "subtitle": "Pasha of Marrakech 1907–1956 and the Protectorate's principal Moroccan intermediary in the south; central actor in the 1953 deposition of Mohammed V.",
+  "terms": [
+   "Thami El Glaoui",
+   "التهامي الڣلاوي",
+   "Thami el Glaoui",
+   "Thami El Glaoui",
+   "Si Thami",
+   "le Glaoui",
+   "the Lord of the Atlas (English literary coinage",
+   "Gavin Maxwell)",
+   "le Pacha de Marrakech",
+   "el Glaui"
+  ],
+  "folded": [
+   "thami el glaoui",
+   "التهامي الڣلاوي",
+   "si thami",
+   "le glaoui",
+   "the lord of the atlas (english literary coinage",
+   "gavin maxwell)",
+   "le pacha de marrakech",
+   "el glaui"
+  ],
+  "phase": [
+   "III 1900-1912",
+   "IV 1912-1921",
+   "V 1921-1934",
+   "VI 1934-1944",
+   "VII 1944-1956"
+  ],
+  "status": "Moderate - academic",
+  "dossierStatus": "Full dossier"
+ },
+ {
+  "type": "person",
+  "slug": "hubert-lyautey",
+  "url": "/people/hubert-lyautey",
+  "title": "Hubert Lyautey",
+  "subtitle": "First French Resident-General of Morocco 1912–1925; architect of the Protectorate's system of indirect rule, urban segregation and 'pacification'.",
+  "terms": [
+   "Hubert Lyautey",
+   "Louis-Hubert Gonzalve Lyautey",
+   "Maréchal Lyautey",
+   "le Résident",
+   "Ar. usage: ليوطي",
+   "in Moroccan sources often simply al-Ḥāmī al-ʿĀmm (the Resident-General)"
+  ],
+  "folded": [
+   "hubert lyautey",
+   "louis-hubert gonzalve lyautey",
+   "marechal lyautey",
+   "le resident",
+   "ar. usage: ليوطي",
+   "in moroccan sources often simply al-hami al-amm (the resident-general)"
+  ],
+  "phase": [
+   "III 1900-1912",
+   "IV 1912-1921",
+   "V 1921-1934"
+  ],
+  "status": "Strong - archival + academic",
+  "dossierStatus": "Full dossier"
+ },
+ {
+  "type": "person",
+  "slug": "mohammed-ben-abdelkrim-el-khattabi",
+  "url": "/people/mohammed-ben-abdelkrim-el-khattabi",
+  "title": "Mohammed ben Abdelkrim El Khattabi",
+  "subtitle": "Qadi and Spanish-administration official who led the Rif war 1921–1926 and headed the Rif Republic; the most heavily documented Moroccan resistance figure in European archives.",
+  "terms": [
+   "Mohammed ben Abdelkrim El Khattabi",
+   "محمد بن عبد الكريم الخطابي",
+   "Abd el-Krim",
+   "Abd-el-Krim",
+   "Abdelkrim",
+   "Abd al-Karim al-Khattabi",
+   "Sp. archives: Abd-el-Krim",
+   "el cabecilla",
+   "el jefe rebelde",
+   "lémir du Rif",
+   "Muḥemmed n ʿEbdkrim Lxṭṭabi"
+  ],
+  "folded": [
+   "mohammed ben abdelkrim el khattabi",
+   "محمد بن عبد الكريم الخطابي",
+   "abd el-krim",
+   "abd-el-krim",
+   "abdelkrim",
+   "abd al-karim al-khattabi",
+   "sp. archives: abd-el-krim",
+   "el cabecilla",
+   "el jefe rebelde",
+   "lemir du rif",
+   "muhemmed n ebdkrim lxttabi"
+  ],
+  "phase": [
+   "III 1900-1912",
+   "IV 1912-1921",
+   "V 1921-1934",
+   "VI 1934-1944",
+   "VII 1944-1956",
+   "VIII 1956-1961"
+  ],
+  "status": "Strong - archival + academic",
+  "dossierStatus": "Full dossier"
+ },
+ {
+  "type": "person",
+  "slug": "mouha-ou-hammou-zayani",
+  "url": "/people/mouha-ou-hammou-zayani",
+  "title": "Mouha ou Hammou Zayani",
+  "subtitle": "Qaid of the Zaian confederation, appointed by the Makhzen in the 1870s–80s; led the Zaian war against France 1914–1921 and commanded at El Herri.",
+  "terms": [
+   "Mouha ou Hammou Zayani",
+   "Muḥa u Ḥemmu Aẓayyi",
+   "Moha ou Hammou",
+   "Mouha ou Hammou Zaïani / Zaïani / Zayani",
+   "Moha ou Hammou Azayi",
+   "Moha ou Hammou",
+   "le caïd Hammou",
+   "Hammou des Zaïanes",
+   "le chef zaïan",
+   "Mohamed Hammou",
+   "el caíd Hammu",
+   "los zayanes",
+   "محا أو حمو الزياني"
+  ],
+  "folded": [
+   "mouha ou hammou zayani",
+   "muha u hemmu azayyi",
+   "moha ou hammou",
+   "mouha ou hammou zaiani / zaiani / zayani",
+   "moha ou hammou azayi",
+   "le caid hammou",
+   "hammou des zaianes",
+   "le chef zaian",
+   "mohamed hammou",
+   "el caid hammu",
+   "los zayanes",
+   "محا أو حمو الزياني"
+  ],
+  "phase": [
+   "II 1830-1900",
+   "III 1900-1912",
+   "IV 1912-1921"
+  ],
+  "status": "Moderate - academic",
+  "dossierStatus": "Full dossier"
+ },
+ {
+  "type": "person",
+  "slug": "moulay-abdelhafid",
+  "url": "/people/moulay-abdelhafid",
+  "title": "Moulay Abdelhafid",
+  "subtitle": "Alaouite sultan 1908–1912; came to power on an explicitly anti-European conditional bay'a and signed the Treaty of Fez four years later.",
+  "terms": [
+   "Moulay Abdelhafid",
+   "عبد الحفيظ بن الحسن (ʿAbd al-Ḥafīẓ ibn al-Ḥasan)",
+   "Abd al-Hafid",
+   "Moulay Hafid (Fr. usage)",
+   "Muley Hafid (Sp.)",
+   "Mulai Hafid (Ger./Br. press)",
+   "al-Sulṭān al-Ḥāfiẓ"
+  ],
+  "folded": [
+   "moulay abdelhafid",
+   "عبد الحفيظ بن الحسن (abd al-hafiz ibn al-hasan)",
+   "abd al-hafid",
+   "moulay hafid (fr. usage)",
+   "muley hafid (sp.)",
+   "mulai hafid (ger./br. press)",
+   "al-sultan al-hafiz"
+  ],
+  "phase": [
+   "III 1900-1912"
+  ],
+  "status": "Moderate - academic",
+  "dossierStatus": "Full dossier"
+ },
+ {
+  "type": "person",
+  "slug": "moulay-hassan-i",
+  "url": "/people/moulay-hassan-i",
+  "title": "Moulay Hassan I",
+  "subtitle": "Alaouite sultan 1873–1894; attempted military and fiscal centralisation of the Makhzen under mounting European financial and territorial pressure.",
+  "terms": [
+   "Moulay Hassan I",
+   "الحسن بن محمد (al-Ḥasan ibn Muḥammad)",
+   "Mawlay al-Hasan al-Awwal",
+   "Moulay Hassan I",
+   "Mulay Hasan",
+   "Muley Hassan (Sp.)",
+   "Mouley el-Hassan (Fr. consular usage)",
+   "Abū ʿAlī al-Ḥasan ibn Muḥammad",
+   "the last great sultan (historiographical epithet",
+   "not contemporary)"
+  ],
+  "folded": [
+   "moulay hassan i",
+   "الحسن بن محمد (al-hasan ibn muhammad)",
+   "mawlay al-hasan al-awwal",
+   "mulay hasan",
+   "muley hassan (sp.)",
+   "mouley el-hassan (fr. consular usage)",
+   "abu ali al-hasan ibn muhammad",
+   "the last great sultan (historiographical epithet",
+   "not contemporary)"
   ],
   "phase": [
    "II 1830-1900"
   ],
   "status": "Moderate - academic",
-  "dossierStatus": "Substantial"
+  "dossierStatus": "Full dossier"
  },
  {
   "type": "person",
-  "slug": "zaid-ou-hmad",
-  "url": "/people/zaid-ou-hmad",
-  "title": "Zaïd Ou Hmad",
-  "subtitle": "Resistance leader active 1934-1936, after the date France declared the pacification of Morocco complete.",
+  "slug": "moulay-abdelaziz",
+  "url": "/people/moulay-abdelaziz",
+  "title": "Moulay Abdelaziz",
+  "subtitle": "Alaouite sultan 1894–1908; his reign covers the fiscal capture of the Makhzen by European lenders and the diplomatic partition of Morocco between 1904 and 1906.",
   "terms": [
-   "Zaïd Ou Hmad",
-   "زايد أو حماد",
-   "Zayd u Hmad",
-   "Zaïd Ou Hmad",
-   "Zaïd Ouhmad. Spelling not standardised; French archival forms not yet established."
+   "Moulay Abdelaziz",
+   "عبد العزيز بن الحسن (ʿAbd al-ʿAzīz ibn al-Ḥasan)",
+   "Abd al-Aziz",
+   "Abdelaziz IV",
+   "Moulay Abd el-Aziz (Fr.)",
+   "Muley Abd-el-Aziz (Sp.)",
+   "Abdul Aziz (Br. press)",
+   "le sultan aux jouets (hostile French press epithet)"
   ],
   "folded": [
-   "zaid ou hmad",
-   "زايد أو حماد",
-   "zayd u hmad",
-   "zaid ouhmad. spelling not standardised; french archival forms not yet established."
+   "moulay abdelaziz",
+   "عبد العزيز بن الحسن (abd al-aziz ibn al-hasan)",
+   "abd al-aziz",
+   "abdelaziz iv",
+   "moulay abd el-aziz (fr.)",
+   "muley abd-el-aziz (sp.)",
+   "abdul aziz (br. press)",
+   "le sultan aux jouets (hostile french press epithet)"
   ],
   "phase": [
-   "V 1921-1934",
-   "VI 1934-1944"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Identified - not yet researched"
- },
- {
-  "type": "person",
-  "slug": "mohammed-sellam-ameziane",
-  "url": "/people/mohammed-sellam-ameziane",
-  "title": "Mohammed Sellam Ameziane",
-  "subtitle": "Qarawiyyin graduate and Liberation Army veteran who directed the 1958-59 Rif revolt against the independent Moroccan government.",
-  "terms": [
-   "Mohammed Sellam Ameziane",
-   "محمد سلام أمزيان",
-   "Sellam Amezian",
-   "Salam Amezyan",
-   "Mohammed Sellam Ameziane. Not to be confused with Mohamed Ameziane (d. 1912), the Rif leader against Spain — different men, similar names, half a century apart."
-  ],
-  "folded": [
-   "mohammed sellam ameziane",
-   "محمد سلام أمزيان",
-   "sellam amezian",
-   "salam amezyan",
-   "mohammed sellam ameziane. not to be confused with mohamed ameziane (d. 1912), the rif leader against spain — different men, similar names, half a century apart."
-  ],
-  "phase": [
-   "VII 1944-1956",
-   "VIII 1956-1961"
-  ],
-  "status": "Thin - encyclopedic leads only",
-  "dossierStatus": "Stub"
- },
- {
-  "type": "person",
-  "slug": "abdallah-laroui",
-  "url": "/people/abdallah-laroui",
-  "title": "Abdallah Laroui",
-  "subtitle": "Moroccan historian and philosopher; the most influential critic of colonial and orientalist historiography of Morocco.",
-  "terms": [
-   "Abdallah Laroui",
-   "عبد الله العروي",
-   "Abdallah Laroui",
-   "Abdellah Laroui",
-   "al-ʿArwi"
-  ],
-  "folded": [
-   "abdallah laroui",
-   "عبد الله العروي",
-   "abdellah laroui",
-   "al-arwi"
-  ],
-  "phase": [
-   "IX 1961-1999",
-   "X 1999-present"
+   "II 1830-1900",
+   "III 1900-1912"
   ],
   "status": "Moderate - academic",
-  "dossierStatus": "Stub"
+  "dossierStatus": "Full dossier"
+ },
+ {
+  "type": "event",
+  "slug": "skhirat-coup-attempt-10-july-1971",
+  "url": "/events/skhirat-coup-attempt-10-july-1971",
+  "title": "Skhirat coup attempt, 10 July 1971",
+  "subtitle": "During King Hassan II's 42nd birthday celebration at the royal palace in Skhirat, roughly 1,400 cadets from the Ahermoumou military school, organised by General Mohamed Medbouh, opened fire on the assembled guests. Sources consulted report roughly a hundred guests killed and about 200 wounded, alongside cadet casualties in the confusion. The king survived by hiding in a dressing-room adjoining the throne room. Seventy-four officers were later tried; ten senior officers, including four generals, were executed.",
+  "terms": [
+   "Skhirat coup attempt, 10 July 1971",
+   "Royal Palace, Skhirat, Morocco"
+  ],
+  "folded": [
+   "skhirat coup attempt, 10 july 1971",
+   "royal palace, skhirat, morocco"
+  ],
+  "phase": [
+   "IX 1961-1999"
+  ],
+  "status": "Stub"
+ },
+ {
+  "type": "event",
+  "slug": "the-aviators-plot-attack-on-hassan-ii-s-boeing-16-august-1972",
+  "url": "/events/the-aviators-plot-attack-on-hassan-ii-s-boeing-16-august-1972",
+  "title": "The Aviators' Plot — attack on Hassan II's Boeing, 16 August 1972",
+  "subtitle": "Four Royal Moroccan Air Force F-5 fighters, led by Kouera el-Ouafi and organised with Kenitra air base commander Mohammed Amekrane, attacked King Hassan II's Royal Air Maroc Boeing 727 as it returned from France. Sources consulted report eight dead and dozens wounded, though accounts vary on whether these casualties came from the airborne attack, a second strafing pass at Rabat-Salé airport, or both. The king's pilot, Mohammed Kabbaj, is reported to have landed the damaged aircraft (two of three engines hit) despite a jammed wheel causing a runway excursion. Hassan II had his bodyguard broadcast a false report of his own death, which caused the attacking pilots to stand down. General Mohamed Oufkir, defence minister, is named in every source consulted as the plot's principal organiser. Amekrane fled to Gibraltar, was extradited, and was executed. Oufkir died that same evening; the official cause was suicide. Sixty detained conspirators were later transferred to Tazmamart prison in 1973, where sources report only 28 of 58 survived eighteen years of detention.",
+  "terms": [
+   "The Aviators' Plot — attack on Hassan II's Boeing, 16 August 1972",
+   "Airspace over Morocco (near Tangier) and Rabat-Salé Airport"
+  ],
+  "folded": [
+   "the aviators' plot — attack on hassan ii's boeing, 16 august 1972",
+   "airspace over morocco (near tangier) and rabat-sale airport"
+  ],
+  "phase": [
+   "IX 1961-1999"
+  ],
+  "status": "Stub"
+ },
+ {
+  "type": "event",
+  "slug": "battle-of-tazigzawt",
+  "url": "/events/battle-of-tazigzawt",
+  "title": "Battle of Tazigzawt",
+  "subtitle": "A late-conquest engagement in which c. 1,000 resistance fighters faced two French divisions. Identified through the Amazigh oral tradition, where it is the most celebrated subject of resistance balladry.",
+  "terms": [
+   "Battle of Tazigzawt",
+   "Tazigzawt, Middle Atlas"
+  ],
+  "folded": [
+   "battle of tazigzawt",
+   "tazigzawt, middle atlas"
+  ],
+  "phase": [
+   "V 1921-1934"
+  ],
+  "status": "Stub"
+ },
+ {
+  "type": "event",
+  "slug": "casablanca-massacre-7-8-april-1947",
+  "url": "/events/casablanca-massacre-7-8-april-1947",
+  "title": "Casablanca massacre, 7-8 April 1947",
+  "subtitle": "Senegalese tirailleurs in French service fired on Moroccan civilians in Casablanca over roughly 24 hours, two days before Mohammed V's Tangier speech. Estimates range from 180 to over 2,000 dead.",
+  "terms": [
+   "Casablanca massacre, 7-8 April 1947",
+   "Casablanca — working-class quarters including Derb Kebir"
+  ],
+  "folded": [
+   "casablanca massacre, 7-8 april 1947",
+   "casablanca — working-class quarters including derb kebir"
+  ],
+  "phase": [
+   "VII 1944-1956"
+  ],
+  "status": "Substantial"
+ },
+ {
+  "type": "event",
+  "slug": "battle-of-ksar-el-kebir-battle-of-the-three-kings",
+  "url": "/events/battle-of-ksar-el-kebir-battle-of-the-three-kings",
+  "title": "Battle of Ksar el-Kebir (Battle of the Three Kings)",
+  "subtitle": "Saadian victory over a Portuguese invasion force; three kings died. Portugal lost its king and its independence; Morocco gained fifty years of wealth and standing under Ahmad al-Mansur.",
+  "terms": [
+   "Battle of Ksar el-Kebir (Battle of the Three Kings)",
+   "Wadi al-Makhazin, near Ksar el-Kebir, northern Morocco"
+  ],
+  "folded": [
+   "battle of ksar el-kebir (battle of the three kings)",
+   "wadi al-makhazin, near ksar el-kebir, northern morocco"
+  ],
+  "phase": [
+   "I pre-1830"
+  ],
+  "status": "Stub"
+ },
+ {
+  "type": "event",
+  "slug": "the-rif-revolt-and-its-suppression",
+  "url": "/events/the-rif-revolt-and-its-suppression",
+  "title": "The Rif revolt and its suppression",
+  "subtitle": "Armed revolt in the Rif against the post-independence government, suppressed by the Royal Armed Forces under Crown Prince Hassan and Commander Oufkir with c. 20,000 troops and French air support.",
+  "terms": [
+   "The Rif revolt and its suppression",
+   "The Rif — Al Hoceima, Nador, Beni Hadifa, Ait Ouriaghel country"
+  ],
+  "folded": [
+   "the rif revolt and its suppression",
+   "the rif — al hoceima, nador, beni hadifa, ait ouriaghel country"
+  ],
+  "phase": [
+   "VIII 1956-1961"
+  ],
+  "status": "Substantial"
  },
  {
   "type": "event",
@@ -1876,25 +2075,6 @@
  },
  {
   "type": "event",
-  "slug": "treaty-of-fez-and-the-april-1912-rising",
-  "url": "/events/treaty-of-fez-and-the-april-1912-rising",
-  "title": "Treaty of Fez and the April 1912 rising",
-  "subtitle": "Treaty of 30 March 1912 establishing the French protectorate, signed by Abdelhafid and Regnault; the Fez rising of 17 April 1912 on its disclosure; and the Franco-Spanish treaty of 27 November 1912 partitioning the country.",
-  "terms": [
-   "Treaty of Fez and the April 1912 rising",
-   "Fez; then Rabat, Madrid, Paris"
-  ],
-  "folded": [
-   "treaty of fez and the april 1912 rising",
-   "fez; then rabat, madrid, paris"
-  ],
-  "phase": [
-   "III 1900-1912"
-  ],
-  "status": "Substantial"
- },
- {
-  "type": "event",
   "slug": "deposition-exile-and-return-of-mohammed-v",
   "url": "/events/deposition-exile-and-return-of-mohammed-v",
   "title": "Deposition, exile and return of Mohammed V",
@@ -1911,44 +2091,6 @@
    "VII 1944-1956"
   ],
   "status": "Substantial"
- },
- {
-  "type": "event",
-  "slug": "casablanca-1907-killings-bombardment-and-occupation",
-  "url": "/events/casablanca-1907-killings-bombardment-and-occupation",
-  "title": "Casablanca 1907 — killings, bombardment and occupation",
-  "subtitle": "Killing of nine European port workers on 30 July 1907 followed by French naval bombardment 5-7 August, landing, sack of the city, and the occupation of the Chaouia — the first permanent French military presence in Atlantic Morocco.",
-  "terms": [
-   "Casablanca 1907 — killings, bombardment and occupation",
-   "Casablanca (Dar el-Beida) and the Chaouia plain"
-  ],
-  "folded": [
-   "casablanca 1907 — killings, bombardment and occupation",
-   "casablanca (dar el-beida) and the chaouia plain"
-  ],
-  "phase": [
-   "III 1900-1912"
-  ],
-  "status": "Substantial"
- },
- {
-  "type": "event",
-  "slug": "annual-and-the-rif-war",
-  "url": "/events/annual-and-the-rif-war",
-  "title": "Annual and the Rif War",
-  "subtitle": "Spanish military collapse in the eastern Rif in July-August 1921, followed by five years of war against the Rif Republic ending with Abd el-Krim's surrender to France at Targuist, 26 May 1926.",
-  "terms": [
-   "Annual and the Rif War",
-   "Eastern Rif; Melilla hinterland; from 1925 the Ouergha valley in the French zone"
-  ],
-  "folded": [
-   "annual and the rif war",
-   "eastern rif; melilla hinterland; from 1925 the ouergha valley in the french zone"
-  ],
-  "phase": [
-   "V 1921-1934"
-  ],
-  "status": "Full dossier"
  },
  {
   "type": "event",
@@ -2009,25 +2151,6 @@
  },
  {
   "type": "event",
-  "slug": "battle-of-el-herri",
-  "url": "/events/battle-of-el-herri",
-  "title": "Battle of El Herri",
-  "subtitle": "A French column of 1,230 men under Lt-Col Laverdure raided Mouha ou Hammou Zayani's camp without orders, then was destroyed during its withdrawal. 623 French and colonial troops killed — France's heaviest single defeat in Morocco.",
-  "terms": [
-   "Battle of El Herri",
-   "El Herri (El Hri, Lehri), c. 15 km south of Khénifra, Middle Atlas"
-  ],
-  "folded": [
-   "battle of el herri",
-   "el herri (el hri, lehri), c. 15 km south of khenifra, middle atlas"
-  ],
-  "phase": [
-   "IV 1912-1921"
-  ],
-  "status": "Full dossier"
- },
- {
-  "type": "event",
   "slug": "hispano-moroccan-war-and-the-treaty-of-wad-ras",
   "url": "/events/hispano-moroccan-war-and-the-treaty-of-wad-ras",
   "title": "Hispano-Moroccan War and the Treaty of Wad Ras",
@@ -2047,79 +2170,430 @@
  },
  {
   "type": "event",
-  "slug": "the-rif-revolt-and-its-suppression",
-  "url": "/events/the-rif-revolt-and-its-suppression",
-  "title": "The Rif revolt and its suppression",
-  "subtitle": "Armed revolt in the Rif against the post-independence government, suppressed by the Royal Armed Forces under Crown Prince Hassan and Commander Oufkir with c. 20,000 troops and French air support.",
+  "slug": "treaty-of-fez-and-the-april-1912-rising",
+  "url": "/events/treaty-of-fez-and-the-april-1912-rising",
+  "title": "Treaty of Fez and the April 1912 rising",
+  "subtitle": "Treaty of 30 March 1912 establishing the French protectorate, signed by Abdelhafid and Regnault; the Fez rising of 17 April 1912 on its disclosure; and the Franco-Spanish treaty of 27 November 1912 partitioning the country.",
   "terms": [
-   "The Rif revolt and its suppression",
-   "The Rif — Al Hoceima, Nador, Beni Hadifa, Ait Ouriaghel country"
+   "Treaty of Fez and the April 1912 rising",
+   "Fez; then Rabat, Madrid, Paris"
   ],
   "folded": [
-   "the rif revolt and its suppression",
-   "the rif — al hoceima, nador, beni hadifa, ait ouriaghel country"
+   "treaty of fez and the april 1912 rising",
+   "fez; then rabat, madrid, paris"
   ],
   "phase": [
-   "VIII 1956-1961"
+   "III 1900-1912"
   ],
   "status": "Substantial"
  },
  {
   "type": "event",
-  "slug": "casablanca-massacre-7-8-april-1947",
-  "url": "/events/casablanca-massacre-7-8-april-1947",
-  "title": "Casablanca massacre, 7-8 April 1947",
-  "subtitle": "Senegalese tirailleurs in French service fired on Moroccan civilians in Casablanca over roughly 24 hours, two days before Mohammed V's Tangier speech. Estimates range from 180 to over 2,000 dead.",
+  "slug": "casablanca-1907-killings-bombardment-and-occupation",
+  "url": "/events/casablanca-1907-killings-bombardment-and-occupation",
+  "title": "Casablanca 1907 — killings, bombardment and occupation",
+  "subtitle": "Killing of nine European port workers on 30 July 1907 followed by French naval bombardment 5-7 August, landing, sack of the city, and the occupation of the Chaouia — the first permanent French military presence in Atlantic Morocco.",
   "terms": [
-   "Casablanca massacre, 7-8 April 1947",
-   "Casablanca — working-class quarters including Derb Kebir"
+   "Casablanca 1907 — killings, bombardment and occupation",
+   "Casablanca (Dar el-Beida) and the Chaouia plain"
   ],
   "folded": [
-   "casablanca massacre, 7-8 april 1947",
-   "casablanca — working-class quarters including derb kebir"
+   "casablanca 1907 — killings, bombardment and occupation",
+   "casablanca (dar el-beida) and the chaouia plain"
   ],
   "phase": [
-   "VII 1944-1956"
+   "III 1900-1912"
   ],
   "status": "Substantial"
  },
  {
   "type": "event",
-  "slug": "battle-of-ksar-el-kebir-battle-of-the-three-kings",
-  "url": "/events/battle-of-ksar-el-kebir-battle-of-the-three-kings",
-  "title": "Battle of Ksar el-Kebir (Battle of the Three Kings)",
-  "subtitle": "Saadian victory over a Portuguese invasion force; three kings died. Portugal lost its king and its independence; Morocco gained fifty years of wealth and standing under Ahmad al-Mansur.",
+  "slug": "annual-and-the-rif-war",
+  "url": "/events/annual-and-the-rif-war",
+  "title": "Annual and the Rif War",
+  "subtitle": "Spanish military collapse in the eastern Rif in July-August 1921, followed by five years of war against the Rif Republic ending with Abd el-Krim's surrender to France at Targuist, 26 May 1926.",
   "terms": [
-   "Battle of Ksar el-Kebir (Battle of the Three Kings)",
-   "Wadi al-Makhazin, near Ksar el-Kebir, northern Morocco"
+   "Annual and the Rif War",
+   "Eastern Rif; Melilla hinterland; from 1925 the Ouergha valley in the French zone"
   ],
   "folded": [
-   "battle of ksar el-kebir (battle of the three kings)",
-   "wadi al-makhazin, near ksar el-kebir, northern morocco"
-  ],
-  "phase": [
-   "I pre-1830"
-  ],
-  "status": "Stub"
- },
- {
-  "type": "event",
-  "slug": "battle-of-tazigzawt",
-  "url": "/events/battle-of-tazigzawt",
-  "title": "Battle of Tazigzawt",
-  "subtitle": "A late-conquest engagement in which c. 1,000 resistance fighters faced two French divisions. Identified through the Amazigh oral tradition, where it is the most celebrated subject of resistance balladry.",
-  "terms": [
-   "Battle of Tazigzawt",
-   "Tazigzawt, Middle Atlas"
-  ],
-  "folded": [
-   "battle of tazigzawt",
-   "tazigzawt, middle atlas"
+   "annual and the rif war",
+   "eastern rif; melilla hinterland; from 1925 the ouergha valley in the french zone"
   ],
   "phase": [
    "V 1921-1934"
   ],
-  "status": "Stub"
+  "status": "Full dossier"
+ },
+ {
+  "type": "event",
+  "slug": "battle-of-el-herri",
+  "url": "/events/battle-of-el-herri",
+  "title": "Battle of El Herri",
+  "subtitle": "A French column of 1,230 men under Lt-Col Laverdure raided Mouha ou Hammou Zayani's camp without orders, then was destroyed during its withdrawal. 623 French and colonial troops killed — France's heaviest single defeat in Morocco.",
+  "terms": [
+   "Battle of El Herri",
+   "El Herri (El Hri, Lehri), c. 15 km south of Khénifra, Middle Atlas"
+  ],
+  "folded": [
+   "battle of el herri",
+   "el herri (el hri, lehri), c. 15 km south of khenifra, middle atlas"
+  ],
+  "phase": [
+   "IV 1912-1921"
+  ],
+  "status": "Full dossier"
+ },
+ {
+  "type": "source",
+  "slug": "coup-d-etat-de-skhirat-wikipedia-french",
+  "url": "/sources#coup-d-etat-de-skhirat-wikipedia-french",
+  "title": "Coup d'État de Skhirat — Wikipédia (French)",
+  "subtitle": null,
+  "terms": [
+   "Coup d'État de Skhirat — Wikipédia (French)",
+   "ARCHIVAL REFERENCE NOT YET VERIFIED"
+  ],
+  "folded": [
+   "coup d'etat de skhirat — wikipedia (french)"
+  ],
+  "phase": [],
+  "tier": "ENCYCLOPEDIC",
+  "verification": "Consulted directly"
+ },
+ {
+  "type": "source",
+  "slug": "failed-coup-of-august-16-1972-the-account-of-king-hassan-ii-s-bodyguard-telquel",
+  "url": "/sources#failed-coup-of-august-16-1972-the-account-of-king-hassan-ii-s-bodyguard-telquel",
+  "title": "Failed coup of August 16, 1972: the account of King Hassan II's bodyguard — TelQuel",
+  "subtitle": null,
+  "terms": [
+   "Failed coup of August 16, 1972: the account of King Hassan II's bodyguard — TelQuel",
+   "ARCHIVAL REFERENCE NOT YET VERIFIED"
+  ],
+  "folded": [
+   "failed coup of august 16, 1972: the account of king hassan ii's bodyguard — telquel"
+  ],
+  "phase": [],
+  "tier": "JOURNALISTIC",
+  "verification": "Consulted directly"
+ },
+ {
+  "type": "source",
+  "slug": "coup-d-etat-des-aviateurs-wikipedia-french",
+  "url": "/sources#coup-d-etat-des-aviateurs-wikipedia-french",
+  "title": "Coup d'État des aviateurs — Wikipédia (French)",
+  "subtitle": null,
+  "terms": [
+   "Coup d'État des aviateurs — Wikipédia (French)",
+   "ARCHIVAL REFERENCE NOT YET VERIFIED"
+  ],
+  "folded": [
+   "coup d'etat des aviateurs — wikipedia (french)"
+  ],
+  "phase": [],
+  "tier": "ENCYCLOPEDIC",
+  "verification": "Consulted directly"
+ },
+ {
+  "type": "source",
+  "slug": "un-officier-au-service-du-roi-5-aujourd-hui-le-maroc",
+  "url": "/sources#un-officier-au-service-du-roi-5-aujourd-hui-le-maroc",
+  "title": "Un officier au service du Roi (5) — Aujourd'hui le Maroc",
+  "subtitle": null,
+  "terms": [
+   "Un officier au service du Roi (5) — Aujourd'hui le Maroc",
+   "ARCHIVAL REFERENCE NOT YET VERIFIED"
+  ],
+  "folded": [
+   "un officier au service du roi (5) — aujourd'hui le maroc"
+  ],
+  "phase": [],
+  "tier": "JOURNALISTIC",
+  "verification": "Consulted directly"
+ },
+ {
+  "type": "source",
+  "slug": "une-nouvelle-video-sur-la-tentative-de-coup-d-etat-du-16-aout-1972-medias24",
+  "url": "/sources#une-nouvelle-video-sur-la-tentative-de-coup-d-etat-du-16-aout-1972-medias24",
+  "title": "Une nouvelle vidéo sur la tentative de coup d'État du 16 août 1972 — Médias24",
+  "subtitle": null,
+  "terms": [
+   "Une nouvelle vidéo sur la tentative de coup d'État du 16 août 1972 — Médias24",
+   "ARCHIVAL REFERENCE NOT YET VERIFIED"
+  ],
+  "folded": [
+   "une nouvelle video sur la tentative de coup d'etat du 16 aout 1972 — medias24"
+  ],
+  "phase": [],
+  "tier": "JOURNALISTIC",
+  "verification": "Consulted directly"
+ },
+ {
+  "type": "source",
+  "slug": "1972-moroccan-coup-attempt-wikipedia",
+  "url": "/sources#1972-moroccan-coup-attempt-wikipedia",
+  "title": "1972 Moroccan coup attempt — Wikipedia",
+  "subtitle": "Wikipedia contributors",
+  "terms": [
+   "1972 Moroccan coup attempt — Wikipedia",
+   "Wikipedia contributors",
+   "ARCHIVAL REFERENCE NOT YET VERIFIED"
+  ],
+  "folded": [
+   "1972 moroccan coup attempt — wikipedia",
+   "wikipedia contributors"
+  ],
+  "phase": [],
+  "tier": "ENCYCLOPEDIC",
+  "verification": "Consulted directly"
+ },
+ {
+  "type": "source",
+  "slug": "les-proteges-contribution-a-l-histoire-contemporaine-du-maroc",
+  "url": "/sources#les-proteges-contribution-a-l-histoire-contemporaine-du-maroc",
+  "title": "Les protégés — contribution à l'histoire contemporaine du Maroc",
+  "subtitle": "Mohamed Kenbib (محمد كنبيب)",
+  "terms": [
+   "Les protégés — contribution à l'histoire contemporaine du Maroc",
+   "Mohamed Kenbib (محمد كنبيب)",
+   "ARCHIVAL REFERENCE NOT YET VERIFIED — Kenbib's own footnotes have not been read"
+  ],
+  "folded": [
+   "les proteges — contribution a l'histoire contemporaine du maroc",
+   "mohamed kenbib (محمد كنبيب)"
+  ],
+  "phase": [],
+  "tier": "ACADEMIC",
+  "verification": "Catalogue verified"
+ },
+ {
+  "type": "source",
+  "slug": "wandering-minstrels-and-epic-poetry-from-morocco-s-berber-highlands",
+  "url": "/sources#wandering-minstrels-and-epic-poetry-from-morocco-s-berber-highlands",
+  "title": "Wandering Minstrels and Epic Poetry from Morocco's Berber Highlands",
+  "subtitle": "Michael Peyron",
+  "terms": [
+   "Wandering Minstrels and Epic Poetry from Morocco's Berber Highlands",
+   "Michael Peyron",
+   "Fieldwork 2005–2007; earlier collections 1974–1988. Collaborators named: Arsène Roux, Fatima Kadiri, Rkia Mountassir, Jeanine Drouin."
+  ],
+  "folded": [
+   "wandering minstrels and epic poetry from morocco's berber highlands",
+   "michael peyron"
+  ],
+  "phase": [],
+  "tier": "ACADEMIC",
+  "verification": "Consulted directly"
+ },
+ {
+  "type": "source",
+  "slug": "cahiers-des-documents-historiques-de-la-resistance-et-de-la-liberation",
+  "url": "/sources#cahiers-des-documents-historiques-de-la-resistance-et-de-la-liberation",
+  "title": "Cahiers des Documents Historiques de la Résistance et de la Libération",
+  "subtitle": "Haut Commissariat aux Anciens Résistants et Anciens Membres de l'Armée de Libération (HCAR)",
+  "terms": [
+   "Cahiers des Documents Historiques de la Résistance et de la Libération",
+   "Haut Commissariat aux Anciens Résistants et Anciens Membres de l'Armée de Libération (HCAR)",
+   "Thematic cahiers, each on a single topic. Verified contents include a cahier on the Battle of El Herri, 13 November 1914; Moha ou Hammou Zayani; Zaïd Ou Hmad (resistance leader, 1934–1936); Sultan Sidi Mohammed ben Youssef; and the Manifesto of Independence of 11 January 1944."
+  ],
+  "folded": [
+   "cahiers des documents historiques de la resistance et de la liberation",
+   "haut commissariat aux anciens resistants et anciens membres de l'armee de liberation (hcar)"
+  ],
+  "phase": [],
+  "tier": "OFFICIAL",
+  "verification": "Consulted directly"
+ },
+ {
+  "type": "source",
+  "slug": "les-origines-sociales-et-culturelles-du-nationalisme-marocain-1830-1912",
+  "url": "/sources#les-origines-sociales-et-culturelles-du-nationalisme-marocain-1830-1912",
+  "title": "Les origines sociales et culturelles du nationalisme marocain, 1830–1912",
+  "subtitle": "Abdallah Laroui",
+  "terms": [
+   "Les origines sociales et culturelles du nationalisme marocain, 1830–1912",
+   "Abdallah Laroui",
+   "n/a — monograph, originally his doctoral thesis."
+  ],
+  "folded": [
+   "les origines sociales et culturelles du nationalisme marocain, 1830–1912",
+   "abdallah laroui"
+  ],
+  "phase": [],
+  "tier": "ACADEMIC",
+  "verification": "Cited by named scholar"
+ },
+ {
+  "type": "source",
+  "slug": "hesperis-tamuda",
+  "url": "/sources#hesperis-tamuda",
+  "title": "Hespéris-Tamuda",
+  "subtitle": "Faculté des Lettres et des Sciences Humaines, Université Mohammed V, Rabat",
+  "terms": [
+   "Hespéris-Tamuda",
+   "Faculté des Lettres et des Sciences Humaines, Université Mohammed V, Rabat",
+   "Archive organised by decade, 1921–1929 through 2020–2025. Back runs also on Internet Archive (identifier HespresTamuda, arranged by year)."
+  ],
+  "folded": [
+   "hesperis-tamuda",
+   "faculte des lettres et des sciences humaines, universite mohammed v, rabat"
+  ],
+  "phase": [],
+  "tier": "ACADEMIC",
+  "verification": "Catalogue verified"
+ },
+ {
+  "type": "source",
+  "slug": "كتاب-الاستقصا-arabic-text-al-maktaba-al-shamela",
+  "url": "/sources#كتاب-الاستقصا-arabic-text-al-maktaba-al-shamela",
+  "title": "كتاب الاستقصا — Arabic text, al-Maktaba al-Shamela",
+  "subtitle": "Ahmad ibn Khalid al-Nasiri; edition of Ja'far al-Nasiri and Muhammad al-Nasiri",
+  "terms": [
+   "كتاب الاستقصا — Arabic text, al-Maktaba al-Shamela",
+   "Ahmad ibn Khalid al-Nasiri; edition of Ja'far al-Nasiri and Muhammad al-Nasiri",
+   "Shamela book ID 6627. Fully browsable by volume, chapter and printed page number. The Shamela instance indexes three volumes running from the Islamic conquest through the Saadian period into the seventeenth century."
+  ],
+  "folded": [
+   "كتاب الاستقصا — arabic text, al-maktaba al-shamela",
+   "ahmad ibn khalid al-nasiri; edition of ja'far al-nasiri and muhammad al-nasiri"
+  ],
+  "phase": [],
+  "tier": "PRIMARY_CONTEMPORARY",
+  "verification": "Consulted directly"
+ },
+ {
+  "type": "source",
+  "slug": "les-origines-de-la-guerre-du-rif",
+  "url": "/sources#les-origines-de-la-guerre-du-rif",
+  "title": "Les origines de la guerre du Rif",
+  "subtitle": "Germain Ayache",
+  "terms": [
+   "Les origines de la guerre du Rif",
+   "Germain Ayache",
+   "Full text on Internet Archive, identifier lesoriginesdelaguerredurifgermainayache."
+  ],
+  "folded": [
+   "les origines de la guerre du rif",
+   "germain ayache"
+  ],
+  "phase": [],
+  "tier": "ACADEMIC",
+  "verification": "Catalogue verified"
+ },
+ {
+  "type": "source",
+  "slug": "reconsidering-the-rif-revolt-1958-1959",
+  "url": "/sources#reconsidering-the-rif-revolt-1958-1959",
+  "title": "Reconsidering the Rif Revolt (1958–1959)",
+  "subtitle": "Nabil Mouline",
+  "terms": [
+   "Reconsidering the Rif Revolt (1958–1959)",
+   "Nabil Mouline",
+   "n/a — essay format; underlying sources not itemised in the accessible text."
+  ],
+  "folded": [
+   "reconsidering the rif revolt (1958–1959)",
+   "nabil mouline"
+  ],
+  "phase": [],
+  "tier": "ACADEMIC",
+  "verification": "Cited by named scholar"
+ },
+ {
+  "type": "source",
+  "slug": "les-sources-inedites-de-l-histoire-du-maroc-de-1530-a-1845",
+  "url": "/sources#les-sources-inedites-de-l-histoire-du-maroc-de-1530-a-1845",
+  "title": "Les sources inédites de l'histoire du Maroc de 1530 à 1845",
+  "subtitle": "Henry, comte de Castries (1850–1927); continued by Pierre de Cenival and Philippe de Cossé-Brissac",
+  "terms": [
+   "Les sources inédites de l'histoire du Maroc de 1530 à 1845",
+   "Henry, comte de Castries (1850–1927); continued by Pierre de Cenival and Philippe de Cossé-Brissac",
+   "Series organised by holding country: Archives et bibliothèques de France, d'Angleterre, d'Espagne, des Pays-Bas, du Portugal. Multiple tomes per series. Volumes verified present on Gallica (Pays-Bas t.1–6; Angleterre série 1 t.1–2; France t.1) and on Internet Archive."
+  ],
+  "folded": [
+   "les sources inedites de l'histoire du maroc de 1530 a 1845",
+   "henry, comte de castries (1850–1927); continued by pierre de cenival and philippe de cosse-brissac"
+  ],
+  "phase": [],
+  "tier": "PRIMARY_ARCHIVAL",
+  "verification": "Catalogue verified"
+ },
+ {
+  "type": "source",
+  "slug": "bataille-elhri-digitised-document",
+  "url": "/sources#bataille-elhri-digitised-document",
+  "title": "Bataille Elhri (digitised document)",
+  "subtitle": "Author not stated in the item metadata",
+  "terms": [
+   "Bataille Elhri (digitised document)",
+   "Author not stated in the item metadata",
+   "Internet Archive identifier bataille.-elhri. 14.3 MB, scanned 600 DPI with OCR."
+  ],
+  "folded": [
+   "bataille elhri (digitised document)",
+   "author not stated in the item metadata"
+  ],
+  "phase": [],
+  "tier": "SECONDARY",
+  "verification": "Catalogue verified"
+ },
+ {
+  "type": "source",
+  "slug": "archives-marocaines-series",
+  "url": "/sources#archives-marocaines-series",
+  "title": "Archives Marocaines (series)",
+  "subtitle": "Mission scientifique du Maroc",
+  "terms": [
+   "Archives Marocaines (series)",
+   "Mission scientifique du Maroc",
+   "Volumes verified present on Internet Archive include I (1905), VI (1906), IX (1906), XIV (1908), XV (1909), XIX (1913, Dawhat al-Nāshir of Ibn ʿAskar), XX (1913, Le Gharb), XXI (1913), XXVII (1927, Confréries religieuses au Maroc), XXXIV (1917)."
+  ],
+  "folded": [
+   "archives marocaines (series)",
+   "mission scientifique du maroc"
+  ],
+  "phase": [],
+  "tier": "PRIMARY_CONTEMPORARY",
+  "verification": "Catalogue verified"
+ },
+ {
+  "type": "source",
+  "slug": "kitab-al-istiqsa-li-akhbar-duwal-al-maghrib-al-aqsa",
+  "url": "/sources#kitab-al-istiqsa-li-akhbar-duwal-al-maghrib-al-aqsa",
+  "title": "Kitāb al-Istiqsā li-akhbār duwal al-Maghrib al-Aqsā",
+  "subtitle": "Ahmad ibn Khalid al-Nasiri al-Slawi (1835–1897)",
+  "terms": [
+   "Kitāb al-Istiqsā li-akhbār duwal al-Maghrib al-Aqsā",
+   "Ahmad ibn Khalid al-Nasiri al-Slawi (1835–1897)",
+   "French translation published in Archives Marocaines: vols IX (1906) and X (1907), Chronique de la dynastie alaouie du Maroc, with a preface by Eugène Fumey; superseded by the five-tome edition in vol. XXX (1923–1936), translated by A. Graulle, I. Hamet and M. en-Nacîri, covering the Berbers, Idrisids, Almoravids, Almohads, Marinids and Saadians (1509–1609). Verified against the Archives Marocaines series index."
+  ],
+  "folded": [
+   "kitab al-istiqsa li-akhbar duwal al-maghrib al-aqsa",
+   "ahmad ibn khalid al-nasiri al-slawi (1835–1897)"
+  ],
+  "phase": [],
+  "tier": "PRIMARY_CONTEMPORARY",
+  "verification": "Catalogue verified"
+ },
+ {
+  "type": "source",
+  "slug": "frus-conferences-at-washington-and-casablanca-1941-1943-document-376-roosevelt-dinner-party-22-january-1943",
+  "url": "/sources#frus-conferences-at-washington-and-casablanca-1941-1943-document-376-roosevelt-dinner-party-22-january-1943",
+  "title": "FRUS, Conferences at Washington and Casablanca 1941–1943, Document 376 — Roosevelt dinner party, 22 January 1943",
+  "subtitle": "US Department of State, Office of the Historian",
+  "terms": [
+   "FRUS, Conferences at Washington and Casablanca 1941–1943, Document 376 — Roosevelt dinner party, 22 January 1943",
+   "US Department of State, Office of the Historian",
+   "FRUS, The Conferences at Washington, 1941–1942, and Casablanca, 1943, Document 376. Section: Friday, January 22, 1943 (ch9subch9)."
+  ],
+  "folded": [
+   "frus, conferences at washington and casablanca 1941–1943, document 376 — roosevelt dinner party, 22 january 1943",
+   "us department of state, office of the historian"
+  ],
+  "phase": [],
+  "tier": "OFFICIAL",
+  "verification": "Consulted directly"
  },
  {
   "type": "source",
@@ -2161,25 +2635,6 @@
  },
  {
   "type": "source",
-  "slug": "deadly-embrace-morocco-and-the-road-to-the-spanish-civil-war",
-  "url": "/sources#deadly-embrace-morocco-and-the-road-to-the-spanish-civil-war",
-  "title": "Deadly Embrace: Morocco and the Road to the Spanish Civil War",
-  "subtitle": "Sebastian Balfour",
-  "terms": [
-   "Deadly Embrace: Morocco and the Road to the Spanish Civil War",
-   "Sebastian Balfour",
-   "Built on Spanish, French and British archives; the source of the Berenguer 'con verdadera fruición' quotation used in this workspace."
-  ],
-  "folded": [
-   "deadly embrace: morocco and the road to the spanish civil war",
-   "sebastian balfour"
-  ],
-  "phase": [],
-  "tier": "ACADEMIC",
-  "verification": "Cited by named scholar"
- },
- {
-  "type": "source",
   "slug": "ottoman-empire-and-moroccan-resistance-to-the-french-protectorate-in-the-first-world-war-activities-of-teskilat-i-mahsusa-in-morocco",
   "url": "/sources#ottoman-empire-and-moroccan-resistance-to-the-french-protectorate-in-the-first-world-war-activities-of-teskilat-i-mahsusa-in-morocco",
   "title": "Ottoman Empire and Moroccan Resistance to the French Protectorate in the First World War: Activities of Teşkilat-ı Mahsusa in Morocco",
@@ -2218,6 +2673,63 @@
  },
  {
   "type": "source",
+  "slug": "al-watha-iq-les-archives-published-makhzen-documents",
+  "url": "/sources#al-watha-iq-les-archives-published-makhzen-documents",
+  "title": "al-Wathā'iq (« Les Archives ») — published Makhzen documents",
+  "subtitle": "Direction des Archives Royales, Morocco",
+  "terms": [
+   "al-Wathā'iq (« Les Archives ») — published Makhzen documents",
+   "Direction des Archives Royales, Morocco",
+   "Periodical volumes of documents published from the Royal Archives."
+  ],
+  "folded": [
+   "al-watha'iq (« les archives ») — published makhzen documents",
+   "direction des archives royales, morocco"
+  ],
+  "phase": [],
+  "tier": "PRIMARY_ARCHIVAL",
+  "verification": "Cited by named scholar"
+ },
+ {
+  "type": "source",
+  "slug": "ottoman-support-to-moroccan-local-resistance-in-north-africa-1914-1918",
+  "url": "/sources#ottoman-support-to-moroccan-local-resistance-in-north-africa-1914-1918",
+  "title": "Ottoman Support to Moroccan Local Resistance in North Africa (1914–1918)",
+  "subtitle": "Odile Moreau (Université Paul-Valéry Montpellier III)",
+  "terms": [
+   "Ottoman Support to Moroccan Local Resistance in North Africa (1914–1918)",
+   "Odile Moreau (Université Paul-Valéry Montpellier III)",
+   "Cites BOA HR.SYS. 2392/2, 2393/1, 2393/2, 2393/4; German A.A.-P.A. WK Nr. 11 1."
+  ],
+  "folded": [
+   "ottoman support to moroccan local resistance in north africa (1914–1918)",
+   "odile moreau (universite paul-valery montpellier iii)"
+  ],
+  "phase": [],
+  "tier": "ACADEMIC",
+  "verification": "Cited by named scholar"
+ },
+ {
+  "type": "source",
+  "slug": "deadly-embrace-morocco-and-the-road-to-the-spanish-civil-war",
+  "url": "/sources#deadly-embrace-morocco-and-the-road-to-the-spanish-civil-war",
+  "title": "Deadly Embrace: Morocco and the Road to the Spanish Civil War",
+  "subtitle": "Sebastian Balfour",
+  "terms": [
+   "Deadly Embrace: Morocco and the Road to the Spanish Civil War",
+   "Sebastian Balfour",
+   "Built on Spanish, French and British archives; the source of the Berenguer 'con verdadera fruición' quotation used in this workspace."
+  ],
+  "folded": [
+   "deadly embrace: morocco and the road to the spanish civil war",
+   "sebastian balfour"
+  ],
+  "phase": [],
+  "tier": "ACADEMIC",
+  "verification": "Cited by named scholar"
+ },
+ {
+  "type": "source",
   "slug": "lords-of-the-atlas-the-rise-and-fall-of-the-house-of-glaoua",
   "url": "/sources#lords-of-the-atlas-the-rise-and-fall-of-the-house-of-glaoua",
   "title": "Lords of the Atlas: The Rise and Fall of the House of Glaoua",
@@ -2253,25 +2765,6 @@
   "phase": [],
   "tier": "PRIMARY_ARCHIVAL",
   "verification": "Catalogue verified"
- },
- {
-  "type": "source",
-  "slug": "al-watha-iq-les-archives-published-makhzen-documents",
-  "url": "/sources#al-watha-iq-les-archives-published-makhzen-documents",
-  "title": "al-Wathā'iq (« Les Archives ») — published Makhzen documents",
-  "subtitle": "Direction des Archives Royales, Morocco",
-  "terms": [
-   "al-Wathā'iq (« Les Archives ») — published Makhzen documents",
-   "Direction des Archives Royales, Morocco",
-   "Periodical volumes of documents published from the Royal Archives."
-  ],
-  "folded": [
-   "al-watha'iq (« les archives ») — published makhzen documents",
-   "direction des archives royales, morocco"
-  ],
-  "phase": [],
-  "tier": "PRIMARY_ARCHIVAL",
-  "verification": "Cited by named scholar"
  },
  {
   "type": "source",
@@ -2367,253 +2860,6 @@
   "phase": [],
   "tier": "OFFICIAL",
   "verification": "Cited by named scholar"
- },
- {
-  "type": "source",
-  "slug": "ottoman-support-to-moroccan-local-resistance-in-north-africa-1914-1918",
-  "url": "/sources#ottoman-support-to-moroccan-local-resistance-in-north-africa-1914-1918",
-  "title": "Ottoman Support to Moroccan Local Resistance in North Africa (1914–1918)",
-  "subtitle": "Odile Moreau (Université Paul-Valéry Montpellier III)",
-  "terms": [
-   "Ottoman Support to Moroccan Local Resistance in North Africa (1914–1918)",
-   "Odile Moreau (Université Paul-Valéry Montpellier III)",
-   "Cites BOA HR.SYS. 2392/2, 2393/1, 2393/2, 2393/4; German A.A.-P.A. WK Nr. 11 1."
-  ],
-  "folded": [
-   "ottoman support to moroccan local resistance in north africa (1914–1918)",
-   "odile moreau (universite paul-valery montpellier iii)"
-  ],
-  "phase": [],
-  "tier": "ACADEMIC",
-  "verification": "Cited by named scholar"
- },
- {
-  "type": "source",
-  "slug": "kitab-al-istiqsa-li-akhbar-duwal-al-maghrib-al-aqsa",
-  "url": "/sources#kitab-al-istiqsa-li-akhbar-duwal-al-maghrib-al-aqsa",
-  "title": "Kitāb al-Istiqsā li-akhbār duwal al-Maghrib al-Aqsā",
-  "subtitle": "Ahmad ibn Khalid al-Nasiri al-Slawi (1835–1897)",
-  "terms": [
-   "Kitāb al-Istiqsā li-akhbār duwal al-Maghrib al-Aqsā",
-   "Ahmad ibn Khalid al-Nasiri al-Slawi (1835–1897)",
-   "French translation published in **Archives Marocaines**: vols **IX (1906)** and **X (1907)**, *Chronique de la dynastie alaouie du Maroc*, with a preface by **Eugène Fumey**; superseded by the five-tome edition in vol. **XXX (1923–1936)**, translated by **A. Graulle, I. Hamet and M. en-Nacîri**, covering the Berbers, Idrisids, Almoravids, Almohads, Marinids and Saadians (1509–1609). Verified against the Archives Marocaines series index."
-  ],
-  "folded": [
-   "kitab al-istiqsa li-akhbar duwal al-maghrib al-aqsa",
-   "ahmad ibn khalid al-nasiri al-slawi (1835–1897)"
-  ],
-  "phase": [],
-  "tier": "PRIMARY_CONTEMPORARY",
-  "verification": null
- },
- {
-  "type": "source",
-  "slug": "كتاب-الاستقصا-arabic-text-al-maktaba-al-shamela",
-  "url": "/sources#كتاب-الاستقصا-arabic-text-al-maktaba-al-shamela",
-  "title": "كتاب الاستقصا — Arabic text, al-Maktaba al-Shamela",
-  "subtitle": "Ahmad ibn Khalid al-Nasiri; edition of Ja'far al-Nasiri and Muhammad al-Nasiri",
-  "terms": [
-   "كتاب الاستقصا — Arabic text, al-Maktaba al-Shamela",
-   "Ahmad ibn Khalid al-Nasiri; edition of Ja'far al-Nasiri and Muhammad al-Nasiri",
-   "Shamela book ID 6627. Fully browsable by volume, chapter and printed page number. The Shamela instance indexes three volumes running from the Islamic conquest through the Saadian period into the seventeenth century."
-  ],
-  "folded": [
-   "كتاب الاستقصا — arabic text, al-maktaba al-shamela",
-   "ahmad ibn khalid al-nasiri; edition of ja'far al-nasiri and muhammad al-nasiri"
-  ],
-  "phase": [],
-  "tier": "PRIMARY_CONTEMPORARY",
-  "verification": null
- },
- {
-  "type": "source",
-  "slug": "les-origines-de-la-guerre-du-rif",
-  "url": "/sources#les-origines-de-la-guerre-du-rif",
-  "title": "Les origines de la guerre du Rif",
-  "subtitle": "Germain Ayache",
-  "terms": [
-   "Les origines de la guerre du Rif",
-   "Germain Ayache",
-   "Full text on Internet Archive, identifier `lesoriginesdelaguerredurifgermainayache`."
-  ],
-  "folded": [
-   "les origines de la guerre du rif",
-   "germain ayache"
-  ],
-  "phase": [],
-  "tier": "ACADEMIC",
-  "verification": null
- },
- {
-  "type": "source",
-  "slug": "reconsidering-the-rif-revolt-1958-1959",
-  "url": "/sources#reconsidering-the-rif-revolt-1958-1959",
-  "title": "Reconsidering the Rif Revolt (1958–1959)",
-  "subtitle": "Nabil Mouline",
-  "terms": [
-   "Reconsidering the Rif Revolt (1958–1959)",
-   "Nabil Mouline",
-   "n/a — essay format; underlying sources not itemised in the accessible text."
-  ],
-  "folded": [
-   "reconsidering the rif revolt (1958–1959)",
-   "nabil mouline"
-  ],
-  "phase": [],
-  "tier": "ACADEMIC",
-  "verification": null
- },
- {
-  "type": "source",
-  "slug": "archives-marocaines-series",
-  "url": "/sources#archives-marocaines-series",
-  "title": "Archives Marocaines (series)",
-  "subtitle": "Mission scientifique du Maroc",
-  "terms": [
-   "Archives Marocaines (series)",
-   "Mission scientifique du Maroc",
-   "Volumes verified present on Internet Archive include I (1905), VI (1906), IX (1906), XIV (1908), XV (1909), XIX (1913, *Dawhat al-Nāshir* of Ibn ʿAskar), XX (1913, *Le Gharb*), XXI (1913), XXVII (1927, *Confréries religieuses au Maroc*), XXXIV (1917)."
-  ],
-  "folded": [
-   "archives marocaines (series)",
-   "mission scientifique du maroc"
-  ],
-  "phase": [],
-  "tier": "PRIMARY_CONTEMPORARY",
-  "verification": null
- },
- {
-  "type": "source",
-  "slug": "bataille-elhri-digitised-document",
-  "url": "/sources#bataille-elhri-digitised-document",
-  "title": "Bataille Elhri (digitised document)",
-  "subtitle": "Author not stated in the item metadata",
-  "terms": [
-   "Bataille Elhri (digitised document)",
-   "Author not stated in the item metadata",
-   "Internet Archive identifier `bataille.-elhri`. 14.3 MB, scanned 600 DPI with OCR."
-  ],
-  "folded": [
-   "bataille elhri (digitised document)",
-   "author not stated in the item metadata"
-  ],
-  "phase": [],
-  "tier": "SECONDARY",
-  "verification": null
- },
- {
-  "type": "source",
-  "slug": "cahiers-des-documents-historiques-de-la-resistance-et-de-la-liberation",
-  "url": "/sources#cahiers-des-documents-historiques-de-la-resistance-et-de-la-liberation",
-  "title": "Cahiers des Documents Historiques de la Résistance et de la Libération",
-  "subtitle": "Haut Commissariat aux Anciens Résistants et Anciens Membres de l'Armée de Libération (HCAR)",
-  "terms": [
-   "Cahiers des Documents Historiques de la Résistance et de la Libération",
-   "Haut Commissariat aux Anciens Résistants et Anciens Membres de l'Armée de Libération (HCAR)",
-   "Thematic *cahiers*, each on a single topic. Verified contents include a cahier on **the Battle of El Herri, 13 November 1914**; **Moha ou Hammou Zayani**; **Zaïd Ou Hmad** (resistance leader, 1934–1936); Sultan Sidi Mohammed ben Youssef; and the Manifesto of Independence of 11 January 1944."
-  ],
-  "folded": [
-   "cahiers des documents historiques de la resistance et de la liberation",
-   "haut commissariat aux anciens resistants et anciens membres de l'armee de liberation (hcar)"
-  ],
-  "phase": [],
-  "tier": "OFFICIAL",
-  "verification": null
- },
- {
-  "type": "source",
-  "slug": "frus-conferences-at-washington-and-casablanca-1941-1943-document-376-roosevelt-dinner-party-22-january-1943",
-  "url": "/sources#frus-conferences-at-washington-and-casablanca-1941-1943-document-376-roosevelt-dinner-party-22-january-1943",
-  "title": "FRUS, Conferences at Washington and Casablanca 1941–1943, Document 376 — Roosevelt dinner party, 22 January 1943",
-  "subtitle": "US Department of State, Office of the Historian",
-  "terms": [
-   "FRUS, Conferences at Washington and Casablanca 1941–1943, Document 376 — Roosevelt dinner party, 22 January 1943",
-   "US Department of State, Office of the Historian",
-   "FRUS, The Conferences at Washington, 1941–1942, and Casablanca, 1943, Document 376. Section: Friday, January 22, 1943 (ch9subch9)."
-  ],
-  "folded": [
-   "frus, conferences at washington and casablanca 1941–1943, document 376 — roosevelt dinner party, 22 january 1943",
-   "us department of state, office of the historian"
-  ],
-  "phase": [],
-  "tier": "OFFICIAL",
-  "verification": null
- },
- {
-  "type": "source",
-  "slug": "hesperis-tamuda",
-  "url": "/sources#hesperis-tamuda",
-  "title": "Hespéris-Tamuda",
-  "subtitle": "Faculté des Lettres et des Sciences Humaines, Université Mohammed V, Rabat",
-  "terms": [
-   "Hespéris-Tamuda",
-   "Faculté des Lettres et des Sciences Humaines, Université Mohammed V, Rabat",
-   "Archive organised by decade, 1921–1929 through 2020–2025. Back runs also on Internet Archive (identifier `HespresTamuda`, arranged by year)."
-  ],
-  "folded": [
-   "hesperis-tamuda",
-   "faculte des lettres et des sciences humaines, universite mohammed v, rabat"
-  ],
-  "phase": [],
-  "tier": "ACADEMIC",
-  "verification": null
- },
- {
-  "type": "source",
-  "slug": "les-origines-sociales-et-culturelles-du-nationalisme-marocain-1830-1912",
-  "url": "/sources#les-origines-sociales-et-culturelles-du-nationalisme-marocain-1830-1912",
-  "title": "Les origines sociales et culturelles du nationalisme marocain, 1830–1912",
-  "subtitle": "Abdallah Laroui",
-  "terms": [
-   "Les origines sociales et culturelles du nationalisme marocain, 1830–1912",
-   "Abdallah Laroui",
-   "n/a — monograph, originally his doctoral thesis."
-  ],
-  "folded": [
-   "les origines sociales et culturelles du nationalisme marocain, 1830–1912",
-   "abdallah laroui"
-  ],
-  "phase": [],
-  "tier": "ACADEMIC",
-  "verification": null
- },
- {
-  "type": "source",
-  "slug": "les-sources-inedites-de-l-histoire-du-maroc-de-1530-a-1845",
-  "url": "/sources#les-sources-inedites-de-l-histoire-du-maroc-de-1530-a-1845",
-  "title": "Les sources inédites de l'histoire du Maroc de 1530 à 1845",
-  "subtitle": "Henry, comte de Castries (1850–1927); continued by Pierre de Cenival and Philippe de Cossé-Brissac",
-  "terms": [
-   "Les sources inédites de l'histoire du Maroc de 1530 à 1845",
-   "Henry, comte de Castries (1850–1927); continued by Pierre de Cenival and Philippe de Cossé-Brissac",
-   "Series organised by holding country: *Archives et bibliothèques de France*, *d'Angleterre*, *d'Espagne*, *des Pays-Bas*, *du Portugal*. Multiple tomes per series. Volumes verified present on Gallica (Pays-Bas t.1–6; Angleterre série 1 t.1–2; France t.1) and on Internet Archive."
-  ],
-  "folded": [
-   "les sources inedites de l'histoire du maroc de 1530 a 1845",
-   "henry, comte de castries (1850–1927); continued by pierre de cenival and philippe de cosse-brissac"
-  ],
-  "phase": [],
-  "tier": "PRIMARY_ARCHIVAL",
-  "verification": null
- },
- {
-  "type": "source",
-  "slug": "wandering-minstrels-and-epic-poetry-from-morocco-s-berber-highlands",
-  "url": "/sources#wandering-minstrels-and-epic-poetry-from-morocco-s-berber-highlands",
-  "title": "Wandering Minstrels and Epic Poetry from Morocco's Berber Highlands",
-  "subtitle": "Michael Peyron",
-  "terms": [
-   "Wandering Minstrels and Epic Poetry from Morocco's Berber Highlands",
-   "Michael Peyron",
-   "Fieldwork 2005–2007; earlier collections 1974–1988. Collaborators named: **Arsène Roux, Fatima Kadiri, Rkia Mountassir, Jeanine Drouin**."
-  ],
-  "folded": [
-   "wandering minstrels and epic poetry from morocco's berber highlands",
-   "michael peyron"
-  ],
-  "phase": [],
-  "tier": "ACADEMIC",
-  "verification": null
  },
  {
   "type": "archive",

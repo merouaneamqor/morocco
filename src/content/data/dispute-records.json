@@ -1,5 +1,29 @@
 [
  {
+  "slug": "manner-of-mohamed-oufkir-s-death-16-august-1972",
+  "notionId": "3bf885d8804281f99178d3c476751307",
+  "dispute": "Manner of Mohamed Oufkir's death, 16 August 1972",
+  "positions": {
+   "french": null,
+   "spanish": null,
+   "moroccan": "Official state account: suicide, following the collapse of the coup he had orchestrated.",
+   "other": "Family account (his daughter Malika Oufkir): multiple gunshot wounds — reported variously as three to the back and one to the neck, or wounds across several organs — inconsistent with self-infliction, implying execution by loyalist officers."
+  },
+  "currentAssessment": "Unresolved. No autopsy or forensic record has been consulted by this project. Distinguish the disagreement in fact (how many wounds, where) from the disagreement in interpretation (suicide vs execution).",
+  "whySourcesDisagree": "The party that controlled the death scene and the official record — the Moroccan state — is also the party whose legitimacy the alternative account (execution by the regime) would undermine. This is not a French/Spanish/Moroccan colonial-era dispute; the usual three-tradition template doesn't apply cleanly to a post-1961 state-vs-family dispute, which is itself worth noting.",
+  "status": "Unresolvable on present evidence",
+  "phase": "IX 1961-1999",
+  "people": [
+   "mohamed-oufkir"
+  ],
+  "events": [
+   "the-aviators-plot-attack-on-hassan-ii-s-boeing-16-august-1972"
+  ],
+  "claims": [
+   "oufkir-died-by-suicide-on-the-evening-of-16-august-1972"
+  ]
+ },
+ {
   "slug": "zaian-dead-at-el-herri-13-november-1914",
   "notionId": "3bf885d88042815bb922e4b96c78ca24",
   "dispute": "Zaian dead at El Herri, 13 November 1914",
@@ -24,25 +48,28 @@
   ]
  },
  {
-  "slug": "annual-dead-july-1921",
-  "notionId": "3bf885d8804281dd9ed0fd77df363c07",
-  "dispute": "Annual dead, July 1921",
+  "slug": "who-decided-the-1953-deposition-of-mohammed-v",
+  "notionId": "3bf885d880428173ad6fd581deb3529b",
+  "dispute": "Who decided the 1953 deposition of Mohammed V",
   "positions": {
-   "french": null,
-   "spanish": "7,875 / 8,180 / 8,668 / 13,363 — competing totals depending on whether Moroccan Regulares are counted",
-   "moroccan": null,
+   "french": "El Glaoui and the notables took the initiative",
+   "spanish": null,
+   "moroccan": "Paris and the Résidence orchestrated it; El Glaoui's role was instrumental, not originating",
    "other": null
   },
-  "currentAssessment": "Definitional, not merely evidentiary. State the range and the definitions.",
-  "whySourcesDisagree": "The count depends on who is counted as Spanish — Spanish sources are, uniquely, unreliable on their own casualties.",
-  "status": "Disputed - definitional",
-  "phase": "V 1921-1934",
-  "people": [],
+  "currentAssessment": "Settleable from Résidence–Paris correspondence, May–August 1953, not yet consulted.",
+  "whySourcesDisagree": "Each tradition places responsibility with the actor least sympathetic to it.",
+  "status": "Settleable - request identified",
+  "phase": "VII 1944-1956",
+  "people": [
+   "mohammed-v",
+   "thami-el-glaoui"
+  ],
   "events": [
-   "annual-and-the-rif-war"
+   "deposition-exile-and-return-of-mohammed-v"
   ],
   "claims": [
-   "annual-july-1921-spanish-dead-ranged-7-875-to-13-363"
+   "the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables"
   ]
  },
  {
@@ -90,28 +117,25 @@
   ]
  },
  {
-  "slug": "who-decided-the-1953-deposition-of-mohammed-v",
-  "notionId": "3bf885d880428173ad6fd581deb3529b",
-  "dispute": "Who decided the 1953 deposition of Mohammed V",
+  "slug": "annual-dead-july-1921",
+  "notionId": "3bf885d8804281dd9ed0fd77df363c07",
+  "dispute": "Annual dead, July 1921",
   "positions": {
-   "french": "El Glaoui and the notables took the initiative",
-   "spanish": null,
-   "moroccan": "Paris and the Résidence orchestrated it; El Glaoui's role was instrumental, not originating",
+   "french": null,
+   "spanish": "7,875 / 8,180 / 8,668 / 13,363 — competing totals depending on whether Moroccan Regulares are counted",
+   "moroccan": null,
    "other": null
   },
-  "currentAssessment": "Settleable from Résidence–Paris correspondence, May–August 1953, not yet consulted.",
-  "whySourcesDisagree": "Each tradition places responsibility with the actor least sympathetic to it.",
-  "status": "Settleable - request identified",
-  "phase": "VII 1944-1956",
-  "people": [
-   "mohammed-v",
-   "thami-el-glaoui"
-  ],
+  "currentAssessment": "Definitional, not merely evidentiary. State the range and the definitions.",
+  "whySourcesDisagree": "The count depends on who is counted as Spanish — Spanish sources are, uniquely, unreliable on their own casualties.",
+  "status": "Disputed - definitional",
+  "phase": "V 1921-1934",
+  "people": [],
   "events": [
-   "deposition-exile-and-return-of-mohammed-v"
+   "annual-and-the-rif-war"
   ],
   "claims": [
-   "the-august-1953-decision-to-depose-mohammed-v-originated-in-paris-with-resident-general-guillaume-or-with-el-glaoui-and-the-notables"
+   "annual-july-1921-spanish-dead-ranged-7-875-to-13-363"
   ]
  },
  {
