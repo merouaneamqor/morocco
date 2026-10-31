@@ -17,7 +17,7 @@
     "@notionhq/client": "^2.2.15",
     "commander": "^12.1.0",
     "dotenv": "^16.4.5",
-    "zod": "^3.23.8"
+    "zod": "^4.6.6"
   },
   "devDependencies": {
     "@types/node": "^22.7.0",
